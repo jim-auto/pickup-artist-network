@@ -418,6 +418,7 @@ def export_networkx_metrics(
     output_path: str | Path = "data/networkx_metrics.json",
 ) -> None:
     import networkx as nx
+    from networkx.algorithms.link_analysis import pagerank_alg
 
     output_file = Path(output_path)
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -426,7 +427,12 @@ def export_networkx_metrics(
     if digraph.number_of_nodes():
         degree_centrality = nx.degree_centrality(digraph)
         betweenness_centrality = nx.betweenness_centrality(digraph)
-        pagerank = nx.pagerank(digraph)
+        try:
+            pagerank = nx.pagerank(digraph)
+        except ModuleNotFoundError as exc:
+            if exc.name != "numpy":
+                raise
+            pagerank = pagerank_alg._pagerank_python(digraph)
     else:
         degree_centrality = {}
         betweenness_centrality = {}

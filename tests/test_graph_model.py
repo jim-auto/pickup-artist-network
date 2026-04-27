@@ -5,6 +5,7 @@ import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from graph_model import (
     GraphData,
@@ -152,6 +153,18 @@ class GraphModelTests(unittest.TestCase):
             payload = json.loads(output_path.read_text(encoding="utf-8"))
             self.assertEqual(len(payload["nodes"]), 2)
             self.assertTrue(any(item["id"] == "alpha" for item in payload["nodes"]))
+
+    def test_export_networkx_metrics_falls_back_without_numpy(self) -> None:
+        missing_numpy = ModuleNotFoundError("No module named 'numpy'")
+        missing_numpy.name = "numpy"
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "metrics.json"
+            with patch("networkx.pagerank", side_effect=missing_numpy):
+                export_networkx_metrics(self.graph, output_path)
+            payload = json.loads(output_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(len(payload["nodes"]), 2)
+        self.assertTrue(all("pagerank" in item for item in payload["nodes"]))
 
     def test_export_sqlite_creates_relation_view(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
