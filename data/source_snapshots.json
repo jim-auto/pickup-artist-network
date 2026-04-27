@@ -437,5 +437,436 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "5sato-pua",
+    "profile_url": "https://x.com/5sato_pua",
+    "observations": [
+      {
+        "target": "sato-legend",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @sato_legend as a related account.",
+        "source_urls": [
+          "https://x.com/5sato_pua",
+          "https://note.com/nemunemu_neet"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "fami-ver2",
+    "profile_url": "https://x.com/fami_ver2",
+    "observations": [
+      {
+        "target": "street-fami",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @street_Fami as a related account.",
+        "source_urls": [
+          "https://x.com/fami_ver2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "greed-pua",
+    "profile_url": "https://x.com/greed_pua",
+    "observations": [
+      {
+        "target": "greed-pua-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @greed_pua_sub as a related account.",
+        "source_urls": [
+          "https://x.com/greed_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "greed-pua-sub",
+    "profile_url": "https://x.com/greed_pua_sub",
+    "observations": [
+      {
+        "target": "greed-pua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @greed_pua as a related account.",
+        "source_urls": [
+          "https://x.com/greed_pua_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "inpsub",
+    "profile_url": "https://x.com/inpsub",
+    "observations": [
+      {
+        "target": "ryepua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @ryepua as a related account.",
+        "source_urls": [
+          "https://x.com/inpsub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kageki-ashura",
+    "profile_url": "https://x.com/kageki_ashura",
+    "observations": [
+      {
+        "target": "shinjukuashura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @ShinjukuAshura as a related account.",
+        "source_urls": [
+          "https://x.com/kageki_ashura",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mote_ren_ai7 as a related account.",
+        "source_urls": [
+          "https://x.com/kageki_ashura",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kuroiwa-45",
+    "profile_url": "https://x.com/kuroiwa_45",
+    "observations": [
+      {
+        "target": "kuroiwa-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kuroiwa_sub as a related account.",
+        "source_urls": [
+          "https://x.com/kuroiwa_45",
+          "https://lin.ee/IgaxiPU"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kuroiwa-sub",
+    "profile_url": "https://x.com/kuroiwa_sub",
+    "observations": [
+      {
+        "target": "kuroiwa-45",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kuroiwa_45 as a related account.",
+        "source_urls": [
+          "https://x.com/kuroiwa_sub",
+          "https://lin.ee/qRqCwRO"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mikeymikey0601",
+    "profile_url": "https://x.com/mikeymikey0601",
+    "observations": [
+      {
+        "target": "mikeynosub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mikeynosub as a related account.",
+        "source_urls": [
+          "https://x.com/mikeymikey0601",
+          "https://lin.ee/ycpXuaJ"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mikeynosub",
+    "profile_url": "https://x.com/mikeynosub",
+    "observations": [
+      {
+        "target": "mikeymikey0601",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mikeymikey0601 as a related account.",
+        "source_urls": [
+          "https://x.com/mikeynosub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "minorun-ceo",
+    "profile_url": "https://x.com/minorun_ceo",
+    "observations": [
+      {
+        "target": "syahudearu",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @syahudearu as a related account.",
+        "source_urls": [
+          "https://x.com/minorun_ceo",
+          "https://note.com/preview/nb259f9784320?prev_access_key=cbbf71f392b0a8c7887fde6930ace3be"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mote-ren-ai7",
+    "profile_url": "https://x.com/mote_ren_ai7",
+    "observations": [
+      {
+        "target": "shinjukuashura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @ShinjukuAshura as a related account.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "kageki-ashura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kageki_ashura as a related account.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "pua-chilll",
+    "profile_url": "https://x.com/pua_chilll",
+    "observations": [
+      {
+        "target": "eroeromancotin",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @eroeromancotin as a related account.",
+        "source_urls": [
+          "https://x.com/pua_chilll"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "sub-chilll",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @sub_chilll as a related account.",
+        "source_urls": [
+          "https://x.com/pua_chilll"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "recoa-nanpa",
+    "profile_url": "https://x.com/recoa_nanpa",
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @gureran_m as a related account.",
+        "source_urls": [
+          "https://x.com/recoa_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "ryepua",
+    "profile_url": "https://x.com/ryepua",
+    "observations": [
+      {
+        "target": "inpsub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @inpsub as a related account.",
+        "source_urls": [
+          "https://x.com/ryepua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "sato-legend",
+    "profile_url": "https://x.com/sato_legend",
+    "observations": [
+      {
+        "target": "5sato-pua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @5sato_pua as a related account.",
+        "source_urls": [
+          "https://x.com/sato_legend"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "shinjukuashura",
+    "profile_url": "https://x.com/ShinjukuAshura",
+    "observations": [
+      {
+        "target": "kageki-ashura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kageki_ashura as a related account.",
+        "source_urls": [
+          "https://x.com/ShinjukuAshura",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mote_ren_ai7 as a related account.",
+        "source_urls": [
+          "https://x.com/ShinjukuAshura",
+          "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "street-fami",
+    "profile_url": "https://x.com/street_Fami",
+    "observations": [
+      {
+        "target": "fami-ver2",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @fami_ver2 as a related account.",
+        "source_urls": [
+          "https://x.com/street_Fami",
+          "https://note.com/faminanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "sub-riddle",
+    "profile_url": "https://x.com/sub_riddle",
+    "observations": [
+      {
+        "target": "tomu-riddle",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @tomu_riddle as a related account.",
+        "source_urls": [
+          "https://x.com/sub_riddle"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "syahudearu",
+    "profile_url": "https://x.com/syahudearu",
+    "observations": [
+      {
+        "target": "minorun-ceo",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @minorun_ceo as a related account.",
+        "source_urls": [
+          "https://x.com/syahudearu",
+          "https://note.com/preview/nb259f9784320?prev_access_key=cbbf71f392b0a8c7887fde6930ace3be"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "tomu-riddle",
+    "profile_url": "https://x.com/tomu_riddle",
+    "observations": [
+      {
+        "target": "sub-riddle",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @sub_riddle as a related account.",
+        "source_urls": [
+          "https://x.com/tomu_riddle"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "yolu-pua",
+    "profile_url": "https://x.com/yolu_pua",
+    "observations": [
+      {
+        "target": "yolusub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @yolusub as a related account.",
+        "source_urls": [
+          "https://x.com/yolu_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
   }
 ]

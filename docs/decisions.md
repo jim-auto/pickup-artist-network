@@ -7,7 +7,7 @@
 ## Current growth target
 
 次の定量目標は **real person 200人**。  
-補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 の段階で広げる。
+現在は **105人**。補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 の段階で広げる。
 
 ## Why
 
@@ -57,6 +57,7 @@
 - 次の拡張で self-described public X profile をさらに 5 アカウント追加し、real person 10 / 20 に到達した
 - その次の拡張で関連 side account を 3 件追加し、公開 graph を fictional なしの real-only 構成へ切り替えた
 - さらに self-described / linked side account を 6 件追加し、matching-apps / side-account relation を明示できる範囲で増やして real person 19 / 20 まで進めた
+- `sokusuu-ranking` seed とそこから辿れる side-account mention を一括スクリーニングし、公開 graph を real person 105 / 200 まで拡張した
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 
