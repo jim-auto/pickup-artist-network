@@ -894,6 +894,20 @@ def render_html(
         <input id="search" type="search" placeholder="name / id / aliases / description">
       </div>
       <div>
+        <strong>Graph view</strong>
+        <div class="filter-group">
+          <label class="chip">
+            <input type="radio" name="graph-view-mode" value="account" checked>
+            <span>アカウント相関</span>
+          </label>
+          <label class="chip">
+            <input type="radio" name="graph-view-mode" value="full">
+            <span>全体グラフ</span>
+          </label>
+        </div>
+        <div class="muted">既定では人物・コミュニティを優先表示し、platform / location / content は全体グラフで見られます。</div>
+      </div>
+      <div>
         <strong>Node type</strong>
         <div id="node-type-filters" class="filter-group"></div>
       </div>
@@ -915,7 +929,8 @@ def render_html(
 
     <section class="graph-layout">
       <section class="panel network-panel">
-        <h2>相関図ビュー</h2>
+        <h2>アカウント相関ビュー</h2>
+        <p class="muted">まずはアカウント同士のつながりを見やすくし、必要なときだけ全体グラフへ広げます。</p>
         <div id="network"></div>
       </section>
 
@@ -1060,6 +1075,7 @@ def render_html(
       location: "#f39c12",
       content: "#d14d72"
     };
+    const accountNodeTypes = new Set(["person", "community"]);
 
     const allNodeTypes = [...new Set(rawGraph.nodes.map((node) => node.type))];
     const allEdgeTypes = [...new Set(rawGraph.edges.map((edge) => edge.type))];
@@ -1127,6 +1143,11 @@ def render_html(
           .filter((input) => input.checked)
           .map((input) => input.getAttribute(attributeName))
       );
+    }
+
+    function getGraphViewMode() {
+      const selected = document.querySelector('input[name="graph-view-mode"]:checked');
+      return selected ? selected.value : "account";
     }
 
     function matchesSearch(node, term) {
@@ -1391,8 +1412,17 @@ def render_html(
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
+      const graphViewMode = getGraphViewMode();
 
-      const eligibleNodes = rawGraph.nodes.filter((node) => allowedNodeTypes.has(node.type));
+      const eligibleNodes = rawGraph.nodes.filter((node) => {
+        if (!allowedNodeTypes.has(node.type)) {
+          return false;
+        }
+        if (graphViewMode === "full") {
+          return true;
+        }
+        return accountNodeTypes.has(node.type);
+      });
       const eligibleIds = new Set(eligibleNodes.map((node) => node.id));
       const matchedIds = new Set(
         eligibleNodes.filter((node) => matchesSearch(node, term)).map((node) => node.id)
@@ -1477,6 +1507,9 @@ def render_html(
 
     document.getElementById("search").addEventListener("input", applyFilters);
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
+      input.addEventListener("change", applyFilters);
+    });
+    document.querySelectorAll('input[name="graph-view-mode"]').forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
     document.getElementById("nodes-table").addEventListener("click", (event) => {

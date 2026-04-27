@@ -229,6 +229,9 @@ class GraphModelTests(unittest.TestCase):
                 ],
             },
         )
+        self.assertIn("アカウント相関ビュー", html)
+        self.assertIn('name="graph-view-mode"', html)
+        self.assertIn('value="account" checked', html)
         self.assertIn("選択ノード詳細", html)
         self.assertIn("Real growth targets", html)
         self.assertIn("Review queue", html)
