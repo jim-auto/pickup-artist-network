@@ -920,7 +920,7 @@ def render_html(
             <span>全体グラフ</span>
           </label>
         </div>
-        <div class="muted">既定では人物・コミュニティを優先表示し、platform / location / content は全体グラフで見られます。</div>
+        <div class="muted">既定では人物・コミュニティを優先表示し、媒体 / 場所 / コンテンツは全体グラフで見られます。</div>
       </div>
       <div>
         <strong>ノード種別</strong>
@@ -946,7 +946,7 @@ def render_html(
       <section class="panel network-panel">
         <h2>アカウント相関ビュー</h2>
         <p class="muted">まずはアカウント同士のつながりを見やすくし、必要なときだけ全体グラフへ広げます。</p>
-        <p class="muted">※ 現在の公開版はサンプル構成です。fictional な人物ノードと安全寄りの公開ノードを含み、実在ナンパ師アカウントの確定相関図ではありません。</p>
+        <p class="muted">※ 現在の公開版はサンプル構成です。架空の人物ノードと安全寄りの公開ノードを含み、実在ナンパ師アカウントの確定相関図ではありません。</p>
         <div id="network"></div>
       </section>
 
@@ -981,9 +981,9 @@ def render_html(
           <table>
             <thead>
               <tr>
-                <th>source</th>
+                <th>発信元</th>
                 <th>関係</th>
-                <th>target</th>
+                <th>対象</th>
                 <th>確認メモ</th>
                 <th>出典</th>
               </tr>
@@ -996,14 +996,14 @@ def render_html(
 
     <section class="panel">
       <h2>レビュー候補一覧</h2>
-      <p class="muted">profile / summary / pinned-post のヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
+      <p class="muted">プロフィール / 概要 / 固定ポストのヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>source</th>
+              <th>発信元</th>
               <th>提案関係</th>
-              <th>target</th>
+              <th>対象</th>
               <th>根拠テキスト</th>
               <th>確認メモ</th>
               <th>出典</th>
@@ -1016,14 +1016,14 @@ def render_html(
 
     <section class="panel">
       <h2>レビュー判断ログ</h2>
-      <p class="muted">approve / dismiss の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
+      <p class="muted">承認 / 却下 の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>source</th>
+              <th>発信元</th>
               <th>状態</th>
-              <th>target</th>
+              <th>対象</th>
               <th>根拠テキスト</th>
               <th>確認メモ</th>
               <th>出典</th>
@@ -1061,9 +1061,9 @@ def render_html(
           <table>
             <thead>
               <tr>
-                <th>source</th>
+                <th>発信元</th>
                 <th>関係</th>
-                <th>target</th>
+                <th>対象</th>
                 <th>説明</th>
                 <th>確信度</th>
                 <th>出典</th>
