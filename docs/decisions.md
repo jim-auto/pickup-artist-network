@@ -6,8 +6,8 @@
 
 ## Current growth target
 
-最初の定量目標は **real person 20人**。  
-補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` とし、review queue を手で回せるサイズを維持する。
+次の定量目標は **real person 200人**。  
+補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 の段階で広げる。
 
 ## Why
 

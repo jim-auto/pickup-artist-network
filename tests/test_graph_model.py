@@ -220,13 +220,13 @@ class GraphModelTests(unittest.TestCase):
                 },
             },
             growth_targets_payload={
-                "headline": {"label": "Real person target", "current": 2, "target": 20},
+                "headline": {"label": "Real person target", "current": 2, "target": 200},
                 "phases": [
-                    {"label": "Phase 1", "real_person_target": 10},
-                    {"label": "Phase 2", "real_person_target": 20},
+                    {"label": "Phase 1", "real_person_target": 20},
+                    {"label": "Phase 2", "real_person_target": 50},
                 ],
                 "types": [
-                    {"type": "person", "current": 2, "target_min": 20, "target_max": 20},
+                    {"type": "person", "current": 2, "target_min": 200, "target_max": 200},
                 ],
             },
         )

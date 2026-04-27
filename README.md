@@ -33,12 +33,12 @@
 
 ## 現在の数値目標
 
-最初の明確な到達目標は **real person 20人** です。  
-相関図として塊が見え始めつつ、まだ review queue を手動運用できる規模を狙います。
+次の明確な到達目標は **real person 200人** です。  
+公開ネットワークとして十分な広がりを出すには 30 人では小さいので、最終目標は 200 人に置きます。運用上は 20 / 50 / 100 / 200 の段階で増やします。
 
 | type | target |
 | --- | --- |
-| person | 20 |
+| person | 200 |
 | community | 8-12 |
 | content | 12-18 |
 | location | 6-10 |
@@ -46,9 +46,10 @@
 
 補助的な段階目標:
 
-1. Phase 1: real person 10人
-2. Phase 2: real person 20人
-3. Phase 3: real person 30人
+1. Phase 1: real person 20人
+2. Phase 2: real person 50人
+3. Phase 3: real person 100人
+4. Phase 4: real person 200人
 
 ## 使い方
 
@@ -123,7 +124,7 @@ python scraper.py --list-review-candidates --review-json
 python scraper.py --growth-progress
 ```
 
-`candidate-id` は `data/review_candidates.json` または HTML の review candidate queue を見て使います。承認すると `data/source_snapshots.json` に observation を追記し、canonical graph / review candidate / `docs/index.html` まで再生成します。dismiss すると `data/review_candidate_decisions.json` に記録され、同じ candidate は再生成時に queue から除外されます。`--list-review-candidates` と `--list-candidate-decisions` を使うと、同じ triage 情報を terminal からも確認できます。`--growth-progress` は real/fictitious scope をもとに 20人目標への現在地を表示します。HTML には active queue に加えて **approved / dismissed の candidate decision log** も表示されます。
+`candidate-id` は `data/review_candidates.json` または HTML の review candidate queue を見て使います。承認すると `data/source_snapshots.json` に observation を追記し、canonical graph / review candidate / `docs/index.html` まで再生成します。dismiss すると `data/review_candidate_decisions.json` に記録され、同じ candidate は再生成時に queue から除外されます。`--list-review-candidates` と `--list-candidate-decisions` を使うと、同じ triage 情報を terminal からも確認できます。`--growth-progress` は real/fictitious scope をもとに 200人目標への現在地を表示します。HTML には active queue に加えて **approved / dismissed の candidate decision log** も表示されます。
 
 出力:
 

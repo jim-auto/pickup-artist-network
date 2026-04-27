@@ -45,16 +45,17 @@ REVIEW_CANDIDATE_BASE_CONFIDENCE = {
     "pinned_post_text": 0.46,
 }
 REAL_GROWTH_TARGETS = {
-    "person": {"min": 20, "max": 20},
+    "person": {"min": 200, "max": 200},
     "community": {"min": 8, "max": 12},
     "content": {"min": 12, "max": 18},
     "location": {"min": 6, "max": 10},
     "platform": {"min": 6, "max": 8},
 }
 REAL_GROWTH_PHASES = (
-    {"label": "Phase 1", "real_person_target": 10},
-    {"label": "Phase 2", "real_person_target": 20},
-    {"label": "Phase 3", "real_person_target": 30},
+    {"label": "Phase 1", "real_person_target": 20},
+    {"label": "Phase 2", "real_person_target": 50},
+    {"label": "Phase 3", "real_person_target": 100},
+    {"label": "Phase 4", "real_person_target": 200},
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
 
