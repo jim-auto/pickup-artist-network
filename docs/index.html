@@ -218,30 +218,30 @@
     }
   </style>
 </head>
-<body>
+  <body>
   <header>
     <h1>Pickup Artist Network</h1>
-    <p>Manual-first graph prototype inspired by sokusuu-ranking. Generated at 2026-04-27 09:02 UTC.</p>
+    <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-04-27 09:14 UTC。</p>
   </header>
   <main>
     <section class="panel">
-      <h2>Real growth targets</h2>
-      <p class="muted">First explicit milestone: reach 20 real person nodes while keeping the real-side graph reviewable.</p>
+      <h2>実データ成長目標</h2>
+      <p class="muted">まずはレビュー可能な粒度を保ちながら、実在人物ノード 20 件を最初の目標にします。</p>
       <section class="stats">
-        <div class="stat"><span class="muted">Real persons</span><strong>0 / 20</strong></div>
-        <div class="stat"><span class="muted">Phase 1</span><strong>10</strong></div><div class="stat"><span class="muted">Phase 2</span><strong>20</strong></div><div class="stat"><span class="muted">Phase 3</span><strong>30</strong></div>
+        <div class="stat"><span class="muted">実在人物</span><strong>0 / 20</strong></div>
+        <div class="stat"><span class="muted">第1段階</span><strong>10</strong></div><div class="stat"><span class="muted">第2段階</span><strong>20</strong></div><div class="stat"><span class="muted">第3段階</span><strong>30</strong></div>
       </section>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>type</th>
-              <th>current real</th>
-              <th>target range</th>
+              <th>種別</th>
+              <th>現在の実データ数</th>
+              <th>目標レンジ</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td><strong>person</strong></td><td>0</td><td>20</td></tr><tr><td><strong>community</strong></td><td>2</td><td>8 - 12</td></tr><tr><td><strong>content</strong></td><td>2</td><td>12 - 18</td></tr><tr><td><strong>location</strong></td><td>2</td><td>6 - 10</td></tr><tr><td><strong>platform</strong></td><td>6</td><td>6 - 8</td></tr>
+            <tr><td><strong>人物</strong></td><td>0</td><td>20</td></tr><tr><td><strong>コミュニティ</strong></td><td>2</td><td>8 - 12</td></tr><tr><td><strong>コンテンツ</strong></td><td>2</td><td>12 - 18</td></tr><tr><td><strong>場所</strong></td><td>2</td><td>6 - 10</td></tr><tr><td><strong>媒体</strong></td><td>6</td><td>6 - 8</td></tr>
           </tbody>
         </table>
       </div>
@@ -250,10 +250,10 @@
     <section class="panel controls">
       <div>
         <label for="search"><strong>名前検索</strong></label>
-        <input id="search" type="search" placeholder="name / id / aliases / description">
+        <input id="search" type="search" placeholder="名前 / id / 別名 / 説明">
       </div>
       <div>
-        <strong>Graph view</strong>
+        <strong>表示モード</strong>
         <div class="filter-group">
           <label class="chip">
             <input type="radio" name="graph-view-mode" value="account" checked>
@@ -267,29 +267,30 @@
         <div class="muted">既定では人物・コミュニティを優先表示し、platform / location / content は全体グラフで見られます。</div>
       </div>
       <div>
-        <strong>Node type</strong>
+        <strong>ノード種別</strong>
         <div id="node-type-filters" class="filter-group"></div>
       </div>
       <div>
-        <strong>Edge type</strong>
+        <strong>関係種別</strong>
         <div id="edge-type-filters" class="filter-group"></div>
       </div>
     </section>
 
     <section class="panel stats">
-      <div class="stat"><span class="muted">Visible nodes</span><strong id="visible-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Visible edges</span><strong id="visible-edges">0</strong></div>
-      <div class="stat"><span class="muted">Review nodes</span><strong id="review-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Review edges</span><strong id="review-edges">0</strong></div>
-      <div class="stat"><span class="muted">Review candidates</span><strong id="review-candidates">0</strong></div>
-      <div class="stat"><span class="muted">Total nodes</span><strong id="total-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Total edges</span><strong id="total-edges">0</strong></div>
+      <div class="stat"><span class="muted">表示ノード数</span><strong id="visible-nodes">0</strong></div>
+      <div class="stat"><span class="muted">表示エッジ数</span><strong id="visible-edges">0</strong></div>
+      <div class="stat"><span class="muted">要確認ノード数</span><strong id="review-nodes">0</strong></div>
+      <div class="stat"><span class="muted">要確認エッジ数</span><strong id="review-edges">0</strong></div>
+      <div class="stat"><span class="muted">レビュー候補数</span><strong id="review-candidates">0</strong></div>
+      <div class="stat"><span class="muted">総ノード数</span><strong id="total-nodes">0</strong></div>
+      <div class="stat"><span class="muted">総エッジ数</span><strong id="total-edges">0</strong></div>
     </section>
 
     <section class="graph-layout">
       <section class="panel network-panel">
         <h2>アカウント相関ビュー</h2>
         <p class="muted">まずはアカウント同士のつながりを見やすくし、必要なときだけ全体グラフへ広げます。</p>
+        <p class="muted">※ 現在の公開版はサンプル構成です。fictional な人物ノードと安全寄りの公開ノードを含み、実在ナンパ師アカウントの確定相関図ではありません。</p>
         <div id="network"></div>
       </section>
 
@@ -301,16 +302,16 @@
 
     <section class="two-column">
       <section class="panel">
-        <h2>Review queue</h2>
+        <h2>要確認ノード一覧</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>inspect</th>
-                <th>name</th>
-                <th>type</th>
-                <th>review</th>
-                <th>sources</th>
+                <th>詳細</th>
+                <th>名前</th>
+                <th>種別</th>
+                <th>確認メモ</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="review-nodes-table"></tbody>
@@ -319,16 +320,16 @@
       </section>
 
       <section class="panel">
-        <h2>Review edge queue</h2>
+        <h2>要確認エッジ一覧</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
                 <th>source</th>
-                <th>type</th>
+                <th>関係</th>
                 <th>target</th>
-                <th>review</th>
-                <th>sources</th>
+                <th>確認メモ</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="review-edges-table"></tbody>
@@ -338,18 +339,18 @@
     </section>
 
     <section class="panel">
-      <h2>Review candidate queue</h2>
-      <p class="muted">Generated mention matches from profile / summary / pinned-post hints. These are review-only suggestions and are not part of the canonical graph.</p>
+      <h2>レビュー候補一覧</h2>
+      <p class="muted">profile / summary / pinned-post のヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>source</th>
-              <th>proposed type</th>
+              <th>提案関係</th>
               <th>target</th>
-              <th>basis</th>
-              <th>review</th>
-              <th>sources</th>
+              <th>根拠テキスト</th>
+              <th>確認メモ</th>
+              <th>出典</th>
             </tr>
           </thead>
           <tbody id="review-candidates-table"></tbody>
@@ -358,18 +359,18 @@
     </section>
 
     <section class="panel">
-      <h2>Candidate decisions</h2>
-      <p class="muted">Approved / dismissed decisions persisted in <code>data/review_candidate_decisions.json</code>.</p>
+      <h2>レビュー判断ログ</h2>
+      <p class="muted">approve / dismiss の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>source</th>
-              <th>status</th>
+              <th>状態</th>
               <th>target</th>
-              <th>basis</th>
-              <th>review</th>
-              <th>sources</th>
+              <th>根拠テキスト</th>
+              <th>確認メモ</th>
+              <th>出典</th>
             </tr>
           </thead>
           <tbody id="review-candidate-decisions-table"></tbody>
@@ -384,13 +385,13 @@
           <table>
             <thead>
               <tr>
-                <th>inspect</th>
-                <th>name</th>
-                <th>type</th>
-                <th>aliases</th>
-                <th>description</th>
-                <th>confidence</th>
-                <th>sources</th>
+                <th>詳細</th>
+                <th>名前</th>
+                <th>種別</th>
+                <th>別名</th>
+                <th>説明</th>
+                <th>確信度</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="nodes-table"></tbody>
@@ -405,11 +406,11 @@
             <thead>
               <tr>
                 <th>source</th>
-                <th>type</th>
+                <th>関係</th>
                 <th>target</th>
-                <th>description</th>
-                <th>confidence</th>
-                <th>sources</th>
+                <th>説明</th>
+                <th>確信度</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="edges-table"></tbody>
@@ -420,8 +421,8 @@
   </main>
 
   <script id="graph-data" type="application/json">{"nodes": [{"id": "x", "type": "platform", "name": "X", "aliases": ["Twitter"], "description": "Public short-post platform node.", "source_urls": ["https://x.com"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "note", "type": "platform", "name": "note", "aliases": [], "description": "Long-form publishing platform node.", "source_urls": ["https://note.com", "https://note.com/"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "youtube", "type": "platform", "name": "YouTube", "aliases": [], "description": "Public video publishing platform node.", "source_urls": ["https://www.youtube.com", "https://x.com/YouTube", "https://twitter.com/YouTube"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "instagram", "type": "platform", "name": "Instagram", "aliases": [], "description": "Public photo and short-video platform node.", "source_urls": ["https://www.instagram.com"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "brain", "type": "platform", "name": "Brain", "aliases": [], "description": "Knowledge product marketplace node.", "source_urls": ["https://brain-market.com", "https://brain-market.com/"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "tips", "type": "platform", "name": "Tips", "aliases": [], "description": "Digital product marketplace node.", "source_urls": ["https://tips.jp", "https://twitter.com/Tips_infojp", "https://tips.jp/"], "confidence": 1.0, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "shibuya", "type": "location", "name": "Shibuya", "aliases": ["渋谷", "Shibuya-ku", "渋谷区"], "description": "Real public location node used as a common field example.", "source_urls": ["https://www.city.shibuya.tokyo.jp/", "https://x.com/city_shibuya"], "confidence": 0.98, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "shinjuku", "type": "location", "name": "Shinjuku", "aliases": ["新宿", "Shinjuku City", "Shinjuku-ku", "新宿区"], "description": "Real public location node used as another common field example.", "source_urls": ["https://www.city.shinjuku.lg.jp/", "https://x.com/shinjuku_info"], "confidence": 0.98, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "matching-apps", "type": "location", "name": "Matching Apps", "aliases": ["Dating Apps"], "description": "Conceptual app-centered field node treated as an activity arena.", "source_urls": ["manual://curated/matching-apps"], "confidence": 0.73, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "late-night-walks", "type": "location", "name": "Late-night Walks", "aliases": ["Night Walks"], "description": "Conceptual late-night field node used to test a second activity cluster.", "source_urls": ["manual://curated/late-night-walks"], "confidence": 0.69, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "play-shibuya", "type": "community", "name": "Shibuya City Tourism Association", "aliases": ["PLAY! DIVERSITY SHIBUYA", "Shibuya Ward Tourism Association"], "description": "The Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…", "source_urls": ["manual://seed", "https://x.com/PLAYSHIBUYA", "https://www.play-shibuya.com/en/"], "confidence": 0.5, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "shinjuku-visitors", "type": "community", "name": "Shinjuku Convention & Visitors Bureau", "aliases": ["Shinjuku Tourism", "Shinjuku Visitors Bureau"], "description": "It is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…", "source_urls": ["manual://seed", "https://www.kanko-shinjuku.jp/en/"], "confidence": 0.5, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "gotokyo-shibuya-guide", "type": "content", "name": "GO TOKYO Shibuya Guide", "aliases": ["A guide to Shibuya", "GO TOKYO Shibuya"], "description": "Shibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.", "source_urls": ["manual://seed", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo", "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html"], "confidence": 0.5, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "gotokyo-shinjuku-guide", "type": "content", "name": "GO TOKYO Shinjuku Guide", "aliases": ["A guide to Shinjuku", "GO TOKYO Shinjuku"], "description": "Shinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.", "source_urls": ["manual://seed", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo", "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html"], "confidence": 0.5, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"id": "aoi-street", "type": "person", "name": "Aoi Street", "aliases": ["Aoi"], "description": "Fictional field operator used to demonstrate person-to-person and person-to-location edges.", "source_urls": ["https://example.com/sample/aoi-profile", "https://x.com/aoi_street", "https://www.instagram.com/aoi_street/", "https://example.com/source/aoi/profile", "https://example.com/source/aoi/pinned"], "confidence": 0.74, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "ren-app", "type": "person", "name": "Ren App", "aliases": ["Ren"], "description": "Fictional operator centered on app-based outreach and monetized content.", "source_urls": ["https://example.com/sample/ren-profile", "https://note.com/ren_app", "https://www.youtube.com/@ren_app", "https://example.com/source/ren/profile", "https://example.com/source/ren/pinned"], "confidence": 0.76, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "noa-reviewer", "type": "person", "name": "Noa Reviewer", "aliases": ["Noa"], "description": "Fictional commentator who references and criticizes other actors in the graph.", "source_urls": ["https://example.com/sample/noa-profile", "https://x.com/noa_reviewer", "https://example.com/source/noa/profile", "https://example.com/source/noa/pinned"], "confidence": 0.68, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "mei-curator", "type": "person", "name": "Mei Curator", "aliases": ["Mei"], "description": "Fictional curator/operator connecting meetup recaps, notes, and commentary.", "source_urls": ["https://example.com/sample/mei-profile", "https://x.com/mei_curator", "https://note.com/mei_curator", "https://example.com/source/mei/profile", "https://example.com/source/mei/pinned"], "confidence": 0.72, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"id": "sora-clips", "type": "person", "name": "Sora Clips", "aliases": ["Sora"], "description": "Fictional clip-focused operator used to demonstrate media distribution edges.", "source_urls": ["https://example.com/sample/sora-profile", "https://www.youtube.com/@sora_clips", "https://www.instagram.com/sora_clips/", "https://example.com/source/sora/profile", "https://example.com/source/sora/pinned"], "confidence": 0.73, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"id": "midnight-lab", "type": "community", "name": "Midnight Lab", "aliases": [], "description": "Fictional community node representing a paid or semi-closed group.", "source_urls": ["https://example.com/sample/midnight-lab", "https://www.youtube.com/@midnightlab", "manual://curated/midnight-lab/profile", "manual://curated/midnight-lab/pinned"], "confidence": 0.7, "evidence_kind": "mixed", "needs_review": true, "review_notes": "Curated fictional community example. Keep separate from real-world claims."}, {"id": "loop-circle", "type": "community", "name": "Loop Circle", "aliases": [], "description": "Fictional community node centered on meetup recaps, clips, and cross-platform references.", "source_urls": ["https://example.com/sample/loop-circle", "https://x.com/loop_circle", "manual://curated/loop-circle/profile", "manual://curated/loop-circle/pinned"], "confidence": 0.71, "evidence_kind": "mixed", "needs_review": true, "review_notes": "Curated fictional community example. Keep separate from real-world claims."}, {"id": "field-guide-01", "type": "content", "name": "Field Guide 01", "aliases": [], "description": "Fictional content node representing a guide, note, or product.", "source_urls": ["https://example.com/sample/field-guide-01", "https://note.com/field_guide_01", "https://example.com/source/field-guide-01/page"], "confidence": 0.78, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "clip-series-01", "type": "content", "name": "Clip Series 01", "aliases": [], "description": "Fictional recurring video series node used to connect communities, people, and YouTube output.", "source_urls": ["https://example.com/sample/clip-series-01", "https://www.youtube.com/@loopcircleclips", "https://example.com/source/clip-series-01/page"], "confidence": 0.75, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"id": "audit-note-01", "type": "content", "name": "Audit Note 01", "aliases": [], "description": "Fictional analysis note node used for commentary and reference edges.", "source_urls": ["https://example.com/sample/audit-note-01", "https://note.com/audit_note_01", "https://example.com/source/audit-note-01/page"], "confidence": 0.74, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}], "edges": [{"source": "aoi-street", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://example.com/source/aoi/profile", "https://x.com/aoi_street"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "aoi-street", "target": "instagram", "type": "affiliation", "description": "Profile links point to Instagram.", "source_urls": ["https://example.com/source/aoi/profile", "https://www.instagram.com/aoi_street/"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "aoi-street", "target": "shibuya", "type": "activity", "description": "Profile text frames Shibuya as the main offline field.", "source_urls": ["https://example.com/source/aoi/profile"], "confidence": 0.71, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "aoi-street", "target": "midnight-lab", "type": "affiliation", "description": "Profile text references Midnight Lab event appearances.", "source_urls": ["https://example.com/source/aoi/profile"], "confidence": 0.66, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "aoi-street", "target": "ren-app", "type": "influence", "description": "Pinned post credits Ren's thread format as an early influence.", "source_urls": ["https://example.com/source/aoi/pinned"], "confidence": 0.63, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "audit-note-01", "target": "note", "type": "affiliation", "description": "Profile links point to note.", "source_urls": ["https://example.com/source/audit-note-01/page", "https://note.com/audit_note_01"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "audit-note-01", "target": "ren-app", "type": "reference", "description": "Audit Note 01 compares Ren App's funnel with recap-based models.", "source_urls": ["https://example.com/source/audit-note-01/page"], "confidence": 0.65, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "audit-note-01", "target": "field-guide-01", "type": "reference", "description": "Audit Note 01 cites Field Guide 01 while comparing product structures.", "source_urls": ["https://example.com/source/audit-note-01/page"], "confidence": 0.66, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "clip-series-01", "target": "youtube", "type": "affiliation", "description": "Profile links point to YouTube.", "source_urls": ["https://example.com/source/clip-series-01/page", "https://www.youtube.com/@loopcircleclips"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "clip-series-01", "target": "loop-circle", "type": "affiliation", "description": "Archive page describes Clip Series 01 as Loop Circle's main recap series.", "source_urls": ["https://example.com/source/clip-series-01/page"], "confidence": 0.76, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "field-guide-01", "target": "note", "type": "affiliation", "description": "Profile links point to note.", "source_urls": ["https://example.com/source/field-guide-01/page", "https://note.com/field_guide_01"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "field-guide-01", "target": "note", "type": "reference", "description": "Field Guide 01 is distributed through note pages.", "source_urls": ["https://example.com/source/field-guide-01/page"], "confidence": 0.83, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "gotokyo-shibuya-guide", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "gotokyo-shibuya-guide", "target": "shibuya", "type": "reference", "description": "Approved review candidate from summary, profile_text mentioning Shibuya.", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "confidence": 0.4, "evidence_kind": "interpretation", "needs_review": false, "review_notes": "Approved from review candidate gotokyo-shibuya-guide__shibuya__reference. Original evidence: Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture Approval note: Reviewed from the official GO TOKYO Shibuya guide page."}, {"source": "gotokyo-shinjuku-guide", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "gotokyo-shinjuku-guide", "target": "shinjuku", "type": "reference", "description": "Approved review candidate from summary, profile_text mentioning Shinjuku.", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "confidence": 0.4, "evidence_kind": "interpretation", "needs_review": false, "review_notes": "Approved from review candidate gotokyo-shinjuku-guide__shinjuku__reference. Original evidence: A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go Approval note: Reviewed from the official GO TOKYO Shinjuku guide page."}, {"source": "loop-circle", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["manual://curated/loop-circle/profile", "https://x.com/loop_circle"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Curated fictional community example. Keep separate from real-world claims."}, {"source": "loop-circle", "target": "shinjuku", "type": "activity", "description": "Curated example places Loop Circle recaps around Shinjuku meetups.", "source_urls": ["manual://curated/loop-circle/profile"], "confidence": 0.48, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Low-confidence illustrative relation for UI testing."}, {"source": "loop-circle", "target": "midnight-lab", "type": "collaboration", "description": "Pinned recap frames Midnight Lab as an adjacent collaboration circle.", "source_urls": ["manual://curated/loop-circle/pinned"], "confidence": 0.46, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Low-confidence illustrative relation for UI testing."}, {"source": "loop-circle", "target": "clip-series-01", "type": "reference", "description": "Pinned recap points members toward Clip Series 01 as the archive series.", "source_urls": ["manual://curated/loop-circle/pinned"], "confidence": 0.59, "evidence_kind": "mixed", "needs_review": true, "review_notes": "Curated fictional community example. Keep separate from real-world claims."}, {"source": "mei-curator", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://example.com/source/mei/profile", "https://x.com/mei_curator"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "mei-curator", "target": "note", "type": "affiliation", "description": "Profile links point to note.", "source_urls": ["https://example.com/source/mei/profile", "https://note.com/mei_curator"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "mei-curator", "target": "shinjuku", "type": "activity", "description": "Profile text frames Shinjuku as Mei's main meetup area.", "source_urls": ["https://example.com/source/mei/profile"], "confidence": 0.7, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "mei-curator", "target": "loop-circle", "type": "affiliation", "description": "Profile text introduces Mei as an organizer inside Loop Circle.", "source_urls": ["https://example.com/source/mei/profile"], "confidence": 0.73, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "mei-curator", "target": "audit-note-01", "type": "reference", "description": "Pinned post links readers to Audit Note 01 as a follow-up.", "source_urls": ["https://example.com/source/mei/pinned"], "confidence": 0.67, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "mei-curator", "target": "sora-clips", "type": "collaboration", "description": "Pinned post announces a recap stream with Sora Clips.", "source_urls": ["https://example.com/source/mei/pinned"], "confidence": 0.64, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "midnight-lab", "target": "youtube", "type": "affiliation", "description": "Profile links point to YouTube.", "source_urls": ["manual://curated/midnight-lab/profile", "https://www.youtube.com/@midnightlab"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Curated fictional community example. Keep separate from real-world claims."}, {"source": "midnight-lab", "target": "shinjuku", "type": "activity", "description": "Curated example places recurring community meetups around Shinjuku.", "source_urls": ["manual://curated/midnight-lab/profile"], "confidence": 0.44, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Low-confidence illustrative relation for UI testing."}, {"source": "noa-reviewer", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://example.com/source/noa/profile", "https://x.com/noa_reviewer"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "noa-reviewer", "target": "aoi-street", "type": "criticism", "description": "Pinned commentary criticizes Aoi's framing.", "source_urls": ["https://example.com/source/noa/pinned"], "confidence": 0.57, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "noa-reviewer", "target": "field-guide-01", "type": "reference", "description": "Pinned commentary references Field Guide 01 while discussing monetization claims.", "source_urls": ["https://example.com/source/noa/pinned"], "confidence": 0.6, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "play-shibuya", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://www.play-shibuya.com/en/", "https://x.com/PLAYSHIBUYA"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "play-shibuya", "target": "shibuya", "type": "activity", "description": "Approved review candidate from summary, profile_text mentioning Shibuya.", "source_urls": ["https://www.play-shibuya.com/en/", "https://x.com/PLAYSHIBUYA"], "confidence": 0.4, "evidence_kind": "interpretation", "needs_review": false, "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information Approval note: Reviewed from the official tourism association page."}, {"source": "ren-app", "target": "note", "type": "affiliation", "description": "Profile links point to note.", "source_urls": ["https://example.com/source/ren/profile", "https://note.com/ren_app"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "ren-app", "target": "youtube", "type": "affiliation", "description": "Profile links point to YouTube.", "source_urls": ["https://example.com/source/ren/profile", "https://www.youtube.com/@ren_app"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "ren-app", "target": "matching-apps", "type": "activity", "description": "Profile text describes matching apps as the primary field.", "source_urls": ["https://example.com/source/ren/profile"], "confidence": 0.77, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "ren-app", "target": "midnight-lab", "type": "affiliation", "description": "Profile text introduces Ren as a recurring mentor inside Midnight Lab.", "source_urls": ["https://example.com/source/ren/profile"], "confidence": 0.72, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "ren-app", "target": "field-guide-01", "type": "monetization", "description": "Pinned product post funnels users toward Field Guide 01.", "source_urls": ["https://example.com/source/ren/pinned"], "confidence": 0.74, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "ren-app", "target": "aoi-street", "type": "collaboration", "description": "Pinned post references a collaborative session with Aoi.", "source_urls": ["https://example.com/source/ren/pinned"], "confidence": 0.61, "evidence_kind": "fact", "needs_review": false, "review_notes": ""}, {"source": "shibuya", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://x.com/city_shibuya"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "shinjuku", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://x.com/shinjuku_info"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "shinjuku-visitors", "target": "shinjuku", "type": "activity", "description": "Approved review candidate from summary, profile_text mentioning Shinjuku.", "source_urls": ["https://www.kanko-shinjuku.jp/en/"], "confidence": 0.4, "evidence_kind": "interpretation", "needs_review": false, "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."}, {"source": "sora-clips", "target": "youtube", "type": "affiliation", "description": "Profile links point to YouTube.", "source_urls": ["https://example.com/source/sora/profile", "https://www.youtube.com/@sora_clips"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "sora-clips", "target": "instagram", "type": "affiliation", "description": "Profile links point to Instagram.", "source_urls": ["https://example.com/source/sora/profile", "https://www.instagram.com/sora_clips/"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "sora-clips", "target": "late-night-walks", "type": "activity", "description": "Profile text frames late-night walkthroughs as Sora's main field.", "source_urls": ["https://example.com/source/sora/profile"], "confidence": 0.74, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "sora-clips", "target": "loop-circle", "type": "affiliation", "description": "Profile text positions Sora as a recurring clip editor for Loop Circle.", "source_urls": ["https://example.com/source/sora/profile"], "confidence": 0.71, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "sora-clips", "target": "clip-series-01", "type": "monetization", "description": "Pinned teaser funnels viewers toward Clip Series 01.", "source_urls": ["https://example.com/source/sora/pinned"], "confidence": 0.68, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "sora-clips", "target": "mei-curator", "type": "collaboration", "description": "Pinned teaser tags Mei Curator for a joint recap stream.", "source_urls": ["https://example.com/source/sora/pinned"], "confidence": 0.62, "evidence_kind": "interpretation", "needs_review": true, "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."}, {"source": "tips", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://tips.jp/", "https://twitter.com/Tips_infojp"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."}, {"source": "youtube", "target": "x", "type": "affiliation", "description": "Profile links point to X.", "source_urls": ["https://x.com/YouTube"], "confidence": 0.86, "evidence_kind": "fact", "needs_review": true, "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."}]}</script>
-  <script id="review-candidates-data" type="application/json">{"generated_at": "2026-04-27T09:02:39+00:00", "candidates": [{"id": "mei-curator__shibuya__activity", "source": "mei-curator", "target": "shibuya", "type": "activity", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Shibuya", "matched_texts": ["Shibuya"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."}, {"id": "mei-curator__field-guide-01__collaboration", "source": "mei-curator", "target": "field-guide-01", "type": "collaboration", "basis": "pinned_post_text", "bases": ["pinned_post_text"], "matched_text": "Field Guide 01", "matched_texts": ["Field Guide 01"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."}, {"id": "mei-curator__midnight-lab__collaboration", "source": "mei-curator", "target": "midnight-lab", "type": "collaboration", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Midnight Lab", "matched_texts": ["Midnight Lab"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Midnight Lab'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__shibuya__activity", "source": "sora-clips", "target": "shibuya", "type": "activity", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Shibuya", "matched_texts": ["Shibuya"], "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__ren-app__influence", "source": "sora-clips", "target": "ren-app", "type": "influence", "basis": "profile_text", "bases": ["profile_text"], "matched_text": "Ren App", "matched_texts": ["Ren App", "Ren"], "evidence_text": "Generated hint fixture: Sora Clips cuts short YouTube edits around Shibuya and says Ren App inspired the pacing of the new archive teaser.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.4, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Ren App, Ren'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__field-guide-01__monetization", "source": "sora-clips", "target": "field-guide-01", "type": "monetization", "basis": "pinned_post_text", "bases": ["pinned_post_text"], "matched_text": "Field Guide 01", "matched_texts": ["Field Guide 01"], "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."}]}</script>
-  <script id="review-candidate-decisions-data" type="application/json">{"updated_at": "2026-04-27T08:32:37+00:00", "decisions": {"play-shibuya__shibuya__activity": {"candidate_id": "play-shibuya__shibuya__activity", "status": "approved", "note": "Reviewed from the official tourism association page.", "source": "play-shibuya", "target": "shibuya", "type": "activity", "basis": "summary, profile_text", "matched_text": "Shibuya", "evidence_text": "\"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information", "source_urls": ["https://www.play-shibuya.com/en/", "https://x.com/PLAYSHIBUYA"], "updated_at": "2026-04-25T23:00:33+00:00"}, "shinjuku-visitors__shinjuku__activity": {"candidate_id": "shinjuku-visitors__shinjuku__activity", "status": "approved", "note": "Reviewed from the official visitors bureau page.", "source": "shinjuku-visitors", "target": "shinjuku", "type": "activity", "basis": "summary, profile_text", "matched_text": "Shinjuku", "evidence_text": "Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !!", "source_urls": ["https://www.kanko-shinjuku.jp/en/"], "updated_at": "2026-04-25T23:00:34+00:00"}, "gotokyo-shibuya-guide__shibuya__reference": {"candidate_id": "gotokyo-shibuya-guide__shibuya__reference", "status": "approved", "note": "Reviewed from the official GO TOKYO Shibuya guide page.", "source": "gotokyo-shibuya-guide", "target": "shibuya", "type": "reference", "basis": "summary, profile_text", "matched_text": "Shibuya", "evidence_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "updated_at": "2026-04-26T08:33:24+00:00"}, "gotokyo-shinjuku-guide__shinjuku__reference": {"candidate_id": "gotokyo-shinjuku-guide__shinjuku__reference", "status": "approved", "note": "Reviewed from the official GO TOKYO Shinjuku guide page.", "source": "gotokyo-shinjuku-guide", "target": "shinjuku", "type": "reference", "basis": "summary, profile_text", "matched_text": "Shinjuku", "evidence_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "updated_at": "2026-04-26T08:33:25+00:00"}}}</script>
+  <script id="review-candidates-data" type="application/json">{"generated_at": "2026-04-27T09:14:06+00:00", "candidates": [{"id": "mei-curator__shibuya__activity", "source": "mei-curator", "target": "shibuya", "type": "activity", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Shibuya", "matched_texts": ["Shibuya"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."}, {"id": "mei-curator__field-guide-01__collaboration", "source": "mei-curator", "target": "field-guide-01", "type": "collaboration", "basis": "pinned_post_text", "bases": ["pinned_post_text"], "matched_text": "Field Guide 01", "matched_texts": ["Field Guide 01"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."}, {"id": "mei-curator__midnight-lab__collaboration", "source": "mei-curator", "target": "midnight-lab", "type": "collaboration", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Midnight Lab", "matched_texts": ["Midnight Lab"], "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.", "source_urls": ["manual://generated-hint/mei-curator/profile", "manual://generated-hint/mei-curator/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Midnight Lab'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__shibuya__activity", "source": "sora-clips", "target": "shibuya", "type": "activity", "basis": "profile_text, pinned_post_text", "bases": ["profile_text", "pinned_post_text"], "matched_text": "Shibuya", "matched_texts": ["Shibuya"], "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__ren-app__influence", "source": "sora-clips", "target": "ren-app", "type": "influence", "basis": "profile_text", "bases": ["profile_text"], "matched_text": "Ren App", "matched_texts": ["Ren App", "Ren"], "evidence_text": "Generated hint fixture: Sora Clips cuts short YouTube edits around Shibuya and says Ren App inspired the pacing of the new archive teaser.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.4, "needs_review": true, "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Ren App, Ren'. This is review-only and not part of the canonical graph."}, {"id": "sora-clips__field-guide-01__monetization", "source": "sora-clips", "target": "field-guide-01", "type": "monetization", "basis": "pinned_post_text", "bases": ["pinned_post_text"], "matched_text": "Field Guide 01", "matched_texts": ["Field Guide 01"], "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.", "source_urls": ["manual://generated-hint/sora-clips/profile", "manual://generated-hint/sora-clips/pinned"], "confidence": 0.46, "needs_review": true, "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."}]}</script>
+  <script id="review-candidate-decisions-data" type="application/json">{"updated_at": "2026-04-27T09:02:39+00:00", "decisions": {"play-shibuya__shibuya__activity": {"candidate_id": "play-shibuya__shibuya__activity", "status": "approved", "note": "Reviewed from the official tourism association page.", "source": "play-shibuya", "target": "shibuya", "type": "activity", "basis": "summary, profile_text", "matched_text": "Shibuya", "evidence_text": "\"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information", "source_urls": ["https://www.play-shibuya.com/en/", "https://x.com/PLAYSHIBUYA"], "updated_at": "2026-04-25T23:00:33+00:00"}, "shinjuku-visitors__shinjuku__activity": {"candidate_id": "shinjuku-visitors__shinjuku__activity", "status": "approved", "note": "Reviewed from the official visitors bureau page.", "source": "shinjuku-visitors", "target": "shinjuku", "type": "activity", "basis": "summary, profile_text", "matched_text": "Shinjuku", "evidence_text": "Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !!", "source_urls": ["https://www.kanko-shinjuku.jp/en/"], "updated_at": "2026-04-25T23:00:34+00:00"}, "gotokyo-shibuya-guide__shibuya__reference": {"candidate_id": "gotokyo-shibuya-guide__shibuya__reference", "status": "approved", "note": "Reviewed from the official GO TOKYO Shibuya guide page.", "source": "gotokyo-shibuya-guide", "target": "shibuya", "type": "reference", "basis": "summary, profile_text", "matched_text": "Shibuya", "evidence_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "updated_at": "2026-04-26T08:33:24+00:00"}, "gotokyo-shinjuku-guide__shinjuku__reference": {"candidate_id": "gotokyo-shinjuku-guide__shinjuku__reference", "status": "approved", "note": "Reviewed from the official GO TOKYO Shinjuku guide page.", "source": "gotokyo-shinjuku-guide", "target": "shinjuku", "type": "reference", "basis": "summary, profile_text", "matched_text": "Shinjuku", "evidence_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go", "source_urls": ["https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html", "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"], "updated_at": "2026-04-26T08:33:25+00:00"}}}</script>
   <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
   <script>
     const rawGraph = JSON.parse(document.getElementById("graph-data").textContent);
@@ -433,6 +434,36 @@
       platform: "#2e8b57",
       location: "#f39c12",
       content: "#d14d72"
+    };
+    const nodeTypeLabels = {
+      person: "人物",
+      community: "コミュニティ",
+      platform: "媒体",
+      location: "場所",
+      content: "コンテンツ"
+    };
+    const edgeTypeLabels = {
+      influence: "影響",
+      affiliation: "所属・関係",
+      collaboration: "交流・コラボ",
+      criticism: "批判・対立",
+      monetization: "収益・商品",
+      activity: "活動場所",
+      reference: "言及・紹介"
+    };
+    const evidenceKindLabels = {
+      fact: "事実",
+      interpretation: "解釈",
+      mixed: "混合"
+    };
+    const basisLabels = {
+      profile_text: "プロフィール",
+      summary: "概要",
+      pinned_post_text: "固定ポスト"
+    };
+    const decisionStatusLabels = {
+      approved: "承認",
+      dismissed: "却下"
     };
     const accountNodeTypes = new Set(["person", "community"]);
 
@@ -461,7 +492,7 @@
         .map((value) => `
           <label class="chip">
             <input type="checkbox" ${attributeName}="${value}" checked>
-            <span>${value}</span>
+            <span>${escapeHtml(attributeName === "data-node-type" ? (nodeTypeLabels[value] || value) : (edgeTypeLabels[value] || value))}</span>
           </label>
         `)
         .join("");
@@ -509,6 +540,26 @@
       return selected ? selected.value : "account";
     }
 
+    function formatNodeType(value) {
+      return nodeTypeLabels[value] || value;
+    }
+
+    function formatEdgeType(value) {
+      return edgeTypeLabels[value] || value;
+    }
+
+    function formatEvidenceKind(value) {
+      return evidenceKindLabels[value] || value || "事実";
+    }
+
+    function formatBasis(value) {
+      return basisLabels[value] || value || "-";
+    }
+
+    function formatDecisionStatus(value) {
+      return decisionStatusLabels[value] || value || "-";
+    }
+
     function matchesSearch(node, term) {
       if (!term) {
         return true;
@@ -537,10 +588,10 @@
 
     function formatEvidenceBadges(item) {
       const badges = [
-        `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(item.evidence_kind || "fact")}</span>`
+        `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(formatEvidenceKind(item.evidence_kind || "fact"))}</span>`
       ];
       if (item.needs_review) {
-        badges.push('<span class="tag tag-review">needs review</span>');
+        badges.push('<span class="tag tag-review">要確認</span>');
       }
       return badges.join("");
     }
@@ -556,11 +607,11 @@
           return `
             <li>
               <strong>${escapeHtml(otherNode ? otherNode.name : otherId)}</strong>
-              <span class="tag">${escapeHtml(edge.type)}</span>
+              <span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span>
               ${formatEvidenceBadges(edge)}<br>
               <span>${escapeHtml(edge.description || "")}</span><br>
-              <span class="muted">confidence: ${escapeHtml(edge.confidence)}</span>
-              ${edge.review_notes ? `<br><span class="muted">review: ${escapeHtml(edge.review_notes)}</span>` : ""}
+              <span class="muted">確信度: ${escapeHtml(edge.confidence)}</span>
+              ${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}
               ${formatLinkList(edge.source_urls || [])}
             </li>
           `;
@@ -585,35 +636,35 @@
         <div class="detail-card">
           <h3>${escapeHtml(node.name)}</h3>
           <div class="detail-meta">
-            <span class="tag">${escapeHtml(node.type)}</span>
+            <span class="tag">${escapeHtml(formatNodeType(node.type))}</span>
             ${formatEvidenceBadges(node)}
             <span class="muted">${escapeHtml(node.id)}</span><br>
-            <span class="muted">confidence: ${escapeHtml(node.confidence)}</span>
-            ${node.review_notes ? `<br><span class="muted">review: ${escapeHtml(node.review_notes)}</span>` : ""}
+            <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
+            ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
           </div>
 
           <div class="detail-section">
-            <h4>Description</h4>
+            <h4>説明</h4>
             <div>${escapeHtml(node.description || "-")}</div>
           </div>
 
           <div class="detail-section">
-            <h4>Aliases</h4>
+            <h4>別名</h4>
             <div>${escapeHtml((node.aliases || []).join(", ") || "-")}</div>
           </div>
 
           <div class="detail-section">
-            <h4>Sources</h4>
+            <h4>出典</h4>
             ${formatLinkList(node.source_urls || [])}
           </div>
 
           <div class="detail-section">
-            <h4>Outgoing relations (${outgoingEdges.length})</h4>
+            <h4>出力関係 (${outgoingEdges.length})</h4>
             <ul class="detail-list">${renderDetailList(outgoingEdges, "outgoing")}</ul>
           </div>
 
           <div class="detail-section">
-            <h4>Incoming relations (${incomingEdges.length})</h4>
+            <h4>入力関係 (${incomingEdges.length})</h4>
             <ul class="detail-list">${renderDetailList(incomingEdges, "incoming")}</ul>
           </div>
         </div>
@@ -641,11 +692,11 @@
         .map((node) => {
           return `
             <tr>
-              <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">Inspect</button></td>
+              <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
               <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
-              <td><span class="tag">${escapeHtml(node.type)}</span></td>
+              <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
               <td>${escapeHtml((node.aliases || []).join(", "))}</td>
-              <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">review: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
+              <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
               <td>${escapeHtml(node.confidence)}</td>
               <td>${formatLinkList(node.source_urls || [])}</td>
             </tr>
@@ -661,9 +712,9 @@
           return `
             <tr>
               <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
-              <td><span class="tag">${escapeHtml(edge.type)}</span></td>
+              <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
               <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
-              <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">review: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
+              <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
               <td>${escapeHtml(edge.confidence)}</td>
               <td>${formatLinkList(edge.source_urls || [])}</td>
             </tr>
@@ -675,15 +726,15 @@
     function renderReviewNodeTable(nodes) {
       const tbody = document.getElementById("review-nodes-table");
       if (!nodes.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">No visible nodes currently need review.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認ノードはありません。</td></tr>';
         return;
       }
       tbody.innerHTML = nodes
         .map((node) => `
           <tr>
-            <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">Inspect</button></td>
+            <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
             <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
-            <td><span class="tag">${escapeHtml(node.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
             <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.review_notes || "-")}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
           </tr>
@@ -694,14 +745,14 @@
     function renderReviewEdgeTable(edges, nodeNameById) {
       const tbody = document.getElementById("review-edges-table");
       if (!edges.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">No visible edges currently need review.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認エッジはありません。</td></tr>';
         return;
       }
       tbody.innerHTML = edges
         .map((edge) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
-            <td><span class="tag">${escapeHtml(edge.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
             <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.review_notes || "-")}</td>
             <td>${formatLinkList(edge.source_urls || [])}</td>
@@ -713,17 +764,17 @@
     function renderReviewCandidateTable(candidates, nodeNameById) {
       const tbody = document.getElementById("review-candidates-table");
       if (!candidates.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">No visible review candidates currently match the selected filters.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー候補はありません。</td></tr>';
         return;
       }
       tbody.innerHTML = candidates
         .map((candidate) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(candidate.source) || candidate.source)}</td>
-            <td><span class="tag">${escapeHtml(candidate.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatEdgeType(candidate.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(candidate.target) || candidate.target)}</td>
-            <td><span class="tag">${escapeHtml(candidate.basis)}</span><br><span class="muted">match: ${escapeHtml(candidate.matched_text || "-")}</span></td>
-            <td><span class="tag tag-review">needs review</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
+            <td><span class="tag">${escapeHtml(formatBasis(candidate.basis))}</span><br><span class="muted">一致語: ${escapeHtml(candidate.matched_text || "-")}</span></td>
+            <td><span class="tag tag-review">要確認</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
             <td>${formatLinkList(candidate.source_urls || [])}</td>
           </tr>
         `)
@@ -750,16 +801,16 @@
     function renderReviewCandidateDecisionTable(decisionEntries, nodeNameById) {
       const tbody = document.getElementById("review-candidate-decisions-table");
       if (!decisionEntries.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">No visible candidate decisions currently match the selected filters.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー判断はありません。</td></tr>';
         return;
       }
       tbody.innerHTML = decisionEntries
         .map((entry) => `
           <tr>
-            <td>${escapeHtml(nodeNameById.get(entry.source) || entry.source || "-")}<br><span class="muted">${escapeHtml(entry.type || "-")}</span></td>
-            <td><span class="tag ${entry.status === "approved" ? "tag-evidence-fact" : "tag-review"}">${escapeHtml(entry.status || "-")}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
+            <td>${escapeHtml(nodeNameById.get(entry.source) || entry.source || "-")}<br><span class="muted">${escapeHtml(formatEdgeType(entry.type || "-"))}</span></td>
+            <td><span class="tag ${entry.status === "approved" ? "tag-evidence-fact" : "tag-review"}">${escapeHtml(formatDecisionStatus(entry.status || "-"))}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
             <td>${escapeHtml(nodeNameById.get(entry.target) || entry.target || "-")}</td>
-            <td><span class="tag">${escapeHtml(entry.basis || "-")}</span>${entry.matched_text ? `<br><span class="muted">match: ${escapeHtml(entry.matched_text)}</span>` : ""}</td>
+            <td><span class="tag">${escapeHtml(formatBasis(entry.basis || "-"))}</span>${entry.matched_text ? `<br><span class="muted">一致語: ${escapeHtml(entry.matched_text)}</span>` : ""}</td>
             <td>${escapeHtml(entry.note || "-")}${entry.evidence_text ? `<br><span class="muted">${escapeHtml(entry.evidence_text)}</span>` : ""}${entry.candidate_id ? `<br><span class="muted">${escapeHtml(entry.candidate_id)}</span>` : ""}</td>
             <td>${formatLinkList(entry.source_urls || [])}</td>
           </tr>
@@ -831,9 +882,9 @@
             border: "#ffffff",
             highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
           },
-          title: `${node.name} (${node.type})
+          title: `${node.name} (${formatNodeType(node.type)})
 ${node.description || ""}
-${node.evidence_kind || "fact"}${node.needs_review ? " / needs review" : ""}`
+${formatEvidenceKind(node.evidence_kind || "fact")}${node.needs_review ? " / 要確認" : ""}`
         }))
       );
 
@@ -842,9 +893,9 @@ ${node.evidence_kind || "fact"}${node.needs_review ? " / needs review" : ""}`
           id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
           from: edge.source,
           to: edge.target,
-          label: edge.type,
-          title: `${edge.type}: ${edge.description || ""}
-${edge.evidence_kind || "fact"}${edge.needs_review ? " / needs review" : ""}`
+          label: formatEdgeType(edge.type),
+          title: `${formatEdgeType(edge.type)}: ${edge.description || ""}
+${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要確認" : ""}`
         }))
       );
 

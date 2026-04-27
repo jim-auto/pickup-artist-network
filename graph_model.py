@@ -602,6 +602,21 @@ def render_html(
     review_candidate_decisions_payload: dict[str, Any] | None = None,
     growth_targets_payload: dict[str, Any] | None = None,
 ) -> str:
+    node_type_labels = {
+        "person": "人物",
+        "community": "コミュニティ",
+        "platform": "媒体",
+        "location": "場所",
+        "content": "コンテンツ",
+    }
+
+    def localize_phase_label(label: Any) -> str:
+        text = str(label or "-")
+        if text.startswith("Phase "):
+            suffix = text.split(" ", 1)[1]
+            return f"第{suffix}段階"
+        return text
+
     graph_json = json.dumps(graph.to_dict(), ensure_ascii=False)
     review_candidates_json = json.dumps(
         review_candidates_payload or {"generated_at": "", "candidates": []},
@@ -620,7 +635,7 @@ def render_html(
     )
     growth_phase_cards = "".join(
         (
-            f'<div class="stat"><span class="muted">{escape(str(phase.get("label", "-")))}</span>'
+            f'<div class="stat"><span class="muted">{escape(localize_phase_label(phase.get("label", "-")))}</span>'
             f'<strong>{escape(str(phase.get("real_person_target", "-")))}</strong></div>'
         )
         for phase in growth_targets.get("phases", [])
@@ -629,7 +644,7 @@ def render_html(
     growth_type_rows = "".join(
         (
             "<tr>"
-            f"<td><strong>{escape(str(item.get('type', '-')))}</strong></td>"
+            f"<td><strong>{escape(node_type_labels.get(str(item.get('type', '-')), str(item.get('type', '-'))))}</strong></td>"
             f"<td>{escape(str(item.get('current', 0)))}</td>"
             f"<td>{escape(str(item.get('target_min', 0)))}"
             f"{'' if item.get('target_min') == item.get('target_max') else ' - ' + escape(str(item.get('target_max', 0)))}</td>"
@@ -859,26 +874,26 @@ def render_html(
     }
   </style>
 </head>
-<body>
+  <body>
   <header>
     <h1>__TITLE__</h1>
-    <p>Manual-first graph prototype inspired by sokusuu-ranking. Generated at __GENERATED_AT__.</p>
+    <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: __GENERATED_AT__。</p>
   </header>
   <main>
     <section class="panel">
-      <h2>Real growth targets</h2>
-      <p class="muted">First explicit milestone: reach 20 real person nodes while keeping the real-side graph reviewable.</p>
+      <h2>実データ成長目標</h2>
+      <p class="muted">まずはレビュー可能な粒度を保ちながら、実在人物ノード 20 件を最初の目標にします。</p>
       <section class="stats">
-        <div class="stat"><span class="muted">Real persons</span><strong>__GROWTH_HEADLINE__</strong></div>
+        <div class="stat"><span class="muted">実在人物</span><strong>__GROWTH_HEADLINE__</strong></div>
         __GROWTH_PHASE_CARDS__
       </section>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>type</th>
-              <th>current real</th>
-              <th>target range</th>
+              <th>種別</th>
+              <th>現在の実データ数</th>
+              <th>目標レンジ</th>
             </tr>
           </thead>
           <tbody>
@@ -891,10 +906,10 @@ def render_html(
     <section class="panel controls">
       <div>
         <label for="search"><strong>名前検索</strong></label>
-        <input id="search" type="search" placeholder="name / id / aliases / description">
+        <input id="search" type="search" placeholder="名前 / id / 別名 / 説明">
       </div>
       <div>
-        <strong>Graph view</strong>
+        <strong>表示モード</strong>
         <div class="filter-group">
           <label class="chip">
             <input type="radio" name="graph-view-mode" value="account" checked>
@@ -908,29 +923,30 @@ def render_html(
         <div class="muted">既定では人物・コミュニティを優先表示し、platform / location / content は全体グラフで見られます。</div>
       </div>
       <div>
-        <strong>Node type</strong>
+        <strong>ノード種別</strong>
         <div id="node-type-filters" class="filter-group"></div>
       </div>
       <div>
-        <strong>Edge type</strong>
+        <strong>関係種別</strong>
         <div id="edge-type-filters" class="filter-group"></div>
       </div>
     </section>
 
     <section class="panel stats">
-      <div class="stat"><span class="muted">Visible nodes</span><strong id="visible-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Visible edges</span><strong id="visible-edges">0</strong></div>
-      <div class="stat"><span class="muted">Review nodes</span><strong id="review-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Review edges</span><strong id="review-edges">0</strong></div>
-      <div class="stat"><span class="muted">Review candidates</span><strong id="review-candidates">0</strong></div>
-      <div class="stat"><span class="muted">Total nodes</span><strong id="total-nodes">0</strong></div>
-      <div class="stat"><span class="muted">Total edges</span><strong id="total-edges">0</strong></div>
+      <div class="stat"><span class="muted">表示ノード数</span><strong id="visible-nodes">0</strong></div>
+      <div class="stat"><span class="muted">表示エッジ数</span><strong id="visible-edges">0</strong></div>
+      <div class="stat"><span class="muted">要確認ノード数</span><strong id="review-nodes">0</strong></div>
+      <div class="stat"><span class="muted">要確認エッジ数</span><strong id="review-edges">0</strong></div>
+      <div class="stat"><span class="muted">レビュー候補数</span><strong id="review-candidates">0</strong></div>
+      <div class="stat"><span class="muted">総ノード数</span><strong id="total-nodes">0</strong></div>
+      <div class="stat"><span class="muted">総エッジ数</span><strong id="total-edges">0</strong></div>
     </section>
 
     <section class="graph-layout">
       <section class="panel network-panel">
         <h2>アカウント相関ビュー</h2>
         <p class="muted">まずはアカウント同士のつながりを見やすくし、必要なときだけ全体グラフへ広げます。</p>
+        <p class="muted">※ 現在の公開版はサンプル構成です。fictional な人物ノードと安全寄りの公開ノードを含み、実在ナンパ師アカウントの確定相関図ではありません。</p>
         <div id="network"></div>
       </section>
 
@@ -942,16 +958,16 @@ def render_html(
 
     <section class="two-column">
       <section class="panel">
-        <h2>Review queue</h2>
+        <h2>要確認ノード一覧</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>inspect</th>
-                <th>name</th>
-                <th>type</th>
-                <th>review</th>
-                <th>sources</th>
+                <th>詳細</th>
+                <th>名前</th>
+                <th>種別</th>
+                <th>確認メモ</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="review-nodes-table"></tbody>
@@ -960,16 +976,16 @@ def render_html(
       </section>
 
       <section class="panel">
-        <h2>Review edge queue</h2>
+        <h2>要確認エッジ一覧</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
                 <th>source</th>
-                <th>type</th>
+                <th>関係</th>
                 <th>target</th>
-                <th>review</th>
-                <th>sources</th>
+                <th>確認メモ</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="review-edges-table"></tbody>
@@ -979,18 +995,18 @@ def render_html(
     </section>
 
     <section class="panel">
-      <h2>Review candidate queue</h2>
-      <p class="muted">Generated mention matches from profile / summary / pinned-post hints. These are review-only suggestions and are not part of the canonical graph.</p>
+      <h2>レビュー候補一覧</h2>
+      <p class="muted">profile / summary / pinned-post のヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>source</th>
-              <th>proposed type</th>
+              <th>提案関係</th>
               <th>target</th>
-              <th>basis</th>
-              <th>review</th>
-              <th>sources</th>
+              <th>根拠テキスト</th>
+              <th>確認メモ</th>
+              <th>出典</th>
             </tr>
           </thead>
           <tbody id="review-candidates-table"></tbody>
@@ -999,18 +1015,18 @@ def render_html(
     </section>
 
     <section class="panel">
-      <h2>Candidate decisions</h2>
-      <p class="muted">Approved / dismissed decisions persisted in <code>data/review_candidate_decisions.json</code>.</p>
+      <h2>レビュー判断ログ</h2>
+      <p class="muted">approve / dismiss の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
               <th>source</th>
-              <th>status</th>
+              <th>状態</th>
               <th>target</th>
-              <th>basis</th>
-              <th>review</th>
-              <th>sources</th>
+              <th>根拠テキスト</th>
+              <th>確認メモ</th>
+              <th>出典</th>
             </tr>
           </thead>
           <tbody id="review-candidate-decisions-table"></tbody>
@@ -1025,13 +1041,13 @@ def render_html(
           <table>
             <thead>
               <tr>
-                <th>inspect</th>
-                <th>name</th>
-                <th>type</th>
-                <th>aliases</th>
-                <th>description</th>
-                <th>confidence</th>
-                <th>sources</th>
+                <th>詳細</th>
+                <th>名前</th>
+                <th>種別</th>
+                <th>別名</th>
+                <th>説明</th>
+                <th>確信度</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="nodes-table"></tbody>
@@ -1046,11 +1062,11 @@ def render_html(
             <thead>
               <tr>
                 <th>source</th>
-                <th>type</th>
+                <th>関係</th>
                 <th>target</th>
-                <th>description</th>
-                <th>confidence</th>
-                <th>sources</th>
+                <th>説明</th>
+                <th>確信度</th>
+                <th>出典</th>
               </tr>
             </thead>
             <tbody id="edges-table"></tbody>
@@ -1074,6 +1090,36 @@ def render_html(
       platform: "#2e8b57",
       location: "#f39c12",
       content: "#d14d72"
+    };
+    const nodeTypeLabels = {
+      person: "人物",
+      community: "コミュニティ",
+      platform: "媒体",
+      location: "場所",
+      content: "コンテンツ"
+    };
+    const edgeTypeLabels = {
+      influence: "影響",
+      affiliation: "所属・関係",
+      collaboration: "交流・コラボ",
+      criticism: "批判・対立",
+      monetization: "収益・商品",
+      activity: "活動場所",
+      reference: "言及・紹介"
+    };
+    const evidenceKindLabels = {
+      fact: "事実",
+      interpretation: "解釈",
+      mixed: "混合"
+    };
+    const basisLabels = {
+      profile_text: "プロフィール",
+      summary: "概要",
+      pinned_post_text: "固定ポスト"
+    };
+    const decisionStatusLabels = {
+      approved: "承認",
+      dismissed: "却下"
     };
     const accountNodeTypes = new Set(["person", "community"]);
 
@@ -1102,7 +1148,7 @@ def render_html(
         .map((value) => `
           <label class="chip">
             <input type="checkbox" ${attributeName}="${value}" checked>
-            <span>${value}</span>
+            <span>${escapeHtml(attributeName === "data-node-type" ? (nodeTypeLabels[value] || value) : (edgeTypeLabels[value] || value))}</span>
           </label>
         `)
         .join("");
@@ -1150,6 +1196,26 @@ def render_html(
       return selected ? selected.value : "account";
     }
 
+    function formatNodeType(value) {
+      return nodeTypeLabels[value] || value;
+    }
+
+    function formatEdgeType(value) {
+      return edgeTypeLabels[value] || value;
+    }
+
+    function formatEvidenceKind(value) {
+      return evidenceKindLabels[value] || value || "事実";
+    }
+
+    function formatBasis(value) {
+      return basisLabels[value] || value || "-";
+    }
+
+    function formatDecisionStatus(value) {
+      return decisionStatusLabels[value] || value || "-";
+    }
+
     function matchesSearch(node, term) {
       if (!term) {
         return true;
@@ -1178,10 +1244,10 @@ def render_html(
 
     function formatEvidenceBadges(item) {
       const badges = [
-        `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(item.evidence_kind || "fact")}</span>`
+        `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(formatEvidenceKind(item.evidence_kind || "fact"))}</span>`
       ];
       if (item.needs_review) {
-        badges.push('<span class="tag tag-review">needs review</span>');
+        badges.push('<span class="tag tag-review">要確認</span>');
       }
       return badges.join("");
     }
@@ -1197,11 +1263,11 @@ def render_html(
           return `
             <li>
               <strong>${escapeHtml(otherNode ? otherNode.name : otherId)}</strong>
-              <span class="tag">${escapeHtml(edge.type)}</span>
+              <span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span>
               ${formatEvidenceBadges(edge)}<br>
               <span>${escapeHtml(edge.description || "")}</span><br>
-              <span class="muted">confidence: ${escapeHtml(edge.confidence)}</span>
-              ${edge.review_notes ? `<br><span class="muted">review: ${escapeHtml(edge.review_notes)}</span>` : ""}
+              <span class="muted">確信度: ${escapeHtml(edge.confidence)}</span>
+              ${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}
               ${formatLinkList(edge.source_urls || [])}
             </li>
           `;
@@ -1226,35 +1292,35 @@ def render_html(
         <div class="detail-card">
           <h3>${escapeHtml(node.name)}</h3>
           <div class="detail-meta">
-            <span class="tag">${escapeHtml(node.type)}</span>
+            <span class="tag">${escapeHtml(formatNodeType(node.type))}</span>
             ${formatEvidenceBadges(node)}
             <span class="muted">${escapeHtml(node.id)}</span><br>
-            <span class="muted">confidence: ${escapeHtml(node.confidence)}</span>
-            ${node.review_notes ? `<br><span class="muted">review: ${escapeHtml(node.review_notes)}</span>` : ""}
+            <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
+            ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
           </div>
 
           <div class="detail-section">
-            <h4>Description</h4>
+            <h4>説明</h4>
             <div>${escapeHtml(node.description || "-")}</div>
           </div>
 
           <div class="detail-section">
-            <h4>Aliases</h4>
+            <h4>別名</h4>
             <div>${escapeHtml((node.aliases || []).join(", ") || "-")}</div>
           </div>
 
           <div class="detail-section">
-            <h4>Sources</h4>
+            <h4>出典</h4>
             ${formatLinkList(node.source_urls || [])}
           </div>
 
           <div class="detail-section">
-            <h4>Outgoing relations (${outgoingEdges.length})</h4>
+            <h4>出力関係 (${outgoingEdges.length})</h4>
             <ul class="detail-list">${renderDetailList(outgoingEdges, "outgoing")}</ul>
           </div>
 
           <div class="detail-section">
-            <h4>Incoming relations (${incomingEdges.length})</h4>
+            <h4>入力関係 (${incomingEdges.length})</h4>
             <ul class="detail-list">${renderDetailList(incomingEdges, "incoming")}</ul>
           </div>
         </div>
@@ -1282,11 +1348,11 @@ def render_html(
         .map((node) => {
           return `
             <tr>
-              <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">Inspect</button></td>
+              <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
               <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
-              <td><span class="tag">${escapeHtml(node.type)}</span></td>
+              <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
               <td>${escapeHtml((node.aliases || []).join(", "))}</td>
-              <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">review: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
+              <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
               <td>${escapeHtml(node.confidence)}</td>
               <td>${formatLinkList(node.source_urls || [])}</td>
             </tr>
@@ -1302,9 +1368,9 @@ def render_html(
           return `
             <tr>
               <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
-              <td><span class="tag">${escapeHtml(edge.type)}</span></td>
+              <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
               <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
-              <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">review: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
+              <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
               <td>${escapeHtml(edge.confidence)}</td>
               <td>${formatLinkList(edge.source_urls || [])}</td>
             </tr>
@@ -1316,15 +1382,15 @@ def render_html(
     function renderReviewNodeTable(nodes) {
       const tbody = document.getElementById("review-nodes-table");
       if (!nodes.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">No visible nodes currently need review.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認ノードはありません。</td></tr>';
         return;
       }
       tbody.innerHTML = nodes
         .map((node) => `
           <tr>
-            <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">Inspect</button></td>
+            <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
             <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
-            <td><span class="tag">${escapeHtml(node.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
             <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.review_notes || "-")}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
           </tr>
@@ -1335,14 +1401,14 @@ def render_html(
     function renderReviewEdgeTable(edges, nodeNameById) {
       const tbody = document.getElementById("review-edges-table");
       if (!edges.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">No visible edges currently need review.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認エッジはありません。</td></tr>';
         return;
       }
       tbody.innerHTML = edges
         .map((edge) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
-            <td><span class="tag">${escapeHtml(edge.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
             <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.review_notes || "-")}</td>
             <td>${formatLinkList(edge.source_urls || [])}</td>
@@ -1354,17 +1420,17 @@ def render_html(
     function renderReviewCandidateTable(candidates, nodeNameById) {
       const tbody = document.getElementById("review-candidates-table");
       if (!candidates.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">No visible review candidates currently match the selected filters.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー候補はありません。</td></tr>';
         return;
       }
       tbody.innerHTML = candidates
         .map((candidate) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(candidate.source) || candidate.source)}</td>
-            <td><span class="tag">${escapeHtml(candidate.type)}</span></td>
+            <td><span class="tag">${escapeHtml(formatEdgeType(candidate.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(candidate.target) || candidate.target)}</td>
-            <td><span class="tag">${escapeHtml(candidate.basis)}</span><br><span class="muted">match: ${escapeHtml(candidate.matched_text || "-")}</span></td>
-            <td><span class="tag tag-review">needs review</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
+            <td><span class="tag">${escapeHtml(formatBasis(candidate.basis))}</span><br><span class="muted">一致語: ${escapeHtml(candidate.matched_text || "-")}</span></td>
+            <td><span class="tag tag-review">要確認</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
             <td>${formatLinkList(candidate.source_urls || [])}</td>
           </tr>
         `)
@@ -1391,16 +1457,16 @@ def render_html(
     function renderReviewCandidateDecisionTable(decisionEntries, nodeNameById) {
       const tbody = document.getElementById("review-candidate-decisions-table");
       if (!decisionEntries.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">No visible candidate decisions currently match the selected filters.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー判断はありません。</td></tr>';
         return;
       }
       tbody.innerHTML = decisionEntries
         .map((entry) => `
           <tr>
-            <td>${escapeHtml(nodeNameById.get(entry.source) || entry.source || "-")}<br><span class="muted">${escapeHtml(entry.type || "-")}</span></td>
-            <td><span class="tag ${entry.status === "approved" ? "tag-evidence-fact" : "tag-review"}">${escapeHtml(entry.status || "-")}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
+            <td>${escapeHtml(nodeNameById.get(entry.source) || entry.source || "-")}<br><span class="muted">${escapeHtml(formatEdgeType(entry.type || "-"))}</span></td>
+            <td><span class="tag ${entry.status === "approved" ? "tag-evidence-fact" : "tag-review"}">${escapeHtml(formatDecisionStatus(entry.status || "-"))}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
             <td>${escapeHtml(nodeNameById.get(entry.target) || entry.target || "-")}</td>
-            <td><span class="tag">${escapeHtml(entry.basis || "-")}</span>${entry.matched_text ? `<br><span class="muted">match: ${escapeHtml(entry.matched_text)}</span>` : ""}</td>
+            <td><span class="tag">${escapeHtml(formatBasis(entry.basis || "-"))}</span>${entry.matched_text ? `<br><span class="muted">一致語: ${escapeHtml(entry.matched_text)}</span>` : ""}</td>
             <td>${escapeHtml(entry.note || "-")}${entry.evidence_text ? `<br><span class="muted">${escapeHtml(entry.evidence_text)}</span>` : ""}${entry.candidate_id ? `<br><span class="muted">${escapeHtml(entry.candidate_id)}</span>` : ""}</td>
             <td>${formatLinkList(entry.source_urls || [])}</td>
           </tr>
@@ -1472,7 +1538,7 @@ def render_html(
             border: "#ffffff",
             highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
           },
-          title: `${node.name} (${node.type})\n${node.description || ""}\n${node.evidence_kind || "fact"}${node.needs_review ? " / needs review" : ""}`
+          title: `${node.name} (${formatNodeType(node.type)})\n${node.description || ""}\n${formatEvidenceKind(node.evidence_kind || "fact")}${node.needs_review ? " / 要確認" : ""}`
         }))
       );
 
@@ -1481,8 +1547,8 @@ def render_html(
           id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
           from: edge.source,
           to: edge.target,
-          label: edge.type,
-          title: `${edge.type}: ${edge.description || ""}\n${edge.evidence_kind || "fact"}${edge.needs_review ? " / needs review" : ""}`
+          label: formatEdgeType(edge.type),
+          title: `${formatEdgeType(edge.type)}: ${edge.description || ""}\n${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要確認" : ""}`
         }))
       );
 
