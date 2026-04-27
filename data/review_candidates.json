@@ -1,141 +1,187 @@
 {
-  "generated_at": "2026-04-27T11:46:49+00:00",
+  "generated_at": "2026-04-27T12:18:01+00:00",
   "candidates": [
     {
-      "id": "mei-curator__shibuya__activity",
-      "source": "mei-curator",
-      "target": "shibuya",
-      "type": "activity",
-      "basis": "profile_text, pinned_post_text",
+      "id": "emuchi-pua__puro-nampa__reference",
+      "source": "emuchi-pua",
+      "target": "puro-nampa",
+      "type": "reference",
+      "basis": "summary, profile_text",
       "bases": [
-        "profile_text",
-        "pinned_post_text"
+        "summary",
+        "profile_text"
       ],
-      "matched_text": "Shibuya",
+      "matched_text": "puro_nanpa",
       "matched_texts": [
-        "Shibuya"
+        "puro_nanpa"
       ],
-      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
+      "evidence_text": "裏えむち@最強ナンパ師 (@emuchi_pua)\n金×ナンパ/経験人数1400人/30代中年男性/思考垢/メイン@puro_nanpa",
       "source_urls": [
-        "manual://generated-hint/mei-curator/profile",
-        "manual://generated-hint/mei-curator/pinned"
+        "https://x.com/emuchi_pua"
       ],
-      "confidence": 0.46,
+      "confidence": 0.4,
       "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'puro_nanpa'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mei-curator__field-guide-01__collaboration",
-      "source": "mei-curator",
-      "target": "field-guide-01",
-      "type": "collaboration",
-      "basis": "pinned_post_text",
-      "bases": [
-        "pinned_post_text"
-      ],
-      "matched_text": "Field Guide 01",
-      "matched_texts": [
-        "Field Guide 01"
-      ],
-      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
-      "source_urls": [
-        "manual://generated-hint/mei-curator/profile",
-        "manual://generated-hint/mei-curator/pinned"
-      ],
-      "confidence": 0.46,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "mei-curator__midnight-lab__collaboration",
-      "source": "mei-curator",
-      "target": "midnight-lab",
-      "type": "collaboration",
-      "basis": "profile_text, pinned_post_text",
-      "bases": [
-        "profile_text",
-        "pinned_post_text"
-      ],
-      "matched_text": "Midnight Lab",
-      "matched_texts": [
-        "Midnight Lab"
-      ],
-      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
-      "source_urls": [
-        "manual://generated-hint/mei-curator/profile",
-        "manual://generated-hint/mei-curator/pinned"
-      ],
-      "confidence": 0.46,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Midnight Lab'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "sora-clips__shibuya__activity",
-      "source": "sora-clips",
-      "target": "shibuya",
-      "type": "activity",
-      "basis": "profile_text, pinned_post_text",
-      "bases": [
-        "profile_text",
-        "pinned_post_text"
-      ],
-      "matched_text": "Shibuya",
-      "matched_texts": [
-        "Shibuya"
-      ],
-      "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.",
-      "source_urls": [
-        "manual://generated-hint/sora-clips/profile",
-        "manual://generated-hint/sora-clips/pinned"
-      ],
-      "confidence": 0.46,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "sora-clips__ren-app__influence",
-      "source": "sora-clips",
-      "target": "ren-app",
-      "type": "influence",
+      "id": "gotokyo-shibuya-guide__tokyo__reference",
+      "source": "gotokyo-shibuya-guide",
+      "target": "tokyo",
+      "type": "reference",
       "basis": "profile_text",
       "bases": [
         "profile_text"
       ],
-      "matched_text": "Ren App",
+      "matched_text": "Tokyo",
       "matched_texts": [
-        "Ren App",
-        "Ren"
+        "Tokyo"
       ],
-      "evidence_text": "Generated hint fixture: Sora Clips cuts short YouTube edits around Shibuya and says Ren App inspired the pacing of the new archive teaser.",
+      "evidence_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture",
       "source_urls": [
-        "manual://generated-hint/sora-clips/profile",
-        "manual://generated-hint/sora-clips/pinned"
+        "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+        "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
       ],
       "confidence": 0.4,
       "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Ren App, Ren'. This is review-only and not part of the canonical graph."
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Tokyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "sora-clips__field-guide-01__monetization",
-      "source": "sora-clips",
-      "target": "field-guide-01",
-      "type": "monetization",
-      "basis": "pinned_post_text",
+      "id": "gotokyo-shinjuku-guide__tokyo__reference",
+      "source": "gotokyo-shinjuku-guide",
+      "target": "tokyo",
+      "type": "reference",
+      "basis": "summary, profile_text",
       "bases": [
-        "pinned_post_text"
+        "summary",
+        "profile_text"
       ],
-      "matched_text": "Field Guide 01",
+      "matched_text": "Tokyo",
       "matched_texts": [
-        "Field Guide 01"
+        "Tokyo"
       ],
-      "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.",
+      "evidence_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go",
       "source_urls": [
-        "manual://generated-hint/sora-clips/profile",
-        "manual://generated-hint/sora-clips/pinned"
+        "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+        "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
       ],
-      "confidence": 0.46,
+      "confidence": 0.4,
       "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Tokyo'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pika-pua__pika-stochi__reference",
+      "source": "pika-pua",
+      "target": "pika-stochi",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pika_stochi",
+      "matched_texts": [
+        "pika_stochi"
+      ],
+      "evidence_text": "ピカちう@ナンパ講師/外見改善 東京 名古屋 (@pika_pua)\n🔥アラフォー、童貞、引きこもりに即らせるナンパ講師🔥/ナンパ指導実績150人⤴︎ /📮ダブルスコアで新人賞/地上アイドル即済/ストナンの大会優勝済🏆/三十路社畜低身長から550人斬/スト箱ネト夜職オールラウンダー/164cmホビットの活動垢（@pika_sublol） 外見改善（@pika_stochi）\nLocation: ※外見改善講習のみ受付中",
+      "source_urls": [
+        "https://x.com/pika_pua",
+        "https://note.com/taku__lol/n/n64664fb8fb30"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_stochi'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pika-pua__pika-sublol__reference",
+      "source": "pika-pua",
+      "target": "pika-sublol",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pika_sublol",
+      "matched_texts": [
+        "pika_sublol"
+      ],
+      "evidence_text": "ピカちう@ナンパ講師/外見改善 東京 名古屋 (@pika_pua)\n🔥アラフォー、童貞、引きこもりに即らせるナンパ講師🔥/ナンパ指導実績150人⤴︎ /📮ダブルスコアで新人賞/地上アイドル即済/ストナンの大会優勝済🏆/三十路社畜低身長から550人斬/スト箱ネト夜職オールラウンダー/164cmホビットの活動垢（@pika_sublol） 外見改善（@pika_stochi）\nLocation: ※外見改善講習のみ受付中",
+      "source_urls": [
+        "https://x.com/pika_pua",
+        "https://note.com/taku__lol/n/n64664fb8fb30"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_sublol'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pika-sublol__pika-pua__reference",
+      "source": "pika-sublol",
+      "target": "pika-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pika_pua",
+      "matched_texts": [
+        "pika_pua"
+      ],
+      "evidence_text": "パキパキピキリチュウ@lv553 (@pika_sublol)\n【500即👆社畜ホビットの日常垢】【📮入店2日目ラスソン3日目🍾】【バイト📮初月3週間新人賞】しばらく夜職ポスト多め ぴかちう（@pika_pua）の本音垢⬛️🟦20連勝 🎨1出撃3即\nExternal link: https://querie.me/user/pika_sublol",
+      "source_urls": [
+        "https://x.com/pika_sublol",
+        "https://querie.me/user/pika_sublol"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "puro-nampa__emuchi-pua__reference",
+      "source": "puro-nampa",
+      "target": "emuchi-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "emuchi_pua",
+      "matched_texts": [
+        "emuchi_pua"
+      ],
+      "evidence_text": "M氏@ナンパ講師 (@puro_nanpa)\n経験人数1400人超/恋愛講師/スト・箱・ネト全てできます。「結局なにからやればいいの？」って人はポスト見ればおけ。単発/長期講習依頼はDM迄。 @emuchi_pua ←思考垢\nLocation: ワイの過去→",
+      "source_urls": [
+        "https://x.com/puro_nanpa",
+        "https://x.com/puro_nanpa/status/1903019724398792956?s=46&t=W4A7y4kFypDhagBE6Lr49g"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'emuchi_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "shinjuku__tokyo__activity",
+      "source": "shinjuku",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "東京都",
+      "matched_texts": [
+        "東京都",
+        "東京"
+      ],
+      "evidence_text": "新宿区【公式】 (@shinjuku_info)\n新宿区公式アカウントです。重要なお知らせや区政ニュースを発信していきます。情報発信専用とさせていただきます。\nLocation: 東京都新宿区",
+      "source_urls": [
+        "https://x.com/shinjuku_info",
+        "https://www.city.shinjuku.lg.jp/"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京都, 東京'. This is review-only and not part of the canonical graph."
     }
   ]
 }

@@ -237,7 +237,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("https://example.com/alpha.png", html)
         self.assertIn("実データ成長目標", html)
         self.assertIn("表示モード", html)
-        self.assertIn("※ 現在の公開版はサンプル構成です。", html)
+        self.assertIn("※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。", html)
         self.assertIn('name="graph-view-mode"', html)
         self.assertIn('value="account" checked', html)
         self.assertIn("選択ノード詳細", html)

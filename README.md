@@ -63,6 +63,7 @@ pip install -r requirements.txt
 - `seed_entities.txt`
   - 起点となる人物・コミュニティ・媒体・場所・コンテンツ
   - `type|id|name|aliases|scope` の形式で、`scope` に `real` / `fictional` を持てる
+  - 現在の公開用 seed は **real-only** で運用
 - `data/source_snapshots.json`
   - `sokusuu-ranking` の profile / pinned / links 発想を流用したスナップショット入力
   - 完全自動スクレイピングの代わりに、まずは公開情報をここへ手動転記・整理する
@@ -74,8 +75,8 @@ pip install -r requirements.txt
 - `data/source_snapshots.generated.json`
   - collector が public page から生成する snapshot 出力
 - `data/source_snapshots.generated.hints.json`
-  - fictional sample cluster 向けの generated hint fixture
-  - live public data だけでは review candidate が薄くなりやすいため、approve / dismiss workflow を空回りさせないために使う
+  - review workflow 実験用の optional hint fixture
+  - 公開用データでは現在空にしておき、runtime に架空ノードを混ぜない
 
 ### 3. collector で public page 由来 snapshot を更新する
 
@@ -161,7 +162,7 @@ python build_site.py
 2. `collector.py` が approved public page から `data/source_snapshots.generated.json` を書く
 3. `data/source_snapshots.json` に手動 snapshot / observation を保存する
 4. `scraper.py` が manual + generated snapshot を解釈して canonical な `data/nodes.json`, `data/edges.json` を出す
-5. generated snapshot と sample 用 hint fixture から review-only な `data/review_candidates.json` を作る
+5. generated snapshot から review-only な `data/review_candidates.json` を作る
 6. `generate_html.py` が `docs/index.html` を作る
 
 この形にしておくことで、将来 `sokusuu-ranking` 風の取得スクリプトを作る場合も、まず snapshot を吐くところから始められます。
@@ -178,11 +179,9 @@ python build_site.py
   - まずは本人が公開 X profile で **自分で「ナンパ師」「プロナンパ師」「ストリートナンパのプロ」などと名乗っている** アカウントだけを少数 seed に追加する
   - 第三者の噂・暴露・まとめではなく、本人プロフィールや本人導線の public page を優先する
   - 公開プロフィール文で確認できる範囲だけを取り込み、推測的な所属・対立・影響関係はすぐに確定しない
-  - 現在は公開 X profile ベースで **10 アカウント** まで追加済み
-- **構造確認用の fictional node**
-  - 人物・コミュニティ・コンテンツの一部サンプル
+  - 現在は公開 X profile ベースで **13 アカウント** まで追加済み
 
-つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、その次に **本人が自称している public X profile** を少数だけ追加し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加する前提です。
+つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、その次に **本人が自称している public X profile** や、そこから明示的にリンクされた関連アカウントを少数ずつ追加し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加します。
 
 ## GitHub Pages
 
@@ -206,10 +205,10 @@ python build_site.py
 - review candidate は **approve / dismiss** のどちらかに流せます。approve は manual observation へ昇格、dismiss は再提案抑止に使います
 - HTML には `data/review_candidate_decisions.json` 由来の **candidate decision log** もあり、approve / dismiss 済みの履歴を source / target / basis 単位で追えます
 - official guide page のような content source が location を言及した場合は、review candidate を `reference` として扱います
-- collector 由来の real generated text が薄い場合でも、fictional sample cluster には generated hint fixture を混ぜて review workflow を確認できるようにしています
+- collector 由来の real generated text が薄い場合は、hint fixture を使った review workflow 実験はできますが、公開用データには混ぜません
 - **推測と事実を分離**し、断定しすぎないことを重視します
 - 名誉毀損、プライバシー侵害、嫌がらせにつながる運用は避けてください
-- 現在のサンプルは **実在 public node と架空サンプルの混在**です
+- 現在の公開データは **実在 public node / official node / 本人公開プロフィール由来ノードのみ** です
 
 ## ディレクトリ
 

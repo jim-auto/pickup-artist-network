@@ -1,18 +1,5 @@
 [
   {
-    "source": "aoi-street",
-    "target": "shibuya",
-    "type": "activity",
-    "description": "Profile text frames Shibuya as the main offline field.",
-    "source_urls": [
-      "https://example.com/source/aoi/profile"
-    ],
-    "confidence": 0.71,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
     "source": "beat-pro",
     "target": "ikebukuro",
     "type": "activity",
@@ -23,7 +10,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate beat-pro__ikebukuro__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate beat-pro__ikebukuro__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "beat-pro",
@@ -36,7 +23,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate beat-pro__shibuya__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate beat-pro__shibuya__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "beat-pro",
@@ -49,7 +36,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate beat-pro__shinjuku__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate beat-pro__shinjuku__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "genki-japan",
@@ -63,46 +50,33 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate genki-japan__london__activity. Original evidence: ゲンキ GENKI【ゲンキジャパン】 (@genkiforfun)\nロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える\nLocation: 👇最短30日で非モテからモテ男になれる攻略法はこちら👇 Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate genki-japan__london__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
-    "source": "loop-circle",
-    "target": "shinjuku",
+    "source": "pika-pua",
+    "target": "nagoya",
     "type": "activity",
-    "description": "Curated example places Loop Circle recaps around Shinjuku meetups.",
+    "description": "Public X display name explicitly lists Nagoya as part of this coaching account's activity area.",
     "source_urls": [
-      "manual://curated/loop-circle/profile"
+      "https://x.com/pika_pua"
     ],
-    "confidence": 0.48,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Low-confidence illustrative relation for UI testing."
+    "confidence": 0.58,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
-    "source": "mei-curator",
-    "target": "shinjuku",
+    "source": "pika-pua",
+    "target": "tokyo",
     "type": "activity",
-    "description": "Profile text frames Shinjuku as Mei's main meetup area.",
+    "description": "Public X display name explicitly lists Tokyo as part of this coaching account's activity area.",
     "source_urls": [
-      "https://example.com/source/mei/profile"
+      "https://x.com/pika_pua"
     ],
-    "confidence": 0.7,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "midnight-lab",
-    "target": "shinjuku",
-    "type": "activity",
-    "description": "Curated example places recurring community meetups around Shinjuku.",
-    "source_urls": [
-      "manual://curated/midnight-lab/profile"
-    ],
-    "confidence": 0.44,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Low-confidence illustrative relation for UI testing."
+    "confidence": 0.58,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "play-shibuya",
@@ -116,7 +90,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information Approval note: Reviewed from the official tourism association page."
+    "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association The Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. Approval note: Reviewed from the official tourism association page."
   },
   {
     "source": "pua-yossy",
@@ -129,20 +103,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate pua-yossy__machida__activity. Original evidence: アラフィフのヨッシー｜路上の伝説 (@pua_yossy)\nアラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即 Approval note: Explicitly stated in the public X profile bio."
-  },
-  {
-    "source": "ren-app",
-    "target": "matching-apps",
-    "type": "activity",
-    "description": "Profile text describes matching apps as the primary field.",
-    "source_urls": [
-      "https://example.com/source/ren/profile"
-    ],
-    "confidence": 0.77,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Approved from review candidate pua-yossy__machida__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "shinjuku-visitors",
@@ -155,20 +116,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."
-  },
-  {
-    "source": "sora-clips",
-    "target": "late-night-walks",
-    "type": "activity",
-    "description": "Profile text frames late-night walkthroughs as Sora's main field.",
-    "source_urls": [
-      "https://example.com/source/sora/profile"
-    ],
-    "confidence": 0.74,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
+    "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau Welcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."
   },
   {
     "source": "yabuki-nampa",
@@ -182,7 +130,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate yabuki-nampa__ebisu__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate yabuki-nampa__ebisu__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "yabuki-nampa",
@@ -196,7 +144,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate yabuki-nampa__ikebukuro__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate yabuki-nampa__ikebukuro__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "yabuki-nampa",
@@ -210,7 +158,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate yabuki-nampa__shibuya__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+    "review_notes": "Approved from review candidate yabuki-nampa__shibuya__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "yabuki-nampa",
@@ -224,62 +172,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate yabuki-nampa__shinjuku__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
-  },
-  {
-    "source": "aoi-street",
-    "target": "instagram",
-    "type": "affiliation",
-    "description": "Profile links point to Instagram.",
-    "source_urls": [
-      "https://example.com/source/aoi/profile",
-      "https://www.instagram.com/aoi_street/"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "aoi-street",
-    "target": "midnight-lab",
-    "type": "affiliation",
-    "description": "Profile text references Midnight Lab event appearances.",
-    "source_urls": [
-      "https://example.com/source/aoi/profile"
-    ],
-    "confidence": 0.66,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "aoi-street",
-    "target": "x",
-    "type": "affiliation",
-    "description": "Profile links point to X.",
-    "source_urls": [
-      "https://example.com/source/aoi/profile",
-      "https://x.com/aoi_street"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "audit-note-01",
-    "target": "note",
-    "type": "affiliation",
-    "description": "Profile links point to note.",
-    "source_urls": [
-      "https://example.com/source/audit-note-01/page",
-      "https://note.com/audit_note_01"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Approved from review candidate yabuki-nampa__shinjuku__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
     "source": "beat-pro",
@@ -295,45 +188,44 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
-    "source": "clip-series-01",
-    "target": "loop-circle",
+    "source": "emuchi-pua",
+    "target": "puro-nampa",
     "type": "affiliation",
-    "description": "Archive page describes Clip Series 01 as Loop Circle's main recap series.",
+    "description": "Public X profile labels @puro_nanpa as the main account connected to this thought-account.",
     "source_urls": [
-      "https://example.com/source/clip-series-01/page"
+      "https://x.com/emuchi_pua"
     ],
-    "confidence": 0.76,
+    "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
-    "source": "clip-series-01",
-    "target": "youtube",
+    "source": "emuchi-pua",
+    "target": "x",
     "type": "affiliation",
-    "description": "Profile links point to YouTube.",
+    "description": "Profile links point to X.",
     "source_urls": [
-      "https://example.com/source/clip-series-01/page",
-      "https://www.youtube.com/@loopcircleclips"
+      "https://x.com/emuchi_pua"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
-    "source": "field-guide-01",
-    "target": "note",
+    "source": "genki-japan",
+    "target": "line",
     "type": "affiliation",
-    "description": "Profile links point to note.",
+    "description": "Profile links point to LINE.",
     "source_urls": [
-      "https://example.com/source/field-guide-01/page",
-      "https://note.com/field_guide_01"
+      "https://x.com/genkiforfun",
+      "https://lin.ee/5CvMOtg"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "genki-japan",
@@ -346,6 +238,19 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "genki-japan",
+    "target": "youtube",
+    "type": "affiliation",
+    "description": "Public X profile bio says this account has been publishing on YouTube for seven years.",
+    "source_urls": [
+      "https://x.com/genkiforfun"
+    ],
+    "confidence": 0.66,
+    "evidence_kind": "fact",
+    "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
@@ -375,89 +280,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
-  },
-  {
-    "source": "loop-circle",
-    "target": "x",
-    "type": "affiliation",
-    "description": "Profile links point to X.",
-    "source_urls": [
-      "manual://curated/loop-circle/profile",
-      "https://x.com/loop_circle"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Curated fictional community example. Keep separate from real-world claims."
-  },
-  {
-    "source": "mei-curator",
-    "target": "loop-circle",
-    "type": "affiliation",
-    "description": "Profile text introduces Mei as an organizer inside Loop Circle.",
-    "source_urls": [
-      "https://example.com/source/mei/profile"
-    ],
-    "confidence": 0.73,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "mei-curator",
-    "target": "note",
-    "type": "affiliation",
-    "description": "Profile links point to note.",
-    "source_urls": [
-      "https://example.com/source/mei/profile",
-      "https://note.com/mei_curator"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "mei-curator",
-    "target": "x",
-    "type": "affiliation",
-    "description": "Profile links point to X.",
-    "source_urls": [
-      "https://example.com/source/mei/profile",
-      "https://x.com/mei_curator"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "midnight-lab",
-    "target": "youtube",
-    "type": "affiliation",
-    "description": "Profile links point to YouTube.",
-    "source_urls": [
-      "manual://curated/midnight-lab/profile",
-      "https://www.youtube.com/@midnightlab"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Curated fictional community example. Keep separate from real-world claims."
-  },
-  {
-    "source": "noa-reviewer",
-    "target": "x",
-    "type": "affiliation",
-    "description": "Profile links point to X.",
-    "source_urls": [
-      "https://example.com/source/noa/profile",
-      "https://x.com/noa_reviewer"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
   },
   {
     "source": "nonchama-pro",
@@ -502,11 +324,89 @@
   },
   {
     "source": "pika-pua",
+    "target": "pika-stochi",
+    "type": "affiliation",
+    "description": "Public X profile labels @pika_stochi as the appearance-improvement account linked from the main coaching profile.",
+    "source_urls": [
+      "https://x.com/pika_pua"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-pua",
+    "target": "pika-sublol",
+    "type": "affiliation",
+    "description": "Public X profile labels @pika_sublol as a linked side account.",
+    "source_urls": [
+      "https://x.com/pika_pua"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
     "source_urls": [
       "https://x.com/pika_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-stochi",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "Public X profile links this appearance-consulting account back to @pika_pua.",
+    "source_urls": [
+      "https://x.com/pika_stochi"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-stochi",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pika_stochi"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-sublol",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "Public X profile labels @pika_pua as the main identity behind this side account.",
+    "source_urls": [
+      "https://x.com/pika_sublol"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-sublol",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pika_sublol"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
@@ -542,6 +442,19 @@
   },
   {
     "source": "puro-nampa",
+    "target": "emuchi-pua",
+    "type": "affiliation",
+    "description": "Public X profile labels @emuchi_pua as the thought-account paired with the main coaching account.",
+    "source_urls": [
+      "https://x.com/puro_nanpa"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "puro-nampa",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -552,47 +465,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
-  },
-  {
-    "source": "ren-app",
-    "target": "midnight-lab",
-    "type": "affiliation",
-    "description": "Profile text introduces Ren as a recurring mentor inside Midnight Lab.",
-    "source_urls": [
-      "https://example.com/source/ren/profile"
-    ],
-    "confidence": 0.72,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "ren-app",
-    "target": "note",
-    "type": "affiliation",
-    "description": "Profile links point to note.",
-    "source_urls": [
-      "https://example.com/source/ren/profile",
-      "https://note.com/ren_app"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "ren-app",
-    "target": "youtube",
-    "type": "affiliation",
-    "description": "Profile links point to YouTube.",
-    "source_urls": [
-      "https://example.com/source/ren/profile",
-      "https://www.youtube.com/@ren_app"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
   },
   {
     "source": "shibuya",
@@ -619,47 +491,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
-  },
-  {
-    "source": "sora-clips",
-    "target": "instagram",
-    "type": "affiliation",
-    "description": "Profile links point to Instagram.",
-    "source_urls": [
-      "https://example.com/source/sora/profile",
-      "https://www.instagram.com/sora_clips/"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "sora-clips",
-    "target": "loop-circle",
-    "type": "affiliation",
-    "description": "Profile text positions Sora as a recurring clip editor for Loop Circle.",
-    "source_urls": [
-      "https://example.com/source/sora/profile"
-    ],
-    "confidence": 0.71,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "sora-clips",
-    "target": "youtube",
-    "type": "affiliation",
-    "description": "Profile links point to YouTube.",
-    "source_urls": [
-      "https://example.com/source/sora/profile",
-      "https://www.youtube.com/@sora_clips"
-    ],
-    "confidence": 0.86,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
     "source": "soshi-pua",
@@ -757,6 +588,20 @@
   },
   {
     "source": "yuu-renai",
+    "target": "line",
+    "type": "affiliation",
+    "description": "Profile links point to LINE.",
+    "source_urls": [
+      "https://x.com/yuuuu_renai",
+      "https://lin.ee/iNEc0rw"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "yuu-renai",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -767,149 +612,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
-  },
-  {
-    "source": "loop-circle",
-    "target": "midnight-lab",
-    "type": "collaboration",
-    "description": "Pinned recap frames Midnight Lab as an adjacent collaboration circle.",
-    "source_urls": [
-      "manual://curated/loop-circle/pinned"
-    ],
-    "confidence": 0.46,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Low-confidence illustrative relation for UI testing."
-  },
-  {
-    "source": "mei-curator",
-    "target": "sora-clips",
-    "type": "collaboration",
-    "description": "Pinned post announces a recap stream with Sora Clips.",
-    "source_urls": [
-      "https://example.com/source/mei/pinned"
-    ],
-    "confidence": 0.64,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "ren-app",
-    "target": "aoi-street",
-    "type": "collaboration",
-    "description": "Pinned post references a collaborative session with Aoi.",
-    "source_urls": [
-      "https://example.com/source/ren/pinned"
-    ],
-    "confidence": 0.61,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "sora-clips",
-    "target": "mei-curator",
-    "type": "collaboration",
-    "description": "Pinned teaser tags Mei Curator for a joint recap stream.",
-    "source_urls": [
-      "https://example.com/source/sora/pinned"
-    ],
-    "confidence": 0.62,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "noa-reviewer",
-    "target": "aoi-street",
-    "type": "criticism",
-    "description": "Pinned commentary criticizes Aoi's framing.",
-    "source_urls": [
-      "https://example.com/source/noa/pinned"
-    ],
-    "confidence": 0.57,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "aoi-street",
-    "target": "ren-app",
-    "type": "influence",
-    "description": "Pinned post credits Ren's thread format as an early influence.",
-    "source_urls": [
-      "https://example.com/source/aoi/pinned"
-    ],
-    "confidence": 0.63,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "ren-app",
-    "target": "field-guide-01",
-    "type": "monetization",
-    "description": "Pinned product post funnels users toward Field Guide 01.",
-    "source_urls": [
-      "https://example.com/source/ren/pinned"
-    ],
-    "confidence": 0.74,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "sora-clips",
-    "target": "clip-series-01",
-    "type": "monetization",
-    "description": "Pinned teaser funnels viewers toward Clip Series 01.",
-    "source_urls": [
-      "https://example.com/source/sora/pinned"
-    ],
-    "confidence": 0.68,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "audit-note-01",
-    "target": "field-guide-01",
-    "type": "reference",
-    "description": "Audit Note 01 cites Field Guide 01 while comparing product structures.",
-    "source_urls": [
-      "https://example.com/source/audit-note-01/page"
-    ],
-    "confidence": 0.66,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "audit-note-01",
-    "target": "ren-app",
-    "type": "reference",
-    "description": "Audit Note 01 compares Ren App's funnel with recap-based models.",
-    "source_urls": [
-      "https://example.com/source/audit-note-01/page"
-    ],
-    "confidence": 0.65,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
-  },
-  {
-    "source": "field-guide-01",
-    "target": "note",
-    "type": "reference",
-    "description": "Field Guide 01 is distributed through note pages.",
-    "source_urls": [
-      "https://example.com/source/field-guide-01/page"
-    ],
-    "confidence": 0.83,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
   },
   {
     "source": "gotokyo-shibuya-guide",
@@ -923,7 +625,7 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate gotokyo-shibuya-guide__shibuya__reference. Original evidence: Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture Approval note: Reviewed from the official GO TOKYO Shibuya guide page."
+    "review_notes": "Approved from review candidate gotokyo-shibuya-guide__shibuya__reference. Original evidence: Shibuya - the epicenter of modern Japanese culture. Approval note: Reviewed from the official GO TOKYO Shibuya guide page."
   },
   {
     "source": "gotokyo-shinjuku-guide",
@@ -937,45 +639,6 @@
     "confidence": 0.4,
     "evidence_kind": "interpretation",
     "needs_review": false,
-    "review_notes": "Approved from review candidate gotokyo-shinjuku-guide__shinjuku__reference. Original evidence: A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go Approval note: Reviewed from the official GO TOKYO Shinjuku guide page."
-  },
-  {
-    "source": "loop-circle",
-    "target": "clip-series-01",
-    "type": "reference",
-    "description": "Pinned recap points members toward Clip Series 01 as the archive series.",
-    "source_urls": [
-      "manual://curated/loop-circle/pinned"
-    ],
-    "confidence": 0.59,
-    "evidence_kind": "mixed",
-    "needs_review": true,
-    "review_notes": "Curated fictional community example. Keep separate from real-world claims."
-  },
-  {
-    "source": "mei-curator",
-    "target": "audit-note-01",
-    "type": "reference",
-    "description": "Pinned post links readers to Audit Note 01 as a follow-up.",
-    "source_urls": [
-      "https://example.com/source/mei/pinned"
-    ],
-    "confidence": 0.67,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
-  },
-  {
-    "source": "noa-reviewer",
-    "target": "field-guide-01",
-    "type": "reference",
-    "description": "Pinned commentary references Field Guide 01 while discussing monetization claims.",
-    "source_urls": [
-      "https://example.com/source/noa/pinned"
-    ],
-    "confidence": 0.6,
-    "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "review_notes": "Approved from review candidate gotokyo-shinjuku-guide__shinjuku__reference. Original evidence: A guide to Shinjuku - things to do and places to go. Approval note: Reviewed from the official GO TOKYO Shinjuku guide page."
   }
 ]

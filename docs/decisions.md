@@ -27,7 +27,7 @@
 - 収集入口: `seed_entities.txt`, `data/source_snapshots.json`, `data/collector_sources.json`
 - X profile 収集入口: `data/x_profile_sources.json`
 - 自動収集の中間出力: `data/source_snapshots.generated.json`
-- sample 用 generated hint fixture: `data/source_snapshots.generated.hints.json`
+- optional generated hint fixture: `data/source_snapshots.generated.hints.json`
 - review-only 候補: `data/review_candidates.json`
 - candidate decision log: `data/review_candidate_decisions.json`
 - 正本: `data/nodes.json`, `data/edges.json`
@@ -46,15 +46,16 @@
 - review candidate queue は basis ごとの重複を避け、同じ `source -> target -> type` を consolidated candidate として扱う
 - content source が location を言及した場合は `reference` を優先し、community source の location mention とは分けて扱う
 - `seed_entities.txt` では `scope` (`real` / `fictional`) を持たせ、HTML の progress panel では real side の現在値だけを target と比較する
-- 初期の構造確認用サンプルは fictional data を混在させる
+- 公開用 seed / manual snapshot は real-only にし、fictional fixture はテストやローカル実験用の optional file に閉じ込める
 - collector は canonical graph を直接触らず、generated snapshot だけを書く
 - collector は public page 由来 link を **X only** に絞り、same-platform skip / allowlist / URL denylist を通した高信号リンクだけを残す
 - X profile の logged-out HTML だけでは pinned status を安定検出できないため、必要な pinned-post hint は `data/x_profile_sources.json` の optional `pinned_post_url` で補う
-- live public data だけでは review candidate queue が薄くなりやすいため、fictional sample cluster には generated hint fixture を別 file で足して workflow を常時確認できるようにする
+- generated hint fixture は必要なら別 file で使えるが、公開 build では空にして実在データだけを出す
 - manual snapshot と generated snapshot が競合する場合は **manual を優先**し、generated 差分は review note へ退避する
 - approve / dismiss の decision は `data/review_candidate_decisions.json` に候補 metadata ごと残し、HTML から triage 履歴を追えるようにする
 - 最初の real person cluster は、本人が X bio で自称している 5 アカウントを seed に追加し、明示された活動場所だけを approve した
 - 次の拡張で self-described public X profile をさらに 5 アカウント追加し、real person 10 / 20 に到達した
+- その次の拡張で関連 side account を 3 件追加し、公開 graph を fictional なしの real-only 構成へ切り替えた
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

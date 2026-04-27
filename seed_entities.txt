@@ -1,19 +1,20 @@
 # type|id|name|aliases|scope
 # Public, low-risk base nodes
 platform|x|X|Twitter|real
+platform|line|LINE||real
 platform|note|note||real
 platform|youtube|YouTube||real
 platform|instagram|Instagram||real
 platform|brain|Brain||real
 platform|tips|Tips||real
+location|tokyo|Tokyo|東京,東京都|real
+location|nagoya|Nagoya|名古屋|real
 location|shibuya|Shibuya|渋谷,Shibuya-ku,渋谷区|real
 location|shinjuku|Shinjuku|新宿,Shinjuku City,Shinjuku-ku,新宿区|real
 location|ikebukuro|Ikebukuro|池袋|real
 location|ebisu|Ebisu|恵比寿|real
 location|london|London|ロンドン|real
 location|machida|Machida|町田,町田駅|real
-location|matching-apps|Matching Apps|Dating Apps|fictional
-location|late-night-walks|Late-night Walks|Night Walks|fictional
 community|play-shibuya|Shibuya City Tourism Association|PLAY! DIVERSITY SHIBUYA,Shibuya Ward Tourism Association|real
 community|shinjuku-visitors|Shinjuku Convention & Visitors Bureau|Shinjuku Tourism,Shinjuku Visitors Bureau|real
 content|gotokyo-shibuya-guide|GO TOKYO Shibuya Guide|A guide to Shibuya,GO TOKYO Shibuya|real
@@ -28,15 +29,6 @@ person|pika-pua|ピカちう@ナンパ講師/外見改善 東京 名古屋|ピ�
 person|weekly-nanpa|週刊プロナンパ日誌|weekly_nanpa|real
 person|pua-yossy|アラフィフのヨッシー｜路上の伝説|ヨッシー,pua_yossy|real
 person|soshi-pua|そうし｜声かけpua|そうし,soshi_pua|real
-
-# Fictional example actors/content for structure testing
-person|aoi-street|Aoi Street|Aoi|fictional
-person|ren-app|Ren App|Ren|fictional
-person|noa-reviewer|Noa Reviewer|Noa|fictional
-person|mei-curator|Mei Curator|Mei|fictional
-person|sora-clips|Sora Clips|Sora|fictional
-community|midnight-lab|Midnight Lab||fictional
-community|loop-circle|Loop Circle||fictional
-content|field-guide-01|Field Guide 01||fictional
-content|clip-series-01|Clip Series 01||fictional
-content|audit-note-01|Audit Note 01||fictional
+person|emuchi-pua|裏えむち@最強ナンパ師|裏えむち,emuchi_pua|real
+person|pika-sublol|パキパキピキリチュウ@lv553|pika_sublol|real
+person|pika-stochi|ピカチュウ メンズ外見コンサル|pika_stochi,Men's Restyle|real

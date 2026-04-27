@@ -113,6 +113,15 @@ DEFAULT_PLATFORM_NODES = {
         "source_urls": ["https://tips.jp"],
         "confidence": 1.0,
     },
+    "line": {
+        "id": "line",
+        "type": "platform",
+        "name": "LINE",
+        "aliases": [],
+        "description": "Messaging and link-in-bio platform node.",
+        "source_urls": ["https://line.me"],
+        "confidence": 1.0,
+    },
 }
 
 DOMAIN_PLATFORM_MAP = {
@@ -125,6 +134,8 @@ DOMAIN_PLATFORM_MAP = {
     "instagram.com": "instagram",
     "brain-market.com": "brain",
     "tips.jp": "tips",
+    "line.me": "line",
+    "lin.ee": "line",
 }
 
 
@@ -178,6 +189,21 @@ SAMPLE_NODE_DETAILS = {
         "description": "Digital product marketplace node.",
         "source_urls": ["https://tips.jp"],
         "confidence": 1.0,
+    },
+    "line": {
+        "description": "Messaging and link-in-bio platform node.",
+        "source_urls": ["https://line.me"],
+        "confidence": 1.0,
+    },
+    "tokyo": {
+        "description": "Real public location node used for wider metro-area activity references.",
+        "source_urls": ["https://www.metro.tokyo.lg.jp/"],
+        "confidence": 0.98,
+    },
+    "nagoya": {
+        "description": "Real public location node used for Chubu-area activity references.",
+        "source_urls": ["https://www.city.nagoya.jp/"],
+        "confidence": 0.98,
     },
     "shibuya": {
         "description": "Real public location node used as a common field example.",

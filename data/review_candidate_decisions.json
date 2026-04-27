@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T11:46:49+00:00",
+  "updated_at": "2026-04-27T12:18:00+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -186,22 +186,6 @@
       "source_urls": [
         "https://x.com/yabuki335",
         "https://www.life-enjoy.site/"
-      ],
-      "updated_at": "2026-04-27T09:34:26+00:00"
-    },
-    "yuu-renai__ren-app__reference": {
-      "candidate_id": "yuu-renai__ren-app__reference",
-      "status": "dismissed",
-      "note": "False positive mention match against a fictional alias, not a supported real relation.",
-      "source": "yuu-renai",
-      "target": "ren-app",
-      "type": "reference",
-      "basis": "profile_text",
-      "matched_text": "Ren",
-      "evidence_text": "日本一のナンパ師ゆう (@yuuuu_renai)\n誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。\nLocation: 公式LINE",
-      "source_urls": [
-        "https://x.com/yuuuu_renai",
-        "https://lin.ee/iNEc0rw"
       ],
       "updated_at": "2026-04-27T09:34:26+00:00"
     },

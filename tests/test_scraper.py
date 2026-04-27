@@ -97,6 +97,24 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
 
         self.assertIn(("alpha", "note", "affiliation"), edges)
 
+    def test_lin_ee_link_maps_to_line_platform(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/alpha",
+                "links": ["https://lin.ee/alpha"],
+                "observations": [],
+            }
+        ]
+
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        edges = {(edge.source, edge.target, edge.type) for edge in graph.edges}
+
+        self.assertIn(("alpha", "line", "affiliation"), edges)
+
     def test_invalid_snapshot_target_is_rejected(self) -> None:
         seed_entities = [
             {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
