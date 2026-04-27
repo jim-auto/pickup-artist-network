@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:18:01+00:00",
+  "generated_at": "2026-04-27T12:55:43+00:00",
   "candidates": [
     {
       "id": "emuchi-pua__puro-nampa__reference",
@@ -22,6 +22,30 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'puro_nanpa'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "feitan-sub__tinder-god__reference",
+      "source": "feitan-sub",
+      "target": "tinder-god",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "Tinder_god_2",
+      "matched_texts": [
+        "Tinder_god_2",
+        "フェイタン"
+      ],
+      "evidence_text": "フェイタンサブ/ペアーズタップルTinder攻略tips発売中 (@Feitan_sub)\nサブ垢/フォロバ100/マチアプで570人抱いた本音/ フォロー推奨垢→@Tinder_god_2\nExternal link: https://tips.jp/u/Tinder_god/a/0lYtZhbE",
+      "source_urls": [
+        "https://x.com/Feitan_sub",
+        "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Tinder_god_2, フェイタン'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "gotokyo-shibuya-guide__tokyo__reference",
@@ -182,6 +206,51 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京都, 東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "suzuniki-pua__s-mote-money__reference",
+      "source": "suzuniki-pua",
+      "target": "s-mote-money",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "s_mote_money",
+      "matched_texts": [
+        "s_mote_money"
+      ],
+      "evidence_text": "スズキ(アラフォー会社員) (@suzuniki_pua)\n◤33歳からマッチングアプリとナンパを始めてアラツーJD/OLに無双してる人◢ 22歳まで童貞/33歳から300get/主戦場はト●カレ含むアプリ全般と都内スト/美容と整形に500万投資/副業垢→@s_mote_money",
+      "source_urls": [
+        "https://x.com/suzuniki_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 's_mote_money'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "tinder-god__feitan-sub__reference",
+      "source": "tinder-god",
+      "target": "feitan-sub",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "Feitan_sub",
+      "matched_texts": [
+        "Feitan_sub"
+      ],
+      "evidence_text": "フェイタン@ペアーズ完全攻略tips発売 (@Tinder_god_2)\n【Tinder🧊開発者/独自の裏技や戦略で即量産】即数570程/社畜おじ/ペアーズ&Tinder&タップルはお任せ/長期化やスト値上げも得意/長期や単発講習依頼はDM/サブ垢→＠Feitan_sub\nLocation: ↓【フェイタン式】闇Tinder攻略tips",
+      "source_urls": [
+        "https://x.com/Tinder_god_2",
+        "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Feitan_sub'. This is review-only and not part of the canonical graph."
     }
   ]
 }

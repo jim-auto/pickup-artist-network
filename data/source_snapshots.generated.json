@@ -23,7 +23,7 @@
           "fetched_url": "https://x.com/982thebeat",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:46+00:00"
+          "collected_at": "2026-04-27T12:55:21+00:00"
         }
       ]
     },
@@ -50,7 +50,7 @@
           "label": "official homepage",
           "source_url": "https://brain-market.com/",
           "fetched_url": "https://brain-market.com/",
-          "collected_at": "2026-04-27T12:17:17+00:00"
+          "collected_at": "2026-04-27T12:55:05+00:00"
         }
       ]
     },
@@ -80,12 +80,44 @@
           "fetched_url": "https://x.com/emuchi_pua",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:57+00:00"
+          "collected_at": "2026-04-27T12:55:31+00:00"
         }
       ]
     },
     "observations": [],
     "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"
+  },
+  {
+    "account_id": "feitan-sub",
+    "profile_url": "https://x.com/Feitan_sub",
+    "pinned_post_url": "",
+    "profile_text": "フェイタンサブ/ペアーズタップルTinder攻略tips発売中 (@Feitan_sub)\nサブ垢/フォロバ100/マチアプで570人抱いた本音/ フォロー推奨垢→@Tinder_god_2\nExternal link: https://tips.jp/u/Tinder_god/a/0lYtZhbE",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "summary": "サブ垢/フォロバ100/マチアプで570人抱いた本音/ フォロー推奨垢→@Tinder_god_2",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public related X profile",
+          "source_url": "https://x.com/Feitan_sub",
+          "fetched_url": "https://x.com/Feitan_sub",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:41+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1762819331321372672/5B2-V1e1_400x400.jpg"
   },
   {
     "account_id": "genki-japan",
@@ -112,7 +144,7 @@
           "fetched_url": "https://x.com/genkiforfun",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:41+00:00"
+          "collected_at": "2026-04-27T12:55:19+00:00"
         }
       ]
     },
@@ -141,7 +173,7 @@
           "label": "official Tokyo travel guide page",
           "source_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
           "fetched_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
-          "collected_at": "2026-04-27T12:17:28+00:00"
+          "collected_at": "2026-04-27T12:55:10+00:00"
         }
       ]
     },
@@ -169,11 +201,42 @@
           "label": "official Tokyo travel guide page",
           "source_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
           "fetched_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
-          "collected_at": "2026-04-27T12:17:30+00:00"
+          "collected_at": "2026-04-27T12:55:10+00:00"
         }
       ]
     },
     "observations": []
+  },
+  {
+    "account_id": "hancho-pua",
+    "profile_url": "https://x.com/hancho_pua",
+    "pinned_post_url": "",
+    "profile_text": "はんちょう (@hancho_pua)\n「女の子に困らない人生を送りたい」そんな願いを叶えるアカウント/ 即数500over/フツメン吃音持ち低身長 / 長期講習生150人超え/受講者数250人超え/長期講習希望はDMまで📩 #はんちょう講習",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/hancho_pua"
+    ],
+    "summary": "「女の子に困らない人生を送りたい」そんな願いを叶えるアカウント/ 即数500over/フツメン吃音持ち低身長 / 長期講習生150人超え/受講者数250人超え/長期講習希望はDMまで📩 #はんちょう講習",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/hancho_pua",
+          "fetched_url": "https://x.com/hancho_pua",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:39+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1528767146553069569/5PPA8o0G_400x400.jpg"
   },
   {
     "account_id": "nonchama-pro",
@@ -200,7 +263,7 @@
           "fetched_url": "https://x.com/nonchama0721",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:49+00:00"
+          "collected_at": "2026-04-27T12:55:24+00:00"
         }
       ]
     },
@@ -227,7 +290,7 @@
           "label": "official homepage",
           "source_url": "https://note.com/",
           "fetched_url": "https://note.com/",
-          "collected_at": "2026-04-27T12:17:13+00:00"
+          "collected_at": "2026-04-27T12:55:01+00:00"
         }
       ]
     },
@@ -258,7 +321,7 @@
           "fetched_url": "https://x.com/pika_pua",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:51+00:00"
+          "collected_at": "2026-04-27T12:55:27+00:00"
         }
       ]
     },
@@ -290,7 +353,7 @@
           "fetched_url": "https://x.com/pika_stochi",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:59+00:00"
+          "collected_at": "2026-04-27T12:55:35+00:00"
         }
       ]
     },
@@ -322,7 +385,7 @@
           "fetched_url": "https://x.com/pika_sublol",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:58+00:00"
+          "collected_at": "2026-04-27T12:55:33+00:00"
         }
       ]
     },
@@ -351,7 +414,7 @@
           "label": "official tourism association page",
           "source_url": "https://www.play-shibuya.com/en/",
           "fetched_url": "https://www.play-shibuya.com/en/",
-          "collected_at": "2026-04-27T12:17:25+00:00"
+          "collected_at": "2026-04-27T12:55:09+00:00"
         }
       ]
     },
@@ -381,7 +444,7 @@
           "fetched_url": "https://x.com/pua_yossy",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:55+00:00"
+          "collected_at": "2026-04-27T12:55:29+00:00"
         }
       ]
     },
@@ -413,12 +476,75 @@
           "fetched_url": "https://x.com/puro_nanpa",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:50+00:00"
+          "collected_at": "2026-04-27T12:55:25+00:00"
         }
       ]
     },
     "observations": [],
     "icon_url": "https://pbs.twimg.com/profile_images/1957756915062312960/AUlMEdBx_400x400.jpg"
+  },
+  {
+    "account_id": "s-mote-money",
+    "profile_url": "https://x.com/s_mote_money",
+    "pinned_post_url": "",
+    "profile_text": "S (@s_mote_money)\n婚活アラフォーおぢ｜ナンパとアプリで300get｜モテ系講師歴あり｜リーマンが物販素人からshopee攻略 #SBC4期生",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/s_mote_money"
+    ],
+    "summary": "婚活アラフォーおぢ｜ナンパとアプリで300get｜モテ系講師歴あり｜リーマンが物販素人からshopee攻略 #SBC4期生",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public related X profile",
+          "source_url": "https://x.com/s_mote_money",
+          "fetched_url": "https://x.com/s_mote_money",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:42+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1939678170346602496/HjhYb7CD_400x400.jpg"
+  },
+  {
+    "account_id": "schon-nannpa",
+    "profile_url": "https://x.com/schon_nannpa",
+    "pinned_post_url": "",
+    "profile_text": "シャン🫥 (@schon_nannpa)\nリアコミュ0即→ストナン200即へ。味噌の街で新規SEXを求め彷徨う。ナンパは手段、SEXが俺の叫び。mスト部で究極のセケスを追う。そして心の奥で願う。世の人が性の鎖から解き放たれる日を。【粘膜接触時間の最大化】を目指し日々奮闘中。諦めない、抗い続ける。\nLocation: ↓ブログ【通算】ス224ク4ネ25合計253即",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/schon_nannpa",
+      "https://note.com/schon_nannpa"
+    ],
+    "summary": "リアコミュ0即→ストナン200即へ。味噌の街で新規SEXを求め彷徨う。ナンパは手段、SEXが俺の叫び。mスト部で究極のセケスを追う。そして心の奥で願う。世の人が性の鎖から解き放たれる日を。【粘膜接触時間の最大化】を目指し日々奮闘中。諦めない、抗い続ける。",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/schon_nannpa",
+          "fetched_url": "https://x.com/schon_nannpa",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:37+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1685644608863408128/UftrWnP__400x400.jpg"
   },
   {
     "account_id": "shibuya",
@@ -445,14 +571,14 @@
           "fetched_url": "https://x.com/city_shibuya",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:35+00:00"
+          "collected_at": "2026-04-27T12:55:15+00:00"
         },
         {
           "type": "public_page",
           "label": "official city page",
           "source_url": "https://www.city.shibuya.tokyo.jp/",
           "fetched_url": "https://www.city.shibuya.tokyo.jp/",
-          "collected_at": "2026-04-27T12:17:21+00:00"
+          "collected_at": "2026-04-27T12:55:07+00:00"
         }
       ]
     },
@@ -484,14 +610,14 @@
           "fetched_url": "https://x.com/shinjuku_info",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:36+00:00"
+          "collected_at": "2026-04-27T12:55:17+00:00"
         },
         {
           "type": "public_page",
           "label": "official city page",
           "source_url": "https://www.city.shinjuku.lg.jp/",
           "fetched_url": "https://www.city.shinjuku.lg.jp/",
-          "collected_at": "2026-04-27T12:17:22+00:00"
+          "collected_at": "2026-04-27T12:55:07+00:00"
         }
       ]
     },
@@ -518,7 +644,7 @@
           "label": "official visitors bureau page",
           "source_url": "https://www.kanko-shinjuku.jp/en/",
           "fetched_url": "https://www.kanko-shinjuku.jp/en/",
-          "collected_at": "2026-04-27T12:17:27+00:00"
+          "collected_at": "2026-04-27T12:55:09+00:00"
         }
       ]
     },
@@ -549,12 +675,75 @@
           "fetched_url": "https://x.com/soshi_pua",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:56+00:00"
+          "collected_at": "2026-04-27T12:55:30+00:00"
         }
       ]
     },
     "observations": [],
     "icon_url": "https://pbs.twimg.com/profile_images/1856321681201213442/RTbwEW9X_400x400.jpg"
+  },
+  {
+    "account_id": "suzuniki-pua",
+    "profile_url": "https://x.com/suzuniki_pua",
+    "pinned_post_url": "",
+    "profile_text": "スズキ(アラフォー会社員) (@suzuniki_pua)\n◤33歳からマッチングアプリとナンパを始めてアラツーJD/OLに無双してる人◢ 22歳まで童貞/33歳から300get/主戦場はト●カレ含むアプリ全般と都内スト/美容と整形に500万投資/副業垢→@s_mote_money",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "summary": "◤33歳からマッチングアプリとナンパを始めてアラツーJD/OLに無双してる人◢ 22歳まで童貞/33歳から300get/主戦場はト●カレ含むアプリ全般と都内スト/美容と整形に500万投資/副業垢→@s_mote_money",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/suzuniki_pua",
+          "fetched_url": "https://x.com/suzuniki_pua",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:40+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1605709122296389632/2PsL0YvP_400x400.jpg"
+  },
+  {
+    "account_id": "tinder-god",
+    "profile_url": "https://x.com/Tinder_god_2",
+    "pinned_post_url": "",
+    "profile_text": "フェイタン@ペアーズ完全攻略tips発売 (@Tinder_god_2)\n【Tinder🧊開発者/独自の裏技や戦略で即量産】即数570程/社畜おじ/ペアーズ&Tinder&タップルはお任せ/長期化やスト値上げも得意/長期や単発講習依頼はDM/サブ垢→＠Feitan_sub\nLocation: ↓【フェイタン式】闇Tinder攻略tips",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/Tinder_god_2",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "summary": "【Tinder🧊開発者/独自の裏技や戦略で即量産】即数570程/社畜おじ/ペアーズ&Tinder&タップルはお任せ/長期化やスト値上げも得意/長期や単発講習依頼はDM/サブ垢→＠Feitan_sub",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/Tinder_god_2",
+          "fetched_url": "https://x.com/Tinder_god_2",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T12:55:36+00:00"
+        }
+      ]
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1854418977587646464/hYBf19Pp_400x400.jpg"
   },
   {
     "account_id": "tips",
@@ -578,7 +767,7 @@
           "label": "official homepage",
           "source_url": "https://tips.jp/",
           "fetched_url": "https://tips.jp/",
-          "collected_at": "2026-04-27T12:17:19+00:00"
+          "collected_at": "2026-04-27T12:55:06+00:00"
         }
       ]
     },
@@ -609,7 +798,7 @@
           "fetched_url": "https://x.com/weekly_nanpa",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:53+00:00"
+          "collected_at": "2026-04-27T12:55:27+00:00"
         }
       ]
     },
@@ -641,7 +830,7 @@
           "fetched_url": "https://x.com/yabuki335",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:47+00:00"
+          "collected_at": "2026-04-27T12:55:22+00:00"
         }
       ]
     },
@@ -674,14 +863,14 @@
           "fetched_url": "https://x.com/YouTube",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:34+00:00"
+          "collected_at": "2026-04-27T12:55:13+00:00"
         },
         {
           "type": "public_page",
           "label": "official about page",
           "source_url": "https://www.youtube.com/about/",
           "fetched_url": "https://about.youtube/",
-          "collected_at": "2026-04-27T12:17:14+00:00"
+          "collected_at": "2026-04-27T12:55:02+00:00"
         }
       ]
     },
@@ -713,7 +902,7 @@
           "fetched_url": "https://x.com/yuuuu_renai",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T12:17:43+00:00"
+          "collected_at": "2026-04-27T12:55:20+00:00"
         }
       ]
     },

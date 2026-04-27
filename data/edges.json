@@ -39,6 +39,20 @@
     "review_notes": "Approved from review candidate beat-pro__shinjuku__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
+    "source": "feitan-sub",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "Public X profile explicitly says this side account posts about matching-app results.",
+    "source_urls": [
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "genki-japan",
     "target": "london",
     "type": "activity",
@@ -117,6 +131,46 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau Welcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."
+  },
+  {
+    "source": "suzuniki-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "Public X profile explicitly says the main field includes matching apps.",
+    "source_urls": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "confidence": 0.7,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "suzuniki-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "Public X profile explicitly says the main field includes Tokyo street activity.",
+    "source_urls": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "confidence": 0.62,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tinder-god",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "Public X profile explicitly frames Tinder, Pairs, and Tapple攻略 as the account's main field.",
+    "source_urls": [
+      "https://x.com/Tinder_god_2",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "yabuki-nampa",
@@ -214,6 +268,47 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "feitan-sub",
+    "target": "tinder-god",
+    "type": "affiliation",
+    "description": "Public X profile recommends @Tinder_god_2 as the paired main account.",
+    "source_urls": [
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "feitan-sub",
+    "target": "tips",
+    "type": "affiliation",
+    "description": "Profile links point to Tips.",
+    "source_urls": [
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "feitan-sub",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Feitan_sub"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "genki-japan",
     "target": "line",
     "type": "affiliation",
@@ -280,6 +375,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
+  },
+  {
+    "source": "hancho-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/hancho_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "nonchama-pro",
@@ -467,6 +575,46 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "s-mote-money",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/s_mote_money"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/schon_nannpa",
+      "https://note.com/schon_nannpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/schon_nannpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "shibuya",
     "target": "x",
     "type": "affiliation",
@@ -513,6 +661,72 @@
     "source_urls": [
       "https://x.com/soshi_pua",
       "https://www.youtube.com/@soshi_mote_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "suzuniki-pua",
+    "target": "s-mote-money",
+    "type": "affiliation",
+    "description": "Public X profile labels @s_mote_money as the linked side account.",
+    "source_urls": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "suzuniki-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tinder-god",
+    "target": "feitan-sub",
+    "type": "affiliation",
+    "description": "Public X profile labels @Feitan_sub as the linked side account.",
+    "source_urls": [
+      "https://x.com/Tinder_god_2"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tinder-god",
+    "target": "tips",
+    "type": "affiliation",
+    "description": "Profile links point to Tips.",
+    "source_urls": [
+      "https://x.com/Tinder_god_2",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tinder-god",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Tinder_god_2"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",

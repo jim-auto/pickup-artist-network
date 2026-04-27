@@ -148,6 +148,25 @@
     "review_notes": ""
   },
   {
+    "id": "matching-apps",
+    "type": "location",
+    "name": "Matching Apps",
+    "aliases": [
+      "Dating Apps",
+      "マッチングアプリ",
+      "マチアプ"
+    ],
+    "description": "Real app-centered field node used for dating-app activity references.",
+    "icon_url": "",
+    "source_urls": [
+      "https://www.caa.go.jp/policies/policy/consumer_policy/caution/internet/matching_app/"
+    ],
+    "confidence": 0.9,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "nagoya",
     "type": "location",
     "name": "Nagoya",
@@ -244,6 +263,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "s-mote-money",
+    "type": "person",
+    "name": "S",
+    "aliases": [
+      "s_mote_money"
+    ],
+    "description": "婚活アラフォーおぢ｜ナンパとアプリで300get｜モテ系講師歴あり｜リーマンが物販素人からshopee攻略 #SBC4期生",
+    "icon_url": "https://pbs.twimg.com/profile_images/1939678170346602496/HjhYb7CD_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/s_mote_money"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "soshi-pua",
     "type": "person",
     "name": "そうし｜声かけpua",
@@ -284,6 +321,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "hancho-pua",
+    "type": "person",
+    "name": "はんちょう",
+    "aliases": [
+      "hancho_pua"
+    ],
+    "description": "「女の子に困らない人生を送りたい」そんな願いを叶えるアカウント/ 即数500over/フツメン吃音持ち低身長 / 長期講習生150人超え/受講者数250人超え/長期講習希望はDMまで📩 #はんちょう講習",
+    "icon_url": "https://pbs.twimg.com/profile_images/1528767146553069569/5PPA8o0G_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/hancho_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "pua-yossy",
     "type": "person",
     "name": "アラフィフのヨッシー｜路上の伝説",
@@ -317,6 +372,45 @@
       "manual://seed",
       "https://x.com/genkiforfun",
       "https://lin.ee/5CvMOtg"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "schon-nannpa",
+    "type": "person",
+    "name": "シャン🫥",
+    "aliases": [
+      "シャン",
+      "schon_nannpa"
+    ],
+    "description": "リアコミュ0即→ストナン200即へ。味噌の街で新規SEXを求め彷徨う。ナンパは手段、SEXが俺の叫び。mスト部で究極のセケスを追う。そして心の奥で願う。世の人が性の鎖から解き放たれる日を。【粘膜接触時間の最大化】を目指し日々奮闘中。諦めない、抗い続ける。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1685644608863408128/UftrWnP__400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/schon_nannpa",
+      "https://note.com/schon_nannpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "suzuniki-pua",
+    "type": "person",
+    "name": "スズキ(アラフォー会社員)",
+    "aliases": [
+      "スズキ",
+      "suzuniki_pua"
+    ],
+    "description": "◤33歳からマッチングアプリとナンパを始めてアラツーJD/OLに無双してる人◢ 22歳まで童貞/33歳から300get/主戦場はト●カレ含むアプリ全般と都内スト/美容と整形に500万投資/副業垢→@s_mote_money",
+    "icon_url": "https://pbs.twimg.com/profile_images/1605709122296389632/2PsL0YvP_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/suzuniki_pua"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -376,6 +470,45 @@
       "manual://seed",
       "https://x.com/pika_stochi",
       "https://mens-restyle.com"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "tinder-god",
+    "type": "person",
+    "name": "フェイタン@ペアーズ完全攻略tips発売",
+    "aliases": [
+      "フェイタン",
+      "Tinder_god_2"
+    ],
+    "description": "【Tinder🧊開発者/独自の裏技や戦略で即量産】即数570程/社畜おじ/ペアーズ&Tinder&タップルはお任せ/長期化やスト値上げも得意/長期や単発講習依頼はDM/サブ垢→＠Feitan_sub",
+    "icon_url": "https://pbs.twimg.com/profile_images/1854418977587646464/hYBf19Pp_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Tinder_god_2",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "feitan-sub",
+    "type": "person",
+    "name": "フェイタンサブ",
+    "aliases": [
+      "Feitan_sub"
+    ],
+    "description": "サブ垢/フォロバ100/マチアプで570人抱いた本音/ フォロー推奨垢→@Tinder_god_2",
+    "icon_url": "https://pbs.twimg.com/profile_images/1762819331321372672/5B2-V1e1_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",

@@ -339,5 +339,103 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "tinder-god",
+    "profile_url": "https://x.com/Tinder_god_2",
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public X profile explicitly frames Tinder, Pairs, and Tapple攻略 as the account's main field.",
+        "source_urls": [
+          "https://x.com/Tinder_god_2",
+          "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "feitan-sub",
+        "type": "affiliation",
+        "description": "Public X profile labels @Feitan_sub as the linked side account.",
+        "source_urls": [
+          "https://x.com/Tinder_god_2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "suzuniki-pua",
+    "profile_url": "https://x.com/suzuniki_pua",
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public X profile explicitly says the main field includes matching apps.",
+        "source_urls": [
+          "https://x.com/suzuniki_pua"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public X profile explicitly says the main field includes Tokyo street activity.",
+        "source_urls": [
+          "https://x.com/suzuniki_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "s-mote-money",
+        "type": "affiliation",
+        "description": "Public X profile labels @s_mote_money as the linked side account.",
+        "source_urls": [
+          "https://x.com/suzuniki_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "feitan-sub",
+    "profile_url": "https://x.com/Feitan_sub",
+    "observations": [
+      {
+        "target": "tinder-god",
+        "type": "affiliation",
+        "description": "Public X profile recommends @Tinder_god_2 as the paired main account.",
+        "source_urls": [
+          "https://x.com/Feitan_sub",
+          "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public X profile explicitly says this side account posts about matching-app results.",
+        "source_urls": [
+          "https://x.com/Feitan_sub",
+          "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
   }
 ]

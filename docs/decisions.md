@@ -56,6 +56,7 @@
 - 最初の real person cluster は、本人が X bio で自称している 5 アカウントを seed に追加し、明示された活動場所だけを approve した
 - 次の拡張で self-described public X profile をさらに 5 アカウント追加し、real person 10 / 20 に到達した
 - その次の拡張で関連 side account を 3 件追加し、公開 graph を fictional なしの real-only 構成へ切り替えた
+- さらに self-described / linked side account を 6 件追加し、matching-apps / side-account relation を明示できる範囲で増やして real person 19 / 20 まで進めた
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

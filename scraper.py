@@ -221,9 +221,9 @@ SAMPLE_NODE_DETAILS = {
         "confidence": 0.69,
     },
     "matching-apps": {
-        "description": "Conceptual app-centered field node treated as an activity arena.",
-        "source_urls": ["manual://curated/matching-apps"],
-        "confidence": 0.73,
+        "description": "Real app-centered field node used for dating-app activity references.",
+        "source_urls": ["https://www.caa.go.jp/policies/policy/consumer_policy/caution/internet/matching_app/"],
+        "confidence": 0.9,
     },
     "field-guide-01": {
         "description": "Fictional content node representing a guide, note, or product.",
