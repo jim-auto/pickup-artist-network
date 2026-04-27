@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T09:34:26+00:00",
+  "updated_at": "2026-04-27T11:23:46+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -204,6 +204,21 @@
         "https://lin.ee/iNEc0rw"
       ],
       "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "pua-yossy__machida__activity": {
+      "candidate_id": "pua-yossy__machida__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "pua-yossy",
+      "target": "machida",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "町田駅",
+      "evidence_text": "アラフィフのヨッシー｜路上の伝説 (@pua_yossy)\nアラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即",
+      "source_urls": [
+        "https://x.com/pua_yossy"
+      ],
+      "updated_at": "2026-04-27T11:23:46+00:00"
     }
   }
 }

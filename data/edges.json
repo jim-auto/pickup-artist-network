@@ -119,6 +119,19 @@
     "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information Approval note: Reviewed from the official tourism association page."
   },
   {
+    "source": "pua-yossy",
+    "target": "machida",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 町田駅.",
+    "source_urls": [
+      "https://x.com/pua_yossy"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate pua-yossy__machida__activity. Original evidence: アラフィフのヨッシー｜路上の伝説 (@pua_yossy)\nアラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即 Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
     "source": "ren-app",
     "target": "matching-apps",
     "type": "activity",
@@ -474,6 +487,33 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "pika-pua",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/pika_pua",
+      "https://note.com/taku__lol/n/n64664fb8fb30"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pika-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pika_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "play-shibuya",
     "target": "x",
     "type": "affiliation",
@@ -486,6 +526,32 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
+  },
+  {
+    "source": "pua-yossy",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pua_yossy"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "puro-nampa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/puro_nanpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "ren-app",
@@ -596,6 +662,33 @@
     "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
+    "source": "soshi-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/soshi_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "soshi-pua",
+    "target": "youtube",
+    "type": "affiliation",
+    "description": "Profile links point to YouTube.",
+    "source_urls": [
+      "https://x.com/soshi_pua",
+      "https://www.youtube.com/@soshi_mote_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "tips",
     "target": "x",
     "type": "affiliation",
@@ -608,6 +701,33 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
+  },
+  {
+    "source": "weekly-nanpa",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/weekly_nanpa",
+      "https://note.com/nantech"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "weekly-nanpa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/weekly_nanpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "yabuki-nampa",

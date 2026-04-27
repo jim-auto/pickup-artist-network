@@ -54,6 +54,7 @@
 - manual snapshot と generated snapshot が競合する場合は **manual を優先**し、generated 差分は review note へ退避する
 - approve / dismiss の decision は `data/review_candidate_decisions.json` に候補 metadata ごと残し、HTML から triage 履歴を追えるようにする
 - 最初の real person cluster は、本人が X bio で自称している 5 アカウントを seed に追加し、明示された活動場所だけを approve した
+- 次の拡張で self-described public X profile をさらに 5 アカウント追加し、real person 10 / 20 に到達した
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

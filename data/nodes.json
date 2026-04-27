@@ -221,6 +221,23 @@
     "review_notes": ""
   },
   {
+    "id": "machida",
+    "type": "location",
+    "name": "Machida",
+    "aliases": [
+      "町田",
+      "町田駅"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "matching-apps",
     "type": "location",
     "name": "Matching Apps",
@@ -316,6 +333,25 @@
     "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
+    "id": "puro-nampa",
+    "type": "person",
+    "name": "M氏@ナンパ講師",
+    "aliases": [
+      "M氏",
+      "puro_nanpa"
+    ],
+    "description": "経験人数1400人超/恋愛講師/スト・箱・ネト全てできます。「結局なにからやればいいの？」って人はポスト見ればおけ。単発/長期講習依頼はDM迄。 @emuchi_pua ←思考垢",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/puro_nanpa",
+      "https://x.com/puro_nanpa/status/1903019724398792956?s=46&t=W4A7y4kFypDhagBE6Lr49g"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "noa-reviewer",
     "type": "person",
     "name": "Noa Reviewer",
@@ -375,6 +411,25 @@
     "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
+    "id": "soshi-pua",
+    "type": "person",
+    "name": "そうし｜声かけpua",
+    "aliases": [
+      "そうし",
+      "soshi_pua"
+    ],
+    "description": "スキルとしてのナンパを発信 | 男子校&理系のガチコミュ障非モテ→ 23歳童貞からナンパ開始 | 泥0平均 78kkに1即 | 累計95即 |低身長164cm |某ヨハネスコーチから上級者認定 | 元大手営業職 |ハイライトに有益情報|フォローするとモテ男になれます",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/soshi_pua",
+      "https://www.youtube.com/@soshi_mote_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "nonchama-pro",
     "type": "person",
     "name": "のんちゃま® プロナンパ師",
@@ -387,6 +442,24 @@
       "manual://seed",
       "https://x.com/nonchama0721",
       "https://note.mu/nonchama_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "pua-yossy",
+    "type": "person",
+    "name": "アラフィフのヨッシー｜路上の伝説",
+    "aliases": [
+      "ヨッシー",
+      "pua_yossy"
+    ],
+    "description": "アラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pua_yossy"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -407,6 +480,25 @@
       "manual://seed",
       "https://x.com/genkiforfun",
       "https://lin.ee/5CvMOtg"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "pika-pua",
+    "type": "person",
+    "name": "ピカちう@ナンパ講師/外見改善 東京 名古屋",
+    "aliases": [
+      "ピカちう",
+      "pika_pua"
+    ],
+    "description": "🔥アラフォー、童貞、引きこもりに即らせるナンパ講師🔥/ナンパ指導実績150人⤴︎ /📮ダブルスコアで新人賞/地上アイドル即済/ストナンの大会優勝済🏆/三十路社畜低身長から550人斬/スト箱ネト夜職オールラウンダー/164cmホビットの活動垢（@pika_sublol） 外見改善（@pika_stochi）",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pika_pua",
+      "https://note.com/taku__lol/n/n64664fb8fb30"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -462,6 +554,24 @@
       "manual://seed",
       "https://x.com/yuuuu_renai",
       "https://lin.ee/iNEc0rw"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "weekly-nanpa",
+    "type": "person",
+    "name": "週刊プロナンパ日誌",
+    "aliases": [
+      "weekly_nanpa"
+    ],
+    "description": "フォロバ100、お気軽に｜歴15年を超えた中年ナンパ師の”最終形態”｜920人とセケスしたので今世に思い残す事はありません｜修羅と化した”女遊び”の現場からの叫び｜中年男性の人生がキラキラと輝くコラムを書いてます｜”週刊”と書いてますが、実際は２〜３ヶ月に１冊程度しか書けません",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/weekly_nanpa",
+      "https://note.com/nantech"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",

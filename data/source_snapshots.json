@@ -622,5 +622,31 @@
       }
     ],
     "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "pua-yossy",
+    "profile_url": "https://x.com/pua_yossy",
+    "pinned_post_url": "",
+    "profile_text": "アラフィフのヨッシー｜路上の伝説 (@pua_yossy)\nアラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/pua_yossy"
+    ],
+    "summary": "アラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即",
+    "observations": [
+      {
+        "target": "machida",
+        "type": "activity",
+        "description": "Approved review candidate from summary, profile_text mentioning 町田駅.",
+        "source_urls": [
+          "https://x.com/pua_yossy"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate pua-yossy__machida__activity. Original evidence: アラフィフのヨッシー｜路上の伝説 (@pua_yossy)\nアラフィフ•オブ•ストリート｜50歳で『ストリートナンパ』に出会った男｜ストリートナンパの講師として活動中｜講習依頼はDMまで｜講習内容:町田駅周辺90分1万円、しっかり寄り添って指導します！1対1のマンツーマン講習｜スト75即 Approval note: Explicitly stated in the public X profile bio."
+      }
+    ],
+    "snapshot_origin": "manual"
   }
 ]
