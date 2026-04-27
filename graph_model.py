@@ -660,6 +660,7 @@ def render_html(
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>__TITLE__</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="https://unpkg.com/vis-network@9.1.9/styles/vis-network.min.css">
   <style>
     :root {
@@ -681,6 +682,22 @@ def render_html(
       padding: 24px;
       background: linear-gradient(135deg, #17212b, #234f9d);
       color: #fff;
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .header-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      flex: 0 0 auto;
+    }
+    .header-copy h1 {
+      margin: 0;
     }
     header p {
       margin: 8px 0 0;
@@ -874,10 +891,15 @@ def render_html(
     }
   </style>
 </head>
-  <body>
+<body>
   <header>
-    <h1>__TITLE__</h1>
-    <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: __GENERATED_AT__。</p>
+    <div class="header-brand">
+      <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
+      <div class="header-copy">
+        <h1>__TITLE__</h1>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: __GENERATED_AT__。</p>
+      </div>
+    </div>
   </header>
   <main>
     <section class="panel">

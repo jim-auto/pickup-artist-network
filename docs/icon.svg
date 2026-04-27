@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Pickup Artist Network icon</title>
+  <desc id="desc">A stylized network icon with connected nodes on a blue square background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#17212b"/>
+      <stop offset="100%" stop-color="#2f6feb"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)"/>
+  <g fill="none" stroke="#dbeafe" stroke-linecap="round" stroke-width="14">
+    <path d="M70 72 L128 128"/>
+    <path d="M186 72 L128 128"/>
+    <path d="M128 128 L76 184"/>
+    <path d="M128 128 L184 184"/>
+    <path d="M76 184 L184 184"/>
+  </g>
+  <g>
+    <circle cx="70" cy="72" r="20" fill="#8ec5ff"/>
+    <circle cx="186" cy="72" r="20" fill="#8ec5ff"/>
+    <circle cx="76" cy="184" r="20" fill="#8ec5ff"/>
+    <circle cx="184" cy="184" r="20" fill="#8ec5ff"/>
+    <circle cx="128" cy="128" r="28" fill="#ffd166"/>
+  </g>
+</svg>
