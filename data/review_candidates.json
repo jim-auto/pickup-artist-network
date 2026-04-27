@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-04-27T07:59:58+00:00",
+  "candidates": [
+    {
+      "id": "mei-curator__shibuya__activity",
+      "source": "mei-curator",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "profile_text, pinned_post_text",
+      "bases": [
+        "profile_text",
+        "pinned_post_text"
+      ],
+      "matched_text": "Shibuya",
+      "matched_texts": [
+        "Shibuya"
+      ],
+      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
+      "source_urls": [
+        "manual://generated-hint/mei-curator/profile",
+        "manual://generated-hint/mei-curator/pinned"
+      ],
+      "confidence": 0.46,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "mei-curator__field-guide-01__collaboration",
+      "source": "mei-curator",
+      "target": "field-guide-01",
+      "type": "collaboration",
+      "basis": "pinned_post_text",
+      "bases": [
+        "pinned_post_text"
+      ],
+      "matched_text": "Field Guide 01",
+      "matched_texts": [
+        "Field Guide 01"
+      ],
+      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
+      "source_urls": [
+        "manual://generated-hint/mei-curator/profile",
+        "manual://generated-hint/mei-curator/pinned"
+      ],
+      "confidence": 0.46,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "mei-curator__midnight-lab__collaboration",
+      "source": "mei-curator",
+      "target": "midnight-lab",
+      "type": "collaboration",
+      "basis": "profile_text, pinned_post_text",
+      "bases": [
+        "profile_text",
+        "pinned_post_text"
+      ],
+      "matched_text": "Midnight Lab",
+      "matched_texts": [
+        "Midnight Lab"
+      ],
+      "evidence_text": "Generated hint fixture: Mei Curator says the Shibuya recap will include a joint stream with Midnight Lab and a follow-up note for Field Guide 01.",
+      "source_urls": [
+        "manual://generated-hint/mei-curator/profile",
+        "manual://generated-hint/mei-curator/pinned"
+      ],
+      "confidence": 0.46,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Midnight Lab'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "sora-clips__shibuya__activity",
+      "source": "sora-clips",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "profile_text, pinned_post_text",
+      "bases": [
+        "profile_text",
+        "pinned_post_text"
+      ],
+      "matched_text": "Shibuya",
+      "matched_texts": [
+        "Shibuya"
+      ],
+      "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.",
+      "source_urls": [
+        "manual://generated-hint/sora-clips/profile",
+        "manual://generated-hint/sora-clips/pinned"
+      ],
+      "confidence": 0.46,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text, pinned_post_text via mention match 'Shibuya'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "sora-clips__ren-app__influence",
+      "source": "sora-clips",
+      "target": "ren-app",
+      "type": "influence",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "Ren App",
+      "matched_texts": [
+        "Ren App",
+        "Ren"
+      ],
+      "evidence_text": "Generated hint fixture: Sora Clips cuts short YouTube edits around Shibuya and says Ren App inspired the pacing of the new archive teaser.",
+      "source_urls": [
+        "manual://generated-hint/sora-clips/profile",
+        "manual://generated-hint/sora-clips/pinned"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Ren App, Ren'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "sora-clips__field-guide-01__monetization",
+      "source": "sora-clips",
+      "target": "field-guide-01",
+      "type": "monetization",
+      "basis": "pinned_post_text",
+      "bases": [
+        "pinned_post_text"
+      ],
+      "matched_text": "Field Guide 01",
+      "matched_texts": [
+        "Field Guide 01"
+      ],
+      "evidence_text": "Generated hint fixture: Sora Clips points viewers to Field Guide 01 as a product-style follow-up after the Shibuya teaser edit.",
+      "source_urls": [
+        "manual://generated-hint/sora-clips/profile",
+        "manual://generated-hint/sora-clips/pinned"
+      ],
+      "confidence": 0.46,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from pinned_post_text via mention match 'Field Guide 01'. This is review-only and not part of the canonical graph."
+    }
+  ]
+}

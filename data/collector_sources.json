@@ -1,0 +1,62 @@
+[
+  {
+    "account_id": "note",
+    "url": "https://note.com/",
+    "label": "official homepage",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "youtube",
+    "url": "https://www.youtube.com/about/",
+    "label": "official about page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "brain",
+    "url": "https://brain-market.com/",
+    "label": "official homepage",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "tips",
+    "url": "https://tips.jp/",
+    "label": "official homepage",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "shibuya",
+    "url": "https://www.city.shibuya.tokyo.jp/",
+    "label": "official city page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "shinjuku",
+    "url": "https://www.city.shinjuku.lg.jp/",
+    "label": "official city page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "play-shibuya",
+    "url": "https://www.play-shibuya.com/en/",
+    "label": "official tourism association page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "shinjuku-visitors",
+    "url": "https://www.kanko-shinjuku.jp/en/",
+    "label": "official visitors bureau page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "gotokyo-shibuya-guide",
+    "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+    "label": "official Tokyo travel guide page",
+    "allowed_platforms": ["x"]
+  },
+  {
+    "account_id": "gotokyo-shinjuku-guide",
+    "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+    "label": "official Tokyo travel guide page",
+    "allowed_platforms": ["x"]
+  }
+]

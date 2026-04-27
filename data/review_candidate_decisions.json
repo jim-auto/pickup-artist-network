@@ -1,0 +1,68 @@
+{
+  "updated_at": "2026-04-27T07:59:58+00:00",
+  "decisions": {
+    "play-shibuya__shibuya__activity": {
+      "candidate_id": "play-shibuya__shibuya__activity",
+      "status": "approved",
+      "note": "Reviewed from the official tourism association page.",
+      "source": "play-shibuya",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Shibuya",
+      "evidence_text": "\"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information",
+      "source_urls": [
+        "https://www.play-shibuya.com/en/",
+        "https://x.com/PLAYSHIBUYA"
+      ],
+      "updated_at": "2026-04-25T23:00:33+00:00"
+    },
+    "shinjuku-visitors__shinjuku__activity": {
+      "candidate_id": "shinjuku-visitors__shinjuku__activity",
+      "status": "approved",
+      "note": "Reviewed from the official visitors bureau page.",
+      "source": "shinjuku-visitors",
+      "target": "shinjuku",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Shinjuku",
+      "evidence_text": "Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !!",
+      "source_urls": [
+        "https://www.kanko-shinjuku.jp/en/"
+      ],
+      "updated_at": "2026-04-25T23:00:34+00:00"
+    },
+    "gotokyo-shibuya-guide__shibuya__reference": {
+      "candidate_id": "gotokyo-shibuya-guide__shibuya__reference",
+      "status": "approved",
+      "note": "Reviewed from the official GO TOKYO Shibuya guide page.",
+      "source": "gotokyo-shibuya-guide",
+      "target": "shibuya",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "matched_text": "Shibuya",
+      "evidence_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture",
+      "source_urls": [
+        "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+        "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+      ],
+      "updated_at": "2026-04-26T08:33:24+00:00"
+    },
+    "gotokyo-shinjuku-guide__shinjuku__reference": {
+      "candidate_id": "gotokyo-shinjuku-guide__shinjuku__reference",
+      "status": "approved",
+      "note": "Reviewed from the official GO TOKYO Shinjuku guide page.",
+      "source": "gotokyo-shinjuku-guide",
+      "target": "shinjuku",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "matched_text": "Shinjuku",
+      "evidence_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go",
+      "source_urls": [
+        "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+        "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+      ],
+      "updated_at": "2026-04-26T08:33:25+00:00"
+    }
+  }
+}

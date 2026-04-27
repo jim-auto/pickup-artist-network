@@ -1,0 +1,28 @@
+# type|id|name|aliases|scope
+# Public, low-risk base nodes
+platform|x|X|Twitter|real
+platform|note|note||real
+platform|youtube|YouTube||real
+platform|instagram|Instagram||real
+platform|brain|Brain||real
+platform|tips|Tips||real
+location|shibuya|Shibuya|渋谷,Shibuya-ku,渋谷区|real
+location|shinjuku|Shinjuku|新宿,Shinjuku City,Shinjuku-ku,新宿区|real
+location|matching-apps|Matching Apps|Dating Apps|fictional
+location|late-night-walks|Late-night Walks|Night Walks|fictional
+community|play-shibuya|Shibuya City Tourism Association|PLAY! DIVERSITY SHIBUYA,Shibuya Ward Tourism Association|real
+community|shinjuku-visitors|Shinjuku Convention & Visitors Bureau|Shinjuku Tourism,Shinjuku Visitors Bureau|real
+content|gotokyo-shibuya-guide|GO TOKYO Shibuya Guide|A guide to Shibuya,GO TOKYO Shibuya|real
+content|gotokyo-shinjuku-guide|GO TOKYO Shinjuku Guide|A guide to Shinjuku,GO TOKYO Shinjuku|real
+
+# Fictional example actors/content for structure testing
+person|aoi-street|Aoi Street|Aoi|fictional
+person|ren-app|Ren App|Ren|fictional
+person|noa-reviewer|Noa Reviewer|Noa|fictional
+person|mei-curator|Mei Curator|Mei|fictional
+person|sora-clips|Sora Clips|Sora|fictional
+community|midnight-lab|Midnight Lab||fictional
+community|loop-circle|Loop Circle||fictional
+content|field-guide-01|Field Guide 01||fictional
+content|clip-series-01|Clip Series 01||fictional
+content|audit-note-01|Audit Note 01||fictional

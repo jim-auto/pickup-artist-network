@@ -1,0 +1,481 @@
+[
+  {
+    "account_id": "aoi-street",
+    "profile_url": "https://example.com/source/aoi/profile",
+    "pinned_post_url": "https://example.com/source/aoi/pinned",
+    "profile_text": "Shibuya field notes. Event appearances with Midnight Lab. Threads posted on X.",
+    "pinned_post_text": "Recent session recap mentions Ren and a collaboration archive.",
+    "links": [
+      "https://x.com/aoi_street",
+      "https://www.instagram.com/aoi_street/"
+    ],
+    "summary": "Fictional field operator used for profile and pinned-post ingestion tests.",
+    "observations": [
+      {
+        "target": "shibuya",
+        "type": "activity",
+        "description": "Profile text frames Shibuya as the main offline field.",
+        "source_urls": [
+          "https://example.com/source/aoi/profile"
+        ],
+        "confidence": 0.71
+      },
+      {
+        "target": "midnight-lab",
+        "type": "affiliation",
+        "description": "Profile text references Midnight Lab event appearances.",
+        "source_urls": [
+          "https://example.com/source/aoi/profile"
+        ],
+        "confidence": 0.66
+      },
+      {
+        "target": "ren-app",
+        "type": "influence",
+        "description": "Pinned post credits Ren's thread format as an early influence.",
+        "source_urls": [
+          "https://example.com/source/aoi/pinned"
+        ],
+        "confidence": 0.63
+      }
+    ]
+  },
+  {
+    "account_id": "ren-app",
+    "profile_url": "https://example.com/source/ren/profile",
+    "pinned_post_url": "https://example.com/source/ren/pinned",
+    "profile_text": "Matching-app operator. Mentor inside Midnight Lab. Long-form notes and products.",
+    "pinned_post_text": "Pinned product post links to Field Guide 01 and a joint session with Aoi.",
+    "links": [
+      "https://note.com/ren_app",
+      "https://www.youtube.com/@ren_app"
+    ],
+    "summary": "Fictional operator centered on app-based outreach and monetized content.",
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Profile text describes matching apps as the primary field.",
+        "source_urls": [
+          "https://example.com/source/ren/profile"
+        ],
+        "confidence": 0.77
+      },
+      {
+        "target": "midnight-lab",
+        "type": "affiliation",
+        "description": "Profile text introduces Ren as a recurring mentor inside Midnight Lab.",
+        "source_urls": [
+          "https://example.com/source/ren/profile"
+        ],
+        "confidence": 0.72
+      },
+      {
+        "target": "field-guide-01",
+        "type": "monetization",
+        "description": "Pinned product post funnels users toward Field Guide 01.",
+        "source_urls": [
+          "https://example.com/source/ren/pinned"
+        ],
+        "confidence": 0.74
+      },
+      {
+        "target": "aoi-street",
+        "type": "collaboration",
+        "description": "Pinned post references a collaborative session with Aoi.",
+        "source_urls": [
+          "https://example.com/source/ren/pinned"
+        ],
+        "confidence": 0.61
+      }
+    ]
+  },
+  {
+    "account_id": "noa-reviewer",
+    "profile_url": "https://example.com/source/noa/profile",
+    "pinned_post_url": "https://example.com/source/noa/pinned",
+    "profile_text": "Commentary account tracking monetization, positioning, and references across the scene.",
+    "pinned_post_text": "Pinned commentary critiques Aoi and references Field Guide 01.",
+    "links": [
+      "https://x.com/noa_reviewer"
+    ],
+    "summary": "Fictional commentator used to demonstrate criticism and reference edges.",
+    "observations": [
+      {
+        "target": "aoi-street",
+        "type": "criticism",
+        "description": "Pinned commentary criticizes Aoi's framing.",
+        "source_urls": [
+          "https://example.com/source/noa/pinned"
+        ],
+        "confidence": 0.57
+      },
+      {
+        "target": "field-guide-01",
+        "type": "reference",
+        "description": "Pinned commentary references Field Guide 01 while discussing monetization claims.",
+        "source_urls": [
+          "https://example.com/source/noa/pinned"
+        ],
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "account_id": "field-guide-01",
+    "profile_url": "https://example.com/source/field-guide-01/page",
+    "pinned_post_url": "",
+    "profile_text": "Guide landing page available on note.",
+    "pinned_post_text": "",
+    "links": [
+      "https://note.com/field_guide_01"
+    ],
+    "summary": "Fictional content node representing a guide, note, or product.",
+    "observations": [
+      {
+        "target": "note",
+        "type": "reference",
+        "description": "Field Guide 01 is distributed through note pages.",
+        "source_urls": [
+          "https://example.com/source/field-guide-01/page"
+        ],
+        "confidence": 0.83
+      }
+    ]
+  },
+  {
+    "account_id": "midnight-lab",
+    "profile_url": "manual://curated/midnight-lab/profile",
+    "pinned_post_url": "manual://curated/midnight-lab/pinned",
+    "profile_text": "Curated fictional community sample used to connect public-safe platform and location nodes.",
+    "pinned_post_text": "Pinned summary highlights archive videos and recurring meetup areas.",
+    "links": [
+      "https://www.youtube.com/@midnightlab"
+    ],
+    "summary": "Fictional community node used to demonstrate venue and media relationships.",
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Curated fictional community example. Keep separate from real-world claims.",
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Curated example places recurring community meetups around Shinjuku.",
+        "source_urls": [
+          "manual://curated/midnight-lab/profile"
+        ],
+        "confidence": 0.44,
+        "evidence_kind": "interpretation",
+        "needs_review": true,
+        "review_notes": "Low-confidence illustrative relation for UI testing."
+      }
+    ]
+  },
+  {
+    "account_id": "mei-curator",
+    "profile_url": "https://example.com/source/mei/profile",
+    "pinned_post_url": "https://example.com/source/mei/pinned",
+    "profile_text": "Shinjuku meetup recaps. Loop Circle organizer. Publishes audit notes on note and threads on X.",
+    "pinned_post_text": "Pinned post announces a recap stream with Sora and links Audit Note 01.",
+    "links": [
+      "https://x.com/mei_curator",
+      "https://note.com/mei_curator"
+    ],
+    "summary": "Fictional curator/operator used to demonstrate how a manual cluster grows around recaps and commentary.",
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Profile text frames Shinjuku as Mei's main meetup area.",
+        "source_urls": [
+          "https://example.com/source/mei/profile"
+        ],
+        "confidence": 0.7
+      },
+      {
+        "target": "loop-circle",
+        "type": "affiliation",
+        "description": "Profile text introduces Mei as an organizer inside Loop Circle.",
+        "source_urls": [
+          "https://example.com/source/mei/profile"
+        ],
+        "confidence": 0.73
+      },
+      {
+        "target": "audit-note-01",
+        "type": "reference",
+        "description": "Pinned post links readers to Audit Note 01 as a follow-up.",
+        "source_urls": [
+          "https://example.com/source/mei/pinned"
+        ],
+        "confidence": 0.67
+      },
+      {
+        "target": "sora-clips",
+        "type": "collaboration",
+        "description": "Pinned post announces a recap stream with Sora Clips.",
+        "source_urls": [
+          "https://example.com/source/mei/pinned"
+        ],
+        "confidence": 0.64
+      }
+    ]
+  },
+  {
+    "account_id": "sora-clips",
+    "profile_url": "https://example.com/source/sora/profile",
+    "pinned_post_url": "https://example.com/source/sora/pinned",
+    "profile_text": "Short-form clip editor covering late-night walkthroughs, Loop Circle recaps, and short YouTube edits.",
+    "pinned_post_text": "Pinned teaser links Clip Series 01 and tags Mei Curator.",
+    "links": [
+      "https://www.youtube.com/@sora_clips",
+      "https://www.instagram.com/sora_clips/"
+    ],
+    "summary": "Fictional clip-focused operator used to demonstrate media edges around a curated cluster.",
+    "observations": [
+      {
+        "target": "late-night-walks",
+        "type": "activity",
+        "description": "Profile text frames late-night walkthroughs as Sora's main field.",
+        "source_urls": [
+          "https://example.com/source/sora/profile"
+        ],
+        "confidence": 0.74
+      },
+      {
+        "target": "loop-circle",
+        "type": "affiliation",
+        "description": "Profile text positions Sora as a recurring clip editor for Loop Circle.",
+        "source_urls": [
+          "https://example.com/source/sora/profile"
+        ],
+        "confidence": 0.71
+      },
+      {
+        "target": "clip-series-01",
+        "type": "monetization",
+        "description": "Pinned teaser funnels viewers toward Clip Series 01.",
+        "source_urls": [
+          "https://example.com/source/sora/pinned"
+        ],
+        "confidence": 0.68
+      },
+      {
+        "target": "mei-curator",
+        "type": "collaboration",
+        "description": "Pinned teaser tags Mei Curator for a joint recap stream.",
+        "source_urls": [
+          "https://example.com/source/sora/pinned"
+        ],
+        "confidence": 0.62
+      }
+    ]
+  },
+  {
+    "account_id": "loop-circle",
+    "profile_url": "manual://curated/loop-circle/profile",
+    "pinned_post_url": "manual://curated/loop-circle/pinned",
+    "profile_text": "Curated fictional community sample centered on meetup recaps, clip archives, and note-based summaries.",
+    "pinned_post_text": "Pinned recap lists Mei and Sora as recurring hosts and points members toward Clip Series 01.",
+    "links": [
+      "https://x.com/loop_circle"
+    ],
+    "summary": "Fictional community node used to thicken the sample graph around recap media and meetup organization.",
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Curated fictional community example. Keep separate from real-world claims.",
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Curated example places Loop Circle recaps around Shinjuku meetups.",
+        "source_urls": [
+          "manual://curated/loop-circle/profile"
+        ],
+        "confidence": 0.48,
+        "evidence_kind": "interpretation",
+        "needs_review": true,
+        "review_notes": "Low-confidence illustrative relation for UI testing."
+      },
+      {
+        "target": "midnight-lab",
+        "type": "collaboration",
+        "description": "Pinned recap frames Midnight Lab as an adjacent collaboration circle.",
+        "source_urls": [
+          "manual://curated/loop-circle/pinned"
+        ],
+        "confidence": 0.46,
+        "evidence_kind": "interpretation",
+        "needs_review": true,
+        "review_notes": "Low-confidence illustrative relation for UI testing."
+      },
+      {
+        "target": "clip-series-01",
+        "type": "reference",
+        "description": "Pinned recap points members toward Clip Series 01 as the archive series.",
+        "source_urls": [
+          "manual://curated/loop-circle/pinned"
+        ],
+        "confidence": 0.59
+      }
+    ]
+  },
+  {
+    "account_id": "clip-series-01",
+    "profile_url": "https://example.com/source/clip-series-01/page",
+    "pinned_post_url": "",
+    "profile_text": "Video archive page available on YouTube and framed as the main Loop Circle recap series.",
+    "pinned_post_text": "",
+    "links": [
+      "https://www.youtube.com/@loopcircleclips"
+    ],
+    "summary": "Fictional recurring video series used to connect a community, creators, and a media archive.",
+    "observations": [
+      {
+        "target": "loop-circle",
+        "type": "affiliation",
+        "description": "Archive page describes Clip Series 01 as Loop Circle's main recap series.",
+        "source_urls": [
+          "https://example.com/source/clip-series-01/page"
+        ],
+        "confidence": 0.76
+      }
+    ]
+  },
+  {
+    "account_id": "audit-note-01",
+    "profile_url": "https://example.com/source/audit-note-01/page",
+    "pinned_post_url": "",
+    "profile_text": "Analysis note page available on note, comparing recap funnels, products, and archive positioning.",
+    "pinned_post_text": "",
+    "links": [
+      "https://note.com/audit_note_01"
+    ],
+    "summary": "Fictional analysis note used to connect commentary, product comparisons, and cross-references.",
+    "observations": [
+      {
+        "target": "ren-app",
+        "type": "reference",
+        "description": "Audit Note 01 compares Ren App's funnel with recap-based models.",
+        "source_urls": [
+          "https://example.com/source/audit-note-01/page"
+        ],
+        "confidence": 0.65
+      },
+      {
+        "target": "field-guide-01",
+        "type": "reference",
+        "description": "Audit Note 01 cites Field Guide 01 while comparing product structures.",
+        "source_urls": [
+          "https://example.com/source/audit-note-01/page"
+        ],
+        "confidence": 0.66
+      }
+    ]
+  },
+  {
+    "account_id": "play-shibuya",
+    "profile_url": "https://www.play-shibuya.com/en/",
+    "pinned_post_url": "",
+    "profile_text": "\"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/PLAYSHIBUYA"
+    ],
+    "summary": "The Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…",
+    "observations": [
+      {
+        "target": "shibuya",
+        "type": "activity",
+        "description": "Approved review candidate from summary, profile_text mentioning Shibuya.",
+        "source_urls": [
+          "https://www.play-shibuya.com/en/",
+          "https://x.com/PLAYSHIBUYA"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association\nThe Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. By creating and establishing the \"Shibuya bra…\nINFORMATION Other Information Approval note: Reviewed from the official tourism association page."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "shinjuku-visitors",
+    "profile_url": "https://www.kanko-shinjuku.jp/en/",
+    "pinned_post_url": "",
+    "profile_text": "Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !!",
+    "pinned_post_text": "",
+    "links": [],
+    "summary": "It is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…",
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Approved review candidate from summary, profile_text mentioning Shinjuku.",
+        "source_urls": [
+          "https://www.kanko-shinjuku.jp/en/"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau\nIt is full of tourist attraction, recommendation course event information of Shinjuku. We make use of a variety of resources including \"history, culture, industry, human resources…\nWelcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "gotokyo-shibuya-guide",
+    "profile_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+    "pinned_post_url": "",
+    "profile_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture",
+    "pinned_post_text": "",
+    "links": [
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "summary": "Shibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.",
+    "observations": [
+      {
+        "target": "shibuya",
+        "type": "reference",
+        "description": "Approved review candidate from summary, profile_text mentioning Shibuya.",
+        "source_urls": [
+          "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+          "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate gotokyo-shibuya-guide__shibuya__reference. Original evidence: Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture Approval note: Reviewed from the official GO TOKYO Shibuya guide page."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "gotokyo-shinjuku-guide",
+    "profile_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+    "pinned_post_url": "",
+    "profile_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go",
+    "pinned_post_text": "",
+    "links": [
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "summary": "Shinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.",
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "reference",
+        "description": "Approved review candidate from summary, profile_text mentioning Shinjuku.",
+        "source_urls": [
+          "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+          "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate gotokyo-shinjuku-guide__shinjuku__reference. Original evidence: A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go Approval note: Reviewed from the official GO TOKYO Shinjuku guide page."
+      }
+    ],
+    "snapshot_origin": "manual"
+  }
+]
