@@ -94,7 +94,7 @@ class CollectorTests(unittest.TestCase):
         <html>
           <body>
             <script>
-              window.__INITIAL_STATE__ = {"users":{"entities":{"1":{"description":"Official city updates &amp; notices","entities":{"url":{"urls":[{"expanded_url":"https://city.example.jp/"}]}},"location":"Example City","name":"City Example","screen_name":"city_example"}}}};
+              window.__INITIAL_STATE__ = {"users":{"entities":{"1":{"description":"Official city updates &amp; notices","entities":{"url":{"urls":[{"expanded_url":"https://city.example.jp/"}]}},"location":"Example City","name":"City Example","screen_name":"city_example","profile_image_url_https":"https://pbs.twimg.com/profile_images/example_normal.jpg"}}}};
             </script>
           </body>
         </html>
@@ -112,6 +112,10 @@ class CollectorTests(unittest.TestCase):
         self.assertIn("City Example (@city_example)", snapshot["profile_text"])
         self.assertIn("Location: Example City", snapshot["profile_text"])
         self.assertIn("https://city.example.jp/", snapshot["links"])
+        self.assertEqual(
+            snapshot["icon_url"],
+            "https://pbs.twimg.com/profile_images/example_400x400.jpg",
+        )
         self.assertNotIn("Pinned post parsing is not automated yet.", snapshot["profile_text"])
 
     def test_extract_x_profile_snapshot_builds_identity_fallback_without_bare_url(self) -> None:

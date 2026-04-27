@@ -35,6 +35,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
                 "account_id": "alpha",
                 "profile_url": "https://example.com/alpha/profile",
                 "pinned_post_url": "https://example.com/alpha/pinned",
+                "icon_url": "https://example.com/alpha/icon.png",
                 "links": ["https://note.com/alpha"],
                 "observations": [
                     {
@@ -54,6 +55,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
 
         self.assertIn(("alpha", "note", "affiliation"), edges)
         self.assertIn(("alpha", "beta", "affiliation"), edges)
+        self.assertEqual(alpha.icon_url, "https://example.com/alpha/icon.png")
         self.assertIn("https://example.com/alpha/profile", alpha.source_urls)
         self.assertIn("https://note.com/alpha", alpha.source_urls)
 

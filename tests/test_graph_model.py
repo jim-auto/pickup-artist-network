@@ -29,6 +29,7 @@ class GraphModelTests(unittest.TestCase):
                 "name": "Alpha",
                 "aliases": ["A"],
                 "description": "Alpha person",
+                "icon_url": "https://example.com/alpha.png",
                 "source_urls": ["https://example.com/alpha"],
                 "confidence": 0.8,
                 "needs_review": True,
@@ -232,6 +233,8 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("アカウント相関ビュー", html)
         self.assertIn('rel="icon" href="icon.svg"', html)
         self.assertIn('class="header-icon" src="icon.svg"', html)
+        self.assertIn("avatar-thumb", html)
+        self.assertIn("https://example.com/alpha.png", html)
         self.assertIn("実データ成長目標", html)
         self.assertIn("表示モード", html)
         self.assertIn("※ 現在の公開版はサンプル構成です。", html)

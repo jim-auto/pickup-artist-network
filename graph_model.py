@@ -72,6 +72,7 @@ class Node:
     name: str
     aliases: list[str] = field(default_factory=list)
     description: str = ""
+    icon_url: str = ""
     source_urls: list[str] = field(default_factory=list)
     confidence: float = 0.5
     evidence_kind: str = "fact"
@@ -86,6 +87,7 @@ class Node:
             name=str(payload["name"]).strip(),
             aliases=_normalize_text_list(payload.get("aliases", [])),
             description=str(payload.get("description", "")).strip(),
+            icon_url=str(payload.get("icon_url", "")).strip(),
             source_urls=_normalize_text_list(payload.get("source_urls", [])),
             confidence=_validate_confidence(float(payload.get("confidence", 0.5))),
             evidence_kind=_normalize_evidence_kind(payload.get("evidence_kind", "fact")),
@@ -100,6 +102,7 @@ class Node:
             "name": self.name,
             "aliases": self.aliases,
             "description": self.description,
+            "icon_url": self.icon_url,
             "source_urls": self.source_urls,
             "confidence": self.confidence,
             "evidence_kind": self.evidence_kind,
@@ -346,6 +349,7 @@ def export_csv(
                 "name",
                 "aliases",
                 "description",
+                "icon_url",
                 "source_urls",
                 "confidence",
                 "evidence_kind",
@@ -362,6 +366,7 @@ def export_csv(
                     "name": node.name,
                     "aliases": " | ".join(node.aliases),
                     "description": node.description,
+                    "icon_url": node.icon_url,
                     "source_urls": " | ".join(node.source_urls),
                     "confidence": node.confidence,
                     "evidence_kind": node.evidence_kind,
@@ -483,6 +488,7 @@ def export_sqlite(
                 type TEXT NOT NULL,
                 name TEXT NOT NULL,
                 description TEXT NOT NULL,
+                icon_url TEXT NOT NULL,
                 confidence REAL NOT NULL,
                 evidence_kind TEXT NOT NULL,
                 needs_review INTEGER NOT NULL,
@@ -544,14 +550,15 @@ def export_sqlite(
         for node in graph.nodes:
             connection.execute(
                 """
-                INSERT INTO nodes (id, type, name, description, confidence, evidence_kind, needs_review, review_notes)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO nodes (id, type, name, description, icon_url, confidence, evidence_kind, needs_review, review_notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     node.id,
                     node.type,
                     node.name,
                     node.description,
+                    node.icon_url,
                     node.confidence,
                     node.evidence_kind,
                     int(node.needs_review),
@@ -698,6 +705,33 @@ def render_html(
     }
     .header-copy h1 {
       margin: 0;
+    }
+    .avatar-thumb {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #eef4ff;
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+    }
+    .detail-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #eef4ff;
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+    }
+    .node-name-cell,
+    .detail-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .node-name-text {
+      min-width: 0;
     }
     header p {
       margin: 8px 0 0;
@@ -1264,6 +1298,13 @@ def render_html(
       `;
     }
 
+    function formatNodeAvatar(node, className) {
+      if (!node || !node.icon_url) {
+        return "";
+      }
+      return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy">`;
+    }
+
     function formatEvidenceBadges(item) {
       const badges = [
         `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(formatEvidenceKind(item.evidence_kind || "fact"))}</span>`
@@ -1312,7 +1353,10 @@ def render_html(
       const incomingEdges = currentVisibleEdges.filter((edge) => edge.target === nodeId);
       panel.innerHTML = `
         <div class="detail-card">
-          <h3>${escapeHtml(node.name)}</h3>
+          <div class="detail-heading">
+            ${formatNodeAvatar(node, "detail-avatar")}
+            <h3>${escapeHtml(node.name)}</h3>
+          </div>
           <div class="detail-meta">
             <span class="tag">${escapeHtml(formatNodeType(node.type))}</span>
             ${formatEvidenceBadges(node)}
@@ -1371,7 +1415,7 @@ def render_html(
           return `
             <tr>
               <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
-              <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
+              <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
               <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
               <td>${escapeHtml((node.aliases || []).join(", "))}</td>
               <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
@@ -1411,7 +1455,7 @@ def render_html(
         .map((node) => `
           <tr>
             <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
-            <td><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></td>
+            <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
             <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
             <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.review_notes || "-")}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
@@ -1555,6 +1599,9 @@ def render_html(
           label: node.name,
           group: node.type,
           value: 12 + Math.round((node.confidence || 0) * 12),
+          shape: node.icon_url ? "circularImage" : "dot",
+          image: node.icon_url || undefined,
+          brokenImage: "icon.svg",
           color: {
             background: nodeColors[node.type] || "#64748b",
             border: "#ffffff",

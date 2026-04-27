@@ -431,6 +431,7 @@ def validate_source_snapshots(
             str(snapshot.get("pinned_post_url", "")).strip(),
             f"{account_id}.pinned_post_url",
         )
+        validate_url(str(snapshot.get("icon_url", "")).strip(), f"{account_id}.icon_url")
         links = validate_string_list(snapshot.get("links", []), f"{account_id}.links")
         observations = snapshot.get("observations", [])
         if not isinstance(observations, list):
@@ -581,6 +582,7 @@ def merge_snapshots_by_account(
     text_fields = (
         "profile_url",
         "pinned_post_url",
+        "icon_url",
         "profile_text",
         "pinned_post_text",
         "summary",
@@ -702,6 +704,9 @@ def apply_source_snapshots(
         source_node.needs_review = source_node.needs_review or bool(
             snapshot.get("needs_review", False)
         )
+        icon_url = str(snapshot.get("icon_url", "")).strip()
+        if icon_url:
+            source_node.icon_url = icon_url
         source_node.evidence_kind = merge_evidence_kind(
             source_node.evidence_kind,
             str(snapshot.get("summary_evidence_kind", snapshot.get("evidence_kind", "fact"))),
@@ -1219,6 +1224,7 @@ def ensure_manual_snapshot(
         "account_id": account_id,
         "profile_url": "",
         "pinned_post_url": "",
+        "icon_url": "",
         "profile_text": "",
         "pinned_post_text": "",
         "links": [],
@@ -1227,7 +1233,7 @@ def ensure_manual_snapshot(
         "snapshot_origin": "manual",
     }
     if reference_snapshot:
-        for field in ("profile_url", "pinned_post_url", "profile_text", "pinned_post_text", "summary"):
+        for field in ("profile_url", "pinned_post_url", "icon_url", "profile_text", "pinned_post_text", "summary"):
             value = str(reference_snapshot.get(field, "")).strip()
             if value:
                 snapshot[field] = value

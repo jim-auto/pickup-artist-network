@@ -315,6 +315,21 @@ def extract_external_url_from_user_object(user_object: dict[str, object]) -> str
     return ""
 
 
+def normalize_x_profile_image_url(url: str) -> str:
+    normalized = normalize_embedded_text(url)
+    if not normalized:
+        return ""
+    return re.sub(r"_normal(\.(?:jpg|jpeg|png|webp))$", r"_400x400\1", normalized, flags=re.IGNORECASE)
+
+
+def extract_profile_image_url_from_user_object(user_object: dict[str, object]) -> str:
+    for field in ("profile_image_url_https", "profile_image_url"):
+        image_url = normalize_x_profile_image_url(str(user_object.get(field, "")).strip())
+        if image_url:
+            return image_url
+    return ""
+
+
 def extract_x_embedded_profile(
     soup: BeautifulSoup,
     *,
@@ -341,6 +356,7 @@ def extract_x_embedded_profile(
                     "description": normalize_embedded_text(user_object.get("description")),
                     "location": normalize_embedded_text(user_object.get("location")),
                     "external_url": extract_external_url_from_user_object(user_object),
+                    "avatar_url": extract_profile_image_url_from_user_object(user_object),
                 }
             match_index = script_text.find(handle_pattern, match_index + len(handle_pattern))
 
@@ -462,6 +478,7 @@ def extract_x_profile_details(
         "description": embedded_profile.get("description", "") or description,
         "location": embedded_profile.get("location", ""),
         "external_url": embedded_profile.get("external_url", ""),
+        "avatar_url": embedded_profile.get("avatar_url", ""),
     }
 
 
@@ -622,6 +639,7 @@ def extract_x_profile_snapshot(
         "account_id": account_id,
         "profile_url": fetched_url or source_url,
         "pinned_post_url": pinned_post["pinned_post_url"],
+        "icon_url": str(details["avatar_url"]).strip(),
         "profile_text": profile_text,
         "pinned_post_text": pinned_post["pinned_post_text"],
         "links": links,
@@ -740,6 +758,7 @@ def merge_generated_snapshots(snapshots: list[dict[str, object]]) -> list[dict[s
     scalar_fields = (
         "profile_url",
         "pinned_post_url",
+        "icon_url",
         "profile_text",
         "pinned_post_text",
         "summary",
