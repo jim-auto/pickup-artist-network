@@ -56,6 +56,7 @@ REAL_GROWTH_PHASES = (
     {"label": "Phase 2", "real_person_target": 20},
     {"label": "Phase 3", "real_person_target": 30},
 )
+CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
 
 DEFAULT_PLATFORM_NODES = {
     "x": {
@@ -118,6 +119,7 @@ DOMAIN_PLATFORM_MAP = {
     "x.com": "x",
     "twitter.com": "x",
     "note.com": "note",
+    "note.mu": "note",
     "youtube.com": "youtube",
     "youtu.be": "youtube",
     "instagram.com": "instagram",
@@ -858,7 +860,7 @@ def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> l
             continue
         for raw_token in [entity.get("name", ""), *entity.get("aliases", [])]:
             token = str(raw_token).strip()
-            if len(token) < 3:
+            if len(token) < 3 and not (len(token) >= 2 and CJK_TOKEN_RE.search(token)):
                 continue
             matchers.append(
                 {

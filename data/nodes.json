@@ -157,6 +157,38 @@
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
   },
   {
+    "id": "ebisu",
+    "type": "location",
+    "name": "Ebisu",
+    "aliases": [
+      "恵比寿"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
+    "id": "ikebukuro",
+    "type": "location",
+    "name": "Ikebukuro",
+    "aliases": [
+      "池袋"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "late-night-walks",
     "type": "location",
     "name": "Late-night Walks",
@@ -168,6 +200,22 @@
       "manual://curated/late-night-walks"
     ],
     "confidence": 0.69,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
+    "id": "london",
+    "type": "location",
+    "name": "London",
+    "aliases": [
+      "ロンドン"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
@@ -327,6 +375,100 @@
     "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
+    "id": "nonchama-pro",
+    "type": "person",
+    "name": "のんちゃま® プロナンパ師",
+    "aliases": [
+      "のんちゃま",
+      "nonchama0721"
+    ],
+    "description": "ストリートナンパのプロ｜ナンパ界隈で最もnoteのフォロワーが多い人（累計4,643人）｜note累計20,000部販売｜週刊SPA！2022年8月掲載",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nonchama0721",
+      "https://note.mu/nonchama_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "genki-japan",
+    "type": "person",
+    "name": "ゲンキ GENKI【ゲンキジャパン】",
+    "aliases": [
+      "GENKI",
+      "ゲンキジャパン",
+      "genkiforfun"
+    ],
+    "description": "ロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/genkiforfun",
+      "https://lin.ee/5CvMOtg"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "beat-pro",
+    "type": "person",
+    "name": "プロのナンパ師",
+    "aliases": [
+      "982thebeat"
+    ],
+    "description": "渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/982thebeat"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "yabuki-nampa",
+    "type": "person",
+    "name": "ヤブキ＠ナンパ師",
+    "aliases": [
+      "ヤブキ",
+      "yabuki335"
+    ],
+    "description": "都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "yuu-renai",
+    "type": "person",
+    "name": "日本一のナンパ師ゆう",
+    "aliases": [
+      "ゆう",
+      "yuuuu_renai"
+    ],
+    "description": "誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yuuuu_renai",
+      "https://lin.ee/iNEc0rw"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "brain",
     "type": "platform",
     "name": "Brain",
@@ -396,6 +538,7 @@
     "source_urls": [
       "https://www.youtube.com",
       "https://x.com/YouTube",
+      "http://youtube.com/",
       "https://twitter.com/YouTube"
     ],
     "confidence": 1.0,

@@ -77,6 +77,24 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertIn("youtube", node_ids)
         self.assertIn(("alpha", "youtube", "affiliation"), edges)
 
+    def test_note_mu_link_maps_to_note_platform(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/alpha",
+                "links": ["https://note.mu/alpha"],
+                "observations": [],
+            }
+        ]
+
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        edges = {(edge.source, edge.target, edge.type) for edge in graph.edges}
+
+        self.assertIn(("alpha", "note", "affiliation"), edges)
+
     def test_invalid_snapshot_target_is_rejected(self) -> None:
         seed_entities = [
             {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
@@ -364,6 +382,27 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertEqual(payload["candidates"][0]["type"], "activity")
         self.assertEqual(payload["candidates"][0]["basis"], "summary, profile_text")
         self.assertIn("summary, profile_text", payload["candidates"][0]["review_notes"])
+
+    def test_generate_review_candidates_accepts_short_cjk_aliases(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+            {"type": "location", "id": "shinjuku", "name": "Shinjuku", "aliases": ["新宿"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+        generated_snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_text": "Alpha posts field notes from 新宿 every weekend.",
+                "profile_url": "https://example.com/alpha",
+                "links": [],
+            }
+        ]
+
+        payload = generate_review_candidates(seed_entities, generated_snapshots, graph)
+
+        self.assertEqual(len(payload["candidates"]), 1)
+        self.assertEqual(payload["candidates"][0]["target"], "shinjuku")
+        self.assertEqual(payload["candidates"][0]["matched_text"], "新宿")
 
     def test_format_review_candidates_output_lists_candidate_context(self) -> None:
         seed_entities = [

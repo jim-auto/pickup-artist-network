@@ -1,5 +1,35 @@
 [
   {
+    "account_id": "beat-pro",
+    "profile_url": "https://x.com/982thebeat",
+    "pinned_post_url": "",
+    "profile_text": "プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/982thebeat"
+    ],
+    "summary": "渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/982thebeat",
+          "fetched_url": "https://x.com/982thebeat",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T09:33:12+00:00"
+        }
+      ]
+    },
+    "observations": []
+  },
+  {
     "account_id": "brain",
     "profile_url": "https://brain-market.com/",
     "pinned_post_url": "",
@@ -19,7 +49,38 @@
           "label": "official homepage",
           "source_url": "https://brain-market.com/",
           "fetched_url": "https://brain-market.com/",
-          "collected_at": "2026-04-27T07:59:46+00:00"
+          "collected_at": "2026-04-27T09:32:55+00:00"
+        }
+      ]
+    },
+    "observations": []
+  },
+  {
+    "account_id": "genki-japan",
+    "profile_url": "https://x.com/genkiforfun",
+    "pinned_post_url": "",
+    "profile_text": "ゲンキ GENKI【ゲンキジャパン】 (@genkiforfun)\nロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える\nLocation: 👇最短30日で非モテからモテ男になれる攻略法はこちら👇",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/genkiforfun",
+      "https://lin.ee/5CvMOtg"
+    ],
+    "summary": "ロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/genkiforfun",
+          "fetched_url": "https://x.com/genkiforfun",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T09:33:09+00:00"
         }
       ]
     },
@@ -47,7 +108,7 @@
           "label": "official Tokyo travel guide page",
           "source_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
           "fetched_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
-          "collected_at": "2026-04-27T07:59:51+00:00"
+          "collected_at": "2026-04-27T09:33:01+00:00"
         }
       ]
     },
@@ -75,7 +136,38 @@
           "label": "official Tokyo travel guide page",
           "source_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
           "fetched_url": "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
-          "collected_at": "2026-04-27T07:59:51+00:00"
+          "collected_at": "2026-04-27T09:33:02+00:00"
+        }
+      ]
+    },
+    "observations": []
+  },
+  {
+    "account_id": "nonchama-pro",
+    "profile_url": "https://x.com/nonchama0721",
+    "pinned_post_url": "",
+    "profile_text": "のんちゃま® プロナンパ師 (@nonchama0721)\nストリートナンパのプロ｜ナンパ界隈で最もnoteのフォロワーが多い人（累計4,643人）｜note累計20,000部販売｜週刊SPA！2022年8月掲載\nLocation: ⬇ この4冊は読む",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/nonchama0721",
+      "https://note.mu/nonchama_pua"
+    ],
+    "summary": "ストリートナンパのプロ｜ナンパ界隈で最もnoteのフォロワーが多い人（累計4,643人）｜note累計20,000部販売｜週刊SPA！2022年8月掲載",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/nonchama0721",
+          "fetched_url": "https://x.com/nonchama0721",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T09:33:16+00:00"
         }
       ]
     },
@@ -101,7 +193,7 @@
           "label": "official homepage",
           "source_url": "https://note.com/",
           "fetched_url": "https://note.com/",
-          "collected_at": "2026-04-27T07:59:42+00:00"
+          "collected_at": "2026-04-27T09:32:49+00:00"
         }
       ]
     },
@@ -129,7 +221,7 @@
           "label": "official tourism association page",
           "source_url": "https://www.play-shibuya.com/en/",
           "fetched_url": "https://www.play-shibuya.com/en/",
-          "collected_at": "2026-04-27T07:59:50+00:00"
+          "collected_at": "2026-04-27T09:33:00+00:00"
         }
       ]
     },
@@ -142,7 +234,8 @@
     "profile_text": "渋谷区 (@city_shibuya)\n渋谷区の公式アカウントです。区からのお知らせ、イベント、防災・安全対策などの情報を発信します。原則として返信等は行いません。\nLocation: 渋谷区",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/city_shibuya"
+      "https://x.com/city_shibuya",
+      "https://www.city.shibuya.tokyo.jp/"
     ],
     "summary": "渋谷区の公式アカウントです。区からのお知らせ、イベント、防災・安全対策などの情報を発信します。原則として返信等は行いません。",
     "evidence_kind": "fact",
@@ -159,14 +252,14 @@
           "fetched_url": "https://x.com/city_shibuya",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T07:59:56+00:00"
+          "collected_at": "2026-04-27T09:33:06+00:00"
         },
         {
           "type": "public_page",
           "label": "official city page",
           "source_url": "https://www.city.shibuya.tokyo.jp/",
           "fetched_url": "https://www.city.shibuya.tokyo.jp/",
-          "collected_at": "2026-04-27T07:59:47+00:00"
+          "collected_at": "2026-04-27T09:32:57+00:00"
         }
       ]
     },
@@ -179,7 +272,8 @@
     "profile_text": "新宿区【公式】 (@shinjuku_info)\n新宿区公式アカウントです。重要なお知らせや区政ニュースを発信していきます。情報発信専用とさせていただきます。\nLocation: 東京都新宿区",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/shinjuku_info"
+      "https://x.com/shinjuku_info",
+      "https://www.city.shinjuku.lg.jp/"
     ],
     "summary": "新宿区公式アカウントです。重要なお知らせや区政ニュースを発信していきます。情報発信専用とさせていただきます。",
     "evidence_kind": "fact",
@@ -196,14 +290,14 @@
           "fetched_url": "https://x.com/shinjuku_info",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T07:59:58+00:00"
+          "collected_at": "2026-04-27T09:33:07+00:00"
         },
         {
           "type": "public_page",
           "label": "official city page",
           "source_url": "https://www.city.shinjuku.lg.jp/",
           "fetched_url": "https://www.city.shinjuku.lg.jp/",
-          "collected_at": "2026-04-27T07:59:47+00:00"
+          "collected_at": "2026-04-27T09:32:58+00:00"
         }
       ]
     },
@@ -229,7 +323,7 @@
           "label": "official visitors bureau page",
           "source_url": "https://www.kanko-shinjuku.jp/en/",
           "fetched_url": "https://www.kanko-shinjuku.jp/en/",
-          "collected_at": "2026-04-27T07:59:50+00:00"
+          "collected_at": "2026-04-27T09:33:00+00:00"
         }
       ]
     },
@@ -257,7 +351,38 @@
           "label": "official homepage",
           "source_url": "https://tips.jp/",
           "fetched_url": "https://tips.jp/",
-          "collected_at": "2026-04-27T07:59:46+00:00"
+          "collected_at": "2026-04-27T09:32:56+00:00"
+        }
+      ]
+    },
+    "observations": []
+  },
+  {
+    "account_id": "yabuki-nampa",
+    "profile_url": "https://x.com/yabuki335",
+    "pinned_post_url": "",
+    "profile_text": "ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "summary": "都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/yabuki335",
+          "fetched_url": "https://x.com/yabuki335",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T09:33:14+00:00"
         }
       ]
     },
@@ -271,6 +396,7 @@
     "pinned_post_text": "",
     "links": [
       "https://x.com/YouTube",
+      "http://youtube.com/",
       "https://twitter.com/YouTube"
     ],
     "summary": "like & subscribe",
@@ -288,14 +414,45 @@
           "fetched_url": "https://x.com/YouTube",
           "pinned_post_source_url": "",
           "pinned_post_fetched_url": "",
-          "collected_at": "2026-04-27T07:59:53+00:00"
+          "collected_at": "2026-04-27T09:33:04+00:00"
         },
         {
           "type": "public_page",
           "label": "official about page",
           "source_url": "https://www.youtube.com/about/",
           "fetched_url": "https://about.youtube/",
-          "collected_at": "2026-04-27T07:59:43+00:00"
+          "collected_at": "2026-04-27T09:32:50+00:00"
+        }
+      ]
+    },
+    "observations": []
+  },
+  {
+    "account_id": "yuu-renai",
+    "profile_url": "https://x.com/yuuuu_renai",
+    "pinned_post_url": "",
+    "profile_text": "日本一のナンパ師ゆう (@yuuuu_renai)\n誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。\nLocation: 公式LINE",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/yuuuu_renai",
+      "https://lin.ee/iNEc0rw"
+    ],
+    "summary": "誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "sources": [
+        {
+          "type": "x_profile",
+          "label": "public self-described X profile",
+          "source_url": "https://x.com/yuuuu_renai",
+          "fetched_url": "https://x.com/yuuuu_renai",
+          "pinned_post_source_url": "",
+          "pinned_post_fetched_url": "",
+          "collected_at": "2026-04-27T09:33:11+00:00"
         }
       ]
     },

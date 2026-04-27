@@ -612,13 +612,19 @@ def extract_x_profile_snapshot(
             "Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
         )
 
+    links: list[str] = []
+    for candidate_url in [fetched_url or source_url, details["external_url"]]:
+        normalized = str(candidate_url).strip()
+        if normalized and normalized not in links:
+            links.append(normalized)
+
     return {
         "account_id": account_id,
         "profile_url": fetched_url or source_url,
         "pinned_post_url": pinned_post["pinned_post_url"],
         "profile_text": profile_text,
         "pinned_post_text": pinned_post["pinned_post_text"],
-        "links": [fetched_url or source_url],
+        "links": links,
         "summary": summary,
         "evidence_kind": "fact",
         "needs_review": True,

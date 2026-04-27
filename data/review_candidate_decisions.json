@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T07:59:58+00:00",
+  "updated_at": "2026-04-27T09:34:26+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -63,6 +63,147 @@
         "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
       ],
       "updated_at": "2026-04-26T08:33:25+00:00"
+    },
+    "beat-pro__ikebukuro__activity": {
+      "candidate_id": "beat-pro__ikebukuro__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "beat-pro",
+      "target": "ikebukuro",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "池袋",
+      "evidence_text": "プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+      "source_urls": [
+        "https://x.com/982thebeat"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "beat-pro__shibuya__activity": {
+      "candidate_id": "beat-pro__shibuya__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "beat-pro",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "渋谷",
+      "evidence_text": "プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+      "source_urls": [
+        "https://x.com/982thebeat"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "beat-pro__shinjuku__activity": {
+      "candidate_id": "beat-pro__shinjuku__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "beat-pro",
+      "target": "shinjuku",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "新宿",
+      "evidence_text": "プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl",
+      "source_urls": [
+        "https://x.com/982thebeat"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "genki-japan__london__activity": {
+      "candidate_id": "genki-japan__london__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "genki-japan",
+      "target": "london",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "ロンドン",
+      "evidence_text": "ゲンキ GENKI【ゲンキジャパン】 (@genkiforfun)\nロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える\nLocation: 👇最短30日で非モテからモテ男になれる攻略法はこちら👇",
+      "source_urls": [
+        "https://x.com/genkiforfun",
+        "https://lin.ee/5CvMOtg"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "yabuki-nampa__ebisu__activity": {
+      "candidate_id": "yabuki-nampa__ebisu__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "yabuki-nampa",
+      "target": "ebisu",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "恵比寿",
+      "evidence_text": "ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/",
+      "source_urls": [
+        "https://x.com/yabuki335",
+        "https://www.life-enjoy.site/"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "yabuki-nampa__ikebukuro__activity": {
+      "candidate_id": "yabuki-nampa__ikebukuro__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "yabuki-nampa",
+      "target": "ikebukuro",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "池袋",
+      "evidence_text": "ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/",
+      "source_urls": [
+        "https://x.com/yabuki335",
+        "https://www.life-enjoy.site/"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "yabuki-nampa__shibuya__activity": {
+      "candidate_id": "yabuki-nampa__shibuya__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "yabuki-nampa",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "渋谷",
+      "evidence_text": "ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/",
+      "source_urls": [
+        "https://x.com/yabuki335",
+        "https://www.life-enjoy.site/"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "yabuki-nampa__shinjuku__activity": {
+      "candidate_id": "yabuki-nampa__shinjuku__activity",
+      "status": "approved",
+      "note": "Explicitly stated in the public X profile bio.",
+      "source": "yabuki-nampa",
+      "target": "shinjuku",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "新宿",
+      "evidence_text": "ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/",
+      "source_urls": [
+        "https://x.com/yabuki335",
+        "https://www.life-enjoy.site/"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
+    },
+    "yuu-renai__ren-app__reference": {
+      "candidate_id": "yuu-renai__ren-app__reference",
+      "status": "dismissed",
+      "note": "False positive mention match against a fictional alias, not a supported real relation.",
+      "source": "yuu-renai",
+      "target": "ren-app",
+      "type": "reference",
+      "basis": "profile_text",
+      "matched_text": "Ren",
+      "evidence_text": "日本一のナンパ師ゆう (@yuuuu_renai)\n誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。\nLocation: 公式LINE",
+      "source_urls": [
+        "https://x.com/yuuuu_renai",
+        "https://lin.ee/iNEc0rw"
+      ],
+      "updated_at": "2026-04-27T09:34:26+00:00"
     }
   }
 }

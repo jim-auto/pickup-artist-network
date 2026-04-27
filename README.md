@@ -174,10 +174,15 @@ python build_site.py
   - X / note / YouTube / Instagram / Brain / Tips / Shibuya / Shinjuku
   - Shibuya City Tourism Association / Shinjuku Convention & Visitors Bureau などの safe public community
   - GO TOKYO Shibuya Guide / GO TOKYO Shinjuku Guide などの official guide content
+- **実在 person の追加方針**
+  - まずは本人が公開 X profile で **自分で「ナンパ師」「プロナンパ師」「ストリートナンパのプロ」などと名乗っている** アカウントだけを少数 seed に追加する
+  - 第三者の噂・暴露・まとめではなく、本人プロフィールや本人導線の public page を優先する
+  - 公開プロフィール文で確認できる範囲だけを取り込み、推測的な所属・対立・影響関係はすぐに確定しない
+  - 現在は最初の real person cluster として、公開 X profile ベースの 5 アカウントを追加済み
 - **構造確認用の fictional node**
   - 人物・コミュニティ・コンテンツの一部サンプル
 
-つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加する前提です。
+つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、その次に **本人が自称している public X profile** を少数だけ追加し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加する前提です。
 
 ## GitHub Pages
 

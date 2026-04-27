@@ -41,6 +41,7 @@
 - 実在データはまず **platform / location / official public community** などの low-risk node から入れる
 - official guide page のような **public content node** も low-risk source として扱ってよい
 - person / community / content は少量ずつ、公開情報・source URL・confidence を揃えて追加する
+- real person を最初に足すときは、**本人が公開 X profile で自称している** アカウントだけに絞り、第三者ラベルや噂ベースでは追加しない
 - real review candidate を増やすときは、既存 location を本文で自然に言及する official tourism / visitors bureau などの safe public source を優先する
 - review candidate queue は basis ごとの重複を避け、同じ `source -> target -> type` を consolidated candidate として扱う
 - content source が location を言及した場合は `reference` を優先し、community source の location mention とは分けて扱う
@@ -52,6 +53,9 @@
 - live public data だけでは review candidate queue が薄くなりやすいため、fictional sample cluster には generated hint fixture を別 file で足して workflow を常時確認できるようにする
 - manual snapshot と generated snapshot が競合する場合は **manual を優先**し、generated 差分は review note へ退避する
 - approve / dismiss の decision は `data/review_candidate_decisions.json` に候補 metadata ごと残し、HTML から triage 履歴を追えるようにする
+- 最初の real person cluster は、本人が X bio で自称している 5 アカウントを seed に追加し、明示された活動場所だけを approve した
+- X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
+- 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 
 ## Revisit triggers
 

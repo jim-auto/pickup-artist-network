@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-04-27T07:59:58+00:00",
+  "generated_at": "2026-04-27T09:34:27+00:00",
   "nodes": [
     {
       "id": "aoi-street",
       "name": "Aoi Street",
       "type": "person",
-      "degree_centrality": 0.3043,
-      "betweenness_centrality": 0.0277,
-      "pagerank": 0.0312
+      "degree_centrality": 0.2258,
+      "betweenness_centrality": 0.0151,
+      "pagerank": 0.0246
     },
     {
       "id": "audit-note-01",
       "name": "Audit Note 01",
       "type": "content",
-      "degree_centrality": 0.1739,
-      "betweenness_centrality": 0.0198,
-      "pagerank": 0.0241
+      "degree_centrality": 0.129,
+      "betweenness_centrality": 0.0108,
+      "pagerank": 0.019
     },
     {
       "id": "brain",
@@ -23,175 +23,239 @@
       "type": "platform",
       "degree_centrality": 0.0,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "clip-series-01",
       "name": "Clip Series 01",
       "type": "content",
-      "degree_centrality": 0.1739,
-      "betweenness_centrality": 0.001,
-      "pagerank": 0.0329
+      "degree_centrality": 0.129,
+      "betweenness_centrality": 0.0005,
+      "pagerank": 0.026
+    },
+    {
+      "id": "ebisu",
+      "name": "Ebisu",
+      "type": "location",
+      "degree_centrality": 0.0323,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0191
     },
     {
       "id": "field-guide-01",
       "name": "Field Guide 01",
       "type": "content",
-      "degree_centrality": 0.1739,
-      "betweenness_centrality": 0.002,
-      "pagerank": 0.0381
+      "degree_centrality": 0.129,
+      "betweenness_centrality": 0.0011,
+      "pagerank": 0.03
     },
     {
       "id": "gotokyo-shibuya-guide",
       "name": "GO TOKYO Shibuya Guide",
       "type": "content",
-      "degree_centrality": 0.087,
+      "degree_centrality": 0.0645,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "gotokyo-shinjuku-guide",
       "name": "GO TOKYO Shinjuku Guide",
       "type": "content",
-      "degree_centrality": 0.087,
+      "degree_centrality": 0.0645,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
+    },
+    {
+      "id": "ikebukuro",
+      "name": "Ikebukuro",
+      "type": "location",
+      "degree_centrality": 0.0645,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0226
     },
     {
       "id": "instagram",
       "name": "Instagram",
       "type": "platform",
-      "degree_centrality": 0.087,
+      "degree_centrality": 0.0645,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0294
+      "pagerank": 0.0232
     },
     {
       "id": "late-night-walks",
       "name": "Late-night Walks",
       "type": "location",
-      "degree_centrality": 0.0435,
+      "degree_centrality": 0.0323,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0241
+      "pagerank": 0.019
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "type": "location",
+      "degree_centrality": 0.0323,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0233
     },
     {
       "id": "loop-circle",
       "name": "Loop Circle",
       "type": "community",
-      "degree_centrality": 0.3043,
-      "betweenness_centrality": 0.0115,
-      "pagerank": 0.0415
+      "degree_centrality": 0.2258,
+      "betweenness_centrality": 0.0063,
+      "pagerank": 0.0328
     },
     {
       "id": "matching-apps",
       "name": "Matching Apps",
       "type": "location",
-      "degree_centrality": 0.0435,
+      "degree_centrality": 0.0323,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0254
+      "pagerank": 0.02
     },
     {
       "id": "mei-curator",
       "name": "Mei Curator",
       "type": "person",
-      "degree_centrality": 0.3043,
-      "betweenness_centrality": 0.0155,
-      "pagerank": 0.0241
+      "degree_centrality": 0.2258,
+      "betweenness_centrality": 0.0084,
+      "pagerank": 0.019
     },
     {
       "id": "midnight-lab",
       "name": "Midnight Lab",
       "type": "community",
-      "degree_centrality": 0.2174,
-      "betweenness_centrality": 0.0109,
-      "pagerank": 0.0395
+      "degree_centrality": 0.1613,
+      "betweenness_centrality": 0.0059,
+      "pagerank": 0.0312
     },
     {
       "id": "noa-reviewer",
       "name": "Noa Reviewer",
       "type": "person",
-      "degree_centrality": 0.1304,
+      "degree_centrality": 0.0968,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "ren-app",
       "name": "Ren App",
       "type": "person",
-      "degree_centrality": 0.3478,
-      "betweenness_centrality": 0.0375,
-      "pagerank": 0.0328
+      "degree_centrality": 0.2581,
+      "betweenness_centrality": 0.0204,
+      "pagerank": 0.0259
     },
     {
       "id": "shibuya",
       "name": "Shibuya",
       "type": "location",
-      "degree_centrality": 0.1739,
+      "degree_centrality": 0.1935,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0436
+      "pagerank": 0.0407
     },
     {
       "id": "play-shibuya",
       "name": "Shibuya City Tourism Association",
       "type": "community",
-      "degree_centrality": 0.087,
+      "degree_centrality": 0.0645,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "shinjuku",
       "name": "Shinjuku",
       "type": "location",
-      "degree_centrality": 0.2609,
-      "betweenness_centrality": 0.003,
-      "pagerank": 0.0761
+      "degree_centrality": 0.2581,
+      "betweenness_centrality": 0.0016,
+      "pagerank": 0.0663
     },
     {
       "id": "shinjuku-visitors",
       "name": "Shinjuku Convention & Visitors Bureau",
       "type": "community",
-      "degree_centrality": 0.0435,
+      "degree_centrality": 0.0323,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "sora-clips",
       "name": "Sora Clips",
       "type": "person",
-      "degree_centrality": 0.3043,
-      "betweenness_centrality": 0.0069,
-      "pagerank": 0.0241
+      "degree_centrality": 0.2258,
+      "betweenness_centrality": 0.0038,
+      "pagerank": 0.019
     },
     {
       "id": "tips",
       "name": "Tips",
       "type": "platform",
-      "degree_centrality": 0.0435,
+      "degree_centrality": 0.0323,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0207
+      "pagerank": 0.0163
     },
     {
       "id": "x",
       "name": "X",
       "type": "platform",
-      "degree_centrality": 0.4783,
+      "degree_centrality": 0.5161,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.2405
+      "pagerank": 0.2345
     },
     {
       "id": "youtube",
       "name": "YouTube",
       "type": "platform",
-      "degree_centrality": 0.2174,
-      "betweenness_centrality": 0.0046,
-      "pagerank": 0.0596
+      "degree_centrality": 0.1613,
+      "betweenness_centrality": 0.0025,
+      "pagerank": 0.047
     },
     {
       "id": "note",
       "name": "note",
       "type": "platform",
-      "degree_centrality": 0.1739,
+      "degree_centrality": 0.1613,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.068
+      "pagerank": 0.0606
+    },
+    {
+      "id": "nonchama-pro",
+      "name": "のんちゃま® プロナンパ師",
+      "type": "person",
+      "degree_centrality": 0.0645,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0163
+    },
+    {
+      "id": "genki-japan",
+      "name": "ゲンキ GENKI【ゲンキジャパン】",
+      "type": "person",
+      "degree_centrality": 0.0645,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0163
+    },
+    {
+      "id": "beat-pro",
+      "name": "プロのナンパ師",
+      "type": "person",
+      "degree_centrality": 0.129,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0163
+    },
+    {
+      "id": "yabuki-nampa",
+      "name": "ヤブキ＠ナンパ師",
+      "type": "person",
+      "degree_centrality": 0.1613,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0163
+    },
+    {
+      "id": "yuu-renai",
+      "name": "日本一のナンパ師ゆう",
+      "type": "person",
+      "degree_centrality": 0.0323,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0163
     }
   ]
 }

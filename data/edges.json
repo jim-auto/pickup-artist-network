@@ -13,6 +13,59 @@
     "review_notes": ""
   },
   {
+    "source": "beat-pro",
+    "target": "ikebukuro",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 池袋.",
+    "source_urls": [
+      "https://x.com/982thebeat"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate beat-pro__ikebukuro__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "beat-pro",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 渋谷.",
+    "source_urls": [
+      "https://x.com/982thebeat"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate beat-pro__shibuya__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "beat-pro",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 新宿.",
+    "source_urls": [
+      "https://x.com/982thebeat"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate beat-pro__shinjuku__activity. Original evidence: プロのナンパ師 (@982thebeat)\n渋谷、新宿、池袋に生息してマッスル💪やばい動画→@nampa_girl Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "genki-japan",
+    "target": "london",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning ロンドン.",
+    "source_urls": [
+      "https://x.com/genkiforfun",
+      "https://lin.ee/5CvMOtg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate genki-japan__london__activity. Original evidence: ゲンキ GENKI【ゲンキジャパン】 (@genkiforfun)\nロンドン在住🇬🇧∥世界に挑戦するナンパ師∥YouTube7年目∥世界中で累計10000人に声掛け∥誠実なナンパスキルと英語力で海外で奮闘中∥ナンパ=迷惑の概念を変える\nLocation: 👇最短30日で非モテからモテ男になれる攻略法はこちら👇 Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
     "source": "loop-circle",
     "target": "shinjuku",
     "type": "activity",
@@ -105,6 +158,62 @@
     "review_notes": "Fixture-generated hint text for exercising the review candidate workflow on fictional sample data. Generated snapshot differs from manual fields: pinned_post_text, pinned_post_url, profile_text, profile_url, summary."
   },
   {
+    "source": "yabuki-nampa",
+    "target": "ebisu",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 恵比寿.",
+    "source_urls": [
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate yabuki-nampa__ebisu__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "ikebukuro",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 池袋.",
+    "source_urls": [
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate yabuki-nampa__ikebukuro__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 渋谷.",
+    "source_urls": [
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate yabuki-nampa__shibuya__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "Approved review candidate from summary, profile_text mentioning 新宿.",
+    "source_urls": [
+      "https://x.com/yabuki335",
+      "https://www.life-enjoy.site/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": false,
+    "review_notes": "Approved from review candidate yabuki-nampa__shinjuku__activity. Original evidence: ヤブキ＠ナンパ師 (@yabuki335)\n都内でナンパ活動をしている、ヤブキです。 2017年からナンパ活動をはじめました。 30後半のおっさんです。 ナンパの活動場所は池袋、新宿、渋谷、 恵比寿が多いです。埼玉在住。\nExternal link: https://www.life-enjoy.site/ Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
     "source": "aoi-street",
     "target": "instagram",
     "type": "affiliation",
@@ -160,6 +269,19 @@
     "review_notes": ""
   },
   {
+    "source": "beat-pro",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/982thebeat"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "clip-series-01",
     "target": "loop-circle",
     "type": "affiliation",
@@ -199,6 +321,19 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "source": "genki-japan",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/genkiforfun"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "gotokyo-shibuya-guide",
@@ -310,6 +445,33 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "source": "nonchama-pro",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/nonchama0721",
+      "https://note.mu/nonchama_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "nonchama-pro",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/nonchama0721"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "play-shibuya",
@@ -448,6 +610,19 @@
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
   },
   {
+    "source": "yabuki-nampa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/yabuki335"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "youtube",
     "target": "x",
     "type": "affiliation",
@@ -459,6 +634,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
+  },
+  {
+    "source": "yuu-renai",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/yuuuu_renai"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "loop-circle",

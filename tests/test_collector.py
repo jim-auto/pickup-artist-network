@@ -111,6 +111,7 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(snapshot["summary"], "Official city updates & notices")
         self.assertIn("City Example (@city_example)", snapshot["profile_text"])
         self.assertIn("Location: Example City", snapshot["profile_text"])
+        self.assertIn("https://city.example.jp/", snapshot["links"])
         self.assertNotIn("Pinned post parsing is not automated yet.", snapshot["profile_text"])
 
     def test_extract_x_profile_snapshot_builds_identity_fallback_without_bare_url(self) -> None:
