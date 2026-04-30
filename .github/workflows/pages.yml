@@ -34,7 +34,7 @@ jobs:
         run: python -m unittest discover -s tests
 
       - name: Build site
-        run: python build_site.py
+        run: python build_site.py --skip-collector
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
