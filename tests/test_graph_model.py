@@ -220,13 +220,13 @@ class GraphModelTests(unittest.TestCase):
                 },
             },
             growth_targets_payload={
-                "headline": {"label": "Real person target", "current": 2, "target": 200},
+                "headline": {"label": "Real person target", "current": 2, "target": 1000},
                 "phases": [
                     {"label": "Phase 1", "real_person_target": 20},
                     {"label": "Phase 2", "real_person_target": 50},
                 ],
                 "types": [
-                    {"type": "person", "current": 2, "target_min": 200, "target_max": 200},
+                    {"type": "person", "current": 2, "target_min": 1000, "target_max": 1000},
                 ],
             },
         )
@@ -237,6 +237,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("https://example.com/alpha.png", html)
         self.assertIn("実データ成長目標", html)
         self.assertIn("表示モード", html)
+        self.assertIn("const visibleNodeIds = new Set();", html)
         self.assertIn("※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。", html)
         self.assertIn('name="graph-view-mode"', html)
         self.assertIn('value="account" checked', html)
@@ -248,7 +249,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("要確認", html)
         self.assertIn("review-candidate-decisions-data", html)
         self.assertIn("却下", html)
-        self.assertIn("2 / 20", html)
+        self.assertIn("2 / 1000", html)
 
 
 if __name__ == "__main__":

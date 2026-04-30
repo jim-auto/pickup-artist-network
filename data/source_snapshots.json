@@ -868,5 +868,684 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "mikky-motecoach",
+    "profile_url": "https://x.com/mikky_motecoach",
+    "observations": [
+      {
+        "target": "mky-match",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mky_match as the matching-app-focused side account.",
+        "source_urls": [
+          "https://x.com/mikky_motecoach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mky-match",
+    "profile_url": "https://x.com/mky_match",
+    "observations": [
+      {
+        "target": "mikky-motecoach",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @mikky_motecoach as the main account behind this side account.",
+        "source_urls": [
+          "https://x.com/mky_match"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kaiser-pua",
+    "profile_url": "https://x.com/kaiser_pua",
+    "observations": [
+      {
+        "target": "mendako-pua",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @mendako_pua as this account's mentor.",
+        "source_urls": [
+          "https://x.com/kaiser_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mamemame-nanpa",
+    "profile_url": "https://x.com/mamemame_nanpa",
+    "observations": [
+      {
+        "target": "motemaga-japan",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @motemagaJAPAN as the related side account.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "fuku-third",
+    "profile_url": "https://x.com/fuku_third",
+    "observations": [
+      {
+        "target": "fuku-second",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @fuku_second as the main account behind this side account.",
+        "source_urls": [
+          "https://x.com/fuku_third"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "hanzo-prim",
+    "profile_url": "https://x.com/hanzo_prim",
+    "observations": [
+      {
+        "target": "hanzo-prim-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @hanzo_prim_sub as the related side account.",
+        "source_urls": [
+          "https://x.com/hanzo_prim"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kazama-player",
+    "profile_url": "https://x.com/kazama_player",
+    "observations": [
+      {
+        "target": "kazama-0425",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kazama_0425 as the main account behind this side account.",
+        "source_urls": [
+          "https://x.com/kazama_player"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "chiba-gqn",
+    "profile_url": "https://x.com/chiba_gqn",
+    "observations": [
+      {
+        "target": "nanpawars",
+        "type": "reference",
+        "description": "Public X profile explicitly cites @nanpawars as the source for the account's street technique framing.",
+        "source_urls": [
+          "https://x.com/chiba_gqn"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "foy-jikokensan",
+    "profile_url": "https://x.com/foy_jikokensan",
+    "observations": [
+      {
+        "target": "foy-jibunmigaki",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @foy_jibunmigaki as the main street-nanpa activity account.",
+        "source_urls": [
+          "https://x.com/foy_jikokensan"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "otaku-pua",
+    "profile_url": "https://x.com/otaku_pua",
+    "observations": [
+      {
+        "target": "mendako-pua",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @mendako_pua as a mentor account.",
+        "source_urls": [
+          "https://x.com/otaku_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "qh0kum",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @qh0kum as a mentor account.",
+        "source_urls": [
+          "https://x.com/otaku_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "futaro-pua",
+    "profile_url": "https://x.com/futaro_pua",
+    "observations": [
+      {
+        "target": "wing-nampa",
+        "type": "influence",
+        "description": "Public X profile explicitly says this account completed wing's long-term pickup instruction course.",
+        "source_urls": [
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "riokun-pua",
+    "profile_url": "https://x.com/riokun_pua",
+    "observations": [
+      {
+        "target": "riokun-pua-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @riokun_pua_sub as the related side account.",
+        "source_urls": [
+          "https://x.com/riokun_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "srs-pua-main",
+    "profile_url": "https://x.com/srs_pua_",
+    "observations": [
+      {
+        "target": "srs-pua-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @srs_pua as the side account behind this profile.",
+        "source_urls": [
+          "https://x.com/srs_pua_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "4meakg",
+    "profile_url": "https://x.com/4meakg",
+    "observations": [
+      {
+        "target": "kimu-himitsu2",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kimu__himitsu2 as the related sub account after repeated freezes.",
+        "source_urls": [
+          "https://x.com/4meakg"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kurita-pua",
+    "profile_url": "https://x.com/kurita_pua",
+    "observations": [
+      {
+        "target": "sub-kurita",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @sub_kurita as the talkative side account behind this profile.",
+        "source_urls": [
+          "https://x.com/kurita_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "pg-yoasobi",
+    "profile_url": "https://x.com/pg_yoasobi",
+    "observations": [
+      {
+        "target": "nanpa-pegasasu",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @nanpa_pegasasu as the main account behind this side account.",
+        "source_urls": [
+          "https://x.com/pg_yoasobi"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "nampa-poke",
+    "profile_url": "https://x.com/nampa_poke",
+    "observations": [
+      {
+        "target": "pua-poke",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @pua_poke as the related side account.",
+        "source_urls": [
+          "https://x.com/nampa_poke"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "tyopa-pua",
+    "profile_url": "https://x.com/tyopa_pua",
+    "observations": [
+      {
+        "target": "tyopa-sub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @tyopa_sub as the side account for close mutuals.",
+        "source_urls": [
+          "https://x.com/tyopa_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "streetkyo",
+        "type": "reference",
+        "description": "Public X profile explicitly references @streetkyo as a related account in the profile summary.",
+        "source_urls": [
+          "https://x.com/tyopa_pua"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "hantenkinoyama",
+    "profile_url": "https://x.com/hantenkinoyama",
+    "observations": [
+      {
+        "target": "daigakusei-pua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly says this account is the freeze-era relocation account for @daigakusei_pua.",
+        "source_urls": [
+          "https://x.com/hantenkinoyama"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "namuskun",
+    "profile_url": "https://x.com/namuskun",
+    "observations": [
+      {
+        "target": "namusubkun",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @namusubkun as the side account.",
+        "source_urls": [
+          "https://x.com/namuskun"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "yutayuta-pua",
+    "profile_url": "https://x.com/yutayuta_pua",
+    "observations": [
+      {
+        "target": "wing-nampa",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account with the Atsu-Street Salon represented by wing.",
+        "source_urls": [
+          "https://x.com/yutayuta_pua"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "nanpa-zin",
+    "profile_url": "https://x.com/nanpa_zin",
+    "observations": [
+      {
+        "target": "pika-pua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly says this account joined Pika's appearance-improvement course.",
+        "source_urls": [
+          "https://x.com/nanpa_zin"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "nampa-urajirou",
+    "profile_url": "https://x.com/nampa_urajirou",
+    "observations": [
+      {
+        "target": "real-nampa",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this as the male-only side account for @real_nampa.",
+        "source_urls": [
+          "https://x.com/nampa_urajirou"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "machapua3",
+    "profile_url": "https://x.com/machapua3",
+    "observations": [
+      {
+        "target": "xcandee",
+        "type": "affiliation",
+        "description": "Public X profile explicitly labels @_xCandee as the main account behind this side account.",
+        "source_urls": [
+          "https://x.com/machapua3"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kurosakikun",
+    "profile_url": "https://x.com/kurosakikun___",
+    "observations": [
+      {
+        "target": "k-932654",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @K_932654 as the side account behind this profile.",
+        "source_urls": [
+          "https://x.com/kurosakikun___"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "hameyuuuu",
+    "profile_url": "https://x.com/hameyuuuu",
+    "observations": [
+      {
+        "target": "yato-mote",
+        "type": "affiliation",
+        "description": "Public X profile explicitly lists Yato Consulting as a collaboration partner for this matching-app photography account.",
+        "source_urls": [
+          "https://x.com/hameyuuuu"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "shinkawa-pua",
+    "profile_url": "https://x.com/shinkawa_pua",
+    "observations": [
+      {
+        "target": "korilla-pua",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account as part of the Korilla M-shi course cluster.",
+        "source_urls": [
+          "https://x.com/shinkawa_pua"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "mbh-hal",
+    "profile_url": "https://x.com/mbh_hal",
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account with the MBH coaching cluster led by @gureran_m.",
+        "source_urls": [
+          "https://x.com/mbh_hal"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kei-pua",
+    "profile_url": "https://x.com/kei__pua",
+    "observations": [
+      {
+        "target": "eb6lx",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies @eb6lx as the main account behind this player-side profile.",
+        "source_urls": [
+          "https://x.com/kei__pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "gintoki-street",
+    "profile_url": "https://x.com/gintoki_street",
+    "observations": [
+      {
+        "target": "minigola-street",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @minigola_street as the related side account.",
+        "source_urls": [
+          "https://x.com/gintoki_street"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kimu-himitsu2",
+    "profile_url": "https://x.com/kimu__himitsu2",
+    "observations": [
+      {
+        "target": "ziyuunotsubasa1",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies @ziyuunotsubasa1 as the founder account behind this lineage.",
+        "source_urls": [
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "like-himitsu",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @like_himitsu as the related sub account.",
+        "source_urls": [
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "roco-neko",
+    "profile_url": "https://x.com/roco_neko_",
+    "observations": [
+      {
+        "target": "roco-neko-ura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @roco_neko_ura as the related side account.",
+        "source_urls": [
+          "https://x.com/roco_neko_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "chamuranaoto",
+    "profile_url": "https://x.com/chamuranaoto",
+    "observations": [
+      {
+        "target": "pua-co",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @pua_co as the mentor account.",
+        "source_urls": [
+          "https://x.com/chamuranaoto"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "tinder109",
+    "profile_url": "https://x.com/tinder109",
+    "observations": [
+      {
+        "target": "hachi-tinder02",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @hachi_tinder02 as the side account.",
+        "source_urls": [
+          "https://x.com/tinder109"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "maruoooon-pua",
+    "profile_url": "https://x.com/maruoooon_pua",
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @gureran_m as the mentor account behind this MBH profile.",
+        "source_urls": [
+          "https://x.com/maruoooon_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "knk-stnn",
+    "profile_url": "https://x.com/knk_stnn",
+    "observations": [
+      {
+        "target": "wing-nampa",
+        "type": "influence",
+        "description": "Public X profile explicitly says this account is in wing's long-term pickup instruction course.",
+        "source_urls": [
+          "https://x.com/knk_stnn"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kazu-pua",
+    "profile_url": "https://x.com/kazu_pua",
+    "observations": [
+      {
+        "target": "wing-nampa",
+        "type": "influence",
+        "description": "Public X profile explicitly identifies this account with wing's long-term course and Atsu-Street Salon.",
+        "source_urls": [
+          "https://x.com/kazu_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "miraitinder6969",
+    "profile_url": "https://x.com/miraitinder6969",
+    "observations": [
+      {
+        "target": "miraitinder4545",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @miraitinder4545 as the related side account.",
+        "source_urls": [
+          "https://x.com/miraitinder6969"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
   }
 ]

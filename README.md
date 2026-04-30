@@ -33,12 +33,12 @@
 
 ## 現在の数値目標
 
-次の明確な到達目標は **real person 200人** です。  
-現在は **105人** まで到達しました。公開ネットワークとして十分な広がりを出すには 30 人では小さいので、最終目標は 200 人に置きます。運用上は 20 / 50 / 100 / 200 の段階で増やします。
+次の明確な到達目標は **real person 500人**、最終目標は **1000人** です。  
+現在は **375人** まで到達しました。界隈全体を見渡せる地図に近づけるには 200 人ではまだ足りないため、最終目標を 1000 人へ引き上げます。運用上は 20 / 50 / 100 / 200 / 500 / 1000 の段階で増やします。
 
 | type | target |
 | --- | --- |
-| person | 200 |
+| person | 1000 |
 | community | 8-12 |
 | content | 12-18 |
 | location | 6-10 |
@@ -50,6 +50,8 @@
 2. Phase 2: real person 50人
 3. Phase 3: real person 100人
 4. Phase 4: real person 200人
+5. Phase 5: real person 500人
+6. Phase 6: real person 1000人
 
 ## 使い方
 
@@ -73,6 +75,7 @@ pip install -r requirements.txt
 - `data/x_profile_sources.json`
   - X profile collector が巡回する X プロフィール一覧
   - `pinned_post_url` を optional で持てる。X profile の logged-out HTML だけでは pinned status を特定できない場合があるため、必要なら status URL を明示して generated pinned hint を付ける
+  - 認証ありで following も見たい場合は `collect_following: true` と `following_limit` を optional で持てる
 - `data/source_snapshots.generated.json`
   - collector が public page から生成する snapshot 出力
 - `data/source_snapshots.generated.hints.json`
@@ -85,12 +88,22 @@ pip install -r requirements.txt
 python collector.py
 ```
 
+認証付き following を使う場合は、先にローカルで X にログインして auth state を保存します。
+
+```bash
+python collector.py --login-x
+python collector.py --login-x-auto --dotenv C:\path\to\.env
+python collector.py --auth-state data/.x_auth_state.json
+```
+
 collector は canonical graph を直接更新せず、`data/source_snapshots.generated.json` だけを更新します。  
 また、public page 側の auto-generated link は **X only** に絞り、same-platform link を落としたうえで高信号リンクだけを残します。
 
 同時に、`data/x_profile_sources.json` に定義した X profile を巡回し、**bio 相当の summary / profile_text / X link** を generated snapshot に追加します。logged-out HTML に埋め込まれた user data が取れる場合はそれを優先し、薄いページでも bare URL ではなく handle ベースの summary に倒します。
 
 `data/x_profile_sources.json` の entry に `pinned_post_url` を足した場合は、その status page も fetch して **`pinned_post_url` / `pinned_post_text` の generated hint** を埋めます。これは canonical graph ではなく generated snapshot にだけ入り、manual snapshot が引き続き優先されます。
+
+`collect_following: true` を付けた entry は、保存済み auth state がある場合だけ **authenticated X following** を見に行きます。logged-out では following ページが login に飛ぶため、ここだけは public-only ではありません。取得できた tracked account は `reference` edge として `needs_review: true` で generated snapshot に入ります。
 
 ### 4. グラフを生成 / 整形する
 
@@ -124,7 +137,7 @@ python scraper.py --list-review-candidates --review-json
 python scraper.py --growth-progress
 ```
 
-`candidate-id` は `data/review_candidates.json` または HTML の review candidate queue を見て使います。承認すると `data/source_snapshots.json` に observation を追記し、canonical graph / review candidate / `docs/index.html` まで再生成します。dismiss すると `data/review_candidate_decisions.json` に記録され、同じ candidate は再生成時に queue から除外されます。`--list-review-candidates` と `--list-candidate-decisions` を使うと、同じ triage 情報を terminal からも確認できます。`--growth-progress` は real/fictitious scope をもとに 200人目標への現在地を表示します。HTML には active queue に加えて **approved / dismissed の candidate decision log** も表示されます。
+`candidate-id` は `data/review_candidates.json` または HTML の review candidate queue を見て使います。承認すると `data/source_snapshots.json` に observation を追記し、canonical graph / review candidate / `docs/index.html` まで再生成します。dismiss すると `data/review_candidate_decisions.json` に記録され、同じ candidate は再生成時に queue から除外されます。`--list-review-candidates` と `--list-candidate-decisions` を使うと、同じ triage 情報を terminal からも確認できます。`--growth-progress` は real/fictitious scope をもとに 1000人目標への現在地を表示します。HTML には active queue に加えて **approved / dismissed の candidate decision log** も表示されます。
 
 出力:
 
@@ -180,7 +193,7 @@ python build_site.py
   - まずは本人が公開 X profile で **自分で「ナンパ師」「プロナンパ師」「ストリートナンパのプロ」などと名乗っている** アカウントだけを少数 seed に追加する
   - 第三者の噂・暴露・まとめではなく、本人プロフィールや本人導線の public page を優先する
   - 公開プロフィール文で確認できる範囲だけを取り込み、推測的な所属・対立・影響関係はすぐに確定しない
-  - 現在は公開 X profile ベースで **105 アカウント** まで追加済み
+  - 現在は公開 X profile ベースで **375 アカウント** まで追加済み
 
 つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、その次に **本人が自称している public X profile** や、そこから明示的にリンクされた関連アカウントを少数ずつ追加し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加します。
 

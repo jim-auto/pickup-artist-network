@@ -1,8 +1,23 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
-from collector import extract_snapshot_from_html, extract_x_profile_snapshot
+import requests
+
+from collector import (
+    build_following_observations,
+    collect_x_profile_snapshots,
+    extract_snapshot_from_html,
+    extract_x_following_handles_from_hrefs,
+    extract_x_profile_snapshot,
+    preserve_missing_generated_snapshots,
+    load_playwright_cookies,
+    load_dotenv_values,
+    load_x_login_credentials,
+)
 
 
 class CollectorTests(unittest.TestCase):
@@ -178,6 +193,116 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(snapshot["pinned_post_url"], "")
         self.assertEqual(snapshot["pinned_post_text"], "")
         self.assertIn("configure pinned_post_url", snapshot["review_notes"])
+
+    def test_extract_x_following_handles_from_hrefs_filters_reserved_paths(self) -> None:
+        handles = extract_x_following_handles_from_hrefs(
+            [
+                "/home",
+                "/city_example",
+                "/alpha_user",
+                "/alpha_user",
+                "/settings/profile",
+                "https://x.com/beta_user",
+                "/i/flow/login",
+                "/search",
+            ],
+            source_handle="city_example",
+        )
+
+        self.assertEqual(handles, ["alpha_user", "beta_user"])
+
+    def test_build_following_observations_maps_only_known_handles(self) -> None:
+        observations = build_following_observations(
+            "source-account",
+            ["alpha_user", "missing_user", "source_user"],
+            handle_to_account_id={
+                "alpha_user": "alpha-account",
+                "source_user": "source-account",
+            },
+            source_url="https://x.com/source_user",
+            following_url="https://x.com/source_user/following",
+        )
+
+        self.assertEqual(len(observations), 1)
+        self.assertEqual(observations[0]["target"], "alpha-account")
+        self.assertEqual(observations[0]["type"], "reference")
+        self.assertTrue(observations[0]["needs_review"])
+
+    def test_load_dotenv_values_parses_simple_key_value_pairs(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            dotenv_path = Path(temp_dir) / ".env"
+            dotenv_path.write_text(
+                "TWITTER_USERNAME=test_user\n"
+                "TWITTER_PASSWORD='secret value'\n"
+                "# comment\n"
+                "EMPTY=\n",
+                encoding="utf-8",
+            )
+
+            values = load_dotenv_values(dotenv_path)
+
+        self.assertEqual(values["TWITTER_USERNAME"], "test_user")
+        self.assertEqual(values["TWITTER_PASSWORD"], "secret value")
+        self.assertEqual(values["EMPTY"], "")
+
+    def test_load_x_login_credentials_prefers_dotenv_when_env_missing(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            dotenv_path = Path(temp_dir) / ".env"
+            dotenv_path.write_text(
+                "TWITTER_USERNAME=test_user\nTWITTER_PASSWORD=test_pass\n",
+                encoding="utf-8",
+            )
+
+            username, password = load_x_login_credentials(dotenv_path)
+
+        self.assertEqual(username, "test_user")
+        self.assertEqual(password, "test_pass")
+
+    def test_load_playwright_cookies_converts_selenium_cookie_shape(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            cookie_path = Path(temp_dir) / "cookies.json"
+            cookie_path.write_text(
+                '[{"name":"auth_token","value":"abc","domain":".x.com","path":"/","httpOnly":true,"secure":true,"sameSite":"None","expiry":1893456000}]',
+                encoding="utf-8",
+            )
+
+            cookies = load_playwright_cookies(cookie_path)
+
+        self.assertEqual(len(cookies), 1)
+        self.assertEqual(cookies[0]["name"], "auth_token")
+        self.assertEqual(cookies[0]["domain"], ".x.com")
+        self.assertEqual(cookies[0]["sameSite"], "None")
+        self.assertEqual(cookies[0]["expires"], 1893456000.0)
+
+    def test_preserve_missing_generated_snapshots_keeps_configured_accounts(self) -> None:
+        existing_snapshots = [
+            {"account_id": "alpha", "summary": "old alpha"},
+            {"account_id": "beta", "summary": "old beta"},
+            {"account_id": "gamma", "summary": "old gamma"},
+        ]
+        fresh_snapshots = [
+            {"account_id": "alpha", "summary": "new alpha"},
+        ]
+
+        preserved = preserve_missing_generated_snapshots(
+            existing_snapshots,
+            fresh_snapshots,
+            configured_account_ids={"alpha", "beta"},
+        )
+
+        self.assertEqual(preserved, [{"account_id": "beta", "summary": "old beta"}])
+
+    def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
+        with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
+            snapshots = collect_x_profile_snapshots(
+                [{"account_id": "alpha", "url": "https://x.com/alpha", "label": "test profile"}],
+                continue_on_error=True,
+            )
+
+        self.assertEqual(len(snapshots), 1)
+        self.assertEqual(snapshots[0]["account_id"], "alpha")
+        self.assertEqual(snapshots[0]["links"], ["https://x.com/alpha"])
+        self.assertIn("Profile fetch failed during this run", snapshots[0]["review_notes"])
 
 
 if __name__ == "__main__":

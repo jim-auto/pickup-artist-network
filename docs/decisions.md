@@ -6,8 +6,8 @@
 
 ## Current growth target
 
-次の定量目標は **real person 200人**。  
-現在は **105人**。補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 の段階で広げる。
+次の定量目標は **real person 500人**、最終目標は **1000人**。  
+現在は **375人**。補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 / 500 / 1000 の段階で広げる。
 
 ## Why
 
@@ -58,6 +58,35 @@
 - その次の拡張で関連 side account を 3 件追加し、公開 graph を fictional なしの real-only 構成へ切り替えた
 - さらに self-described / linked side account を 6 件追加し、matching-apps / side-account relation を明示できる範囲で増やして real person 19 / 20 まで進めた
 - `sokusuu-ranking` seed とそこから辿れる side-account mention を一括スクリーニングし、公開 graph を real person 105 / 200 まで拡張した
+- authenticated following で見つかった未登録 handle を public bio で再スクリーニングし、16 アカウントを追加して real person 121 / 200 まで拡張した
+- 「界隈を見渡せる地図」を目指すため、成長目標を 200 から 1000 へ引き上げ、直近マイルストーンを 500 に置いた
+- following をさらに広げて 23 アカウントを追加し、fallback snapshot 保護も入れて real person 144 / 1000 まで拡張した
+- さらに 14 アカウントを追加し、`otaku-pua -> mendako-pua` の mentor 系 relation を明示して real person 174 / 1000 まで拡張した
+- さらに 14 アカウントを追加し、`futaro-pua -> wing-nampa` や `riokun-pua -> riokun-pua-sub` などの明示 relation も足して real person 188 / 1000 まで拡張した
+- さらに 4 アカウントを追加し、`kurita-pua -> sub-kurita` と `pg-yoasobi -> nanpa-pegasasu` を明示して real person 192 / 1000 まで拡張した
+- さらに 15 アカウントを追加し、`nampa-poke -> pua-poke`、`tyopa-pua -> tyopa-sub`、`hantenkinoyama -> daigakusei-pua`、`namuskun -> namusubkun` などの明示 relation を足して real person 207 / 1000 まで拡張した
+- さらに 5 アカウントを追加し、`yutayuta-pua -> wing-nampa` と `nanpa-zin -> pika-pua` を明示して real person 212 / 1000 まで拡張した
+- さらに 7 アカウントを追加し、self-described public profile を中心に real person 219 / 1000 まで拡張した
+- さらに 9 アカウントを追加し、`nampa-urajirou -> real-nampa` と `machapua3 -> xcandee` の side-account relation も入れて real person 228 / 1000 まで拡張した
+- さらに 6 アカウントを追加し、self-described public profile を中心に real person 234 / 1000 まで拡張した
+- さらに 6 アカウントを追加し、`kurosakikun -> k-932654` と `hameyuuuu -> yato-mote` の relation も足して real person 240 / 1000 まで拡張した
+- さらに 5 アカウントを追加し、self-described public profile を中心に real person 245 / 1000 まで拡張した
+- さらに 5 アカウントを追加し、`shinkawa-pua -> korilla-pua` と `mbh-hal -> gureran-m` の relation も足して real person 250 / 1000 まで拡張した
+- さらに 6 アカウントを追加し、`otaku-pua -> qh0kum`、`kei-pua -> eb6lx`、`gintoki-street -> minigola-street`、`kimu-himitsu2 -> ziyuunotsubasa1 / like-himitsu` の relation も足して real person 256 / 1000 まで拡張した
+- さらに 7 アカウントを追加し、`tyopa-pua -> streetkyo` の explicit reference も足して real person 263 / 1000 まで拡張した
+- さらに 9 アカウントを追加し、`fake-pua`、`tenma-pua`、`slice-pua`、`instapua`、`kanbee-pua`、`atari100pua`、`osugi-pua`、`mayuge-mbh`、`kamekame-pua` を次の following seed 候補として real person 272 / 1000 まで拡張した
+- さらに 17 アカウントを追加し、`street-win-pua`、`naepua`、`asai-pua`、`chami-pua`、`yuta-pua`、`oyajii-nanpa`、`taichi-pua`、`yuki100-pua`、`tensai-nanpa4`、`hpns-pua`、`tohokupua`、`ak1-pua`、`ao-pua`、`ike-pua`、`gupy-pua`、`bonnoupua2`、`idiot-pua` を self-described public profile として real person 289 / 1000 まで拡張した
+- さらに 10 アカウントを追加し、`roco-neko -> roco-neko-ura` の side-account relation も足して real person 299 / 1000 まで拡張した
+- さらに 8 アカウントを追加し、`chiroru-pua`、`yokono-pua`、`scream-pua`、`karon-pua`、`asumi-pua`、`taku-pua`、`nampa1998`、`puriketsu-nnp` を self-described public profile として real person 307 / 1000 まで拡張した
+- さらに 9 アカウントを追加し、`ururunpua`、`motebody-pua`、`girl-pua`、`saku-pua`、`doronpa-pua`、`riku-pua0801`、`ale-puapua`、`rojou-ski`、`jaws-girlhunter` を self-described public profile として real person 316 / 1000 まで拡張した
+- さらに 9 アカウントを追加し、`chamuranaoto -> pua-co` の mentor relation も足して real person 325 / 1000 まで拡張した
+- さらに 9 アカウントを追加し、`so-pua`、`one-sith-pua`、`shu-pua`、`jiro-suto`、`mechinanpa`、`chiroru-pua-main`、`liberty-pai`、`to-suto-tore`、`zushi-tokyo` を self-described public profile として real person 334 / 1000 まで拡張した
+- さらに 5 アカウントを追加し、`utopua2`、`daruma-nnp`、`hikosan-nn`、`seiyoku-genkai`、`nampa-mimato` を self-described public profile として real person 339 / 1000 まで拡張した
+- さらに 7 アカウントを追加し、`tinder109 -> hachi-tinder02` の side-account relation も足して real person 346 / 1000 まで拡張した
+- さらに 8 アカウントを追加し、`salmon-nnp`、`juju-pua`、`suto-taro`、`neru-pua`、`nanpashi-miffy`、`seizitunanpa`、`paaman-pua`、`resunnme` を self-described public profile として real person 354 / 1000 まで拡張した
+- さらに 6 アカウントを追加し、`maruoooon-pua -> gureran-m` と `knk-stnn -> wing-nampa` の relation も足して real person 360 / 1000 まで拡張した
+- さらに 7 アカウントを追加し、`kazu-pua -> wing-nampa` と `miraitinder6969 -> miraitinder4545` の relation も足して real person 367 / 1000 まで拡張した
+- さらに 8 アカウントを追加し、`nekominto-pua`、`carbii-pua`、`ryuuk-pua`、`west-pua`、`tomo-pua11`、`senga-pua`、`kill-pua`、`sandarupua` を self-described public profile として real person 375 / 1000 まで拡張した
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

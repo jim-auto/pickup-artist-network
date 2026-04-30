@@ -261,7 +261,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         )
 
         self.assertEqual(payload["headline"]["current"], 1)
-        self.assertEqual(payload["headline"]["target"], 200)
+        self.assertEqual(payload["headline"]["target"], 1000)
         type_rows = {row["type"]: row for row in payload["types"]}
         self.assertEqual(type_rows["person"]["current"], 1)
         self.assertEqual(type_rows["community"]["current"], 1)
@@ -270,18 +270,18 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
     def test_format_growth_targets_output_lists_headline_and_ranges(self) -> None:
         output = format_growth_targets_output(
             {
-                "headline": {"label": "Real person target", "current": 3, "target": 200},
+                "headline": {"label": "Real person target", "current": 3, "target": 1000},
                 "phases": [{"label": "Phase 1", "real_person_target": 20}],
                 "types": [
-                    {"type": "person", "current": 3, "target_min": 200, "target_max": 200},
+                    {"type": "person", "current": 3, "target_min": 1000, "target_max": 1000},
                     {"type": "community", "current": 2, "target_min": 8, "target_max": 12},
                 ],
             }
         )
 
-        self.assertIn("[OK] Real person target: 3 / 200", output)
+        self.assertIn("[OK] Real person target: 3 / 1000", output)
         self.assertIn("- Phase 1: real person target 20", output)
-        self.assertIn("- person: 3 / 200", output)
+        self.assertIn("- person: 3 / 1000", output)
         self.assertIn("- community: 2 / 8-12", output)
 
     def test_format_query_output_lists_nodes_and_edges(self) -> None:

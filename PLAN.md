@@ -37,7 +37,7 @@
 29. 完了: official guide content source を追加し、content -> location の real `reference` relation も canonical graph に流せるようにする
 30. 完了: `seed_entities.txt` に real / fictional scope を持たせ、HTML に real growth target panel を追加する
 31. 完了: terminal / build log からも real growth target を確認できる CLI と build 出力を足す
-32. 次段階: real person 200人目標に向けて safe source cluster を増やし、person node を段階的に投入する
+32. 次段階: real person 500人マイルストーン / 最終1000人目標に向けて safe source cluster を増やし、person node を段階的に投入する
 
 ## Constraints
 

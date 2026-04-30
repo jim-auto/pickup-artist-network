@@ -1573,7 +1573,12 @@ def render_html(
         return matchedIds.has(edge.source) || matchedIds.has(edge.target);
       });
 
-      const visibleNodeIds = new Set(term ? matchedIds : eligibleIds);
+      const visibleNodeIds = new Set();
+      if (term) {
+        matchedIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+      } else if (graphViewMode === "full") {
+        eligibleIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+      }
       visibleEdges.forEach((edge) => {
         visibleNodeIds.add(edge.source);
         visibleNodeIds.add(edge.target);
