@@ -124,6 +124,32 @@
       font-size: 24px;
       margin-top: 6px;
     }
+    .foldout {
+      overflow: hidden;
+    }
+    .foldout summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      list-style: none;
+    }
+    .foldout summary::-webkit-details-marker {
+      display: none;
+    }
+    .foldout-summary-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .foldout-content {
+      margin-top: 16px;
+    }
+    .foldout .panel {
+      background: #f9fbff;
+    }
     #network {
       height: 620px;
       border: 1px solid var(--border);
@@ -278,14 +304,14 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 07:53 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 08:13 UTC。</p>
       </div>
     </div>
   </header>
   <main>
     <section class="panel">
       <h2>実データ成長目標</h2>
-      <p class="muted">まずはレビュー可能な粒度を保ちながら、実在人物ノード 20 件を最初の目標にします。</p>
+      <p class="muted">公開プロフィールと公式ページを手動優先で整理しながら、実在人物の関係グラフを段階的に広げています。</p>
       <section class="stats">
         <div class="stat"><span class="muted">実在人物</span><strong>500 / 1000</strong></div>
         <div class="stat"><span class="muted">第1段階</span><strong>20</strong></div><div class="stat"><span class="muted">第2段階</span><strong>50</strong></div><div class="stat"><span class="muted">第3段階</span><strong>100</strong></div><div class="stat"><span class="muted">第4段階</span><strong>200</strong></div><div class="stat"><span class="muted">第5段階</span><strong>500</strong></div><div class="stat"><span class="muted">第6段階</span><strong>1000</strong></div>
@@ -345,15 +371,25 @@
       </div>
     </section>
 
-    <section class="panel stats">
-      <div class="stat"><span class="muted">表示ノード数</span><strong id="visible-nodes">0</strong></div>
-      <div class="stat"><span class="muted">表示エッジ数</span><strong id="visible-edges">0</strong></div>
-      <div class="stat"><span class="muted">要確認ノード数</span><strong id="review-nodes">0</strong></div>
-      <div class="stat"><span class="muted">要確認エッジ数</span><strong id="review-edges">0</strong></div>
-      <div class="stat"><span class="muted">レビュー候補数</span><strong id="review-candidates">0</strong></div>
-      <div class="stat"><span class="muted">総ノード数</span><strong id="total-nodes">0</strong></div>
-      <div class="stat"><span class="muted">総エッジ数</span><strong id="total-edges">0</strong></div>
-    </section>
+    <details class="panel foldout">
+      <summary>
+        <span class="foldout-summary-text">
+          <span>内部メトリクス</span>
+          <span class="muted">通常は閉じたまま使えるようにしました。</span>
+        </span>
+      </summary>
+      <div class="foldout-content">
+        <section class="stats">
+          <div class="stat"><span class="muted">表示ノード数</span><strong id="visible-nodes">0</strong></div>
+          <div class="stat"><span class="muted">表示エッジ数</span><strong id="visible-edges">0</strong></div>
+          <div class="stat"><span class="muted">要確認ノード数</span><strong id="review-nodes">0</strong></div>
+          <div class="stat"><span class="muted">要確認エッジ数</span><strong id="review-edges">0</strong></div>
+          <div class="stat"><span class="muted">レビュー候補数</span><strong id="review-candidates">0</strong></div>
+          <div class="stat"><span class="muted">総ノード数</span><strong id="total-nodes">0</strong></div>
+          <div class="stat"><span class="muted">総エッジ数</span><strong id="total-edges">0</strong></div>
+        </section>
+      </div>
+    </details>
 
     <section class="graph-layout">
       <section class="panel network-panel">
@@ -369,99 +405,109 @@
       </aside>
     </section>
 
-    <section class="two-column">
-      <section class="panel">
-        <h2>要確認ノード一覧</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>詳細</th>
-                <th>名前</th>
-                <th>種別</th>
-                <th>確認メモ</th>
-                <th>出典</th>
-              </tr>
-            </thead>
-            <tbody id="review-nodes-table"></tbody>
-          </table>
-        </div>
-        <div class="table-footer">
-          <span id="review-nodes-table-status" class="table-status muted"></span>
-          <button type="button" id="review-nodes-table-more" class="inspect-button" hidden>さらに表示</button>
-        </div>
-      </section>
+    <details class="panel foldout">
+      <summary>
+        <span class="foldout-summary-text">
+          <span>レビュー / 要確認データ</span>
+          <span class="muted">普段は閉じ、必要なときだけ開けるようにしました。</span>
+        </span>
+      </summary>
+      <div class="foldout-content">
+        <section class="two-column">
+          <section class="panel">
+            <h2>要確認ノード一覧</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>詳細</th>
+                    <th>名前</th>
+                    <th>種別</th>
+                    <th>確認メモ</th>
+                    <th>出典</th>
+                  </tr>
+                </thead>
+                <tbody id="review-nodes-table"></tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <span id="review-nodes-table-status" class="table-status muted"></span>
+              <button type="button" id="review-nodes-table-more" class="inspect-button" hidden>さらに表示</button>
+            </div>
+          </section>
 
-      <section class="panel">
-        <h2>要確認エッジ一覧</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>発信元</th>
-                <th>関係</th>
-                <th>対象</th>
-                <th>確認メモ</th>
-                <th>出典</th>
-              </tr>
-            </thead>
-            <tbody id="review-edges-table"></tbody>
-          </table>
-        </div>
-        <div class="table-footer">
-          <span id="review-edges-table-status" class="table-status muted"></span>
-          <button type="button" id="review-edges-table-more" class="inspect-button" hidden>さらに表示</button>
-        </div>
-      </section>
-    </section>
+          <section class="panel">
+            <h2>要確認エッジ一覧</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>発信元</th>
+                    <th>関係</th>
+                    <th>対象</th>
+                    <th>確認メモ</th>
+                    <th>出典</th>
+                  </tr>
+                </thead>
+                <tbody id="review-edges-table"></tbody>
+              </table>
+            </div>
+            <div class="table-footer">
+              <span id="review-edges-table-status" class="table-status muted"></span>
+              <button type="button" id="review-edges-table-more" class="inspect-button" hidden>さらに表示</button>
+            </div>
+          </section>
+        </section>
 
-    <section class="panel">
-      <h2>レビュー候補一覧</h2>
-      <p class="muted">プロフィール / 概要 / 固定ポストのヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>発信元</th>
-              <th>提案関係</th>
-              <th>対象</th>
-              <th>根拠テキスト</th>
-              <th>確認メモ</th>
-              <th>出典</th>
-            </tr>
-          </thead>
-          <tbody id="review-candidates-table"></tbody>
-        </table>
-      </div>
-      <div class="table-footer">
-        <span id="review-candidates-table-status" class="table-status muted"></span>
-        <button type="button" id="review-candidates-table-more" class="inspect-button" hidden>さらに表示</button>
-      </div>
-    </section>
+        <section class="panel">
+          <h2>レビュー候補一覧</h2>
+          <p class="muted">プロフィール / 概要 / 固定ポストのヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>発信元</th>
+                  <th>提案関係</th>
+                  <th>対象</th>
+                  <th>根拠テキスト</th>
+                  <th>確認メモ</th>
+                  <th>出典</th>
+                </tr>
+              </thead>
+              <tbody id="review-candidates-table"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="review-candidates-table-status" class="table-status muted"></span>
+            <button type="button" id="review-candidates-table-more" class="inspect-button" hidden>さらに表示</button>
+          </div>
+        </section>
 
-    <section class="panel">
-      <h2>レビュー判断ログ</h2>
-      <p class="muted">承認 / 却下 の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>発信元</th>
-              <th>状態</th>
-              <th>対象</th>
-              <th>根拠テキスト</th>
-              <th>確認メモ</th>
-              <th>出典</th>
-            </tr>
-          </thead>
-          <tbody id="review-candidate-decisions-table"></tbody>
-        </table>
+        <section class="panel">
+          <h2>レビュー判断ログ</h2>
+          <p class="muted">承認 / 却下 の判断は <code>data/review_candidate_decisions.json</code> に保持されます。</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>発信元</th>
+                  <th>状態</th>
+                  <th>対象</th>
+                  <th>根拠テキスト</th>
+                  <th>確認メモ</th>
+                  <th>出典</th>
+                </tr>
+              </thead>
+              <tbody id="review-candidate-decisions-table"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="review-candidate-decisions-table-status" class="table-status muted"></span>
+            <button type="button" id="review-candidate-decisions-table-more" class="inspect-button" hidden>さらに表示</button>
+          </div>
+        </section>
       </div>
-      <div class="table-footer">
-        <span id="review-candidate-decisions-table-status" class="table-status muted"></span>
-        <button type="button" id="review-candidate-decisions-table-more" class="inspect-button" hidden>さらに表示</button>
-      </div>
-    </section>
+    </details>
 
     <section class="two-column">
       <section class="panel">
