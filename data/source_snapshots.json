@@ -1598,5 +1598,299 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "tokyo",
+    "profile_url": "https://www.metro.tokyo.lg.jp/",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Tokyo is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "https://www.metro.tokyo.lg.jp/"
+        ],
+        "confidence": 0.98,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "nagoya",
+    "profile_url": "https://www.city.nagoya.jp/",
+    "observations": [
+      {
+        "target": "chubu",
+        "type": "affiliation",
+        "description": "Nagoya is grouped under the Chubu region cluster for geographic browsing.",
+        "source_urls": [
+          "https://www.city.nagoya.jp/"
+        ],
+        "confidence": 0.98,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "shibuya",
+    "profile_url": "https://www.city.shibuya.tokyo.jp/",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Shibuya is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "https://www.city.shibuya.tokyo.jp/"
+        ],
+        "confidence": 0.98,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "shinjuku",
+    "profile_url": "https://www.city.shinjuku.lg.jp/",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Shinjuku is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "https://www.city.shinjuku.lg.jp/"
+        ],
+        "confidence": 0.98,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "ikebukuro",
+    "profile_url": "manual://seed",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Ikebukuro is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "manual://seed"
+        ],
+        "confidence": 0.9,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "ebisu",
+    "profile_url": "manual://seed",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Ebisu is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "manual://seed"
+        ],
+        "confidence": 0.9,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "machida",
+    "profile_url": "manual://seed",
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "affiliation",
+        "description": "Machida is grouped under the Kanto region cluster for geographic browsing.",
+        "source_urls": [
+          "manual://seed"
+        ],
+        "confidence": 0.9,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "slinky-pua",
+    "profile_url": "https://x.com/slinky_pua",
+    "observations": [
+      {
+        "target": "bantan-pua",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @bantan_pua as one of this account's mentors.",
+        "source_urls": [
+          "https://x.com/slinky_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kazunanpa",
+    "profile_url": "https://x.com/kazunanpa",
+    "observations": [
+      {
+        "target": "yutty-pua",
+        "type": "influence",
+        "description": "Public X profile explicitly labels @yutty_pua as this account's teacher.",
+        "source_urls": [
+          "https://x.com/kazunanpa"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "kazunanpa2",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kazunanpa2 as the report side account.",
+        "source_urls": [
+          "https://x.com/kazunanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "matchingmomonga",
+    "profile_url": "https://x.com/matchingmomonga",
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public X profile explicitly says this account's main field is matching apps.",
+        "source_urls": [
+          "https://x.com/matchingmomonga"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "osaka",
+    "profile_url": "https://www.city.osaka.lg.jp/",
+    "observations": [
+      {
+        "target": "kansai",
+        "type": "affiliation",
+        "description": "Osaka is grouped under the Kansai region cluster for geographic browsing.",
+        "source_urls": [
+          "https://www.city.osaka.lg.jp/"
+        ],
+        "confidence": 0.98,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "tantan-pua",
+    "profile_url": "https://x.com/tantan_pua_",
+    "observations": [
+      {
+        "target": "tantan-ura",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @tantan_ura__ as the side account.",
+        "source_urls": [
+          "https://x.com/tantan_pua_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "kayakkupua",
+    "profile_url": "https://x.com/kayakkupua",
+    "observations": [
+      {
+        "target": "kayakkupuasub",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @kayakkupuasub as the side account.",
+        "source_urls": [
+          "https://x.com/kayakkupua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "konkatsu-nanpa",
+    "profile_url": "https://x.com/konkatsu_nanpa",
+    "observations": [
+      {
+        "target": "yutty-pua",
+        "type": "influence",
+        "description": "Public X profile explicitly identifies this account as a Yutty long-term course student.",
+        "source_urls": [
+          "https://x.com/konkatsu_nanpa"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "gamupua",
+    "profile_url": "https://x.com/gamupua",
+    "observations": [
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public X profile explicitly says this account is an Osaka pickup artist.",
+        "source_urls": [
+          "https://x.com/gamupua"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "streets-bach",
+    "profile_url": "https://x.com/streets_bach",
+    "observations": [
+      {
+        "target": "bach-sokuhou",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @bach_sokuhou as the side account.",
+        "source_urls": [
+          "https://x.com/streets_bach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "nonchama-pro",
+        "type": "influence",
+        "description": "Public X profile explicitly identifies this account with Nonchama's long-term course and group.",
+        "source_urls": [
+          "https://x.com/streets_bach"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
   }
 ]

@@ -79,6 +79,24 @@
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
   },
   {
+    "id": "chubu",
+    "type": "location",
+    "name": "Chubu",
+    "aliases": [
+      "中部",
+      "中部地方"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "ebisu",
     "type": "location",
     "name": "Ebisu",
@@ -101,6 +119,42 @@
     "name": "Ikebukuro",
     "aliases": [
       "池袋"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
+    "id": "kansai",
+    "type": "location",
+    "name": "Kansai",
+    "aliases": [
+      "関西",
+      "関西地方"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
+    "id": "kanto",
+    "type": "location",
+    "name": "Kanto",
+    "aliases": [
+      "関東",
+      "関東地方"
     ],
     "description": "Seed entity placeholder. Replace with public-source-backed details.",
     "icon_url": "",
@@ -184,6 +238,25 @@
     "review_notes": ""
   },
   {
+    "id": "osaka",
+    "type": "location",
+    "name": "Osaka",
+    "aliases": [
+      "大阪",
+      "大阪市"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed",
+      "https://www.city.osaka.lg.jp/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "shibuya",
     "type": "location",
     "name": "Shibuya",
@@ -201,7 +274,7 @@
     "confidence": 0.98,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
   },
   {
     "id": "shinjuku",
@@ -222,7 +295,7 @@
     "confidence": 0.98,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
   },
   {
     "id": "tokyo",
@@ -868,6 +941,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "bluexxxpua",
+    "type": "person",
+    "name": "あおとり",
+    "aliases": [
+      "bluexxxpua"
+    ],
+    "description": "🐙 / 100↑ / 箱メイン(🦌🐰👴)",
+    "icon_url": "https://pbs.twimg.com/profile_images/1952087049374445568/jXsJ6vRm_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bluexxxpua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "asumi-pua",
     "type": "person",
     "name": "あすみ@東京ストナン会",
@@ -1167,6 +1258,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
   },
   {
+    "id": "matchingmomonga",
+    "type": "person",
+    "name": "えろんが@東カレ弱者",
+    "aliases": [
+      "matchingmomonga"
+    ],
+    "description": "本業がマッチングアプリのニート",
+    "icon_url": "https://pbs.twimg.com/profile_images/1803162588513239040/5IOVyzy5_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/matchingmomonga"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "ale-puapua",
     "type": "person",
     "name": "えーる",
@@ -1231,6 +1340,24 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/kazama_player"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "mantis-pua",
+    "type": "person",
+    "name": "かまきりpua",
+    "aliases": [
+      "mantis_pua"
+    ],
+    "description": "北国20代会社員🪶 / U箱 / 🔥🍎 / 100↑ / 合流歓迎🐶(特に箱コンビ)",
+    "icon_url": "https://pbs.twimg.com/profile_images/1982369121883889664/9xlv-H3I_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/mantis_pua"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -1527,6 +1654,43 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "tantan-pua",
+    "type": "person",
+    "name": "しおたん",
+    "aliases": [
+      "tantan_pua_"
+    ],
+    "description": "SNS総フォロワー30万 | YouTube銀の盾所有 | コンサル生40名⤴︎ | SNSコンサル希望の方は公式LINEまで| サブ垢 @tantan_ura__",
+    "icon_url": "https://pbs.twimg.com/profile_images/1918704088541458432/vgCJ1i5i_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/tantan_pua_",
+      "https://lin.ee/WiyTSo1"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "tantan-ura",
+    "type": "person",
+    "name": "しおたんサブ",
+    "aliases": [
+      "tantan_ura__"
+    ],
+    "description": "本音と本垢でつぶやけない内容 | 本垢@tantan_pua_",
+    "icon_url": "https://pbs.twimg.com/profile_images/2027965728759140352/1ff_QvHb_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/tantan_ura__"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "shime-pua",
     "type": "person",
     "name": "しめ",
@@ -1630,6 +1794,24 @@
       "manual://seed",
       "https://x.com/jinjin_mote9",
       "https://tips.jp/u/ton_mot9"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "slinky-pua",
+    "type": "person",
+    "name": "すりんきー",
+    "aliases": [
+      "slinky_pua"
+    ],
+    "description": "🐹一門/🦵一門/150↑/師匠▶︎@bantan_pua @Yukishiro_yuki_ @molmol1919",
+    "icon_url": "https://pbs.twimg.com/profile_images/1707226700092981248/zgtM9DdI_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/slinky_pua"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -2009,6 +2191,25 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "konkatsu-nanpa",
+    "type": "person",
+    "name": "なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習",
+    "aliases": [
+      "konkatsu_nanpa"
+    ],
+    "description": "アラフォーナンパ師。23年10月界隈入り後｜スト32即・📦9即・ネト35即（2025/01/31時点）。第1回ネクステ杯チーム戦優勝・個人多即賞2位。某ブログを見て婚活で界隈入り。ゆってぃさんYOUTUBEより長期生入門。更に飛躍を志し、ネクステ入門。己の修練のためS1📦長期講習入門。本命とゴールインを目指す。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1760705893883367425/i9eac0O8_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/konkatsu_nanpa",
+      "https://note.com/konkatsu_nanpa/n/n6ee667f7e4af"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "id": "nsan-pua",
@@ -3011,6 +3212,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 30 handles and matched 6 tracked accounts."
   },
   {
+    "id": "kazunanpa",
+    "type": "person",
+    "name": "わかしゃも🔥@ゆってぃ長期1期生",
+    "aliases": [
+      "kazunanpa"
+    ],
+    "description": "平成一桁ガチジジィ/僕の先生→@yutty_pua/レポ垢@kazunanpa2/未来の嫁を見つけ、ナンパ師引退🥀/元ナンパ師のひとりごと。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1635610092484845570/f0OrQ7wZ_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "4meakg",
     "type": "person",
     "name": "アキラ＠東京ストナン会",
@@ -3317,6 +3536,43 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 28 handles and matched 15 tracked accounts."
   },
   {
+    "id": "kayakkupuasub",
+    "type": "person",
+    "name": "カヤさぶ",
+    "aliases": [
+      "kayakkupuasub"
+    ],
+    "description": "凄腕ファッション講師兼凄腕アイドル即師@kayakkupuaのサブ（痛）",
+    "icon_url": "https://pbs.twimg.com/profile_images/1803043882080649216/nVfFr45Y_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kayakkupuasub"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "kayakkupua",
+    "type": "person",
+    "name": "カヤック",
+    "aliases": [
+      "kayakkupua"
+    ],
+    "description": "【アイ$に強いナソパ師】某48センター/武道館愛$即/ファッション業界兼芸能界の中の人 |外見改善ファッション講師 |サブ→@kayakkupuasub | 外見改善、ファッション同行依頼はDMまで | #カヤックファッション同行🔍",
+    "icon_url": "https://pbs.twimg.com/profile_images/1692889480112574464/1YMCWeAP_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kayakkupua",
+      "https://tips.jp/s/u1BTeX"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "karon-pua",
     "type": "person",
     "name": "カロン@RiseUpLab",
@@ -3362,6 +3618,24 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/kahlo_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "gamupua",
+    "type": "person",
+    "name": "ガム",
+    "aliases": [
+      "gamupua"
+    ],
+    "description": "大阪のナンパ師🐙 スト216即 ネト20スト高10人落とすまで続けます 6人/10人",
+    "icon_url": "https://pbs.twimg.com/profile_images/1777338719382769664/mp44CZ0a_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/gamupua"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -4125,6 +4399,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 28 handles and matched 10 tracked accounts."
   },
   {
+    "id": "doc-mote",
+    "type": "person",
+    "name": "ドク🎩",
+    "aliases": [
+      "doc_mote"
+    ],
+    "description": "▷ 都心タワマンPUA | 2021-2025年㍇17即達成、全て新築| 9階建て建築中 | 含み益10億円クラブ | マイナー科の元バイト戦士 | タワマン手付10階建追証なし| 手付金オプション | 含み益は取り出せる | MEGA BIG 800万| NSJ流✖S氏クラス |",
+    "icon_url": "https://pbs.twimg.com/profile_images/1715923787399757824/BW07GV_b_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/doc_mote"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "nanpa-doraemon",
     "type": "person",
     "name": "ドラえもん",
@@ -4358,6 +4650,43 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 29 handles and matched 18 tracked accounts."
+  },
+  {
+    "id": "streets-bach",
+    "type": "person",
+    "name": "バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督",
+    "aliases": [
+      "streets_bach"
+    ],
+    "description": "サブアカ @bach_sokuhou /味噌/のんちゃま長期/のんちゃま一門/2024.11 月間10即達成/2024味噌Mスト賞/スト100即over/2025.8〜🐙",
+    "icon_url": "https://pbs.twimg.com/profile_images/2006657693394886656/M32pDvUb_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/streets_bach",
+      "https://note.com/streets_bach/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "bach-sokuhou",
+    "type": "person",
+    "name": "バッハ福田麻呂@サブ垢",
+    "aliases": [
+      "bach_sokuhou"
+    ],
+    "description": "基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/",
+    "icon_url": "https://pbs.twimg.com/profile_images/1835322652770304000/T5W6PELx_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bach_sokuhou"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "id": "bakunakioji",
@@ -5280,6 +5609,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 17 tracked accounts."
+  },
+  {
+    "id": "kazunanpa2",
+    "type": "person",
+    "name": "ワカシャモ🔥のレポ垢",
+    "aliases": [
+      "kazunanpa2"
+    ],
+    "description": "ワカシャモ🔥(@kazunanpa)のレポ垢 準即1/コンビ即1/弾丸即3",
+    "icon_url": "https://pbs.twimg.com/profile_images/1650629674308108289/uacE5lvc_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kazunanpa2"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "id": "nano-pua",
@@ -6402,6 +6749,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "bale-pua",
+    "type": "person",
+    "name": "米流",
+    "aliases": [
+      "bale_pua"
+    ],
+    "description": "味噌→帝都 界隈入後 スト75箱125ネト67月最大28即 #峰田一門 #アシリパ一門",
+    "icon_url": "https://pbs.twimg.com/profile_images/1652949481783173120/xpz_TEQb_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bale_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "id": "ryo-mindup",

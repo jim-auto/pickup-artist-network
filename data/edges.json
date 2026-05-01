@@ -53,6 +53,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 4 tracked accounts."
   },
   {
+    "source": "gamupua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "Public X profile explicitly says this account is an Osaka pickup artist.",
+    "source_urls": [
+      "https://x.com/gamupua"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "genki-japan",
     "target": "london",
     "type": "activity",
@@ -65,6 +78,19 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate genki-japan__london__activity. Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "matchingmomonga",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "Public X profile explicitly says this account's main field is matching apps.",
+    "source_urls": [
+      "https://x.com/matchingmomonga"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "pika-pua",
@@ -453,6 +479,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "bach-sokuhou",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/bach_sokuhou"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "bakunakioji",
     "target": "line",
     "type": "affiliation",
@@ -473,6 +512,19 @@
     "description": "Profile links point to X.",
     "source_urls": [
       "https://x.com/bakunakioji"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "bale-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/bale_pua"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
@@ -531,6 +583,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 33 handles and matched 13 tracked accounts."
+  },
+  {
+    "source": "bluexxxpua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/bluexxxpua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "boc-125",
@@ -692,6 +757,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 29 handles and matched 6 tracked accounts."
   },
   {
+    "source": "doc-mote",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/doc_mote"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "dogenzaka-pua",
     "target": "x",
     "type": "affiliation",
@@ -743,6 +821,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "ebisu",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Ebisu is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.9,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "source": "emuchi-pua",
@@ -1102,6 +1193,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 5 tracked accounts."
+  },
+  {
+    "source": "gamupua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/gamupua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "garp-pua",
@@ -1658,6 +1762,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "ikebukuro",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Ikebukuro is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.9,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "source": "inaka-stanan",
     "target": "tips",
     "type": "affiliation",
@@ -1990,6 +2107,59 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 13 tracked accounts."
   },
   {
+    "source": "kayakkupua",
+    "target": "kayakkupuasub",
+    "type": "affiliation",
+    "description": "Public X profile explicitly links @kayakkupuasub as the side account.",
+    "source_urls": [
+      "https://x.com/kayakkupua"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kayakkupua",
+    "target": "tips",
+    "type": "affiliation",
+    "description": "Profile links point to Tips.",
+    "source_urls": [
+      "https://x.com/kayakkupua",
+      "https://tips.jp/s/u1BTeX"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kayakkupua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kayakkupua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kayakkupuasub",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kayakkupuasub"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "kazama-0425",
     "target": "x",
     "type": "affiliation",
@@ -2022,6 +2192,45 @@
     "description": "Profile links point to X.",
     "source_urls": [
       "https://x.com/kazama_player"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "kazunanpa2",
+    "type": "affiliation",
+    "description": "Public X profile explicitly links @kazunanpa2 as the report side account.",
+    "source_urls": [
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kazunanpa2",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kazunanpa2"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
@@ -2185,6 +2394,33 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 25 handles and matched 7 tracked accounts."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/konkatsu_nanpa",
+      "https://note.com/konkatsu_nanpa/n/n6ee667f7e4af"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/konkatsu_nanpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "korilla-pua",
@@ -2428,6 +2664,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "machida",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Machida is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.9,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "source": "madayaluyo",
     "target": "x",
     "type": "affiliation",
@@ -2506,6 +2755,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "mantis-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/mantis_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "marifax-pua",
     "target": "x",
     "type": "affiliation",
@@ -2557,6 +2819,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "source": "matchingmomonga",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/matchingmomonga"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "mbh-hal",
@@ -2956,6 +3231,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "nagoya",
+    "target": "chubu",
+    "type": "affiliation",
+    "description": "Nagoya is grouped under the Chubu region cluster for geographic browsing.",
+    "source_urls": [
+      "https://www.city.nagoya.jp/"
+    ],
+    "confidence": 0.98,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "source": "nakame-pua",
@@ -3433,6 +3721,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "osaka",
+    "target": "kansai",
+    "type": "affiliation",
+    "description": "Osaka is grouped under the Kansai region cluster for geographic browsing.",
+    "source_urls": [
+      "https://www.city.osaka.lg.jp/"
+    ],
+    "confidence": 0.98,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "source": "osaka-kakuue",
@@ -4369,16 +4670,30 @@
   },
   {
     "source": "shibuya",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Shibuya is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "https://www.city.shibuya.tokyo.jp/"
+    ],
+    "confidence": 0.98,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
+  },
+  {
+    "source": "shibuya",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
     "source_urls": [
+      "https://www.city.shibuya.tokyo.jp/",
       "https://x.com/city_shibuya"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
   },
   {
     "source": "shime-pua",
@@ -4408,16 +4723,30 @@
   },
   {
     "source": "shinjuku",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Shinjuku is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "https://www.city.shinjuku.lg.jp/"
+    ],
+    "confidence": 0.98,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
+  },
+  {
+    "source": "shinjuku",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
     "source_urls": [
+      "https://www.city.shinjuku.lg.jp/",
       "https://x.com/shinjuku_info"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
   },
   {
     "source": "shinjukuashura",
@@ -4552,6 +4881,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "source": "slinky-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/slinky_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "socool55555",
@@ -4711,6 +5053,46 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 3 tracked accounts."
+  },
+  {
+    "source": "streets-bach",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "Public X profile explicitly links @bach_sokuhou as the side account.",
+    "source_urls": [
+      "https://x.com/streets_bach"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "streets-bach",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/streets_bach",
+      "https://note.com/streets_bach/"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "streets-bach",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/streets_bach"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "ststst-pua",
@@ -4940,6 +5322,59 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 6 tracked accounts."
   },
   {
+    "source": "tantan-pua",
+    "target": "line",
+    "type": "affiliation",
+    "description": "Profile links point to LINE.",
+    "source_urls": [
+      "https://x.com/tantan_pua_",
+      "https://lin.ee/WiyTSo1"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tantan-pua",
+    "target": "tantan-ura",
+    "type": "affiliation",
+    "description": "Public X profile explicitly links @tantan_ura__ as the side account.",
+    "source_urls": [
+      "https://x.com/tantan_pua_"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tantan-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/tantan_pua_"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tantan-ura",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/tantan_ura__"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "tapdepoipoi",
     "target": "line",
     "type": "affiliation",
@@ -5152,6 +5587,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "tokyo",
+    "target": "kanto",
+    "type": "affiliation",
+    "description": "Tokyo is grouped under the Kanto region cluster for geographic browsing.",
+    "source_urls": [
+      "https://www.metro.tokyo.lg.jp/"
+    ],
+    "confidence": 0.98,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "source": "tomu-riddle",
@@ -5758,6 +6206,19 @@
     "review_notes": ""
   },
   {
+    "source": "kazunanpa",
+    "target": "yutty-pua",
+    "type": "influence",
+    "description": "Public X profile explicitly labels @yutty_pua as this account's teacher.",
+    "source_urls": [
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "knk-stnn",
     "target": "wing-nampa",
     "type": "influence",
@@ -5769,6 +6230,19 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "yutty-pua",
+    "type": "influence",
+    "description": "Public X profile explicitly identifies this account as a Yutty long-term course student.",
+    "source_urls": [
+      "https://x.com/konkatsu_nanpa"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "marifax-pua",
@@ -5821,6 +6295,32 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 25 handles and matched 8 tracked accounts."
+  },
+  {
+    "source": "slinky-pua",
+    "target": "bantan-pua",
+    "type": "influence",
+    "description": "Public X profile explicitly labels @bantan_pua as one of this account's mentors.",
+    "source_urls": [
+      "https://x.com/slinky_pua"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "streets-bach",
+    "target": "nonchama-pro",
+    "type": "influence",
+    "description": "Public X profile explicitly identifies this account with Nonchama's long-term course and group.",
+    "source_urls": [
+      "https://x.com/streets_bach"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "west-pua",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T01:06:01+00:00",
+  "generated_at": "2026-05-01T03:59:31+00:00",
   "candidates": [
     {
       "id": "4meakg__nagoya__activity",
@@ -178,6 +178,72 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "atannon-nampa__osaka__activity",
+      "source": "atannon-nampa",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "大阪",
+      "matched_texts": [
+        "大阪"
+      ],
+      "evidence_text": "あたんのん@大阪ストサロン代表 (@atannon_nampa)\nストナン、手帳持ち、吃音症、底辺中の底辺がナンパだけで200人斬り。月間最高18即 🐙で活動中 ※ストサロン入会希望はDM迄(月3,000円)\nLocation: スト249箱19裏垢5アプリ4リア4パス15相席1計297即",
+      "source_urls": [
+        "https://x.com/atannon_nampa",
+        "https://note.com/peben/n/n020d213fe82e"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "bach-sokuhou__nonchama-pro__reference",
+      "source": "bach-sokuhou",
+      "target": "nonchama-pro",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "のんちゃま",
+      "matched_texts": [
+        "のんちゃま"
+      ],
+      "evidence_text": "バッハ福田麻呂@サブ垢 (@bach_sokuhou)\n基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/",
+      "source_urls": [
+        "https://x.com/bach_sokuhou"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "bale-pua__ststst-pua__reference",
+      "source": "bale-pua",
+      "target": "ststst-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "アシリパ",
+      "matched_texts": [
+        "アシリパ"
+      ],
+      "evidence_text": "米流 (@bale_pua)\n味噌→帝都 界隈入後 スト75箱125ネト67月最大28即 #峰田一門 #アシリパ一門\nLocation: 284",
+      "source_urls": [
+        "https://x.com/bale_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'アシリパ'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "bird-pua__tokyo__activity",
       "source": "bird-pua",
       "target": "tokyo",
@@ -199,6 +265,27 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "bluexxxpua__ao-nampa__reference",
+      "source": "bluexxxpua",
+      "target": "ao-nampa",
+      "type": "reference",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "あお",
+      "matched_texts": [
+        "あお"
+      ],
+      "evidence_text": "あおとり (@bluexxxpua)\n🐙 / 100↑ / 箱メイン(🦌🐰👴)",
+      "source_urls": [
+        "https://x.com/bluexxxpua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'あお'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "boc-125__tokyo__activity",
@@ -242,6 +329,29 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'hantenkinoyama'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "dogma-pua666__kansai__activity",
+      "source": "dogma-pua666",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "関西",
+      "matched_texts": [
+        "関西"
+      ],
+      "evidence_text": "恋愛のドグマ🦁マッチングアプリ恋活婚活で幸福を掴ませる (@dogmapua666)\nフォローすると恋愛の真実がわかるレベチの実績でド非モテ男をアプリで理想の彼女見つけさせ結婚させてる人■電子書籍5000部以上■35才まで彼女ナシのド非モテから某アプリ関西ダントツ１位、芸能モデル等■https://t.co/oV23vzVBAf■コンサル仕事依頼DM https://t.co/SJ2OPOax4N\nLocation: 日本 東京",
+      "source_urls": [
+        "https://x.com/dogmapua666",
+        "https://singlebed666.hatenablog.com/"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "dogma-pua666__matching-apps__activity",
@@ -421,6 +531,29 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "foy-jibunmigaki__osaka__activity",
+      "source": "foy-jibunmigaki",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "大阪",
+      "matched_texts": [
+        "大阪"
+      ],
+      "evidence_text": "ふぉい@不屈の行動家🏃💨 (@foy_jibunmigaki)\n大阪🐙 社会人 美女や可愛い子からモテたい、スト高彼女化が頑張る原動力。自己投資 ▶︎ ジム￤サウナ￤美容￤副業💰￤Tin垢BAN中🥶￤ストナン（U,M,古都）2023/4月〜しています🔥￤3月目標 ▶︎ 1即/2即 筋トレ歴 ▶︎ 3年🏋️講習実績 ▶︎ 18名 ストナンのみで彼女6人達成💗\nLocation: Note執筆✍️→→→",
+      "source_urls": [
+        "https://x.com/foy_jibunmigaki",
+        "https://note.com/foy_jibunmigaki"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "foy-jikokensan__foy-jibunmigaki__reference",
@@ -918,6 +1051,29 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "himotenohoshi__osaka__activity",
+      "source": "himotenohoshi",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "大阪",
+      "matched_texts": [
+        "大阪"
+      ],
+      "evidence_text": "ユウ@東カレの王👑 (@himotenohoshi)\n東京で1番東カレに詳しい人 。 ⚫️東カレで美女を抱きまくってる会社員 ⚫️大阪、東京のニ大都市で東カレで累計200人の女性と関係を持つ。🌹ランカー即も多数 ⚫️再現性のある口説きで短時間で女性を仕上げることが得意。 ⚫️東カレで理想的な女性と付き合うための方法を発信。講習生でも美人な彼女ができる人続出中\nExternal link: https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY",
+      "source_urls": [
+        "https://x.com/himotenohoshi",
+        "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "himotenohoshi__tokyo__activity",
       "source": "himotenohoshi",
       "target": "tokyo",
@@ -1077,6 +1233,51 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "kayakkupua__kayakkupuasub__reference",
+      "source": "kayakkupua",
+      "target": "kayakkupuasub",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "kayakkupuasub",
+      "matched_texts": [
+        "kayakkupuasub"
+      ],
+      "evidence_text": "カヤック (@kayakkupua)\n【アイ$に強いナソパ師】某48センター/武道館愛$即/ファッション業界兼芸能界の中の人 |外見改善ファッション講師 |サブ→@kayakkupuasub | 外見改善、ファッション同行依頼はDMまで | #カヤックファッション同行🔍\nLocation: 講習詳細はこちら→",
+      "source_urls": [
+        "https://x.com/kayakkupua",
+        "https://tips.jp/s/u1BTeX"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kayakkupuasub'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kayakkupuasub__kayakkupua__reference",
+      "source": "kayakkupuasub",
+      "target": "kayakkupua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "kayakkupua",
+      "matched_texts": [
+        "kayakkupua"
+      ],
+      "evidence_text": "カヤさぶ (@kayakkupuasub)\n凄腕ファッション講師兼凄腕アイドル即師@kayakkupuaのサブ（痛）",
+      "source_urls": [
+        "https://x.com/kayakkupuasub"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kayakkupua'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "kazama-0425__matching-apps__activity",
       "source": "kazama-0425",
       "target": "matching-apps",
@@ -1119,6 +1320,72 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazama_0425'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kazunanpa__kazunanpa2__reference",
+      "source": "kazunanpa",
+      "target": "kazunanpa2",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "kazunanpa2",
+      "matched_texts": [
+        "kazunanpa2"
+      ],
+      "evidence_text": "わかしゃも🔥@ゆってぃ長期1期生 (@kazunanpa)\n平成一桁ガチジジィ/僕の先生→@yutty_pua/レポ垢@kazunanpa2/未来の嫁を見つけ、ナンパ師引退🥀/元ナンパ師のひとりごと。",
+      "source_urls": [
+        "https://x.com/kazunanpa"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazunanpa2'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kazunanpa__yutty-pua__reference",
+      "source": "kazunanpa",
+      "target": "yutty-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "yutty_pua",
+      "matched_texts": [
+        "yutty_pua"
+      ],
+      "evidence_text": "わかしゃも🔥@ゆってぃ長期1期生 (@kazunanpa)\n平成一桁ガチジジィ/僕の先生→@yutty_pua/レポ垢@kazunanpa2/未来の嫁を見つけ、ナンパ師引退🥀/元ナンパ師のひとりごと。",
+      "source_urls": [
+        "https://x.com/kazunanpa"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'yutty_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kazunanpa2__kazunanpa__reference",
+      "source": "kazunanpa2",
+      "target": "kazunanpa",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "kazunanpa",
+      "matched_texts": [
+        "kazunanpa"
+      ],
+      "evidence_text": "ワカシャモ🔥のレポ垢 (@kazunanpa2)\nワカシャモ🔥(@kazunanpa)のレポ垢 準即1/コンビ即1/弾丸即3",
+      "source_urls": [
+        "https://x.com/kazunanpa2"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazunanpa'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "kei-male-apex__kei-pua__reference",
@@ -1436,6 +1703,28 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kuroiwa_45'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kurosaka-pua__osaka__activity",
+      "source": "kurosaka-pua",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "Osaka",
+      "matched_texts": [
+        "Osaka"
+      ],
+      "evidence_text": "黒坂PUA (@kurosaka_pua)\n🐶🦁🦉🦐🏖️メイン。 ナンパの成功も失敗も発信します。美容に興味あり。楽しんでいってください。youtubeやってます。\nExternal link: https://www.youtube.com/@kurosaka_pua_with_you",
+      "source_urls": [
+        "https://x.com/kurosaka_pua",
+        "https://www.youtube.com/@kurosaka_pua_with_you"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Osaka'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "kurosakikun__matching-apps__activity",
@@ -2023,6 +2312,29 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '新宿'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "netonan99__kansai__activity",
+      "source": "netonan99",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "関西",
+      "matched_texts": [
+        "関西"
+      ],
+      "evidence_text": "ももんが【CoCome完全攻略Tips発売中🥥】 (@netonan99)\n【フォロバ100】関西最強マッチングアプリ師 ｜累計300over ｜ 月間最高34(2025年12月) ｜ 1日最高4 ｜ ネトナン歴3年半 ｜ #えるスタ 所属\nLocation: マッチングアプリ無双したい人へ↓",
+      "source_urls": [
+        "https://x.com/netonan99",
+        "https://note.com/momonga_tinder/n/n51fd3eebf8cd"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "netonan99__matching-apps__activity",
       "source": "netonan99",
       "target": "matching-apps",
@@ -2134,6 +2446,27 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "osaka-kakuue__osaka__activity",
+      "source": "osaka-kakuue",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "Osaka",
+      "matched_texts": [
+        "Osaka"
+      ],
+      "evidence_text": "オオサカ (@osaka_kakuue)\nストリート、天下。",
+      "source_urls": [
+        "https://x.com/osaka_kakuue"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Osaka'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "otaku-pua__omamco-pua2__reference",
@@ -2560,6 +2893,28 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'gureran_m'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "right-pua__osaka__activity",
+      "source": "right-pua",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "大阪",
+      "matched_texts": [
+        "大阪"
+      ],
+      "evidence_text": "ライトくん (@right_pua_)\n大阪 ナンパ師 誰でも合流しましょう 箱もストもやってます\nLocation: グリ下界隈",
+      "source_urls": [
+        "https://x.com/right_pua_"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "riokun-pua__riokun-pua-sub__reference",
       "source": "riokun-pua",
       "target": "riokun-pua-sub",
@@ -2784,6 +3139,28 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '池袋'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "slinky-pua__bantan-pua__reference",
+      "source": "slinky-pua",
+      "target": "bantan-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "bantan_pua",
+      "matched_texts": [
+        "bantan_pua"
+      ],
+      "evidence_text": "すりんきー (@slinky_pua)\n🐹一門/🦵一門/150↑/師匠▶︎@bantan_pua @Yukishiro_yuki_ @molmol1919\nLocation: 🐙",
+      "source_urls": [
+        "https://x.com/slinky_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bantan_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "street-fami__fami-ver2__reference",
       "source": "street-fami",
       "target": "fami-ver2",
@@ -2851,6 +3228,52 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "streets-bach__bach-sokuhou__reference",
+      "source": "streets-bach",
+      "target": "bach-sokuhou",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "bach_sokuhou",
+      "matched_texts": [
+        "bach_sokuhou"
+      ],
+      "evidence_text": "バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督 (@streets_bach)\nサブアカ @bach_sokuhou /味噌/のんちゃま長期/のんちゃま一門/2024.11 月間10即達成/2024味噌Mスト賞/スト100即over/2025.8〜🐙\nExternal link: https://note.com/streets_bach/",
+      "source_urls": [
+        "https://x.com/streets_bach",
+        "https://note.com/streets_bach/"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bach_sokuhou'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "streets-bach__nonchama-pro__reference",
+      "source": "streets-bach",
+      "target": "nonchama-pro",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "のんちゃま",
+      "matched_texts": [
+        "のんちゃま"
+      ],
+      "evidence_text": "バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督 (@streets_bach)\nサブアカ @bach_sokuhou /味噌/のんちゃま長期/のんちゃま一門/2024.11 月間10即達成/2024味噌Mスト賞/スト100即over/2025.8〜🐙\nExternal link: https://note.com/streets_bach/",
+      "source_urls": [
+        "https://x.com/streets_bach",
+        "https://note.com/streets_bach/"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "sub-riddle__tomu-riddle__reference",
@@ -2963,6 +3386,52 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "tantan-pua__tantan-ura__reference",
+      "source": "tantan-pua",
+      "target": "tantan-ura",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "tantan_ura__",
+      "matched_texts": [
+        "tantan_ura__"
+      ],
+      "evidence_text": "しおたん (@tantan_pua_)\nSNS総フォロワー30万 | YouTube銀の盾所有 | コンサル生40名⤴︎ | SNSコンサル希望の方は公式LINEまで| サブ垢 @tantan_ura__\nLocation: 公式LINE→",
+      "source_urls": [
+        "https://x.com/tantan_pua_",
+        "https://lin.ee/WiyTSo1"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'tantan_ura__'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "tantan-ura__tantan-pua__reference",
+      "source": "tantan-ura",
+      "target": "tantan-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "tantan_pua_",
+      "matched_texts": [
+        "tantan_pua_",
+        "しおたん"
+      ],
+      "evidence_text": "しおたんサブ (@tantan_ura__)\n本音と本垢でつぶやけない内容 | 本垢@tantan_pua_",
+      "source_urls": [
+        "https://x.com/tantan_ura__"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'tantan_pua_, しおたん'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "task-pua__matching-apps__activity",
@@ -3234,6 +3703,29 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yato-mote__osaka__activity",
+      "source": "yato-mote",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "大阪",
+      "matched_texts": [
+        "大阪"
+      ],
+      "evidence_text": "夜ト (@yato_mote)\nモテ男になって“理想の彼女”を作り、長期的な関係を築くまでに必要なこと全てを発信してます /矯正と強制/破壊と創造/経験人数400人/指導実績累計200人/大阪⇄東京\nLocation: 忖度なしの超有益メルマガはこちら→",
+      "source_urls": [
+        "https://x.com/yato_mote",
+        "http://tk0011blog.com/p/r/abZ55vm5"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "yato-mote__tokyo__activity",

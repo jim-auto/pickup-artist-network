@@ -48,7 +48,7 @@ REAL_GROWTH_TARGETS = {
     "person": {"min": 1000, "max": 1000},
     "community": {"min": 8, "max": 12},
     "content": {"min": 12, "max": 18},
-    "location": {"min": 6, "max": 10},
+    "location": {"min": 8, "max": 14},
     "platform": {"min": 6, "max": 8},
 }
 REAL_GROWTH_PHASES = (
