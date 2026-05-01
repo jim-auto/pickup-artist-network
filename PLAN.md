@@ -34,7 +34,7 @@
 26. 完了: terminal からも review candidate queue と decision log を確認できる CLI 一覧表示を足す
 27. 完了: safe public community source を追加し、real build でも Shibuya / Shinjuku 向けの review candidate が自然に出る状態を作る
 28. 完了: review candidate queue を source/target/type 単位で統合し、real candidate を 2 件 manual observation に昇格させる
-29. 完了: official guide content source を追加し、content -> location の real `reference` relation も canonical graph に流せるようにする
+29. 完了: official guide content source を追加し、content -> location の real `profile_mention` relation も canonical graph に流せるようにする
 30. 完了: `seed_entities.txt` に real / fictional scope を持たせ、HTML に real growth target panel を追加する
 31. 完了: terminal / build log からも real growth target を確認できる CLI と build 出力を足す
 32. 次段階: real person 500人マイルストーン / 最終1000人目標に向けて safe source cluster を増やし、person node を段階的に投入する

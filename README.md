@@ -103,7 +103,7 @@ collector は canonical graph を直接更新せず、`data/source_snapshots.gen
 
 `data/x_profile_sources.json` の entry に `pinned_post_url` を足した場合は、その status page も fetch して **`pinned_post_url` / `pinned_post_text` の generated hint** を埋めます。これは canonical graph ではなく generated snapshot にだけ入り、manual snapshot が引き続き優先されます。
 
-`collect_following: true` を付けた entry は、保存済み auth state がある場合だけ **authenticated X following** を見に行きます。logged-out では following ページが login に飛ぶため、ここだけは public-only ではありません。取得できた tracked account は `reference` edge として `needs_review: true` で generated snapshot に入ります。
+`collect_following: true` を付けた entry は、保存済み auth state がある場合だけ **authenticated X following** を見に行きます。logged-out では following ページが login に飛ぶため、ここだけは public-only ではありません。取得できた tracked account は `follow` edge として `needs_review: true` で generated snapshot に入ります。
 
 ### 4. グラフを生成 / 整形する
 
@@ -218,7 +218,7 @@ python build_site.py
 - review candidate は同じ `source -> target -> type` が `summary` / `profile_text` / `pinned_post_text` に重複しても、basis をまとめた 1 件として queue に出します
 - review candidate は **approve / dismiss** のどちらかに流せます。approve は manual observation へ昇格、dismiss は再提案抑止に使います
 - HTML には `data/review_candidate_decisions.json` 由来の **candidate decision log** もあり、approve / dismiss 済みの履歴を source / target / basis 単位で追えます
-- official guide page のような content source が location を言及した場合は、review candidate を `reference` として扱います
+- official guide page のような content source が location を言及した場合は、review candidate を `profile_mention` として扱います
 - collector 由来の real generated text が薄い場合は、hint fixture を使った review workflow 実験はできますが、公開用データには混ぜません
 - **推測と事実を分離**し、断定しすぎないことを重視します
 - 名誉毀損、プライバシー侵害、嫌がらせにつながる運用は避けてください

@@ -352,7 +352,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 13:31 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 20:55 UTC。</p>
       </div>
     </div>
   </header>
@@ -398,6 +398,11 @@
           <option value="keyword_group">キーワードでまとめる</option>
         </select>
         <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
+      </div>
+      <div id="keyword-cluster-picker" hidden>
+        <label for="keyword-cluster-select"><strong>キーワード群を選ぶ</strong></label>
+        <select id="keyword-cluster-select" class="control-select"></select>
+        <div class="muted">キーワード群を 1 つ選ぶと、その塊だけに絞って見られます。</div>
       </div>
       <details class="foldout">
         <summary>
@@ -644,7 +649,8 @@
       criticism: "批判・対立",
       monetization: "収益・商品",
       activity: "活動場所",
-      reference: "言及・紹介"
+      follow: "フォロー",
+      profile_mention: "プロフィール言及"
     };
     const evidenceKindLabels = {
       fact: "事実",
@@ -730,6 +736,8 @@
     buildFilters("node-type-filters", allNodeTypes, "data-node-type");
     buildFilters("edge-type-filters", allEdgeTypes, "data-edge-type");
     const clusterModeInput = document.getElementById("cluster-mode");
+    const keywordClusterPicker = document.getElementById("keyword-cluster-picker");
+    const keywordClusterInput = document.getElementById("keyword-cluster-select");
     if (clusterModeInput) {
       clusterModeInput.value = rawClusters.default_mode || "off";
     }
@@ -790,6 +798,46 @@
 
     function getClusterMode() {
       return clusterModeInput ? clusterModeInput.value : "off";
+    }
+
+    function keywordClusterEntries() {
+      return Object.entries(rawClusters.modes?.keyword_group?.clusters || {}).sort((left, right) =>
+        String(left[1]?.label || left[0]).localeCompare(String(right[1]?.label || right[0]), "ja")
+      );
+    }
+
+    function updateKeywordClusterOptions() {
+      if (!keywordClusterInput) {
+        return;
+      }
+      const currentValue = keywordClusterInput.value;
+      const options = keywordClusterEntries();
+      keywordClusterInput.innerHTML = [
+        '<option value="">すべてのキーワード群</option>',
+        ...options.map(
+          ([clusterId, clusterInfo]) =>
+            `<option value="${escapeHtml(clusterId)}">${escapeHtml(clusterInfo?.label || clusterId)}</option>`
+        )
+      ].join("");
+      keywordClusterInput.value = options.some(([clusterId]) => clusterId === currentValue)
+        ? currentValue
+        : "";
+    }
+
+    function getSelectedKeywordClusterId() {
+      if (getClusterMode() !== "keyword_group" || !keywordClusterInput) {
+        return "";
+      }
+      return keywordClusterInput.value || "";
+    }
+
+    function updateKeywordClusterControl() {
+      if (!keywordClusterPicker || !keywordClusterInput) {
+        return;
+      }
+      const isKeywordMode = getClusterMode() === "keyword_group";
+      keywordClusterPicker.hidden = !isKeywordMode;
+      keywordClusterInput.disabled = !isKeywordMode;
     }
 
     function updateClusterModeHelp() {
@@ -1294,11 +1342,15 @@
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
-      const shouldCluster = clusterMode !== "off" && !term;
+      const selectedKeywordClusterId = getSelectedKeywordClusterId();
+      const keywordAssignments = rawClusters.modes?.keyword_group?.assignments || {};
+      const shouldCluster = clusterMode !== "off" && !term && !selectedKeywordClusterId;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
-        term
+        term,
+        clusterMode,
+        keywordCluster: selectedKeywordClusterId
       });
       if (tableFilterKey !== lastTableFilterKey) {
         resetTableRenderState();
@@ -1309,7 +1361,13 @@
         if (!allowedNodeTypes.has(node.type)) {
           return false;
         }
-        return accountNodeTypes.has(node.type);
+        if (!accountNodeTypes.has(node.type)) {
+          return false;
+        }
+        if (selectedKeywordClusterId && keywordAssignments[node.id] !== selectedKeywordClusterId) {
+          return false;
+        }
+        return true;
       });
       const eligibleIds = new Set(eligibleNodes.map((node) => node.id));
       const matchedIds = new Set(
@@ -1415,8 +1473,13 @@ ${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要
     if (clusterModeInput) {
       clusterModeInput.addEventListener("change", () => {
         updateClusterModeHelp();
+        updateKeywordClusterControl();
         applyFilters();
       });
+    }
+    if (keywordClusterInput) {
+      updateKeywordClusterOptions();
+      keywordClusterInput.addEventListener("change", applyFilters);
     }
     [
       ["reviewNodes", "review-nodes-table-more"],
@@ -1468,6 +1531,7 @@ ${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要
     });
 
     updateClusterModeHelp();
+    updateKeywordClusterControl();
     applyFilters();
     })().catch((error) => {
       console.error(error);

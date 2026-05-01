@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-01T08:42:03+00:00",
+  "updated_at": "2026-05-01T20:55:06+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -38,7 +38,7 @@
       "note": "Reviewed from the official GO TOKYO Shibuya guide page.",
       "source": "gotokyo-shibuya-guide",
       "target": "shibuya",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "matched_text": "Shibuya",
       "evidence_text": "Shibuya - the epicenter of modern Japanese culture | The Official Tokyo Travel Guide, GO TOKYO\nShibuya is the ultimate tourist destination with landmarks such as the iconic scramble crossing, fashion, art, shopping experiences, and more.\nShibuya - the epicenter of modern Japanese culture",
@@ -54,7 +54,7 @@
       "note": "Reviewed from the official GO TOKYO Shinjuku guide page.",
       "source": "gotokyo-shinjuku-guide",
       "target": "shinjuku",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "matched_text": "Shinjuku",
       "evidence_text": "A guide to Shinjuku - things to do and places to go | The Official Tokyo Travel Guide, GO TOKYO\nShinjuku is a buzzing district of Tokyo, home to the Shinjuku Station. Find information about shopping, nightlife, hotels in the area, and more.\nA guide to Shinjuku - things to do and places to go",

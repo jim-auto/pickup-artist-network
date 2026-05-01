@@ -44,7 +44,7 @@
 - real person を最初に足すときは、**本人が公開 X profile で自称している** アカウントだけに絞り、第三者ラベルや噂ベースでは追加しない
 - real review candidate を増やすときは、既存 location を本文で自然に言及する official tourism / visitors bureau などの safe public source を優先する
 - review candidate queue は basis ごとの重複を避け、同じ `source -> target -> type` を consolidated candidate として扱う
-- content source が location を言及した場合は `reference` を優先し、community source の location mention とは分けて扱う
+- content source が location を言及した場合は `profile_mention` を優先し、community source の location mention とは分けて扱う
 - `seed_entities.txt` では `scope` (`real` / `fictional`) を持たせ、HTML の progress panel では real side の現在値だけを target と比較する
 - 公開用 seed / manual snapshot は real-only にし、fictional fixture はテストやローカル実験用の optional file に閉じ込める
 - collector は canonical graph を直接触らず、generated snapshot だけを書く
@@ -73,7 +73,7 @@
 - さらに 5 アカウントを追加し、self-described public profile を中心に real person 245 / 1000 まで拡張した
 - さらに 5 アカウントを追加し、`shinkawa-pua -> korilla-pua` と `mbh-hal -> gureran-m` の relation も足して real person 250 / 1000 まで拡張した
 - さらに 6 アカウントを追加し、`otaku-pua -> qh0kum`、`kei-pua -> eb6lx`、`gintoki-street -> minigola-street`、`kimu-himitsu2 -> ziyuunotsubasa1 / like-himitsu` の relation も足して real person 256 / 1000 まで拡張した
-- さらに 7 アカウントを追加し、`tyopa-pua -> streetkyo` の explicit reference も足して real person 263 / 1000 まで拡張した
+- さらに 7 アカウントを追加し、`tyopa-pua -> streetkyo` の explicit profile_mention も足して real person 263 / 1000 まで拡張した
 - さらに 9 アカウントを追加し、`fake-pua`、`tenma-pua`、`slice-pua`、`instapua`、`kanbee-pua`、`atari100pua`、`osugi-pua`、`mayuge-mbh`、`kamekame-pua` を次の following seed 候補として real person 272 / 1000 まで拡張した
 - さらに 17 アカウントを追加し、`street-win-pua`、`naepua`、`asai-pua`、`chami-pua`、`yuta-pua`、`oyajii-nanpa`、`taichi-pua`、`yuki100-pua`、`tensai-nanpa4`、`hpns-pua`、`tohokupua`、`ak1-pua`、`ao-pua`、`ike-pua`、`gupy-pua`、`bonnoupua2`、`idiot-pua` を self-described public profile として real person 289 / 1000 まで拡張した
 - さらに 10 アカウントを追加し、`roco-neko -> roco-neko-ura` の side-account relation も足して real person 299 / 1000 まで拡張した

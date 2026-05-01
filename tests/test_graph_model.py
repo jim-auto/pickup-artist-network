@@ -89,8 +89,8 @@ class GraphModelTests(unittest.TestCase):
             {
                 "source": "gamma",
                 "target": "alpha",
-                "type": "reference",
-                "description": "Gamma references Alpha",
+                "type": "profile_mention",
+                "description": "Gamma mentions Alpha in profile text.",
                 "source_urls": ["https://example.com/gamma-edge"],
                 "confidence": 0.61,
             },
@@ -120,8 +120,8 @@ class GraphModelTests(unittest.TestCase):
             {
                 "source": "gamma",
                 "target": "alpha",
-                "type": "reference",
-                "description": "Gamma references Alpha",
+                "type": "profile_mention",
+                "description": "Gamma mentions Alpha in profile text.",
                 "source_urls": ["https://example.com/gamma-edge"],
                 "confidence": 0.61,
             },
@@ -188,10 +188,10 @@ class GraphModelTests(unittest.TestCase):
                 "generated_at": "2026-04-24T00:00:00+00:00",
                 "candidates": [
                     {
-                        "id": "alpha__beta__reference__profile_text",
+                        "id": "alpha__beta__profile_mention__profile_text",
                         "source": "alpha",
                         "target": "beta",
-                        "type": "reference",
+                        "type": "profile_mention",
                         "basis": "profile_text",
                         "matched_text": "Beta",
                         "evidence_text": "Alpha mentions Beta in a generated profile hint.",
@@ -205,13 +205,13 @@ class GraphModelTests(unittest.TestCase):
             review_candidate_decisions_payload={
                 "updated_at": "2026-04-24T01:00:00+00:00",
                 "decisions": {
-                    "alpha__beta__reference__profile_text": {
-                        "candidate_id": "alpha__beta__reference__profile_text",
+                    "alpha__beta__profile_mention__profile_text": {
+                        "candidate_id": "alpha__beta__profile_mention__profile_text",
                         "status": "dismissed",
                         "note": "Reviewed and skipped.",
                         "source": "alpha",
                         "target": "beta",
-                        "type": "reference",
+                        "type": "profile_mention",
                         "basis": "profile_text",
                         "matched_text": "Beta",
                         "evidence_text": "Alpha mentions Beta in a generated profile hint.",
@@ -253,14 +253,19 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('fetch(path, { cache: "no-store" })', html)
         self.assertIn("graph-data.json", html)
         self.assertIn('id="cluster-mode"', html)
+        self.assertIn('id="keyword-cluster-picker"', html)
+        self.assertIn('id="keyword-cluster-select"', html)
         self.assertIn("つながりの近さでまとめる", html)
         self.assertIn("関係パターンでまとめる", html)
         self.assertIn("キーワードでまとめる", html)
+        self.assertIn("すべてのキーワード群", html)
+        self.assertIn("その塊だけに絞って見られます", html)
         self.assertIn('id="nodes-table-more"', html)
         self.assertIn('id="edges-table-more"', html)
         self.assertIn("stabilizationIterationsDone", html)
         self.assertIn("network.openCluster(selectedId)", html)
         self.assertIn('document.getElementById("detail-panel").addEventListener("click"', html)
+        self.assertIn("updateKeywordClusterControl()", html)
         self.assertIn("却下", html)
         self.assertIn("2 / 1000", html)
 
@@ -272,11 +277,11 @@ class GraphModelTests(unittest.TestCase):
                 output_path=output_path,
                 review_candidates_payload={
                     "generated_at": "2026-04-24T00:00:00+00:00",
-                    "candidates": [{"id": "candidate-1", "source": "alpha", "target": "beta", "type": "reference"}],
+                    "candidates": [{"id": "candidate-1", "source": "alpha", "target": "beta", "type": "profile_mention"}],
                 },
                 review_candidate_decisions_payload={
                     "updated_at": "2026-04-24T01:00:00+00:00",
-                    "decisions": {"candidate-1": {"status": "approved", "source": "alpha", "target": "beta", "type": "reference"}},
+                    "decisions": {"candidate-1": {"status": "approved", "source": "alpha", "target": "beta", "type": "profile_mention"}},
                 },
             )
 

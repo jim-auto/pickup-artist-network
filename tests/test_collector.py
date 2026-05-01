@@ -225,7 +225,7 @@ class CollectorTests(unittest.TestCase):
 
         self.assertEqual(len(observations), 1)
         self.assertEqual(observations[0]["target"], "alpha-account")
-        self.assertEqual(observations[0]["type"], "reference")
+        self.assertEqual(observations[0]["type"], "follow")
         self.assertTrue(observations[0]["needs_review"])
 
     def test_load_dotenv_values_parses_simple_key_value_pairs(self) -> None:

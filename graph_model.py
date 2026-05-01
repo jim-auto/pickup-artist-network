@@ -19,7 +19,8 @@ EDGE_TYPES = (
     "criticism",
     "monetization",
     "activity",
-    "reference",
+    "follow",
+    "profile_mention",
 )
 EVIDENCE_KINDS = ("fact", "interpretation", "mixed")
 ACCOUNT_NODE_TYPES = frozenset({"person", "community"})
@@ -49,7 +50,8 @@ CONNECTIVITY_DIRECT_WEIGHTS = {
     "criticism": 1.4,
     "monetization": 1.8,
     "activity": 1.2,
-    "reference": 1.6,
+    "follow": 1.9,
+    "profile_mention": 1.4,
 }
 CONNECTIVITY_CONTEXT_WEIGHTS = {
     "community": 2.0,
@@ -64,7 +66,8 @@ RELATION_PATTERN_DIRECT_WEIGHTS = {
     "criticism": 1.2,
     "monetization": 2.0,
     "activity": 1.6,
-    "reference": 2.1,
+    "follow": 2.6,
+    "profile_mention": 1.8,
 }
 RELATION_PATTERN_CONTEXT_WEIGHTS = {
     "community": 2.8,
@@ -95,6 +98,7 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
     {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
     {"id": "hancho", "label": "はんちょう", "patterns": ("はんちょう", "hancho"), "priority": 92},
+    {"id": "juru_family", "label": "ジュルマ一門", "patterns": ("ジュルマ一門", "juru"), "priority": 91},
     {"id": "yutty", "label": "ゆってぃ", "patterns": ("ゆってぃ", "yutty"), "priority": 90},
     {"id": "wing", "label": "wing", "patterns": ("wing",), "priority": 89},
     {"id": "kurita", "label": "栗田", "patterns": ("栗田", "kurita"), "priority": 88},
@@ -609,8 +613,10 @@ def _build_account_projection(
                     weight += 1.0 * rarity_scale
                 if "affiliation" in shared_edge_types:
                     weight += 0.9 * rarity_scale
-                if "reference" in shared_edge_types:
-                    weight += 0.5 * rarity_scale
+                if "follow" in shared_edge_types:
+                    weight += 0.6 * rarity_scale
+                if "profile_mention" in shared_edge_types:
+                    weight += 0.35 * rarity_scale
                 if context_node.type == "location":
                     weight += 0.65 * rarity_scale
                 elif context_node.type == "content":
@@ -1418,6 +1424,11 @@ def render_html(
         </select>
         <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
       </div>
+      <div id="keyword-cluster-picker" hidden>
+        <label for="keyword-cluster-select"><strong>キーワード群を選ぶ</strong></label>
+        <select id="keyword-cluster-select" class="control-select"></select>
+        <div class="muted">キーワード群を 1 つ選ぶと、その塊だけに絞って見られます。</div>
+      </div>
       <details class="foldout">
         <summary>
           <span class="foldout-summary-text">
@@ -1663,7 +1674,8 @@ def render_html(
       criticism: "批判・対立",
       monetization: "収益・商品",
       activity: "活動場所",
-      reference: "言及・紹介"
+      follow: "フォロー",
+      profile_mention: "プロフィール言及"
     };
     const evidenceKindLabels = {
       fact: "事実",
@@ -1749,6 +1761,8 @@ def render_html(
     buildFilters("node-type-filters", allNodeTypes, "data-node-type");
     buildFilters("edge-type-filters", allEdgeTypes, "data-edge-type");
     const clusterModeInput = document.getElementById("cluster-mode");
+    const keywordClusterPicker = document.getElementById("keyword-cluster-picker");
+    const keywordClusterInput = document.getElementById("keyword-cluster-select");
     if (clusterModeInput) {
       clusterModeInput.value = rawClusters.default_mode || "off";
     }
@@ -1809,6 +1823,46 @@ def render_html(
 
     function getClusterMode() {
       return clusterModeInput ? clusterModeInput.value : "off";
+    }
+
+    function keywordClusterEntries() {
+      return Object.entries(rawClusters.modes?.keyword_group?.clusters || {}).sort((left, right) =>
+        String(left[1]?.label || left[0]).localeCompare(String(right[1]?.label || right[0]), "ja")
+      );
+    }
+
+    function updateKeywordClusterOptions() {
+      if (!keywordClusterInput) {
+        return;
+      }
+      const currentValue = keywordClusterInput.value;
+      const options = keywordClusterEntries();
+      keywordClusterInput.innerHTML = [
+        '<option value="">すべてのキーワード群</option>',
+        ...options.map(
+          ([clusterId, clusterInfo]) =>
+            `<option value="${escapeHtml(clusterId)}">${escapeHtml(clusterInfo?.label || clusterId)}</option>`
+        )
+      ].join("");
+      keywordClusterInput.value = options.some(([clusterId]) => clusterId === currentValue)
+        ? currentValue
+        : "";
+    }
+
+    function getSelectedKeywordClusterId() {
+      if (getClusterMode() !== "keyword_group" || !keywordClusterInput) {
+        return "";
+      }
+      return keywordClusterInput.value || "";
+    }
+
+    function updateKeywordClusterControl() {
+      if (!keywordClusterPicker || !keywordClusterInput) {
+        return;
+      }
+      const isKeywordMode = getClusterMode() === "keyword_group";
+      keywordClusterPicker.hidden = !isKeywordMode;
+      keywordClusterInput.disabled = !isKeywordMode;
     }
 
     function updateClusterModeHelp() {
@@ -2313,11 +2367,15 @@ def render_html(
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
-      const shouldCluster = clusterMode !== "off" && !term;
+      const selectedKeywordClusterId = getSelectedKeywordClusterId();
+      const keywordAssignments = rawClusters.modes?.keyword_group?.assignments || {};
+      const shouldCluster = clusterMode !== "off" && !term && !selectedKeywordClusterId;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
-        term
+        term,
+        clusterMode,
+        keywordCluster: selectedKeywordClusterId
       });
       if (tableFilterKey !== lastTableFilterKey) {
         resetTableRenderState();
@@ -2328,7 +2386,13 @@ def render_html(
         if (!allowedNodeTypes.has(node.type)) {
           return false;
         }
-        return accountNodeTypes.has(node.type);
+        if (!accountNodeTypes.has(node.type)) {
+          return false;
+        }
+        if (selectedKeywordClusterId && keywordAssignments[node.id] !== selectedKeywordClusterId) {
+          return false;
+        }
+        return true;
       });
       const eligibleIds = new Set(eligibleNodes.map((node) => node.id));
       const matchedIds = new Set(
@@ -2431,8 +2495,13 @@ def render_html(
     if (clusterModeInput) {
       clusterModeInput.addEventListener("change", () => {
         updateClusterModeHelp();
+        updateKeywordClusterControl();
         applyFilters();
       });
+    }
+    if (keywordClusterInput) {
+      updateKeywordClusterOptions();
+      keywordClusterInput.addEventListener("change", applyFilters);
     }
     [
       ["reviewNodes", "review-nodes-table-more"],
@@ -2484,6 +2553,7 @@ def render_html(
     });
 
     updateClusterModeHelp();
+    updateKeywordClusterControl();
     applyFilters();
     })().catch((error) => {
       console.error(error);

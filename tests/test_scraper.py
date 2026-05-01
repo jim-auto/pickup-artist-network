@@ -359,7 +359,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertEqual(len(payload["candidates"]), 1)
         self.assertEqual(payload["candidates"][0]["type"], "monetization")
 
-    def test_generate_review_candidates_uses_reference_for_content_to_location(self) -> None:
+    def test_generate_review_candidates_uses_profile_mention_for_content_to_location(self) -> None:
         seed_entities = [
             {"type": "content", "id": "guide-01", "name": "Guide 01", "aliases": []},
             {"type": "location", "id": "shibuya", "name": "Shibuya", "aliases": []},
@@ -377,7 +377,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         payload = generate_review_candidates(seed_entities, generated_snapshots, graph)
 
         self.assertEqual(len(payload["candidates"]), 1)
-        self.assertEqual(payload["candidates"][0]["type"], "reference")
+        self.assertEqual(payload["candidates"][0]["type"], "profile_mention")
 
     def test_generate_review_candidates_consolidates_same_relation_across_bases(self) -> None:
         seed_entities = [
@@ -482,10 +482,10 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
     def test_candidate_to_observation_marks_approved_manual_interpretation(self) -> None:
         observation = candidate_to_observation(
             {
-                "id": "alpha__beta__reference__profile_text",
+                "id": "alpha__beta__profile_mention__profile_text",
                 "source": "alpha",
                 "target": "beta",
-                "type": "reference",
+                "type": "profile_mention",
                 "basis": "profile_text",
                 "matched_text": "Beta",
                 "evidence_text": "Alpha profile references Beta.",
@@ -496,7 +496,7 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         )
 
         self.assertEqual(observation["target"], "beta")
-        self.assertEqual(observation["type"], "reference")
+        self.assertEqual(observation["type"], "profile_mention")
         self.assertEqual(observation["evidence_kind"], "interpretation")
         self.assertFalse(observation["needs_review"])
         self.assertIn("Reviewed manually.", observation["review_notes"])
@@ -511,10 +511,10 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
             }
         ]
         candidate = {
-            "id": "alpha__beta__reference__profile_text",
+            "id": "alpha__beta__profile_mention__profile_text",
             "source": "alpha",
             "target": "beta",
-            "type": "reference",
+            "type": "profile_mention",
             "basis": "profile_text",
             "matched_text": "Beta",
             "evidence_text": "Alpha profile references Beta.",
@@ -528,13 +528,13 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertEqual(len(manual_snapshots[0]["observations"]), 1)
         self.assertEqual(manual_snapshots[0]["observations"][0]["target"], "beta")
 
-    def test_approve_review_candidate_seeds_new_manual_snapshot_from_reference(self) -> None:
+    def test_approve_review_candidate_seeds_new_manual_snapshot_from_profile_mention(self) -> None:
         manual_snapshots: list[dict[str, object]] = []
         candidate = {
-            "id": "alpha__beta__reference",
+            "id": "alpha__beta__profile_mention",
             "source": "alpha",
             "target": "beta",
-            "type": "reference",
+            "type": "profile_mention",
             "basis": "summary, profile_text",
             "matched_text": "Beta",
             "evidence_text": "Alpha profile references Beta.",
@@ -563,10 +563,10 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
 
     def test_approve_review_candidate_rejects_duplicate_observation(self) -> None:
         candidate = {
-            "id": "alpha__beta__reference__profile_text",
+            "id": "alpha__beta__profile_mention__profile_text",
             "source": "alpha",
             "target": "beta",
-            "type": "reference",
+            "type": "profile_mention",
             "basis": "profile_text",
             "matched_text": "Beta",
             "evidence_text": "Alpha profile references Beta.",
@@ -584,6 +584,31 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             approve_review_candidate(manual_snapshots, candidate)
+
+    def test_build_graph_from_sources_normalizes_legacy_reference_following_edges(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+            {"type": "person", "id": "beta", "name": "Beta", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/alpha",
+                "observations": [
+                    {
+                        "target": "beta",
+                        "type": "reference",
+                        "description": "Authenticated X following list shows this account follows @beta_user.",
+                        "source_urls": ["https://x.com/alpha/following"],
+                        "confidence": 0.64,
+                    }
+                ],
+            }
+        ]
+
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        self.assertTrue(any(edge.source == "alpha" and edge.target == "beta" and edge.type == "follow" for edge in graph.edges))
 
     def test_dismissed_candidate_is_filtered_from_regenerated_candidates(self) -> None:
         seed_entities = [

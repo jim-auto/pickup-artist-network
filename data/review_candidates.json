@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-01T08:42:03+00:00",
+  "generated_at": "2026-05-01T20:55:06+00:00",
   "candidates": [
     {
-      "id": "11goacemenc__rockpua-sub__reference",
+      "id": "11goacemenc__rockpua-sub__profile_mention",
       "source": "11goacemenc",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -89,10 +89,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "4meakg__kimu-himitsu2__reference",
+      "id": "4meakg__kimu-himitsu2__profile_mention",
       "source": "4meakg",
       "target": "kimu-himitsu2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -111,10 +111,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kimu__himitsu2'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "4meakg__kira-pua7__reference",
+      "id": "4meakg__kira-pua7__profile_mention",
       "source": "4meakg",
       "target": "kira-pua7",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -132,10 +132,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'キラ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "5sato-pua__omamco-pua2__reference",
+      "id": "5sato-pua__omamco-pua2__profile_mention",
       "source": "5sato-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -155,10 +155,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "5sato-pua__sato-legend__reference",
+      "id": "5sato-pua__sato-legend__profile_mention",
       "source": "5sato-pua",
       "target": "sato-legend",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -178,10 +178,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'sato_legend'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "aizen-pua__aizen-puasub__reference",
+      "id": "aizen-pua__aizen-puasub__profile_mention",
       "source": "aizen-pua",
       "target": "aizen-puasub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -200,10 +200,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'aizen_puasub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "aizen-pua__bossnn-pua__reference",
+      "id": "aizen-pua__bossnn-pua__profile_mention",
       "source": "aizen-pua",
       "target": "bossnn-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -222,10 +222,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bossnn_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "aizen-pua__hancho-pua__reference",
+      "id": "aizen-pua__hancho-pua__profile_mention",
       "source": "aizen-pua",
       "target": "hancho-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -243,10 +243,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'はんちょう'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "aizen-pua__nami-pua__reference",
+      "id": "aizen-pua__nami-pua__profile_mention",
       "source": "aizen-pua",
       "target": "nami-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -265,10 +265,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'nami__pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "aizen-puasub__aizen-pua__reference",
+      "id": "aizen-puasub__aizen-pua__profile_mention",
       "source": "aizen-puasub",
       "target": "aizen-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -287,10 +287,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'aizen_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "akagi-subpua__rockpua-sub__reference",
+      "id": "akagi-subpua__rockpua-sub__profile_mention",
       "source": "akagi-subpua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -309,10 +309,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "anus-asterisk__pua-shin__reference",
+      "id": "anus-asterisk__pua-shin__profile_mention",
       "source": "anus-asterisk",
       "target": "pua-shin",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -331,10 +331,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "asahi-sao-pua__ao-pua__reference",
+      "id": "asahi-sao-pua__ao-pua__profile_mention",
       "source": "asahi-sao-pua",
       "target": "ao-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -417,10 +417,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "ashikaga-street__rockpua-sub__reference",
+      "id": "ashikaga-street__rockpua-sub__profile_mention",
       "source": "ashikaga-street",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -461,10 +461,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "bach-sokuhou__nonchama-pro__reference",
+      "id": "bach-sokuhou__nonchama-pro__profile_mention",
       "source": "bach-sokuhou",
       "target": "nonchama-pro",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -483,10 +483,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "bale-pua__ststst-pua__reference",
+      "id": "bale-pua__ststst-pua__profile_mention",
       "source": "bale-pua",
       "target": "ststst-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -550,10 +550,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "bird-pua__rockpua-sub__reference",
+      "id": "bird-pua__rockpua-sub__profile_mention",
       "source": "bird-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -573,10 +573,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "bluexxxpua__ao-nampa__reference",
+      "id": "bluexxxpua__ao-nampa__profile_mention",
       "source": "bluexxxpua",
       "target": "ao-nampa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -615,10 +615,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "bossnn-pua__aizen-pua__reference",
+      "id": "bossnn-pua__aizen-pua__profile_mention",
       "source": "bossnn-pua",
       "target": "aizen-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -637,10 +637,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'aizen_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "chiba-gqn__rockpua-sub__reference",
+      "id": "chiba-gqn__rockpua-sub__profile_mention",
       "source": "chiba-gqn",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -683,10 +683,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "cx-lm5__rockpua-sub__reference",
+      "id": "cx-lm5__rockpua-sub__profile_mention",
       "source": "cx-lm5",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -705,10 +705,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "daigakusei-pua__hantenkinoyama__reference",
+      "id": "daigakusei-pua__hantenkinoyama__profile_mention",
       "source": "daigakusei-pua",
       "target": "hantenkinoyama",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -727,10 +727,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'hantenkinoyama'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "dd-mote__zero-n2__reference",
+      "id": "dd-mote__zero-n2__profile_mention",
       "source": "dd-mote",
       "target": "zero-n2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -816,10 +816,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "doraemon-pua__kei-pua__reference",
+      "id": "doraemon-pua__kei-pua__profile_mention",
       "source": "doraemon-pua",
       "target": "kei-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -837,10 +837,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "doraemon-pua__nonchama-pro__reference",
+      "id": "doraemon-pua__nonchama-pro__profile_mention",
       "source": "doraemon-pua",
       "target": "nonchama-pro",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -859,10 +859,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "dt-moteo__zero-n2__reference",
+      "id": "dt-moteo__zero-n2__profile_mention",
       "source": "dt-moteo",
       "target": "zero-n2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -882,10 +882,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "emuchi-pua__puro-nampa__reference",
+      "id": "emuchi-pua__puro-nampa__profile_mention",
       "source": "emuchi-pua",
       "target": "puro-nampa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -904,10 +904,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'puro_nanpa'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "fami-ver2__street-fami__reference",
+      "id": "fami-ver2__street-fami__profile_mention",
       "source": "fami-ver2",
       "target": "street-fami",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -926,10 +926,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'street_Fami'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "fami-ver2__streetkyo__reference",
+      "id": "fami-ver2__streetkyo__profile_mention",
       "source": "fami-ver2",
       "target": "streetkyo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -947,10 +947,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "feitan-sub__tinder-god__reference",
+      "id": "feitan-sub__tinder-god__profile_mention",
       "source": "feitan-sub",
       "target": "tinder-god",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1017,10 +1017,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "foy-jikokensan__foy-jibunmigaki__reference",
+      "id": "foy-jikokensan__foy-jibunmigaki__profile_mention",
       "source": "foy-jikokensan",
       "target": "foy-jibunmigaki",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1040,10 +1040,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'foy_jibunmigaki'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "fuku-third__fuku-second__reference",
+      "id": "fuku-third__fuku-second__profile_mention",
       "source": "fuku-third",
       "target": "fuku-second",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1084,10 +1084,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "futaro-pua__rockpua-sub__reference",
+      "id": "futaro-pua__rockpua-sub__profile_mention",
       "source": "futaro-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1107,10 +1107,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gatiikepua__pua-shin__reference",
+      "id": "gatiikepua__pua-shin__profile_mention",
       "source": "gatiikepua",
       "target": "pua-shin",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -1128,10 +1128,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gatiikepua__simba-pua__reference",
+      "id": "gatiikepua__simba-pua__profile_mention",
       "source": "gatiikepua",
       "target": "simba-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1151,10 +1151,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Simba_pua, シンバ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "genki-japan__omamco-pua2__reference",
+      "id": "genki-japan__omamco-pua2__profile_mention",
       "source": "genki-japan",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1174,10 +1174,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gintoki-street__minigola-street__reference",
+      "id": "gintoki-street__minigola-street__profile_mention",
       "source": "gintoki-street",
       "target": "minigola-street",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1197,10 +1197,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'minigola_street'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gintoki-street__rockpua-sub__reference",
+      "id": "gintoki-street__rockpua-sub__profile_mention",
       "source": "gintoki-street",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1220,10 +1220,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "goda-pua__omamco-pua2__reference",
+      "id": "goda-pua__omamco-pua2__profile_mention",
       "source": "goda-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1242,10 +1242,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gokun-pua__kurita-pua__reference",
+      "id": "gokun-pua__kurita-pua__profile_mention",
       "source": "gokun-pua",
       "target": "kurita-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1264,10 +1264,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '栗田'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gokun-pua__rockpua-sub__reference",
+      "id": "gokun-pua__rockpua-sub__profile_mention",
       "source": "gokun-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1308,10 +1308,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gotokyo-shibuya-guide__tokyo__reference",
+      "id": "gotokyo-shibuya-guide__tokyo__profile_mention",
       "source": "gotokyo-shibuya-guide",
       "target": "tokyo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -1330,10 +1330,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Tokyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gotokyo-shinjuku-guide__streetkyo__reference",
+      "id": "gotokyo-shinjuku-guide__streetkyo__profile_mention",
       "source": "gotokyo-shinjuku-guide",
       "target": "streetkyo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1353,10 +1353,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "gotokyo-shinjuku-guide__tokyo__reference",
+      "id": "gotokyo-shinjuku-guide__tokyo__profile_mention",
       "source": "gotokyo-shinjuku-guide",
       "target": "tokyo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1376,10 +1376,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Tokyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "greed-pua__greed-pua-sub__reference",
+      "id": "greed-pua__greed-pua-sub__profile_mention",
       "source": "greed-pua",
       "target": "greed-pua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1398,10 +1398,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'greed_pua_sub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "greed-pua-sub__greed-pua__reference",
+      "id": "greed-pua-sub__greed-pua__profile_mention",
       "source": "greed-pua-sub",
       "target": "greed-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1445,10 +1445,33 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ, マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hanasikikoka__mendako-pua__reference",
+      "id": "hameyuuuu__yato-mote__profile_mention",
+      "source": "hameyuuuu",
+      "target": "yato-mote",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "夜ト",
+      "matched_texts": [
+        "夜ト"
+      ],
+      "evidence_text": "はめゆ＠マッチングアプリカメラマン (@hameyuuuu)\nアプリごとに求められる「熱量」は違う。その差を設計するマチアプ撮影家📸撮影実績700人以上｜Tinder〜誠実系まで最適化｜全国出張可｜#はめゆの撮影会｜提携：夜トコンサル/外見コンサルReMake/一番星プロジェクト\nLocation: 撮影詳細は公式サイト→",
+      "source_urls": [
+        "https://x.com/hameyuuuu",
+        "https://hameyu.com/"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '夜ト'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "hanasikikoka__mendako-pua__profile_mention",
       "source": "hanasikikoka",
       "target": "mendako-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1467,10 +1490,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hancho-pua__omamco-pua2__reference",
+      "id": "hancho-pua__omamco-pua2__profile_mention",
       "source": "hancho-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1512,10 +1535,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hanzo-prim__hanzo-prim-sub__reference",
+      "id": "hanzo-prim__hanzo-prim-sub__profile_mention",
       "source": "hanzo-prim",
       "target": "hanzo-prim-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1535,10 +1558,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'hanzo_prim_sub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hanzo-prim__otaku-pua__reference",
+      "id": "hanzo-prim__otaku-pua__profile_mention",
       "source": "hanzo-prim",
       "target": "otaku-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1579,10 +1602,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hanzo-prim-sub__hanzo-prim__reference",
+      "id": "hanzo-prim-sub__hanzo-prim__profile_mention",
       "source": "hanzo-prim-sub",
       "target": "hanzo-prim",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1601,10 +1624,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'hanzo_prim'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "happy0210h__rockpua-sub__reference",
+      "id": "happy0210h__rockpua-sub__profile_mention",
       "source": "happy0210h",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1646,10 +1669,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "hase3nox__mendako-pua__reference",
+      "id": "hase3nox__mendako-pua__profile_mention",
       "source": "hase3nox",
       "target": "mendako-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1783,10 +1806,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "himotenohoshi__utaa-pua__reference",
+      "id": "himotenohoshi__utaa-pua__profile_mention",
       "source": "himotenohoshi",
       "target": "utaa-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1806,10 +1829,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'うた'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "inpsub__ryepua__reference",
+      "id": "inpsub__ryepua__profile_mention",
       "source": "inpsub",
       "target": "ryepua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1828,10 +1851,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ryepua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "inumaki-pua__rockpua-sub__reference",
+      "id": "inumaki-pua__rockpua-sub__profile_mention",
       "source": "inumaki-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1873,10 +1896,56 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Shinjuku'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kaiser-pua__mendako-pua__reference",
+      "id": "kageki-ashura__mote-ren-ai7__profile_mention",
+      "source": "kageki-ashura",
+      "target": "mote-ren-ai7",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "mote_ren_ai7",
+      "matched_texts": [
+        "mote_ren_ai7"
+      ],
+      "evidence_text": "過激な♥a♥s♥h♥u♥r♥a♥ (@kageki_ashura)\nこのアカウントは危険なアカウントです🈲 本垢@ShinjukuAshura @mote_ren_ai7フォローしていない人は許可しません\nLocation: 無料プレゼント配布中➡️🎁",
+      "source_urls": [
+        "https://x.com/kageki_ashura",
+        "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mote_ren_ai7'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kageki-ashura__shinjukuashura__profile_mention",
+      "source": "kageki-ashura",
+      "target": "shinjukuashura",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "ShinjukuAshura",
+      "matched_texts": [
+        "ShinjukuAshura"
+      ],
+      "evidence_text": "過激な♥a♥s♥h♥u♥r♥a♥ (@kageki_ashura)\nこのアカウントは危険なアカウントです🈲 本垢@ShinjukuAshura @mote_ren_ai7フォローしていない人は許可しません\nLocation: 無料プレゼント配布中➡️🎁",
+      "source_urls": [
+        "https://x.com/kageki_ashura",
+        "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ShinjukuAshura'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "kaiser-pua__mendako-pua__profile_mention",
       "source": "kaiser-pua",
       "target": "mendako-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1895,10 +1964,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mendako_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "karearitaberu__omamco-pua2__reference",
+      "id": "karearitaberu__omamco-pua2__profile_mention",
       "source": "karearitaberu",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1941,10 +2010,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kayakkupua__kayakkupuasub__reference",
+      "id": "kayakkupua__kayakkupuasub__profile_mention",
       "source": "kayakkupua",
       "target": "kayakkupuasub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -1964,10 +2033,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kayakkupuasub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kayakkupuasub__kayakkupua__reference",
+      "id": "kayakkupuasub__kayakkupua__profile_mention",
       "source": "kayakkupuasub",
       "target": "kayakkupua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2008,10 +2077,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kazama-player__kazama-0425__reference",
+      "id": "kazama-player__kazama-0425__profile_mention",
       "source": "kazama-player",
       "target": "kazama-0425",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2030,10 +2099,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazama_0425'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kazunanpa__kazunanpa2__reference",
+      "id": "kazunanpa__kazunanpa2__profile_mention",
       "source": "kazunanpa",
       "target": "kazunanpa2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2052,10 +2121,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazunanpa2'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kazunanpa__yutty-pua__reference",
+      "id": "kazunanpa__yutty-pua__profile_mention",
       "source": "kazunanpa",
       "target": "yutty-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2074,10 +2143,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'yutty_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kazunanpa2__kazunanpa__reference",
+      "id": "kazunanpa2__kazunanpa__profile_mention",
       "source": "kazunanpa2",
       "target": "kazunanpa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2096,10 +2165,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kazunanpa'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kei-male-apex__kei-pua__reference",
+      "id": "kei-male-apex__kei-pua__profile_mention",
       "source": "kei-male-apex",
       "target": "kei-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -2118,10 +2187,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kei-male-apex__omamco-pua2__reference",
+      "id": "kei-male-apex__omamco-pua2__profile_mention",
       "source": "kei-male-apex",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2141,10 +2210,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kibaaaana__idiot-pua__reference",
+      "id": "kibaaaana__idiot-pua__profile_mention",
       "source": "kibaaaana",
       "target": "idiot-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -2163,10 +2232,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'aaa'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kibaaaana__nonchama-pro__reference",
+      "id": "kibaaaana__nonchama-pro__profile_mention",
       "source": "kibaaaana",
       "target": "nonchama-pro",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2186,10 +2255,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kimu-himitsu2__4meakg__reference",
+      "id": "kimu-himitsu2__4meakg__profile_mention",
       "source": "kimu-himitsu2",
       "target": "4meakg",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2208,10 +2277,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '4meakg'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kimu-himitsu2__like-himitsu__reference",
+      "id": "kimu-himitsu2__like-himitsu__profile_mention",
       "source": "kimu-himitsu2",
       "target": "like-himitsu",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2230,10 +2299,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'like_himitsu'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kimu-himitsu2__ziyuunotsubasa1__reference",
+      "id": "kimu-himitsu2__ziyuunotsubasa1__profile_mention",
       "source": "kimu-himitsu2",
       "target": "ziyuunotsubasa1",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2252,10 +2321,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ziyuunotsubasa1'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kiri-stomach__rockpua-sub__reference",
+      "id": "kiri-stomach__rockpua-sub__profile_mention",
       "source": "kiri-stomach",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -2273,10 +2342,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "konkatsu-nanpa__rui0808-pua__reference",
+      "id": "konkatsu-nanpa__rui0808-pua__profile_mention",
       "source": "konkatsu-nanpa",
       "target": "rui0808-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2319,10 +2388,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "korilla-pua__puro-nampa__reference",
+      "id": "korilla-pua__puro-nampa__profile_mention",
       "source": "korilla-pua",
       "target": "puro-nampa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2342,10 +2411,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kurita-pua__sub-kurita__reference",
+      "id": "kurita-pua__sub-kurita__profile_mention",
       "source": "kurita-pua",
       "target": "sub-kurita",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2388,10 +2457,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kuroiwa-45__kuroiwa-sub__reference",
+      "id": "kuroiwa-45__kuroiwa-sub__profile_mention",
       "source": "kuroiwa-45",
       "target": "kuroiwa-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2411,10 +2480,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kuroiwa_sub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kuroiwa-45__otaku-pua__reference",
+      "id": "kuroiwa-45__otaku-pua__profile_mention",
       "source": "kuroiwa-45",
       "target": "otaku-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2434,10 +2503,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'オタク'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kuroiwa-sub__kuroiwa-45__reference",
+      "id": "kuroiwa-sub__kuroiwa-45__profile_mention",
       "source": "kuroiwa-sub",
       "target": "kuroiwa-45",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2502,10 +2571,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kurosakikun__k-932654__reference",
+      "id": "kurosakikun__k-932654__profile_mention",
       "source": "kurosakikun",
       "target": "k-932654",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2525,10 +2594,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'K_932654'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "lillard-motetai__rockpua-sub__reference",
+      "id": "lillard-motetai__rockpua-sub__profile_mention",
       "source": "lillard-motetai",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2568,10 +2637,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Nagoya'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "machapua3__xcandee__reference",
+      "id": "machapua3__xcandee__profile_mention",
       "source": "machapua3",
       "target": "xcandee",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2591,10 +2660,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '_xCandee'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mamemame-nanpa__motemaga-japan__reference",
+      "id": "mamemame-nanpa__motemaga-japan__profile_mention",
       "source": "mamemame-nanpa",
       "target": "motemaga-japan",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2614,10 +2683,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'motemagajapan'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mamemame-nanpa__omamco-pua2__reference",
+      "id": "mamemame-nanpa__omamco-pua2__profile_mention",
       "source": "mamemame-nanpa",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2637,10 +2706,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "marifax-pua__pochama-tuwaou__reference",
+      "id": "marifax-pua__pochama-tuwaou__profile_mention",
       "source": "marifax-pua",
       "target": "pochama-tuwaou",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -2702,10 +2771,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '渋谷'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mentaikopua-oji__rockpua-sub__reference",
+      "id": "mentaikopua-oji__rockpua-sub__profile_mention",
       "source": "mentaikopua-oji",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2724,10 +2793,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mikeymikey0601__mikeynosub__reference",
+      "id": "mikeymikey0601__mikeynosub__profile_mention",
       "source": "mikeymikey0601",
       "target": "mikeynosub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2747,10 +2816,32 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mikeynosub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mikky-motecoach__mky-match__reference",
+      "id": "mikeynosub__mikeymikey0601__profile_mention",
+      "source": "mikeynosub",
+      "target": "mikeymikey0601",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "mikeymikey0601",
+      "matched_texts": [
+        "mikeymikey0601"
+      ],
+      "evidence_text": "マイキーサブ (@mikeynosub)\n本垢→【@mikeymikey0601 】|ライン→ 【https://t.co/1jEyT0k1Vw】",
+      "source_urls": [
+        "https://x.com/mikeynosub"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mikeymikey0601'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "mikky-motecoach__mky-match__profile_mention",
       "source": "mikky-motecoach",
       "target": "mky-match",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2792,10 +2883,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "minorun-ceo__syahudearu__reference",
+      "id": "minorun-ceo__syahudearu__profile_mention",
       "source": "minorun-ceo",
       "target": "syahudearu",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2838,10 +2929,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mky-match__mikky-motecoach__reference",
+      "id": "mky-match__mikky-motecoach__profile_mention",
       "source": "mky-match",
       "target": "mikky-motecoach",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2885,10 +2976,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Shinjuku'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mote-ren-ai7__kageki-ashura__reference",
+      "id": "mote-ren-ai7__kageki-ashura__profile_mention",
       "source": "mote-ren-ai7",
       "target": "kageki-ashura",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2908,10 +2999,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kageki_ashura'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "mote-ren-ai7__shinjukuashura__reference",
+      "id": "mote-ren-ai7__shinjukuashura__profile_mention",
       "source": "mote-ren-ai7",
       "target": "shinjukuashura",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2931,10 +3022,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ShinjukuAshura'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "motezoh-biz__chikio-nmp__reference",
+      "id": "motezoh-biz__chikio-nmp__profile_mention",
       "source": "motezoh-biz",
       "target": "chikio-nmp",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2976,10 +3067,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nampa-poke__pua-poke__reference",
+      "id": "nampa-poke__pua-poke__profile_mention",
       "source": "nampa-poke",
       "target": "pua-poke",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -2998,10 +3089,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pua_poke'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nampa-poke__yuu-renai__reference",
+      "id": "nampa-poke__yuu-renai__profile_mention",
       "source": "nampa-poke",
       "target": "yuu-renai",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3019,10 +3110,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nampa-urajirou__real-nampa__reference",
+      "id": "nampa-urajirou__real-nampa__profile_mention",
       "source": "nampa-urajirou",
       "target": "real-nampa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3063,10 +3154,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nampakago__ryosuke-street2__reference",
+      "id": "nampakago__ryosuke-street2__profile_mention",
       "source": "nampakago",
       "target": "ryosuke-street2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3086,10 +3177,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ryosuke_street2, 涼介'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "namuskun__namusubkun__reference",
+      "id": "namuskun__namusubkun__profile_mention",
       "source": "namuskun",
       "target": "namusubkun",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3110,10 +3201,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'namusubkun, namusub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "namusubkun__namuskun__reference",
+      "id": "namusubkun__namuskun__profile_mention",
       "source": "namusubkun",
       "target": "namuskun",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3132,10 +3223,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'namuskun'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nandeyanen-pua__kurita-pua__reference",
+      "id": "nandeyanen-pua__kurita-pua__profile_mention",
       "source": "nandeyanen-pua",
       "target": "kurita-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3154,10 +3245,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '栗田'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nandeyanen-pua__rockpua-sub__reference",
+      "id": "nandeyanen-pua__rockpua-sub__profile_mention",
       "source": "nandeyanen-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3176,10 +3267,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpa-obiwan__obiwan-beauty__reference",
+      "id": "nanpa-obiwan__obiwan-beauty__profile_mention",
       "source": "nanpa-obiwan",
       "target": "obiwan-beauty",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3198,10 +3289,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'obiwan_beauty'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpa-obiwan__rockpua-sub__reference",
+      "id": "nanpa-obiwan__rockpua-sub__profile_mention",
       "source": "nanpa-obiwan",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3243,10 +3334,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpa-pegasasu__pg-yoasobi__reference",
+      "id": "nanpa-pegasasu__pg-yoasobi__profile_mention",
       "source": "nanpa-pegasasu",
       "target": "pg-yoasobi",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3265,10 +3356,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'PEGA'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpahamehame__lonely-stonan__reference",
+      "id": "nanpahamehame__lonely-stonan__profile_mention",
       "source": "nanpahamehame",
       "target": "lonely-stonan",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3286,10 +3377,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'イーブラ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpaoh-yuya__yuu-renai__reference",
+      "id": "nanpaoh-yuya__yuu-renai__profile_mention",
       "source": "nanpaoh-yuya",
       "target": "yuu-renai",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3308,10 +3399,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nanpasd__yuki100-pua__reference",
+      "id": "nanpasd__yuki100-pua__profile_mention",
       "source": "nanpasd",
       "target": "yuki100-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3398,10 +3489,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "netonan99__omamco-pua2__reference",
+      "id": "netonan99__omamco-pua2__profile_mention",
       "source": "netonan99",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3421,10 +3512,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "niko-pua__omamco-pua2__reference",
+      "id": "niko-pua__omamco-pua2__profile_mention",
       "source": "niko-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3444,10 +3535,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nmpst913__rockpua-sub__reference",
+      "id": "nmpst913__rockpua-sub__profile_mention",
       "source": "nmpst913",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3466,10 +3557,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nonchama-pro__rockpua-sub__reference",
+      "id": "nonchama-pro__rockpua-sub__profile_mention",
       "source": "nonchama-pro",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3489,10 +3580,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nsan-pua__kaiser-pua__reference",
+      "id": "nsan-pua__kaiser-pua__profile_mention",
       "source": "nsan-pua",
       "target": "kaiser-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3512,10 +3603,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kaiser_pua, KAISER'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "nsan-pua__mendako-pua__reference",
+      "id": "nsan-pua__mendako-pua__profile_mention",
       "source": "nsan-pua",
       "target": "mendako-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3556,10 +3647,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "onizuka-pua__kurosakikun__reference",
+      "id": "onizuka-pua__kurosakikun__profile_mention",
       "source": "onizuka-pua",
       "target": "kurosakikun",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3578,10 +3669,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "oppsex1919__omamco-pua2__reference",
+      "id": "oppsex1919__omamco-pua2__profile_mention",
       "source": "oppsex1919",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -3620,10 +3711,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Osaka'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "osaka-kakuue__rockpua-sub__reference",
+      "id": "osaka-kakuue__rockpua-sub__profile_mention",
       "source": "osaka-kakuue",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3642,10 +3733,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "otaku-pua__omamco-pua2__reference",
+      "id": "otaku-pua__omamco-pua2__profile_mention",
       "source": "otaku-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3664,10 +3755,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "otaku-pua__qh0kum__reference",
+      "id": "otaku-pua__qh0kum__profile_mention",
       "source": "otaku-pua",
       "target": "qh0kum",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3686,10 +3777,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'qh0kum'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "outlook-sabo4__outlook-sub4__reference",
+      "id": "outlook-sabo4__outlook-sub4__profile_mention",
       "source": "outlook-sabo4",
       "target": "outlook-sub4",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3709,10 +3800,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'outlook_sub_4'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "outlook-sub4__outlook-sabo4__reference",
+      "id": "outlook-sub4__outlook-sabo4__profile_mention",
       "source": "outlook-sub4",
       "target": "outlook-sabo4",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3731,10 +3822,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'outlook_sabo_4'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "paxnpa123__rockpua-sub__reference",
+      "id": "paxnpa123__rockpua-sub__profile_mention",
       "source": "paxnpa123",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3753,10 +3844,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pg-yoasobi__nanpa-pegasasu__reference",
+      "id": "pg-yoasobi__nanpa-pegasasu__profile_mention",
       "source": "pg-yoasobi",
       "target": "nanpa-pegasasu",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3775,10 +3866,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'nanpa_pegasasu'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pika-pua__pika-stochi__reference",
+      "id": "pika-pua__pika-stochi__profile_mention",
       "source": "pika-pua",
       "target": "pika-stochi",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3798,10 +3889,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_stochi'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pika-pua__pika-sublol__reference",
+      "id": "pika-pua__pika-sublol__profile_mention",
       "source": "pika-pua",
       "target": "pika-sublol",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3821,10 +3912,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_sublol'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pika-sublol__pika-pua__reference",
+      "id": "pika-sublol__pika-pua__profile_mention",
       "source": "pika-sublol",
       "target": "pika-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3844,10 +3935,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pochama-izon__pochama-tuwaou__reference",
+      "id": "pochama-izon__pochama-tuwaou__profile_mention",
       "source": "pochama-izon",
       "target": "pochama-tuwaou",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3867,10 +3958,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pochama_tuwaou, ポチャマ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pochama-tuwaou__pochama-izon__reference",
+      "id": "pochama-tuwaou__pochama-izon__profile_mention",
       "source": "pochama-tuwaou",
       "target": "pochama-izon",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3890,10 +3981,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pochama_izon'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pochama-tuwaou__zero-n2__reference",
+      "id": "pochama-tuwaou__zero-n2__profile_mention",
       "source": "pochama-tuwaou",
       "target": "zero-n2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3934,10 +4025,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-chilll__eroeromancotin__reference",
+      "id": "pua-chilll__eroeromancotin__profile_mention",
       "source": "pua-chilll",
       "target": "eroeromancotin",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3956,10 +4047,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'eroeromancotin'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-chilll__sub-chilll__reference",
+      "id": "pua-chilll__sub-chilll__profile_mention",
       "source": "pua-chilll",
       "target": "sub-chilll",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -3978,10 +4069,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'sub_chilll'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-core__pua-co__reference",
+      "id": "pua-core__pua-co__profile_mention",
       "source": "pua-core",
       "target": "pua-co",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4022,10 +4113,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京都, 東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-ishikawa__omamco-pua2__reference",
+      "id": "pua-ishikawa__omamco-pua2__profile_mention",
       "source": "pua-ishikawa",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4045,10 +4136,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-kei-mh__kei-pua__reference",
+      "id": "pua-kei-mh__kei-pua__profile_mention",
       "source": "pua-kei-mh",
       "target": "kei-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4066,10 +4157,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-kei-mh__pua-kei-sg__reference",
+      "id": "pua-kei-mh__pua-kei-sg__profile_mention",
       "source": "pua-kei-mh",
       "target": "pua-kei-sg",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4088,10 +4179,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'PUA_KEI_SG'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-kei-sg__kei-pua__reference",
+      "id": "pua-kei-sg__kei-pua__profile_mention",
       "source": "pua-kei-sg",
       "target": "kei-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4109,10 +4200,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-poke__nampa-poke__reference",
+      "id": "pua-poke__nampa-poke__profile_mention",
       "source": "pua-poke",
       "target": "nampa-poke",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4132,10 +4223,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'nampa_poke, ゆうき'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-poke__yuu-renai__reference",
+      "id": "pua-poke__yuu-renai__profile_mention",
       "source": "pua-poke",
       "target": "yuu-renai",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4175,10 +4266,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-vinsmoke__rockpua-sub__reference",
+      "id": "pua-vinsmoke__rockpua-sub__profile_mention",
       "source": "pua-vinsmoke",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4197,10 +4288,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "pua-yossy__rockpua-sub__reference",
+      "id": "pua-yossy__rockpua-sub__profile_mention",
       "source": "pua-yossy",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4219,10 +4310,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "puro-nampa__emuchi-pua__reference",
+      "id": "puro-nampa__emuchi-pua__profile_mention",
       "source": "puro-nampa",
       "target": "emuchi-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4265,10 +4356,33 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '名古屋'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "reborn-pua__omamco-pua2__reference",
+      "id": "real-nampa__nampa-urajirou__profile_mention",
+      "source": "real-nampa",
+      "target": "nampa-urajirou",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "nampa_urajirou",
+      "matched_texts": [
+        "nampa_urajirou"
+      ],
+      "evidence_text": "ナンパ次郎 (@real_nampa)\nナンパで経験人数1,000人over。ナンパでGETした女の子のハメ撮りUPしてます。 フォロー推奨▶︎@nampa_urajirou\nLocation: Xで投稿した長編動画はここから→",
+      "source_urls": [
+        "https://x.com/real_nampa",
+        "https://pont.co/u/nampa_jirou"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'nampa_urajirou'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "reborn-pua__omamco-pua2__profile_mention",
       "source": "reborn-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4287,10 +4401,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "recoa-nanpa__gureran-m__reference",
+      "id": "recoa-nanpa__gureran-m__profile_mention",
       "source": "recoa-nanpa",
       "target": "gureran-m",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4331,10 +4445,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "riokun-pua__riokun-pua-sub__reference",
+      "id": "riokun-pua__riokun-pua-sub__profile_mention",
       "source": "riokun-pua",
       "target": "riokun-pua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4353,10 +4467,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'riokun_pua_sub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "riokun-pua-sub__riokun-pua__reference",
+      "id": "riokun-pua-sub__riokun-pua__profile_mention",
       "source": "riokun-pua-sub",
       "target": "riokun-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4375,10 +4489,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'riokun_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "ryepua__inpsub__reference",
+      "id": "ryepua__inpsub__profile_mention",
       "source": "ryepua",
       "target": "inpsub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4397,10 +4511,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'inpsub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "s-mote-money__rockpua-sub__reference",
+      "id": "s-mote-money__rockpua-sub__profile_mention",
       "source": "s-mote-money",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4419,10 +4533,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "saikyo-sutoti__streetkyo__reference",
+      "id": "saikyo-sutoti__streetkyo__profile_mention",
       "source": "saikyo-sutoti",
       "target": "streetkyo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4441,10 +4555,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "sato-legend__5sato-pua__reference",
+      "id": "sato-legend__5sato-pua__profile_mention",
       "source": "sato-legend",
       "target": "5sato-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4463,10 +4577,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '5sato_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "shelly4821__rockpua-sub__reference",
+      "id": "shelly4821__rockpua-sub__profile_mention",
       "source": "shelly4821",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4530,10 +4644,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Shinjuku'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "shinjukuashura__kageki-ashura__reference",
+      "id": "shinjukuashura__kageki-ashura__profile_mention",
       "source": "shinjukuashura",
       "target": "kageki-ashura",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4553,10 +4667,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kageki_ashura'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "shinjukuashura__mote-ren-ai7__reference",
+      "id": "shinjukuashura__mote-ren-ai7__profile_mention",
       "source": "shinjukuashura",
       "target": "mote-ren-ai7",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4576,10 +4690,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mote_ren_ai7'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "shinkawa-pua__puro-nampa__reference",
+      "id": "shinkawa-pua__puro-nampa__profile_mention",
       "source": "shinkawa-pua",
       "target": "puro-nampa",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4642,10 +4756,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "simba-pua__gatiikepua__reference",
+      "id": "simba-pua__gatiikepua__profile_mention",
       "source": "simba-pua",
       "target": "gatiikepua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4664,10 +4778,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'gatiikepua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "simba-pua__pua-shin__reference",
+      "id": "simba-pua__pua-shin__profile_mention",
       "source": "simba-pua",
       "target": "pua-shin",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -4685,10 +4799,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "siofkn-pua__outlook-sabo4__reference",
+      "id": "siofkn-pua__outlook-sabo4__profile_mention",
       "source": "siofkn-pua",
       "target": "outlook-sabo4",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4707,10 +4821,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'outlook_sabo_4'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "slinky-pua__bantan-pua__reference",
+      "id": "slinky-pua__bantan-pua__profile_mention",
       "source": "slinky-pua",
       "target": "bantan-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4729,10 +4843,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bantan_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "soku-worker2__rockpua-sub__reference",
+      "id": "soku-worker2__rockpua-sub__profile_mention",
       "source": "soku-worker2",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4752,10 +4866,32 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "street-fami__fami-ver2__reference",
+      "id": "srs-pua-main__srs-pua-sub__profile_mention",
+      "source": "srs-pua-main",
+      "target": "srs-pua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "srs_pua",
+      "matched_texts": [
+        "srs_pua"
+      ],
+      "evidence_text": "怒りのシラス💢@ピカ講習@淘汰男FC (@srs_pua_)\nストナンのリアルとメンブレを発信/スト値診断1.5/還暦だけどがんばります/帝都/累計54/サブ垢@srs_pua ファン募集中 『街が渋いんじゃない、お前が渋いんだ』 キセクに顔グダ食らった男/クラスタ界の土足/シコウルフ即り隊",
+      "source_urls": [
+        "https://x.com/srs_pua_"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'srs_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "street-fami__fami-ver2__profile_mention",
       "source": "street-fami",
       "target": "fami-ver2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4775,10 +4911,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'fami_ver2'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "street-fami__nonchama-pro__reference",
+      "id": "street-fami__nonchama-pro__profile_mention",
       "source": "street-fami",
       "target": "nonchama-pro",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4798,10 +4934,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "street-fami__pua-shin__reference",
+      "id": "street-fami__pua-shin__profile_mention",
       "source": "street-fami",
       "target": "pua-shin",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4821,10 +4957,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "streets-bach__bach-sokuhou__reference",
+      "id": "streets-bach__bach-sokuhou__profile_mention",
       "source": "streets-bach",
       "target": "bach-sokuhou",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4844,10 +4980,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bach_sokuhou'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "streets-bach__nonchama-pro__reference",
+      "id": "streets-bach__nonchama-pro__profile_mention",
       "source": "streets-bach",
       "target": "nonchama-pro",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4867,10 +5003,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "sub-riddle__tomu-riddle__reference",
+      "id": "sub-riddle__tomu-riddle__profile_mention",
       "source": "sub-riddle",
       "target": "tomu-riddle",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4911,10 +5047,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "suzuniki-pua__s-mote-money__reference",
+      "id": "suzuniki-pua__s-mote-money__profile_mention",
       "source": "suzuniki-pua",
       "target": "s-mote-money",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4933,10 +5069,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 's_mote_money'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "syahudearu__minorun-ceo__reference",
+      "id": "syahudearu__minorun-ceo__profile_mention",
       "source": "syahudearu",
       "target": "minorun-ceo",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -4956,10 +5092,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'minorun_ceo'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "syu-puanet__rockpua-sub__reference",
+      "id": "syu-puanet__rockpua-sub__profile_mention",
       "source": "syu-puanet",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5001,10 +5137,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tantan-pua__tantan-ura__reference",
+      "id": "tantan-pua__tantan-ura__profile_mention",
       "source": "tantan-pua",
       "target": "tantan-ura",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5024,10 +5160,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'tantan_ura__'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tantan-ura__tantan-pua__reference",
+      "id": "tantan-ura__tantan-pua__profile_mention",
       "source": "tantan-ura",
       "target": "tantan-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5070,10 +5206,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "task-pua__rockpua-sub__reference",
+      "id": "task-pua__rockpua-sub__profile_mention",
       "source": "task-pua",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5116,10 +5252,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tinder-god__feitan-sub__reference",
+      "id": "tinder-god__feitan-sub__profile_mention",
       "source": "tinder-god",
       "target": "feitan-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5161,10 +5297,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tomu-riddle__sub-riddle__reference",
+      "id": "tomu-riddle__sub-riddle__profile_mention",
       "source": "tomu-riddle",
       "target": "sub-riddle",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5183,10 +5319,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'sub_riddle'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tyopa-pua__tyopa-sub__reference",
+      "id": "tyopa-pua__tyopa-sub__profile_mention",
       "source": "tyopa-pua",
       "target": "tyopa-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5205,10 +5341,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'tyopa_sub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "tyopa-sub__tyopa-pua__reference",
+      "id": "tyopa-sub__tyopa-pua__profile_mention",
       "source": "tyopa-sub",
       "target": "tyopa-pua",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5227,10 +5363,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'tyopa_pua'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "untracemind__omamco-pua2__reference",
+      "id": "untracemind__omamco-pua2__profile_mention",
       "source": "untracemind",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5272,10 +5408,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "utaa-pua__omamco-pua2__reference",
+      "id": "utaa-pua__omamco-pua2__profile_mention",
       "source": "utaa-pua",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5294,10 +5430,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "vegeta-street__rockpua-sub__reference",
+      "id": "vegeta-street__rockpua-sub__profile_mention",
       "source": "vegeta-street",
       "target": "rockpua-sub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5317,10 +5453,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "weekly-nanpa__kira-pua7__reference",
+      "id": "weekly-nanpa__kira-pua7__profile_mention",
       "source": "weekly-nanpa",
       "target": "kira-pua7",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5340,10 +5476,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'キラ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "xcandee__machapua3__reference",
+      "id": "xcandee__machapua3__profile_mention",
       "source": "xcandee",
       "target": "machapua3",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5363,10 +5499,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'machapua3'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "xcandee__omamco-pua2__reference",
+      "id": "xcandee__omamco-pua2__profile_mention",
       "source": "xcandee",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5432,10 +5568,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "yayaya-zyakudan__pochama-tuwaou__reference",
+      "id": "yayaya-zyakudan__pochama-tuwaou__profile_mention",
       "source": "yayaya-zyakudan",
       "target": "pochama-tuwaou",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"
@@ -5453,10 +5589,10 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "yolu-pua__yolusub__reference",
+      "id": "yolu-pua__yolusub__profile_mention",
       "source": "yolu-pua",
       "target": "yolusub",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5475,10 +5611,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'yolusub'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "zenitsu-tinder__omamco-pua2__reference",
+      "id": "zenitsu-tinder__omamco-pua2__profile_mention",
       "source": "zenitsu-tinder",
       "target": "omamco-pua2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
@@ -5519,10 +5655,10 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "zero-pua__zero-n2__reference",
+      "id": "zero-pua__zero-n2__profile_mention",
       "source": "zero-pua",
       "target": "zero-n2",
-      "type": "reference",
+      "type": "profile_mention",
       "basis": "profile_text",
       "bases": [
         "profile_text"

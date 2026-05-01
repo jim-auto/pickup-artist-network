@@ -60,6 +60,8 @@ REAL_GROWTH_PHASES = (
     {"label": "Phase 6", "real_person_target": 1000},
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
+LEGACY_EDGE_TYPES = frozenset({"reference"})
+FOLLOW_REFERENCE_PREFIX = "authenticated x following list shows this account follows @"
 
 DEFAULT_PLATFORM_NODES = {
     "x": {
@@ -443,6 +445,42 @@ def validate_seed_entities(seed_entities: list[dict[str, object]]) -> None:
         seen_ids.add(entity_id)
 
 
+def normalize_edge_type(edge_type: object, *, description: str = "") -> str:
+    normalized = str(edge_type or "").strip()
+    if normalized not in LEGACY_EDGE_TYPES:
+        return normalized
+    if description.strip().casefold().startswith(FOLLOW_REFERENCE_PREFIX):
+        return "follow"
+    return "profile_mention"
+
+
+def normalize_observation(observation: dict[str, object]) -> dict[str, object]:
+    normalized = dict(observation)
+    normalized["type"] = normalize_edge_type(
+        observation.get("type", ""),
+        description=str(observation.get("description", "")).strip(),
+    )
+    return normalized
+
+
+def normalize_review_candidate(candidate: dict[str, object]) -> dict[str, object]:
+    normalized = dict(candidate)
+    normalized["type"] = normalize_edge_type(
+        candidate.get("type", ""),
+        description=str(candidate.get("evidence_text", candidate.get("description", ""))).strip(),
+    )
+    return normalized
+
+
+def normalize_review_candidate_decision(decision: dict[str, object]) -> dict[str, object]:
+    normalized = dict(decision)
+    normalized["type"] = normalize_edge_type(
+        decision.get("type", ""),
+        description=str(decision.get("evidence_text", decision.get("description", ""))).strip(),
+    )
+    return normalized
+
+
 def validate_source_snapshots(
     snapshots: list[dict[str, object]],
     seed_entities: list[dict[str, object]],
@@ -506,12 +544,15 @@ def validate_source_snapshots(
         for index, observation in enumerate(observations):
             if not isinstance(observation, dict):
                 raise ValueError(f"{account_id}.observations[{index}] must be an object")
-            observation_type = str(observation.get("type", "")).strip()
+            description = str(observation.get("description", "")).strip()
+            observation_type = normalize_edge_type(
+                observation.get("type", ""),
+                description=description,
+            )
             if observation_type not in EDGE_TYPES:
                 raise ValueError(
                     f"{account_id}.observations[{index}] has unsupported edge type: {observation_type}"
                 )
-            description = str(observation.get("description", "")).strip()
             if not description:
                 raise ValueError(f"{account_id}.observations[{index}] description is required")
 
@@ -585,11 +626,14 @@ def dedupe_observations(observations: list[dict[str, object]]) -> list[dict[str,
     unique: list[dict[str, object]] = []
     seen: set[str] = set()
     for observation in observations:
-        key = json.dumps(observation, ensure_ascii=False, sort_keys=True)
+        normalized_observation = (
+            normalize_observation(observation) if isinstance(observation, dict) else observation
+        )
+        key = json.dumps(normalized_observation, ensure_ascii=False, sort_keys=True)
         if key in seen:
             continue
         seen.add(key)
-        unique.append(observation)
+        unique.append(normalized_observation)
     return unique
 
 
@@ -786,14 +830,17 @@ def apply_source_snapshots(
             )
 
         for observation in snapshot.get("observations", []):
+            normalized_observation = normalize_observation(observation)
             target_id = resolve_entity_reference(
-                observation["target"],
+                normalized_observation["target"],
                 lookup,
                 "observation target",
             )
             source_id = (
-                resolve_entity_reference(observation["source"], lookup, "observation source")
-                if "source" in observation
+                resolve_entity_reference(
+                    normalized_observation["source"], lookup, "observation source"
+                )
+                if "source" in normalized_observation
                 else account_id
             )
             add_edge(
@@ -801,34 +848,34 @@ def apply_source_snapshots(
                 {
                     "source": source_id,
                     "target": target_id,
-                    "type": observation["type"],
-                    "description": str(observation.get("description", "")).strip(),
+                    "type": normalized_observation["type"],
+                    "description": str(normalized_observation.get("description", "")).strip(),
                     "source_urls": [
                         str(url).strip()
-                        for url in observation.get("source_urls", [])
+                        for url in normalized_observation.get("source_urls", [])
                         if str(url).strip()
                     ]
                     or [url for url in [profile_url, pinned_post_url] if url],
                     "confidence": float(
-                        observation.get(
+                        normalized_observation.get(
                             "confidence",
                             snapshot.get("observation_confidence", source_node.confidence),
                         )
                     ),
                     "evidence_kind": str(
-                        observation.get(
+                        normalized_observation.get(
                             "evidence_kind",
                             snapshot.get("evidence_kind", "fact"),
                         )
                     ),
                     "needs_review": bool(
-                        observation.get(
+                        normalized_observation.get(
                             "needs_review",
                             snapshot.get("needs_review", False),
                         )
                     ),
                     "review_notes": str(
-                        observation.get(
+                        normalized_observation.get(
                             "review_notes",
                             snapshot.get("review_notes", ""),
                         )
@@ -910,7 +957,7 @@ def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> l
 def review_candidate_type(source_type: str, target_type: str, text: str, basis: str) -> str:
     lowered = text.casefold()
     if source_type == "content" and target_type == "location":
-        return "reference"
+        return "profile_mention"
     if target_type == "location":
         return "activity"
     if any(
@@ -979,7 +1026,7 @@ def review_candidate_type(source_type: str, target_type: str, text: str, basis: 
             )
         ):
             return "monetization"
-    return "reference"
+    return "profile_mention"
 
 
 def review_candidate_group_id(source_id: str, target_id: str, candidate_type: str) -> str:
@@ -1004,13 +1051,22 @@ def reviewed_candidate_groups(
             continue
         source_id = str(decision.get("source", "")).strip()
         target_id = str(decision.get("target", "")).strip()
-        candidate_type = str(decision.get("type", "")).strip()
+        candidate_type = normalize_edge_type(
+            decision.get("type", ""),
+            description=str(decision.get("evidence_text", decision.get("description", ""))).strip(),
+        )
         if source_id and target_id and candidate_type:
             groups.add((source_id, target_id, candidate_type))
             continue
         parts = str(candidate_id).split("__")
         if len(parts) >= 3:
-            groups.add((parts[0].strip(), parts[1].strip(), parts[2].strip()))
+            groups.add(
+                (
+                    parts[0].strip(),
+                    parts[1].strip(),
+                    normalize_edge_type(parts[2].strip()),
+                )
+            )
     return groups
 
 
@@ -1154,7 +1210,11 @@ def load_review_candidate_decisions(
         raise ValueError("review_candidate_decisions.json decisions must be an object")
     return {
         "updated_at": str(payload.get("updated_at", "")).strip(),
-        "decisions": decisions,
+        "decisions": {
+            candidate_id: normalize_review_candidate_decision(decision)
+            for candidate_id, decision in decisions.items()
+            if isinstance(decision, dict)
+        },
     }
 
 
@@ -1200,7 +1260,11 @@ def load_review_candidates(path: Path = REVIEW_CANDIDATES_JSON) -> dict[str, obj
         raise ValueError("review_candidates.json candidates must be a list")
     return {
         "generated_at": str(payload.get("generated_at", "")).strip(),
-        "candidates": candidates,
+        "candidates": [
+            normalize_review_candidate(candidate)
+            for candidate in candidates
+            if isinstance(candidate, dict)
+        ],
     }
 
 
@@ -1213,6 +1277,7 @@ def get_review_candidate(payload: dict[str, object], candidate_id: str) -> dict[
 
 
 def candidate_to_observation(candidate: dict[str, object], approval_note: str = "") -> dict[str, object]:
+    normalized_candidate = normalize_review_candidate(candidate)
     basis = str(candidate.get("basis", "")).strip() or "generated_text"
     matched_text = str(candidate.get("matched_text", "")).strip()
     description = (
@@ -1228,10 +1293,12 @@ def candidate_to_observation(candidate: dict[str, object], approval_note: str = 
     if approval_note:
         review_notes += f" Approval note: {approval_note}"
     return {
-        "target": str(candidate["target"]).strip(),
-        "type": str(candidate["type"]).strip(),
+        "target": str(normalized_candidate["target"]).strip(),
+        "type": str(normalized_candidate["type"]).strip(),
         "description": description,
-        "source_urls": [str(url).strip() for url in candidate.get("source_urls", []) if str(url).strip()],
+        "source_urls": [
+            str(url).strip() for url in normalized_candidate.get("source_urls", []) if str(url).strip()
+        ],
         "confidence": float(candidate.get("confidence", 0.4)),
         "evidence_kind": "interpretation",
         "needs_review": False,
@@ -1299,13 +1366,14 @@ def set_review_candidate_decision(
     status: str,
     note: str = "",
 ) -> dict[str, object]:
+    normalized_candidate = normalize_review_candidate(candidate)
     normalized_status = status.strip().lower()
     if normalized_status not in {"approved", "dismissed"}:
         raise ValueError(f"Unsupported review candidate decision status: {status}")
     decisions = decisions_payload.setdefault("decisions", {})
     if not isinstance(decisions, dict):
         raise ValueError("review candidate decisions must be an object")
-    candidate_id = str(candidate.get("id", "")).strip()
+    candidate_id = str(normalized_candidate.get("id", "")).strip()
     existing = decisions.get(candidate_id)
     if isinstance(existing, dict) and str(existing.get("status", "")).strip() == normalized_status:
         raise ValueError(f"Review candidate already marked as {normalized_status}: {candidate_id}")
@@ -1313,13 +1381,15 @@ def set_review_candidate_decision(
         "candidate_id": candidate_id,
         "status": normalized_status,
         "note": note.strip(),
-        "source": str(candidate.get("source", "")).strip(),
-        "target": str(candidate.get("target", "")).strip(),
-        "type": str(candidate.get("type", "")).strip(),
-        "basis": str(candidate.get("basis", "")).strip(),
-        "matched_text": str(candidate.get("matched_text", "")).strip(),
-        "evidence_text": str(candidate.get("evidence_text", "")).strip(),
-        "source_urls": [str(url).strip() for url in candidate.get("source_urls", []) if str(url).strip()],
+        "source": str(normalized_candidate.get("source", "")).strip(),
+        "target": str(normalized_candidate.get("target", "")).strip(),
+        "type": str(normalized_candidate.get("type", "")).strip(),
+        "basis": str(normalized_candidate.get("basis", "")).strip(),
+        "matched_text": str(normalized_candidate.get("matched_text", "")).strip(),
+        "evidence_text": str(normalized_candidate.get("evidence_text", "")).strip(),
+        "source_urls": [
+            str(url).strip() for url in normalized_candidate.get("source_urls", []) if str(url).strip()
+        ],
         "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
     return decisions[candidate_id]

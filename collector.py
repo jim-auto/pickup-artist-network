@@ -543,7 +543,7 @@ def build_following_observations(
         observations.append(
             {
                 "target": target_id,
-                "type": "reference",
+                "type": "follow",
                 "description": f"Authenticated X following list shows this account follows @{handle}.",
                 "source_urls": [source_url, following_url],
                 "confidence": 0.64,
