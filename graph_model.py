@@ -1682,11 +1682,6 @@ def render_html(
       follow: "フォロー",
       profile_mention: "プロフィール言及"
     };
-    const evidenceKindLabels = {
-      fact: "事実",
-      interpretation: "解釈",
-      mixed: "混合"
-    };
     const basisLabels = {
       profile_text: "プロフィール",
       summary: "概要",
@@ -1927,8 +1922,11 @@ def render_html(
       return edgeTypeLabels[value] || value;
     }
 
-    function formatEvidenceKind(value) {
-      return evidenceKindLabels[value] || value || "事実";
+    function renderNodeTypeTag(value) {
+      if (!value || value === "person") {
+        return "";
+      }
+      return `<span class="tag">${escapeHtml(formatNodeType(value))}</span>`;
     }
 
     function formatBasis(value) {
@@ -1972,16 +1970,6 @@ def render_html(
       return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy">`;
     }
 
-    function formatEvidenceBadges(item) {
-      const badges = [
-        `<span class="tag tag-evidence-${escapeHtml(item.evidence_kind || "fact")}">${escapeHtml(formatEvidenceKind(item.evidence_kind || "fact"))}</span>`
-      ];
-      if (item.needs_review) {
-        badges.push('<span class="tag tag-review">要確認</span>');
-      }
-      return badges.join("");
-    }
-
     function renderDetailList(edges, direction) {
       if (!edges.length) {
         return '<li class="muted">-</li>';
@@ -1994,8 +1982,7 @@ def render_html(
             <li>
               <strong>${escapeHtml(otherNode ? otherNode.name : otherId)}</strong>
               <span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span>
-              ${formatEvidenceBadges(edge)}<br>
-              <span>${escapeHtml(edge.description || "")}</span><br>
+              <br><span>${escapeHtml(edge.description || "")}</span><br>
               <span class="muted">確信度: ${escapeHtml(edge.confidence)}</span>
               ${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}
               ${formatLinkList(edge.source_urls || [])}
@@ -2098,8 +2085,7 @@ def render_html(
             <h3>${escapeHtml(node.name)}</h3>
           </div>
           <div class="detail-meta">
-            <span class="tag">${escapeHtml(formatNodeType(node.type))}</span>
-            ${formatEvidenceBadges(node)}
+            ${renderNodeTypeTag(node.type)}
             <span class="muted">${escapeHtml(node.id)}</span><br>
             <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
             ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
@@ -2171,9 +2157,9 @@ def render_html(
           <tr>
             <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
             <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
-            <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
+            <td>${renderNodeTypeTag(node.type)}</td>
             <td>${escapeHtml((node.aliases || []).join(", "))}</td>
-            <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
+            <td>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
             <td>${escapeHtml(node.confidence)}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
           </tr>
@@ -2194,7 +2180,7 @@ def render_html(
             <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
             <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
-            <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
+            <td>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
             <td>${escapeHtml(edge.confidence)}</td>
             <td>${formatLinkList(edge.source_urls || [])}</td>
           </tr>
@@ -2214,8 +2200,8 @@ def render_html(
           <tr>
             <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
             <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
-            <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
-            <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.review_notes || "-")}</td>
+            <td>${renderNodeTypeTag(node.type)}</td>
+            <td>${escapeHtml(node.review_notes || "-")}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
           </tr>
         `
@@ -2235,7 +2221,7 @@ def render_html(
             <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
             <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
-            <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.review_notes || "-")}</td>
+            <td>${escapeHtml(edge.review_notes || "-")}</td>
             <td>${formatLinkList(edge.source_urls || [])}</td>
           </tr>
         `
@@ -2256,7 +2242,7 @@ def render_html(
             <td><span class="tag">${escapeHtml(formatEdgeType(candidate.type))}</span></td>
             <td>${escapeHtml(nodeNameById.get(candidate.target) || candidate.target)}</td>
             <td><span class="tag">${escapeHtml(formatBasis(candidate.basis))}</span><br><span class="muted">一致語: ${escapeHtml(candidate.matched_text || "-")}</span></td>
-            <td><span class="tag tag-review">要確認</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
+            <td>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
             <td>${formatLinkList(candidate.source_urls || [])}</td>
           </tr>
         `
@@ -2460,7 +2446,9 @@ def render_html(
             border: "#ffffff",
             highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
           },
-          title: `${node.name} (${formatNodeType(node.type)})\n${node.description || ""}\n${formatEvidenceKind(node.evidence_kind || "fact")}${node.needs_review ? " / 要確認" : ""}`
+          title: [node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`), node.description || ""]
+            .filter((value) => value)
+            .join("\n")
         }))
       );
 
@@ -2470,7 +2458,7 @@ def render_html(
           from: edge.source,
           to: edge.target,
           label: visibleEdges.length <= 320 ? formatEdgeType(edge.type) : undefined,
-          title: `${formatEdgeType(edge.type)}: ${edge.description || ""}\n${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要確認" : ""}`
+          title: `${formatEdgeType(edge.type)}: ${edge.description || ""}`
         }))
       );
 
