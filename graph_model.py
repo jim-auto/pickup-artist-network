@@ -1295,6 +1295,18 @@ def render_html(
       display: grid;
       gap: 10px;
     }
+    .connected-type-group {
+      display: grid;
+      gap: 8px;
+    }
+    .connected-type-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
     .connected-node-card {
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -1936,6 +1948,7 @@ def render_html(
 
     function renderConnectedNodes(outgoingEdges, incomingEdges) {
       const grouped = new Map();
+      const typeOrder = ["person", "community", "platform", "location", "content"];
       function addEdge(edge, direction) {
         const otherId = direction === "outgoing" ? edge.target : edge.source;
         const otherNode = rawNodeById.get(otherId);
@@ -1963,27 +1976,45 @@ def render_html(
         return '<div class="detail-empty">現在表示中のつながりノードはありません。</div>';
       }
 
+      const entriesByType = new Map();
+      entries.forEach((entry) => {
+        const nodeType = entry.node.type || "person";
+        if (!entriesByType.has(nodeType)) {
+          entriesByType.set(nodeType, []);
+        }
+        entriesByType.get(nodeType).push(entry);
+      });
+
       return `
         <div class="connected-node-list">
-          ${entries.map((entry) => `
-            <div class="connected-node-card">
-              <div class="connected-node-header">
-                <div class="node-name-cell connected-node-body">
-                  ${formatNodeAvatar(entry.node, "avatar-thumb")}
-                  <div class="node-name-text">
-                    <strong>${escapeHtml(entry.node.name)}</strong><br>
-                    <span class="muted">${escapeHtml(entry.node.id)}</span>
-                  </div>
+          ${typeOrder
+            .filter((nodeType) => entriesByType.has(nodeType))
+            .map((nodeType) => `
+              <section class="connected-type-group">
+                <div class="connected-type-heading">
+                  <strong>${escapeHtml(formatNodeType(nodeType))}</strong>
+                  <span>${escapeHtml(entriesByType.get(nodeType).length)} 件</span>
                 </div>
-                <button type="button" class="inspect-button" data-node-id="${escapeHtml(entry.node.id)}">見る</button>
-              </div>
-              <div class="connected-node-tags">
-                <span class="tag">${escapeHtml(formatNodeType(entry.node.type))}</span>
-                ${Array.from(entry.outgoing).map((type) => `<span class="tag">→ ${escapeHtml(type)}</span>`).join("")}
-                ${Array.from(entry.incoming).map((type) => `<span class="tag">← ${escapeHtml(type)}</span>`).join("")}
-              </div>
-            </div>
-          `).join("")}
+                ${entriesByType.get(nodeType).map((entry) => `
+                  <div class="connected-node-card">
+                    <div class="connected-node-header">
+                      <div class="node-name-cell connected-node-body">
+                        ${formatNodeAvatar(entry.node, "avatar-thumb")}
+                        <div class="node-name-text">
+                          <strong>${escapeHtml(entry.node.name)}</strong><br>
+                          <span class="muted">${escapeHtml(entry.node.id)}</span>
+                        </div>
+                      </div>
+                      <button type="button" class="inspect-button" data-node-id="${escapeHtml(entry.node.id)}">見る</button>
+                    </div>
+                    <div class="connected-node-tags">
+                      ${Array.from(entry.outgoing).map((type) => `<span class="tag">→ ${escapeHtml(type)}</span>`).join("")}
+                      ${Array.from(entry.incoming).map((type) => `<span class="tag">← ${escapeHtml(type)}</span>`).join("")}
+                    </div>
+                  </div>
+                `).join("")}
+              </section>
+            `).join("")}
         </div>
       `;
     }

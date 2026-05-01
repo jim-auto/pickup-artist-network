@@ -244,6 +244,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("選択ノード詳細", html)
         self.assertIn("つながっているノード", html)
         self.assertIn("connected-node-list", html)
+        self.assertIn("connected-type-group", html)
         self.assertIn("要確認ノード一覧", html)
         self.assertIn("レビュー候補一覧", html)
         self.assertIn("レビュー判断ログ", html)
