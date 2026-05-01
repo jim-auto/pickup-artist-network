@@ -252,6 +252,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('id="cluster-mode"', html)
         self.assertIn("つながりの近さでまとめる", html)
         self.assertIn("関係パターンでまとめる", html)
+        self.assertIn("キーワードでまとめる", html)
         self.assertIn('id="nodes-table-more"', html)
         self.assertIn('id="edges-table-more"', html)
         self.assertIn("stabilizationIterationsDone", html)
@@ -290,6 +291,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("clusters", payload)
         self.assertIn("connectivity", payload["clusters"]["modes"])
         self.assertIn("relation_pattern", payload["clusters"]["modes"])
+        self.assertIn("keyword_group", payload["clusters"]["modes"])
 
 
 if __name__ == "__main__":

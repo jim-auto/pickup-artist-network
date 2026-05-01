@@ -314,7 +314,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 09:42 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 10:23 UTC。</p>
       </div>
     </div>
   </header>
@@ -357,6 +357,7 @@
           <option value="off">まとめない</option>
           <option value="connectivity">つながりの近さでまとめる</option>
           <option value="relation_pattern">関係パターンでまとめる</option>
+          <option value="keyword_group">キーワードでまとめる</option>
         </select>
         <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
       </div>
@@ -634,6 +635,10 @@
       relation_pattern: rawClusters.modes?.relation_pattern || {
         label: "関係パターンでまとめる",
         description: "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。"
+      },
+      keyword_group: rawClusters.modes?.keyword_group || {
+        label: "キーワードでまとめる",
+        description: "MBH や セクシーコマンドー など、公開プロフィールのキーワードでまとめます。"
       }
     };
 

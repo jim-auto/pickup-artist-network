@@ -23,6 +23,7 @@ EDGE_TYPES = (
 )
 EVIDENCE_KINDS = ("fact", "interpretation", "mixed")
 ACCOUNT_NODE_TYPES = frozenset({"person", "community"})
+CLUSTER_MEMBER_NODE_TYPES = frozenset({"person"})
 GENERIC_CLUSTER_CONTEXT_IDS = frozenset({"x", "line", "note", "youtube", "instagram", "brain", "tips"})
 CLUSTER_MODE_DEFINITIONS = {
     "connectivity": {
@@ -33,6 +34,11 @@ CLUSTER_MODE_DEFINITIONS = {
     "relation_pattern": {
         "label": "関係パターンでまとめる",
         "description": "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。",
+        "min_size": 3,
+    },
+    "keyword_group": {
+        "label": "キーワードでまとめる",
+        "description": "MBH や セクシーコマンドー など、公開プロフィールのキーワードでまとめます。",
         "min_size": 3,
     },
 }
@@ -46,6 +52,7 @@ CONNECTIVITY_DIRECT_WEIGHTS = {
     "reference": 1.6,
 }
 CONNECTIVITY_CONTEXT_WEIGHTS = {
+    "community": 2.0,
     "location": 1.8,
     "platform": 0.45,
     "content": 0.8,
@@ -60,10 +67,38 @@ RELATION_PATTERN_DIRECT_WEIGHTS = {
     "reference": 2.1,
 }
 RELATION_PATTERN_CONTEXT_WEIGHTS = {
+    "community": 2.8,
     "location": 2.4,
     "platform": 0.3,
     "content": 1.1,
 }
+CLUSTER_PRUNE_CONFIG = {
+    "connectivity": {
+        "min_weight": 1.25,
+        "max_neighbors": 6,
+    },
+    "relation_pattern": {
+        "min_weight": 1.55,
+        "max_neighbors": 5,
+    },
+}
+KEYWORD_CLUSTER_RULES = (
+    {"id": "mbh", "label": "MBH", "patterns": ("mbh",), "priority": 100},
+    {
+        "id": "sexy_commando",
+        "label": "セクシーコマンドー",
+        "patterns": ("セクシーコマンドー", "sc一門"),
+        "priority": 95,
+    },
+    {"id": "hancho", "label": "はんちょう", "patterns": ("はんちょう", "hancho"), "priority": 92},
+    {"id": "yutty", "label": "ゆってぃ", "patterns": ("ゆってぃ", "yutty"), "priority": 90},
+    {"id": "kurita", "label": "栗田", "patterns": ("栗田", "kurita"), "priority": 88},
+    {"id": "nonchama", "label": "のんちゃま", "patterns": ("のんちゃま", "nonchama"), "priority": 86},
+    {"id": "pochama", "label": "ポチャマ", "patterns": ("ポチャマ", "pochama"), "priority": 84},
+    {"id": "next", "label": "ネクステ", "patterns": ("ネクステ",), "priority": 80},
+    {"id": "miso", "label": "味噌", "patterns": ("味噌", "みそ"), "priority": 78},
+    {"id": "otaku", "label": "オタク", "patterns": ("オタク", "otaku"), "priority": 74},
+)
 
 
 def _normalize_text_list(value: Any) -> list[str]:
@@ -615,6 +650,71 @@ def _summarize_cluster(
     return f"{nodes_by_id[anchor_id].name} 周辺"
 
 
+def _keyword_text(node: Node) -> str:
+    return " ".join(
+        [
+            node.id,
+            node.name,
+            node.description,
+            *node.aliases,
+            node.review_notes,
+        ]
+    ).casefold()
+
+
+def _build_keyword_cluster_mode_payload(
+    graph: GraphData,
+    definition: dict[str, Any],
+) -> dict[str, Any]:
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    buckets: dict[str, list[str]] = defaultdict(list)
+
+    for node in graph.nodes:
+        if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        text = _keyword_text(node)
+        best_rule: dict[str, Any] | None = None
+        best_score = 0
+        best_priority = -1
+        for rule in KEYWORD_CLUSTER_RULES:
+            score = sum(1 for pattern in rule["patterns"] if str(pattern).casefold() in text)
+            if score <= 0:
+                continue
+            if score > best_score or (score == best_score and int(rule["priority"]) > best_priority):
+                best_rule = rule
+                best_score = score
+                best_priority = int(rule["priority"])
+        if best_rule is not None:
+            buckets[str(best_rule["id"])].append(node.id)
+
+    mode_payload = {
+        "label": definition["label"],
+        "description": definition["description"],
+        "assignments": {},
+        "clusters": {},
+    }
+    min_size = int(definition.get("min_size", 3))
+    for rule in KEYWORD_CLUSTER_RULES:
+        member_ids = sorted(
+            buckets.get(str(rule["id"]), []),
+            key=lambda node_id: nodes_by_id[node_id].name,
+        )
+        if len(member_ids) < min_size:
+            continue
+        cluster_id = f"keyword_group:{rule['id']}"
+        preview = [nodes_by_id[node_id].name for node_id in member_ids[:4]]
+        preview_suffix = f" ほか {len(member_ids) - len(preview)} 件" if len(member_ids) > len(preview) else ""
+        mode_payload["clusters"][cluster_id] = {
+            "label": f"{rule['label']} ({len(member_ids)})",
+            "title": f"キーワード {rule['label']}: {', '.join(preview)}{preview_suffix}",
+            "size": len(member_ids),
+        }
+        for node_id in member_ids:
+            mode_payload["assignments"][node_id] = cluster_id
+
+    return mode_payload
+
+
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     import networkx as nx
 
@@ -622,6 +722,9 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     payload = {"default_mode": "off", "modes": {}}
 
     for mode_key, definition in CLUSTER_MODE_DEFINITIONS.items():
+        if mode_key == "keyword_group":
+            payload["modes"][mode_key] = _build_keyword_cluster_mode_payload(graph, definition)
+            continue
         account_graph, account_contexts = _build_account_projection(graph, mode_key)
         mode_payload = {
             "label": definition["label"],
@@ -1261,6 +1364,7 @@ def render_html(
           <option value="off">まとめない</option>
           <option value="connectivity">つながりの近さでまとめる</option>
           <option value="relation_pattern">関係パターンでまとめる</option>
+          <option value="keyword_group">キーワードでまとめる</option>
         </select>
         <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
       </div>
@@ -1538,6 +1642,10 @@ def render_html(
       relation_pattern: rawClusters.modes?.relation_pattern || {
         label: "関係パターンでまとめる",
         description: "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。"
+      },
+      keyword_group: rawClusters.modes?.keyword_group || {
+        label: "キーワードでまとめる",
+        description: "MBH や セクシーコマンドー など、公開プロフィールのキーワードでまとめます。"
       }
     };
 
