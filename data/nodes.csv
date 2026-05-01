@@ -295,7 +295,7 @@ atari100pua,person,あたる,atari100pua,Seed entity placeholder. Replace with p
 osugi-pua,person,杉崎pua,osugi_pua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
 mayuge-mbh,person,まゆげ@MBH_4月さかなさん一門,mayuge_mbh,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
 kamekame-pua,person,かめ,kamekame_pua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
-street-win-pua,person,死ぬまでヤッ太郎(故win)@のんちゃま一門,street_win_pua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
+street-win-pua,person,死ぬまでヤッ太郎(故win)@のんちゃま一門,street_win_pua,スト値上げ部 部長,https://pbs.twimg.com/profile_images/2040051664514961408/0SaXpJ4O_400x400.jpg,manual://seed | https://x.com/street_win_pua,0.5,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\.x_auth_state.json. Provide --cookie-file or create auth state first.
 naepua,person,なえ,naepua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
 asai-pua,person,浅井,asai_pua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,
 chami-pua,person,ちゃみ,chami_pua,Seed entity placeholder. Replace with public-source-backed details.,,manual://seed,0.5,fact,False,

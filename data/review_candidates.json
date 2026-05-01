@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T20:55:06+00:00",
+  "generated_at": "2026-05-01T21:44:27+00:00",
   "candidates": [
     {
       "id": "11goacemenc__rockpua-sub__profile_mention",
@@ -459,28 +459,6 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "bach-sokuhou__nonchama-pro__profile_mention",
-      "source": "bach-sokuhou",
-      "target": "nonchama-pro",
-      "type": "profile_mention",
-      "basis": "summary, profile_text",
-      "bases": [
-        "summary",
-        "profile_text"
-      ],
-      "matched_text": "のんちゃま",
-      "matched_texts": [
-        "のんちゃま"
-      ],
-      "evidence_text": "バッハ福田麻呂@サブ垢 (@bach_sokuhou)\n基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/",
-      "source_urls": [
-        "https://x.com/bach_sokuhou"
-      ],
-      "confidence": 0.4,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "bale-pua__ststst-pua__profile_mention",
@@ -2232,29 +2210,6 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'aaa'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "kibaaaana__nonchama-pro__profile_mention",
-      "source": "kibaaaana",
-      "target": "nonchama-pro",
-      "type": "profile_mention",
-      "basis": "summary, profile_text",
-      "bases": [
-        "summary",
-        "profile_text"
-      ],
-      "matched_text": "のんちゃま",
-      "matched_texts": [
-        "のんちゃま"
-      ],
-      "evidence_text": "キバナ👃@味噌 (@kibaaaana)\n味噌/二代目mスト部部長/mスト部vs🌵部\"最多即\"🐙M6時間4即/厚底を軸にした脳死ローラー/22年116即23年93即24年32即/290即over/#のんちゃま一門/界隈21.4〜/ほぼ引退\nLocation: 味噌",
-      "source_urls": [
-        "https://x.com/kibaaaana",
-        "https://note.com/kibana1031/"
-      ],
-      "confidence": 0.4,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
-    },
-    {
       "id": "kimu-himitsu2__4meakg__profile_mention",
       "source": "kimu-himitsu2",
       "target": "4meakg",
@@ -2386,29 +2341,6 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "korilla-pua__puro-nampa__profile_mention",
-      "source": "korilla-pua",
-      "target": "puro-nampa",
-      "type": "profile_mention",
-      "basis": "summary, profile_text",
-      "bases": [
-        "summary",
-        "profile_text"
-      ],
-      "matched_text": "M氏",
-      "matched_texts": [
-        "M氏"
-      ],
-      "evidence_text": "こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️",
-      "source_urls": [
-        "https://x.com/korilla_pua",
-        "https://tips.jp/s/a15OMM"
-      ],
-      "confidence": 0.4,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "kurita-pua__sub-kurita__profile_mention",
@@ -4690,28 +4622,6 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'mote_ren_ai7'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "shinkawa-pua__puro-nampa__profile_mention",
-      "source": "shinkawa-pua",
-      "target": "puro-nampa",
-      "type": "profile_mention",
-      "basis": "summary, profile_text",
-      "bases": [
-        "summary",
-        "profile_text"
-      ],
-      "matched_text": "M氏",
-      "matched_texts": [
-        "M氏"
-      ],
-      "evidence_text": "新川氏🌟@こりらM氏講習 (@shinkawa_pua)\n通算86即（スト21即） #こりらM氏講習\nLocation: 🐙",
-      "source_urls": [
-        "https://x.com/shinkawa_pua"
-      ],
-      "confidence": 0.4,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
-    },
-    {
       "id": "shouri-ikb__ikebukuro__activity",
       "source": "shouri-ikb",
       "target": "ikebukuro",
@@ -4909,29 +4819,6 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'fami_ver2'. This is review-only and not part of the canonical graph."
-    },
-    {
-      "id": "street-fami__nonchama-pro__profile_mention",
-      "source": "street-fami",
-      "target": "nonchama-pro",
-      "type": "profile_mention",
-      "basis": "summary, profile_text",
-      "bases": [
-        "summary",
-        "profile_text"
-      ],
-      "matched_text": "のんちゃま",
-      "matched_texts": [
-        "のんちゃま"
-      ],
-      "evidence_text": "ファミチキ🍗弾丸即マシン (@street_Fami)\n味噌mスト部/弾丸即マシン/通算400over/無敵のトーク×無敵の人/21年65get/22年170get/23年99get/24年45get/#のんちゃま一門/プライベートと即報→@fami_ver2\nLocation: 味噌m",
-      "source_urls": [
-        "https://x.com/street_Fami",
-        "https://note.com/faminanpa"
-      ],
-      "confidence": 0.4,
-      "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "street-fami__pua-shin__profile_mention",

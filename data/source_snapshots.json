@@ -797,6 +797,19 @@
         "confidence": 0.72,
         "evidence_kind": "fact",
         "needs_review": false
+      },
+      {
+        "target": "nonchama-pro",
+        "type": "profile_mention",
+        "description": "Approved review candidate from summary, profile_text mentioning のんちゃま.",
+        "source_urls": [
+          "https://x.com/street_Fami",
+          "https://note.com/faminanpa"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate street-fami__nonchama-pro__profile_mention. Original evidence: ファミチキ🍗弾丸即マシン (@street_Fami)\n味噌mスト部/弾丸即マシン/通算400over/無敵のトーク×無敵の人/21年65get/22年170get/23年99get/24年45get/#のんちゃま一門/プライベートと即報→@fami_ver2\nLocation: 味噌m Approval note: Public X profile explicitly names this group or lesson."
       }
     ]
   },
@@ -1347,6 +1360,18 @@
         "confidence": 0.68,
         "evidence_kind": "mixed",
         "needs_review": false
+      },
+      {
+        "target": "puro-nampa",
+        "type": "profile_mention",
+        "description": "Approved review candidate from summary, profile_text mentioning M氏.",
+        "source_urls": [
+          "https://x.com/shinkawa_pua"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate shinkawa-pua__puro-nampa__profile_mention. Original evidence: 新川氏🌟@こりらM氏講習 (@shinkawa_pua)\n通算86即（スト21即） #こりらM氏講習\nLocation: 🐙 Approval note: Public X profile explicitly names this group or lesson."
       }
     ]
   },
@@ -2350,5 +2375,117 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "bach-sokuhou",
+    "profile_url": "https://x.com/bach_sokuhou",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1835322652770304000/T5W6PELx_400x400.jpg",
+    "profile_text": "バッハ福田麻呂@サブ垢 (@bach_sokuhou)\n基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/bach_sokuhou"
+    ],
+    "summary": "基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/",
+    "observations": [
+      {
+        "target": "nonchama-pro",
+        "type": "profile_mention",
+        "description": "Approved review candidate from summary, profile_text mentioning のんちゃま.",
+        "source_urls": [
+          "https://x.com/bach_sokuhou"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate bach-sokuhou__nonchama-pro__profile_mention. Original evidence: バッハ福田麻呂@サブ垢 (@bach_sokuhou)\n基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/ Approval note: Public X profile explicitly names this group or lesson."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "kibaaaana",
+    "profile_url": "https://x.com/kibaaaana",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1679831757812822017/cAiaJnap_400x400.jpg",
+    "profile_text": "キバナ👃@味噌 (@kibaaaana)\n味噌/二代目mスト部部長/mスト部vs🌵部\"最多即\"🐙M6時間4即/厚底を軸にした脳死ローラー/22年116即23年93即24年32即/290即over/#のんちゃま一門/界隈21.4〜/ほぼ引退\nLocation: 味噌",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/kibaaaana",
+      "https://note.com/kibana1031/"
+    ],
+    "summary": "味噌/二代目mスト部部長/mスト部vs🌵部\"最多即\"🐙M6時間4即/厚底を軸にした脳死ローラー/22年116即23年93即24年32即/290即over/#のんちゃま一門/界隈21.4〜/ほぼ引退",
+    "observations": [
+      {
+        "target": "nonchama-pro",
+        "type": "profile_mention",
+        "description": "Approved review candidate from summary, profile_text mentioning のんちゃま.",
+        "source_urls": [
+          "https://x.com/kibaaaana",
+          "https://note.com/kibana1031/"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate kibaaaana__nonchama-pro__profile_mention. Original evidence: キバナ👃@味噌 (@kibaaaana)\n味噌/二代目mスト部部長/mスト部vs🌵部\"最多即\"🐙M6時間4即/厚底を軸にした脳死ローラー/22年116即23年93即24年32即/290即over/#のんちゃま一門/界隈21.4〜/ほぼ引退\nLocation: 味噌 Approval note: Public X profile explicitly names this group or lesson."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "street-win-pua",
+    "profile_url": "https://x.com/street_win_pua",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040051664514961408/0SaXpJ4O_400x400.jpg",
+    "profile_text": "死ぬまでヤッ太郎(故win)@のんちゃま一門 (@street_win_pua)\nスト値上げ部 部長\nLocation: level 69/100🐙",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/street_win_pua"
+    ],
+    "summary": "スト値上げ部 部長",
+    "observations": [
+      {
+        "target": "nonchama-pro",
+        "type": "profile_mention",
+        "description": "Approved review candidate from profile_text mentioning のんちゃま.",
+        "source_urls": [
+          "https://x.com/street_win_pua"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate street-win-pua__nonchama-pro__profile_mention. Original evidence: 死ぬまでヤッ太郎(故win)@のんちゃま一門 (@street_win_pua)\nスト値上げ部 部長\nLocation: level 69/100🐙 Approval note: Public X profile explicitly names this group or lesson."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "korilla-pua",
+    "profile_url": "https://x.com/korilla_pua",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/2008964885955461120/kXnbPIIF_400x400.jpg",
+    "profile_text": "こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/korilla_pua",
+      "https://tips.jp/s/a15OMM"
+    ],
+    "summary": "元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌",
+    "observations": [
+      {
+        "target": "puro-nampa",
+        "type": "profile_mention",
+        "description": "Approved review candidate from summary, profile_text mentioning M氏.",
+        "source_urls": [
+          "https://x.com/korilla_pua",
+          "https://tips.jp/s/a15OMM"
+        ],
+        "confidence": 0.4,
+        "evidence_kind": "interpretation",
+        "needs_review": false,
+        "review_notes": "Approved from review candidate korilla-pua__puro-nampa__profile_mention. Original evidence: こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️ Approval note: Public X profile explicitly names this group or lesson."
+      }
+    ],
+    "snapshot_origin": "manual"
   }
 ]

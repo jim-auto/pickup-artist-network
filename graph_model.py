@@ -87,7 +87,12 @@ CLUSTER_PRUNE_CONFIG = {
 }
 KEYWORD_CLUSTER_RULES = (
     {"id": "mbh", "label": "MBH", "patterns": ("mbh",), "priority": 100},
-    {"id": "pika_lessons", "label": "ピカ講習", "patterns": ("ピカ講習",), "priority": 99},
+    {
+        "id": "pika_lessons",
+        "label": "ピカ講習 / ピカ外見コンサル",
+        "patterns": ("ピカ講習", "ピカ外見コンサル", "ピカチュウ メンズ外見コンサル", "pika_stochi"),
+        "priority": 99,
+    },
     {"id": "m_street_club", "label": "mスト部", "patterns": ("mスト部", "mスト"), "priority": 98},
     {
         "id": "sexy_commando",

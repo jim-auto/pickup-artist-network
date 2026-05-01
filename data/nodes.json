@@ -8060,15 +8060,16 @@
     "aliases": [
       "street_win_pua"
     ],
-    "description": "Seed entity placeholder. Replace with public-source-backed details.",
-    "icon_url": "",
+    "description": "スト値上げ部 部長",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040051664514961408/0SaXpJ4O_400x400.jpg",
     "source_urls": [
-      "manual://seed"
+      "manual://seed",
+      "https://x.com/street_win_pua"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
-    "needs_review": false,
-    "review_notes": ""
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "okinawa-nampa",
