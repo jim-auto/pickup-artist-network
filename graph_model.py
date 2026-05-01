@@ -3,9 +3,11 @@ from __future__ import annotations
 import csv
 import json
 import sqlite3
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from html import escape
+from itertools import combinations
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +22,48 @@ EDGE_TYPES = (
     "reference",
 )
 EVIDENCE_KINDS = ("fact", "interpretation", "mixed")
+ACCOUNT_NODE_TYPES = frozenset({"person", "community"})
+GENERIC_CLUSTER_CONTEXT_IDS = frozenset({"x", "line", "note", "youtube", "instagram", "brain", "tips"})
+CLUSTER_MODE_DEFINITIONS = {
+    "connectivity": {
+        "label": "つながりの近さでまとめる",
+        "description": "相互リンクや共通のつながりが濃い人たちを自動でまとめます。",
+        "min_size": 3,
+    },
+    "relation_pattern": {
+        "label": "関係パターンでまとめる",
+        "description": "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。",
+        "min_size": 3,
+    },
+}
+CONNECTIVITY_DIRECT_WEIGHTS = {
+    "influence": 2.8,
+    "affiliation": 2.4,
+    "collaboration": 2.2,
+    "criticism": 1.4,
+    "monetization": 1.8,
+    "activity": 1.2,
+    "reference": 1.6,
+}
+CONNECTIVITY_CONTEXT_WEIGHTS = {
+    "location": 1.8,
+    "platform": 0.45,
+    "content": 0.8,
+}
+RELATION_PATTERN_DIRECT_WEIGHTS = {
+    "influence": 3.4,
+    "affiliation": 3.0,
+    "collaboration": 2.8,
+    "criticism": 1.2,
+    "monetization": 2.0,
+    "activity": 1.6,
+    "reference": 2.1,
+}
+RELATION_PATTERN_CONTEXT_WEIGHTS = {
+    "location": 2.4,
+    "platform": 0.3,
+    "content": 1.1,
+}
 
 
 def _normalize_text_list(value: Any) -> list[str]:
@@ -416,6 +460,208 @@ def build_networkx_graph(graph: GraphData):
     for edge in graph.edges:
         digraph.add_edge(edge.source, edge.target, **edge.to_dict())
     return digraph
+
+
+def _add_weighted_account_edge(account_graph: Any, source: str, target: str, weight: float) -> None:
+    if source == target or weight <= 0:
+        return
+    if account_graph.has_edge(source, target):
+        account_graph[source][target]["weight"] += round(weight, 4)
+    else:
+        account_graph.add_edge(source, target, weight=round(weight, 4))
+
+
+def _build_account_projection(
+    graph: GraphData,
+    mode_key: str,
+) -> tuple[Any, dict[str, set[str]]]:
+    import networkx as nx
+
+    if mode_key == "connectivity":
+        direct_weights = CONNECTIVITY_DIRECT_WEIGHTS
+        context_weights = CONNECTIVITY_CONTEXT_WEIGHTS
+    elif mode_key == "relation_pattern":
+        direct_weights = RELATION_PATTERN_DIRECT_WEIGHTS
+        context_weights = RELATION_PATTERN_CONTEXT_WEIGHTS
+    else:
+        raise ValueError(f"Unsupported cluster mode: {mode_key}")
+
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    account_graph = nx.Graph()
+    for node in graph.nodes:
+        if node.type in ACCOUNT_NODE_TYPES:
+            account_graph.add_node(node.id, name=node.name, type=node.type)
+
+    direct_pair_directions: dict[tuple[str, str], set[tuple[str, str]]] = defaultdict(set)
+    direct_pair_types: dict[tuple[str, str], set[str]] = defaultdict(set)
+    context_links: dict[str, dict[str, list[Edge]]] = defaultdict(lambda: defaultdict(list))
+
+    for edge in graph.edges:
+        source_node = nodes_by_id.get(edge.source)
+        target_node = nodes_by_id.get(edge.target)
+        if source_node is None or target_node is None:
+            continue
+        source_is_account = source_node.type in ACCOUNT_NODE_TYPES
+        target_is_account = target_node.type in ACCOUNT_NODE_TYPES
+        if source_is_account and target_is_account:
+            pair_key = tuple(sorted((edge.source, edge.target)))
+            direct_pair_directions[pair_key].add((edge.source, edge.target))
+            direct_pair_types[pair_key].add(edge.type)
+            base_weight = direct_weights.get(edge.type, 1.0) * max(edge.confidence, 0.35)
+            _add_weighted_account_edge(account_graph, edge.source, edge.target, base_weight)
+            continue
+        if source_is_account == target_is_account:
+            continue
+        account_id = edge.source if source_is_account else edge.target
+        context_id = edge.target if source_is_account else edge.source
+        context_node = nodes_by_id.get(context_id)
+        if context_node is None or context_node.type not in context_weights:
+            continue
+        context_links[context_id][account_id].append(edge)
+
+    if mode_key == "relation_pattern":
+        for pair_key, directions in direct_pair_directions.items():
+            bonus = 0.0
+            if len(directions) > 1:
+                bonus += 1.0
+            bonus += max(0, len(direct_pair_types[pair_key]) - 1) * 0.45
+            if bonus:
+                _add_weighted_account_edge(account_graph, pair_key[0], pair_key[1], bonus)
+
+    account_contexts: dict[str, set[str]] = defaultdict(set)
+    for context_id, account_edge_map in context_links.items():
+        context_node = nodes_by_id.get(context_id)
+        if context_node is None:
+            continue
+        account_items = [(account_id, edges) for account_id, edges in account_edge_map.items() if account_id in account_graph]
+        for account_id, _ in account_items:
+            account_contexts[account_id].add(context_id)
+        if len(account_items) < 2:
+            continue
+        if context_node.type == "platform" and context_id in GENERIC_CLUSTER_CONTEXT_IDS:
+            continue
+        if context_node.type == "platform" and len(account_items) > 12:
+            continue
+
+        rarity_scale = 1 / max(1.0, (len(account_items) - 1) ** 0.5)
+        context_weight = context_weights.get(context_node.type, 0.0)
+        for (source_id, source_edges), (target_id, target_edges) in combinations(account_items, 2):
+            combined_edges = [*source_edges, *target_edges]
+            confidence = (
+                sum(edge.confidence for edge in combined_edges) / len(combined_edges)
+                if combined_edges
+                else 0.5
+            )
+            weight = context_weight * rarity_scale * max(confidence, 0.35)
+            if mode_key == "relation_pattern":
+                source_types = {edge.type for edge in source_edges}
+                target_types = {edge.type for edge in target_edges}
+                shared_edge_types = source_types & target_types
+                if "activity" in shared_edge_types:
+                    weight += 1.0 * rarity_scale
+                if "affiliation" in shared_edge_types:
+                    weight += 0.9 * rarity_scale
+                if "reference" in shared_edge_types:
+                    weight += 0.5 * rarity_scale
+                if context_node.type == "location":
+                    weight += 0.65 * rarity_scale
+                elif context_node.type == "content":
+                    weight += 0.25 * rarity_scale
+            _add_weighted_account_edge(account_graph, source_id, target_id, weight)
+
+    return account_graph, account_contexts
+
+
+def _cluster_context_priority(node_type: str) -> int:
+    return {
+        "location": 3,
+        "content": 2,
+        "platform": 1,
+    }.get(node_type, 0)
+
+
+def _summarize_cluster(
+    cluster_members: set[str],
+    account_graph: Any,
+    nodes_by_id: dict[str, Node],
+    account_contexts: dict[str, set[str]],
+) -> str:
+    context_counts: Counter[str] = Counter()
+    for member_id in cluster_members:
+        for context_id in account_contexts.get(member_id, set()):
+            if context_id in GENERIC_CLUSTER_CONTEXT_IDS:
+                continue
+            context_node = nodes_by_id.get(context_id)
+            if context_node is None or context_node.type not in {"location", "content", "platform"}:
+                continue
+            context_counts[context_id] += 1
+
+    if context_counts:
+        best_context_id = max(
+            context_counts,
+            key=lambda context_id: (
+                context_counts[context_id],
+                _cluster_context_priority(nodes_by_id[context_id].type),
+                nodes_by_id[context_id].name,
+            ),
+        )
+        if context_counts[best_context_id] >= max(2, len(cluster_members) // 3):
+            return f"{nodes_by_id[best_context_id].name} 周辺"
+
+    anchor_id = max(
+        cluster_members,
+        key=lambda node_id: (account_graph.degree(node_id, weight="weight"), nodes_by_id[node_id].name),
+    )
+    return f"{nodes_by_id[anchor_id].name} 周辺"
+
+
+def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
+    import networkx as nx
+
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    payload = {"default_mode": "off", "modes": {}}
+
+    for mode_key, definition in CLUSTER_MODE_DEFINITIONS.items():
+        account_graph, account_contexts = _build_account_projection(graph, mode_key)
+        mode_payload = {
+            "label": definition["label"],
+            "description": definition["description"],
+            "assignments": {},
+            "clusters": {},
+        }
+        if account_graph.number_of_nodes():
+            if account_graph.number_of_edges():
+                communities = [
+                    set(community)
+                    for community in nx.community.greedy_modularity_communities(
+                        account_graph,
+                        weight="weight",
+                    )
+                ]
+            else:
+                communities = [{node_id} for node_id in account_graph.nodes]
+
+            cluster_index = 1
+            for community in sorted(communities, key=lambda item: (-len(item), sorted(item))):
+                if len(community) < int(definition["min_size"]):
+                    continue
+                cluster_id = f"{mode_key}:{cluster_index}"
+                summary = _summarize_cluster(community, account_graph, nodes_by_id, account_contexts)
+                member_names = sorted(nodes_by_id[node_id].name for node_id in community if node_id in nodes_by_id)
+                preview = member_names[:4]
+                preview_suffix = f" ほか {len(member_names) - len(preview)} 件" if len(member_names) > len(preview) else ""
+                mode_payload["clusters"][cluster_id] = {
+                    "label": f"{summary} ({len(community)})",
+                    "title": f"{summary}: {', '.join(preview)}{preview_suffix}",
+                    "size": len(community),
+                }
+                for node_id in community:
+                    mode_payload["assignments"][node_id] = cluster_id
+                cluster_index += 1
+
+        payload["modes"][mode_key] = mode_payload
+
+    return payload
 
 
 def export_networkx_metrics(
@@ -822,6 +1068,16 @@ def render_html(
       padding: 10px 12px;
       font-size: 14px;
     }
+    .control-select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text);
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -1000,14 +1256,13 @@ def render_html(
         <div class="muted">人物・コミュニティを中心に、関係が見やすいアカウント相関へ絞っています。</div>
       </div>
       <div>
-        <strong>表示補助</strong>
-        <div class="filter-group">
-          <label class="chip">
-            <input type="checkbox" id="cluster-by-type">
-            <span>同じ種別をまとめる</span>
-          </label>
-        </div>
-        <div class="muted">オンにすると、人物どうし・コミュニティどうしのように、同じ種別のノードがまとまって表示されます。</div>
+        <label for="cluster-mode"><strong>関係クラスタ</strong></label>
+        <select id="cluster-mode" class="control-select">
+          <option value="off">まとめない</option>
+          <option value="connectivity">つながりの近さでまとめる</option>
+          <option value="relation_pattern">関係パターンでまとめる</option>
+        </select>
+        <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
       </div>
       <details class="foldout">
         <summary>
@@ -1232,6 +1487,7 @@ def render_html(
     const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
     const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
     const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };
+    const rawClusters = rawSiteData.clusters || { default_mode: "off", modes: {} };
     const nodeColors = {
       person: "#2f6feb",
       community: "#7e57c2",
@@ -1270,6 +1526,20 @@ def render_html(
       dismissed: "却下"
     };
     const accountNodeTypes = new Set(["person", "community"]);
+    const clusterModeDefinitions = {
+      off: {
+        label: "まとめない",
+        description: "通常表示です。人やコミュニティをまとめずに相関を見ます。"
+      },
+      connectivity: rawClusters.modes?.connectivity || {
+        label: "つながりの近さでまとめる",
+        description: "相互リンクや共通のつながりが濃い人たちを自動でまとめます。"
+      },
+      relation_pattern: rawClusters.modes?.relation_pattern || {
+        label: "関係パターンでまとめる",
+        description: "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。"
+      }
+    };
 
     const allNodeTypes = [...new Set(rawGraph.nodes.map((node) => node.type))];
     const allEdgeTypes = [...new Set(rawGraph.edges.map((edge) => edge.type))];
@@ -1320,6 +1590,10 @@ def render_html(
 
     buildFilters("node-type-filters", allNodeTypes, "data-node-type");
     buildFilters("edge-type-filters", allEdgeTypes, "data-edge-type");
+    const clusterModeInput = document.getElementById("cluster-mode");
+    if (clusterModeInput) {
+      clusterModeInput.value = rawClusters.default_mode || "off";
+    }
 
     const nodesDataSet = new vis.DataSet([]);
     const edgesDataSet = new vis.DataSet([]);
@@ -1375,13 +1649,22 @@ def render_html(
       );
     }
 
-    function isTypeClusteringEnabled() {
-      const input = document.getElementById("cluster-by-type");
-      return Boolean(input && input.checked);
+    function getClusterMode() {
+      return clusterModeInput ? clusterModeInput.value : "off";
     }
 
-    function getClusterNodeId(nodeType) {
-      return `cluster:${nodeType}`;
+    function updateClusterModeHelp() {
+      const help = document.getElementById("cluster-mode-help");
+      if (!help) {
+        return;
+      }
+      const mode = getClusterMode();
+      const definition = clusterModeDefinitions[mode] || clusterModeDefinitions.off;
+      help.textContent = definition.description;
+    }
+
+    function getClusterNodeId(clusterId) {
+      return `cluster:${clusterId}`;
     }
 
     function resetTableRenderState() {
@@ -1738,35 +2021,51 @@ def render_html(
       activeClusterIds = new Set();
     }
 
-    function applyTypeClusters(visibleNodes) {
-      const nodeTypeCounts = new Map();
+    function applyRelationClusters(visibleNodes, clusterMode) {
+      const modePayload = rawClusters.modes?.[clusterMode];
+      if (!modePayload || !modePayload.assignments) {
+        return;
+      }
+      const bucketMap = new Map();
       visibleNodes.forEach((node) => {
-        nodeTypeCounts.set(node.type, (nodeTypeCounts.get(node.type) || 0) + 1);
-      });
-      nodeTypeCounts.forEach((count, nodeType) => {
-        if (count < 3) {
+        const clusterId = modePayload.assignments[node.id];
+        if (!clusterId) {
           return;
         }
-        const clusterId = getClusterNodeId(nodeType);
+        if (!bucketMap.has(clusterId)) {
+          bucketMap.set(clusterId, []);
+        }
+        bucketMap.get(clusterId).push(node);
+      });
+      bucketMap.forEach((members, clusterId) => {
+        if (members.length < 3) {
+          return;
+        }
+        const memberIds = new Set(members.map((node) => node.id));
+        const personCount = members.filter((node) => node.type === "person").length;
+        const dominantType = personCount >= (members.length - personCount) ? "person" : "community";
+        const clusterNodeId = getClusterNodeId(clusterId);
+        const clusterInfo = modePayload.clusters?.[clusterId] || {};
+        const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
         network.cluster({
           joinCondition(nodeOptions) {
-            return nodeOptions.group === nodeType;
+            return memberIds.has(nodeOptions.id);
           },
           clusterNodeProperties: {
-            id: clusterId,
-            label: `${formatNodeType(nodeType)} (${count})`,
-            group: nodeType,
-            value: 18 + count,
+            id: clusterNodeId,
+            label: clusterInfo.label || `${definition.label} (${members.length})`,
+            group: dominantType,
+            value: 18 + members.length,
             shape: "dot",
             color: {
-              background: nodeColors[nodeType] || "#64748b",
+              background: nodeColors[dominantType] || "#64748b",
               border: "#ffffff",
-              highlight: { background: nodeColors[nodeType] || "#64748b", border: "#111827" }
+              highlight: { background: nodeColors[dominantType] || "#64748b", border: "#111827" }
             },
-            title: `${formatNodeType(nodeType)} クラスタ (${count})`
+            title: clusterInfo.title || `${definition.label}: ${members.length} 件`
           }
         });
-        activeClusterIds.add(clusterId);
+        activeClusterIds.add(clusterNodeId);
       });
     }
 
@@ -1774,7 +2073,8 @@ def render_html(
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
-      const shouldCluster = isTypeClusteringEnabled() && !term;
+      const clusterMode = getClusterMode();
+      const shouldCluster = clusterMode !== "off" && !term;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
@@ -1867,7 +2167,7 @@ def render_html(
       );
 
       if (shouldCluster) {
-        applyTypeClusters(visibleNodes);
+        applyRelationClusters(visibleNodes, clusterMode);
       }
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
@@ -1889,7 +2189,12 @@ def render_html(
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
-    document.getElementById("cluster-by-type").addEventListener("change", applyFilters);
+    if (clusterModeInput) {
+      clusterModeInput.addEventListener("change", () => {
+        updateClusterModeHelp();
+        applyFilters();
+      });
+    }
     [
       ["reviewNodes", "review-nodes-table-more"],
       ["reviewEdges", "review-edges-table-more"],
@@ -1932,6 +2237,7 @@ def render_html(
       renderDetailPanel(null);
     });
 
+    updateClusterModeHelp();
     applyFilters();
     })().catch((error) => {
       console.error(error);
@@ -1966,11 +2272,13 @@ def export_html(
     output_file = Path(output_path)
     site_data_file = output_file.with_name("graph-data.json")
     output_file.parent.mkdir(parents=True, exist_ok=True)
+    relation_clusters_payload = build_relation_cluster_payload(graph)
     site_data_payload = {
         "graph": graph.to_dict(),
         "review_candidates": review_candidates_payload or {"generated_at": "", "candidates": []},
         "review_candidate_decisions": review_candidate_decisions_payload
         or {"updated_at": "", "decisions": {}},
+        "clusters": relation_clusters_payload,
     }
     site_data_file.write_text(
         json.dumps(site_data_payload, ensure_ascii=False, separators=(",", ":")),

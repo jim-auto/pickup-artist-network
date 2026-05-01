@@ -164,6 +164,16 @@
       padding: 10px 12px;
       font-size: 14px;
     }
+    .control-select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      background: #fff;
+      color: var(--text);
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -304,7 +314,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 09:22 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 09:42 UTC。</p>
       </div>
     </div>
   </header>
@@ -342,14 +352,13 @@
         <div class="muted">人物・コミュニティを中心に、関係が見やすいアカウント相関へ絞っています。</div>
       </div>
       <div>
-        <strong>表示補助</strong>
-        <div class="filter-group">
-          <label class="chip">
-            <input type="checkbox" id="cluster-by-type">
-            <span>同じ種別をまとめる</span>
-          </label>
-        </div>
-        <div class="muted">オンにすると、人物どうし・コミュニティどうしのように、同じ種別のノードがまとまって表示されます。</div>
+        <label for="cluster-mode"><strong>関係クラスタ</strong></label>
+        <select id="cluster-mode" class="control-select">
+          <option value="off">まとめない</option>
+          <option value="connectivity">つながりの近さでまとめる</option>
+          <option value="relation_pattern">関係パターンでまとめる</option>
+        </select>
+        <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
       </div>
       <details class="foldout">
         <summary>
@@ -574,6 +583,7 @@
     const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
     const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
     const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };
+    const rawClusters = rawSiteData.clusters || { default_mode: "off", modes: {} };
     const nodeColors = {
       person: "#2f6feb",
       community: "#7e57c2",
@@ -612,6 +622,20 @@
       dismissed: "却下"
     };
     const accountNodeTypes = new Set(["person", "community"]);
+    const clusterModeDefinitions = {
+      off: {
+        label: "まとめない",
+        description: "通常表示です。人やコミュニティをまとめずに相関を見ます。"
+      },
+      connectivity: rawClusters.modes?.connectivity || {
+        label: "つながりの近さでまとめる",
+        description: "相互リンクや共通のつながりが濃い人たちを自動でまとめます。"
+      },
+      relation_pattern: rawClusters.modes?.relation_pattern || {
+        label: "関係パターンでまとめる",
+        description: "師弟・相互言及・同地域など、似た関係が重なる人たちをまとめます。"
+      }
+    };
 
     const allNodeTypes = [...new Set(rawGraph.nodes.map((node) => node.type))];
     const allEdgeTypes = [...new Set(rawGraph.edges.map((edge) => edge.type))];
@@ -662,6 +686,10 @@
 
     buildFilters("node-type-filters", allNodeTypes, "data-node-type");
     buildFilters("edge-type-filters", allEdgeTypes, "data-edge-type");
+    const clusterModeInput = document.getElementById("cluster-mode");
+    if (clusterModeInput) {
+      clusterModeInput.value = rawClusters.default_mode || "off";
+    }
 
     const nodesDataSet = new vis.DataSet([]);
     const edgesDataSet = new vis.DataSet([]);
@@ -717,13 +745,22 @@
       );
     }
 
-    function isTypeClusteringEnabled() {
-      const input = document.getElementById("cluster-by-type");
-      return Boolean(input && input.checked);
+    function getClusterMode() {
+      return clusterModeInput ? clusterModeInput.value : "off";
     }
 
-    function getClusterNodeId(nodeType) {
-      return `cluster:${nodeType}`;
+    function updateClusterModeHelp() {
+      const help = document.getElementById("cluster-mode-help");
+      if (!help) {
+        return;
+      }
+      const mode = getClusterMode();
+      const definition = clusterModeDefinitions[mode] || clusterModeDefinitions.off;
+      help.textContent = definition.description;
+    }
+
+    function getClusterNodeId(clusterId) {
+      return `cluster:${clusterId}`;
     }
 
     function resetTableRenderState() {
@@ -1080,35 +1117,51 @@
       activeClusterIds = new Set();
     }
 
-    function applyTypeClusters(visibleNodes) {
-      const nodeTypeCounts = new Map();
+    function applyRelationClusters(visibleNodes, clusterMode) {
+      const modePayload = rawClusters.modes?.[clusterMode];
+      if (!modePayload || !modePayload.assignments) {
+        return;
+      }
+      const bucketMap = new Map();
       visibleNodes.forEach((node) => {
-        nodeTypeCounts.set(node.type, (nodeTypeCounts.get(node.type) || 0) + 1);
-      });
-      nodeTypeCounts.forEach((count, nodeType) => {
-        if (count < 3) {
+        const clusterId = modePayload.assignments[node.id];
+        if (!clusterId) {
           return;
         }
-        const clusterId = getClusterNodeId(nodeType);
+        if (!bucketMap.has(clusterId)) {
+          bucketMap.set(clusterId, []);
+        }
+        bucketMap.get(clusterId).push(node);
+      });
+      bucketMap.forEach((members, clusterId) => {
+        if (members.length < 3) {
+          return;
+        }
+        const memberIds = new Set(members.map((node) => node.id));
+        const personCount = members.filter((node) => node.type === "person").length;
+        const dominantType = personCount >= (members.length - personCount) ? "person" : "community";
+        const clusterNodeId = getClusterNodeId(clusterId);
+        const clusterInfo = modePayload.clusters?.[clusterId] || {};
+        const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
         network.cluster({
           joinCondition(nodeOptions) {
-            return nodeOptions.group === nodeType;
+            return memberIds.has(nodeOptions.id);
           },
           clusterNodeProperties: {
-            id: clusterId,
-            label: `${formatNodeType(nodeType)} (${count})`,
-            group: nodeType,
-            value: 18 + count,
+            id: clusterNodeId,
+            label: clusterInfo.label || `${definition.label} (${members.length})`,
+            group: dominantType,
+            value: 18 + members.length,
             shape: "dot",
             color: {
-              background: nodeColors[nodeType] || "#64748b",
+              background: nodeColors[dominantType] || "#64748b",
               border: "#ffffff",
-              highlight: { background: nodeColors[nodeType] || "#64748b", border: "#111827" }
+              highlight: { background: nodeColors[dominantType] || "#64748b", border: "#111827" }
             },
-            title: `${formatNodeType(nodeType)} クラスタ (${count})`
+            title: clusterInfo.title || `${definition.label}: ${members.length} 件`
           }
         });
-        activeClusterIds.add(clusterId);
+        activeClusterIds.add(clusterNodeId);
       });
     }
 
@@ -1116,7 +1169,8 @@
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
-      const shouldCluster = isTypeClusteringEnabled() && !term;
+      const clusterMode = getClusterMode();
+      const shouldCluster = clusterMode !== "off" && !term;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
@@ -1212,7 +1266,7 @@ ${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要
       );
 
       if (shouldCluster) {
-        applyTypeClusters(visibleNodes);
+        applyRelationClusters(visibleNodes, clusterMode);
       }
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
@@ -1234,7 +1288,12 @@ ${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
-    document.getElementById("cluster-by-type").addEventListener("change", applyFilters);
+    if (clusterModeInput) {
+      clusterModeInput.addEventListener("change", () => {
+        updateClusterModeHelp();
+        applyFilters();
+      });
+    }
     [
       ["reviewNodes", "review-nodes-table-more"],
       ["reviewEdges", "review-edges-table-more"],
@@ -1277,6 +1336,7 @@ ${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要
       renderDetailPanel(null);
     });
 
+    updateClusterModeHelp();
     applyFilters();
     })().catch((error) => {
       console.error(error);

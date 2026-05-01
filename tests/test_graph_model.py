@@ -249,7 +249,9 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("要確認", html)
         self.assertIn('fetch(path, { cache: "no-store" })', html)
         self.assertIn("graph-data.json", html)
-        self.assertIn('id="cluster-by-type"', html)
+        self.assertIn('id="cluster-mode"', html)
+        self.assertIn("つながりの近さでまとめる", html)
+        self.assertIn("関係パターンでまとめる", html)
         self.assertIn('id="nodes-table-more"', html)
         self.assertIn('id="edges-table-more"', html)
         self.assertIn("stabilizationIterationsDone", html)
@@ -285,6 +287,9 @@ class GraphModelTests(unittest.TestCase):
             payload["review_candidate_decisions"]["decisions"]["candidate-1"]["status"],
             "approved",
         )
+        self.assertIn("clusters", payload)
+        self.assertIn("connectivity", payload["clusters"]["modes"])
+        self.assertIn("relation_pattern", payload["clusters"]["modes"])
 
 
 if __name__ == "__main__":
