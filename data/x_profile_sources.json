@@ -1283,6 +1283,80 @@
     "following_limit": 120
   },
   {
+    "account_id": "rockpua-sub",
+    "url": "https://x.com/rockpua_sub",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "reborn-pua",
+    "url": "https://x.com/reborn_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "ura-aka-nanpa",
+    "url": "https://x.com/ura_aka_nanpa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nanpanyan4545",
+    "url": "https://x.com/nanpanyan4545",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "kukuru-nanpa",
+    "url": "https://x.com/kukuru_nanpa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "shelly4821",
+    "url": "https://x.com/shelly4821",
+    "label": "public self-described X profile"
+  },
+  {
+    "account_id": "motezoh-biz",
+    "url": "https://x.com/motezoh_biz",
+    "label": "public related X profile"
+  },
+  {
+    "account_id": "chikio-nmp",
+    "url": "https://x.com/chikio_NMP",
+    "label": "public linked main-account X profile"
+  },
+  {
+    "account_id": "asahilove77",
+    "url": "https://x.com/asahilove77",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nagi-nanpa0922",
+    "url": "https://x.com/nagi_nanpa0922",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "gatiikepua",
+    "url": "https://x.com/gatiikepua",
+    "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "simba-pua",
+    "url": "https://x.com/Simba_pua",
+    "label": "public linked main-account X profile"
+  },
+  {
     "account_id": "ststst-pua",
     "url": "https://x.com/ststst_pua",
     "label": "public self-described X profile",
@@ -2570,5 +2644,590 @@
     "account_id": "bach-sokuhou",
     "url": "https://x.com/bach_sokuhou",
     "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "be-street-pua",
+    "url": "https://x.com/Be_Street_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "try-pua",
+    "url": "https://x.com/try_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "murakami-pua",
+    "url": "https://x.com/murakami_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "onizuka-pua",
+    "url": "https://x.com/onizuka_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nanpa-obiwan",
+    "url": "https://x.com/nanpa_ObiWan",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "obiwan-beauty",
+    "url": "https://x.com/obiwan_beauty",
+    "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "pua-kei-mh",
+    "url": "https://x.com/PUA_KEI_MH",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-kei-sg",
+    "url": "https://x.com/PUA_KEI_SG",
+    "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "akagi-subpua",
+    "url": "https://x.com/akagi_subpua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "gokun-pua",
+    "url": "https://x.com/GOKUN_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "renren-pua",
+    "url": "https://x.com/Renren_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nandeyanen-pua",
+    "url": "https://x.com/nandeyanen_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "r-pua-pua",
+    "url": "https://x.com/R_pua_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "efu-pua",
+    "url": "https://x.com/efu_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "anshin-pua",
+    "url": "https://x.com/anshin__pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "rui0808-pua",
+    "url": "https://x.com/rui0808_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "clark-pua",
+    "url": "https://x.com/clark_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "syou-nanpa",
+    "url": "https://x.com/SYOUnanpa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "s-pua0213",
+    "url": "https://x.com/s_pua0213",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "kkk-pua",
+    "url": "https://x.com/kkk_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-rusu",
+    "url": "https://x.com/pua_rusu",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "siofkn-pua",
+    "url": "https://x.com/siofkn_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "asahi-sao-pua",
+    "url": "https://x.com/asahi_sao_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "vo-nampa",
+    "url": "https://x.com/vo_nampa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nampakago",
+    "url": "https://x.com/nampakago",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "ryosuke-street2",
+    "url": "https://x.com/ryosuke_street2",
+    "label": "public linked main-account X profile"
+  },
+  {
+    "account_id": "toushirou-app",
+    "url": "https://x.com/toushirou_app",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nagasanpua",
+    "url": "https://x.com/nagasanpua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pen-pen-st",
+    "url": "https://x.com/pen_pen_st",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "street-ryouta",
+    "url": "https://x.com/street_ryouta",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "aizen-pua",
+    "url": "https://x.com/aizen_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "aizen-puasub",
+    "url": "https://x.com/aizen_puasub",
+    "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "bossnn-pua",
+    "url": "https://x.com/bossnn_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "choppy-nanpa",
+    "url": "https://x.com/choppy_nanpa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "rizin-pua",
+    "url": "https://x.com/rizin_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "mange-pua",
+    "url": "https://x.com/Mange_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "korea-pua",
+    "url": "https://x.com/korea_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "lonely-stonan",
+    "url": "https://x.com/lonely_stonan",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "speedstarsora",
+    "url": "https://x.com/speedstarsora",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "choumi-pua",
+    "url": "https://x.com/choumi_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "lillard-motetai",
+    "url": "https://x.com/lillard_motetai",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-marcelo",
+    "url": "https://x.com/Pua_Marcelo",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "vegetst",
+    "url": "https://x.com/vegetst",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "dawson-nst",
+    "url": "https://x.com/Dawson_nst",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nmpst913",
+    "url": "https://x.com/nmpst913",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "kiri-stomach",
+    "url": "https://x.com/KiriStomach",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "anus-asterisk",
+    "url": "https://x.com/anus_asterisk",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "outlook-sabo4",
+    "url": "https://x.com/outlook_sabo_4",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "outlook-sub4",
+    "url": "https://x.com/outlook_sub_4",
+    "label": "public linked side-account X profile"
+  },
+  {
+    "account_id": "saikyo-sutoti",
+    "url": "https://x.com/Saikyo_sutoti",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "shunon-street",
+    "url": "https://x.com/shunon_street",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nanpasd",
+    "url": "https://x.com/nanpasd",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nanpahamehame",
+    "url": "https://x.com/Nanpahamehame",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-ishikawa",
+    "url": "https://x.com/pua_ishikawa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "doraemon-pua",
+    "url": "https://x.com/doraemon_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "hayato-pua",
+    "url": "https://x.com/Hayato_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "sendainanpa1234",
+    "url": "https://x.com/sendainanpa1234",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "niko-pua",
+    "url": "https://x.com/Niko_PUA",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "isaac-pua",
+    "url": "https://x.com/ISAAC_PUA",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "mirinn-pua",
+    "url": "https://x.com/Mirinn_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "betty-boopua",
+    "url": "https://x.com/Betty_boopua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "whity-dogging-pua",
+    "url": "https://x.com/WhityDoggingPUA",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "sexercisepua",
+    "url": "https://x.com/SEXercisePUA",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pino-pick-up",
+    "url": "https://x.com/Pino_pick_up_",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nikepuamiso",
+    "url": "https://x.com/nikepuamiso",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "k-suto-nan",
+    "url": "https://x.com/K_suto_nan",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "dd-mote",
+    "url": "https://x.com/dd_mote",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "streetbucha",
+    "url": "https://x.com/streetbucha",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-entertainer",
+    "url": "https://x.com/PUA_entertainer",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "minato-pua",
+    "url": "https://x.com/minato_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "pua-miura",
+    "url": "https://x.com/pua_miura",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "korasyo-renai",
+    "url": "https://x.com/korasyo_renai",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "oguri-mote",
+    "url": "https://x.com/oguri_mote",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "motegasubete",
+    "url": "https://x.com/motegasubete",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "leopard-nanpa",
+    "url": "https://x.com/Leopard_nanpa",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "happy-0721-nan",
+    "url": "https://x.com/happy_0721_nan",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "chai-mote",
+    "url": "https://x.com/chai_mote",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "nanpasireiji",
+    "url": "https://x.com/nanpasireiji",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "senju-insta",
+    "url": "https://x.com/Senju_Insta",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "1tensaipua1",
+    "url": "https://x.com/1tensaipua1",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "lcup-pua",
+    "url": "https://x.com/lcup_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "ugly-pua",
+    "url": "https://x.com/ugly_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "motemoteyagi",
+    "url": "https://x.com/motemoteyagi",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "jackie-pua",
+    "url": "https://x.com/jackie_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
+  },
+  {
+    "account_id": "long-island-pua",
+    "url": "https://x.com/Long_Island_pua",
+    "label": "public self-described X profile",
+    "collect_following": true,
+    "following_limit": 120
   }
 ]

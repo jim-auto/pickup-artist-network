@@ -6,8 +6,8 @@
 
 ## Current growth target
 
-次の定量目標は **real person 500人**、最終目標は **1000人**。  
-現在は **403人**。補助レンジは `community 8-12 / content 12-18 / location 8-14 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 / 500 / 1000 の段階で広げる。
+次の定量目標は **real person 1000人**。  
+現在は **500人**。補助レンジは `community 8-12 / content 12-18 / location 8-14 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 / 500 / 1000 の段階で広げる。
 
 ## Why
 
@@ -91,6 +91,13 @@
 - 地理クラスタの土台として `kanto` / `chubu` の location node を追加し、既存の都市ノードを地方へぶら下げる構成にした
 - さらに 7 アカウントを追加し、`slinky-pua -> bantan-pua`、`kazunanpa -> yutty-pua`、`kazunanpa -> kazunanpa2`、`matchingmomonga -> matching-apps` の明示 relation も足して real person 394 / 1000 まで拡張した
 - さらに `osaka` / `kansai` の location node を追加し、もう 9 アカウントを追加して `tantan-pua -> tantan-ura`、`kayakkupua -> kayakkupuasub`、`konkatsu-nanpa -> yutty-pua`、`gamupua -> osaka`、`streets-bach -> bach-sokuhou / nonchama-pro` の明示 relation も足し、real person 403 / 1000 まで拡張した
+- さらに 12 アカウントを追加し、`reborn-pua -> yutty-pua`、`nanpanyan4545 -> yutty-pua`、`asahilove77 -> yutty-pua`、`nagi-nanpa0922 -> yutty-pua`、`motezoh-biz -> chikio-nmp`、`gatiikepua -> simba-pua`、`shelly4821 -> matching-apps` の明示 relation を足して real person 415 / 1000 まで拡張した
+- さらに 13 アカウントを追加し、`onizuka-pua -> kurosakikun`、`nanpa-obiwan -> obiwan-beauty`、`pua-kei-mh -> pua-kei-sg`、`gokun-pua -> kurita-pua` の明示 relation を足して real person 428 / 1000 まで拡張した
+- さらに 15 アカウントを追加し、`clark-pua -> juru-pua`、`anshin-pua -> kansai`、`vo-nampa -> tokyo`、`nampakago -> ryosuke-street2`、`toushirou-app -> matching-apps`、`nagasanpua -> kansai` の明示 relation を足して real person 443 / 1000 まで拡張した
+- さらに 10 アカウントを追加し、`aizen-pua -> aizen-puasub / nami-pua / bossnn-pua`、`aizen-puasub -> aizen-pua`、`bossnn-pua -> aizen-pua` の明示 relation を足して real person 453 / 1000 まで拡張した
+- さらに 11 アカウントを追加し、`speedstarsora -> pika-pua`、`outlook-sabo4 -> outlook-sub4`、`outlook-sub4 -> outlook-sabo4` の明示 relation を足して real person 464 / 1000 まで拡張した
+- さらに 16 アカウントを追加し、`shunon-street -> juru-pua`、`doraemon-pua -> yutty-pua / nonchama-pro` の明示 relation を足して real person 480 / 1000 まで拡張した
+- さらに 20 アカウントを追加して real person 500 / 1000 に到達した。最終波では pure pickup 周辺だけでなく、公開プロフィール上で scene-adjacent と確認できる male-improvement / nightlife / Instagram / voice-training 系アカウントも public graph に取り込んだ
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

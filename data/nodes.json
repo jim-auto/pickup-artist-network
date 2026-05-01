@@ -353,6 +353,43 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "korea-pua",
+    "type": "person",
+    "name": "3/18-20🐙 いのっち@シーズン2(いのっち一門)",
+    "aliases": [
+      "korea_pua"
+    ],
+    "description": "アラフォー🥵 年齢不詳顔🥵 窓際界隈のヒエラル上位層🥵 女性恐怖症🥵 800即over🥵3冠a○女優即🥵 いのっち一門(実績 1dayインターン生 2名)🥵 興味ある方はDM募集中",
+    "icon_url": "https://pbs.twimg.com/profile_images/1433270425044193284/Q9FRJZSd_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/korea_pua",
+      "https://querie.me/user/korea_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "motezoh-biz",
+    "type": "person",
+    "name": "AIマーケターもてゾウ｜FFFの民🐟",
+    "aliases": [
+      "motezoh_biz"
+    ],
+    "description": "もてゾウ（@chikio_NMP）のビジネス用垢。恋愛ビジネス歴10年。ファネル設計、LINE構築、セミナー設計まで可能です。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1924562690468675586/pBYOHW5w_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/motezoh_biz"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "karearitaberu",
     "type": "person",
     "name": "Bee@明太子ナンパ",
@@ -407,6 +444,24 @@
     "review_notes": ""
   },
   {
+    "id": "dd-mote",
+    "type": "person",
+    "name": "DD",
+    "aliases": [
+      "dd_mote"
+    ],
+    "description": "アラサー. 人間関係と恋愛のマイナスをゼロにし、人としてモテるようになるまでを綴るアカウント.",
+    "icon_url": "https://pbs.twimg.com/profile_images/2015732159403720704/mPfaVRtn_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/dd_mote"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "garp-pua",
     "type": "person",
     "name": "Gープ",
@@ -444,6 +499,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "saikyo-sutoti",
+    "type": "person",
+    "name": "K",
+    "aliases": [
+      "Saikyo_sutoti"
+    ],
+    "description": "金と女を全獲りする思考、習慣、マインドを発信 |『講習生実績』3ヶ月でモデルを彼女に、2ヶ月でホストの給料320万、アプリいいね数県内1位、4ヶ月で芸能事務所からスカウト",
+    "icon_url": "https://pbs.twimg.com/profile_images/1336931433357561856/edc-Vk6B_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Saikyo_sutoti",
+      "https://lin.ee/9rgyQ68"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "komanyan28",
     "type": "person",
     "name": "K0MA@ｹﾝﾁﾝの意思を継ぐもの",
@@ -459,6 +533,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "k-suto-nan",
+    "type": "person",
+    "name": "K@Mの王",
+    "aliases": [
+      "K_suto_nan"
+    ],
+    "description": "将来の夢はきらきらインフェラエンサー✨",
+    "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/K_suto_nan"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "kaiser-pua",
@@ -477,6 +569,79 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "pen-pen-st",
+    "type": "person",
+    "name": "Ken@🤓",
+    "aliases": [
+      "pen_pen_st"
+    ],
+    "description": "田舎のスト師。 メモ帳",
+    "icon_url": "https://pbs.twimg.com/profile_images/1820171087843651584/Oj7fNo4u_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pen_pen_st"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "sendainanpa1234",
+    "type": "person",
+    "name": "K太郎",
+    "aliases": [
+      "sendainanpa1234"
+    ],
+    "description": "🐮👅/ljk至上主義/雄華軍団/83即(スト79即、ネト4即)",
+    "icon_url": "https://pbs.twimg.com/profile_images/1760602547558264832/thB7Cn13_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/sendainanpa1234"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "lcup-pua",
+    "type": "person",
+    "name": "L@明太子",
+    "aliases": [
+      "lcup_pua"
+    ],
+    "description": "（探しているカップは）Lです。/ 24まで童貞の161cmアラサースト低ホビおじ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1574506183850790912/uad4bIXS_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/lcup_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "pua-marcelo",
+    "type": "person",
+    "name": "M",
+    "aliases": [
+      "Pua_Marcelo"
+    ],
+    "description": "合流用アカウント。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1853848694136958976/mY2TWsao_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Pua_Marcelo",
+      "http://note.com/pua_marcelo"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "puro-nampa",
@@ -553,6 +718,42 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "r-pua-pua",
+    "type": "person",
+    "name": "R-指定",
+    "aliases": [
+      "R_pua_pua"
+    ],
+    "description": "アイコン本人（ガチ）|弱い人にはイキリがち｜2021. 3月〜路上マスタベ一門1期生",
+    "icon_url": "https://pbs.twimg.com/profile_images/1958504550626947072/9LXV1wtA_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/R_pua_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "rizin-pua",
+    "type": "person",
+    "name": "RIZIN(らいじん)@LV1",
+    "aliases": [
+      "rizin_pua"
+    ],
+    "description": "30代独身情弱男性|ナンパ合流歓迎",
+    "icon_url": "https://pbs.twimg.com/profile_images/1291972238267174912/sU_9KSnJ_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/rizin_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "reiy-brushup",
     "type": "person",
     "name": "Reiya",
@@ -587,6 +788,42 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "siofkn-pua",
+    "type": "person",
+    "name": "SIOFKN シオフキン🧂@SSB",
+    "aliases": [
+      "siofkn_pua"
+    ],
+    "description": "🐶🎃6即🎩🎩｜🦾4即×2/🦾月間25出撃31即(2024年1月)/🦾完ソロ🎩×1/🦾🎩×4/🦾逆3即×1/🦾13連勝｜ガープ値 4.8→ 9.7｜2022/3〜｜SSB加入(2023/12〜)｜#クラナンサロンSSB ｜res：さぼ団長@outlook_sabo_4",
+    "icon_url": "https://pbs.twimg.com/profile_images/1323063093232951296/O-6YLYtF_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/siofkn_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "syou-nanpa",
+    "type": "person",
+    "name": "SYOU",
+    "aliases": [
+      "SYOUnanpa"
+    ],
+    "description": "社会人。ストはたまに。から ストは週一。",
+    "icon_url": "https://pbs.twimg.com/profile_images/378800000213820706/3d68413d87d613eaf5f55d05be238438_400x400.jpeg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/SYOUnanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "pypynanpa",
@@ -905,6 +1142,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "minato-pua",
+    "type": "person",
+    "name": "⚓️",
+    "aliases": [
+      "minato_pua"
+    ],
+    "description": "X profile for ⚓️ (@minato_pua). Location: 東京 港区.",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040948171296342016/XlYXfP84_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/minato_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "mic-pua",
     "type": "person",
     "name": "『トーク刺しのまいく🎤』",
@@ -916,6 +1171,42 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/mic_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "aizen-pua",
+    "type": "person",
+    "name": "あいぜん@はんちょう講習生",
+    "aliases": [
+      "aizen_pua"
+    ],
+    "description": "低身長ブサメン大学生が界隈入りしてストネトで女の子抱きまくり/界隈入前即数2→現在123即/月最高21即/彼女化・キープ多数/ネトのみ🎩正4.正5済/スト値2→5/女攻略初心者が知りたい【出会い〜即】までの情報発信中 サブ垢→@aizen_puasub 相方→@nami__pua 弟子→@bossnn_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/1765655694601252864/11_yQd4r_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/aizen_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "aizen-puasub",
+    "type": "person",
+    "name": "あいぜんさぶ",
+    "aliases": [
+      "aizen_puasub"
+    ],
+    "description": "本垢→@aizen_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/1774331369159831552/ZFprEseK_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/aizen_puasub"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -957,6 +1248,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "asahilove77",
+    "type": "person",
+    "name": "あさひ@ゆってぃ長期12期生",
+    "aliases": [
+      "asahilove77"
+    ],
+    "description": "東京在住/29歳のナンパ師/ゆってぃ長期12期生 2025年7月〜/2025年7月4日 0→1達成/",
+    "icon_url": "https://pbs.twimg.com/profile_images/1933533758172639240/3Aq5KwFI_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/asahilove77"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "asumi-pua",
@@ -1098,6 +1407,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "anshin-pua",
+    "type": "person",
+    "name": "あんしん",
+    "aliases": [
+      "anshin__pua"
+    ],
+    "description": "真っ当に生きる必要はない🎀この舞台で足掻くことをやめない😌676人斬りナンパ師",
+    "icon_url": "https://pbs.twimg.com/profile_images/2046485570587938816/RKvUi2Jz_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/anshin__pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "qh0kum",
@@ -1329,6 +1656,43 @@
     "review_notes": ""
   },
   {
+    "id": "nanpa-obiwan",
+    "type": "person",
+    "name": "おび1@美容院にはもう行かない",
+    "aliases": [
+      "nanpa_ObiWan"
+    ],
+    "description": "170↓非ﾓﾃ理系出身陰ｷｬで元引き篭りのﾐﾄﾞｻｰ/ストリートナンパ/美容:AGA+髭脱毛+ｱﾝﾁｴｲｼﾞﾝｸﾞ",
+    "icon_url": "https://pbs.twimg.com/profile_images/2015341012311588864/fM2DHFi4_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nanpa_ObiWan",
+      "https://x.com/obiwan_beauty?s=21&t=LQfXSUO18x4ZN-RWu5dO3g"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "obiwan-beauty",
+    "type": "person",
+    "name": "おびわん美容",
+    "aliases": [
+      "obiwan_beauty"
+    ],
+    "description": "X profile for @obiwan_beauty.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/obiwan_beauty"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "kazama-player",
     "type": "person",
     "name": "かっざーま@さぶあか",
@@ -1437,6 +1801,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 13 tracked accounts."
   },
   {
+    "id": "anus-asterisk",
+    "type": "person",
+    "name": "がまぐっちぃ🐸仙人モード",
+    "aliases": [
+      "anus_asterisk"
+    ],
+    "description": "25/12/05〜味噌復帰|ほぼⓂ️スト｜顔刺し🕶️&ちん刺し🍼低身長スト士🔥｜子連れシンママ即→彼女化💕→中絶👶→1年半交際💔｜年間100即目標｜26年Total15/100即（🚶11/📱2/🎡2）",
+    "icon_url": "https://pbs.twimg.com/profile_images/2010034716377071616/CyCZv-4t_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/anus_asterisk"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "daigakusei-pua",
     "type": "person",
     "name": "きの山@MBH",
@@ -1455,6 +1837,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "kukuru-nanpa",
+    "type": "person",
+    "name": "くくる@トク🐉一門",
+    "aliases": [
+      "kukuru_nanpa"
+    ],
+    "description": "ミドサー/元スト勢/🗼🍛月間32即/トク🐉一門",
+    "icon_url": "https://pbs.twimg.com/profile_images/2031745056164782081/CsU9LPuA_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kukuru_nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "kei-pua",
     "type": "person",
     "name": "けい",
@@ -1471,6 +1871,60 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "pua-kei-sg",
+    "type": "person",
+    "name": "けい@即画",
+    "aliases": [
+      "PUA_KEI_SG"
+    ],
+    "description": "気分で即画を垂れ流すアカウント。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1950227589752324096/XH9O_S1T_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/PUA_KEI_SG"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "pua-kei-mh",
+    "type": "person",
+    "name": "けい@味噌のホープ",
+    "aliases": [
+      "PUA_KEI_MH"
+    ],
+    "description": "アラツ若イケ👑/無整形/NNKK味噌支部代表/プラよぶ値6.5/ピンモン🥤一門/飯店の🩸を継ぐ男/界隈R6.10〜/【目標】完ソロストのみ200即/累計39即（スト39📦0📱0）/裏垢🔞→@PUA_KEI_SG",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040698478838632448/U96RNuUG_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/PUA_KEI_MH"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "doraemon-pua",
+    "type": "person",
+    "name": "けいすけ",
+    "aliases": [
+      "doraemon_pua"
+    ],
+    "description": "味噌/ゆってぃ長期2期生2ヶ月🍒卒&10即/のんちゃま単発/重度温玉のリハビリ物語",
+    "icon_url": "https://pbs.twimg.com/profile_images/1936264761207103488/sVRyzO7K_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/doraemon_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "kei-male-apex",
@@ -1599,6 +2053,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 25 handles and matched 7 tracked accounts."
   },
   {
+    "id": "korasyo-renai",
+    "type": "person",
+    "name": "こらしょ",
+    "aliases": [
+      "korasyo_renai"
+    ],
+    "description": "元夜職 | 夜職・美女の生態について発信",
+    "icon_url": "https://pbs.twimg.com/profile_images/1965036318989467648/-zPjO6qW_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/korasyo_renai"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "korilla-pua",
     "type": "person",
     "name": "こりら🧸",
@@ -1652,6 +2124,43 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "outlook-sub4",
+    "type": "person",
+    "name": "さぼのサブ@部長",
+    "aliases": [
+      "outlook_sub_4"
+    ],
+    "description": "さぼ(@outlook_sabo_4)のサブ垢です。TLに出てきた活動してるアカウント全てフォロー｜~20年150即｜21年100即｜22年200即｜23年300即｜24年｜1月31｜2月11｜3月10｜4月27｜5月48｜6月53｜7月28｜８月12｜9月12｜10月20｜24年262",
+    "icon_url": "https://pbs.twimg.com/profile_images/1504333585863831553/fRuIOLJq_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/outlook_sub_4"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "outlook-sabo4",
+    "type": "person",
+    "name": "さぼ団長@相席講習",
+    "aliases": [
+      "outlook_sabo_4"
+    ],
+    "description": "格安で講習生募集中｜累計1250即/相席屋で月12即/逆こない人｜細かい実績はサブ➡@outlook_sub_4 相席攻略Tips:https://t.co/jhSu6RdgtH",
+    "icon_url": "https://pbs.twimg.com/profile_images/1942997962818514944/IaLSrlMn_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/outlook_sabo_4",
+      "https://tips.jp/u/damjwptgmjdtapjg/a/aD3kfbSl/d/dac"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "tantan-pua",
@@ -1782,6 +2291,24 @@
     "review_notes": ""
   },
   {
+    "id": "s-pua0213",
+    "type": "person",
+    "name": "しんご@かいじ講習",
+    "aliases": [
+      "s_pua0213"
+    ],
+    "description": "🐶住み かいじ講習",
+    "icon_url": "https://pbs.twimg.com/profile_images/1887531218046259200/X2YM1kDs_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/s_pua0213"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "jinjin-mote9",
     "type": "person",
     "name": "じんじん",
@@ -1871,6 +2398,25 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "speedstarsora",
+    "type": "person",
+    "name": "そらじろー @短髪強いられ勢",
+    "aliases": [
+      "speedstarsora"
+    ],
+    "description": "02生まれ パレス→ https://t.co/tLz2vvgBBG ネクステ→ゴラッソ長期→ピカ外見コンサル←いまここ アプリスト半々96即",
+    "icon_url": "https://pbs.twimg.com/profile_images/1959604473619443712/x1v-Jwe0_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/speedstarsora",
+      "https://note.com/sobakara_gaykid/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "taichi-pua",
@@ -2191,6 +2737,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "nagi-nanpa0922",
+    "type": "person",
+    "name": "なぎ@ゆってぃ長期9期生",
+    "aliases": [
+      "nagi_nanpa0922"
+    ],
+    "description": "ゆってぃ長期9期生",
+    "icon_url": "https://pbs.twimg.com/profile_images/1837574928755052546/eW1T_WS4_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nagi_nanpa0922"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "konkatsu-nanpa",
@@ -2767,6 +3331,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "street-ryouta",
+    "type": "person",
+    "name": "みやりょー",
+    "aliases": [
+      "street_ryouta"
+    ],
+    "description": "パ界隈の20代前半限界社会人 🐮👅→🗼 200即over🔥（ネト30／スト120／箱50）",
+    "icon_url": "https://pbs.twimg.com/profile_images/1944185578486214658/oHvTuHxX_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/street_ryouta"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "miraitinder6969",
     "type": "person",
     "name": "みらい🚂",
@@ -2800,6 +3382,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "mirinn-pua",
+    "type": "person",
+    "name": "みりんpua/明太子",
+    "aliases": [
+      "Mirinn_pua"
+    ],
+    "description": "明太子 スト値上げ。なにも強くないです。 日々勉強。10代200即↑",
+    "icon_url": "https://pbs.twimg.com/profile_images/1799382855287783424/ZwspbC_n_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Mirinn_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "riku-pua",
@@ -2855,6 +3455,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "chikio-nmp",
+    "type": "person",
+    "name": "もてゾウ",
+    "aliases": [
+      "chikio_NMP"
+    ],
+    "description": "35歳既婚。恋愛指導歴10年。【経歴】早稲田→大手コンサル→独立して恋愛講師(指導実績500人)→結婚相談所を開業(2026.1〜) 【メディア出演歴】AbemaTV、ヤンマガch、日刊/週刊SPA!等",
+    "icon_url": "https://pbs.twimg.com/profile_images/1437259954029613058/KTgXCz8p_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/chikio_NMP"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "hanasikikoka",
     "type": "person",
     "name": "もの #スト集中攻略期間",
@@ -2890,6 +3508,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 3 tracked accounts."
+  },
+  {
+    "id": "vegetst",
+    "type": "person",
+    "name": "やさい🥒",
+    "aliases": [
+      "vegetst"
+    ],
+    "description": "スト値2ジジイ|2022:4即→2023:25即→2024:0即→2025:0即|出撃数少なくてもがんばる| lv29🔥3",
+    "icon_url": "https://pbs.twimg.com/profile_images/1823198812829327360/b563bgFY_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/vegetst",
+      "https://note.com/vegetst"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "yayaya-zyakudan",
@@ -2962,6 +3599,25 @@
     "review_notes": ""
   },
   {
+    "id": "nanpasd",
+    "type": "person",
+    "name": "ゆきひで@ナンパ師",
+    "aliases": [
+      "nanpasd"
+    ],
+    "description": "ナンパ師 → 調教 貢がせ 自由にやってる40歳.スト歴17年(合計即数 2237人～)貢がせ歴11年.日常を適当に.〇と加工は諸々リスク/身バレ対策.2025年末メイン垢凍結したのでこのサブ垢のみ.",
+    "icon_url": "https://pbs.twimg.com/profile_images/2008486301201498113/3QndUVUi_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nanpasd",
+      "https://lit.link/nanpads"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "yumaru-pua",
     "type": "person",
     "name": "ゆまる",
@@ -2978,6 +3634,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "nampakago",
+    "type": "person",
+    "name": "ゆー@涼介長期講習生",
+    "aliases": [
+      "nampakago"
+    ],
+    "description": "涼介(@ryosuke_street2)長期講習生/34歳、東京/人生を変えたい、ナンパで成功したい！＊ナンパ初心者/活動→スト🐶/11.6アカウント開設",
+    "icon_url": "https://pbs.twimg.com/profile_images/1588983659985391616/Tpsz4Geb_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nampakago"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "utopua2",
@@ -3139,6 +3813,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 3 tracked accounts."
   },
   {
+    "id": "ugly-pua",
+    "type": "person",
+    "name": "りょりょ",
+    "aliases": [
+      "ugly_pua"
+    ],
+    "description": "鉄が呼んでいる #クラナンサロンSSB",
+    "icon_url": "https://pbs.twimg.com/profile_images/1733678066281611264/Wp-hnTTl_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/ugly_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "okashinaataoka",
     "type": "person",
     "name": "るいるい",
@@ -3156,6 +3848,42 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 22 handles and matched 3 tracked accounts."
+  },
+  {
+    "id": "pua-rusu",
+    "type": "person",
+    "name": "るす@インスタナンパの人",
+    "aliases": [
+      "pua_rusu"
+    ],
+    "description": "非モテ陰キャがナンパ100人斬りを8ヶ月で達成 | スト9時間で7即 | ナンパnote累計300部over",
+    "icon_url": "https://pbs.twimg.com/profile_images/1295990431436533760/945WVEpi_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pua_rusu"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "renren-pua",
+    "type": "person",
+    "name": "れん@無所属",
+    "aliases": [
+      "Renren_pua"
+    ],
+    "description": "600over 週末ストクラネト | 有名現役グラドル | Instagramer | tiktoker | AV女優経験済 | ハロウィン🎃1日6即/2日で12即 ＃巨乳しか勝たん❇️pairs招待コード👉 lyJJA7d❇️ with招待コード👉 dde3c6",
+    "icon_url": "https://pbs.twimg.com/profile_images/1501947991984599047/kzZAeyTT_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Renren_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "roa-pua",
@@ -3355,6 +4083,42 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "lonely-stonan",
+    "type": "person",
+    "name": "イーブラ",
+    "aliases": [
+      "lonely_stonan"
+    ],
+    "description": "スト日和",
+    "icon_url": "https://pbs.twimg.com/profile_images/851581603482447872/VrWwYd8a_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/lonely_stonan"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "nanpahamehame",
+    "type": "person",
+    "name": "イーブラ2",
+    "aliases": [
+      "Nanpahamehame"
+    ],
+    "description": "ローカルでひっそりとストナンしてます。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1886628306235351045/x8-GWp-8_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Nanpahamehame"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "mostkkweek",
@@ -3573,6 +4337,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "isaac-pua",
+    "type": "person",
+    "name": "カルド@S氏クラス",
+    "aliases": [
+      "ISAAC_PUA"
+    ],
+    "description": "ネトよりさらなる刺激を求めてストの世界へ。通算即:ネト29即/オフライン60即 ストメイン #S氏クラス",
+    "icon_url": "https://pbs.twimg.com/profile_images/1585242833866305536/Hhl4EJMI_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/ISAAC_PUA"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "karon-pua",
     "type": "person",
     "name": "カロン@RiseUpLab",
@@ -3716,6 +4498,24 @@
     "review_notes": ""
   },
   {
+    "id": "kiri-stomach",
+    "type": "person",
+    "name": "キリー🛌🧀",
+    "aliases": [
+      "KiriStomach"
+    ],
+    "description": "ストレートネック猫背反り腰短小包茎早漏イエベ🧀スト箱/合コン/学祭/花見即🧀ljk逆3p即🧀月15即🧀累計100即↑ #歌声刺し #妊孕性刺し 同棲中の女子垢→@NRTq5ihqEpYCy0N",
+    "icon_url": "https://pbs.twimg.com/profile_images/1814981011975151616/KfSMnUzQ_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/KiriStomach"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "kill-pua",
     "type": "person",
     "name": "キルア⚡️",
@@ -3748,6 +4548,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "clark-pua",
+    "type": "person",
+    "name": "クラーク@ジュルマ一門",
+    "aliases": [
+      "clark_pua"
+    ],
+    "description": "明太子／アラサー/1即",
+    "icon_url": "https://pbs.twimg.com/profile_images/2008162296401670144/qwuRrfrz_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/clark_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "gupy-pua",
@@ -3913,6 +4731,25 @@
     "review_notes": ""
   },
   {
+    "id": "shelly4821",
+    "type": "person",
+    "name": "シェリー／マッチングアプリカメラマン",
+    "aliases": [
+      "shelly4821"
+    ],
+    "description": "アプリカメラマン歴2年半 | 撮影実績450人 | 撮影した人はフツメンでもwith初日1400マッチ、東カレ初日で400マッチなど | 経験人数400↑",
+    "icon_url": "https://pbs.twimg.com/profile_images/1573542094421229568/bKccqsjg_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/shelly4821",
+      "https://lin.ee/7DhyB1L"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "one-sith-pua",
     "type": "person",
     "name": "シス",
@@ -3948,6 +4785,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "shunon-street",
+    "type": "person",
+    "name": "シュノン@ジュルマ一門",
+    "aliases": [
+      "shunon_street"
+    ],
+    "description": "2025年１０月２８日界隈入り/大学生/ジュルマ単発講習受講後スト開始 初即目指して頑張ります！",
+    "icon_url": "https://pbs.twimg.com/profile_images/1996262162965368832/sWCLr11c_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/shunon_street"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "scream-pua",
@@ -4003,6 +4858,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "simba-pua",
+    "type": "person",
+    "name": "シンバ",
+    "aliases": [
+      "Simba_pua"
+    ],
+    "description": "👑の長｜現役ナンバー📮｜夜職経験長く、対女（関係構築・🍯）かなり得意です。DMください、人生ぶち上げます。裏垢→@gatiikepua",
+    "icon_url": "https://pbs.twimg.com/profile_images/2005650951034834944/HsZ2oqUE_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Simba_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "jim-nanpa",
     "type": "person",
     "name": "ジム＠Claude/味噌/ピカ講習",
@@ -4020,6 +4893,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "jackie-pua",
+    "type": "person",
+    "name": "ジャッキー",
+    "aliases": [
+      "jackie_pua"
+    ],
+    "description": "2018.06〜",
+    "icon_url": "https://pbs.twimg.com/profile_images/1624200201685856257/9m-gb-p4_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/jackie_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "juru-pua",
@@ -4292,6 +5183,43 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 22 handles and matched 0 tracked accounts."
   },
   {
+    "id": "chai-mote",
+    "type": "person",
+    "name": "チャイ",
+    "aliases": [
+      "chai_mote"
+    ],
+    "description": "男磨きを中心に発信。お金を稼ぐためのSNSマーケティングプレゼントは固定ポストに。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1884962197278986240/UV7X1rXM_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/chai_mote",
+      "https://www.youtube.com/@chai_mote"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "choppy-nanpa",
+    "type": "person",
+    "name": "チョッピー@🏋️",
+    "aliases": [
+      "choppy_nanpa"
+    ],
+    "description": "残業90〜100時間しながらナンパ活動フルコミット⇨FCA入会/kosukeさん@kgori_0412のコミュニティー所属",
+    "icon_url": "https://pbs.twimg.com/profile_images/1998691114673647616/Th-2ZaJJ_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/choppy_nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "chiroru-pua-main",
     "type": "person",
     "name": "チロル",
@@ -4344,6 +5272,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "try-pua",
+    "type": "person",
+    "name": "トライ",
+    "aliases": [
+      "try_pua"
+    ],
+    "description": "20代 🌋 #MakeN",
+    "icon_url": "https://pbs.twimg.com/profile_images/1499005174828134404/x17VqB9s_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/try_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "training-pua",
@@ -4470,6 +5416,24 @@
     "review_notes": ""
   },
   {
+    "id": "dawson-nst",
+    "type": "person",
+    "name": "ドーソン",
+    "aliases": [
+      "Dawson_nst"
+    ],
+    "description": "元ナンパ師",
+    "icon_url": "https://pbs.twimg.com/profile_images/1637485513203671042/eQccjGRK_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Dawson_nst"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "seizitunanpa",
     "type": "person",
     "name": "ナッチョ",
@@ -4504,6 +5468,43 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "id": "vo-nampa",
+    "type": "person",
+    "name": "ナンパのボーさん",
+    "aliases": [
+      "vo_nampa"
+    ],
+    "description": "600即↑の非モテ/合流大歓迎/帝都クラスタ/インスタナンパとXナンパはトプレベルです",
+    "icon_url": "https://pbs.twimg.com/profile_images/1708762528246026240/f3C_YUOK_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/vo_nampa",
+      "http://tips.jp/s/mRJ2bG"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "ura-aka-nanpa",
+    "type": "person",
+    "name": "ナンパ師んぽくぬ",
+    "aliases": [
+      "ura_aka_nanpa"
+    ],
+    "description": "ヘッダーはプールでナンパした女の子とワイのお股。都内近郊でナンパしてます。雑誌やネット記事にたまに出てます。講習受けたい方はDM。元東京秘密基地セラピ、元執事喫茶勤務、現バンドマン、現アイドル運営、元ホスト、元メン地下。メンエスマニア。https://t.co/8lYZqbyZSf",
+    "icon_url": "https://pbs.twimg.com/profile_images/1513798555475255296/DH1EyUrH_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/ura_aka_nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "real-nampa",
@@ -4561,6 +5562,44 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "efu-pua",
+    "type": "person",
+    "name": "ナン趣味くん🫓",
+    "aliases": [
+      "efu_pua"
+    ],
+    "description": "2022/1/17界隈入り|🐙Mｸﾗｽﾀ|スト300↑|2022年108g|2023年83g|漢ストサロン創設者|造語が趣味です #ナン食べ 唯一無二の #漢値判定 #ありがとう漢になれたよ これがほんまの #漢化現象 #これが漢のストやろがい",
+    "icon_url": "https://pbs.twimg.com/profile_images/1483351922245771264/CfbdRtXf_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/efu_pua",
+      "https://tips.jp/s/Lyeexr"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "nagasanpua",
+    "type": "person",
+    "name": "ナーガ@SHSM2024幹事",
+    "aliases": [
+      "nagasanpua"
+    ],
+    "description": "2016年11月START→2024.【🌊ナンパが原点】関西の海ナンパを底上げ！2020〜2023.SHSM（シラハマサミット主宰）2023関西クラスタコレクション幹事💫その他Event参加経験有",
+    "icon_url": "https://pbs.twimg.com/profile_images/1609701282033569793/ZlvOmp7n_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nagasanpua",
+      "http://nagasanpua.hatenablog.com"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "boc-125",
     "type": "person",
     "name": "ニア（エンジニア）🥺MNPナソパ師",
@@ -4577,6 +5616,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 1 tracked accounts."
+  },
+  {
+    "id": "nikepuamiso",
+    "type": "person",
+    "name": "ニケ",
+    "aliases": [
+      "nikepuamiso"
+    ],
+    "description": "189即 🚶s44🚶c29.📦s33📦c41📱26| ms🐶🦉🦁M🟥⬛️🟦🌅⬛️🐶🦾🦁🦾🦌👴M🐰🦊",
+    "icon_url": "https://pbs.twimg.com/profile_images/1461711973343969283/Tp1-_VbC_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nikepuamiso"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "nekominto-pua",
@@ -4783,6 +5840,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 6 tracked accounts."
   },
   {
+    "id": "be-street-pua",
+    "type": "person",
+    "name": "ビースト",
+    "aliases": [
+      "Be_Street_pua"
+    ],
+    "description": "合流大歓迎 🌸質追 20代",
+    "icon_url": "https://pbs.twimg.com/profile_images/1916765176562688000/s5AuLpBP_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Be_Street_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "pika-pua",
     "type": "person",
     "name": "ピカちう@ナンパ講師/外見改善 東京 名古屋",
@@ -4972,6 +6047,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "streetbucha",
+    "type": "person",
+    "name": "ブチャ@フランス産最高級チーズ",
+    "aliases": [
+      "streetbucha"
+    ],
+    "description": "たまにkkしている一般人です",
+    "icon_url": "https://pbs.twimg.com/profile_images/2047608270433718273/xBhgz_cM_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/streetbucha"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "fami-ver2",
     "type": "person",
     "name": "ブラックサンダー@kyo統失一門",
@@ -5043,6 +6136,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 30 handles and matched 0 tracked accounts."
   },
   {
+    "id": "betty-boopua",
+    "type": "person",
+    "name": "ベティ",
+    "aliases": [
+      "Betty_boopua"
+    ],
+    "description": "2022年関西新人王 & ベストコンビＷノミネート",
+    "icon_url": "https://pbs.twimg.com/profile_images/1589577276341243905/qJ-yWmqh_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Betty_boopua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "nanpa-pegasasu",
     "type": "person",
     "name": "ペガサス@マッチングアプリ攻略🦄",
@@ -5060,6 +6171,43 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 24 handles and matched 9 tracked accounts."
+  },
+  {
+    "id": "niko-pua",
+    "type": "person",
+    "name": "ボズアウトbot",
+    "aliases": [
+      "Niko_PUA"
+    ],
+    "description": "MMAフィットネス会員 オフラインのみ アフピルとかバリフ安く買える↓",
+    "icon_url": "https://pbs.twimg.com/profile_images/2004313139337474048/gWeN6xV__400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Niko_PUA",
+      "https://note.com/niko_pua/n/n6a75de450249"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "bossnn-pua",
+    "type": "person",
+    "name": "ボッスン@あいぜん一番弟子",
+    "aliases": [
+      "bossnn_pua"
+    ],
+    "description": "2023年11月界隈本格入り/2024年4月引退/現在界隈読者/正5済み/界隈入前即数0→即数27/童貞刺しクラスタ/#あいぜん講習０期生/師匠→@aizen_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/1710417497802133505/bvzYS3pM_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bossnn_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "pochama-tuwaou",
@@ -5302,6 +6450,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "motegasubete",
+    "type": "person",
+    "name": "モテ特化ボイトレ",
+    "aliases": [
+      "motegasubete"
+    ],
+    "description": "モテる歌声の作り方を言語化 ｜ 超理論派 ｜解剖学•音声学に基づいた再現性の高い指導｜有名プロ Youtuber 多数指導 ｜受講生の声 ▷ https://t.co/9Adk4uVclQ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1945341300875911168/ytq-6_Ae_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/motegasubete",
+      "https://mote-voice.com/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "mote-hair00",
     "type": "person",
     "name": "モテ界隈特化美容師 えーちゃん",
@@ -5317,6 +6484,44 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "motemoteyagi",
+    "type": "person",
+    "name": "ヤギ",
+    "aliases": [
+      "motemoteyagi"
+    ],
+    "description": "引退済み",
+    "icon_url": "https://pbs.twimg.com/profile_images/1620624680725135360/IpU95zhT_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/motemoteyagi",
+      "https://note.com/yagi31/n/n5922f8a18783"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "pua-entertainer",
+    "type": "person",
+    "name": "ヤナセ",
+    "aliases": [
+      "PUA_entertainer"
+    ],
+    "description": "風俗🛀・競馬🏇・サウナ♨️大好き #サ活",
+    "icon_url": "https://pbs.twimg.com/profile_images/1688020639062609920/Oliv7pS3_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/PUA_entertainer",
+      "http://yanase-pua.hatenablog.com/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "yabuki-nampa",
@@ -5374,6 +6579,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "id": "sexercisepua",
+    "type": "person",
+    "name": "ユユ院長@会員制プライベートサロン”腰ふり改善整体”準備中",
+    "aliases": [
+      "SEXercisePUA"
+    ],
+    "description": "【整形外科専門医監修】理学療法士 施術人数1000名以上 | 経歴 : ナンパ師→恋愛講師→女性用風俗セラピスト→AV男優デビュー |累計200名以上にお持ち帰りテクニックと中イキテクニックを指導|講習依頼は公式LINE👇",
+    "icon_url": "https://pbs.twimg.com/profile_images/1997987695281537025/ERYV34LW_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/SEXercisePUA",
+      "https://lin.ee/XDGn34P"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "yolu-pua",
@@ -5485,6 +6709,78 @@
     "review_notes": ""
   },
   {
+    "id": "reborn-pua",
+    "type": "person",
+    "name": "リボーン@ゆってぃ長期12期生",
+    "aliases": [
+      "reborn_pua"
+    ],
+    "description": "何度でも生まれ変わるという意味で「REBORN」/ 二十代/ストナン/ 「精神性」を鍛える/長期期間 弾丸1即 当日即3即 準即3即🔥",
+    "icon_url": "https://pbs.twimg.com/profile_images/1611677989703659521/ipE43Yp8_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/reborn_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "lillard-motetai",
+    "type": "person",
+    "name": "リラード",
+    "aliases": [
+      "lillard_motetai"
+    ],
+    "description": "北国育ちリーマン/30代/バツイチ/🏖️メイン",
+    "icon_url": "https://pbs.twimg.com/profile_images/1341610706815180801/pTPuPX5t_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/lillard_motetai"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "rockpua-sub",
+    "type": "person",
+    "name": "リー",
+    "aliases": [
+      "rockpua_sub"
+    ],
+    "description": "童貞からナンパ開始/ナンパ講習生150人以上/ナンパ初心者に有益情報/10時間5即達成/月間最高47即(ソロストのみ)AV女優即、モデル即、ミスコン代表即達成/ナンパ歴5 年経験人数650over/講習依頼はDMまで 。明太子スト多め、月1で帝都にいます",
+    "icon_url": "https://pbs.twimg.com/profile_images/1812974660272988170/mu0WKPuL_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/rockpua_sub"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "rui0808-pua",
+    "type": "person",
+    "name": "ルイ",
+    "aliases": [
+      "rui0808_pua"
+    ],
+    "description": "明太子/スト、箱/オフラインのみ/即数200↑/最高 日5get /月27get/在美10連勝 /界隈入り5ヶ月で100即達成 / 🐙3日6即/帝都2日5即/",
+    "icon_url": "https://pbs.twimg.com/profile_images/1339137030177976320/dfnXA8uh_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/rui0808_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "gorubakki-pua",
     "type": "person",
     "name": "ルキア@薩摩→明太子",
@@ -5519,6 +6815,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "id": "leopard-nanpa",
+    "type": "person",
+    "name": "レオパ🐯🍌💦",
+    "aliases": [
+      "Leopard_nanpa"
+    ],
+    "description": "味噌/23年9月〜/アラサー/クソリプが好き/クラスタの例に漏れず、重い十字架(ADHD)を背負って生きてます",
+    "icon_url": "https://pbs.twimg.com/profile_images/1741152996636217344/2r7ufsum_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Leopard_nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "so-pua",
@@ -5592,6 +6906,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 28 handles and matched 13 tracked accounts."
   },
   {
+    "id": "kkk-pua",
+    "type": "person",
+    "name": "レン@pua",
+    "aliases": [
+      "kkk_pua"
+    ],
+    "description": "🗼25年1月スト開始|28🦏|160cm|🐶弾丸即8、準即3🦁弾丸即1|自分メモ📝: 250409_フィナ、250910_バルガス|🌸探し中、性病警戒で🦁は出撃しない。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1880021003822419968/Sdx8jZuz_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kkk_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "bokupaipan",
     "type": "person",
     "name": "ロミたん·D·手越⑳",
@@ -5609,6 +6941,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 17 tracked accounts."
+  },
+  {
+    "id": "long-island-pua",
+    "type": "person",
+    "name": "ロン愛",
+    "aliases": [
+      "Long_Island_pua"
+    ],
+    "description": "X profile for ロン愛 (@Long_Island_pua). Location: ロングアイランド.",
+    "icon_url": "https://pbs.twimg.com/profile_images/1652268617688555521/1pZ2q5Ud_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Long_Island_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "kazunanpa2",
@@ -5647,6 +6997,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 20 handles and matched 0 tracked accounts."
   },
   {
+    "id": "hayato-pua",
+    "type": "person",
+    "name": "一ノ瀬",
+    "aliases": [
+      "Hayato_pua"
+    ],
+    "description": "「現状維持は退化」大阪→東京 ◉ストクラブ両刀、トークで女の子を口説き落としています◉オフライン24時間7即/梟箱ソロ4即(乱くる・ブメ・パス無し)/宇宙箱🪐ハット4連勝/渋谷箱平日only28連勝◉黒足の一味代表サンジとの共著『究極トークマニュアル〜外見に依存しない口説き術〜』絶賛販売中",
+    "icon_url": "https://pbs.twimg.com/profile_images/1295736406359212032/SxaODf9h_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Hayato_pua",
+      "https://note.com/hayato_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "ffk0772",
     "type": "person",
     "name": "一条りん@会話刺しのプロ",
@@ -5683,6 +7052,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 6 tracked accounts."
+  },
+  {
+    "id": "pua-miura",
+    "type": "person",
+    "name": "三浦",
+    "aliases": [
+      "pua_miura"
+    ],
+    "description": "アイコン本人。🇳🇬×🇯🇵",
+    "icon_url": "https://pbs.twimg.com/profile_images/1700691464827838464/iLcLoNfN_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pua_miura"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "nakayamasoku",
@@ -5866,6 +7253,25 @@
     "review_notes": ""
   },
   {
+    "id": "toushirou-app",
+    "type": "person",
+    "name": "冬獅郎@チャットアプリ戦略家",
+    "aliases": [
+      "toushirou_app"
+    ],
+    "description": "ド田舎・実家住み・フツメンの社会人 | チャットアプリで可愛い女の子をコスパよく抱きまくってます| 経験人数400人over | 「有益情報すぐ消すので通知オン推奨」",
+    "icon_url": "https://pbs.twimg.com/profile_images/1539271597055684608/T1FEd4t8_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/toushirou_app",
+      "https://tips.jp/s/aTmxY7"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "fuku-third",
     "type": "person",
     "name": "副",
@@ -5900,6 +7306,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 30 handles and matched 7 tracked accounts."
+  },
+  {
+    "id": "senju-insta",
+    "type": "person",
+    "name": "千咒",
+    "aliases": [
+      "Senju_Insta"
+    ],
+    "description": "Instagram総10万人｜21歳まで童貞・無職→人生逆転｜業界No.1『#インスタコンサルAnother』運営(85名)｜実績：万垢16名/美女・案件獲得｜裏垢：@sen_xxv",
+    "icon_url": "https://pbs.twimg.com/profile_images/2007015801333968896/L0djjAv8_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Senju_Insta",
+      "https://lin.ee/gJlyGeB"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "senga-pua",
@@ -6047,6 +7472,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 2 tracked accounts."
   },
   {
+    "id": "nandeyanen-pua",
+    "type": "person",
+    "name": "園長@KRT流",
+    "aliases": [
+      "nandeyanen_pua"
+    ],
+    "description": "161㎝ ▶ストリートナンパ師 ▶︎栗田値5.5▶︎パレ値カンスト ▶︎ハット達成済",
+    "icon_url": "https://pbs.twimg.com/profile_images/1638790131246301187/KloeV3_h_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nandeyanen_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "chikyukun-pua",
     "type": "person",
     "name": "地球くん",
@@ -6085,6 +7528,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 22 handles and matched 3 tracked accounts."
   },
   {
+    "id": "1tensaipua1",
+    "type": "person",
+    "name": "天",
+    "aliases": [
+      "1tensaipua1"
+    ],
+    "description": "🟣底辺からの成り上がり🟣過去実績数百名/個人で㊙️キャリア全国1位🥇/📱案件の人／",
+    "icon_url": "https://pbs.twimg.com/profile_images/1988918236776476672/LIr58vW1_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/1tensaipua1"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "tenma-pua",
     "type": "person",
     "name": "天馬",
@@ -6100,6 +7561,42 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "happy-0721-nan",
+    "type": "person",
+    "name": "奈落の花",
+    "aliases": [
+      "happy_0721_nan"
+    ],
+    "description": "パキスタン国籍の男（46歳・独身）｜日本に来て6年🎌｜5年前にスパイスカレー🍛のお店オープンしたが、コロナの影響で自己破産ね｜もう人生終わりよ｜日本語勉強のためにX（エックス）始めたよ📖 ｜婚活エンターテイメント💍",
+    "icon_url": "https://pbs.twimg.com/profile_images/1889098833168384000/yhB9WApo_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/happy_0721_nan"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "oguri-mote",
+    "type": "person",
+    "name": "小栗",
+    "aliases": [
+      "oguri_mote"
+    ],
+    "description": "【国内唯一】夜職攻略専門スクール主宰 | 元ホスト（1000万プレーヤー） | 早稲田政経卒 | 港区在住・30代中盤",
+    "icon_url": "https://pbs.twimg.com/profile_images/1918291571050725376/CVmoBtHR_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/oguri_mote"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "greed-pua",
@@ -6136,6 +7633,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "gokun-pua",
+    "type": "person",
+    "name": "忠犬ゴックン@KRT",
+    "aliases": [
+      "GOKUN_pua"
+    ],
+    "description": "【非モテ陰キャの成り上がりストーリー】栗田のリア友｜スト値5.0｜🧚‍♂️勢｜1晩2逆0即｜即数18即│ブサメン〜フツメンの成り上がりが見たいやつはフォローしろ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1607044150658207745/v4tmyyUy_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/GOKUN_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "srs-pua-main",
@@ -6192,6 +7707,42 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 4 tracked accounts."
+  },
+  {
+    "id": "nmpst913",
+    "type": "person",
+    "name": "悠也くん@ユーモア刺しNo.1",
+    "aliases": [
+      "nmpst913"
+    ],
+    "description": "🌾｜ ストリート・インスタナンパ｜ フォローすると今より面白くなれます。 note→ https://t.co/ONSDcz3K5h",
+    "icon_url": "https://pbs.twimg.com/profile_images/1954164507460423680/huYHHD6R_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nmpst913"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "nanpanyan4545",
+    "type": "person",
+    "name": "打ち上げ花火@ゆってぃ長期8期生",
+    "aliases": [
+      "nanpanyan4545"
+    ],
+    "description": "ナンパに復帰します。味噌 元恋愛ゼミ5期生、ゆってぃ長期6期生 改めてゆってぃ長期8期生に参入！本人 アイコンに激似！30代後半に突入した非モテスト低 顔面偏差値Fラン",
+    "icon_url": "https://pbs.twimg.com/profile_images/1813976804077834241/7d79rKg7_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nanpanyan4545"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "pineapple-pua",
@@ -6306,6 +7857,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 4 handles and matched 2 tracked accounts."
   },
   {
+    "id": "asahi-sao-pua",
+    "type": "person",
+    "name": "朝日 竿@ネクステ",
+    "aliases": [
+      "asahi_sao_pua"
+    ],
+    "description": "＃ネクステ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1576216436590055424/dYLObUln_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/asahi_sao_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "sub-kurita",
     "type": "person",
     "name": "本膣情報@一般弱者男性",
@@ -6340,6 +7909,24 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "id": "murakami-pua",
+    "type": "person",
+    "name": "村上@明太子ナンパ",
+    "aliases": [
+      "murakami_pua"
+    ],
+    "description": "明太子在住の大学生ナンパ師です。合流お願いします✨",
+    "icon_url": "https://pbs.twimg.com/profile_images/2043556103896879104/BxCqEoAR_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/murakami_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "suto-taro",
@@ -6573,6 +8160,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 3 tracked accounts."
   },
   {
+    "id": "ryosuke-street2",
+    "type": "person",
+    "name": "涼介",
+    "aliases": [
+      "ryosuke_street2"
+    ],
+    "description": "X profile for @ryosuke_street2.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/ryosuke_street2"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "isagi-pua",
     "type": "person",
     "name": "潔",
@@ -6642,6 +8247,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "pua-ishikawa",
+    "type": "person",
+    "name": "石川達也 Tatsuya Ishikawa ナンパ工学アカデミー",
+    "aliases": [
+      "pua_ishikawa"
+    ],
+    "description": "彼女に一途でいようと「決意した」直後、他の男に乗り換えられた苦い経験から、愛する女を失いたくないなら「自分はいつでも、その気になれば新しい女を口説ける」状態をキープすべきと学ぶ。そのため女に困らない「強いオス」になるべくナンパをマスターする。今は「昔の自分」を救う気持ちで、独自に培ったノウハウを教えるナンパ塾を運営中。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1351948374258290688/PVOoSPvj_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pua_ishikawa",
+      "https://pua-secrets.com/tw"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "mine-chan-pua",
@@ -6929,6 +8553,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 28 handles and matched 14 tracked accounts."
   },
   {
+    "id": "gatiikepua",
+    "type": "person",
+    "name": "裏シンバ",
+    "aliases": [
+      "gatiikepua"
+    ],
+    "description": "🦁👑 フォロー推奨アカウント→@Simba_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/1943016008517611521/dYMEbdJP_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/gatiikepua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "pochama-izon",
     "type": "person",
     "name": "裏ポチャマ",
@@ -6981,6 +8623,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 26 handles and matched 6 tracked accounts."
+  },
+  {
+    "id": "akagi-subpua",
+    "type": "person",
+    "name": "赤木さぶ@国王講習生",
+    "aliases": [
+      "akagi_subpua"
+    ],
+    "description": "🐶🦁/LOWGAY/UDK流/泥啜らない一門/タイムリープ一門/野生のショボ腕/🐶合流歓迎",
+    "icon_url": "https://pbs.twimg.com/profile_images/1604472762084401153/qiltt2IS_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/akagi_subpua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "ashikaga-street",
@@ -7128,6 +8788,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 29 handles and matched 5 tracked accounts."
   },
   {
+    "id": "nanpasireiji",
+    "type": "person",
+    "name": "零時レイ＠モテの法則",
+    "aliases": [
+      "nanpasireiji"
+    ],
+    "description": "モテを科学すれば、度胸はいらない。引きこもり→公園でおばあちゃんと話す活動でコミュ障を克服→ナンパに通ずることに気づく→15年かけてデータ蓄積、技術を確立→6000人受講、1600人直接指導｜書籍6万部｜YouTube10万登録➡️https://t.co/CUZV3zYhTo",
+    "icon_url": "https://pbs.twimg.com/profile_images/1696434710707392512/ZwvjEbR7_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nanpasireiji",
+      "https://qrcodedynamic.com/001.twitter/"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "kirishima-nanpa",
     "type": "person",
     "name": "霧島",
@@ -7255,6 +8934,42 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "choumi-pua",
+    "type": "person",
+    "name": "高杉@ボス猿Land",
+    "aliases": [
+      "choumi_pua"
+    ],
+    "description": "理系大学生の女攻略日記",
+    "icon_url": "https://pbs.twimg.com/profile_images/1790999571595935744/ufNAOC5B_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/choumi_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "onizuka-pua",
+    "type": "person",
+    "name": "鬼塚",
+    "aliases": [
+      "onizuka_pua"
+    ],
+    "description": "07 │ #黒崎コンサル 最年少 │ 高2で界隈入り │ 本職は有名大学サークル幹部として超真面目な発信をしている学生インフルエンサー │ 「某アプリ」って書かれてるやつの上位3割側です │ ストもやってます",
+    "icon_url": "https://pbs.twimg.com/profile_images/2032876683892764672/RQa7Ern1_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/onizuka_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "juju-pua",
     "type": "person",
     "name": "鬼無血",
@@ -7325,6 +9040,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 5 tracked accounts."
+  },
+  {
+    "id": "whity-dogging-pua",
+    "type": "person",
+    "name": "麻雀大好きホワイトドッグ🐶@SSB クンニ垢 兼 ラップ垢",
+    "aliases": [
+      "WhityDoggingPUA"
+    ],
+    "description": "即数300↑/クンニ数500↑/混沌戦士/酒/二郎/回転寿司/サウナ/ヤッターマン/コーヒー/ライター/#クラナンサロンSSB",
+    "icon_url": "https://pbs.twimg.com/profile_images/1854427626510934016/h2qMXBRO_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/WhityDoggingPUA"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "rei-app-pua",
@@ -7474,6 +9207,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 27 handles and matched 16 tracked accounts."
   },
   {
+    "id": "mange-pua",
+    "type": "person",
+    "name": "ﾀｶ@純愛勃起不全界隈",
+    "aliases": [
+      "Mange_pua"
+    ],
+    "description": "犬ストやってました/丘のバーテン",
+    "icon_url": "https://pbs.twimg.com/profile_images/1620396136904396800/AzYa_Uf__400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Mange_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
     "id": "sshi-pua",
     "type": "person",
     "name": "𝐒氏",
@@ -7546,6 +9297,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 2 tracked accounts."
+  },
+  {
+    "id": "pino-pick-up",
+    "type": "person",
+    "name": "🏆野生くん(半引退)",
+    "aliases": [
+      "Pino_pick_up_"
+    ],
+    "description": "ランクルパスなしソロ🗼📦23連勝(🦾14🪐6✌🏻1🧚‍♂️1🐉1)/2024 🦾6出撃6即6連勝中/2025",
+    "icon_url": "https://pbs.twimg.com/profile_images/1805249844111712256/IODPK9zn_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Pino_pick_up_"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "riokun-pua-sub",
