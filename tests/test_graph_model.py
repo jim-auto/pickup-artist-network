@@ -242,6 +242,8 @@ class GraphModelTests(unittest.TestCase):
         self.assertNotIn('name="graph-view-mode"', html)
         self.assertNotIn("全体グラフ", html)
         self.assertIn("選択ノード詳細", html)
+        self.assertIn("つながっているノード", html)
+        self.assertIn("connected-node-list", html)
         self.assertIn("要確認ノード一覧", html)
         self.assertIn("レビュー候補一覧", html)
         self.assertIn("レビュー判断ログ", html)
@@ -257,6 +259,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('id="edges-table-more"', html)
         self.assertIn("stabilizationIterationsDone", html)
         self.assertIn("network.openCluster(selectedId)", html)
+        self.assertIn('document.getElementById("detail-panel").addEventListener("click"', html)
         self.assertIn("却下", html)
         self.assertIn("2 / 1000", html)
 

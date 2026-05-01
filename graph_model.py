@@ -1291,6 +1291,32 @@ def render_html(
       margin: 0 0 8px;
       font-size: 14px;
     }
+    .connected-node-list {
+      display: grid;
+      gap: 10px;
+    }
+    .connected-node-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      background: #f9fbff;
+    }
+    .connected-node-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .connected-node-body {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+    .connected-node-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
     .detail-list,
     .source-list {
       margin: 0;
@@ -1430,7 +1456,7 @@ def render_html(
 
       <aside class="panel detail-panel">
         <h2>選択ノード詳細</h2>
-        <div id="detail-panel" class="detail-empty">相関図かノード一覧から 1 件選ぶと、説明・source URLs・入出力エッジをここに表示します。</div>
+        <div id="detail-panel" class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>
       </aside>
     </section>
 
@@ -1908,13 +1934,67 @@ def render_html(
         .join("");
     }
 
+    function renderConnectedNodes(outgoingEdges, incomingEdges) {
+      const grouped = new Map();
+      function addEdge(edge, direction) {
+        const otherId = direction === "outgoing" ? edge.target : edge.source;
+        const otherNode = rawNodeById.get(otherId);
+        if (!otherNode) {
+          return;
+        }
+        const entry = grouped.get(otherId) || {
+          node: otherNode,
+          incoming: new Set(),
+          outgoing: new Set(),
+          edgeCount: 0
+        };
+        entry[direction].add(formatEdgeType(edge.type));
+        entry.edgeCount += 1;
+        grouped.set(otherId, entry);
+      }
+
+      outgoingEdges.forEach((edge) => addEdge(edge, "outgoing"));
+      incomingEdges.forEach((edge) => addEdge(edge, "incoming"));
+
+      const entries = Array.from(grouped.values()).sort((left, right) =>
+        right.edgeCount - left.edgeCount || left.node.name.localeCompare(right.node.name, "ja")
+      );
+      if (!entries.length) {
+        return '<div class="detail-empty">現在表示中のつながりノードはありません。</div>';
+      }
+
+      return `
+        <div class="connected-node-list">
+          ${entries.map((entry) => `
+            <div class="connected-node-card">
+              <div class="connected-node-header">
+                <div class="node-name-cell connected-node-body">
+                  ${formatNodeAvatar(entry.node, "avatar-thumb")}
+                  <div class="node-name-text">
+                    <strong>${escapeHtml(entry.node.name)}</strong><br>
+                    <span class="muted">${escapeHtml(entry.node.id)}</span>
+                  </div>
+                </div>
+                <button type="button" class="inspect-button" data-node-id="${escapeHtml(entry.node.id)}">見る</button>
+              </div>
+              <div class="connected-node-tags">
+                <span class="tag">${escapeHtml(formatNodeType(entry.node.type))}</span>
+                ${Array.from(entry.outgoing).map((type) => `<span class="tag">→ ${escapeHtml(type)}</span>`).join("")}
+                ${Array.from(entry.incoming).map((type) => `<span class="tag">← ${escapeHtml(type)}</span>`).join("")}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    }
+
     function renderDetailPanel(nodeId) {
       const panel = document.getElementById("detail-panel");
       const node = currentVisibleNodes.find((candidate) => candidate.id === nodeId);
       if (!node) {
         selectedNodeId = null;
         panel.innerHTML =
-          '<div class="detail-empty">相関図かノード一覧から 1 件選ぶと、説明・source URLs・入出力エッジをここに表示します。</div>';
+          '<div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>';
         return;
       }
 
@@ -1933,6 +2013,11 @@ def render_html(
             <span class="muted">${escapeHtml(node.id)}</span><br>
             <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
             ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
+          </div>
+
+          <div class="detail-section">
+            <h4>つながっているノード (${new Set([...outgoingEdges.map((edge) => edge.target), ...incomingEdges.map((edge) => edge.source)]).size})</h4>
+            ${renderConnectedNodes(outgoingEdges, incomingEdges)}
           </div>
 
           <div class="detail-section">
@@ -1967,11 +2052,14 @@ def render_html(
       if (!currentVisibleNodes.some((node) => node.id === nodeId)) {
         return;
       }
-      const node = rawNodeById.get(nodeId);
-      const clusterId = node ? getClusterNodeId(node.type) : null;
-      const focusId = clusterId && network.isCluster(clusterId) ? clusterId : nodeId;
-      network.selectNodes([focusId]);
-      network.focus(focusId, {
+      const clusterMode = getClusterMode();
+      const clusterAssignment = rawClusters.modes?.[clusterMode]?.assignments?.[nodeId];
+      const clusterId = clusterAssignment ? getClusterNodeId(clusterAssignment) : null;
+      if (clusterId && network.isCluster(clusterId)) {
+        network.openCluster(clusterId);
+      }
+      network.selectNodes([nodeId]);
+      network.focus(nodeId, {
         scale: 1.05,
         animation: {
           duration: 300,
@@ -2336,6 +2424,13 @@ def render_html(
       focusNode(button.getAttribute("data-node-id"));
     });
     document.getElementById("review-nodes-table").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-node-id]");
+      if (!button) {
+        return;
+      }
+      focusNode(button.getAttribute("data-node-id"));
+    });
+    document.getElementById("detail-panel").addEventListener("click", (event) => {
       const button = event.target.closest("[data-node-id]");
       if (!button) {
         return;
