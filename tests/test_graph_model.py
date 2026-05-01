@@ -253,6 +253,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('id="nodes-table-more"', html)
         self.assertIn('id="edges-table-more"', html)
         self.assertIn("stabilizationIterationsDone", html)
+        self.assertIn("network.openCluster(selectedId)", html)
         self.assertIn("却下", html)
         self.assertIn("2 / 1000", html)
 

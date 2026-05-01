@@ -1247,9 +1247,6 @@ def render_html(
 
     document.getElementById("total-nodes").textContent = rawGraph.nodes.length;
     document.getElementById("total-edges").textContent = rawGraph.edges.length;
-    if (rawGraph.nodes.length >= 250) {
-      document.getElementById("cluster-by-type").checked = true;
-    }
 
     function escapeHtml(value) {
       return String(value)
@@ -1889,7 +1886,10 @@ def render_html(
     network.on("selectNode", (params) => {
       if (params.nodes.length) {
         const selectedId = params.nodes[0];
-        if (!network.isCluster(selectedId)) {
+        if (network.isCluster(selectedId)) {
+          network.openCluster(selectedId);
+          renderDetailPanel(null);
+        } else {
           renderDetailPanel(selectedId);
         }
       }
