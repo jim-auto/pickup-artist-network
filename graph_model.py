@@ -996,18 +996,8 @@ def render_html(
         <input id="search" type="search" placeholder="名前 / id / 別名 / 説明">
       </div>
       <div>
-        <strong>表示モード</strong>
-        <div class="filter-group">
-          <label class="chip">
-            <input type="radio" name="graph-view-mode" value="account" checked>
-            <span>アカウント相関</span>
-          </label>
-          <label class="chip">
-            <input type="radio" name="graph-view-mode" value="full">
-            <span>全体グラフ</span>
-          </label>
-        </div>
-        <div class="muted">既定では人物・コミュニティを優先表示し、媒体 / 場所 / コンテンツは全体グラフで見られます。</div>
+        <strong>表示方針</strong>
+        <div class="muted">人物・コミュニティを中心に、関係が見やすいアカウント相関へ絞っています。</div>
       </div>
       <div>
         <strong>表示補助</strong>
@@ -1062,7 +1052,7 @@ def render_html(
     <section class="graph-layout">
       <section class="panel network-panel">
         <h2>アカウント相関ビュー</h2>
-        <p class="muted">まずはアカウント同士のつながりを見やすくし、必要なときだけ全体グラフへ広げます。</p>
+        <p class="muted">人物・コミュニティ同士のつながりを優先して、相関の見やすさを保っています。</p>
         <p class="muted">※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。関係は明示的な記述を優先し、未確認の推測は含めません。</p>
         <div id="network"></div>
       </section>
@@ -1383,11 +1373,6 @@ def render_html(
           .filter((input) => input.checked)
           .map((input) => input.getAttribute(attributeName))
       );
-    }
-
-    function getGraphViewMode() {
-      const selected = document.querySelector('input[name="graph-view-mode"]:checked');
-      return selected ? selected.value : "account";
     }
 
     function isTypeClusteringEnabled() {
@@ -1789,13 +1774,11 @@ def render_html(
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
-      const graphViewMode = getGraphViewMode();
       const shouldCluster = isTypeClusteringEnabled() && !term;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
-        term,
-        graphViewMode
+        term
       });
       if (tableFilterKey !== lastTableFilterKey) {
         resetTableRenderState();
@@ -1805,9 +1788,6 @@ def render_html(
       const eligibleNodes = rawGraph.nodes.filter((node) => {
         if (!allowedNodeTypes.has(node.type)) {
           return false;
-        }
-        if (graphViewMode === "full") {
-          return true;
         }
         return accountNodeTypes.has(node.type);
       });
@@ -1832,8 +1812,6 @@ def render_html(
       const visibleNodeIds = new Set();
       if (term) {
         matchedIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
-      } else if (graphViewMode === "full") {
-        eligibleIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
       }
       visibleEdges.forEach((edge) => {
         visibleNodeIds.add(edge.source);
@@ -1909,9 +1887,6 @@ def render_html(
     const debouncedApplyFilters = debounce(applyFilters, 120);
     document.getElementById("search").addEventListener("input", debouncedApplyFilters);
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
-      input.addEventListener("change", applyFilters);
-    });
-    document.querySelectorAll('input[name="graph-view-mode"]').forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
     document.getElementById("cluster-by-type").addEventListener("change", applyFilters);
