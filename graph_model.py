@@ -1004,10 +1004,10 @@ def render_html(
         <div class="filter-group">
           <label class="chip">
             <input type="checkbox" id="cluster-by-type">
-            <span>種別クラスタ</span>
+            <span>同じ種別をまとめる</span>
           </label>
         </div>
-        <div class="muted">オンにすると、現在表示中のノードを種別ごとの塊でまとめて見られます。</div>
+        <div class="muted">オンにすると、人物どうし・コミュニティどうしのように、同じ種別のノードがまとまって表示されます。</div>
       </div>
       <details class="foldout">
         <summary>
