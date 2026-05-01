@@ -1010,14 +1010,6 @@ def render_html(
         <div class="muted">既定では人物・コミュニティを優先表示し、媒体 / 場所 / コンテンツは全体グラフで見られます。</div>
       </div>
       <div>
-        <strong>ノード種別</strong>
-        <div id="node-type-filters" class="filter-group"></div>
-      </div>
-      <div>
-        <strong>関係種別</strong>
-        <div id="edge-type-filters" class="filter-group"></div>
-      </div>
-      <div>
         <strong>表示補助</strong>
         <div class="filter-group">
           <label class="chip">
@@ -1027,6 +1019,24 @@ def render_html(
         </div>
         <div class="muted">オンにすると、現在表示中のノードを種別ごとの塊でまとめて見られます。</div>
       </div>
+      <details class="foldout">
+        <summary>
+          <span class="foldout-summary-text">
+            <span>詳細フィルタ</span>
+            <span class="muted">必要なときだけ、種別や関係で絞り込めます。</span>
+          </span>
+        </summary>
+        <div class="foldout-content">
+          <div>
+            <strong>ノード種別</strong>
+            <div id="node-type-filters" class="filter-group"></div>
+          </div>
+          <div style="margin-top: 16px;">
+            <strong>関係種別</strong>
+            <div id="edge-type-filters" class="filter-group"></div>
+          </div>
+        </div>
+      </details>
     </section>
 
     <details class="panel foldout">
