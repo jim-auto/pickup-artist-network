@@ -38,8 +38,8 @@ CLUSTER_MODE_DEFINITIONS = {
     },
     "keyword_group": {
         "label": "キーワードでまとめる",
-        "description": "MBH や セクシーコマンドー など、公開プロフィールのキーワードでまとめます。",
-        "min_size": 3,
+        "description": "MBH や セクシーコマンドー、ピカ講習、アツスト など、公開プロフィールのキーワードでまとめます。",
+        "min_size": 2,
     },
 }
 CONNECTIVITY_DIRECT_WEIGHTS = {
@@ -84,17 +84,30 @@ CLUSTER_PRUNE_CONFIG = {
 }
 KEYWORD_CLUSTER_RULES = (
     {"id": "mbh", "label": "MBH", "patterns": ("mbh",), "priority": 100},
+    {"id": "pika_lessons", "label": "ピカ講習", "patterns": ("ピカ講習",), "priority": 99},
+    {"id": "m_street_club", "label": "mスト部", "patterns": ("mスト部", "mスト"), "priority": 98},
     {
         "id": "sexy_commando",
         "label": "セクシーコマンドー",
         "patterns": ("セクシーコマンドー", "sc一門"),
-        "priority": 95,
+        "priority": 97,
     },
+    {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
+    {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
     {"id": "hancho", "label": "はんちょう", "patterns": ("はんちょう", "hancho"), "priority": 92},
     {"id": "yutty", "label": "ゆってぃ", "patterns": ("ゆってぃ", "yutty"), "priority": 90},
+    {"id": "wing", "label": "wing", "patterns": ("wing",), "priority": 89},
     {"id": "kurita", "label": "栗田", "patterns": ("栗田", "kurita"), "priority": 88},
+    {
+        "id": "korilla_m_lessons",
+        "label": "こりらm氏講習",
+        "patterns": ("こりらm氏講習", "こりら", "m氏講習"),
+        "priority": 87,
+    },
     {"id": "nonchama", "label": "のんちゃま", "patterns": ("のんちゃま", "nonchama"), "priority": 86},
+    {"id": "yuka_gundan", "label": "雄華軍団", "patterns": ("雄華軍団",), "priority": 85},
     {"id": "pochama", "label": "ポチャマ", "patterns": ("ポチャマ", "pochama"), "priority": 84},
+    {"id": "golazo", "label": "ゴラッソ長期", "patterns": ("ゴラッソ長期", "ゴラッソ"), "priority": 83},
     {"id": "next", "label": "ネクステ", "patterns": ("ネクステ",), "priority": 80},
     {"id": "miso", "label": "味噌", "patterns": ("味噌", "みそ"), "priority": 78},
     {"id": "otaku", "label": "オタク", "patterns": ("オタク", "otaku"), "priority": 74},
@@ -657,7 +670,6 @@ def _keyword_text(node: Node) -> str:
             node.name,
             node.description,
             *node.aliases,
-            node.review_notes,
         ]
     ).casefold()
 
