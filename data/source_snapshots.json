@@ -1547,5 +1547,56 @@
         "needs_review": false
       }
     ]
+  },
+  {
+    "account_id": "west-pua",
+    "profile_url": "https://x.com/west_pua",
+    "observations": [
+      {
+        "target": "pochama-tuwaou",
+        "type": "influence",
+        "description": "Public X profile explicitly identifies this account with the 留年ポチャマ講習 course.",
+        "source_urls": [
+          "https://x.com/west_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "marifax-pua",
+    "profile_url": "https://x.com/marifax_pua",
+    "observations": [
+      {
+        "target": "pochama-tuwaou",
+        "type": "influence",
+        "description": "Public X profile explicitly identifies this account with the ポチャマ留年講習 course.",
+        "source_urls": [
+          "https://x.com/marifax_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
+  },
+  {
+    "account_id": "pochama-tuwaou",
+    "profile_url": "https://x.com/pochama_tuwaou",
+    "observations": [
+      {
+        "target": "pochama-izon",
+        "type": "affiliation",
+        "description": "Public X profile explicitly links @pochama_izon as the side account.",
+        "source_urls": [
+          "https://x.com/pochama_tuwaou"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ]
   }
 ]

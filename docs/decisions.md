@@ -7,7 +7,7 @@
 ## Current growth target
 
 次の定量目標は **real person 500人**、最終目標は **1000人**。  
-現在は **375人**。補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 / 500 / 1000 の段階で広げる。
+現在は **387人**。補助レンジは `community 8-12 / content 12-18 / location 6-10 / platform 6-8` としつつ、人物側は 20 / 50 / 100 / 200 / 500 / 1000 の段階で広げる。
 
 ## Why
 
@@ -87,6 +87,7 @@
 - さらに 6 アカウントを追加し、`maruoooon-pua -> gureran-m` と `knk-stnn -> wing-nampa` の relation も足して real person 360 / 1000 まで拡張した
 - さらに 7 アカウントを追加し、`kazu-pua -> wing-nampa` と `miraitinder6969 -> miraitinder4545` の relation も足して real person 367 / 1000 まで拡張した
 - さらに 8 アカウントを追加し、`nekominto-pua`、`carbii-pua`、`ryuuk-pua`、`west-pua`、`tomo-pua11`、`senga-pua`、`kill-pua`、`sandarupua` を self-described public profile として real person 375 / 1000 まで拡張した
+- さらに 12 アカウントを追加し、`west-pua -> pochama-tuwaou`、`marifax-pua -> pochama-tuwaou`、`pochama-tuwaou -> pochama-izon` の明示 relation も足して real person 387 / 1000 まで拡張した
 - X profile collector は profile の `external_url` も generated snapshot の `links` に残し、`note.mu` も note として扱う
 - 日本語の短い alias（例: `新宿`, `渋谷`, `池袋`）も review candidate matcher にかかるようにする
 

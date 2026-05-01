@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T22:12:39+00:00",
+  "generated_at": "2026-05-01T01:06:01+00:00",
   "candidates": [
     {
       "id": "4meakg__nagoya__activity",
@@ -918,6 +918,52 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "himotenohoshi__tokyo__activity",
+      "source": "himotenohoshi",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "東京",
+      "matched_texts": [
+        "東京"
+      ],
+      "evidence_text": "ユウ@東カレの王👑 (@himotenohoshi)\n東京で1番東カレに詳しい人 。 ⚫️東カレで美女を抱きまくってる会社員 ⚫️大阪、東京のニ大都市で東カレで累計200人の女性と関係を持つ。🌹ランカー即も多数 ⚫️再現性のある口説きで短時間で女性を仕上げることが得意。 ⚫️東カレで理想的な女性と付き合うための方法を発信。講習生でも美人な彼女ができる人続出中\nExternal link: https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY",
+      "source_urls": [
+        "https://x.com/himotenohoshi",
+        "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "himotenohoshi__utaa-pua__reference",
+      "source": "himotenohoshi",
+      "target": "utaa-pua",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "うた",
+      "matched_texts": [
+        "うた"
+      ],
+      "evidence_text": "ユウ@東カレの王👑 (@himotenohoshi)\n東京で1番東カレに詳しい人 。 ⚫️東カレで美女を抱きまくってる会社員 ⚫️大阪、東京のニ大都市で東カレで累計200人の女性と関係を持つ。🌹ランカー即も多数 ⚫️再現性のある口説きで短時間で女性を仕上げることが得意。 ⚫️東カレで理想的な女性と付き合うための方法を発信。講習生でも美人な彼女ができる人続出中\nExternal link: https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY",
+      "source_urls": [
+        "https://x.com/himotenohoshi",
+        "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'うた'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "inpsub__ryepua__reference",
       "source": "inpsub",
       "target": "ryepua",
@@ -1528,6 +1574,27 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "marifax-pua__pochama-tuwaou__reference",
+      "source": "marifax-pua",
+      "target": "pochama-tuwaou",
+      "type": "reference",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "ポチャマ",
+      "matched_texts": [
+        "ポチャマ"
+      ],
+      "evidence_text": "まり@ポチャマ留年講習 (@marifax_pua)\n26.3月〜帝都ネト”アヴァロン理論” 関係構築 6節 処女厨\nLocation: “純愛”",
+      "source_urls": [
+        "https://x.com/marifax_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "mendako-pua__matching-apps__activity",
       "source": "mendako-pua",
       "target": "matching-apps",
@@ -1912,6 +1979,28 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'PEGA'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "nanpaoh-yuya__yuu-renai__reference",
+      "source": "nanpaoh-yuya",
+      "target": "yuu-renai",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "ゆう",
+      "matched_texts": [
+        "ゆう"
+      ],
+      "evidence_text": "☚33歳リアルガチナンパ師 ゆうや (@nanpaoh_yuya)\n200即｜居酒屋やバーを挟まず30分で搬送するゆうや式 弾丸即専門｜アイコンは約3年前の俺（ガチ）",
+      "source_urls": [
+        "https://x.com/nanpaoh_yuya"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "nanpawars__shinjuku__activity",
       "source": "nanpawars",
       "target": "shinjuku",
@@ -2180,6 +2269,75 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pika_pua'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pochama-izon__pochama-tuwaou__reference",
+      "source": "pochama-izon",
+      "target": "pochama-tuwaou",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pochama_tuwaou",
+      "matched_texts": [
+        "pochama_tuwaou",
+        "ポチャマ"
+      ],
+      "evidence_text": "裏ポチャマ (@pochama_izon)\nポチャマの裏| 言語で好意を生み出す「疑似恋愛」の啓蒙家 | 思考の掃溜め|メイン垢 :@pochama_tuwaou\nLocation: 講習の募集有無はDMでご確認ください",
+      "source_urls": [
+        "https://x.com/pochama_izon"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pochama_tuwaou, ポチャマ'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pochama-tuwaou__pochama-izon__reference",
+      "source": "pochama-tuwaou",
+      "target": "pochama-izon",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pochama_izon",
+      "matched_texts": [
+        "pochama_izon"
+      ],
+      "evidence_text": "ポチャマ (@pochama_tuwaou)\n女から究極に愛される、感情操作スペシャリスト|対女攻略の差別化戦略l 顔出しなし3桁即&彼女化20Over | 外見依存ゼロの関係構築術を垂れ流します | 裏垢：@pochama_izon\nLocation: ↓Xでは言えない関係構築術の発信",
+      "source_urls": [
+        "https://x.com/pochama_tuwaou",
+        "https://line.me/R/ti/p/@672fcdpa"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pochama_izon'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "pochama-tuwaou__zero-n2__reference",
+      "source": "pochama-tuwaou",
+      "target": "zero-n2",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "ゼロ",
+      "matched_texts": [
+        "ゼロ"
+      ],
+      "evidence_text": "ポチャマ (@pochama_tuwaou)\n女から究極に愛される、感情操作スペシャリスト|対女攻略の差別化戦略l 顔出しなし3桁即&彼女化20Over | 外見依存ゼロの関係構築術を垂れ流します | 裏垢：@pochama_izon\nLocation: ↓Xでは言えない関係構築術の発信",
+      "source_urls": [
+        "https://x.com/pochama_tuwaou",
+        "https://line.me/R/ti/p/@672fcdpa"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "potato-pua__tokyo__activity",
@@ -2987,6 +3145,28 @@
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "utaa-pua__omamco-pua2__reference",
+      "source": "utaa-pua",
+      "target": "omamco-pua2",
+      "type": "reference",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "える",
+      "matched_texts": [
+        "える"
+      ],
+      "evidence_text": "うた (@utaa_pua)\nインスタとボディメイク【えるスタ/カメラマン兼ボディメイク講師】",
+      "source_urls": [
+        "https://x.com/utaa_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "weekly-nanpa__kira-pua7__reference",
       "source": "weekly-nanpa",
       "target": "kira-pua7",
@@ -3077,6 +3257,27 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yayaya-zyakudan__pochama-tuwaou__reference",
+      "source": "yayaya-zyakudan",
+      "target": "pochama-tuwaou",
+      "type": "reference",
+      "basis": "profile_text",
+      "bases": [
+        "profile_text"
+      ],
+      "matched_text": "ポチャマ",
+      "matched_texts": [
+        "ポチャマ"
+      ],
+      "evidence_text": "ややや@ポチャマ留年講習 (@yayaya_zyakudan)\n京都の大学3回生|49莭|目標:年内に100莭🥺と人格刺し|関係構築は頭脳戦",
+      "source_urls": [
+        "https://x.com/yayaya_zyakudan"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "yolu-pua__yolusub__reference",

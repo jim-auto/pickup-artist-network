@@ -816,6 +816,16 @@ def render_html(
       border: 1px solid var(--border);
       border-radius: 12px;
     }
+    .table-footer {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .table-status {
+      font-size: 12px;
+    }
     .tag {
       display: inline-block;
       padding: 2px 8px;
@@ -1031,6 +1041,10 @@ def render_html(
             <tbody id="review-nodes-table"></tbody>
           </table>
         </div>
+        <div class="table-footer">
+          <span id="review-nodes-table-status" class="table-status muted"></span>
+          <button type="button" id="review-nodes-table-more" class="inspect-button" hidden>さらに表示</button>
+        </div>
       </section>
 
       <section class="panel">
@@ -1048,6 +1062,10 @@ def render_html(
             </thead>
             <tbody id="review-edges-table"></tbody>
           </table>
+        </div>
+        <div class="table-footer">
+          <span id="review-edges-table-status" class="table-status muted"></span>
+          <button type="button" id="review-edges-table-more" class="inspect-button" hidden>さらに表示</button>
         </div>
       </section>
     </section>
@@ -1070,6 +1088,10 @@ def render_html(
           <tbody id="review-candidates-table"></tbody>
         </table>
       </div>
+      <div class="table-footer">
+        <span id="review-candidates-table-status" class="table-status muted"></span>
+        <button type="button" id="review-candidates-table-more" class="inspect-button" hidden>さらに表示</button>
+      </div>
     </section>
 
     <section class="panel">
@@ -1089,6 +1111,10 @@ def render_html(
           </thead>
           <tbody id="review-candidate-decisions-table"></tbody>
         </table>
+      </div>
+      <div class="table-footer">
+        <span id="review-candidate-decisions-table-status" class="table-status muted"></span>
+        <button type="button" id="review-candidate-decisions-table-more" class="inspect-button" hidden>さらに表示</button>
       </div>
     </section>
 
@@ -1111,6 +1137,10 @@ def render_html(
             <tbody id="nodes-table"></tbody>
           </table>
         </div>
+        <div class="table-footer">
+          <span id="nodes-table-status" class="table-status muted"></span>
+          <button type="button" id="nodes-table-more" class="inspect-button" hidden>さらに表示</button>
+        </div>
       </section>
 
       <section class="panel">
@@ -1129,6 +1159,10 @@ def render_html(
             </thead>
             <tbody id="edges-table"></tbody>
           </table>
+        </div>
+        <div class="table-footer">
+          <span id="edges-table-status" class="table-status muted"></span>
+          <button type="button" id="edges-table-more" class="inspect-button" hidden>さらに表示</button>
         </div>
       </section>
     </section>
@@ -1193,11 +1227,29 @@ def render_html(
     const rawNodeById = new Map(rawGraph.nodes.map((node) => [node.id, node]));
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
+    let currentVisibleReviewNodes = [];
+    let currentVisibleReviewEdges = [];
+    let currentVisibleReviewCandidates = [];
+    let currentVisibleReviewCandidateDecisions = [];
+    let currentNodeNameById = new Map();
     let selectedNodeId = null;
     let activeClusterIds = new Set();
+    let lastTableFilterKey = "";
+    const tablePageSizes = {
+      reviewNodes: 60,
+      reviewEdges: 120,
+      reviewCandidates: 80,
+      reviewCandidateDecisions: 80,
+      nodes: 120,
+      edges: 200
+    };
+    const tableRenderState = { ...tablePageSizes };
 
     document.getElementById("total-nodes").textContent = rawGraph.nodes.length;
     document.getElementById("total-edges").textContent = rawGraph.edges.length;
+    if (rawGraph.nodes.length >= 250) {
+      document.getElementById("cluster-by-type").checked = true;
+    }
 
     function escapeHtml(value) {
       return String(value)
@@ -1229,7 +1281,24 @@ def render_html(
       document.getElementById("network"),
       { nodes: nodesDataSet, edges: edgesDataSet },
       {
-        physics: { stabilization: false },
+        layout: {
+          improvedLayout: true
+        },
+        physics: {
+          enabled: true,
+          stabilization: {
+            enabled: true,
+            iterations: 200,
+            updateInterval: 25,
+            fit: true
+          },
+          barnesHut: {
+            gravitationalConstant: -10000,
+            springLength: 130,
+            springConstant: 0.03,
+            damping: 0.18
+          }
+        },
         nodes: {
           shape: "dot",
           borderWidth: 1,
@@ -1239,7 +1308,7 @@ def render_html(
           arrows: "to",
           color: { color: "#94a3b8", highlight: "#2f6feb" },
           font: { align: "top", size: 11 },
-          smooth: { type: "dynamic" }
+          smooth: false
         },
         interaction: {
           hover: true,
@@ -1248,6 +1317,9 @@ def render_html(
         }
       }
     );
+    network.once("stabilizationIterationsDone", () => {
+      network.setOptions({ physics: false });
+    });
 
     function selectedValues(selector, attributeName) {
       return new Set(
@@ -1269,6 +1341,41 @@ def render_html(
 
     function getClusterNodeId(nodeType) {
       return `cluster:${nodeType}`;
+    }
+
+    function resetTableRenderState() {
+      Object.keys(tablePageSizes).forEach((key) => {
+        tableRenderState[key] = tablePageSizes[key];
+      });
+    }
+
+    function renderTableSlice({ items, tableKey, tbodyId, statusId, moreButtonId, emptyHtml, renderRow }) {
+      const tbody = document.getElementById(tbodyId);
+      const status = document.getElementById(statusId);
+      const moreButton = document.getElementById(moreButtonId);
+      if (!items.length) {
+        tbody.innerHTML = emptyHtml;
+        status.textContent = "0 件";
+        moreButton.hidden = true;
+        return;
+      }
+      const limit = tableRenderState[tableKey];
+      const visibleItems = items.slice(0, limit);
+      tbody.innerHTML = visibleItems.map(renderRow).join("");
+      status.textContent = `${visibleItems.length} / ${items.length} 件表示`;
+      const remaining = items.length - visibleItems.length;
+      moreButton.hidden = remaining <= 0;
+      moreButton.textContent = remaining > 0
+        ? `さらに ${Math.min(tablePageSizes[tableKey], remaining)} 件表示`
+        : "さらに表示";
+    }
+
+    function debounce(func, waitMs) {
+      let timerId = null;
+      return (...args) => {
+        window.clearTimeout(timerId);
+        timerId = window.setTimeout(() => func(...args), waitMs);
+      };
     }
 
     function formatNodeType(value) {
@@ -1431,50 +1538,57 @@ def render_html(
     }
 
     function renderNodeTable(nodes) {
-      const tbody = document.getElementById("nodes-table");
-      tbody.innerHTML = nodes
-        .map((node) => {
-          return `
-            <tr>
-              <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
-              <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
-              <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
-              <td>${escapeHtml((node.aliases || []).join(", "))}</td>
-              <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
-              <td>${escapeHtml(node.confidence)}</td>
-              <td>${formatLinkList(node.source_urls || [])}</td>
-            </tr>
-          `;
-        })
-        .join("");
+      renderTableSlice({
+        items: nodes,
+        tableKey: "nodes",
+        tbodyId: "nodes-table",
+        statusId: "nodes-table-status",
+        moreButtonId: "nodes-table-more",
+        emptyHtml: '<tr><td colspan="7" class="muted">現在の表示条件に一致するノードはありません。</td></tr>',
+        renderRow: (node) => `
+          <tr>
+            <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
+            <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
+            <td><span class="tag">${escapeHtml(formatNodeType(node.type))}</span></td>
+            <td>${escapeHtml((node.aliases || []).join(", "))}</td>
+            <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.description || "")}${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}</td>
+            <td>${escapeHtml(node.confidence)}</td>
+            <td>${formatLinkList(node.source_urls || [])}</td>
+          </tr>
+        `
+      });
     }
 
     function renderEdgeTable(edges, nodeNameById) {
-      const tbody = document.getElementById("edges-table");
-      tbody.innerHTML = edges
-        .map((edge) => {
-          return `
-            <tr>
-              <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
-              <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
-              <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
-              <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
-              <td>${escapeHtml(edge.confidence)}</td>
-              <td>${formatLinkList(edge.source_urls || [])}</td>
-            </tr>
-          `;
-        })
-        .join("");
+      renderTableSlice({
+        items: edges,
+        tableKey: "edges",
+        tbodyId: "edges-table",
+        statusId: "edges-table-status",
+        moreButtonId: "edges-table-more",
+        emptyHtml: '<tr><td colspan="6" class="muted">現在の表示条件に一致するエッジはありません。</td></tr>',
+        renderRow: (edge) => `
+          <tr>
+            <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
+            <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
+            <td>${escapeHtml(nodeNameById.get(edge.target) || edge.target)}</td>
+            <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.description || "")}${edge.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(edge.review_notes)}</span>` : ""}</td>
+            <td>${escapeHtml(edge.confidence)}</td>
+            <td>${formatLinkList(edge.source_urls || [])}</td>
+          </tr>
+        `
+      });
     }
 
     function renderReviewNodeTable(nodes) {
-      const tbody = document.getElementById("review-nodes-table");
-      if (!nodes.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認ノードはありません。</td></tr>';
-        return;
-      }
-      tbody.innerHTML = nodes
-        .map((node) => `
+      renderTableSlice({
+        items: nodes,
+        tableKey: "reviewNodes",
+        tbodyId: "review-nodes-table",
+        statusId: "review-nodes-table-status",
+        moreButtonId: "review-nodes-table-more",
+        emptyHtml: '<tr><td colspan="5" class="muted">現在表示中の要確認ノードはありません。</td></tr>',
+        renderRow: (node) => `
           <tr>
             <td><button type="button" class="inspect-button" data-node-id="${escapeHtml(node.id)}">詳細</button></td>
             <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
@@ -1482,18 +1596,19 @@ def render_html(
             <td>${formatEvidenceBadges(node)}<br>${escapeHtml(node.review_notes || "-")}</td>
             <td>${formatLinkList(node.source_urls || [])}</td>
           </tr>
-        `)
-        .join("");
+        `
+      });
     }
 
     function renderReviewEdgeTable(edges, nodeNameById) {
-      const tbody = document.getElementById("review-edges-table");
-      if (!edges.length) {
-        tbody.innerHTML = '<tr><td colspan="5" class="muted">現在表示中の要確認エッジはありません。</td></tr>';
-        return;
-      }
-      tbody.innerHTML = edges
-        .map((edge) => `
+      renderTableSlice({
+        items: edges,
+        tableKey: "reviewEdges",
+        tbodyId: "review-edges-table",
+        statusId: "review-edges-table-status",
+        moreButtonId: "review-edges-table-more",
+        emptyHtml: '<tr><td colspan="5" class="muted">現在表示中の要確認エッジはありません。</td></tr>',
+        renderRow: (edge) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(edge.source) || edge.source)}</td>
             <td><span class="tag">${escapeHtml(formatEdgeType(edge.type))}</span></td>
@@ -1501,18 +1616,19 @@ def render_html(
             <td>${formatEvidenceBadges(edge)}<br>${escapeHtml(edge.review_notes || "-")}</td>
             <td>${formatLinkList(edge.source_urls || [])}</td>
           </tr>
-        `)
-        .join("");
+        `
+      });
     }
 
     function renderReviewCandidateTable(candidates, nodeNameById) {
-      const tbody = document.getElementById("review-candidates-table");
-      if (!candidates.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー候補はありません。</td></tr>';
-        return;
-      }
-      tbody.innerHTML = candidates
-        .map((candidate) => `
+      renderTableSlice({
+        items: candidates,
+        tableKey: "reviewCandidates",
+        tbodyId: "review-candidates-table",
+        statusId: "review-candidates-table-status",
+        moreButtonId: "review-candidates-table-more",
+        emptyHtml: '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー候補はありません。</td></tr>',
+        renderRow: (candidate) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(candidate.source) || candidate.source)}</td>
             <td><span class="tag">${escapeHtml(formatEdgeType(candidate.type))}</span></td>
@@ -1521,8 +1637,8 @@ def render_html(
             <td><span class="tag tag-review">要確認</span><br>${escapeHtml(candidate.review_notes || "-")}<br><span class="muted">${escapeHtml(candidate.evidence_text || "")}</span></td>
             <td>${formatLinkList(candidate.source_urls || [])}</td>
           </tr>
-        `)
-        .join("");
+        `
+      });
     }
 
     function normalizeDecisionEntry(candidateId, decision) {
@@ -1543,13 +1659,14 @@ def render_html(
     }
 
     function renderReviewCandidateDecisionTable(decisionEntries, nodeNameById) {
-      const tbody = document.getElementById("review-candidate-decisions-table");
-      if (!decisionEntries.length) {
-        tbody.innerHTML = '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー判断はありません。</td></tr>';
-        return;
-      }
-      tbody.innerHTML = decisionEntries
-        .map((entry) => `
+      renderTableSlice({
+        items: decisionEntries,
+        tableKey: "reviewCandidateDecisions",
+        tbodyId: "review-candidate-decisions-table",
+        statusId: "review-candidate-decisions-table-status",
+        moreButtonId: "review-candidate-decisions-table-more",
+        emptyHtml: '<tr><td colspan="6" class="muted">現在の表示条件に一致するレビュー判断はありません。</td></tr>',
+        renderRow: (entry) => `
           <tr>
             <td>${escapeHtml(nodeNameById.get(entry.source) || entry.source || "-")}<br><span class="muted">${escapeHtml(formatEdgeType(entry.type || "-"))}</span></td>
             <td><span class="tag ${entry.status === "approved" ? "tag-evidence-fact" : "tag-review"}">${escapeHtml(formatDecisionStatus(entry.status || "-"))}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
@@ -1558,8 +1675,17 @@ def render_html(
             <td>${escapeHtml(entry.note || "-")}${entry.evidence_text ? `<br><span class="muted">${escapeHtml(entry.evidence_text)}</span>` : ""}${entry.candidate_id ? `<br><span class="muted">${escapeHtml(entry.candidate_id)}</span>` : ""}</td>
             <td>${formatLinkList(entry.source_urls || [])}</td>
           </tr>
-        `)
-        .join("");
+        `
+      });
+    }
+
+    function renderVisibleTables() {
+      renderNodeTable(currentVisibleNodes);
+      renderEdgeTable(currentVisibleEdges, currentNodeNameById);
+      renderReviewNodeTable(currentVisibleReviewNodes);
+      renderReviewEdgeTable(currentVisibleReviewEdges, currentNodeNameById);
+      renderReviewCandidateTable(currentVisibleReviewCandidates, currentNodeNameById);
+      renderReviewCandidateDecisionTable(currentVisibleReviewCandidateDecisions, currentNodeNameById);
     }
 
     function resetClusters() {
@@ -1609,6 +1735,16 @@ def render_html(
       const term = document.getElementById("search").value.trim().toLowerCase();
       const graphViewMode = getGraphViewMode();
       const shouldCluster = isTypeClusteringEnabled() && !term;
+      const tableFilterKey = JSON.stringify({
+        nodeTypes: [...allowedNodeTypes].sort(),
+        edgeTypes: [...allowedEdgeTypes].sort(),
+        term,
+        graphViewMode
+      });
+      if (tableFilterKey !== lastTableFilterKey) {
+        resetTableRenderState();
+        lastTableFilterKey = tableFilterKey;
+      }
 
       const eligibleNodes = rawGraph.nodes.filter((node) => {
         if (!allowedNodeTypes.has(node.type)) {
@@ -1658,6 +1794,11 @@ def render_html(
         .filter((entry) => visibleNodeIds.has(entry.source) && visibleNodeIds.has(entry.target));
       currentVisibleNodes = visibleNodes;
       currentVisibleEdges = visibleEdges;
+      currentVisibleReviewNodes = visibleNodes.filter((node) => node.needs_review);
+      currentVisibleReviewEdges = visibleEdges.filter((edge) => edge.needs_review);
+      currentVisibleReviewCandidates = visibleReviewCandidates;
+      currentVisibleReviewCandidateDecisions = visibleReviewCandidateDecisions;
+      currentNodeNameById = nodeNameById;
 
       resetClusters();
       nodesDataSet.clear();
@@ -1686,7 +1827,7 @@ def render_html(
           id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
           from: edge.source,
           to: edge.target,
-          label: formatEdgeType(edge.type),
+          label: visibleEdges.length <= 320 ? formatEdgeType(edge.type) : undefined,
           title: `${formatEdgeType(edge.type)}: ${edge.description || ""}\n${formatEvidenceKind(edge.evidence_kind || "fact")}${edge.needs_review ? " / 要確認" : ""}`
         }))
       );
@@ -1697,15 +1838,10 @@ def render_html(
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
       document.getElementById("visible-edges").textContent = visibleEdges.length;
-      document.getElementById("review-nodes").textContent = visibleNodes.filter((node) => node.needs_review).length;
-      document.getElementById("review-edges").textContent = visibleEdges.filter((edge) => edge.needs_review).length;
+      document.getElementById("review-nodes").textContent = currentVisibleReviewNodes.length;
+      document.getElementById("review-edges").textContent = currentVisibleReviewEdges.length;
       document.getElementById("review-candidates").textContent = visibleReviewCandidates.length;
-      renderNodeTable(visibleNodes);
-      renderEdgeTable(visibleEdges, nodeNameById);
-      renderReviewNodeTable(visibleNodes.filter((node) => node.needs_review));
-      renderReviewEdgeTable(visibleEdges.filter((edge) => edge.needs_review), nodeNameById);
-      renderReviewCandidateTable(visibleReviewCandidates, nodeNameById);
-      renderReviewCandidateDecisionTable(visibleReviewCandidateDecisions, nodeNameById);
+      renderVisibleTables();
 
       if (selectedNodeId) {
         renderDetailPanel(selectedNodeId);
@@ -1714,7 +1850,8 @@ def render_html(
       }
     }
 
-    document.getElementById("search").addEventListener("input", applyFilters);
+    const debouncedApplyFilters = debounce(applyFilters, 120);
+    document.getElementById("search").addEventListener("input", debouncedApplyFilters);
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
@@ -1722,6 +1859,19 @@ def render_html(
       input.addEventListener("change", applyFilters);
     });
     document.getElementById("cluster-by-type").addEventListener("change", applyFilters);
+    [
+      ["reviewNodes", "review-nodes-table-more"],
+      ["reviewEdges", "review-edges-table-more"],
+      ["reviewCandidates", "review-candidates-table-more"],
+      ["reviewCandidateDecisions", "review-candidate-decisions-table-more"],
+      ["nodes", "nodes-table-more"],
+      ["edges", "edges-table-more"]
+    ].forEach(([tableKey, buttonId]) => {
+      document.getElementById(buttonId).addEventListener("click", () => {
+        tableRenderState[tableKey] += tablePageSizes[tableKey];
+        renderVisibleTables();
+      });
+    });
     document.getElementById("nodes-table").addEventListener("click", (event) => {
       const button = event.target.closest("[data-node-id]");
       if (!button) {

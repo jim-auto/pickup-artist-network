@@ -361,6 +361,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "anus-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/anus_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "ao-nampa",
     "target": "x",
     "type": "affiliation",
@@ -1592,6 +1605,33 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "himotenohoshi",
+    "target": "brain",
+    "type": "affiliation",
+    "description": "Profile links point to Brain.",
+    "source_urls": [
+      "https://x.com/himotenohoshi",
+      "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/himotenohoshi"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "hiroyukinanpa",
     "target": "x",
     "type": "affiliation",
@@ -1677,6 +1717,33 @@
     "description": "Profile links point to X.",
     "source_urls": [
       "https://x.com/inumaki_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "isagi-pua",
+    "target": "tips",
+    "type": "affiliation",
+    "description": "Profile links point to Tips.",
+    "source_urls": [
+      "https://x.com/isagi_pua",
+      "https://tips.jp/u/pua_isagi/a/BY4FPWFw"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "isagi-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/isagi_pua"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
@@ -2374,6 +2441,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 25 handles and matched 3 tracked accounts."
   },
   {
+    "source": "mafty-nanpa",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/mafty_nanpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "magic-kaito7",
     "target": "x",
     "type": "affiliation",
@@ -2419,6 +2499,19 @@
     "description": "Profile links point to X.",
     "source_urls": [
       "https://x.com/mange_daisuke"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "marifax-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/marifax_pua"
     ],
     "confidence": 0.86,
     "evidence_kind": "fact",
@@ -2731,6 +2824,33 @@
     "review_notes": ""
   },
   {
+    "source": "mizuno-qreep",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/mizuno_qreep",
+      "https://note.com/mizunoex/n/n84354fab1f51"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "mizuno-qreep",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/mizuno_qreep"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "mky-match",
     "target": "mikky-motecoach",
     "type": "affiliation",
@@ -3010,6 +3130,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 20 handles and matched 0 tracked accounts."
   },
   {
+    "source": "nanpa-doraemon",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/nanpa_doraemon"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "nanpa-pegasasu",
     "target": "line",
     "type": "affiliation",
@@ -3061,6 +3194,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+  },
+  {
+    "source": "nanpaoh-yuya",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/nanpaoh_yuya"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "nanpawars",
@@ -3524,6 +3670,59 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public page. Review before relying on inferred meaning."
+  },
+  {
+    "source": "pochama-izon",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pochama_izon"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pochama-tuwaou",
+    "target": "line",
+    "type": "affiliation",
+    "description": "Profile links point to LINE.",
+    "source_urls": [
+      "https://x.com/pochama_tuwaou",
+      "https://line.me/R/ti/p/@672fcdpa"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pochama-tuwaou",
+    "target": "pochama-izon",
+    "type": "affiliation",
+    "description": "Public X profile explicitly links @pochama_izon as the side account.",
+    "source_urls": [
+      "https://x.com/pochama_tuwaou"
+    ],
+    "confidence": 0.72,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pochama-tuwaou",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/pochama_tuwaou"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "ponponpon142",
@@ -4315,6 +4514,33 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 32 handles and matched 13 tracked accounts."
   },
   {
+    "source": "shuri-pua",
+    "target": "line",
+    "type": "affiliation",
+    "description": "Profile links point to LINE.",
+    "source_urls": [
+      "https://x.com/shuri_pua",
+      "https://lin.ee/H21c1hh"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "shuri-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/shuri_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "shuta-pua",
     "target": "x",
     "type": "affiliation",
@@ -5046,6 +5272,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 12 tracked accounts."
   },
   {
+    "source": "utaa-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/utaa_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "vegeta-street",
     "target": "note",
     "type": "affiliation",
@@ -5532,6 +5771,19 @@
     "review_notes": ""
   },
   {
+    "source": "marifax-pua",
+    "target": "pochama-tuwaou",
+    "type": "influence",
+    "description": "Public X profile explicitly identifies this account with the ポチャマ留年講習 course.",
+    "source_urls": [
+      "https://x.com/marifax_pua"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "maruoooon-pua",
     "target": "gureran-m",
     "type": "influence",
@@ -5569,6 +5821,19 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 25 handles and matched 8 tracked accounts."
+  },
+  {
+    "source": "west-pua",
+    "target": "pochama-tuwaou",
+    "type": "influence",
+    "description": "Public X profile explicitly identifies this account with the 留年ポチャマ講習 course.",
+    "source_urls": [
+      "https://x.com/west_pua"
+    ],
+    "confidence": 0.74,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "source": "11goacemenc",

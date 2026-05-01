@@ -250,6 +250,9 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('fetch(path, { cache: "no-store" })', html)
         self.assertIn("graph-data.json", html)
         self.assertIn('id="cluster-by-type"', html)
+        self.assertIn('id="nodes-table-more"', html)
+        self.assertIn('id="edges-table-more"', html)
+        self.assertIn("stabilizationIterationsDone", html)
         self.assertIn("却下", html)
         self.assertIn("2 / 1000", html)
 
