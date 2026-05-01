@@ -11,10 +11,11 @@ from graph_model import (
     GraphData,
     add_edge,
     add_node,
+    export_html,
     export_networkx_metrics,
-    render_html,
     export_sqlite,
     query_relations,
+    render_html,
 )
 
 
@@ -234,7 +235,6 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('rel="icon" href="icon.svg"', html)
         self.assertIn('class="header-icon" src="icon.svg"', html)
         self.assertIn("avatar-thumb", html)
-        self.assertIn("https://example.com/alpha.png", html)
         self.assertIn("実データ成長目標", html)
         self.assertIn("表示モード", html)
         self.assertIn("const visibleNodeIds = new Set();", html)
@@ -247,9 +247,40 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("レビュー判断ログ", html)
         self.assertIn("data-node-id=", html)
         self.assertIn("要確認", html)
-        self.assertIn("review-candidate-decisions-data", html)
+        self.assertIn('fetch(path, { cache: "no-store" })', html)
+        self.assertIn("graph-data.json", html)
+        self.assertIn('id="cluster-by-type"', html)
         self.assertIn("却下", html)
         self.assertIn("2 / 1000", html)
+
+    def test_export_html_writes_companion_graph_data_json(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(
+                self.graph,
+                output_path=output_path,
+                review_candidates_payload={
+                    "generated_at": "2026-04-24T00:00:00+00:00",
+                    "candidates": [{"id": "candidate-1", "source": "alpha", "target": "beta", "type": "reference"}],
+                },
+                review_candidate_decisions_payload={
+                    "updated_at": "2026-04-24T01:00:00+00:00",
+                    "decisions": {"candidate-1": {"status": "approved", "source": "alpha", "target": "beta", "type": "reference"}},
+                },
+            )
+
+            html = output_path.read_text(encoding="utf-8")
+            data_path = Path(tmp_dir) / "graph-data.json"
+            payload = json.loads(data_path.read_text(encoding="utf-8"))
+
+        self.assertIn("graph-data.json", html)
+        self.assertEqual(len(payload["graph"]["nodes"]), 2)
+        self.assertEqual(len(payload["graph"]["edges"]), 1)
+        self.assertEqual(payload["review_candidates"]["candidates"][0]["id"], "candidate-1")
+        self.assertEqual(
+            payload["review_candidate_decisions"]["decisions"]["candidate-1"]["status"],
+            "approved",
+        )
 
 
 if __name__ == "__main__":

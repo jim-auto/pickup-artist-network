@@ -608,6 +608,7 @@ def render_html(
     review_candidates_payload: dict[str, Any] | None = None,
     review_candidate_decisions_payload: dict[str, Any] | None = None,
     growth_targets_payload: dict[str, Any] | None = None,
+    site_data_path: str = "graph-data.json",
 ) -> str:
     node_type_labels = {
         "person": "人物",
@@ -624,15 +625,6 @@ def render_html(
             return f"第{suffix}段階"
         return text
 
-    graph_json = json.dumps(graph.to_dict(), ensure_ascii=False)
-    review_candidates_json = json.dumps(
-        review_candidates_payload or {"generated_at": "", "candidates": []},
-        ensure_ascii=False,
-    )
-    review_candidate_decisions_json = json.dumps(
-        review_candidate_decisions_payload or {"updated_at": "", "decisions": {}},
-        ensure_ascii=False,
-    )
     growth_targets = growth_targets_payload or {"headline": {}, "phases": [], "types": []}
     headline = growth_targets.get("headline", {})
     growth_headline = (
@@ -986,6 +978,16 @@ def render_html(
         <strong>関係種別</strong>
         <div id="edge-type-filters" class="filter-group"></div>
       </div>
+      <div>
+        <strong>表示補助</strong>
+        <div class="filter-group">
+          <label class="chip">
+            <input type="checkbox" id="cluster-by-type">
+            <span>種別クラスタ</span>
+          </label>
+        </div>
+        <div class="muted">オンにすると、現在表示中のノードを種別ごとの塊でまとめて見られます。</div>
+      </div>
     </section>
 
     <section class="panel stats">
@@ -1132,14 +1134,21 @@ def render_html(
     </section>
   </main>
 
-  <script id="graph-data" type="application/json">__GRAPH_JSON__</script>
-  <script id="review-candidates-data" type="application/json">__REVIEW_CANDIDATES_JSON__</script>
-  <script id="review-candidate-decisions-data" type="application/json">__REVIEW_CANDIDATE_DECISIONS_JSON__</script>
   <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
   <script>
-    const rawGraph = JSON.parse(document.getElementById("graph-data").textContent);
-    const rawReviewCandidates = JSON.parse(document.getElementById("review-candidates-data").textContent);
-    const rawReviewCandidateDecisions = JSON.parse(document.getElementById("review-candidate-decisions-data").textContent);
+    async function loadSiteData(path) {
+      const response = await fetch(path, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Failed to load graph data: ${response.status}`);
+      }
+      return response.json();
+    }
+
+    (async () => {
+    const rawSiteData = await loadSiteData("__SITE_DATA_PATH__");
+    const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
+    const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
+    const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };
     const nodeColors = {
       person: "#2f6feb",
       community: "#7e57c2",
@@ -1185,6 +1194,7 @@ def render_html(
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
     let selectedNodeId = null;
+    let activeClusterIds = new Set();
 
     document.getElementById("total-nodes").textContent = rawGraph.nodes.length;
     document.getElementById("total-edges").textContent = rawGraph.edges.length;
@@ -1250,6 +1260,15 @@ def render_html(
     function getGraphViewMode() {
       const selected = document.querySelector('input[name="graph-view-mode"]:checked');
       return selected ? selected.value : "account";
+    }
+
+    function isTypeClusteringEnabled() {
+      const input = document.getElementById("cluster-by-type");
+      return Boolean(input && input.checked);
+    }
+
+    function getClusterNodeId(nodeType) {
+      return `cluster:${nodeType}`;
     }
 
     function formatNodeType(value) {
@@ -1397,8 +1416,11 @@ def render_html(
       if (!currentVisibleNodes.some((node) => node.id === nodeId)) {
         return;
       }
-      network.selectNodes([nodeId]);
-      network.focus(nodeId, {
+      const node = rawNodeById.get(nodeId);
+      const clusterId = node ? getClusterNodeId(node.type) : null;
+      const focusId = clusterId && network.isCluster(clusterId) ? clusterId : nodeId;
+      network.selectNodes([focusId]);
+      network.focus(focusId, {
         scale: 1.05,
         animation: {
           duration: 300,
@@ -1540,11 +1562,53 @@ def render_html(
         .join("");
     }
 
+    function resetClusters() {
+      Array.from(activeClusterIds).forEach((clusterId) => {
+        if (network.isCluster(clusterId)) {
+          network.openCluster(clusterId);
+        }
+      });
+      activeClusterIds = new Set();
+    }
+
+    function applyTypeClusters(visibleNodes) {
+      const nodeTypeCounts = new Map();
+      visibleNodes.forEach((node) => {
+        nodeTypeCounts.set(node.type, (nodeTypeCounts.get(node.type) || 0) + 1);
+      });
+      nodeTypeCounts.forEach((count, nodeType) => {
+        if (count < 3) {
+          return;
+        }
+        const clusterId = getClusterNodeId(nodeType);
+        network.cluster({
+          joinCondition(nodeOptions) {
+            return nodeOptions.group === nodeType;
+          },
+          clusterNodeProperties: {
+            id: clusterId,
+            label: `${formatNodeType(nodeType)} (${count})`,
+            group: nodeType,
+            value: 18 + count,
+            shape: "dot",
+            color: {
+              background: nodeColors[nodeType] || "#64748b",
+              border: "#ffffff",
+              highlight: { background: nodeColors[nodeType] || "#64748b", border: "#111827" }
+            },
+            title: `${formatNodeType(nodeType)} クラスタ (${count})`
+          }
+        });
+        activeClusterIds.add(clusterId);
+      });
+    }
+
     function applyFilters() {
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const term = document.getElementById("search").value.trim().toLowerCase();
       const graphViewMode = getGraphViewMode();
+      const shouldCluster = isTypeClusteringEnabled() && !term;
 
       const eligibleNodes = rawGraph.nodes.filter((node) => {
         if (!allowedNodeTypes.has(node.type)) {
@@ -1595,6 +1659,7 @@ def render_html(
       currentVisibleNodes = visibleNodes;
       currentVisibleEdges = visibleEdges;
 
+      resetClusters();
       nodesDataSet.clear();
       edgesDataSet.clear();
 
@@ -1626,6 +1691,10 @@ def render_html(
         }))
       );
 
+      if (shouldCluster) {
+        applyTypeClusters(visibleNodes);
+      }
+
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
       document.getElementById("visible-edges").textContent = visibleEdges.length;
       document.getElementById("review-nodes").textContent = visibleNodes.filter((node) => node.needs_review).length;
@@ -1652,6 +1721,7 @@ def render_html(
     document.querySelectorAll('input[name="graph-view-mode"]').forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
+    document.getElementById("cluster-by-type").addEventListener("change", applyFilters);
     document.getElementById("nodes-table").addEventListener("click", (event) => {
       const button = event.target.closest("[data-node-id]");
       if (!button) {
@@ -1668,7 +1738,10 @@ def render_html(
     });
     network.on("selectNode", (params) => {
       if (params.nodes.length) {
-        renderDetailPanel(params.nodes[0]);
+        const selectedId = params.nodes[0];
+        if (!network.isCluster(selectedId)) {
+          renderDetailPanel(selectedId);
+        }
       }
     });
     network.on("deselectNode", () => {
@@ -1676,15 +1749,20 @@ def render_html(
     });
 
     applyFilters();
+    })().catch((error) => {
+      console.error(error);
+      const networkElement = document.getElementById("network");
+      if (networkElement) {
+        networkElement.innerHTML = '<p class="muted">グラフデータの読み込みに失敗しました。</p>';
+      }
+    });
   </script>
 </body>
 </html>
 """
     return (
         template.replace("__TITLE__", title)
-        .replace("__GRAPH_JSON__", graph_json)
-        .replace("__REVIEW_CANDIDATES_JSON__", review_candidates_json)
-        .replace("__REVIEW_CANDIDATE_DECISIONS_JSON__", review_candidate_decisions_json)
+        .replace("__SITE_DATA_PATH__", site_data_path)
         .replace("__GROWTH_HEADLINE__", growth_headline)
         .replace("__GROWTH_PHASE_CARDS__", growth_phase_cards)
         .replace("__GROWTH_TYPE_ROWS__", growth_type_rows)
@@ -1701,7 +1779,18 @@ def export_html(
     growth_targets_payload: dict[str, Any] | None = None,
 ) -> None:
     output_file = Path(output_path)
+    site_data_file = output_file.with_name("graph-data.json")
     output_file.parent.mkdir(parents=True, exist_ok=True)
+    site_data_payload = {
+        "graph": graph.to_dict(),
+        "review_candidates": review_candidates_payload or {"generated_at": "", "candidates": []},
+        "review_candidate_decisions": review_candidate_decisions_payload
+        or {"updated_at": "", "decisions": {}},
+    }
+    site_data_file.write_text(
+        json.dumps(site_data_payload, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
     output_file.write_text(
         render_html(
             graph,
@@ -1709,6 +1798,7 @@ def export_html(
             review_candidates_payload=review_candidates_payload,
             review_candidate_decisions_payload=review_candidate_decisions_payload,
             growth_targets_payload=growth_targets_payload,
+            site_data_path=site_data_file.name,
         ),
         encoding="utf-8",
     )
