@@ -203,6 +203,44 @@ def fill_first_visible(page: object, selectors: list[str], value: str) -> bool:
     return False
 
 
+def type_first_visible(
+    page: object,
+    selectors: list[str],
+    value: str,
+    *,
+    timeout_ms: int = 5000,
+    delay_ms: int = 90,
+) -> bool:
+    for selector in selectors:
+        locator = page.locator(selector).first
+        try:
+            if locator.is_visible(timeout=timeout_ms):
+                locator.click()
+                locator.fill("")
+                locator.type(value, delay=delay_ms)
+                return True
+        except Exception:
+            continue
+    return False
+
+
+def add_x_stealth_init_script(context: object) -> None:
+    context.add_init_script(
+        """
+        Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+        Object.defineProperty(navigator, 'languages', { get: () => ['ja-JP', 'ja', 'en-US', 'en'] });
+        Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+        window.chrome = window.chrome || { runtime: {} };
+        const originalQuery = window.navigator.permissions.query;
+        window.navigator.permissions.query = (parameters) => (
+            parameters && parameters.name === 'notifications'
+                ? Promise.resolve({ state: Notification.permission })
+                : originalQuery(parameters)
+        );
+        """
+    )
+
+
 def load_collector_sources(path: Path = COLLECTOR_CONFIG) -> list[dict[str, object]]:
     if not path.exists():
         return []
@@ -265,9 +303,9 @@ def load_x_profile_sources(
             raise ValueError(f"x_profile_sources[{index}].account_id is required")
         if account_id not in seed_entities:
             raise ValueError(f"x_profile_sources[{index}] references unknown account_id: {account_id}")
-        if seed_entities[account_id]["type"] not in {"person", "community", "location", "platform"}:
+        if seed_entities[account_id]["type"] not in {"person", "community", "location", "platform", "content"}:
             raise ValueError(
-                f"x_profile_sources[{index}] account type must be person/community/location/platform: {account_id}"
+                f"x_profile_sources[{index}] account type must be person/community/location/platform/content: {account_id}"
             )
         host = urlparse(source_url).netloc.lower().removeprefix("www.")
         if host not in {"x.com", "twitter.com"}:
@@ -427,39 +465,70 @@ def auto_login_x_and_save_auth_state(
 
     auth_state_path.parent.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=False)
-        context = browser.new_context()
+        browser = playwright.chromium.launch(
+            channel="chrome",
+            headless=False,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+            ],
+        )
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+            locale="ja-JP",
+            timezone_id="Asia/Tokyo",
+            viewport={"width": 1366, "height": 900},
+        )
+        add_x_stealth_init_script(context)
         page = context.new_page()
+        page.goto("https://twitter.com", wait_until="domcontentloaded", timeout=120000)
+        page.wait_for_timeout(5000)
+        page.mouse.wheel(0, 120)
+        page.wait_for_timeout(1200)
+        page.mouse.wheel(0, -120)
+        page.wait_for_timeout(1200)
         page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(8000)
 
-        if not fill_first_visible(
+        body_text = page.locator("body").text_content(timeout=10000) or ""
+        if "JavaScriptを使用できません" in body_text:
+            browser.close()
+            raise RuntimeError("X returned the JavaScript-disabled page during automatic login.")
+        if "問題が発生" in body_text or "やりなおす" in body_text:
+            page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
+            page.wait_for_timeout(8000)
+
+        if not type_first_visible(
             page,
             ['input[autocomplete="username"]', 'input[name="text"]', 'input[type="text"]'],
             username,
+            timeout_ms=10000,
         ):
             browser.close()
             raise RuntimeError("Could not find the X username input.")
         page.keyboard.press("Enter")
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(5000)
 
         challenge_input = page.locator('input[data-testid="ocfEnterTextTextInput"]').first
         try:
             if challenge_input.is_visible(timeout=4000):
+                challenge_input.click()
                 challenge_input.fill("")
-                challenge_input.fill(username)
+                challenge_input.type(username, delay=90)
                 page.keyboard.press("Enter")
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(4000)
         except Exception:
             pass
 
-        if not fill_first_visible(page, ['input[name="password"]'], password):
+        if not type_first_visible(page, ['input[name="password"]'], password, timeout_ms=15000):
             browser.close()
             raise RuntimeError("Could not find the X password input.")
         page.keyboard.press("Enter")
-        page.wait_for_timeout(5000)
+        page.wait_for_timeout(8000)
         page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(3000)
+        page.wait_for_timeout(5000)
         if "login" in page.url.casefold():
             browser.close()
             raise RuntimeError("Automatic X login still ended on the login flow.")

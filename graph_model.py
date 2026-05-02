@@ -102,6 +102,13 @@ KEYWORD_CLUSTER_RULES = (
     },
     {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
     {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
+    {
+        "id": "tokyo_stonan_kai",
+        "label": "東京ストナン会",
+        "patterns": ("東京ストナン会", "#東京ストナン会"),
+        "priority": 92,
+    },
+    {"id": "elsta", "label": "えるスタ", "patterns": ("えるスタ", "elsta"), "priority": 93},
     {"id": "hancho", "label": "はんちょう", "patterns": ("はんちょう", "hancho"), "priority": 92},
     {"id": "juru_family", "label": "ジュルマ一門", "patterns": ("ジュルマ一門", "juru"), "priority": 91},
     {"id": "yutty", "label": "ゆってぃ", "patterns": ("ゆってぃ", "yutty"), "priority": 90},
@@ -1644,6 +1651,16 @@ def render_html(
 
   <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
   <script>
+    function siteAssetUrl(filename) {
+      const origin = window.location.origin;
+      let dir = window.location.pathname;
+      if (!dir.endsWith("/")) {
+        const baseName = dir.split("/").pop() || "";
+        dir = baseName.includes(".") ? dir.slice(0, dir.lastIndexOf("/") + 1) : `${dir}/`;
+      }
+      return new URL(filename, `${origin}${dir}`).href;
+    }
+
     async function loadSiteData(path) {
       const response = await fetch(path, { cache: "no-store" });
       if (!response.ok) {
@@ -1653,7 +1670,7 @@ def render_html(
     }
 
     (async () => {
-    const rawSiteData = await loadSiteData("__SITE_DATA_PATH__");
+    const rawSiteData = await loadSiteData(siteAssetUrl("__SITE_DATA_PATH__"));
     const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
     const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
     const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };

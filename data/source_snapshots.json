@@ -1128,6 +1128,17 @@
         "confidence": 0.72,
         "evidence_kind": "fact",
         "needs_review": false
+      },
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile explicitly says this account belongs to 東京ストナン会 for street-only pickup activity.",
+        "source_urls": [
+          "https://x.com/4meakg"
+        ],
+        "confidence": 0.82,
+        "evidence_kind": "fact",
+        "needs_review": false
       }
     ]
   },
@@ -1483,6 +1494,17 @@
           "https://x.com/chamuranaoto"
         ],
         "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile uses the #東京ストナン会 hashtag alongside this account's 東京ストナン会 display label.",
+        "source_urls": [
+          "https://x.com/chamuranaoto"
+        ],
+        "confidence": 0.78,
         "evidence_kind": "fact",
         "needs_review": false
       }
@@ -2484,6 +2506,589 @@
         "evidence_kind": "interpretation",
         "needs_review": false,
         "review_notes": "Approved from review candidate korilla-pua__puro-nampa__profile_mention. Original evidence: こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️ Approval note: Public X profile explicitly names this group or lesson."
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "elsta",
+    "links": [
+      "https://x.com/goda_pua",
+      "https://x.com/netonan99",
+      "https://x.com/utaa_pua",
+      "https://x.com/utopua2",
+      "https://x.com/_xCandee"
+    ],
+    "summary": "Public self-descriptions across multiple X profiles use えるスタ as a shared community / lecture label with member, lecturer, and sub-lecturer roles.",
+    "profile_text": "Public self-descriptions across multiple X profiles use えるスタ as a shared community / lecture label with member, lecturer, and sub-lecturer roles.",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "tokyo-stonan-kai",
+    "links": [
+      "https://x.com/4meakg",
+      "https://x.com/asumi_pua",
+      "https://x.com/chamuranaoto",
+      "https://x.com/jaws_girlhunter",
+      "https://x.com/nampa1998",
+      "https://x.com/potato_pua",
+      "https://x.com/pua_co",
+      "https://x.com/puriketsu_nnp",
+      "https://x.com/saku_pua",
+      "https://x.com/so_pua",
+      "https://x.com/taku__pua",
+      "https://x.com/to_suto_tore"
+    ],
+    "summary": "Multiple public X profiles label themselves with 東京ストナン会 via display names, bios, or the #東京ストナン会 hashtag.",
+    "profile_text": "Multiple public X profiles label themselves with 東京ストナン会 via display names, bios, or the #東京ストナン会 hashtag.",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "asumi-pua",
+    "profile_url": "https://x.com/asumi_pua",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile uses the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
+        "source_urls": [
+          "https://x.com/asumi_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "jaws-girlhunter",
+    "profile_url": "https://x.com/jaws_girlhunter",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile states pickup activity with 東京ストナン会 starting from a posted date.",
+        "source_urls": [
+          "https://x.com/jaws_girlhunter"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "nampa1998",
+    "profile_url": "https://x.com/nampa1998",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile lists the #東京ストナン会 hashtag alongside an @東京ストナン会 display label.",
+        "source_urls": [
+          "https://x.com/nampa1998"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "potato-pua",
+    "profile_url": "https://x.com/potato_pua",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile uses an @東京ストナン会 label in the display name.",
+        "source_urls": [
+          "https://x.com/potato_pua"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "pua-co",
+    "profile_url": "https://x.com/pua_co",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile explicitly references 東京ストナン会 alongside RiseUpLab-style onboarding guidance.",
+        "source_urls": [
+          "https://x.com/pua_co"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "puriketsu-nnp",
+    "profile_url": "https://x.com/puriketsu_nnp",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile lists the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
+        "source_urls": [
+          "https://x.com/puriketsu_nnp"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "saku-pua",
+    "profile_url": "https://x.com/saku_pua",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile uses an @東京ストナン会 label in the display name.",
+        "source_urls": [
+          "https://x.com/saku_pua"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "so-pua",
+    "profile_url": "https://x.com/so_pua",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile lists the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
+        "source_urls": [
+          "https://x.com/so_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "taku-pua",
+    "profile_url": "https://x.com/taku__pua",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile dates membership text alongside the #東京ストナン会 hashtag.",
+        "source_urls": [
+          "https://x.com/taku__pua"
+        ],
+        "confidence": 0.8,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "to-suto-tore",
+    "profile_url": "https://x.com/to_suto_tore",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile uses an @東京ストナン会 label in the display name.",
+        "source_urls": [
+          "https://x.com/to_suto_tore"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "goda-pua",
+    "profile_url": "https://x.com/goda_pua",
+    "observations": [
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public X profile explicitly lists えるスタ among this account's current communities.",
+        "source_urls": [
+          "https://x.com/goda_pua"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "netonan99",
+    "profile_url": "https://x.com/netonan99",
+    "observations": [
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public X profile explicitly says this account belongs to えるスタ.",
+        "source_urls": [
+          "https://x.com/netonan99"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "utaa-pua",
+    "profile_url": "https://x.com/utaa_pua",
+    "observations": [
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account as an Elsta camera / body-make instructor.",
+        "source_urls": [
+          "https://x.com/utaa_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "utopua2",
+    "profile_url": "https://x.com/utopua2",
+    "summary": "3桁即/元No.📮/地上波現役💲即 #えるスタ サブ講師",
+    "profile_text": "3桁即/元No.📮/地上波現役💲即 #えるスタ サブ講師",
+    "observations": [
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account as an Elsta sub-instructor.",
+        "source_urls": [
+          "https://x.com/utopua2"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "xcandee",
+    "profile_url": "https://x.com/_xCandee",
+    "observations": [
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies this account as an Elsta appearance-improvement instructor.",
+        "source_urls": [
+          "https://x.com/_xCandee"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "machapua3",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly mentions @machapua3.",
+        "source_urls": [
+          "https://x.com/_xCandee"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "molmol-1919",
+    "profile_url": "https://x.com/molmol1919",
+    "summary": "🐹一門長/500↑",
+    "profile_text": "🐹一門長/500↑",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "nampa-girl",
+    "profile_url": "https://x.com/nampa_girl",
+    "icon_url": "https://pbs.twimg.com/profile_images/2014274620384530432/yvmpBD8W_400x400.jpg",
+    "profile_text": "なつです。 (@nampa_girl)\n大学通いながら遊びまくってます。メイン▶︎@na__tu__sb 本編はこちらから見れます▷▶▷https://t.co/bjiUyI1yB4",
+    "links": [
+      "https://x.com/nampa_girl"
+    ],
+    "summary": "大学通いながら遊びまくってます。メイン▶︎@na__tu__sb 本編はこちらから見れます▷▶▷https://t.co/bjiUyI1yB4",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "igaku-sato",
+    "profile_url": "https://x.com/igaku_sato",
+    "icon_url": "https://pbs.twimg.com/profile_images/2014167009471389696/5MKQQzu4_400x400.jpg",
+    "profile_text": "医学生佐藤@🔞で月収100万 (@igaku_sato)\n国立医学部生/月収120万/医学部の勉強やりながら、🔞コンテンツなどでゆるっと稼いでます/金稼ぎの講習、無料通話面談は公式LINEまで/公式LINEは固定ツイートから\nLocation: 1日15分スマホポチポチで月40万稼いだ方法↓",
+    "links": [
+      "https://x.com/igaku_sato",
+      "https://note.com/preview/nf176cad52268?prev_access_key=901573a5868d3619276ccba53581ddd6"
+    ],
+    "summary": "国立医学部生/月収120万/医学部の勉強やりながら、🔞コンテンツなどでゆるっと稼いでます/金稼ぎの講習、無料通話面談は公式LINEまで/公式LINEは固定ツイートから",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "kgori-0412",
+    "profile_url": "https://x.com/kgori_0412",
+    "icon_url": "https://pbs.twimg.com/profile_images/1948939439683551233/O8wRvw6L_400x400.jpg",
+    "profile_text": "Kousuke【人生を変えるボディメイク】 (@kgori_0412)\n【勝手に効く再現性ボディメイクを指導してます】 解剖学×トレーニングの原理原則を発信 筋トレ初心者〜2年未満の伸び悩んでる人を100%伸ばせます| 元56キロのガリガリからフィジーク大会全国出場Fitness×Construct×AcademY代表|南青山にてパーソナルジム経営\nLocation: 56キロガリガリから進化した再現性ボディメイク勉強会↓",
+    "links": [
+      "https://x.com/kgori_0412",
+      "https://line.me/R/ti/p/@080uuzcs"
+    ],
+    "summary": "【勝手に効く再現性ボディメイクを指導してます】 解剖学×トレーニングの原理原則を発信 筋トレ初心者〜2年未満の伸び悩んでる人を100%伸ばせます| 元56キロのガリガリからフィジーク大会全国出場Fitness×Construct×AcademY代表|南青山にてパーソナルジム経営",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "sen-xxv",
+    "profile_url": "https://x.com/sen_xxv",
+    "icon_url": "https://pbs.twimg.com/profile_images/2017454109083963392/KMG9bPAD_400x400.jpg",
+    "profile_text": "𝓢𝓮𝓷 (@sen_xxv)\nProducer｜SNSの秀才\nLocation: 【実績保証】マチアプ/インスタ特化撮影▼",
+    "links": [
+      "https://x.com/sen_xxv",
+      "https://utage-system.com/page/jeJd23Euy5qi"
+    ],
+    "summary": "Producer｜SNSの秀才",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "nrtq5ihqepycy0n",
+    "profile_url": "https://x.com/NRTq5ihqEpYCy0N",
+    "icon_url": "https://pbs.twimg.com/profile_images/1923016515718402048/uqzRtIYt_400x400.jpg",
+    "profile_text": "ちゃぱんこ🎐 (@NRTq5ihqEpYCy0N)\n148cm/筋肉刺し/地蔵刺し/キセヌクメイン/ネト2年間ボズ中/合流超歓迎/24時間パス待ってます🙇‍♂️/顔射しない勢\nLocation: 227足(スト162)(Mスト108)",
+    "links": [
+      "https://x.com/NRTq5ihqEpYCy0N"
+    ],
+    "summary": "148cm/筋肉刺し/地蔵刺し/キセヌクメイン/ネト2年間ボズ中/合流超歓迎/24時間パス待ってます🙇‍♂️/顔射しない勢",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "beat-pro",
+    "profile_url": "https://x.com/982thebeat",
+    "observations": [
+      {
+        "target": "nampa-girl",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly points to @nampa_girl for videos.",
+        "source_urls": [
+          "https://x.com/982thebeat"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "tatsuyoshibokki",
+    "profile_url": "https://x.com/tatsuyoshibokki",
+    "observations": [
+      {
+        "target": "igaku-sato",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly recommends @igaku_sato.",
+        "source_urls": [
+          "https://x.com/tatsuyoshibokki"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "choppy-nanpa",
+    "profile_url": "https://x.com/choppy_nanpa",
+    "observations": [
+      {
+        "target": "kgori-0412",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly says this account belongs to Kousuke @kgori_0412's community.",
+        "source_urls": [
+          "https://x.com/choppy_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "senju-insta",
+    "profile_url": "https://x.com/Senju_Insta",
+    "observations": [
+      {
+        "target": "sen-xxv",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly labels @sen_xxv as a side account.",
+        "source_urls": [
+          "https://x.com/Senju_Insta"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "kiri-stomach",
+    "profile_url": "https://x.com/KiriStomach",
+    "observations": [
+      {
+        "target": "nrtq5ihqepycy0n",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly labels @NRTq5ihqEpYCy0N as this account's cohabiting girl's account.",
+        "source_urls": [
+          "https://x.com/KiriStomach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "25basabe",
+    "profile_url": "https://x.com/25basabe",
+    "icon_url": "https://pbs.twimg.com/profile_images/2021956747561492481/sHU79mPH_400x400.jpg",
+    "profile_text": "Ye (@25basabe)\n180cm/ミドツー/味噌 2022.07〜 ネト中心 累計ゲット数133 超ASD👊",
+    "links": [
+      "https://x.com/25basabe"
+    ],
+    "summary": "180cm/ミドツー/味噌 2022.07〜 ネト中心 累計ゲット数133 超ASD👊",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "na-tu-sb",
+    "profile_url": "https://x.com/na__tu__sb",
+    "icon_url": "https://pbs.twimg.com/profile_images/1940016890857807873/H-TY7hPk_400x400.jpg",
+    "profile_text": "なつ。 (@na__tu__sb)\nえっちな大学生です。🗼 動画保存庫 ▶︎ @natu__douga\nLocation: ファンクラブ・密会依頼 ▶︎",
+    "links": [
+      "https://x.com/na__tu__sb",
+      "https://lit.link/na__tu__"
+    ],
+    "summary": "えっちな大学生です。🗼 動画保存庫 ▶︎ @natu__douga",
+    "observations": [
+      {
+        "target": "natu-douga",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly points to @natu__douga as the video archive account.",
+        "source_urls": [
+          "https://x.com/na__tu__sb"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "natu-douga",
+    "profile_url": "https://x.com/natu__douga",
+    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "profile_text": "なつの動画保存庫 (@natu__douga)\n流出厳禁です🤫",
+    "links": [
+      "https://x.com/natu__douga"
+    ],
+    "summary": "流出厳禁です🤫",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "palace-chilll",
+    "profile_url": "https://x.com/palace_chilll",
+    "icon_url": "https://pbs.twimg.com/profile_images/1605155872531152896/dsfFugow_400x400.jpg",
+    "profile_text": "ハイメンズ不動産 (@palace_chilll)\nアラサーメンズ向けモテ物件探し、モテ部屋コーディネートをする不動産仲介会社。いい家に住んでQOLを上げたい・高級賃貸に住みたい・審査に不安がある方はご相談ください🏠 https://t.co/DZuZ8do1Oa\nLocation: 審査◎東京、関西、愛知メインで対応",
+    "links": [
+      "https://x.com/palace_chilll"
+    ],
+    "summary": "アラサーメンズ向けモテ物件探し、モテ部屋コーディネートをする不動産仲介会社。いい家に住んでQOLを上げたい・高級賃貸に住みたい・審査に不安がある方はご相談ください🏠 https://t.co/DZuZ8do1Oa",
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "nampa-girl",
+    "profile_url": "https://x.com/nampa_girl",
+    "observations": [
+      {
+        "target": "na-tu-sb",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly labels @na__tu__sb as the main account.",
+        "source_urls": [
+          "https://x.com/nampa_girl"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "pua-chilll",
+    "profile_url": "https://x.com/pua_chilll",
+    "observations": [
+      {
+        "target": "palace-chilll",
+        "type": "profile_mention",
+        "description": "Public X profile explicitly lists @palace_chilll.",
+        "source_urls": [
+          "https://x.com/pua_chilll"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "sub-chilll",
+    "profile_url": "https://x.com/sub_chilll",
+    "observations": [
+      {
+        "target": "palace-chilll",
+        "type": "affiliation",
+        "description": "Public X profile explicitly identifies @palace_chilll as the representative business account.",
+        "source_urls": [
+          "https://x.com/sub_chilll"
+        ],
+        "confidence": 0.74,
+        "evidence_kind": "fact",
+        "needs_review": false
       }
     ],
     "snapshot_origin": "manual"

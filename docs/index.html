@@ -352,7 +352,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-01 22:21 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-02 05:10 UTC。</p>
       </div>
     </div>
   </header>
@@ -361,7 +361,7 @@
       <h2>実データ成長目標</h2>
       <p class="muted">公開プロフィールと公式ページを手動優先で整理しながら、実在人物の関係グラフを段階的に広げています。</p>
       <section class="stats">
-        <div class="stat"><span class="muted">実在人物</span><strong>500 / 1000</strong></div>
+        <div class="stat"><span class="muted">実在人物</span><strong>508 / 1000</strong></div>
         <div class="stat"><span class="muted">第1段階</span><strong>20</strong></div><div class="stat"><span class="muted">第2段階</span><strong>50</strong></div><div class="stat"><span class="muted">第3段階</span><strong>100</strong></div><div class="stat"><span class="muted">第4段階</span><strong>200</strong></div><div class="stat"><span class="muted">第5段階</span><strong>500</strong></div><div class="stat"><span class="muted">第6段階</span><strong>1000</strong></div>
       </section>
       <div class="table-wrap">
@@ -374,7 +374,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><strong>人物</strong></td><td>500</td><td>1000</td></tr><tr><td><strong>コミュニティ</strong></td><td>2</td><td>8 - 12</td></tr><tr><td><strong>コンテンツ</strong></td><td>2</td><td>12 - 18</td></tr><tr><td><strong>場所</strong></td><td>13</td><td>8 - 14</td></tr><tr><td><strong>媒体</strong></td><td>7</td><td>6 - 8</td></tr>
+            <tr><td><strong>人物</strong></td><td>508</td><td>1000</td></tr><tr><td><strong>コミュニティ</strong></td><td>5</td><td>8 - 12</td></tr><tr><td><strong>コンテンツ</strong></td><td>3</td><td>12 - 18</td></tr><tr><td><strong>場所</strong></td><td>13</td><td>8 - 14</td></tr><tr><td><strong>媒体</strong></td><td>7</td><td>6 - 8</td></tr>
           </tbody>
         </table>
       </div>
@@ -614,6 +614,16 @@
 
   <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
   <script>
+    function siteAssetUrl(filename) {
+      const origin = window.location.origin;
+      let dir = window.location.pathname;
+      if (!dir.endsWith("/")) {
+        const baseName = dir.split("/").pop() || "";
+        dir = baseName.includes(".") ? dir.slice(0, dir.lastIndexOf("/") + 1) : `${dir}/`;
+      }
+      return new URL(filename, `${origin}${dir}`).href;
+    }
+
     async function loadSiteData(path) {
       const response = await fetch(path, { cache: "no-store" });
       if (!response.ok) {
@@ -623,7 +633,7 @@
     }
 
     (async () => {
-    const rawSiteData = await loadSiteData("graph-data.json");
+    const rawSiteData = await loadSiteData(siteAssetUrl("graph-data.json"));
     const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
     const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
     const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };

@@ -253,6 +253,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("renderNodeTypeTag", html)
         self.assertIn('fetch(path, { cache: "no-store" })', html)
         self.assertIn("graph-data.json", html)
+        self.assertIn("siteAssetUrl", html)
         self.assertIn('id="cluster-mode"', html)
         self.assertIn('id="keyword-cluster-picker"', html)
         self.assertIn('id="keyword-cluster-select"', html)
@@ -302,6 +303,54 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("connectivity", payload["clusters"]["modes"])
         self.assertIn("relation_pattern", payload["clusters"]["modes"])
         self.assertIn("keyword_group", payload["clusters"]["modes"])
+
+    def test_export_html_includes_elsta_keyword_cluster(self) -> None:
+        graph = GraphData()
+        add_node(
+            graph,
+            {
+                "id": "elsta",
+                "type": "community",
+                "name": "えるスタ",
+                "aliases": ["Elsta"],
+                "description": "えるスタ community",
+                "source_urls": ["https://example.com/elsta"],
+                "confidence": 0.8,
+            },
+        )
+        add_node(
+            graph,
+            {
+                "id": "utopua2",
+                "type": "person",
+                "name": "ゆーとぴあ@えるスタ",
+                "aliases": ["utopua2"],
+                "description": "えるスタ サブ講師",
+                "source_urls": ["https://example.com/utopua2"],
+                "confidence": 0.8,
+            },
+        )
+        add_node(
+            graph,
+            {
+                "id": "xcandee",
+                "type": "person",
+                "name": "まっちゃ",
+                "aliases": ["_xCandee"],
+                "description": "えるスタ講師",
+                "source_urls": ["https://example.com/xcandee"],
+                "confidence": 0.8,
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        keyword_clusters = payload["clusters"]["modes"]["keyword_group"]["clusters"]
+        elsta_labels = [info["label"] for info in keyword_clusters.values() if "えるスタ" in info["label"]]
+        self.assertEqual(len(elsta_labels), 1)
 
 
 if __name__ == "__main__":
