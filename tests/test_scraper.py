@@ -18,6 +18,7 @@ from scraper import (
     generate_review_candidates,
     load_generated_snapshots,
     load_seed_entities,
+    materialize_inferred_social_edges,
     merge_snapshots_by_account,
     set_review_candidate_decision,
 )
@@ -338,6 +339,48 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertTrue(any(item["target"] == "beta" and item["type"] == "collaboration" for item in candidates))
         self.assertTrue(any(item["target"] == "shibuya" and item["type"] == "activity" for item in candidates))
         self.assertTrue(all(item["needs_review"] for item in candidates))
+
+    def test_materialize_inferred_social_edges_promotes_profile_mention(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+            {"type": "person", "id": "beta", "name": "Beta", "aliases": ["beta_guy"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+        generated_snapshots = [
+            {
+                "account_id": "alpha",
+                "summary": "",
+                "profile_text": "shoutout to @beta_guy for the clip.",
+                "pinned_post_text": "",
+                "profile_url": "https://x.com/alpha",
+                "pinned_post_url": "",
+                "links": [],
+            }
+        ]
+        before = generate_review_candidates(seed_entities, generated_snapshots, graph, None)
+        self.assertTrue(
+            any(
+                item["source"] == "alpha" and item["target"] == "beta" and item["type"] == "profile_mention"
+                for item in before["candidates"]
+            )
+        )
+
+        added = materialize_inferred_social_edges(graph, seed_entities, generated_snapshots, None)
+        self.assertGreaterEqual(added, 1)
+        self.assertTrue(
+            any(
+                edge.source == "alpha" and edge.target == "beta" and edge.type == "profile_mention"
+                for edge in graph.edges
+            )
+        )
+
+        after = generate_review_candidates(seed_entities, generated_snapshots, graph, None)
+        self.assertFalse(
+            any(
+                item["source"] == "alpha" and item["target"] == "beta" and item["type"] == "profile_mention"
+                for item in after["candidates"]
+            )
+        )
 
     def test_generate_review_candidates_can_infer_monetization_for_content(self) -> None:
         seed_entities = [

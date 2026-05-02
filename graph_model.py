@@ -1435,7 +1435,7 @@ def render_html(
           <option value="relation_pattern">関係パターンでまとめる</option>
           <option value="keyword_group">キーワードでまとめる</option>
         </select>
-        <div id="cluster-mode-help" class="muted">相互リンクや共通のつながりが濃い人たちを自動でまとめます。</div>
+        <div id="cluster-mode-help" class="muted">通常表示です。人やコミュニティをまとめずに相関を見ます。</div>
       </div>
       <div id="keyword-cluster-picker" hidden>
         <label for="keyword-cluster-select"><strong>キーワード群を選ぶ</strong></label>

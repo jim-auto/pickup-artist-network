@@ -60,6 +60,8 @@ REAL_GROWTH_PHASES = (
     {"label": "Phase 6", "real_person_target": 1000},
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
+X_STYLE_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{3,15}$")
+DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset({"profile_mention"})
 LEGACY_EDGE_TYPES = frozenset({"reference"})
 FOLLOW_REFERENCE_PREFIX = "authenticated x following list shows this account follows @"
 
@@ -932,6 +934,29 @@ def refresh_outputs(graph: GraphData) -> None:
     export_sqlite(graph, SQLITE_DB)
 
 
+def _seed_handle_match_strings(entity: dict[str, object]) -> list[str]:
+    """X プロフィール内の @handle 言及向け（entity id のハイフンはアンダースコア扱い）。"""
+    variants: list[str] = []
+    entity_id = str(entity.get("id", "")).strip()
+    if entity_id:
+        slug = entity_id.replace("-", "_")
+        if X_STYLE_HANDLE_RE.fullmatch(slug):
+            variants.extend([slug, f"@{slug}"])
+    for raw in entity.get("aliases") or []:
+        alias = str(raw).strip()
+        if X_STYLE_HANDLE_RE.fullmatch(alias):
+            variants.extend([alias, f"@{alias}"])
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for item in variants:
+        key = item.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        ordered.append(item)
+    return ordered
+
+
 def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> list[dict[str, str]]:
     matchers: list[dict[str, str]] = []
     for entity in seed_entities:
@@ -949,6 +974,15 @@ def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> l
                     "target_type": entity_type,
                     "matched_text": token,
                     "matched_text_lower": token.casefold(),
+                }
+            )
+        for display in _seed_handle_match_strings(entity):
+            matchers.append(
+                {
+                    "target": entity_id,
+                    "target_type": entity_type,
+                    "matched_text": display,
+                    "matched_text_lower": display.casefold(),
                 }
             )
     return sorted(matchers, key=lambda item: len(item["matched_text"]), reverse=True)
@@ -1182,6 +1216,61 @@ def generate_review_candidates(
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "candidates": candidates,
     }
+
+
+def materialize_inferred_social_edges(
+    graph: GraphData,
+    seed_entities: list[dict[str, object]],
+    generated_snapshots: list[dict[str, object]],
+    decisions_payload: dict[str, object] | None = None,
+    *,
+    edge_types: frozenset[str] | None = None,
+) -> int:
+    """生成スナップショットの文本から推定した profile_mention を既定でグラフに載せる。
+
+    follow エッジはコレクタのフォロー一覧観測（既定で収集）由来。
+    """
+    chosen = edge_types or DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES
+    payload = generate_review_candidates(
+        seed_entities,
+        generated_snapshots,
+        graph,
+        decisions_payload=decisions_payload,
+    )
+    added = 0
+    for cand in payload.get("candidates", []):
+        if cand.get("type") not in chosen:
+            continue
+        matched = str(cand.get("matched_text", "")).strip()
+        display_match = matched if matched.startswith("@") else (f"@{matched}" if matched else "?")
+        description = (
+            f"公開プロフィール・概要・固定ポストの文本から {display_match} への言及として推定（自動）。"
+        )
+        try:
+            add_edge(
+                graph,
+                {
+                    "source": str(cand["source"]).strip(),
+                    "target": str(cand["target"]).strip(),
+                    "type": str(cand["type"]).strip(),
+                    "description": description,
+                    "source_urls": [
+                        str(url).strip()
+                        for url in (cand.get("source_urls") or [])
+                        if str(url).strip()
+                    ],
+                    "confidence": float(cand.get("confidence", REVIEW_CANDIDATE_BASE_CONFIDENCE["profile_text"])),
+                    "evidence_kind": "interpretation",
+                    "needs_review": True,
+                    "review_notes": str(cand.get("review_notes", "")).strip(),
+                },
+            )
+            added += 1
+        except ValueError as exc:
+            if str(exc).startswith("Duplicate edge"):
+                continue
+            raise
+    return added
 
 
 def save_review_candidates(payload: dict[str, object], output_path: Path = REVIEW_CANDIDATES_JSON) -> None:
@@ -1693,6 +1782,12 @@ def main() -> None:
             seed_entities,
             merge_snapshots_by_account(manual_snapshots, generated_snapshots),
         )
+        materialize_inferred_social_edges(
+            graph,
+            seed_entities,
+            generated_snapshots,
+            decisions_payload,
+        )
         refresh_outputs(graph)
         refreshed_candidates = refresh_review_candidates(
             seed_entities,
@@ -1717,9 +1812,15 @@ def main() -> None:
         return
 
     if dismiss_mode:
-        graph = build_graph_from_sources(seed_entities, snapshots)
-        review_candidates_payload = load_review_candidates(REVIEW_CANDIDATES_JSON)
         decisions_payload = load_review_candidate_decisions(REVIEW_CANDIDATE_DECISIONS_JSON)
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        materialize_inferred_social_edges(
+            graph,
+            seed_entities,
+            load_generated_snapshots(),
+            decisions_payload,
+        )
+        review_candidates_payload = load_review_candidates(REVIEW_CANDIDATES_JSON)
         candidate = get_review_candidate(review_candidates_payload, str(args.dismiss_candidate))
         decision = set_review_candidate_decision(
             decisions_payload,
@@ -1796,13 +1897,19 @@ def main() -> None:
             print(format_query_output(result))
         return
 
+    decisions_payload = load_review_candidate_decisions(REVIEW_CANDIDATE_DECISIONS_JSON)
     if args.force_sample or not NODES_JSON.exists() or not EDGES_JSON.exists():
         graph = build_graph_from_sources(seed_entities, snapshots)
+        materialize_inferred_social_edges(
+            graph,
+            seed_entities,
+            load_generated_snapshots(),
+            decisions_payload,
+        )
     else:
         graph = load_graph(NODES_JSON, EDGES_JSON)
 
     refresh_outputs(graph)
-    decisions_payload = load_review_candidate_decisions(REVIEW_CANDIDATE_DECISIONS_JSON)
     save_review_candidate_decisions(decisions_payload, REVIEW_CANDIDATE_DECISIONS_JSON)
     refreshed_candidates = refresh_review_candidates(
         seed_entities,

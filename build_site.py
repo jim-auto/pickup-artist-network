@@ -13,6 +13,7 @@ from scraper import (
     load_generated_snapshots,
     load_review_candidate_decisions,
     load_seed_entities,
+    materialize_inferred_social_edges,
     refresh_review_candidates,
     refresh_outputs,
     save_review_candidate_decisions,
@@ -41,9 +42,15 @@ def main() -> None:
     seed_entities = load_seed_entities(SEED_FILE)
     growth_targets_payload = build_growth_targets_payload(seed_entities)
     snapshots = load_all_source_snapshots()
-    graph = build_graph_from_sources(seed_entities, snapshots)
-    refresh_outputs(graph)
     decisions_payload = load_review_candidate_decisions()
+    graph = build_graph_from_sources(seed_entities, snapshots)
+    materialize_inferred_social_edges(
+        graph,
+        seed_entities,
+        load_generated_snapshots(),
+        decisions_payload,
+    )
+    refresh_outputs(graph)
     save_review_candidate_decisions(decisions_payload)
     review_candidates = refresh_review_candidates(
         seed_entities,

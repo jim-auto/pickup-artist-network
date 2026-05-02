@@ -10530,6 +10530,229 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "11goacemenc",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/11goacemenc"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "4meakg",
+    "target": "kimu-himitsu2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kimu__himitsu2 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/4meakg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kimu__himitsu2, kimu__himitsu2'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "4meakg",
+    "target": "kira-pua7",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @キラ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/4meakg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'キラ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "4meakg",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/4meakg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "5sato-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/5sato_pua",
+      "https://note.com/nemunemu_neet"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "5sato-pua",
+    "target": "sato-legend",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @sato_legend への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/5sato_pua",
+      "https://note.com/nemunemu_neet"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@sato_legend, sato_legend'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "aizen-pua",
+    "target": "aizen-puasub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @aizen_puasub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/aizen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@aizen_puasub, aizen_puasub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "aizen-pua",
+    "target": "bossnn-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @bossnn_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/aizen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@bossnn_pua, bossnn_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "aizen-pua",
+    "target": "hancho-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @はんちょう への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/aizen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'はんちょう'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "aizen-pua",
+    "target": "nami-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @nami__pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/aizen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@nami__pua, nami__pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "aizen-puasub",
+    "target": "aizen-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @aizen_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/aizen_puasub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@aizen_pua, aizen_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "akagi-subpua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/akagi_subpua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ale-puapua",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ale_puapua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/anus_asterisk"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "asahi-sao-pua",
+    "target": "ao-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ao_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/asahi_sao_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ao_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ashikaga_street"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "asumi-pua",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/asumi_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "bach-sokuhou",
     "target": "nonchama-pro",
     "type": "profile_mention",
@@ -10541,6 +10764,19 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate bach-sokuhou__nonchama-pro__profile_mention. Original evidence: バッハ福田麻呂@サブ垢 (@bach_sokuhou)\n基本顔見知りのみ。即報や即子、そしてスト関係ないこと呟いていきます。 味噌/のんちゃま一門/2024年8月 5即チャレンジ達成/2024味噌Mスト賞/スト100達成/ Approval note: Public X profile explicitly names this group or lesson."
+  },
+  {
+    "source": "bale-pua",
+    "target": "ststst-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @アシリパ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/bale_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'アシリパ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "beat-pro",
@@ -10556,6 +10792,85 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "bird-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/bird_pua",
+      "https://note.com/fsljk_daisuki/all"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "bluexxxpua",
+    "target": "ao-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @あお への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/bluexxxpua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'あお'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "bossnn-pua",
+    "target": "aizen-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @aizen_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/bossnn_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@aizen_pua, aizen_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "carbii-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/carbii_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chamuranaoto",
+    "target": "pua-co",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_co への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chamuranaoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pua_co, pua_co'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chamuranaoto",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chamuranaoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "chiba-gqn",
     "target": "nanpawars",
     "type": "profile_mention",
@@ -10569,6 +10884,72 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "chiba-gqn",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chiba_gqn",
+      "https://chi-secret.com/links/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "chiroru-pua-main",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @chiroru_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chiroru_pua_"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@chiroru_pua, chiroru_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chiroru-pua-main",
+    "target": "chiroru-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @chiroru_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chiroru_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '@chiroru_pua, chiroru_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chiroru-pua-main",
+    "target": "nonchama-pro",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @のんちゃま への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chiroru_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chiroru-pua-main",
+    "target": "yutty-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @yutty_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chiroru_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@yutty_pua, yutty_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "choppy-nanpa",
     "target": "kgori-0412",
     "type": "profile_mention",
@@ -10580,6 +10961,313 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "cx-lm5",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/cx_lm5"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "daigakusei-pua",
+    "target": "hantenkinoyama",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @hantenkinoyama への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/daigakusei_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@hantenkinoyama, hantenkinoyama'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "daruma-nnp",
+    "target": "gash01nx",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @gash01nx への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/daruma_nnp"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@gash01nx, Gash01NX, gash01nx'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "doraemon-pua",
+    "target": "kei-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @けい への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/doraemon_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "doraemon-pua",
+    "target": "nonchama-pro",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @のんちゃま への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/doraemon_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "dt-moteo",
+    "target": "zero-n2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゼロ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/dt_moteo",
+      "https://lin.ee/VfqEBWS"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "emuchi-pua",
+    "target": "puro-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @puro_nanpa への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/emuchi_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@puro_nanpa, puro_nanpa'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "fami-ver2",
+    "target": "street-fami",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @street_fami への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/fami_ver2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@street_fami, street_Fami, street_fami'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "fami-ver2",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/fami_ver2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "feitan-sub",
+    "target": "tinder-god",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @Tinder_god_2 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Feitan_sub",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@Tinder_god_2, Tinder_god_2, @tinder_god, tinder_god, フェイタン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "foy-jikokensan",
+    "target": "foy-jibunmigaki",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @foy_jibunmigaki への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/foy_jikokensan",
+      "https://note.com/foy_jibunmigaki"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@foy_jibunmigaki, foy_jibunmigaki'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "fuku-third",
+    "target": "fuku-second",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @fuku_second への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/fuku_third"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@fuku_second, fuku_second'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "futaro-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/futaro_pua",
+      "https://www.youtube.com/@user-futaro_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gash01nx",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Gash01NX",
+      "https://note.com/taka815/n/nbe0096a514f6"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gatiikepua",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/gatiikepua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gatiikepua",
+    "target": "simba-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @simba_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/gatiikepua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@simba_pua, Simba_pua, simba_pua, シンバ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "genki-japan",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/genkiforfun",
+      "https://lin.ee/5CvMOtg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gintoki-street",
+    "target": "minigola-street",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @minigola_street への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/gintoki_street",
+      "https://puasupergolazo.hatenablog.com"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@minigola_street, minigola_street'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gintoki-street",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/gintoki_street",
+      "https://puasupergolazo.hatenablog.com"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "goda-pua",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/goda_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "goda-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/goda_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gokun-pua",
+    "target": "kurita-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @栗田 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/GOKUN_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '栗田'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gokun-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/GOKUN_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "gotokyo-shibuya-guide",
@@ -10596,6 +11284,20 @@
     "review_notes": "Approved from review candidate gotokyo-shibuya-guide__shibuya__reference. Original evidence: Shibuya - the epicenter of modern Japanese culture. Approval note: Reviewed from the official GO TOKYO Shibuya guide page."
   },
   {
+    "source": "gotokyo-shibuya-guide",
+    "target": "tokyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @Tokyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Tokyo, tokyo'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "gotokyo-shinjuku-guide",
     "target": "shinjuku",
     "type": "profile_mention",
@@ -10608,6 +11310,423 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate gotokyo-shinjuku-guide__shinjuku__reference. Original evidence: A guide to Shinjuku - things to do and places to go. Approval note: Reviewed from the official GO TOKYO Shinjuku guide page."
+  },
+  {
+    "source": "gotokyo-shinjuku-guide",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "gotokyo-shinjuku-guide",
+    "target": "tokyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @Tokyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://www.gotokyo.org/en/destinations/western-tokyo/shinjuku/index.html",
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Tokyo, tokyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "greed-pua",
+    "target": "greed-pua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @greed_pua_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/greed_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@greed_pua_sub, greed_pua_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "greed-pua-sub",
+    "target": "greed-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @greed_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/greed_pua_sub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@greed_pua, greed_pua, 強欲'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hameyuuuu",
+    "target": "yato-mote",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @夜ト への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hameyuuuu",
+      "https://hameyu.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '夜ト'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanasikikoka",
+    "target": "mendako-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @めんだこ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanasikikoka__"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hancho-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hancho_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanzo-prim",
+    "target": "hanzo-prim-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @hanzo_prim_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanzo_prim",
+      "https://tips.jp/u/hanzo_tips/p/hanzophoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@hanzo_prim_sub, hanzo_prim_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanzo-prim",
+    "target": "otaku-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @オタク への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanzo_prim",
+      "https://tips.jp/u/hanzo_tips/p/hanzophoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'オタク'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanzo-prim-sub",
+    "target": "hanzo-prim",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @hanzo_prim への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanzo_prim_sub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@hanzo_prim, hanzo_prim'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "happy0210h",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/happy0210h"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hase3nox",
+    "target": "mendako-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @めんだこ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hase3nox"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "utaa-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @うた への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/himotenohoshi",
+      "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'うた'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "inpsub",
+    "target": "ryepua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ryepua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/inpsub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@ryepua, ryepua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "inumaki-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/inumaki_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "jaws-girlhunter",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/jaws_girlhunter"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kageki-ashura",
+    "target": "mote-ren-ai7",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mote_ren_ai7 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kageki_ashura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mote_ren_ai7, mote_ren_ai7'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kageki-ashura",
+    "target": "shinjukuashura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @shinjukuashura への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kageki_ashura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@shinjukuashura, ShinjukuAshura, shinjukuashura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kaiser-pua",
+    "target": "mendako-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mendako_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kaiser_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mendako_pua, mendako_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/karearitaberu",
+      "https://querie.me/user/karearitaberu"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kayakkupua",
+    "target": "kayakkupuasub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kayakkupuasub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kayakkupua",
+      "https://tips.jp/s/u1BTeX"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kayakkupuasub, kayakkupuasub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kayakkupuasub",
+    "target": "kayakkupua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kayakkupua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kayakkupuasub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kayakkupua, kayakkupua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kazama-player",
+    "target": "kazama-0425",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kazama_0425 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kazama_player"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kazama_0425, kazama_0425'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "kazunanpa2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kazunanpa2 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kazunanpa2, kazunanpa2'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "yutty-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @yutty_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kazunanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@yutty_pua, yutty_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kazunanpa2",
+    "target": "kazunanpa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kazunanpa への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kazunanpa2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kazunanpa, kazunanpa'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kei-male-apex",
+    "target": "kei-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @けい への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kei_male_apex",
+      "https://note.com/kei_nanpa/n/naf8692d6b748"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kei-male-apex",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kei_male_apex",
+      "https://note.com/kei_nanpa/n/naf8692d6b748"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kei-pua",
+    "target": "eb6lx",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @eb6lx への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kei__pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@eb6lx, eb6lx'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kgori-0412",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kgori_0412",
+      "https://line.me/R/ti/p/@080uuzcs"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kibaaaana",
+    "target": "idiot-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @aaa への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kibaaaana",
+      "https://note.com/kibana1031/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'aaa'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "kibaaaana",
@@ -10624,6 +11743,45 @@
     "review_notes": "Approved from review candidate kibaaaana__nonchama-pro__profile_mention. Original evidence: キバナ👃@味噌 (@kibaaaana)\n味噌/二代目mスト部部長/mスト部vs🌵部\"最多即\"🐙M6時間4即/厚底を軸にした脳死ローラー/22年116即23年93即24年32即/290即over/#のんちゃま一門/界隈21.4〜/ほぼ引退\nLocation: 味噌 Approval note: Public X profile explicitly names this group or lesson."
   },
   {
+    "source": "kimu-himitsu2",
+    "target": "4meakg",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @4meakg への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kimu__himitsu2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@4meakg, 4meakg'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kimu-himitsu2",
+    "target": "like-himitsu",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @like_himitsu への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kimu__himitsu2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@like_himitsu, like_himitsu'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kimu-himitsu2",
+    "target": "ziyuunotsubasa1",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ziyuunotsubasa1 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kimu__himitsu2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@ziyuunotsubasa1, ziyuunotsubasa1'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "kiri-stomach",
     "target": "nrtq5ihqepycy0n",
     "type": "profile_mention",
@@ -10635,6 +11793,46 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "kiri-stomach",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/KiriStomach"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "komanyan28",
+    "target": "kira-pua7",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @キラ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/komanyan28"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'キラ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "rui0808-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ルイ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/konkatsu_nanpa",
+      "https://note.com/konkatsu_nanpa/n/n6ee667f7e4af"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ルイ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "korilla-pua",
@@ -10651,6 +11849,348 @@
     "review_notes": "Approved from review candidate korilla-pua__puro-nampa__profile_mention. Original evidence: こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️ Approval note: Public X profile explicitly names this group or lesson."
   },
   {
+    "source": "kurita-pua",
+    "target": "sub-kurita",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @sub_kurita への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kurita_pua",
+      "https://note.com/kurita_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@sub_kurita, sub_kurita'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kuroiwa-45",
+    "target": "kuroiwa-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kuroiwa_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kuroiwa_45",
+      "https://lin.ee/IgaxiPU"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kuroiwa_sub, kuroiwa_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kuroiwa-45",
+    "target": "otaku-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @オタク への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kuroiwa_45",
+      "https://lin.ee/IgaxiPU"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'オタク'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kuroiwa-sub",
+    "target": "kuroiwa-45",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kuroiwa_45 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kuroiwa_sub",
+      "https://lin.ee/qRqCwRO"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kuroiwa_45, kuroiwa_45'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kurosakikun",
+    "target": "k-932654",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @k_932654 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kurosakikun___",
+      "https://x.gd/8fT5D"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@k_932654, K_932654, k_932654'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "lillard-motetai",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/lillard_motetai"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "machapua3",
+    "target": "xcandee",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @_xCandee への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/machapua3",
+      "https://marshmallow-qa.com/r5y03fqthla6396?t=tVNE7G&utm_medium=url_text&utm_source=promotion"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@_xCandee, _xCandee, xcandee'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mamemame-nanpa",
+    "target": "motemaga-japan",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @motemagajapan への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mamemame_nanpa",
+      "https://kuro-mame.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@motemagajapan, motemagajapan'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mamemame-nanpa",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mamemame_nanpa",
+      "https://kuro-mame.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "marifax-pua",
+    "target": "pochama-tuwaou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ポチャマ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/marifax_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "maruoooon-pua",
+    "target": "gureran-m",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @gureran_m への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/maruoooon_pua",
+      "https://togetter.com/li/2108689"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@gureran_m, gureran_m'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mentaikopua_oji"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mikeymikey0601",
+    "target": "mikeynosub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mikeynosub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mikeymikey0601",
+      "https://lin.ee/ycpXuaJ"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mikeynosub, mikeynosub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mikeynosub",
+    "target": "mikeymikey0601",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mikeymikey0601 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mikeynosub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mikeymikey0601, mikeymikey0601'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mikky-motecoach",
+    "target": "mky-match",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mky_match への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mikky_motecoach",
+      "https://note.com/mickey_11/n/n609a94027cc2?sub_rt=share_pw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mky_match, mky_match'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "minorun-ceo",
+    "target": "syahudearu",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @syahudearu への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/minorun_ceo",
+      "https://note.com/preview/nb259f9784320?prev_access_key=cbbf71f392b0a8c7887fde6930ace3be"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@syahudearu, syahudearu'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "miraitinder4545",
+    "target": "miraitinder6969",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @miraitinder6969 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/miraitinder4545"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@miraitinder6969, miraitinder6969, みらい🚂'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "miraitinder6969",
+    "target": "miraitinder4545",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @miraitinder4545 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/miraitinder6969",
+      "https://note.com/future1919"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@miraitinder4545, miraitinder4545'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mky-match",
+    "target": "mikky-motecoach",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mikky_motecoach への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mky_match",
+      "https://note.com/mickey_11/n/n609a94027cc2?sub_rt=share_pw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mikky_motecoach, mikky_motecoach, みっきー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "molmol-1919",
+    "target": "tenma-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @天馬 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/molmol1919",
+      "https://note.com/molmol1919/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '天馬'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "mikky-motecoach",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mikky_motecoach への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_hair00"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mikky_motecoach, mikky_motecoach'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_hair00"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "kageki-ashura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kageki_ashura への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kageki_ashura, kageki_ashura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "shinjukuashura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @shinjukuashura への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@shinjukuashura, ShinjukuAshura, shinjukuashura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "motezoh-biz",
+    "target": "chikio-nmp",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @chikio_nmp への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/motezoh_biz"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@chikio_nmp, chikio_NMP, chikio_nmp, もてゾウ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "na-tu-sb",
     "target": "natu-douga",
     "type": "profile_mention",
@@ -10662,6 +12202,34 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "na-tu-sb",
+    "target": "nsan-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @なつ。 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/na__tu__sb",
+      "https://lit.link/na__tu__"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'なつ。'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nami-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nami__pua",
+      "https://tips.jp/u/nami__pua/a/namihei"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "nampa-girl",
@@ -10677,6 +12245,580 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "nampa-mimato",
+    "target": "mina-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @みな への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa_mimato"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'みな'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa-poke",
+    "target": "pua-poke",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_poke への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa_poke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pua_poke, pua_poke'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa-poke",
+    "target": "yuu-renai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゆう への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa_poke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa-urajirou",
+    "target": "real-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ナンパ次郎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa_urajirou"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ナンパ次郎'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa1998",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa1998"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa1998",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa1998"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampakago",
+    "target": "ryosuke-street2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ryosuke_street2 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampakago"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@ryosuke_street2, ryosuke_street2, 涼介'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "namuskun",
+    "target": "namusubkun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @namusubkun への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/namuskun",
+      "https://note.com/namuskun"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@namusubkun, namusubkun, namusub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "namusubkun",
+    "target": "namuskun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @namuskun への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/namusubkun"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@namuskun, namuskun'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nandeyanen-pua",
+    "target": "kurita-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @栗田 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nandeyanen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '栗田'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nandeyanen-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nandeyanen_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpa-obiwan",
+    "target": "obiwan-beauty",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @obiwan_beauty への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpa_ObiWan",
+      "https://x.com/obiwan_beauty?s=21&t=LQfXSUO18x4ZN-RWu5dO3g"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'obiwan_beauty'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpa-obiwan",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpa_ObiWan",
+      "https://x.com/obiwan_beauty?s=21&t=LQfXSUO18x4ZN-RWu5dO3g"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpa-pegasasu",
+    "target": "pg-yoasobi",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @PEGA への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpa_pegasasu",
+      "https://lin.ee/rhmTUgv"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'PEGA'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpahamehame",
+    "target": "lonely-stonan",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @イーブラ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Nanpahamehame"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'イーブラ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpaoh-yuya",
+    "target": "yuu-renai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゆう への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpaoh_yuya"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpasd",
+    "target": "yuki100-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゆき への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpasd",
+      "https://lit.link/nanpads"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆき'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "netonan99",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/netonan99",
+      "https://note.com/momonga_tinder/n/n51fd3eebf8cd"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "netonan99",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/netonan99",
+      "https://note.com/momonga_tinder/n/n51fd3eebf8cd"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "niko-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Niko_PUA",
+      "https://note.com/niko_pua/n/n6a75de450249"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nmpst913",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nmpst913"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nonchama-pro",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nonchama0721",
+      "https://note.mu/nonchama_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nsan-pua",
+    "target": "kaiser-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kaiser_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nsan_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kaiser_pua, kaiser_pua, KAISER'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nsan-pua",
+    "target": "mendako-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mendako_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nsan_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mendako_pua, mendako_pua, めんだこ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nsan-pua",
+    "target": "na-tu-sb",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @なつ。 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nsan_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'なつ。'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "onizuka-pua",
+    "target": "kurosakikun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @黒崎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/onizuka_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "oppsex1919",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/oppsex1919"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "osaka-kakuue",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/osaka_kakuue"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "otaku-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/otaku_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "otaku-pua",
+    "target": "qh0kum",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @qh0kum への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/otaku_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@qh0kum, qh0kum'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "otaku-pua",
+    "target": "taku-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @taku_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/otaku_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'taku_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "outlook-sabo4",
+    "target": "outlook-sub4",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @outlook_sub_4 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/outlook_sabo_4",
+      "https://tips.jp/u/damjwptgmjdtapjg/a/aD3kfbSl/d/dac"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@outlook_sub_4, outlook_sub_4'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "outlook-sub4",
+    "target": "outlook-sabo4",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @outlook_sabo_4 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/outlook_sub_4"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@outlook_sabo_4, outlook_sabo_4'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "paxnpa123",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/paxnpa123"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pg-yoasobi",
+    "target": "nanpa-pegasasu",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @nanpa_pegasasu への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pg_yoasobi"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@nanpa_pegasasu, nanpa_pegasasu'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pika-pua",
+    "target": "pika-stochi",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pika_stochi への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pika_pua",
+      "https://note.com/taku__lol/n/n64664fb8fb30"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pika_stochi, pika_stochi'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pika-pua",
+    "target": "pika-sublol",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pika_sublol への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pika_pua",
+      "https://note.com/taku__lol/n/n64664fb8fb30"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pika_sublol, pika_sublol'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pika-sublol",
+    "target": "pika-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pika_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pika_sublol",
+      "https://querie.me/user/pika_sublol"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pika_pua, pika_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pochama-izon",
+    "target": "pochama-tuwaou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pochama_tuwaou への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pochama_izon"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pochama_tuwaou, pochama_tuwaou, ポチャマ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pochama-tuwaou",
+    "target": "pochama-izon",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pochama_izon への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pochama_tuwaou",
+      "https://line.me/R/ti/p/@672fcdpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pochama_izon, pochama_izon'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pochama-tuwaou",
+    "target": "zero-n2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゼロ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pochama_tuwaou",
+      "https://line.me/R/ti/p/@672fcdpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "potato-pua",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/potato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-chilll",
+    "target": "eroeromancotin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @eroeromancotin への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_chilll"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@eroeromancotin, eroeromancotin'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "pua-chilll",
     "target": "palace-chilll",
     "type": "profile_mention",
@@ -10688,6 +12830,470 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "pua-chilll",
+    "target": "sub-chilll",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @sub_chilll への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_chilll"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@sub_chilll, sub_chilll'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-co",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_co",
+      "https://note.com/pua_ofline/n/na3d44a9e34b0"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-co",
+    "target": "yk-yamate",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @yk_yamate への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_co",
+      "https://note.com/pua_ofline/n/na3d44a9e34b0"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@yk_yamate, yk_yamate'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-core",
+    "target": "pua-co",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_co への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_core"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '@pua_co, pua_co'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-ishikawa",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_ishikawa",
+      "https://pua-secrets.com/tw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-kei-mh",
+    "target": "kei-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @けい への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/PUA_KEI_MH"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-kei-mh",
+    "target": "pua-kei-sg",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_kei_sg への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/PUA_KEI_MH"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pua_kei_sg, PUA_KEI_SG, pua_kei_sg'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-kei-sg",
+    "target": "kei-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @けい への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/PUA_KEI_SG"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'けい'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-kk",
+    "target": "pua-co",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_co への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_kk_",
+      "https://lin.ee/0OLeoPd"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pua_co, pua_co'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-poke",
+    "target": "nampa-poke",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @nampa_poke への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_poke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@nampa_poke, nampa_poke, ゆうき'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-poke",
+    "target": "yuu-renai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゆう への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_poke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-vinsmoke",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_vinsmoke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-yossy",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_yossy"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/puriketsu_nnp"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "puro-nampa",
+    "target": "emuchi-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @emuchi_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/puro_nanpa",
+      "https://x.com/puro_nanpa/status/1903019724398792956?s=46&t=W4A7y4kFypDhagBE6Lr49g"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@emuchi_pua, emuchi_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "real-nampa",
+    "target": "nampa-urajirou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @nampa_urajirou への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/real_nampa",
+      "https://pont.co/u/nampa_jirou"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@nampa_urajirou, nampa_urajirou'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "reborn-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/reborn_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "recoa-nanpa",
+    "target": "gureran-m",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @gureran_m への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/recoa_nanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@gureran_m, gureran_m'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "resunnme",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/resunnme"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "resunnme",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/resunnme"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "resunnme",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/resunnme"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "riku-pua0801",
+    "target": "riku-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @riku_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/riku_pua0801"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '@riku_pua, riku_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "riokun-pua",
+    "target": "riokun-pua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @riokun_pua_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/riokun_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@riokun_pua_sub, riokun_pua_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "riokun-pua-sub",
+    "target": "riokun-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @riokun_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/riokun_pua_sub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@riokun_pua, riokun_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "roco-neko",
+    "target": "roco-neko-ura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @roco_neko_ura への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/roco_neko_",
+      "https://lin.ee/hsqDCCh"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@roco_neko_ura, roco_neko_ura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "roco-neko-ura",
+    "target": "roco-neko",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @roco_neko_ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/roco_neko_ura"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@roco_neko_, roco_neko_, @roco_neko, roco_neko'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ryepua",
+    "target": "inpsub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @inpsub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ryepua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@inpsub, inpsub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "s-mote-money",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/s_mote_money"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "saikyo-sutoti",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Saikyo_sutoti",
+      "https://lin.ee/9rgyQ68"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "saku-pua",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/saku_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "sato-legend",
+    "target": "5sato-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @5sato_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/sato_legend"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@5sato_pua, 5sato_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "scream-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/scream_pua",
+      "https://querie.me/user/scream_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "seiyoku-genkai",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/seiyoku_genkai"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "seiyoku-genkai",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/seiyoku_genkai"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "senga-pua",
+    "target": "mizuno-qreep",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mizuno_qreep への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/senga_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mizuno_qreep, mizuno_qreep'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "senju-insta",
@@ -10703,6 +13309,48 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "shelly4821",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/shelly4821",
+      "https://lin.ee/7DhyB1L"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "shinjukuashura",
+    "target": "kageki-ashura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kageki_ashura への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ShinjukuAshura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kageki_ashura, kageki_ashura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "shinjukuashura",
+    "target": "mote-ren-ai7",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @mote_ren_ai7 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ShinjukuAshura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@mote_ren_ai7, mote_ren_ai7'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "shinkawa-pua",
     "target": "puro-nampa",
     "type": "profile_mention",
@@ -10714,6 +13362,137 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate shinkawa-pua__puro-nampa__profile_mention. Original evidence: 新川氏🌟@こりらM氏講習 (@shinkawa_pua)\n通算86即（スト21即） #こりらM氏講習\nLocation: 🐙 Approval note: Public X profile explicitly names this group or lesson."
+  },
+  {
+    "source": "simba-pua",
+    "target": "gatiikepua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @gatiikepua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Simba_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@gatiikepua, gatiikepua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "simba-pua",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Simba_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "siofkn-pua",
+    "target": "outlook-sabo4",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @outlook_sabo_4 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/siofkn_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@outlook_sabo_4, outlook_sabo_4'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "slice-pua",
+    "target": "rice-bread-1",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ライス への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/slice_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ライス'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "slinky-pua",
+    "target": "bantan-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @bantan_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/slinky_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@bantan_pua, bantan_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "slinky-pua",
+    "target": "molmol-1919",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @molmol1919 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/slinky_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@molmol1919, molmol1919'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "so-pua",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/so_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "soku-worker2",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/soku_worker2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "srs-pua-main",
+    "target": "srs-pua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @srs_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/srs_pua_"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@srs_pua, srs_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "street-fami",
+    "target": "fami-ver2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @fami_ver2 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/street_Fami",
+      "https://note.com/faminanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@fami_ver2, fami_ver2'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "street-fami",
@@ -10730,6 +13509,20 @@
     "review_notes": "Approved from review candidate street-fami__nonchama-pro__profile_mention. Original evidence: ファミチキ🍗弾丸即マシン (@street_Fami)\n味噌mスト部/弾丸即マシン/通算400over/無敵のトーク×無敵の人/21年65get/22年170get/23年99get/24年45get/#のんちゃま一門/プライベートと即報→@fami_ver2\nLocation: 味噌m Approval note: Public X profile explicitly names this group or lesson."
   },
   {
+    "source": "street-fami",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/street_Fami",
+      "https://note.com/faminanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "street-win-pua",
     "target": "nonchama-pro",
     "type": "profile_mention",
@@ -10741,6 +13534,167 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate street-win-pua__nonchama-pro__profile_mention. Original evidence: 死ぬまでヤッ太郎(故win)@のんちゃま一門 (@street_win_pua)\nスト値上げ部 部長\nLocation: level 69/100🐙 Approval note: Public X profile explicitly names this group or lesson."
+  },
+  {
+    "source": "streets-bach",
+    "target": "bach-sokuhou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @bach_sokuhou への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/streets_bach",
+      "https://note.com/streets_bach/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@bach_sokuhou, bach_sokuhou'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "streets-bach",
+    "target": "nonchama-pro",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @のんちゃま への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/streets_bach",
+      "https://note.com/streets_bach/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'のんちゃま'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "sub-chilll",
+    "target": "palace-chilll",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @palace_chilll への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/sub_chilll"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@palace_chilll, palace_chilll'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "sub-riddle",
+    "target": "tomu-riddle",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tomu_riddle への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/sub_riddle"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tomu_riddle, tomu_riddle'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "suto-taro",
+    "target": "kurosakikun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @黒崎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/suto_taro"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "suzuniki-pua",
+    "target": "s-mote-money",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @s_mote_money への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/suzuniki_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@s_mote_money, s_mote_money'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "syahudearu",
+    "target": "minorun-ceo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @minorun_ceo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/syahudearu",
+      "https://note.com/preview/nb259f9784320?prev_access_key=cbbf71f392b0a8c7887fde6930ace3be"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@minorun_ceo, minorun_ceo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "syu-puanet",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/syu_puanet"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "taku-pua",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @#東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/taku__pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '#東京ストナン会, 東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tantan-pua",
+    "target": "tantan-ura",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tantan_ura__ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tantan_pua_",
+      "https://lin.ee/WiyTSo1"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tantan_ura__, tantan_ura__, @tantan_ura, tantan_ura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tantan-ura",
+    "target": "tantan-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tantan_pua_ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tantan_ura__"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tantan_pua_, tantan_pua_, @tantan_pua, tantan_pua, しおたん'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "task-pua",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/task_pua",
+      "https://note.com/notes"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "tatsuyoshibokki",
@@ -10756,6 +13710,86 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "tensai-nanpa4",
+    "target": "pua-shin",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tensai_nanpa4"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tinder-god",
+    "target": "feitan-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @Feitan_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Tinder_god_2",
+      "https://tips.jp/u/Tinder_god/a/0lYtZhbE"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Feitan_sub, feitan_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tinder109",
+    "target": "hachi-tinder02",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @hachi_tinder02 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tinder109",
+      "https://lin.ee/NeVry4Q"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@hachi_tinder02, hachi_tinder02'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "to-suto-tore",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/to_suto_tore"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tomo-pua11",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tomo_pua11"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tomu-riddle",
+    "target": "sub-riddle",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @sub_riddle への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tomu_riddle"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@sub_riddle, sub_riddle'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "tyopa-pua",
     "target": "streetkyo",
     "type": "profile_mention",
@@ -10769,6 +13803,166 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "tyopa-pua",
+    "target": "tyopa-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tyopa_sub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tyopa_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tyopa_sub, tyopa_sub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tyopa-sub",
+    "target": "tyopa-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tyopa_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tyopa_sub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tyopa_pua, tyopa_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "untracemind",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/untracemind",
+      "https://lin.ee/hcRyuCQ"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ururunpua",
+    "target": "puro-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @M氏 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ururunpua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "utaa-pua",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/utaa_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "utaa-pua",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/utaa_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "utopua2",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/utopua2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "utopua2",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/utopua2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "vegeta-street",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/vegeta_street_",
+      "https://note.com/vpua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "weekly-nanpa",
+    "target": "kira-pua7",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @キラ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/weekly_nanpa",
+      "https://note.com/nantech"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'キラ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "west-pua",
+    "target": "pochama-tuwaou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ポチャマ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/west_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "xcandee",
+    "target": "elsta",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @えるスタ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/_xCandee",
+      "https://lin.ee/xnKdLzN"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'えるスタ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "xcandee",
     "target": "machapua3",
     "type": "profile_mention",
@@ -10780,5 +13974,165 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "xcandee",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/_xCandee",
+      "https://lin.ee/xnKdLzN"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yayaya-zyakudan",
+    "target": "pochama-tuwaou",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ポチャマ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yayaya_zyakudan"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yk-yamate",
+    "target": "bangedaisuki",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @bangedaisuki への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yk_yamate",
+      "https://lin.ee/y407OT7"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@bangedaisuki, bangedaisuki'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yk-yamate",
+    "target": "pua-co",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @pua_co への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yk_yamate",
+      "https://lin.ee/y407OT7"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@pua_co, pua_co'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yk-yamate",
+    "target": "tokyo-stonan-kai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @東京ストナン会 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yk_yamate",
+      "https://lin.ee/y407OT7"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yolu-pua",
+    "target": "yolusub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @yolusub への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yolu_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@yolusub, yolusub'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yuta-pua",
+    "target": "utaa-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @うた への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yuta__pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'うた'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yuta-pua",
+    "target": "yuu-renai",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゆう への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yuta__pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆう'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yutayuta-pua",
+    "target": "yuta-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @yuta_pua への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/yutayuta_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'yuta_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "zenitsu-tinder",
+    "target": "omamco-pua2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @える への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/zenitsu_tinder"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'える'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "zero-pua",
+    "target": "zero-n2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゼロ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/zero_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "zushi-tokyo",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/zushi_tokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
   }
 ]

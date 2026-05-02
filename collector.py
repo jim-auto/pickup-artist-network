@@ -321,7 +321,7 @@ def load_x_profile_sources(
                 "url": source_url,
                 "label": str(entry.get("label", "x profile")).strip(),
                 "pinned_post_url": pinned_post_url,
-                "collect_following": bool(entry.get("collect_following", False)),
+                "collect_following": bool(entry.get("collect_following", True)),
                 "following_limit": int(entry.get("following_limit", DEFAULT_FOLLOWING_LIMIT)),
             }
         )
