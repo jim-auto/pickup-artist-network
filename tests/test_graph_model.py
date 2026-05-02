@@ -254,6 +254,8 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('fetch(path, { cache: "no-store" })', html)
         self.assertIn("graph-data.json", html)
         self.assertIn("siteAssetUrl", html)
+        self.assertIn('.join("\\n")', html)
+
         self.assertIn('id="cluster-mode"', html)
         self.assertIn('id="keyword-cluster-picker"', html)
         self.assertIn('id="keyword-cluster-select"', html)

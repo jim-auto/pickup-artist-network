@@ -2465,7 +2465,7 @@ def render_html(
           },
           title: [node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`), node.description || ""]
             .filter((value) => value)
-            .join("\n")
+            .join("\\n")
         }))
       );
 
