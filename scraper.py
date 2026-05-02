@@ -61,7 +61,9 @@ REAL_GROWTH_PHASES = (
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
 X_STYLE_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{3,15}$")
-DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset({"profile_mention"})
+DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset(
+    {"profile_mention", "activity", "collaboration", "influence"}
+)
 LEGACY_EDGE_TYPES = frozenset({"reference"})
 FOLLOW_REFERENCE_PREFIX = "authenticated x following list shows this account follows @"
 
@@ -1226,7 +1228,7 @@ def materialize_inferred_social_edges(
     *,
     edge_types: frozenset[str] | None = None,
 ) -> int:
-    """生成スナップショットの文本から推定した profile_mention を既定でグラフに載せる。
+    """生成スナップショットの文本から推定したソーシャル候補を既定でグラフに載せる。
 
     follow エッジはコレクタのフォロー一覧観測（既定で収集）由来。
     """
@@ -1242,10 +1244,28 @@ def materialize_inferred_social_edges(
         if cand.get("type") not in chosen:
             continue
         matched = str(cand.get("matched_text", "")).strip()
+        ctype = str(cand.get("type", "")).strip()
         display_match = matched if matched.startswith("@") else (f"@{matched}" if matched else "?")
-        description = (
-            f"公開プロフィール・概要・固定ポストの文本から {display_match} への言及として推定（自動）。"
-        )
+        if ctype == "profile_mention":
+            description = (
+                f"公開プロフィール・概要・固定ポストの文本から {display_match} への言及として推定（自動）。"
+            )
+        elif ctype == "activity":
+            description = (
+                f"公開プロフィール等の文本に活動地域・フィールドとして「{matched}」の言及があるとして推定（自動）。"
+            )
+        elif ctype == "collaboration":
+            description = (
+                f"公開文本から共演・協業・合同表現（一致語: {matched}）に基づく交流として推定（自動）。"
+            )
+        elif ctype == "influence":
+            description = (
+                f"公開文本から師匠・参考・影響表明（一致語: {matched}）に基づく関係として推定（自動）。"
+            )
+        else:
+            description = (
+                f"公開文本から {ctype} 関係（一致: {matched}）として推定（自動）。"
+            )
         try:
             add_edge(
                 graph,

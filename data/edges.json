@@ -1,5 +1,57 @@
 [
   {
+    "source": "1tensaipua1",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/1tensaipua1"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "4meakg",
+    "target": "nagoya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「名古屋」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/4meakg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '名古屋'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "4meakg",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/4meakg"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ale-puapua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「Tokyo」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ale_puapua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Tokyo, tokyo'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "anshin-pua",
     "target": "kansai",
     "type": "activity",
@@ -11,6 +63,72 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "asahilove77",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/asahilove77"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「新宿区」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ashikaga_street"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '新宿区, 新宿'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ashikaga_street"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "asumi-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/asumi_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/atannon_nampa",
+      "https://note.com/peben/n/n020d213fe82e"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "beat-pro",
@@ -52,6 +170,114 @@
     "review_notes": "Approved from review candidate beat-pro__shinjuku__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
+    "source": "betty-boopua",
+    "target": "kansai",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関西」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Betty_boopua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "bird-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/bird_pua",
+      "https://note.com/fsljk_daisuki/all"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "boc-125",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/boc_125"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "chamuranaoto",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/chamuranaoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "daruma-nnp",
+    "target": "kanto",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関東」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/daruma_nnp"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '関東'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "dogma-pua666",
+    "target": "kansai",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関西」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/dogmapua666",
+      "https://singlebed666.hatenablog.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "dogma-pua666",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/dogmapua666",
+      "https://singlebed666.hatenablog.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "dogma-pua666",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/dogmapua666",
+      "https://singlebed666.hatenablog.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "feitan-sub",
     "target": "matching-apps",
     "type": "activity",
@@ -66,6 +292,48 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "ffk0772",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/FFk0772",
+      "https://www.youtube.com/@ichijo_rin"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/foy_jibunmigaki",
+      "https://note.com/foy_jibunmigaki"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "fukunaga-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/fukunaga_pua",
+      "https://tips.jp/u/fukunaga/a/tapple_love"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "gamupua",
     "target": "osaka",
     "type": "activity",
@@ -77,6 +345,20 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "gash01nx",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Gash01NX",
+      "https://note.com/taka815/n/nbe0096a514f6"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "genki-japan",
@@ -93,6 +375,293 @@
     "review_notes": "Approved from review candidate genki-japan__london__activity. Approval note: Explicitly stated in the public X profile bio."
   },
   {
+    "source": "hameyuuuu",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/hameyuuuu",
+      "https://hameyu.com/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ, マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanzo-prim",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanzo_prim",
+      "https://tips.jp/u/hanzo_tips/p/hanzophoto"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hanzo-prim-sub",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/hanzo_prim_sub"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "harper-0512",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/harper0512",
+      "https://line.me/ti/g2/WTYDOSvVIUEkqD7xO8RDVY_iqezfaInVSEMELg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Hayato_pua",
+      "https://note.com/hayato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「渋谷」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Hayato_pua",
+      "https://note.com/hayato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '渋谷'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Hayato_pua",
+      "https://note.com/hayato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/himotenohoshi",
+      "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/himotenohoshi",
+      "https://brain-market.com/u/takuya078934/a/bzgDO1IjMgoTZsNWa0JXY"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "jaws-girlhunter",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/jaws_girlhunter"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kageki-ashura",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「@shinjuku」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kageki_ashura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@shinjuku, Shinjuku, shinjuku'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kanbee-pua",
+    "target": "kanto",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関東」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kanbee_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関東'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kawae0021",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kawae0021",
+      "https://youtube.com/@kawaeirenai?si=yaW95nl1nI-ZY-_d"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kazama-0425",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kazama_0425"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "komanyan28",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/komanyan28"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "korilla-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/korilla_pua",
+      "https://tips.jp/s/a15OMM"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kuroiwa-45",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kuroiwa_45",
+      "https://lin.ee/IgaxiPU"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kurosaka-pua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「Osaka」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kurosaka_pua",
+      "https://www.youtube.com/@kurosaka_pua_with_you"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Osaka, osaka'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kurosakikun",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kurosakikun___",
+      "https://x.gd/8fT5D"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "liberty-pai",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/liberty_pai"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mabonasu-pua",
+    "target": "nagoya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「Nagoya」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mabonasu_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'Nagoya, nagoya'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "matchingmomonga",
     "target": "matching-apps",
     "type": "activity",
@@ -106,6 +675,126 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "mendako-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mendako_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「渋谷」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mentaikopua_oji"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '渋谷'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "minato-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/minato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "miraitinder6969",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/miraitinder6969",
+      "https://note.com/future1919"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mky-match",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mky_match",
+      "https://note.com/mickey_11/n/n609a94027cc2?sub_rt=share_pw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「渋谷区」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_hair00"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '渋谷区, 渋谷'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_hair00"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「@shinjuku」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@shinjuku, Shinjuku, shinjuku'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "motebody-pua",
+    "target": "kanto",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関東」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/motebody_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '関東'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "nagasanpua",
     "target": "kansai",
     "type": "activity",
@@ -117,6 +806,223 @@
     "evidence_kind": "mixed",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "nagasanpua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nagasanpua",
+      "http://nagasanpua.hatenablog.com"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nami-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nami__pua",
+      "https://tips.jp/u/nami__pua/a/namihei"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampa1998",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampa1998"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nampakago",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nampakago"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpa-pegasasu",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpa_pegasasu",
+      "https://lin.ee/rhmTUgv"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "nanpawars",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「新宿」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/nanpawars",
+      "https://note.com/sn_wars245/n/n67d31f822ced"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '新宿'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "ikebukuro",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「池袋」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/naruto_nanpa",
+      "https://iruka000nanpa.blog.fc2.com/blog-entry-1.html"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '池袋'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "shibuya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「渋谷」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/naruto_nanpa",
+      "https://iruka000nanpa.blog.fc2.com/blog-entry-1.html"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '渋谷'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「新宿」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/naruto_nanpa",
+      "https://iruka000nanpa.blog.fc2.com/blog-entry-1.html"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '新宿'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "netonan99",
+    "target": "kansai",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関西」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/netonan99",
+      "https://note.com/momonga_tinder/n/n51fd3eebf8cd"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "netonan99",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/netonan99",
+      "https://note.com/momonga_tinder/n/n51fd3eebf8cd"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "onizuka-pua",
+    "target": "kansai",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関西」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/onizuka_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "osaka-kakuue",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「@osaka」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/osaka_kakuue"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '@osaka, Osaka, osaka'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "paaman-pua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/paaman_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "palace-chilll",
+    "target": "kansai",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「関西」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/palace_chilll"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '関西'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "palace-chilll",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/palace_chilll"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "pika-pua",
@@ -159,6 +1065,60 @@
     "review_notes": "Approved from review candidate play-shibuya__shibuya__activity. Original evidence: \"PLAY! DIVERSITY SHIBUYA\" Shibuya Tourism Association The Shibuya Tourism Association aims to realize Shibuya as an \"International Cultural Tourism City\" through the promotion of tourism. Approval note: Reviewed from the official tourism association page."
   },
   {
+    "source": "potato-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/potato_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-co",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_co",
+      "https://note.com/pua_ofline/n/na3d44a9e34b0"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-ishikawa",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京都」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_ishikawa",
+      "https://pua-secrets.com/tw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京都, 東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "pua-vinsmoke",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/pua_vinsmoke"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "pua-yossy",
     "target": "machida",
     "type": "activity",
@@ -170,6 +1130,86 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate pua-yossy__machida__activity. Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/puriketsu_nnp"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "qrxt-a",
+    "target": "nagoya",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「名古屋」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/qrxt_a",
+      "https://www.youtube.com/watch?v=4mrcNJmXW0c&t=9s"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '名古屋'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "right-pua",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/right_pua_"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "saku-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/saku_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "sen-xxv",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/sen_xxv",
+      "https://utage-system.com/page/jeJd23Euy5qi"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "senga-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/senga_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "shelly4821",
@@ -185,6 +1225,20 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "source": "shinjuku",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京都」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/shinjuku_info",
+      "https://www.city.shinjuku.lg.jp/"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京都, 東京'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "shinjuku-visitors",
     "target": "shinjuku",
     "type": "activity",
@@ -196,6 +1250,74 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate shinjuku-visitors__shinjuku__activity. Original evidence: Shinjuku Convention & Visitors Bureau Welcome to Shinjuku !! Approval note: Reviewed from the official visitors bureau page."
+  },
+  {
+    "source": "shinjukuashura",
+    "target": "shinjuku",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「@shinjuku」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ShinjukuAshura",
+      "https://s.lmes.jp/landing-qr/2002174017-8K5bzBro?uLand=ZLkojw"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '@shinjuku, Shinjuku, shinjuku'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "shouri-ikb",
+    "target": "ikebukuro",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「池袋」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/shouri_ikb",
+      "https://tips.jp/s/We0xNx"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '池袋'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "simba-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/Simba_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "so-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/so_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "suisei-nanpa",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/suiseinanpa",
+      "https://lin.ee/WZEzkfS"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "suzuniki-pua",
@@ -224,6 +1346,74 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "takenaka-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/takenaka__pua",
+      "https://note.com/lucky_tern262"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "taku-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/taku__pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "task-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/task_pua",
+      "https://note.com/notes"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tenma-pua",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/tenma_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tinder-ban",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/tinder_ban",
+      "https://tips.jp/u/tinder_ban"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "tinder-god",
     "target": "matching-apps",
     "type": "activity",
@@ -238,6 +1428,32 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "to-suto-tore",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/to_suto_tore"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tomu-riddle",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/tomu_riddle"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "toushirou-app",
     "target": "matching-apps",
     "type": "activity",
@@ -249,6 +1465,19 @@
     "evidence_kind": "mixed",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "ura-aka-nanpa",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ura_aka_nanpa"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "vo-nampa",
@@ -318,6 +1547,74 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate yabuki-nampa__shinjuku__activity. Approval note: Explicitly stated in the public X profile bio."
+  },
+  {
+    "source": "yato-mote",
+    "target": "osaka",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「大阪」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/yato_mote",
+      "http://tk0011blog.com/p/r/abZ55vm5"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '大阪'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yato-mote",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/yato_mote",
+      "http://tk0011blog.com/p/r/abZ55vm5"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "yk-yamate",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「東京」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/yk_yamate",
+      "https://lin.ee/y407OT7"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "zero-n2",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/zero_N2"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "zushi-tokyo",
+    "target": "tokyo",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「Tokyo」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/zushi_tokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Tokyo, tokyo'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "11goacemenc",
@@ -10179,6 +11476,20 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "source": "gotokyo-shibuya-guide",
+    "target": "streetkyo",
+    "type": "collaboration",
+    "description": "公開文本から共演・協業・合同表現（一致語: kyo）に基づく交流として推定（自動）。",
+    "source_urls": [
+      "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+      "https://twitter.com/share?url=https://www.gotokyo.org/en/&text=The%20Official%20Tokyo%20Guide&hashtags=gotokyo"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "yk-yamate",
     "target": "bangedaisuki",
     "type": "collaboration",
@@ -10255,6 +11566,20 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "source": "chomechome-pua",
+    "target": "rockpua-sub",
+    "type": "influence",
+    "description": "公開文本から師匠・参考・影響表明（一致語: リー）に基づく関係として推定（自動）。",
+    "source_urls": [
+      "https://x.com/chomechome_pua",
+      "https://note.com/chome_chome1919"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "doraemon-pua",
@@ -11905,6 +13230,20 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@kuroiwa_45, kuroiwa_45'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "kurosaka-pua",
+    "target": "kurosaka-pua-wi",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kurosaka_pua_with_you への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/kurosaka_pua",
+      "https://www.youtube.com/@kurosaka_pua_with_you"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kurosaka_pua_with_you, @kurosaka_pua_wi, kurosaka_pua_wi'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "kurosakikun",
     "target": "k-932654",
     "type": "profile_mention",
@@ -13440,6 +14779,19 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@molmol1919, molmol1919'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "slinky-pua",
+    "target": "yukishiro-yuki",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @Yukishiro_yuki_ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/slinky_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@Yukishiro_yuki_, Yukishiro_yuki_, @yukishiro_yuki, yukishiro_yuki'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "so-pua",

@@ -1940,7 +1940,8 @@
     "type": "person",
     "name": "かわえi",
     "aliases": [
-      "kawae0021"
+      "kawae0021",
+      "kawaeirenai"
     ],
     "description": "元非モテ高卒工場勤務でも、経験人数500人、最高月収2132万円、note5000部販売、全主要マッチングアプリ1000マッチ以上、コンサル生は1000人以上",
     "icon_url": "https://pbs.twimg.com/profile_images/1384318378039332864/morTCkvL_400x400.jpg",
@@ -7356,7 +7357,8 @@
     "type": "person",
     "name": "一条りん@会話刺しのプロ",
     "aliases": [
-      "FFk0772"
+      "FFk0772",
+      "ichijo_rin"
     ],
     "description": "マチアプ運用✖️女性攻略｜ 経験人数300人超えI元非モテ→美女を選べる男に｜ 女性に選ばれるトークスクリプト、リアルな女性攻略の様子をお届け（🍎、🍐、🗼🍛、🔥攻略済み）｜ Tiktokもやってます！長期コンサルはDMまで 下の公式ラインからもどうぞ↓",
     "icon_url": "https://pbs.twimg.com/profile_images/2040438110945935361/EO97K_e0_400x400.jpg",
@@ -7627,6 +7629,23 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "soshi-mote-pua",
+    "type": "person",
+    "name": "創士（モテPUA）",
+    "aliases": [
+      "soshi_mote_pua"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "id": "tatsuyoshibokki",
@@ -9206,6 +9225,23 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "id": "yukishiro-yuki",
+    "type": "person",
+    "name": "雪代ゆき",
+    "aliases": [
+      "Yukishiro_yuki_"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "nanpasireiji",
     "type": "person",
     "name": "零時レイ＠モテの法則",
@@ -9554,6 +9590,24 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+  },
+  {
+    "id": "kurosaka-pua-wi",
+    "type": "person",
+    "name": "黒坂PUA With You",
+    "aliases": [
+      "kurosaka_pua_wi",
+      "kurosaka_pua_with_you"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
   },
   {
     "id": "kuroiwa-45",
