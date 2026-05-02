@@ -539,8 +539,8 @@
     "aliases": [
       "dd_mote"
     ],
-    "description": "アラサー. 人間関係と恋愛のマイナスをゼロにし、人としてモテるようになるまでを綴るアカウント.",
-    "icon_url": "https://pbs.twimg.com/profile_images/2015732159403720704/mPfaVRtn_400x400.jpg",
+    "description": "X profile for @dd_mote.",
+    "icon_url": "",
     "source_urls": [
       "manual://seed",
       "https://x.com/dd_mote"
@@ -548,7 +548,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Profile fetch failed during this run, so the snapshot fell back to the configured X URL and preserved minimal account metadata. HTTPSConnectionPool(host='x.com', port=443): Max retries exceeded with url: /dd_mote (Caused by NameResolutionError(\"HTTPSConnection(host='x.com', port=443): Failed to resolve 'x.… Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
     "id": "garp-pua",
@@ -3971,6 +3971,24 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "bangedaisuki",
+    "type": "person",
+    "name": "よぶんが（Y&K）",
+    "aliases": [
+      "bangedaisuki"
+    ],
+    "description": "Seed entity placeholder. Replace with public-source-backed details.",
+    "icon_url": "",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bangedaisuki"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": ""
+  },
+  {
     "id": "liberty-pai",
     "type": "person",
     "name": "らいりー",
@@ -4673,6 +4691,25 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/kahlo_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "gash01nx",
+    "type": "person",
+    "name": "ガッシュ｜すべての社会人に、モテを。",
+    "aliases": [
+      "Gash01NX"
+    ],
+    "description": "人生激変するほど女遊びフルコミした無能リーマン｜小4から女にイジメられて育つ→約30年間バキ童生活→中星一番に弟子入り→1日18時間ナンパ&女口説きに没頭→東京○○女医、ソープ嬢のヒモ→恋愛コンプ解消｜【社会人限定】恋愛コミュ運営(289名)｜ナンパ指導実績(604名)",
+    "icon_url": "https://pbs.twimg.com/profile_images/1970423368462802948/6mRIFL4o_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Gash01NX",
+      "https://note.com/taka815/n/nbe0096a514f6"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -7921,6 +7958,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Missing X auth state file: data\\.x_auth_state.json. Provide --cookie-file or create auth state first."
   },
   {
+    "id": "yk-yamate",
+    "type": "person",
+    "name": "山手キッズ【Y&K】",
+    "aliases": [
+      "yk_yamate"
+    ],
+    "description": "ナンパ界隈のトップを目指す現場コンビ「よぶんが(@bangedaisuki)&コナン(@pua_co)」の実況垢 | NNKK×東京ストナン会の動きも発信します",
+    "icon_url": "https://pbs.twimg.com/profile_images/1948465040895737856/zX4nicDs_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yk_yamate",
+      "https://lin.ee/y407OT7"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "id": "greed-pua",
     "type": "person",
     "name": "強欲",
@@ -8154,6 +8210,24 @@
       "manual://seed",
       "https://x.com/yuuuu_renai",
       "https://lin.ee/iNEc0rw"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "seiya-np",
+    "type": "person",
+    "name": "星矢",
+    "aliases": [
+      "seiya_np"
+    ],
+    "description": "ナンパ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1080426629543878656/e4uRCU3g_400x400.jpg",
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/seiya_np"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",

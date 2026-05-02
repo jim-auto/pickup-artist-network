@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T06:04:47+00:00",
+  "generated_at": "2026-05-02T07:01:55+00:00",
   "candidates": [
     {
       "id": "11goacemenc__rockpua-sub__profile_mention",
@@ -693,7 +693,7 @@
       "matched_texts": [
         "東京"
       ],
-      "evidence_text": "ニア（エンジニア）🥺MNPナソパ師 (@boc_125)\n177/22🦏メンコン ┃界隈入り無所属┃2021.03.28 童貞/------カラオケ刺し🎤得意です →カイザー対面値7/飯店さん対面値6↑ スト49(即3準0) | ネト38（🔥18他） 万垢地下💰/スト高キャバ/スト高ガルバ/風嬢/←彼女化済 現カノ無し\nLocation: 東京 台東区",
+      "evidence_text": "ニア🥺MNPナソパ師 (@boc_125)\n177/22🦏メンコン ┃界隈入り無所属┃2021.03.28 童貞/------カラオケ刺し🎤得意です →カイザー対面値7/飯店さん対面値6↑ スト49(即3準0) | ネト38（🔥18他） 万垢地下💰/スト高キャバ/スト高ガルバ/風嬢/←彼女化済 現カノ無し\nLocation: 東京 台東区",
       "source_urls": [
         "https://x.com/boc_125"
       ],
@@ -990,26 +990,26 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '関東'. This is review-only and not part of the canonical graph."
     },
     {
-      "id": "dd-mote__zero-n2__profile_mention",
-      "source": "dd-mote",
-      "target": "zero-n2",
+      "id": "daruma-nnp__gash01nx__profile_mention",
+      "source": "daruma-nnp",
+      "target": "gash01nx",
       "type": "profile_mention",
       "basis": "summary, profile_text",
       "bases": [
         "summary",
         "profile_text"
       ],
-      "matched_text": "ゼロ",
+      "matched_text": "Gash01NX",
       "matched_texts": [
-        "ゼロ"
+        "Gash01NX"
       ],
-      "evidence_text": "DD (@dd_mote)\nアラサー. 人間関係と恋愛のマイナスをゼロにし、人としてモテるようになるまでを綴るアカウント.",
+      "evidence_text": "達磨（ダルマ） (@daruma_nnp)\n工場勤務のコミュ障限界社会人｜ガッシュ長期歴代No.1（@Gash01NXさん公認）｜誠実系ナンパをこよなく愛してます。田舎によくいます。ナンパやデートの日常を発信。\nLocation: 北関東",
       "source_urls": [
-        "https://x.com/dd_mote"
+        "https://x.com/daruma_nnp"
       ],
       "confidence": 0.4,
       "needs_review": true,
-      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'Gash01NX'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "dogma-pua666__kansai__activity",
@@ -1364,6 +1364,52 @@
       "source_urls": [
         "https://x.com/futaro_pua",
         "https://www.youtube.com/@user-futaro_pua"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "gash01nx__tokyo__activity",
+      "source": "gash01nx",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "東京",
+      "matched_texts": [
+        "東京"
+      ],
+      "evidence_text": "ガッシュ｜すべての社会人に、モテを。 (@Gash01NX)\n人生激変するほど女遊びフルコミした無能リーマン｜小4から女にイジメられて育つ→約30年間バキ童生活→中星一番に弟子入り→1日18時間ナンパ&女口説きに没頭→東京○○女医、ソープ嬢のヒモ→恋愛コンプ解消｜【社会人限定】恋愛コミュ運営(289名)｜ナンパ指導実績(604名)\nLocation: 👇声掛け1発目から美女のLINEをゲットする方法",
+      "source_urls": [
+        "https://x.com/Gash01NX",
+        "https://note.com/taka815/n/nbe0096a514f6"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "gash01nx__rockpua-sub__profile_mention",
+      "source": "gash01nx",
+      "target": "rockpua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "リー",
+      "matched_texts": [
+        "リー"
+      ],
+      "evidence_text": "ガッシュ｜すべての社会人に、モテを。 (@Gash01NX)\n人生激変するほど女遊びフルコミした無能リーマン｜小4から女にイジメられて育つ→約30年間バキ童生活→中星一番に弟子入り→1日18時間ナンパ&女口説きに没頭→東京○○女医、ソープ嬢のヒモ→恋愛コンプ解消｜【社会人限定】恋愛コミュ運営(289名)｜ナンパ指導実績(604名)\nLocation: 👇声掛け1発目から美女のLINEをゲットする方法",
+      "source_urls": [
+        "https://x.com/Gash01NX",
+        "https://note.com/taka815/n/nbe0096a514f6"
       ],
       "confidence": 0.4,
       "needs_review": true,
@@ -5101,6 +5147,29 @@
       "review_notes": "Generated review candidate consolidated from profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
     },
     {
+      "id": "pua-co__yk-yamate__profile_mention",
+      "source": "pua-co",
+      "target": "yk-yamate",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "yk_yamate",
+      "matched_texts": [
+        "yk_yamate"
+      ],
+      "evidence_text": "こなんぱん┃24hいつでも現場合流 (@pua_co)\n【歴4年】【300即⤴︎】【逮捕歴2回】24h現場に即駆け付け🙆🏻 | 無職化させて結果出させるのが得意 | 2025年即った駅数界隈No.1 | 相方よぶんがとの共同垢→@yk_yamate 準即対決2pt差で勝利✌🏻\nLocation: RiseUpLabや東京ストナン会🍞の案内→",
+      "source_urls": [
+        "https://x.com/pua_co",
+        "https://note.com/pua_ofline/n/na3d44a9e34b0"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'yk_yamate'. This is review-only and not part of the canonical graph."
+    },
+    {
       "id": "pua-core__pua-co__profile_mention",
       "source": "pua-core",
       "target": "pua-co",
@@ -7363,6 +7432,98 @@
       "confidence": 0.4,
       "needs_review": true,
       "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ポチャマ'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yk-yamate__tokyo__activity",
+      "source": "yk-yamate",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "東京",
+      "matched_texts": [
+        "東京"
+      ],
+      "evidence_text": "山手キッズ【Y&K】 (@yk_yamate)\nナンパ界隈のトップを目指す現場コンビ「よぶんが(@bangedaisuki)&コナン(@pua_co)」の実況垢 | NNKK×東京ストナン会の動きも発信します\nLocation: よぶんが式orコナン式の特典受け取りはこちら▷▶",
+      "source_urls": [
+        "https://x.com/yk_yamate",
+        "https://lin.ee/y407OT7"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yk-yamate__bangedaisuki__profile_mention",
+      "source": "yk-yamate",
+      "target": "bangedaisuki",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "bangedaisuki",
+      "matched_texts": [
+        "bangedaisuki"
+      ],
+      "evidence_text": "山手キッズ【Y&K】 (@yk_yamate)\nナンパ界隈のトップを目指す現場コンビ「よぶんが(@bangedaisuki)&コナン(@pua_co)」の実況垢 | NNKK×東京ストナン会の動きも発信します\nLocation: よぶんが式orコナン式の特典受け取りはこちら▷▶",
+      "source_urls": [
+        "https://x.com/yk_yamate",
+        "https://lin.ee/y407OT7"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'bangedaisuki'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yk-yamate__pua-co__profile_mention",
+      "source": "yk-yamate",
+      "target": "pua-co",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "pua_co",
+      "matched_texts": [
+        "pua_co"
+      ],
+      "evidence_text": "山手キッズ【Y&K】 (@yk_yamate)\nナンパ界隈のトップを目指す現場コンビ「よぶんが(@bangedaisuki)&コナン(@pua_co)」の実況垢 | NNKK×東京ストナン会の動きも発信します\nLocation: よぶんが式orコナン式の特典受け取りはこちら▷▶",
+      "source_urls": [
+        "https://x.com/yk_yamate",
+        "https://lin.ee/y407OT7"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'pua_co'. This is review-only and not part of the canonical graph."
+    },
+    {
+      "id": "yk-yamate__tokyo-stonan-kai__profile_mention",
+      "source": "yk-yamate",
+      "target": "tokyo-stonan-kai",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "bases": [
+        "summary",
+        "profile_text"
+      ],
+      "matched_text": "東京ストナン会",
+      "matched_texts": [
+        "東京ストナン会"
+      ],
+      "evidence_text": "山手キッズ【Y&K】 (@yk_yamate)\nナンパ界隈のトップを目指す現場コンビ「よぶんが(@bangedaisuki)&コナン(@pua_co)」の実況垢 | NNKK×東京ストナン会の動きも発信します\nLocation: よぶんが式orコナン式の特典受け取りはこちら▷▶",
+      "source_urls": [
+        "https://x.com/yk_yamate",
+        "https://lin.ee/y407OT7"
+      ],
+      "confidence": 0.4,
+      "needs_review": true,
+      "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京ストナン会'. This is review-only and not part of the canonical graph."
     },
     {
       "id": "yolu-pua__yolusub__profile_mention",

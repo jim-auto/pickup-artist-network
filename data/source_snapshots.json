@@ -3092,5 +3092,51 @@
       }
     ],
     "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "yk-yamate",
+    "profile_url": "https://x.com/yk_yamate",
+    "observations": [
+      {
+        "target": "tokyo-stonan-kai",
+        "type": "affiliation",
+        "description": "Public X profile says this relay account covers NNKK and Tokyo Stonan-kai field activity.",
+        "source_urls": [
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.8,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "pua-co",
+        "type": "collaboration",
+        "description": "Public X profile describes this account as the joint activity feed for a street duo that includes @pua_co.",
+        "source_urls": [
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false
+      },
+      {
+        "target": "bangedaisuki",
+        "type": "collaboration",
+        "description": "Public X profile pairs @yk_yamate with @bangedaisuki as the two halves of the same Y&K street duo (よぶんが side).",
+        "source_urls": [
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.76,
+        "evidence_kind": "fact",
+        "needs_review": false
+      }
+    ],
+    "snapshot_origin": "manual"
+  },
+  {
+    "account_id": "bangedaisuki",
+    "profile_url": "https://x.com/bangedaisuki",
+    "observations": [],
+    "snapshot_origin": "manual"
   }
 ]
