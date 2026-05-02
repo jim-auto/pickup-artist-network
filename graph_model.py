@@ -39,7 +39,7 @@ CLUSTER_MODE_DEFINITIONS = {
     },
     "keyword_group": {
         "label": "キーワードでまとめる",
-        "description": "MBH や セクシーコマンドー、ピカ講習、アツスト など、公開プロフィールのキーワードでまとめます。",
+        "description": "MBH や セクシーコマンドー、ピカ講習、いわし長期、アツスト など、公開プロフィールのキーワードでまとめます。",
         "min_size": 2,
     },
 }
@@ -101,6 +101,7 @@ KEYWORD_CLUSTER_RULES = (
         "priority": 97,
     },
     {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
+    {"id": "iwashi_longterm", "label": "いわし長期", "patterns": ("いわし長期",), "priority": 95},
     {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
     {
         "id": "tokyo_stonan_kai",
@@ -1690,7 +1691,7 @@ def render_html(
       content: "コンテンツ"
     };
     const edgeTypeLabels = {
-      influence: "影響",
+      influence: "師弟・講習",
       affiliation: "所属・関係",
       collaboration: "交流・コラボ",
       criticism: "批判・対立",
