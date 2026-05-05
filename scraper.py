@@ -62,7 +62,7 @@ REAL_GROWTH_PHASES = (
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
 X_STYLE_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{3,15}$")
 DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset(
-    {"profile_mention", "activity", "collaboration", "influence"}
+    {"profile_mention", "activity", "collaboration", "influence", "affiliation"}
 )
 LEGACY_EDGE_TYPES = frozenset({"reference"})
 FOLLOW_REFERENCE_PREFIX = "authenticated x following list shows this account follows @"
@@ -1290,6 +1290,84 @@ def materialize_inferred_social_edges(
             if str(exc).startswith("Duplicate edge"):
                 continue
             raise
+    return added
+
+
+def infer_keyword_cluster_edges(graph: GraphData) -> int:
+    """キーワードクラスタ内で、既に共通隣接ノードを持つが未接続の人物ペアにaffiliation edgeを追加する。"""
+    from graph_model import KEYWORD_CLUSTER_RULES
+
+    person_nodes = [node for node in graph.nodes if node.type == "person"]
+    node_text_map: dict[str, str] = {}
+    for node in person_nodes:
+        node_text_map[node.id] = " ".join(
+            [node.id, node.name, node.description, *node.aliases]
+        ).casefold()
+
+    existing_pairs: set[tuple[str, str]] = set()
+    for edge in graph.edges:
+        if edge.source in node_text_map and edge.target in node_text_map:
+            existing_pairs.add((edge.source, edge.target))
+            existing_pairs.add((edge.target, edge.source))
+
+    adjacency: dict[str, set[str]] = {}
+    for node_id in node_text_map:
+        adjacency[node_id] = set()
+    for pair in existing_pairs:
+        adjacency[pair[0]].add(pair[1])
+
+    cluster_members: dict[str, list[str]] = {}
+    for rule in KEYWORD_CLUSTER_RULES:
+        rule_id = str(rule["id"])
+        member_ids: list[str] = []
+        for node_id, text in node_text_map.items():
+            for pattern in rule["patterns"]:
+                if str(pattern).casefold() in text:
+                    member_ids.append(node_id)
+                    break
+        if len(member_ids) >= 3:
+            cluster_members[rule_id] = member_ids
+
+    added = 0
+    for rule_id, member_ids in cluster_members.items():
+        rule_label = rule_id
+        for rule in KEYWORD_CLUSTER_RULES:
+            if str(rule["id"]) == rule_id:
+                rule_label = str(rule.get("label", rule_id))
+                break
+        for i in range(len(member_ids)):
+            for j in range(i + 1, len(member_ids)):
+                source_id = member_ids[i]
+                target_id = member_ids[j]
+                pair = (source_id, target_id)
+                if pair in existing_pairs:
+                    continue
+                shared = adjacency[source_id] & adjacency[target_id]
+                if not shared:
+                    continue
+                try:
+                    add_edge(
+                        graph,
+                        {
+                            "source": source_id,
+                            "target": target_id,
+                            "type": "affiliation",
+                            "description": (
+                                f"キーワードクラスタ「{rule_label}」に属し、共通のつながりが"
+                                f" {len(shared)} 件あるため同クラスタ関係として推定（自動）。"
+                            ),
+                            "confidence": 0.32,
+                            "evidence_kind": "interpretation",
+                            "needs_review": True,
+                            "review_notes": (
+                                f"Keyword cluster '{rule_label}' auto-edge. "
+                                f"Shared neighbors: {len(shared)}."
+                            ),
+                        },
+                    )
+                    added += 1
+                except ValueError:
+                    continue
     return added
 
 

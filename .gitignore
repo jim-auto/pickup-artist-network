@@ -3,3 +3,7 @@ __pycache__/
 .venv/
 *.pyc
 data/.x_auth_state.json
+data/.x_cookies.json
+data/.x_login_ready
+data/stealth-*.png
+build_run.log

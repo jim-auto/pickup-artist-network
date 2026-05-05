@@ -22,7 +22,16 @@ SEED_FILE = Path("seed_entities.txt")
 X_AUTH_STATE_FILE = Path("data/.x_auth_state.json")
 X_COOKIE_FILE = Path("data/.x_cookies.json")
 DEFAULT_TIMEOUT = 20
-DEFAULT_MAX_LINKS = 12
+
+
+def resolve_x_cookie_file(cookie_file_path: Path | None) -> Path | None:
+    """Use explicit cookie JSON when passed; else fall back to data/.x_cookies.json if present."""
+    if cookie_file_path is not None:
+        return cookie_file_path
+    if X_COOKIE_FILE.exists():
+        return X_COOKIE_FILE
+    return None
+DEFAULT_MAX_LINKS = 48
 DEFAULT_DENY_URL_KEYWORDS = (
     "login",
     "signup",
@@ -49,7 +58,7 @@ X_STATUS_URL_RE = re.compile(
 MAX_SUMMARY_CHARS = 180
 MAX_PROFILE_TEXT_CHARS = 420
 MAX_PROFILE_TEXT_LINES = 3
-DEFAULT_FOLLOWING_LIMIT = 40
+DEFAULT_FOLLOWING_LIMIT = 120
 X_RESERVED_PATH_SEGMENTS = {
     "about",
     "account",
@@ -329,6 +338,32 @@ def load_x_profile_sources(
 
 
 def fetch_page(url: str, timeout: int = DEFAULT_TIMEOUT) -> tuple[bytes, str]:
+    """Fetch HTML bytes; prefer Scrapling (TLS mimic + stealth headers), fall back to requests."""
+    try:
+        from scrapling.fetchers import Fetcher
+    except ImportError:
+        Fetcher = None  # type: ignore[assignment,misc]
+
+    if Fetcher is not None:
+        try:
+            page = Fetcher.get(
+                url,
+                timeout=timeout,
+                impersonate="chrome",
+                stealthy_headers=True,
+            )
+            status = int(getattr(page, "status", 200) or 200)
+            if status >= 400:
+                raise requests.HTTPError(f"{status} Client Error for url: {getattr(page, 'url', url)}")
+            body = page.body
+            if not isinstance(body, bytes):
+                body = bytes(body)
+            return body, str(page.url)
+        except requests.RequestException:
+            raise
+        except Exception:
+            pass
+
     response = requests.get(
         url,
         timeout=timeout,
@@ -421,7 +456,35 @@ def extract_x_following_handles_from_hrefs(
     return handles
 
 
-def login_x_and_save_auth_state(auth_state_path: Path = X_AUTH_STATE_FILE) -> Path:
+def _wait_after_manual_x_login(ready_file: Path | None) -> None:
+    if ready_file is None:
+        input()
+        return
+    ready_path = ready_file.resolve()
+    ready_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        ready_path.unlink()
+    except FileNotFoundError:
+        pass
+    print("=" * 60)
+    print("X login browser opened.")
+    print("Log in in the browser, then create this file to save auth state:")
+    print(f"  {ready_path}")
+    print("Example (PowerShell):  New-Item -ItemType File -Path .\\data\\.x_login_ready -Force")
+    print("=" * 60)
+    while not ready_path.exists():
+        time.sleep(0.5)
+    try:
+        ready_path.unlink()
+    except OSError:
+        pass
+
+
+def login_x_and_save_auth_state(
+    auth_state_path: Path = X_AUTH_STATE_FILE,
+    *,
+    ready_file: Path | None = None,
+) -> Path:
     try:
         from playwright.sync_api import sync_playwright
     except ImportError as exc:
@@ -433,11 +496,12 @@ def login_x_and_save_auth_state(auth_state_path: Path = X_AUTH_STATE_FILE) -> Pa
         context = browser.new_context()
         page = context.new_page()
         page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
-        print("=" * 60)
-        print("X login browser opened.")
-        print("Log in in the browser, then press Enter here to save auth state.")
-        print("=" * 60)
-        input()
+        if ready_file is None:
+            print("=" * 60)
+            print("X login browser opened.")
+            print("Log in in the browser, then press Enter here to save auth state.")
+            print("=" * 60)
+        _wait_after_manual_x_login(ready_file)
         page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
         time.sleep(2)
         if "login" in page.url.casefold():
@@ -1054,6 +1118,8 @@ def collect_snapshots(
     sources: list[dict[str, object]],
     timeout: int = DEFAULT_TIMEOUT,
     continue_on_error: bool = True,
+    *,
+    max_links_override: int | None = None,
 ) -> list[dict[str, object]]:
     snapshots: list[dict[str, object]] = []
     for source in sources:
@@ -1064,6 +1130,9 @@ def collect_snapshots(
                 raise
             print(f"[WARN] skipped {source['url']}: {exc}")
             continue
+        max_links = int(source.get("max_links", DEFAULT_MAX_LINKS))
+        if max_links_override is not None:
+            max_links = max(1, max_links_override)
         snapshots.append(
             extract_snapshot_from_html(
                 str(source["account_id"]),
@@ -1071,7 +1140,7 @@ def collect_snapshots(
                 html,
                 label=str(source.get("label", "")),
                 fetched_url=fetched_url,
-                max_links=int(source.get("max_links", DEFAULT_MAX_LINKS)),
+                max_links=max_links,
                 allowed_platforms=[
                     str(value) for value in source.get("allowed_platforms", [])
                 ],
@@ -1089,6 +1158,8 @@ def collect_x_profile_snapshots(
     continue_on_error: bool = True,
     auth_state_path: Path = X_AUTH_STATE_FILE,
     cookie_file_path: Path | None = None,
+    *,
+    following_limit_override: int | None = None,
 ) -> list[dict[str, object]]:
     snapshots: list[dict[str, object]] = []
     handle_to_account_id = {
@@ -1127,11 +1198,14 @@ def collect_x_profile_snapshots(
                 print(f"[WARN] skipped pinned post {pinned_post_url}: {exc}")
         if bool(source.get("collect_following", False)):
             try:
+                following_limit = int(source.get("following_limit", DEFAULT_FOLLOWING_LIMIT))
+                if following_limit_override is not None:
+                    following_limit = max(1, following_limit_override)
                 followed_handles, following_url = collect_authenticated_following_handles(
                     str(source["url"]),
                     auth_state_path=auth_state_path,
                     cookie_file_path=cookie_file_path,
-                    limit=max(1, int(source.get("following_limit", DEFAULT_FOLLOWING_LIMIT))),
+                    limit=following_limit,
                 )
                 following_observations = build_following_observations(
                     str(source["account_id"]),
@@ -1284,22 +1358,32 @@ def collect_to_file(
     continue_on_error: bool = True,
     auth_state_path: Path = X_AUTH_STATE_FILE,
     cookie_file_path: Path | None = None,
+    *,
+    max_links_override: int | None = None,
+    following_limit_override: int | None = None,
+    public_pages_only: bool = False,
 ) -> list[dict[str, object]]:
+    cookie_file_path = resolve_x_cookie_file(cookie_file_path)
     existing_snapshots = load_existing_generated_snapshots(output_path)
     sources = load_collector_sources(config_path)
     public_snapshots = collect_snapshots(
         sources,
         timeout=timeout,
         continue_on_error=continue_on_error,
+        max_links_override=max_links_override,
     )
     x_profile_sources = load_x_profile_sources(x_profile_config_path)
-    x_profile_snapshots = collect_x_profile_snapshots(
-        x_profile_sources,
-        timeout=timeout,
-        continue_on_error=continue_on_error,
-        auth_state_path=auth_state_path,
-        cookie_file_path=cookie_file_path,
-    )
+    if public_pages_only:
+        x_profile_snapshots: list[dict[str, object]] = []
+    else:
+        x_profile_snapshots = collect_x_profile_snapshots(
+            x_profile_sources,
+            timeout=timeout,
+            continue_on_error=continue_on_error,
+            auth_state_path=auth_state_path,
+            cookie_file_path=cookie_file_path,
+            following_limit_override=following_limit_override,
+        )
     configured_account_ids = {
         *[str(source["account_id"]) for source in sources],
         *[str(source["account_id"]) for source in x_profile_sources],
@@ -1362,6 +1446,16 @@ def main() -> None:
         help="Use TWITTER_USERNAME / TWITTER_PASSWORD to log in automatically and save local auth state.",
     )
     parser.add_argument(
+        "--login-x-ready-file",
+        type=Path,
+        default=None,
+        metavar="PATH",
+        help=(
+            "With --login-x only: after logging in in the browser, create this file to continue "
+            "(avoids typing Enter in this terminal; file is removed after use)."
+        ),
+    )
+    parser.add_argument(
         "--auth-state",
         type=Path,
         default=X_AUTH_STATE_FILE,
@@ -1379,10 +1473,39 @@ def main() -> None:
         default=None,
         help="Optional Selenium-style cookie JSON used for authenticated following collection when auth state is missing.",
     )
+    parser.add_argument(
+        "--max-links",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Override max distinct platform links captured per public-page snapshot "
+            f"(config default is {DEFAULT_MAX_LINKS} unless each source sets max_links)."
+        ),
+    )
+    parser.add_argument(
+        "--following-limit",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Override how many X following accounts to read per profile when authenticated "
+            f"(config default is {DEFAULT_FOLLOWING_LIMIT} unless each source sets following_limit)."
+        ),
+    )
+    parser.add_argument(
+        "--public-pages-only",
+        action="store_true",
+        help="Skip X profile HTTP collection; refresh public-page snapshots only and preserve existing X snapshots.",
+    )
     args = parser.parse_args()
+    args.cookie_file = resolve_x_cookie_file(args.cookie_file)
 
     if args.login_x:
-        saved_path = login_x_and_save_auth_state(args.auth_state)
+        saved_path = login_x_and_save_auth_state(
+            args.auth_state,
+            ready_file=args.login_x_ready_file,
+        )
         print(f"[OK] saved X auth state -> {saved_path}")
         return
     if args.login_x_auto:
@@ -1398,6 +1521,9 @@ def main() -> None:
         continue_on_error=not args.strict,
         auth_state_path=args.auth_state,
         cookie_file_path=args.cookie_file,
+        max_links_override=args.max_links,
+        following_limit_override=args.following_limit,
+        public_pages_only=args.public_pages_only,
     )
     print(
         f"[OK] collected {len(snapshots)} generated snapshots -> {args.output}"

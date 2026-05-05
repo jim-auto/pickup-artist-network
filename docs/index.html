@@ -151,7 +151,7 @@
       background: #f9fbff;
     }
     #network {
-      height: 620px;
+      height: 720px;
       border: 1px solid var(--border);
       border-radius: 12px;
       background: #fff;
@@ -352,7 +352,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-02 07:27 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-04 07:00 UTC。</p>
       </div>
     </div>
   </header>
@@ -361,7 +361,7 @@
       <h2>実データ成長目標</h2>
       <p class="muted">公開プロフィールと公式ページを手動優先で整理しながら、実在人物の関係グラフを段階的に広げています。</p>
       <section class="stats">
-        <div class="stat"><span class="muted">実在人物</span><strong>515 / 1000</strong></div>
+        <div class="stat"><span class="muted">実在人物</span><strong>1007 / 1000</strong></div>
         <div class="stat"><span class="muted">第1段階</span><strong>20</strong></div><div class="stat"><span class="muted">第2段階</span><strong>50</strong></div><div class="stat"><span class="muted">第3段階</span><strong>100</strong></div><div class="stat"><span class="muted">第4段階</span><strong>200</strong></div><div class="stat"><span class="muted">第5段階</span><strong>500</strong></div><div class="stat"><span class="muted">第6段階</span><strong>1000</strong></div>
       </section>
       <div class="table-wrap">
@@ -374,7 +374,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><strong>人物</strong></td><td>515</td><td>1000</td></tr><tr><td><strong>コミュニティ</strong></td><td>5</td><td>8 - 12</td></tr><tr><td><strong>コンテンツ</strong></td><td>3</td><td>12 - 18</td></tr><tr><td><strong>場所</strong></td><td>13</td><td>8 - 14</td></tr><tr><td><strong>媒体</strong></td><td>7</td><td>6 - 8</td></tr>
+            <tr><td><strong>人物</strong></td><td>1007</td><td>1000</td></tr><tr><td><strong>コミュニティ</strong></td><td>7</td><td>8 - 12</td></tr><tr><td><strong>コンテンツ</strong></td><td>3</td><td>12 - 18</td></tr><tr><td><strong>場所</strong></td><td>13</td><td>8 - 14</td></tr><tr><td><strong>媒体</strong></td><td>7</td><td>6 - 8</td></tr>
           </tbody>
         </table>
       </div>
@@ -645,6 +645,14 @@
       location: "#f39c12",
       content: "#d14d72"
     };
+    const clusterColors = [
+      "#e74c3c", "#e67e22", "#f1c40f", "#2ecc71", "#1abc9c",
+      "#3498db", "#9b59b6", "#e91e63", "#00bcd4", "#ff5722",
+      "#795548", "#607d8b", "#8bc34a", "#ff9800", "#03a9f4",
+      "#673ab7", "#cddc39", "#ffc107", "#009688", "#ff6f00",
+      "#d32f2f", "#c2185b", "#7b1fa2", "#512da8", "#303f9f",
+      "#1976d2", "#0288d1", "#0097a7", "#00796b", "#388e3c"
+    ];
     const nodeTypeLabels = {
       person: "人物",
       community: "コミュニティ",
@@ -1301,7 +1309,12 @@
         }
         bucketMap.get(clusterId).push(node);
       });
-      bucketMap.forEach((members, clusterId) => {
+      const clusterIdsInOrder = Array.from(bucketMap.entries())
+        .filter(([, members]) => members.length >= 3)
+        .sort(([, left], [, right]) => right.length - left.length)
+        .map(([clusterId]) => clusterId);
+      clusterIdsInOrder.forEach((clusterId, idx) => {
+        const members = bucketMap.get(clusterId);
         if (members.length < 3) {
           return;
         }
@@ -1311,6 +1324,16 @@
         const clusterNodeId = getClusterNodeId(clusterId);
         const clusterInfo = modePayload.clusters?.[clusterId] || {};
         const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
+        const clusterColor = clusterColors[idx % clusterColors.length];
+        const topMembers = members
+          .slice(0, 4)
+          .map((node) => node.name)
+          .join(", ");
+        const titleText = [
+          clusterInfo.title || `${clusterInfo.label || definition.label} (${members.length})`,
+          topMembers + (members.length > 4 ? ` ほか ${members.length - 4} 件` : "")
+        ].join("
+");
         network.cluster({
           joinCondition(nodeOptions) {
             return memberIds.has(nodeOptions.id);
@@ -1320,13 +1343,14 @@
             label: clusterInfo.label || `${definition.label} (${members.length})`,
             group: dominantType,
             value: 18 + members.length,
-            shape: "dot",
+            shape: "hexagon",
             color: {
-              background: nodeColors[dominantType] || "#64748b",
+              background: clusterColor,
               border: "#ffffff",
-              highlight: { background: nodeColors[dominantType] || "#64748b", border: "#111827" }
+              highlight: { background: clusterColor, border: "#111827" }
             },
-            title: clusterInfo.title || `${definition.label}: ${members.length} 件`
+            title: titleText,
+            font: { size: 15, bold: true }
           }
         });
         activeClusterIds.add(clusterNodeId);

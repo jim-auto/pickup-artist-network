@@ -77,12 +77,14 @@ RELATION_PATTERN_CONTEXT_WEIGHTS = {
 }
 CLUSTER_PRUNE_CONFIG = {
     "connectivity": {
-        "min_weight": 1.25,
-        "max_neighbors": 6,
+        # Slightly more permissive weak-edge cut so Louvain sees enough structure without star-dominated graphs.
+        "min_weight": 1.18,
+        "max_neighbors": 7,
     },
     "relation_pattern": {
-        "min_weight": 1.55,
-        "max_neighbors": 5,
+        # Keep fewer strongest ties per node so pattern-based communities stay interpretable.
+        "min_weight": 1.48,
+        "max_neighbors": 6,
     },
 }
 KEYWORD_CLUSTER_RULES = (
@@ -126,8 +128,24 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "pochama", "label": "ポチャマ", "patterns": ("ポチャマ", "pochama"), "priority": 84},
     {"id": "golazo", "label": "ゴラッソ長期", "patterns": ("ゴラッソ長期", "ゴラッソ"), "priority": 83},
     {"id": "next", "label": "ネクステ", "patterns": ("ネクステ",), "priority": 80},
+    {"id": "teito", "label": "帝都", "patterns": ("帝都",), "priority": 82},
+    {"id": "kurosaki_consult", "label": "黒崎コンサル", "patterns": ("黒崎コンサル",), "priority": 81},
     {"id": "miso", "label": "味噌", "patterns": ("味噌", "みそ"), "priority": 78},
     {"id": "otaku", "label": "オタク", "patterns": ("オタク", "otaku"), "priority": 74},
+    {"id": "rio_lessons", "label": "りお講習", "patterns": ("りお講習",), "priority": 77},
+    {"id": "ssb", "label": "SSB", "patterns": ("SSB", "ssb"), "priority": 76},
+    {"id": "mentaiko", "label": "明太子", "patterns": ("明太子", "mentaiko"), "priority": 75},
+    {"id": "toutaotoko", "label": "淘汰男", "patterns": ("淘汰男",), "priority": 73},
+    {"id": "krt", "label": "KRT", "patterns": ("KRT",), "priority": 72},
+    {"id": "toukare", "label": "東カレ", "patterns": ("東カレ",), "priority": 71},
+    {"id": "rise_up_lab", "label": "RiseUpLab", "patterns": ("RiseUpLab", "rise_up"), "priority": 70},
+    {"id": "nano_lessons", "label": "ナノ講習", "patterns": ("ナノ講習",), "priority": 69},
+    {"id": "sc_ichimon", "label": "SC一門", "patterns": ("SC一門", "sc一門"), "priority": 68},
+    {"id": "onigiri_ichimon", "label": "おにぎり一門", "patterns": ("おにぎり一門",), "priority": 67},
+    {"id": "men_ichimon", "label": "麺平良一門", "patterns": ("麺平良一門",), "priority": 66},
+    {"id": "tokyo_stonan", "label": "ストナン会", "patterns": ("ストナン会",), "priority": 65},
+    {"id": "nst", "label": "NST", "patterns": ("NST",), "priority": 64},
+    {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
 )
 
 
@@ -639,6 +657,57 @@ def _build_account_projection(
     return account_graph, account_contexts
 
 
+def _prune_account_graph_for_clustering(account_graph: Any, mode_key: str) -> Any:
+    """Drop weak ties and cap degree so Louvain sees sharper modules."""
+    import networkx as nx
+
+    cfg = CLUSTER_PRUNE_CONFIG.get(mode_key)
+    if cfg is None:
+        return account_graph
+    min_weight = float(cfg["min_weight"])
+    max_neighbors = int(cfg["max_neighbors"])
+    graph = account_graph.copy()
+    graph.remove_edges_from(
+        [(u, v) for u, v, data in graph.edges(data=True) if float(data.get("weight", 0.0)) < min_weight]
+    )
+    if max_neighbors <= 0:
+        return graph
+
+    def top_neighbor_ids(node_id: str) -> set[str]:
+        neighbors = list(graph.neighbors(node_id))
+        if len(neighbors) <= max_neighbors:
+            return set(neighbors)
+        ranked = sorted(
+            neighbors,
+            key=lambda neighbor_id: float(graph[node_id][neighbor_id].get("weight", 0.0)),
+            reverse=True,
+        )
+        return set(ranked[:max_neighbors])
+
+    removable: list[tuple[str, str]] = []
+    for left_id, right_id in graph.edges():
+        left_keeps_right = right_id in top_neighbor_ids(left_id)
+        right_keeps_left = left_id in top_neighbor_ids(right_id)
+        if not left_keeps_right and not right_keeps_left:
+            removable.append((left_id, right_id))
+    graph.remove_edges_from(removable)
+    return graph
+
+
+def _detect_weighted_communities(account_graph: Any) -> list[set[str]]:
+    """Partition account nodes; deterministic seed for stable HTML exports."""
+    import networkx as nx
+    from networkx.algorithms.community import louvain_communities
+
+    if account_graph.number_of_nodes() == 0:
+        return []
+    if account_graph.number_of_edges() == 0:
+        return [{node_id} for node_id in account_graph.nodes]
+
+    partition = louvain_communities(account_graph, weight="weight", seed=42)
+    return [set(community) for community in partition]
+
+
 def _cluster_context_priority(node_type: str) -> int:
     return {
         "location": 3,
@@ -747,8 +816,6 @@ def _build_keyword_cluster_mode_payload(
 
 
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
-    import networkx as nx
-
     nodes_by_id = {node.id: node for node in graph.nodes}
     payload = {"default_mode": "off", "modes": {}}
 
@@ -757,23 +824,15 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
             payload["modes"][mode_key] = _build_keyword_cluster_mode_payload(graph, definition)
             continue
         account_graph, account_contexts = _build_account_projection(graph, mode_key)
+        clustered_graph = _prune_account_graph_for_clustering(account_graph, mode_key)
         mode_payload = {
             "label": definition["label"],
             "description": definition["description"],
             "assignments": {},
             "clusters": {},
         }
-        if account_graph.number_of_nodes():
-            if account_graph.number_of_edges():
-                communities = [
-                    set(community)
-                    for community in nx.community.greedy_modularity_communities(
-                        account_graph,
-                        weight="weight",
-                    )
-                ]
-            else:
-                communities = [{node_id} for node_id in account_graph.nodes]
+        if clustered_graph.number_of_nodes():
+            communities = _detect_weighted_communities(clustered_graph)
 
             cluster_index = 1
             for community in sorted(communities, key=lambda item: (-len(item), sorted(item))):
@@ -1189,7 +1248,7 @@ def render_html(
       background: #f9fbff;
     }
     #network {
-      height: 620px;
+      height: 720px;
       border: 1px solid var(--border);
       border-radius: 12px;
       background: #fff;
@@ -1683,6 +1742,14 @@ def render_html(
       location: "#f39c12",
       content: "#d14d72"
     };
+    const clusterColors = [
+      "#e74c3c", "#e67e22", "#f1c40f", "#2ecc71", "#1abc9c",
+      "#3498db", "#9b59b6", "#e91e63", "#00bcd4", "#ff5722",
+      "#795548", "#607d8b", "#8bc34a", "#ff9800", "#03a9f4",
+      "#673ab7", "#cddc39", "#ffc107", "#009688", "#ff6f00",
+      "#d32f2f", "#c2185b", "#7b1fa2", "#512da8", "#303f9f",
+      "#1976d2", "#0288d1", "#0097a7", "#00796b", "#388e3c"
+    ];
     const nodeTypeLabels = {
       person: "人物",
       community: "コミュニティ",
@@ -2339,7 +2406,12 @@ def render_html(
         }
         bucketMap.get(clusterId).push(node);
       });
-      bucketMap.forEach((members, clusterId) => {
+      const clusterIdsInOrder = Array.from(bucketMap.entries())
+        .filter(([, members]) => members.length >= 3)
+        .sort(([, left], [, right]) => right.length - left.length)
+        .map(([clusterId]) => clusterId);
+      clusterIdsInOrder.forEach((clusterId, idx) => {
+        const members = bucketMap.get(clusterId);
         if (members.length < 3) {
           return;
         }
@@ -2349,6 +2421,15 @@ def render_html(
         const clusterNodeId = getClusterNodeId(clusterId);
         const clusterInfo = modePayload.clusters?.[clusterId] || {};
         const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
+        const clusterColor = clusterColors[idx % clusterColors.length];
+        const topMembers = members
+          .slice(0, 4)
+          .map((node) => node.name)
+          .join(", ");
+        const titleText = [
+          clusterInfo.title || `${clusterInfo.label || definition.label} (${members.length})`,
+          topMembers + (members.length > 4 ? ` ほか ${members.length - 4} 件` : "")
+        ].join("\n");
         network.cluster({
           joinCondition(nodeOptions) {
             return memberIds.has(nodeOptions.id);
@@ -2358,13 +2439,14 @@ def render_html(
             label: clusterInfo.label || `${definition.label} (${members.length})`,
             group: dominantType,
             value: 18 + members.length,
-            shape: "dot",
+            shape: "hexagon",
             color: {
-              background: nodeColors[dominantType] || "#64748b",
+              background: clusterColor,
               border: "#ffffff",
-              highlight: { background: nodeColors[dominantType] || "#64748b", border: "#111827" }
+              highlight: { background: clusterColor, border: "#111827" }
             },
-            title: clusterInfo.title || `${definition.label}: ${members.length} 件`
+            title: titleText,
+            font: { size: 15, bold: true }
           }
         });
         activeClusterIds.add(clusterNodeId);

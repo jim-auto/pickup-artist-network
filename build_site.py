@@ -2,13 +2,20 @@ from __future__ import annotations
 
 import argparse
 
-from collector import COLLECTOR_CONFIG, X_PROFILE_CONFIG, collect_to_file
+from collector import (
+    COLLECTOR_CONFIG,
+    DEFAULT_FOLLOWING_LIMIT,
+    DEFAULT_MAX_LINKS,
+    X_PROFILE_CONFIG,
+    collect_to_file,
+)
 from graph_model import export_html
 from scraper import (
     GENERATED_SNAPSHOT_FILE,
     SEED_FILE,
     build_graph_from_sources,
     build_growth_targets_payload,
+    infer_keyword_cluster_edges,
     load_all_source_snapshots,
     load_generated_snapshots,
     load_review_candidate_decisions,
@@ -29,6 +36,31 @@ def main() -> None:
         action="store_true",
         help="Skip public-page collection and use existing generated snapshots.",
     )
+    parser.add_argument(
+        "--max-links",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "When collecting: override max distinct platform links per public-page snapshot "
+            f"(omit to use per-source max_links or default {DEFAULT_MAX_LINKS})."
+        ),
+    )
+    parser.add_argument(
+        "--following-limit",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "When collecting: override X following reads per profile when authenticated "
+            f"(omit to use per-source following_limit or default {DEFAULT_FOLLOWING_LIMIT})."
+        ),
+    )
+    parser.add_argument(
+        "--public-pages-only",
+        action="store_true",
+        help="When collecting: skip X profile fetches; only refresh public-page snapshots.",
+    )
     args = parser.parse_args()
 
     if not args.skip_collector and COLLECTOR_CONFIG.exists():
@@ -36,6 +68,9 @@ def main() -> None:
             COLLECTOR_CONFIG,
             X_PROFILE_CONFIG,
             GENERATED_SNAPSHOT_FILE,
+            max_links_override=args.max_links,
+            following_limit_override=args.following_limit,
+            public_pages_only=args.public_pages_only,
         )
         print(f"[OK] collector refreshed {len(collected)} snapshots")
 
@@ -50,6 +85,9 @@ def main() -> None:
         load_generated_snapshots(),
         decisions_payload,
     )
+    cluster_edges_added = infer_keyword_cluster_edges(graph)
+    if cluster_edges_added:
+        print(f"[OK] keyword cluster edges: +{cluster_edges_added}")
     refresh_outputs(graph)
     save_review_candidate_decisions(decisions_payload)
     review_candidates = refresh_review_candidates(
