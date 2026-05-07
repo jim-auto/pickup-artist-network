@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T07:00:20+00:00",
+  "generated_at": "2026-05-07T21:37:51+00:00",
   "nodes": [
     {
       "id": "5sato-pua",
@@ -5170,20 +5170,20 @@
       "pagerank": 0.0007
     },
     {
-      "id": "nsan-pua",
-      "name": "なつ。",
-      "type": "person",
-      "degree_centrality": 0.0048,
-      "betweenness_centrality": 0.0,
-      "pagerank": 0.0009
-    },
-    {
       "id": "na-tu-sb",
       "name": "なつ。",
       "type": "person",
       "degree_centrality": 0.0048,
       "betweenness_centrality": 0.0,
       "pagerank": 0.001
+    },
+    {
+      "id": "nsan-pua",
+      "name": "なつ。",
+      "type": "person",
+      "degree_centrality": 0.0048,
+      "betweenness_centrality": 0.0,
+      "pagerank": 0.0009
     },
     {
       "id": "nampa-girl",

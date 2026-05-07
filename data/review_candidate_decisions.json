@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T07:00:20+00:00",
+  "updated_at": "2026-05-07T21:37:52+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -296,6 +296,1467 @@
         "https://x.com/shinkawa_pua"
       ],
       "updated_at": "2026-05-01T21:44:27+00:00"
+    },
+    "1time2time2time__tokyo__activity": {
+      "candidate_id": "1time2time2time__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "1time2time2time",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "Dear Boy (@1time2time2time)\nめてょぶみん\nLocation: 東京",
+      "source_urls": [
+        "https://x.com/1time2time2time"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "333ginza__tokyo__activity": {
+      "candidate_id": "333ginza__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "333ginza",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京都",
+      "evidence_text": "割烹&バー 参燦々 (@333ginza)\n四季折々の食材をコース料理でご堪能いただく、創作割烹の参燦々でございます。 深夜はお飲み物だけもでご利用いただけるダイニングバーとして営業しております。\nLocation: 東京都中央区銀座6-4-8 ニューギンザビル3号館B1",
+      "source_urls": [
+        "https://x.com/333ginza"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "666-mori__kansai__activity": {
+      "candidate_id": "666-mori__kansai__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "666-mori",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "関西",
+      "evidence_text": "森｜スカウト募集・スカウトマン・求人 【関西・大阪・名古屋】 (@666___mori)\nナンパ師からスカウトに。主に歌舞伎町でぴえん狩り、港区でギャル狩りして活動。田舎で中卒で非行の道に走り暴走族特攻隊長某半グレ組織で幹部として成り上がる。某事件を経験し更生。現スカウト幹部＋大阪支部窓口。大規模な大阪支部部下募集中。質問はこちら▶︎ https://t.co/pmvzw7rRJD",
+      "source_urls": [
+        "https://x.com/666___mori"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "666-mori__nagoya__activity": {
+      "candidate_id": "666-mori__nagoya__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "666-mori",
+      "target": "nagoya",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "名古屋",
+      "evidence_text": "森｜スカウト募集・スカウトマン・求人 【関西・大阪・名古屋】 (@666___mori)\nナンパ師からスカウトに。主に歌舞伎町でぴえん狩り、港区でギャル狩りして活動。田舎で中卒で非行の道に走り暴走族特攻隊長某半グレ組織で幹部として成り上がる。某事件を経験し更生。現スカウト幹部＋大阪支部窓口。大規模な大阪支部部下募集中。質問はこちら▶︎ https://t.co/pmvzw7rRJD",
+      "source_urls": [
+        "https://x.com/666___mori"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "666-mori__osaka__activity": {
+      "candidate_id": "666-mori__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "666-mori",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "大阪",
+      "evidence_text": "森｜スカウト募集・スカウトマン・求人 【関西・大阪・名古屋】 (@666___mori)\nナンパ師からスカウトに。主に歌舞伎町でぴえん狩り、港区でギャル狩りして活動。田舎で中卒で非行の道に走り暴走族特攻隊長某半グレ組織で幹部として成り上がる。某事件を経験し更生。現スカウト幹部＋大阪支部窓口。大規模な大阪支部部下募集中。質問はこちら▶︎ https://t.co/pmvzw7rRJD",
+      "source_urls": [
+        "https://x.com/666___mori"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "aizfr1__aizfr__profile_mention": {
+      "candidate_id": "aizfr1__aizfr__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "aizfr1",
+      "target": "aizfr",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@aizfr",
+      "evidence_text": "@aizfr1",
+      "source_urls": [
+        "https://x.com/aizfr1"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "alllllll-maito__yato-mote__profile_mention": {
+      "candidate_id": "alllllll-maito__yato-mote__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "alllllll-maito",
+      "target": "yato-mote",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "夜ト",
+      "evidence_text": "オールマイト@夜トラ会×黒足の一味8期 (@alllllll_maito)\n【非モテから最強の男へ】 性和の象徴になるため日々奮闘中→今年中に誰もが知るナンパ師に|講習期間2ヶ月20即|ネト・スト・クラ即達成|某誠実系アプリ最高いいね数1800over|黒足値6.2 #黒足の一味 #夜トラ会 #半勃一門",
+      "source_urls": [
+        "https://x.com/alllllll_maito"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "anri-shibuya__shibuya__activity": {
+      "candidate_id": "anri-shibuya__shibuya__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "anri-shibuya",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "Shibuya",
+      "evidence_text": "李 (@anri_shibuya)\nめっちゃいい子と入籍しました",
+      "source_urls": [
+        "https://x.com/anri_shibuya"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "asahi-pua2__asahi-pua__profile_mention": {
+      "candidate_id": "asahi-pua2__asahi-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "asahi-pua2",
+      "target": "asahi-pua",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@asahi_pua",
+      "evidence_text": "@asahi_pua2",
+      "source_urls": [
+        "https://x.com/asahi_pua2"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "asozan-daifunka__tokyo__activity": {
+      "candidate_id": "asozan-daifunka__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "asozan-daifunka",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京都",
+      "evidence_text": "阿曽山大噴火 (@asozan_daifunka)\nラジオ CBC北野誠のズバリ（木曜） 雑誌 月刊Hanada、パチンコ必勝ガイドメガ盛SUPER 最新刊 バカ裁判傍聴記 ボードゲーム ボックスのかんじ ライブ すっとこどっこい 等\nLocation: 東京都",
+      "source_urls": [
+        "https://x.com/asozan_daifunka"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "aup-itas__sati-pua__profile_mention": {
+      "candidate_id": "aup-itas__sati-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "aup-itas",
+      "target": "sati-pua",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@sati_pua",
+      "evidence_text": "ちさ (@aup_itas)\n@sati_pua の鍵",
+      "source_urls": [
+        "https://x.com/aup_itas"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "azukikouhai__kanto__activity": {
+      "candidate_id": "azukikouhai__kanto__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "azukikouhai",
+      "target": "kanto",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関東",
+      "evidence_text": "あずき後輩@1919 (@azukikouhai)\n2017年関東ナンパ師2位。嫁を探してる。 嫁どこにおるん？\nLocation: 大福の中",
+      "source_urls": [
+        "https://x.com/azukikouhai"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "b-ta46__matching-apps__activity": {
+      "candidate_id": "b-ta46__matching-apps__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "b-ta46",
+      "target": "matching-apps",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "マッチングアプリ",
+      "evidence_text": "あぱぱ@マッチングアプリの専門家 (@b_ta46)\n経験人数600over | 低身長フツメン陰キャが「\"戦略\"」でアプリを攻略 | 頑張りたくない、楽したい。けどモテたい！そんなあなたのための\"労力最小、成果最大\"のレバレッジマッチングアプリ運用術指導者 | モテ下剋上を達成したい人はフォロー必須😾 | 下記リンクの公式LINEで無料アプリ講座配信してます↓ |\nLocation: 今だけ無料でAI×アプリ攻略講義動画を配布中↓",
+      "source_urls": [
+        "https://x.com/b_ta46",
+        "https://utage-system.com/p/6BhENT563oZD"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "banterin-duel__osaka__activity": {
+      "candidate_id": "banterin-duel__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "banterin-duel",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "大阪",
+      "evidence_text": "アディオス (@banterin_duel)\n大阪のストリートナンパ師。背広魅了師会所属。YouTubeとブログと料理本の執筆をしてるとみせかけて、料理本の執筆だけしてます。ここだけのはなし、ウソだと思われるかもしれないけど、じつは天衣無縫疾風迅雷九頭竜炎獄ルーティーンの使い手。前世はブルーベリー畑の妖精です #背広スタジオ #アディオスチャンネル\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/banterin_duel",
+        "https://m.youtube.com/channel/UCZOacVI4dhN-6sgzbr1N26Q"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "banterin-duel__rockpua-sub__profile_mention": {
+      "candidate_id": "banterin-duel__rockpua-sub__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "banterin-duel",
+      "target": "rockpua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "リー",
+      "evidence_text": "アディオス (@banterin_duel)\n大阪のストリートナンパ師。背広魅了師会所属。YouTubeとブログと料理本の執筆をしてるとみせかけて、料理本の執筆だけしてます。ここだけのはなし、ウソだと思われるかもしれないけど、じつは天衣無縫疾風迅雷九頭竜炎獄ルーティーンの使い手。前世はブルーベリー畑の妖精です #背広スタジオ #アディオスチャンネル\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/banterin_duel",
+        "https://m.youtube.com/channel/UCZOacVI4dhN-6sgzbr1N26Q"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "brit9811333__tokyo__activity": {
+      "candidate_id": "brit9811333__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "brit9811333",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "brit (@brit9811333)\n恋愛工学 不動産投資\nLocation: 日本 東京",
+      "source_urls": [
+        "https://x.com/brit9811333"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "bunshun-online__tokyo__activity": {
+      "candidate_id": "bunshun-online__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "bunshun-online",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "文春オンライン (@bunshun_online)\n文藝春秋が運営するニュースサイト。 文春オンラインは世の中を驚かせるスクープから、毎日の仕事や生活に役立つ話題までニュース、経済、ビジネス、芸能、エンタメ、読書……と幅広い情報をお届けするメディアです。\nLocation: 東京 千代田区紀尾井町",
+      "source_urls": [
+        "https://x.com/bunshun_online",
+        "https://bunshun.jp/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "busudanaaaa__idiot-pua__profile_mention": {
+      "candidate_id": "busudanaaaa__idiot-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "busudanaaaa",
+      "target": "idiot-pua",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "aaa",
+      "evidence_text": "人中フルマラソン (@busudanaaaa)\n人中2cmの奥目面長限界大学生 マロ↓\nExternal link: https://marshmallow-qa.com/busudanaaaa",
+      "source_urls": [
+        "https://x.com/busudanaaaa",
+        "https://marshmallow-qa.com/busudanaaaa"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "charai-nezumi2__charai-nezumi__profile_mention": {
+      "candidate_id": "charai-nezumi2__charai-nezumi__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "charai-nezumi2",
+      "target": "charai-nezumi",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@charai_nezumi",
+      "evidence_text": "@charai_nezumi2",
+      "source_urls": [
+        "https://x.com/charai_nezumi2"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "charisma-doll__osaka__activity": {
+      "candidate_id": "charisma-doll__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "charisma-doll",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "大阪",
+      "evidence_text": "🌹ディアナちゃんねる🌹 (@_charisma_doll)\n【 日本人が知らないおそロシアの話をしてます 】ロシア出身🇷🇺大阪🇯🇵\nLocation: SNS",
+      "source_urls": [
+        "https://x.com/_charisma_doll",
+        "https://lit.link/dianachannel"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "colabo-yumeno__tokyo__activity": {
+      "candidate_id": "colabo-yumeno__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "colabo-yumeno",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "仁藤夢乃 Yumeno Nito (@colabo_yumeno)\n@colabo_official 代表/ピンクの #バスカフェ #TsubomiCafe やシェルター、脱性売買相談所KEY運営/明治学院大学国際平和研究所研究員/著書・経歴等は https://t.co/uF6vt7kzkE #性搾取社会を見つめる #シリーズキモいおじさん #女性人権センター\nLocation: 日本 東京",
+      "source_urls": [
+        "https://x.com/colabo_yumeno",
+        "https://colabo-official.net/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "colabo-yumeno__rockpua-sub__profile_mention": {
+      "candidate_id": "colabo-yumeno__rockpua-sub__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "colabo-yumeno",
+      "target": "rockpua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "リー",
+      "evidence_text": "仁藤夢乃 Yumeno Nito (@colabo_yumeno)\n@colabo_official 代表/ピンクの #バスカフェ #TsubomiCafe やシェルター、脱性売買相談所KEY運営/明治学院大学国際平和研究所研究員/著書・経歴等は https://t.co/uF6vt7kzkE #性搾取社会を見つめる #シリーズキモいおじさん #女性人権センター\nLocation: 日本 東京",
+      "source_urls": [
+        "https://x.com/colabo_yumeno",
+        "https://colabo-official.net/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cornwallcapital__shibuya__activity": {
+      "candidate_id": "cornwallcapital__shibuya__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cornwallcapital",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "渋谷区",
+      "evidence_text": "ﾎﾞｳﾞ (@cornwallcapital)\n公認会計士。零細会計事務所と弱小監査法人を経営しながら、ベンチャー企業の社外役員をさせていただいたり、M&Aにいっちょかみさせていただくことで、ご飯を食べています\nLocation: 東京 渋谷区",
+      "source_urls": [
+        "https://x.com/cornwallcapital"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cornwallcapital__tokyo__activity": {
+      "candidate_id": "cornwallcapital__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cornwallcapital",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "ﾎﾞｳﾞ (@cornwallcapital)\n公認会計士。零細会計事務所と弱小監査法人を経営しながら、ベンチャー企業の社外役員をさせていただいたり、M&Aにいっちょかみさせていただくことで、ご飯を食べています\nLocation: 東京 渋谷区",
+      "source_urls": [
+        "https://x.com/cornwallcapital"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "court534__tokyo__activity": {
+      "candidate_id": "court534__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "court534",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "裁判傍聴師・今井亮一 (@court534)\nオービス裁判を追っかけるうち、傍聴マニアになってしまった。そこから20余年、主に刑事裁判を1万2000事件ほど傍聴してきた。長くひとところに居続けると見えてくるものがある。それはたぶん、いわゆる常識とは異次元かも…。 ※裁判傍聴師とは→ 下掲URLを\nLocation: 主に東京高地簡裁合同庁舎",
+      "source_urls": [
+        "https://x.com/court534",
+        "http://ko-tu-ihan.cocolog-nifty.com/blog/2019/11/post-2a5962.html"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cry-curr-ar__tokyo__activity": {
+      "candidate_id": "cry-curr-ar__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cry-curr-ar",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "Tokyo",
+      "evidence_text": "arata / Shingo Arai | CryptoTimes (@cry_curr_ar)\n株式会社ロクブンノニ代表 | CRYPTO TIMES @cryptotimes_mag , Candy Drops @candy_drops__ boarding bridge @bb_jpdao , Crypto Lounge GOX @groove_on_x | 38歳 B型 MBTI : ISTP(巨匠)\nLocation: Japan Tokyo",
+      "source_urls": [
+        "https://x.com/cry_curr_ar",
+        "https://crypto-times.jp"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cry-curr-ar__kyo__profile_mention": {
+      "candidate_id": "cry-curr-ar__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cry-curr-ar",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "arata / Shingo Arai | CryptoTimes (@cry_curr_ar)\n株式会社ロクブンノニ代表 | CRYPTO TIMES @cryptotimes_mag , Candy Drops @candy_drops__ boarding bridge @bb_jpdao , Crypto Lounge GOX @groove_on_x | 38歳 B型 MBTI : ISTP(巨匠)\nLocation: Japan Tokyo",
+      "source_urls": [
+        "https://x.com/cry_curr_ar",
+        "https://crypto-times.jp"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cry-curr-ar__streetkyo__profile_mention": {
+      "candidate_id": "cry-curr-ar__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cry-curr-ar",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "arata / Shingo Arai | CryptoTimes (@cry_curr_ar)\n株式会社ロクブンノニ代表 | CRYPTO TIMES @cryptotimes_mag , Candy Drops @candy_drops__ boarding bridge @bb_jpdao , Crypto Lounge GOX @groove_on_x | 38歳 B型 MBTI : ISTP(巨匠)\nLocation: Japan Tokyo",
+      "source_urls": [
+        "https://x.com/cry_curr_ar",
+        "https://crypto-times.jp"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "cx7flif6cz1tkxe__pua-yossy__profile_mention": {
+      "candidate_id": "cx7flif6cz1tkxe__pua-yossy__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "cx7flif6cz1tkxe",
+      "target": "pua-yossy",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "ヨッシー",
+      "evidence_text": "ヨッシー (@CX7FLif6cz1tkxe)\n元非モテ、元ドルヲタ、元キモオタ、アラサー→35歳で初めて彼女でき童貞卒業からの結婚。恋愛コンサルに100万以上投資 童貞卒業したい方はDM送って下さい 無料コンサルトします\nExternal link: https://note.com/sekinan48",
+      "source_urls": [
+        "https://x.com/CX7FLif6cz1tkxe",
+        "https://note.com/sekinan48"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "daioki0430__shinjuku__activity": {
+      "candidate_id": "daioki0430__shinjuku__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "daioki0430",
+      "target": "shinjuku",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Shinjuku",
+      "evidence_text": "与儀大介🪼🪼 (@daioki0430)\nお金を持たずに楽器１つで世界一周して帰国して起業。34歳。沖縄出身。去年まで議員。BARとエステサロンの経営とか営業コーチングとかやってます。押し売りチャンネル頑張りたい(概要欄)ここよくいます→ ＠layovershinjuku\nLocation: 東京 新宿区",
+      "source_urls": [
+        "https://x.com/daioki0430",
+        "https://youtube.com/@yogidaisuke?si=X1OqG-ndNOxo4evG"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "daioki0430__tokyo__activity": {
+      "candidate_id": "daioki0430__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "daioki0430",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "与儀大介🪼🪼 (@daioki0430)\nお金を持たずに楽器１つで世界一周して帰国して起業。34歳。沖縄出身。去年まで議員。BARとエステサロンの経営とか営業コーチングとかやってます。押し売りチャンネル頑張りたい(概要欄)ここよくいます→ ＠layovershinjuku\nLocation: 東京 新宿区",
+      "source_urls": [
+        "https://x.com/daioki0430",
+        "https://youtube.com/@yogidaisuke?si=X1OqG-ndNOxo4evG"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "doheyama__osaka__activity": {
+      "candidate_id": "doheyama__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "doheyama",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "Osaka",
+      "evidence_text": "ドヘ山 (@doheyama)\n個人Twitter SHORE ISO JIGING\nLocation: Osaka City",
+      "source_urls": [
+        "https://x.com/doheyama",
+        "https://www.instagram.com/doheyama?igsh=ZnZmaGR0cDFuM2pw"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "dokuzetu819__gureran-m__profile_mention": {
+      "candidate_id": "dokuzetu819__gureran-m__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "dokuzetu819",
+      "target": "gureran-m",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@gureran_m",
+      "evidence_text": "特命MBH@不動産🤭風デリ (@dokuzetu819)\n飯店長期R5.6｜🦁🐴｜減量ｶﾞﾁ勢 | 睡眠+入浴+歯磨 | ｽｸﾜｯﾄ、姿勢 | 尊師@gureran_m\nLocation: 飯店エリア界隈",
+      "source_urls": [
+        "https://x.com/dokuzetu819"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "ecchu2929__osaka__activity": {
+      "candidate_id": "ecchu2929__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "ecchu2929",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "大阪",
+      "evidence_text": "えっちゅうたつお (@ecchu2929)\nえっちゅうたつおサブアカウント メインアカウント→ @ecchu_tatsuo\nLocation: 大阪 梅田",
+      "source_urls": [
+        "https://x.com/ecchu2929",
+        "https://ameblo.jp/ecchu-tatsuo/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "ecchu2929__utaa-pua__profile_mention": {
+      "candidate_id": "ecchu2929__utaa-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "ecchu2929",
+      "target": "utaa-pua",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "うた",
+      "evidence_text": "えっちゅうたつお (@ecchu2929)\nえっちゅうたつおサブアカウント メインアカウント→ @ecchu_tatsuo\nLocation: 大阪 梅田",
+      "source_urls": [
+        "https://x.com/ecchu2929",
+        "https://ameblo.jp/ecchu-tatsuo/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "eguchi-tokyo__tokyo__activity": {
+      "candidate_id": "eguchi-tokyo__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "eguchi-tokyo",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Tokyo",
+      "evidence_text": "@eguchi_tokyo",
+      "source_urls": [
+        "https://x.com/eguchi_tokyo"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "eguchi-tokyo__kyo__profile_mention": {
+      "candidate_id": "eguchi-tokyo__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "eguchi-tokyo",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@eguchi_tokyo",
+      "source_urls": [
+        "https://x.com/eguchi_tokyo"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "eguchi-tokyo__streetkyo__profile_mention": {
+      "candidate_id": "eguchi-tokyo__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "eguchi-tokyo",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@eguchi_tokyo",
+      "source_urls": [
+        "https://x.com/eguchi_tokyo"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "gureran-m2__gureran-m__profile_mention": {
+      "candidate_id": "gureran-m2__gureran-m__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "gureran-m2",
+      "target": "gureran-m",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@gureran_m",
+      "evidence_text": "@gureran_m2",
+      "source_urls": [
+        "https://x.com/gureran_m2"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "hame-taro-7__kanto__activity": {
+      "candidate_id": "hame-taro-7__kanto__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "hame-taro-7",
+      "target": "kanto",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関東",
+      "evidence_text": "《公式》人生🈂️終ｳｫﾝﾅ㌠ a.k.a ﾊﾒ太郎😾‼️ (@hame_taro_7)\n🧚‍♀️裏垢じゃないのに #裏垢百名店 2025.TOP10入りﾈｷ🧚‍♀️ #何とかするマインド 泥水は男女問わず嫌いです。 #ヨモザーと一緒 #クズの会女子部関東支部総長 #ﾊﾒ太郎界隈モンスト部部長\nLocation: 超常解放戦線",
+      "source_urls": [
+        "https://x.com/hame_taro_7"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "heefoomee2__shinjuku__activity": {
+      "candidate_id": "heefoomee2__shinjuku__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "heefoomee2",
+      "target": "shinjuku",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "新宿",
+      "evidence_text": "heefoomee (@heefoomee2)\n副都心（外国人多め）在住│47都道府県踏破済み│地縁 西武新宿線某駅 神戸北野町 志木 吉祥寺 本厚木 相模大野 銀座 藤沢 飯田橋 八重洲 秋葉原│🇺🇸優良株ホルダー│不動産オーナー│キャリア メガバン 外資系TAX JTCファイナンス│人文地理な人│国内外旅行│温泉│台湾│自◯党幽霊党員│氷河期育ち🥶",
+      "source_urls": [
+        "https://x.com/heefoomee2"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "henachoko-olive__kansai__activity": {
+      "candidate_id": "henachoko-olive__kansai__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "henachoko-olive",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関西",
+      "evidence_text": "おりーぶ (@henachoko_olive)\n関西",
+      "source_urls": [
+        "https://x.com/henachoko_olive"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "hgdbsc__tokyo__activity": {
+      "candidate_id": "hgdbsc__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "hgdbsc",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京都",
+      "evidence_text": "裏 (@hgdbsc)\n。\nLocation: 東京都稲城市",
+      "source_urls": [
+        "https://x.com/hgdbsc"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "honshit__rockpua-sub__profile_mention": {
+      "candidate_id": "honshit__rockpua-sub__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "honshit",
+      "target": "rockpua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "リー",
+      "evidence_text": "パンくん (@honshit_)\n現役インスタグラマー｜インスタサロン運営｜現役インスタグラマーの外見・マーケ・マネタイズ指導｜ヤリラフィー ▶︎ 中小企業サラリーマン ▶︎ インスタ運用2ヶ月で1万フォロワー｜\nExternal link: https://tips.jp/s/MtpvX8",
+      "source_urls": [
+        "https://x.com/honshit_",
+        "https://tips.jp/s/MtpvX8"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kankanyonce__london__activity": {
+      "candidate_id": "kankanyonce__london__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kankanyonce",
+      "target": "london",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "London",
+      "evidence_text": "Kan (@kankanyonce)\n2021年にロンドンへ移住、同性婚。メディア出演: 「Netflix クィア・アイ in Japan!」、GQ、Vogue Japan、NHK Worldなど。お問い合わせ: kankanyonce@gmail.com\nLocation: London, England",
+      "source_urls": [
+        "https://x.com/kankanyonce",
+        "https://linktr.ee/kanyonce"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kazu-fujisawa__tokyo__activity": {
+      "candidate_id": "kazu-fujisawa__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kazu-fujisawa",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Tokyo",
+      "evidence_text": "Kazuki Fujisawa (@kazu_fujisawa)\n藤沢数希 (pen name) | PhD in physics → IB quant/trader (Tokyo) → bestselling author in Japan → investor & writer in Hong Kong. Patriot of one planet🌏️ メルマガ金融日記発行\nLocation: Hong Kong",
+      "source_urls": [
+        "https://x.com/kazu_fujisawa",
+        "https://www.kinyuunikki.com/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kazu-fujisawa__kyo__profile_mention": {
+      "candidate_id": "kazu-fujisawa__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kazu-fujisawa",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "Kazuki Fujisawa (@kazu_fujisawa)\n藤沢数希 (pen name) | PhD in physics → IB quant/trader (Tokyo) → bestselling author in Japan → investor & writer in Hong Kong. Patriot of one planet🌏️ メルマガ金融日記発行\nLocation: Hong Kong",
+      "source_urls": [
+        "https://x.com/kazu_fujisawa",
+        "https://www.kinyuunikki.com/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kazu-fujisawa__one__profile_mention": {
+      "candidate_id": "kazu-fujisawa__one__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kazu-fujisawa",
+      "target": "one",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "ONE",
+      "evidence_text": "Kazuki Fujisawa (@kazu_fujisawa)\n藤沢数希 (pen name) | PhD in physics → IB quant/trader (Tokyo) → bestselling author in Japan → investor & writer in Hong Kong. Patriot of one planet🌏️ メルマガ金融日記発行\nLocation: Hong Kong",
+      "source_urls": [
+        "https://x.com/kazu_fujisawa",
+        "https://www.kinyuunikki.com/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kazu-fujisawa__streetkyo__profile_mention": {
+      "candidate_id": "kazu-fujisawa__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kazu-fujisawa",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "Kazuki Fujisawa (@kazu_fujisawa)\n藤沢数希 (pen name) | PhD in physics → IB quant/trader (Tokyo) → bestselling author in Japan → investor & writer in Hong Kong. Patriot of one planet🌏️ メルマガ金融日記発行\nLocation: Hong Kong",
+      "source_urls": [
+        "https://x.com/kazu_fujisawa",
+        "https://www.kinyuunikki.com/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kedama-camera__kansai__activity": {
+      "candidate_id": "kedama-camera__kansai__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kedama-camera",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関西",
+      "evidence_text": "けだま｜モテさせ写真家｜大阪マッチングアプリ専門プロカメラマン(関西) (@kedama_camera)\n大阪|関西No.1マッチングアプリカメラマン📸 顔出しで実績公開してる唯一の男【with最高2500いいね(教え子は5000超え)】マッチ率を確実に上げてきたプロフィール写真カメラマン|撮影実績500↑|ファッションコンサル|メイク|いいね爆増ノウハウ伝授|宣材・インスタ・SNSアイコン等も撮影\nLocation: 撮影のご依頼は公式LINEに「撮影希望」詳細は下記リンクから",
+      "source_urls": [
+        "https://x.com/kedama_camera",
+        "https://lin.ee/vyK4BOY"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kedama-camera__matching-apps__activity": {
+      "candidate_id": "kedama-camera__matching-apps__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kedama-camera",
+      "target": "matching-apps",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "マッチングアプリ",
+      "evidence_text": "けだま｜モテさせ写真家｜大阪マッチングアプリ専門プロカメラマン(関西) (@kedama_camera)\n大阪|関西No.1マッチングアプリカメラマン📸 顔出しで実績公開してる唯一の男【with最高2500いいね(教え子は5000超え)】マッチ率を確実に上げてきたプロフィール写真カメラマン|撮影実績500↑|ファッションコンサル|メイク|いいね爆増ノウハウ伝授|宣材・インスタ・SNSアイコン等も撮影\nLocation: 撮影のご依頼は公式LINEに「撮影希望」詳細は下記リンクから",
+      "source_urls": [
+        "https://x.com/kedama_camera",
+        "https://lin.ee/vyK4BOY"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kedama-camera__osaka__activity": {
+      "candidate_id": "kedama-camera__osaka__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kedama-camera",
+      "target": "osaka",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "大阪",
+      "evidence_text": "けだま｜モテさせ写真家｜大阪マッチングアプリ専門プロカメラマン(関西) (@kedama_camera)\n大阪|関西No.1マッチングアプリカメラマン📸 顔出しで実績公開してる唯一の男【with最高2500いいね(教え子は5000超え)】マッチ率を確実に上げてきたプロフィール写真カメラマン|撮影実績500↑|ファッションコンサル|メイク|いいね爆増ノウハウ伝授|宣材・インスタ・SNSアイコン等も撮影\nLocation: 撮影のご依頼は公式LINEに「撮影希望」詳細は下記リンクから",
+      "source_urls": [
+        "https://x.com/kedama_camera",
+        "https://lin.ee/vyK4BOY"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "knk-stnn__nanpa-doraemon__profile_mention": {
+      "candidate_id": "knk-stnn__nanpa-doraemon__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "knk-stnn",
+      "target": "nanpa-doraemon",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "ドラえもん",
+      "evidence_text": "🇰🇷(ドラえもんの星) (@knk_stnn)\nフェミニスト🌈。18歳の大学生。女性の権利を守りたい。弱者女性支援NPO運営。悪質ホスト被害・貧困に追い込まれた女性・売春せざるを得ない女性を積極的に支援。",
+      "source_urls": [
+        "https://x.com/knk_stnn"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "ktp5123__nagoya__activity": {
+      "candidate_id": "ktp5123__nagoya__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "ktp5123",
+      "target": "nagoya",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "名古屋",
+      "evidence_text": "ｸﾘ🌰山監督（性差別主義者aka.のんちゃまコラ画像師） (@ktp5123)\nノンバッ♪ノンバッ♪ノンヴァッッッ♫\nLocation: 名古屋拘置所",
+      "source_urls": [
+        "https://x.com/ktp5123",
+        "https://peing.net/ja/ktp5123"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "ktp5123__nonchama-pro__profile_mention": {
+      "candidate_id": "ktp5123__nonchama-pro__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "ktp5123",
+      "target": "nonchama-pro",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "のんちゃま",
+      "evidence_text": "ｸﾘ🌰山監督（性差別主義者aka.のんちゃまコラ画像師） (@ktp5123)\nノンバッ♪ノンバッ♪ノンヴァッッッ♫\nLocation: 名古屋拘置所",
+      "source_urls": [
+        "https://x.com/ktp5123",
+        "https://peing.net/ja/ktp5123"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kyo__streetkyo__profile_mention": {
+      "candidate_id": "kyo__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kyo",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@kyo",
+      "source_urls": [
+        "https://x.com/kyo"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kyouuya-sata__kyo__profile_mention": {
+      "candidate_id": "kyouuya-sata__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kyouuya-sata",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@kyo",
+      "evidence_text": "@kyouuya_sata",
+      "source_urls": [
+        "https://x.com/kyouuya_sata"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "kyouuya-sata__streetkyo__profile_mention": {
+      "candidate_id": "kyouuya-sata__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "kyouuya-sata",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@kyouuya_sata",
+      "source_urls": [
+        "https://x.com/kyouuya_sata"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "lwe5ne9d5psfe9m__rockpua-sub__profile_mention": {
+      "candidate_id": "lwe5ne9d5psfe9m__rockpua-sub__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "lwe5ne9d5psfe9m",
+      "target": "rockpua-sub",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "リー",
+      "evidence_text": "ニートくん｜中星マインド (@lWE5Ne9d5PSfe9M)\n一日中ストリートに立ってます｜休憩中は都内駅周辺のWiFiスポットへ｜綺麗ごとだけのTwitter民は成敗、誠実系ナンパのリアルを語ります",
+      "source_urls": [
+        "https://x.com/lWE5Ne9d5PSfe9M"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "mcv0sm0pdu9esbt__tokyo__activity": {
+      "candidate_id": "mcv0sm0pdu9esbt__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "mcv0sm0pdu9esbt",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "Tokyo",
+      "evidence_text": "。 (@MCV0Sm0pdu9esBT)\n高額納税者\nLocation: Tokyo, Japan",
+      "source_urls": [
+        "https://x.com/MCV0Sm0pdu9esBT"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "mcv0sm0pdu9esbt__kyo__profile_mention": {
+      "candidate_id": "mcv0sm0pdu9esbt__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "mcv0sm0pdu9esbt",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "。 (@MCV0Sm0pdu9esBT)\n高額納税者\nLocation: Tokyo, Japan",
+      "source_urls": [
+        "https://x.com/MCV0Sm0pdu9esBT"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "mcv0sm0pdu9esbt__streetkyo__profile_mention": {
+      "candidate_id": "mcv0sm0pdu9esbt__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "mcv0sm0pdu9esbt",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "。 (@MCV0Sm0pdu9esBT)\n高額納税者\nLocation: Tokyo, Japan",
+      "source_urls": [
+        "https://x.com/MCV0Sm0pdu9esBT"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "meimei-money__one__profile_mention": {
+      "candidate_id": "meimei-money__one__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "meimei-money",
+      "target": "one",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "ONE",
+      "evidence_text": "@meimei_money",
+      "source_urls": [
+        "https://x.com/meimei_money"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "moneygirl-first__one__profile_mention": {
+      "candidate_id": "moneygirl-first__one__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "moneygirl-first",
+      "target": "one",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "ONE",
+      "evidence_text": "非モテ.com (@moneygirl_first)\n魂のツイート。",
+      "source_urls": [
+        "https://x.com/moneygirl_first"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "nampa1998__tokyo__activity": {
+      "candidate_id": "nampa1998__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "nampa1998",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "東京",
+      "evidence_text": "n (@nampa1998)\n東京すみ\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/nampa1998"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "nanpayasuno__matching-apps__activity": {
+      "candidate_id": "nanpayasuno__matching-apps__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "nanpayasuno",
+      "target": "matching-apps",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "マッチングアプリ",
+      "evidence_text": "ナンパティーチャー安之助@安之助長期代表 (@nanpayasuno)\n恋愛弱者と童貞脱却特化の恋愛・ナンパ講師。自身は質追いプレーヤー。ナンパで出会った爆美女CAやモデルを彼女化の経歴あり。現在はマッチングアプリとストナンの2刀流。美女ナンパ歴17年で経験人数は多過ぎて測定不能。「安之助式美女ホイホイメソッド」 を発信します。恋愛orナンパ講習依頼はDMから✉️\nLocation: ストナン攻略&自己紹介➡️",
+      "source_urls": [
+        "https://x.com/nanpayasuno",
+        "https://note.com/nanpateacherya/n/nb090bd2dba37"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "neoneet-ai2__one__profile_mention": {
+      "candidate_id": "neoneet-ai2__one__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "neoneet-ai2",
+      "target": "one",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "ONE",
+      "evidence_text": "@neoneet_ai2",
+      "source_urls": [
+        "https://x.com/neoneet_ai2"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "nsjact__nsj__profile_mention": {
+      "candidate_id": "nsjact__nsj__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "nsjact",
+      "target": "nsj",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@nsj",
+      "evidence_text": "@NSJact",
+      "source_urls": [
+        "https://x.com/NSJact"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "ochimpo-samurai__dogenzaka-pua__profile_mention": {
+      "candidate_id": "ochimpo-samurai__dogenzaka-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "ochimpo-samurai",
+      "target": "dogenzaka-pua",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "道玄坂",
+      "evidence_text": "道玄坂おちんぽ侍 (@ochimpo_samurai)\n路傍の詩人です。名前も知らない君の笑顔を見たい。別れ際に流す俺の涙は見せない。\nLocation: 雑踏",
+      "source_urls": [
+        "https://x.com/ochimpo_samurai"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "onesan-doumo__one__profile_mention": {
+      "candidate_id": "onesan-doumo__one__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "onesan-doumo",
+      "target": "one",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "@ONE",
+      "evidence_text": "キセル｜モテ＝加害性 (@onesan_doumo)\n人間が絡むこの世のあらゆる事象を説明できる概念『加害性』について｜恋愛の原理原則をロジカルに解説｜経験人数3桁｜アプリ、路上、たまにお店を攻略してます｜基礎基本と凡事徹底｜keyword→【#加害性 #善性維持 #押し引き #権威性 #政治力】\nLocation: note",
+      "source_urls": [
+        "https://x.com/onesan_doumo",
+        "https://note.com/onesan_doumo"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "oriha-pua__matching-apps__activity": {
+      "candidate_id": "oriha-pua__matching-apps__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "oriha-pua",
+      "target": "matching-apps",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "マチアプ",
+      "evidence_text": "織葉 @還ってきた伝説のマッチングアップラー (@oriha_pua)\nマチアプでいっぱいSEXしてるキモおぢ。直ホ族／通算400即～（ネト・スト合算）",
+      "source_urls": [
+        "https://x.com/oriha_pua"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "pro-tinder__tokyo__activity": {
+      "candidate_id": "pro-tinder__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "pro-tinder",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "profile_text",
+      "matched_text": "東京",
+      "evidence_text": "神崎くん (@pro_tinder)\n準備中。2026年5月再開\nLocation: 東京のどこか",
+      "source_urls": [
+        "https://x.com/pro_tinder",
+        "https://note.mu/pro_tinder"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s050456236__s01183496__profile_mention": {
+      "candidate_id": "s050456236__s01183496__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s050456236",
+      "target": "s01183496",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@s01183496",
+      "evidence_text": "Sエス(スペース、5月講習募集用) (@S050456236)\n@s01183496凍結。 現運用@S667270528s 2ヶ月に一度のスペースand講習募集用のみ 次回スペース6月初頭 👇固定ツイート、写真、リプをよく読んでから講習に応募ください。",
+      "source_urls": [
+        "https://x.com/S050456236"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s050456236__s667270528s__profile_mention": {
+      "candidate_id": "s050456236__s667270528s__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s050456236",
+      "target": "s667270528s",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@S667270528s",
+      "evidence_text": "Sエス(スペース、5月講習募集用) (@S050456236)\n@s01183496凍結。 現運用@S667270528s 2ヶ月に一度のスペースand講習募集用のみ 次回スペース6月初頭 👇固定ツイート、写真、リプをよく読んでから講習に応募ください。",
+      "source_urls": [
+        "https://x.com/S050456236"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s667270528s__kanto__activity": {
+      "candidate_id": "s667270528s__kanto__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s667270528s",
+      "target": "kanto",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関東",
+      "evidence_text": "エス(前s) (@S667270528s)\n元メイン2019〜(@s01183496)2ヶ月に一度のスペースとマンツーマン講習内容(5月募集中講習生700名突破)は@s050456236へお願いします🙇スト歴30年超え完ソロ。50歳、不定休勤務、158cm、ブス(無整形)、酒アレルギーのハンデ尽くし。女子トラブルゼロ。主に関東。時間場所一切問わずやります。\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/S667270528s"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s667270528s__s01183496__profile_mention": {
+      "candidate_id": "s667270528s__s01183496__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s667270528s",
+      "target": "s01183496",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@s01183496",
+      "evidence_text": "エス(前s) (@S667270528s)\n元メイン2019〜(@s01183496)2ヶ月に一度のスペースとマンツーマン講習内容(5月募集中講習生700名突破)は@s050456236へお願いします🙇スト歴30年超え完ソロ。50歳、不定休勤務、158cm、ブス(無整形)、酒アレルギーのハンデ尽くし。女子トラブルゼロ。主に関東。時間場所一切問わずやります。\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/S667270528s"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s667270528s__s050456236__profile_mention": {
+      "candidate_id": "s667270528s__s050456236__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s667270528s",
+      "target": "s050456236",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@S050456236",
+      "evidence_text": "エス(前s) (@S667270528s)\n元メイン2019〜(@s01183496)2ヶ月に一度のスペースとマンツーマン講習内容(5月募集中講習生700名突破)は@s050456236へお願いします🙇スト歴30年超え完ソロ。50歳、不定休勤務、158cm、ブス(無整形)、酒アレルギーのハンデ尽くし。女子トラブルゼロ。主に関東。時間場所一切問わずやります。\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/S667270528s"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "s667270528s__zero-n2__profile_mention": {
+      "candidate_id": "s667270528s__zero-n2__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "s667270528s",
+      "target": "zero-n2",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "ゼロ",
+      "evidence_text": "エス(前s) (@S667270528s)\n元メイン2019〜(@s01183496)2ヶ月に一度のスペースとマンツーマン講習内容(5月募集中講習生700名突破)は@s050456236へお願いします🙇スト歴30年超え完ソロ。50歳、不定休勤務、158cm、ブス(無整形)、酒アレルギーのハンデ尽くし。女子トラブルゼロ。主に関東。時間場所一切問わずやります。\nLocation: 日本",
+      "source_urls": [
+        "https://x.com/S667270528s"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "sanin-nanpa__kei-pua__profile_mention": {
+      "candidate_id": "sanin-nanpa__kei-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "sanin-nanpa",
+      "target": "kei-pua",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "けい",
+      "evidence_text": "けい (@sanin__nanpa)\nストナン忘備録 たまにネトも！気軽にフォローいいねしてください👍 約1年で田舎で100即達成。 ご要望あれば講習もします！詳しくはDMしてください\nLocation: 山陰",
+      "source_urls": [
+        "https://x.com/sanin__nanpa"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "sasuke110110__bonds-wwww__profile_mention": {
+      "candidate_id": "sasuke110110__bonds-wwww__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "sasuke110110",
+      "target": "bonds-wwww",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "suke",
+      "evidence_text": "@sasuke110110",
+      "source_urls": [
+        "https://x.com/sasuke110110"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "satetu4401__omamco-pua2__profile_mention": {
+      "candidate_id": "satetu4401__omamco-pua2__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "satetu4401",
+      "target": "omamco-pua2",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "える",
+      "evidence_text": "砂鉄 (@satetu4401)\nTwitterの極北へようこそ。未整理の思考を適当に書き殴ってるので、使えるものと危険なものを分別して持って帰るように。リプライには詐欺サイトに誘導する偽物がいるので十分注意してください",
+      "source_urls": [
+        "https://x.com/satetu4401"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "science11tech__kansai__activity": {
+      "candidate_id": "science11tech__kansai__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "science11tech",
+      "target": "kansai",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "関西",
+      "evidence_text": "☄science☄DK6 (@science11tech)\n2019/3/13にツイッター初登録。教育・スポーツ・自動車関連の話題が多め。不可逆的な移民政策に原則反対。移民政策を推進した現在の欧州の惨状から学ぼう。北欧諸国は夢の国でありません。 コロナウイルスに関して欧米におけるアジア人差別に反対します。中学受験経験者（関西）。中学受験の現状にはやや否定的な立場です。\nLocation: 地球",
+      "source_urls": [
+        "https://x.com/science11tech"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "selfcomestomine__try-pua__profile_mention": {
+      "candidate_id": "selfcomestomine__try-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "selfcomestomine",
+      "target": "try-pua",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "トライ",
+      "evidence_text": "エボサイ（EvoPsy） (@selfcomestomine)\n進化心理学（EP）「遺伝子とは、無意識のうちに私たちを動かすものなのだと頭に入れておいてほしい」byロバートライト．心は進化に設計されている．サピエンスの行動を生物学的動機から解明する．講談社「現代ビジネス」に寄稿。All tweets are hypotheses\nLocation: 進化心理学／Evolutionary psychology",
+      "source_urls": [
+        "https://x.com/selfcomestomine",
+        "https://note.com/youth_waster/m/m9fc3ddc6120d"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "shi-shimaru1983__gureran-m__profile_mention": {
+      "candidate_id": "shi-shimaru1983__gureran-m__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "shi-shimaru1983",
+      "target": "gureran-m",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@gureran_m",
+      "evidence_text": "ししまる@MBH 40歳からの青春 (@shi_shimaru1983)\n2023/9/11 MBHまーぼー飯店入店 尊師→@gureran_m 現在スト27即 箱1即/ 2018年2g/ 2022 年 4g/2023年22g/2024年1月0g/街別🐶1🦁 16🦉6🏖️2味噌2 二子玉1/ 1日2即\nLocation: 神奈 横浜市 神奈川区",
+      "source_urls": [
+        "https://x.com/shi_shimaru1983"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "shibuya109suto__shibuya__activity": {
+      "candidate_id": "shibuya109suto__shibuya__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "shibuya109suto",
+      "target": "shibuya",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "@shibuya",
+      "evidence_text": "@shibuya109suto",
+      "source_urls": [
+        "https://x.com/shibuya109suto"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "taruchan100__taru-pua__profile_mention": {
+      "candidate_id": "taruchan100__taru-pua__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "taruchan100",
+      "target": "taru-pua",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "@taru_pua",
+      "evidence_text": "たる (@taruchan100)\n完ソロストのみ / 1日最高7即 / 🎩🎩×4 / 帝都スト39連勝 / 🐶ストGTなし12連勝 / 🦁スト28連勝 / 活動記録→@taru_pua\nLocation: 🦁🐶🦉",
+      "source_urls": [
+        "https://x.com/taruchan100"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tocho-toan-pr__tokyo__activity": {
+      "candidate_id": "tocho-toan-pr__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tocho-toan-pr",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "Tokyo",
+      "evidence_text": "東京都都民安全推進部_PR (@tocho_toan_pr)\n東京都都民安全推進部の広告用アカウントです。リプライやダイレクトメッセージには対応しませんのでご了承ください。\nExternal link: https://www.tomin-anzen.metro.tokyo.lg.jp/",
+      "source_urls": [
+        "https://x.com/tocho_toan_pr",
+        "https://www.tomin-anzen.metro.tokyo.lg.jp/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tocho-toan-pr__kyo__profile_mention": {
+      "candidate_id": "tocho-toan-pr__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tocho-toan-pr",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "東京都都民安全推進部_PR (@tocho_toan_pr)\n東京都都民安全推進部の広告用アカウントです。リプライやダイレクトメッセージには対応しませんのでご了承ください。\nExternal link: https://www.tomin-anzen.metro.tokyo.lg.jp/",
+      "source_urls": [
+        "https://x.com/tocho_toan_pr",
+        "https://www.tomin-anzen.metro.tokyo.lg.jp/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tocho-toan-pr__streetkyo__profile_mention": {
+      "candidate_id": "tocho-toan-pr__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tocho-toan-pr",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "東京都都民安全推進部_PR (@tocho_toan_pr)\n東京都都民安全推進部の広告用アカウントです。リプライやダイレクトメッセージには対応しませんのでご了承ください。\nExternal link: https://www.tomin-anzen.metro.tokyo.lg.jp/",
+      "source_urls": [
+        "https://x.com/tocho_toan_pr",
+        "https://www.tomin-anzen.metro.tokyo.lg.jp/"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tokyominato23me__tokyo__activity": {
+      "candidate_id": "tokyominato23me__tokyo__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tokyominato23me",
+      "target": "tokyo",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "@tokyo",
+      "evidence_text": "@tokyominato23me",
+      "source_urls": [
+        "https://x.com/tokyominato23me"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tokyominato23me__kyo__profile_mention": {
+      "candidate_id": "tokyominato23me__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tokyominato23me",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@tokyominato23me",
+      "source_urls": [
+        "https://x.com/tokyominato23me"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "tokyominato23me__streetkyo__profile_mention": {
+      "candidate_id": "tokyominato23me__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "tokyominato23me",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@tokyominato23me",
+      "source_urls": [
+        "https://x.com/tokyominato23me"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "yamcha-saikyou__kyo__profile_mention": {
+      "candidate_id": "yamcha-saikyou__kyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "yamcha-saikyou",
+      "target": "kyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@yamcha_saikyou",
+      "source_urls": [
+        "https://x.com/yamcha_saikyou"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "yamcha-saikyou__streetkyo__profile_mention": {
+      "candidate_id": "yamcha-saikyou__streetkyo__profile_mention",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "yamcha-saikyou",
+      "target": "streetkyo",
+      "type": "profile_mention",
+      "basis": "summary, profile_text",
+      "matched_text": "kyo",
+      "evidence_text": "@yamcha_saikyou",
+      "source_urls": [
+        "https://x.com/yamcha_saikyou"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
+    },
+    "z1xnp6__matching-apps__activity": {
+      "candidate_id": "z1xnp6__matching-apps__activity",
+      "status": "approved",
+      "note": "bulk-approve",
+      "source": "z1xnp6",
+      "target": "matching-apps",
+      "type": "activity",
+      "basis": "summary, profile_text",
+      "matched_text": "マッチングアプリ",
+      "evidence_text": "アラフィフ22キロ減量成功マッチングアプリは苦戦中 (@z1xnp6)\nアラフィフです。横浜市の郊外在住 コンサル受けてますがマッチングアプリうまくいってないので ストナン講習、ステルスナンパ、地方ナンパのやり方を単発講習で受けたく現在募集してます。\nLocation: 神奈川県横浜市",
+      "source_urls": [
+        "https://x.com/z1xnp6"
+      ],
+      "updated_at": "2026-05-07T21:36:29+00:00"
     }
   }
 }
