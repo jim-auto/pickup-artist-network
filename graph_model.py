@@ -2429,7 +2429,7 @@ def render_html(
         const titleText = [
           clusterInfo.title || `${clusterInfo.label || definition.label} (${members.length})`,
           topMembers + (members.length > 4 ? ` ほか ${members.length - 4} 件` : "")
-        ].join("\n");
+        ].join("\\n");
         network.cluster({
           joinCondition(nodeOptions) {
             return memberIds.has(nodeOptions.id);
@@ -2703,4 +2703,5 @@ def export_html(
             site_data_path=site_data_file.name,
         ),
         encoding="utf-8",
+        newline="",
     )
