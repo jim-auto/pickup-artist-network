@@ -1305,7 +1305,7 @@ def render_html(
       background: #f9fbff;
     }
     #network {
-      height: 720px;
+      height: 560px;
       border: 1px solid var(--border);
       border-radius: 8px;
       background: #fff;
@@ -1562,25 +1562,13 @@ def render_html(
       </details>
     </section>
 
-    <details class="panel foldout">
-      <summary>
-        <span class="foldout-summary-text">
-          <span>内部メトリクス</span>
-          <span class="muted">通常は閉じたまま使えるようにしました。</span>
-        </span>
-      </summary>
-      <div class="foldout-content">
-        <section class="stats">
-          <div class="stat"><span class="muted">表示ノード数</span><strong id="visible-nodes">0</strong></div>
-          <div class="stat"><span class="muted">表示エッジ数</span><strong id="visible-edges">0</strong></div>
-          <div class="stat"><span class="muted">要確認ノード数</span><strong id="review-nodes">0</strong></div>
-          <div class="stat"><span class="muted">要確認エッジ数</span><strong id="review-edges">0</strong></div>
-          <div class="stat"><span class="muted">レビュー候補数</span><strong id="review-candidates">0</strong></div>
-          <div class="stat"><span class="muted">総ノード数</span><strong id="total-nodes">0</strong></div>
-          <div class="stat"><span class="muted">総エッジ数</span><strong id="total-edges">0</strong></div>
-        </section>
-      </div>
-    </details>
+    <span id="visible-nodes" hidden>0</span>
+    <span id="visible-edges" hidden>0</span>
+    <span id="review-nodes" hidden>0</span>
+    <span id="review-edges" hidden>0</span>
+    <span id="review-candidates" hidden>0</span>
+    <span id="total-nodes" hidden>0</span>
+    <span id="total-edges" hidden>0</span>
 
     <section class="graph-layout">
       <section class="panel network-panel">
@@ -1588,8 +1576,7 @@ def render_html(
           <h2>アカウント相関ビュー</h2>
           <div id="view-summary" class="view-summary"></div>
         </div>
-        <p class="muted">人物・コミュニティ同士のつながりを優先して、相関の見やすさを保っています。</p>
-        <p class="muted">※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。関係は明示的な記述を優先し、未確認の推測は含めません。</p>
+        <p class="muted">初期表示は関係が多いノードと近い塊を優先しています。探したい名前は検索から全件対象で開けます。</p>
         <div id="network"></div>
       </section>
 
@@ -1703,7 +1690,14 @@ def render_html(
       </div>
     </details>
 
-    <section class="two-column">
+    <details class="panel foldout">
+      <summary>
+        <span class="foldout-summary-text">
+          <span>ノード / エッジ一覧</span>
+          <span class="muted">表で確認したいときだけ開けます。</span>
+        </span>
+      </summary>
+      <div class="foldout-content two-column">
       <section class="panel">
         <h2>ノード一覧</h2>
         <div class="table-wrap">
@@ -1750,7 +1744,8 @@ def render_html(
           <button type="button" id="edges-table-more" class="inspect-button" hidden>さらに表示</button>
         </div>
       </section>
-    </section>
+      </div>
+    </details>
   </main>
 
   <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
@@ -1845,6 +1840,11 @@ def render_html(
     const rawNodeById = new Map(rawGraph.nodes.map((node) => [node.id, node]));
     const nodeDegreeById = new Map();
     rawGraph.edges.forEach((edge) => {
+      const sourceNode = rawNodeById.get(edge.source);
+      const targetNode = rawNodeById.get(edge.target);
+      if (!sourceNode || !targetNode || !accountNodeTypes.has(sourceNode.type) || !accountNodeTypes.has(targetNode.type)) {
+        return;
+      }
       nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
       nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
     });
@@ -1907,7 +1907,7 @@ def render_html(
     const keywordClusterPicker = document.getElementById("keyword-cluster-picker");
     const keywordClusterInput = document.getElementById("keyword-cluster-select");
     if (clusterModeInput) {
-      clusterModeInput.value = rawClusters.default_mode || "off";
+      clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : (rawClusters.default_mode || "off");
     }
 
     const nodesDataSet = new vis.DataSet([]);
@@ -1937,17 +1937,17 @@ def render_html(
         nodes: {
           shape: "dot",
           borderWidth: 1,
-          font: { face: "Arial", size: 14 }
+          font: { face: "Arial", size: 13, color: "#17212b" }
         },
         edges: {
           arrows: "to",
-          color: { color: "#94a3b8", highlight: "#2f6feb" },
+          color: { color: "rgba(148, 163, 184, 0.42)", highlight: "#2f6feb" },
           font: { align: "top", size: 11 },
           smooth: false
         },
         interaction: {
           hover: true,
-          navigationButtons: true,
+          navigationButtons: false,
           keyboard: true
         }
       }
@@ -2530,7 +2530,7 @@ def render_html(
           },
           clusterNodeProperties: {
             id: clusterNodeId,
-            label: clusterInfo.label || `${definition.label} (${members.length})`,
+            label: members.length >= 6 ? `${clusterInfo.label || definition.label}\\n${members.length}件` : `${members.length}`,
             group: dominantType,
             value: 18 + members.length,
             shape: "hexagon",
@@ -2554,6 +2554,7 @@ def render_html(
       const clusterMode = getClusterMode();
       const selectedKeywordClusterId = getSelectedKeywordClusterId();
       const keywordAssignments = rawClusters.modes?.keyword_group?.assignments || {};
+      const overviewMode = !term && !selectedKeywordClusterId && clusterMode !== "off";
       const shouldCluster = clusterMode !== "off" && !term && !selectedKeywordClusterId;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
@@ -2575,6 +2576,9 @@ def render_html(
           return false;
         }
         if (selectedKeywordClusterId && keywordAssignments[node.id] !== selectedKeywordClusterId) {
+          return false;
+        }
+        if (overviewMode && node.type !== "community" && (nodeDegreeById.get(node.id) || 0) < 4) {
           return false;
         }
         return true;
@@ -2629,7 +2633,7 @@ def render_html(
       nodesDataSet.add(
         visibleNodes.map((node) => ({
           id: node.id,
-          label: node.name,
+          label: visibleNodes.length <= 100 ? node.name : "",
           group: node.type,
           value: 12 + Math.round((node.confidence || 0) * 12),
           shape: node.icon_url ? "circularImage" : "dot",
@@ -2659,6 +2663,7 @@ def render_html(
       if (shouldCluster) {
         applyRelationClusters(visibleNodes, clusterMode);
       }
+      fitVisibleGraph();
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
       document.getElementById("visible-edges").textContent = visibleEdges.length;
@@ -2680,6 +2685,12 @@ def render_html(
       window.setTimeout(() => {
         if (currentVisibleNodes.length) {
           network.fit({ animation: { duration: 250, easingFunction: "easeInOutQuad" } });
+          window.setTimeout(() => {
+            network.moveTo({
+              scale: Math.min(network.getScale() * 1.35, 1.15),
+              animation: { duration: 180, easingFunction: "easeInOutQuad" }
+            });
+          }, 280);
         }
       }, 50);
     }
@@ -2690,7 +2701,7 @@ def render_html(
         input.checked = true;
       });
       if (clusterModeInput) {
-        clusterModeInput.value = "off";
+        clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : "off";
       }
       if (keywordClusterInput) {
         keywordClusterInput.value = "";
