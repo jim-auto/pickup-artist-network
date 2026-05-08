@@ -409,7 +409,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-08 11:04 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-08 19:53 UTC。</p>
       </div>
     </div>
   </header>
@@ -820,7 +820,8 @@
       { nodes: nodesDataSet, edges: edgesDataSet },
       {
         layout: {
-          improvedLayout: true
+          improvedLayout: false,
+          randomSeed: 13
         },
         physics: {
           enabled: false,
@@ -1450,6 +1451,104 @@
       });
     }
 
+    function hashText(value) {
+      let hash = 0;
+      for (let index = 0; index < value.length; index += 1) {
+        hash = ((hash << 5) - hash + value.charCodeAt(index)) | 0;
+      }
+      return Math.abs(hash);
+    }
+
+    function buildAnchor(index) {
+      const anchors = [
+        [0, 0],
+        [-220, -95],
+        [245, 85],
+        [-70, 185],
+        [330, -140],
+        [-340, 120],
+        [95, -220],
+        [-430, -190],
+        [445, 205],
+        [-190, 295],
+        [240, -320],
+        [515, -60],
+        [-530, 35]
+      ];
+      if (index < anchors.length) {
+        return { x: anchors[index][0], y: anchors[index][1] };
+      }
+      const column = (index - anchors.length) % 7;
+      const row = Math.floor((index - anchors.length) / 7);
+      return {
+        x: (column - 3) * 170 + (row % 2 ? 55 : 0),
+        y: 375 + row * 120 + ((column % 2) * 35)
+      };
+    }
+
+    function computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster) {
+      const positions = new Map();
+      const modePayload = rawClusters.modes?.[clusterMode];
+      const buckets = new Map();
+
+      visibleNodes.forEach((node) => {
+        const assignedClusterId = modePayload?.assignments?.[node.id];
+        const bucketId = shouldCluster
+          ? (assignedClusterId || `unassigned:${hashText(node.id) % 6}`)
+          : `node:${node.id}`;
+        if (!buckets.has(bucketId)) {
+          buckets.set(bucketId, []);
+        }
+        buckets.get(bucketId).push(node);
+      });
+
+      const orderedBuckets = Array.from(buckets.entries())
+        .sort((left, right) => {
+          if (right[1].length !== left[1].length) {
+            return right[1].length - left[1].length;
+          }
+          return left[0].localeCompare(right[0]);
+        });
+
+      const connectedCounts = new Map();
+      visibleEdges.forEach((edge) => {
+        connectedCounts.set(edge.source, (connectedCounts.get(edge.source) || 0) + 1);
+        connectedCounts.set(edge.target, (connectedCounts.get(edge.target) || 0) + 1);
+      });
+
+      orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
+        const anchor = buildAnchor(bucketIndex);
+        const sortedMembers = [...members].sort((left, right) => {
+          const rightDegree = connectedCounts.get(right.id) || 0;
+          const leftDegree = connectedCounts.get(left.id) || 0;
+          if (rightDegree !== leftDegree) {
+            return rightDegree - leftDegree;
+          }
+          return left.name.localeCompare(right.name);
+        });
+        const spreadX = Math.max(70, Math.min(210, 42 + sortedMembers.length * 9));
+        const spreadY = Math.max(55, Math.min(160, 32 + sortedMembers.length * 7));
+
+        sortedMembers.forEach((node, memberIndex) => {
+          if (sortedMembers.length === 1) {
+            positions.set(node.id, anchor);
+            return;
+          }
+          const hash = hashText(`${bucketId}:${node.id}`);
+          const lane = memberIndex % 5;
+          const row = Math.floor(memberIndex / 5);
+          const offsetX = (lane - 2) * (spreadX / 3.2) + ((hash % 29) - 14);
+          const offsetY = (row - Math.floor(sortedMembers.length / 10)) * (spreadY / 2.8) + (((hash >> 3) % 31) - 15);
+          positions.set(node.id, {
+            x: anchor.x + offsetX,
+            y: anchor.y + offsetY
+          });
+        });
+      });
+
+      return positions;
+    }
+
     function applyFilters() {
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
@@ -1532,10 +1631,13 @@
       resetClusters();
       nodesDataSet.clear();
       edgesDataSet.clear();
+      const layoutPositions = computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster);
 
       nodesDataSet.add(
         visibleNodes.map((node) => ({
           id: node.id,
+          x: layoutPositions.get(node.id)?.x,
+          y: layoutPositions.get(node.id)?.y,
           label: visibleNodes.length <= 100 ? node.name : "",
           group: node.type,
           value: 12 + Math.round((node.confidence || 0) * 12),
@@ -1588,12 +1690,6 @@
       window.setTimeout(() => {
         if (currentVisibleNodes.length) {
           network.fit({ animation: { duration: 250, easingFunction: "easeInOutQuad" } });
-          window.setTimeout(() => {
-            network.moveTo({
-              scale: Math.min(network.getScale() * 1.35, 1.15),
-              animation: { duration: 180, easingFunction: "easeInOutQuad" }
-            });
-          }, 280);
         }
       }, 50);
     }
