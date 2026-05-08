@@ -409,7 +409,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-08 07:43 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-08 10:34 UTC。</p>
       </div>
     </div>
   </header>
@@ -823,10 +823,10 @@
           improvedLayout: true
         },
         physics: {
-          enabled: true,
+          enabled: false,
           stabilization: {
-            enabled: true,
-            iterations: 200,
+            enabled: false,
+            iterations: 0,
             updateInterval: 25,
             fit: true
           },
@@ -855,9 +855,6 @@
         }
       }
     );
-    network.once("stabilizationIterationsDone", () => {
-      network.setOptions({ physics: false });
-    });
 
     function selectedValues(selector, attributeName) {
       return new Set(

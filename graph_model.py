@@ -1920,10 +1920,10 @@ def render_html(
           improvedLayout: true
         },
         physics: {
-          enabled: true,
+          enabled: false,
           stabilization: {
-            enabled: true,
-            iterations: 200,
+            enabled: false,
+            iterations: 0,
             updateInterval: 25,
             fit: true
           },
@@ -1952,9 +1952,6 @@ def render_html(
         }
       }
     );
-    network.once("stabilizationIterationsDone", () => {
-      network.setOptions({ physics: false });
-    });
 
     function selectedValues(selector, attributeName) {
       return new Set(

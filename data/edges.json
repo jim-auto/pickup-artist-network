@@ -52,6 +52,20 @@
     "review_notes": "Approved from review candidate 333ginza__tokyo__activity. Original evidence: 割烹&バー 参燦々 (@333ginza)\n四季折々の食材をコース料理でご堪能いただく、創作割烹の参燦々でございます。 深夜はお飲み物だけもでご利用いただけるダイニングバーとして営業しております。\nLocation: 東京都中央区銀座6-4-8 ニューギンザビル3号館B1 Approval note: bulk-approve"
   },
   {
+    "source": "4050-machiapp",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/4050_machiapp",
+      "https://note.com/monami_fujisaki/n/n7c1168ad351c"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マチアプ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "666-mori",
     "target": "kansai",
     "type": "activity",
@@ -2821,6 +2835,33 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "4050-machiapp",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/4050_machiapp",
+      "https://note.com/monami_fujisaki/n/n7c1168ad351c"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "4050-machiapp",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/4050_machiapp"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "44o5ia2bz7awzsb",
     "target": "x",
     "type": "affiliation",
@@ -3884,6 +3925,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "around2neraioji",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/around2neraioji"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "arrester-pua",
     "target": "x",
     "type": "affiliation",
@@ -4776,7 +4830,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 0 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "bokupaipan",
@@ -4789,7 +4843,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 0 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "bonds-wwww",
@@ -5822,7 +5876,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "cx7flif6cz1tkxe",
@@ -6525,6 +6579,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "e-hero-h-man",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/E_HERO_H_MAN"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "eb6lx",
     "target": "x",
     "type": "affiliation",
@@ -6745,7 +6812,7 @@
     "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "emuchi-pua",
@@ -6758,7 +6825,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "endou-dark",
@@ -8066,7 +8133,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 0 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "hantenkinoyama",
@@ -8578,6 +8645,17 @@
   },
   {
     "source": "hkun-theworld",
+    "target": "razer-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "hkun-theworld",
     "target": "suto-taro",
     "type": "affiliation",
     "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -8709,6 +8787,17 @@
   {
     "source": "ibu-photostyle",
     "target": "onizuka-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "razer-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
@@ -9489,6 +9578,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kankeiiiii",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kankeiiiii"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "kaoguda-sugoi",
@@ -10474,6 +10576,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "kk-ganbaru",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kk_ganbaru"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "kkk-pua",
     "target": "x",
     "type": "affiliation",
@@ -10711,6 +10826,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "kou-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kou_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "kou19960209",
     "target": "x",
     "type": "affiliation",
@@ -10928,7 +11056,7 @@
     "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "kuroiwa-45",
@@ -10942,7 +11070,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "kuroiwa-45",
@@ -10955,7 +11083,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "kuroiwa-sub",
@@ -11286,6 +11414,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "lr0tvq4eaehngq9",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Lr0tvQ4eAehngQ9"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "lsd-pua",
     "target": "x",
     "type": "affiliation",
@@ -11453,6 +11594,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "magic-boy69",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Magic_boy69"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "magic-kaito7",
@@ -11993,7 +12147,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 24 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "mikeymikey0601",
@@ -12007,7 +12161,7 @@
     "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 24 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "mikeymikey0601",
@@ -12020,7 +12174,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 24 handles and matched 2 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "mikeynosub",
@@ -12204,7 +12358,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 19 handles and matched 1 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "minigola-street",
@@ -12601,7 +12755,7 @@
     "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "mote-ren-ai7",
@@ -12615,7 +12769,7 @@
     "confidence": 0.72,
     "evidence_kind": "fact",
     "needs_review": false,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "mote-ren-ai7",
@@ -12628,7 +12782,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "source": "motebody-pua",
@@ -13563,6 +13717,33 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "naonao3827",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/naonao3827",
+      "https://note.com/naonao3827"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "naonao3827",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/naonao3827"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "naruto-nanpa",
     "target": "x",
     "type": "affiliation",
@@ -13666,6 +13847,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "nekos-jf",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/nekos_jf"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "nekosan",
@@ -14021,6 +14215,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "norinori-10goku",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/norinori_10goku"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "nrtq5ihqepycy0n",
@@ -15854,6 +16061,41 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "razer-pua",
+    "target": "onizuka-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "razer-pua",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "razer-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Razer_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "real-nampa",
@@ -18833,6 +19075,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "t3vde",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/t3vde"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "t44dw",
     "target": "x",
     "type": "affiliation",
@@ -19134,6 +19389,33 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "temomote1",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/temomote1"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "temomote1",
+    "target": "youtube",
+    "type": "affiliation",
+    "description": "Profile links point to YouTube.",
+    "source_urls": [
+      "https://x.com/temomote1",
+      "https://youtube.com/@temomote1?si=uiniR4AMXzivZYKm"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "tenma-pua",
@@ -21134,6 +21416,160 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "emuchi-pua",
+    "target": "cx-lm5",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @cx_lm5.",
+    "source_urls": [
+      "https://x.com/emuchi_pua",
+      "https://x.com/emuchi_pua/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "emuchi-pua",
+    "target": "mote-ren-ai7",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @mote_ren_ai7.",
+    "source_urls": [
+      "https://x.com/emuchi_pua",
+      "https://x.com/emuchi_pua/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "emuchi-pua",
+    "target": "t3vde",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @t3vde.",
+    "source_urls": [
+      "https://x.com/emuchi_pua",
+      "https://x.com/emuchi_pua/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "kuroiwa-45",
+    "target": "razer-pua",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @Razer_pua.",
+    "source_urls": [
+      "https://x.com/kuroiwa_45",
+      "https://x.com/kuroiwa_45/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "kuroiwa-45",
+    "target": "temomote1",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @temomote1.",
+    "source_urls": [
+      "https://x.com/kuroiwa_45",
+      "https://x.com/kuroiwa_45/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mikeymikey0601",
+    "target": "hancho-pua",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @hancho_pua.",
+    "source_urls": [
+      "https://x.com/mikeymikey0601",
+      "https://x.com/mikeymikey0601/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mikeymikey0601",
+    "target": "magic-boy69",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @Magic_boy69.",
+    "source_urls": [
+      "https://x.com/mikeymikey0601",
+      "https://x.com/mikeymikey0601/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mine-chan-pua",
+    "target": "naonao3827",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @naonao3827.",
+    "source_urls": [
+      "https://x.com/MINE_chan_pua",
+      "https://x.com/MINE_chan_pua/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "4050-machiapp",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @4050_machiapp.",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://x.com/mote_ren_ai7/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "norinori-10goku",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @norinori_10goku.",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://x.com/mote_ren_ai7/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+  },
+  {
+    "source": "mote-ren-ai7",
+    "target": "t3vde",
+    "type": "follow",
+    "description": "Authenticated X following list shows this account follows @t3vde.",
+    "source_urls": [
+      "https://x.com/mote_ren_ai7",
+      "https://x.com/mote_ren_ai7/following"
+    ],
+    "confidence": 0.64,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
   },
   {
     "source": "aizen-pua",
@@ -24192,6 +24628,19 @@
     "review_notes": "Generated review candidate consolidated from profile_text via mention match 'ゆき'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "nekos-jf",
+    "target": "rockpua-sub",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @リー への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/nekos_jf"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "neoneet-ai2",
     "target": "one",
     "type": "profile_mention",
@@ -24885,6 +25334,19 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@emuchi_pua, emuchi_pua'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "razer-pua",
+    "target": "kurosakikun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @黒崎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Razer_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "real-nampa",
@@ -25920,6 +26382,20 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "temomote1",
+    "target": "zero-n2",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @ゼロ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/temomote1",
+      "https://youtube.com/@temomote1?si=uiniR4AMXzivZYKm"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "tensai-nanpa4",
