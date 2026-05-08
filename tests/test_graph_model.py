@@ -235,7 +235,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('rel="icon" href="icon.svg"', html)
         self.assertIn('class="header-icon" src="icon.svg"', html)
         self.assertIn("avatar-thumb", html)
-        self.assertIn("実データ成長目標", html)
+        self.assertNotIn("実データ成長目標", html)
         self.assertIn("表示方針", html)
         self.assertIn("const visibleNodeIds = new Set();", html)
         self.assertIn("※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。", html)
@@ -271,7 +271,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('document.getElementById("detail-panel").addEventListener("click"', html)
         self.assertIn("updateKeywordClusterControl()", html)
         self.assertIn("却下", html)
-        self.assertIn("2 / 1000", html)
+        self.assertNotIn("2 / 1000", html)
 
     def test_export_html_writes_companion_graph_data_json(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

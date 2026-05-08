@@ -1511,29 +1511,6 @@ def render_html(
     </div>
   </header>
   <main>
-    <section class="panel">
-      <h2>実データ成長目標</h2>
-      <p class="muted">__GROWTH_DESCRIPTION__</p>
-      <section class="stats">
-        <div class="stat"><span class="muted">実在人物</span><strong>__GROWTH_HEADLINE__</strong></div>
-        __GROWTH_PHASE_CARDS__
-      </section>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>種別</th>
-              <th>現在の実データ数</th>
-              <th>目標レンジ</th>
-            </tr>
-          </thead>
-          <tbody>
-            __GROWTH_TYPE_ROWS__
-          </tbody>
-        </table>
-      </div>
-    </section>
-
     <section class="panel controls sticky-controls">
       <div class="search-control">
         <label for="search"><strong>名前検索</strong></label>
