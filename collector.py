@@ -487,13 +487,18 @@ def login_x_and_save_auth_state(
 ) -> Path:
     try:
         from playwright.sync_api import sync_playwright
+        from playwright_stealth import Stealth
     except ImportError as exc:
-        raise RuntimeError("Playwright is required for authenticated X login.") from exc
+        raise RuntimeError("Playwright and playwright-stealth are required for authenticated X login.") from exc
 
     auth_state_path.parent.mkdir(parents=True, exist_ok=True)
-    with sync_playwright() as playwright:
+    with Stealth().use_sync(sync_playwright()) as playwright:
         browser = playwright.chromium.launch(headless=False)
-        context = browser.new_context()
+        context = browser.new_context(
+            locale="ja-JP",
+            timezone_id="Asia/Tokyo",
+            viewport={"width": 1366, "height": 900},
+        )
         page = context.new_page()
         page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
         if ready_file is None:
@@ -503,10 +508,16 @@ def login_x_and_save_auth_state(
             print("=" * 60)
         _wait_after_manual_x_login(ready_file)
         page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
-        time.sleep(2)
-        if "login" in page.url.casefold():
-            browser.close()
-            raise RuntimeError("Still on X login flow after manual confirmation.")
+        page.wait_for_timeout(3000)
+        cookies = context.cookies()
+        has_auth = any(c["name"] == "auth_token" for c in cookies)
+        if not has_auth:
+            body = page.locator("body").inner_text(timeout=5000) or ""
+            if "login" in page.url.casefold() or "flow/login" in page.url:
+                browser.close()
+                raise RuntimeError("Still on X login flow after manual confirmation.")
+            if "For you" not in body and "タイムライン" not in body and "Following" not in body:
+                print("WARNING: Login may not be complete. Continuing anyway...")
         context.storage_state(path=str(auth_state_path))
         browser.close()
     return auth_state_path
@@ -519,8 +530,9 @@ def auto_login_x_and_save_auth_state(
 ) -> Path:
     try:
         from playwright.sync_api import sync_playwright
+        from playwright_stealth import Stealth
     except ImportError as exc:
-        raise RuntimeError("Playwright is required for authenticated X login.") from exc
+        raise RuntimeError("Playwright and playwright-stealth are required for authenticated X login.") from exc
 
     username, password = load_x_login_credentials(dotenv_path)
     if not username or not password:
@@ -528,31 +540,20 @@ def auto_login_x_and_save_auth_state(
         raise RuntimeError(f"Missing TWITTER_USERNAME / TWITTER_PASSWORD in environment{dotenv_note}.")
 
     auth_state_path.parent.mkdir(parents=True, exist_ok=True)
-    with sync_playwright() as playwright:
+    with Stealth().use_sync(sync_playwright()) as playwright:
         browser = playwright.chromium.launch(
-            channel="chrome",
             headless=False,
             args=[
-                "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
             ],
         )
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
             locale="ja-JP",
             timezone_id="Asia/Tokyo",
             viewport={"width": 1366, "height": 900},
         )
-        add_x_stealth_init_script(context)
         page = context.new_page()
-        page.goto("https://twitter.com", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(5000)
-        page.mouse.wheel(0, 120)
-        page.wait_for_timeout(1200)
-        page.mouse.wheel(0, -120)
-        page.wait_for_timeout(1200)
         page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(8000)
 
@@ -593,9 +594,16 @@ def auto_login_x_and_save_auth_state(
         page.wait_for_timeout(8000)
         page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(5000)
-        if "login" in page.url.casefold():
-            browser.close()
-            raise RuntimeError("Automatic X login still ended on the login flow.")
+        cookies = context.cookies()
+        has_auth = any(c["name"] == "auth_token" for c in cookies)
+        if not has_auth:
+            if "login" in page.url.casefold() or "flow/login" in page.url:
+                browser.close()
+                raise RuntimeError("Automatic X login still ended on the login flow.")
+            body = page.locator("body").inner_text(timeout=5000) or ""
+            if "For you" not in body and "タイムライン" not in body:
+                browser.close()
+                raise RuntimeError("Automatic X login did not reach the timeline.")
         context.storage_state(path=str(auth_state_path))
         browser.close()
     return auth_state_path
@@ -640,7 +648,7 @@ def collect_authenticated_following_handles(
         stagnant_rounds = 0
         for _ in range(8):
             hrefs = page.eval_on_selector_all(
-                "a[href]",
+                'div[data-testid="cellInnerDiv"] a[href]',
                 "elements => elements.map(element => element.getAttribute('href') || '')",
             )
             handles = extract_x_following_handles_from_hrefs(hrefs, source_handle=source_handle)

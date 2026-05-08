@@ -1187,6 +1187,15 @@ def render_html(
       display: grid;
       gap: 16px;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      align-items: start;
+    }
+    .sticky-controls {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .search-control {
+      min-width: 0;
     }
     .filter-group {
       display: flex;
@@ -1196,7 +1205,7 @@ def render_html(
     }
     .chip {
       border: 1px solid var(--border);
-      border-radius: 999px;
+      border-radius: 8px;
       padding: 6px 10px;
       display: inline-flex;
       align-items: center;
@@ -1204,6 +1213,54 @@ def render_html(
       background: #fff;
       color: var(--muted);
       font-size: 13px;
+    }
+    .action-row,
+    .search-results,
+    .view-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .action-row {
+      margin-top: 10px;
+    }
+    .search-results {
+      margin-top: 10px;
+    }
+    .search-result-button,
+    .action-button {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text);
+      padding: 8px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .search-result-button {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .search-result-button:hover,
+    .action-button:hover {
+      border-color: var(--accent);
+      background: #f6f9ff;
+      color: var(--accent);
+    }
+    .view-summary {
+      align-items: center;
+    }
+    .network-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .network-head h2 {
+      margin-bottom: 0;
     }
     .stats {
       display: grid;
@@ -1213,7 +1270,7 @@ def render_html(
     .stat {
       background: #f9fbff;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 12px;
     }
     .stat strong {
@@ -1250,14 +1307,14 @@ def render_html(
     #network {
       height: 720px;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
       background: #fff;
     }
     input[type="search"] {
       width: 100%;
       box-sizing: border-box;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 10px 12px;
       font-size: 14px;
     }
@@ -1265,7 +1322,7 @@ def render_html(
       width: 100%;
       box-sizing: border-box;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 8px;
       padding: 10px 12px;
       font-size: 14px;
       background: #fff;
@@ -1292,7 +1349,7 @@ def render_html(
       max-height: 360px;
       overflow: auto;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
     }
     .table-footer {
       margin-top: 10px;
@@ -1307,7 +1364,7 @@ def render_html(
     .tag {
       display: inline-block;
       padding: 2px 8px;
-      border-radius: 999px;
+      border-radius: 8px;
       font-size: 12px;
       font-weight: 700;
       background: #eef4ff;
@@ -1387,7 +1444,7 @@ def render_html(
     }
     .connected-node-card {
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
       padding: 10px;
       background: #f9fbff;
     }
@@ -1419,7 +1476,7 @@ def render_html(
     }
     .inspect-button {
       border: 1px solid var(--border);
-      border-radius: 999px;
+      border-radius: 8px;
       background: #fff;
       color: var(--accent);
       padding: 6px 10px;
@@ -1477,14 +1534,21 @@ def render_html(
       </div>
     </section>
 
-    <section class="panel controls">
-      <div>
+    <section class="panel controls sticky-controls">
+      <div class="search-control">
         <label for="search"><strong>名前検索</strong></label>
-        <input id="search" type="search" placeholder="名前 / id / 別名 / 説明">
+        <input id="search" type="search" list="search-suggestions" placeholder="名前 / id / 別名 / 説明">
+        <datalist id="search-suggestions"></datalist>
+        <div id="search-results" class="search-results"></div>
       </div>
       <div>
         <strong>表示方針</strong>
-        <div class="muted">人物・コミュニティを中心に、関係が見やすいアカウント相関へ絞っています。</div>
+        <div class="action-row">
+          <button type="button" id="reset-view" class="action-button">全体に戻す</button>
+          <button type="button" id="fit-graph" class="action-button">中央へ</button>
+          <button type="button" id="quick-connectivity" class="action-button">近い関係</button>
+          <button type="button" id="quick-keyword" class="action-button">キーワード</button>
+        </div>
       </div>
       <div>
         <label for="cluster-mode"><strong>関係クラスタ</strong></label>
@@ -1543,7 +1607,10 @@ def render_html(
 
     <section class="graph-layout">
       <section class="panel network-panel">
-        <h2>アカウント相関ビュー</h2>
+        <div class="network-head">
+          <h2>アカウント相関ビュー</h2>
+          <div id="view-summary" class="view-summary"></div>
+        </div>
         <p class="muted">人物・コミュニティ同士のつながりを優先して、相関の見やすさを保っています。</p>
         <p class="muted">※ 現在の公開版は、公開プロフィールや公式ページで確認できた実在ノードのみを掲載しています。関係は明示的な記述を優先し、未確認の推測は含めません。</p>
         <div id="network"></div>
@@ -1799,6 +1866,11 @@ def render_html(
     const allNodeTypes = [...new Set(rawGraph.nodes.map((node) => node.type))];
     const allEdgeTypes = [...new Set(rawGraph.edges.map((edge) => edge.type))];
     const rawNodeById = new Map(rawGraph.nodes.map((node) => [node.id, node]));
+    const nodeDegreeById = new Map();
+    rawGraph.edges.forEach((edge) => {
+      nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
+      nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
+    });
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
     let currentVisibleReviewNodes = [];
@@ -1821,6 +1893,15 @@ def render_html(
 
     document.getElementById("total-nodes").textContent = rawGraph.nodes.length;
     document.getElementById("total-edges").textContent = rawGraph.edges.length;
+    document.getElementById("search-suggestions").innerHTML = rawGraph.nodes
+      .filter((node) => accountNodeTypes.has(node.type))
+      .sort((left, right) =>
+        (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
+        left.name.localeCompare(right.name, "ja")
+      )
+      .slice(0, 300)
+      .map((node) => `<option value="${escapeHtml(node.name)}"></option>`)
+      .join("");
 
     function escapeHtml(value) {
       return String(value)
@@ -2030,6 +2111,45 @@ def render_html(
         .join(" ")
         .toLowerCase();
       return haystack.includes(term);
+    }
+
+    function renderSearchResults(term, visibleNodes) {
+      const container = document.getElementById("search-results");
+      if (!container) {
+        return;
+      }
+      if (!term) {
+        container.innerHTML = "";
+        return;
+      }
+      const matches = visibleNodes
+        .filter((node) => matchesSearch(node, term))
+        .sort((left, right) =>
+          (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
+          left.name.localeCompare(right.name, "ja")
+        )
+        .slice(0, 8);
+      container.innerHTML = matches.length
+        ? matches.map((node) => `
+            <button type="button" class="search-result-button" data-node-id="${escapeHtml(node.id)}">
+              ${escapeHtml(node.name)}
+            </button>
+          `).join("")
+        : '<span class="muted">一致なし</span>';
+    }
+
+    function renderViewSummary(visibleNodes, visibleEdges) {
+      const container = document.getElementById("view-summary");
+      if (!container) {
+        return;
+      }
+      const people = visibleNodes.filter((node) => node.type === "person").length;
+      const communities = visibleNodes.filter((node) => node.type === "community").length;
+      container.innerHTML = `
+        <span class="tag">${escapeHtml(people)} 人物</span>
+        <span class="tag">${escapeHtml(communities)} コミュニティ</span>
+        <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
+      `;
     }
 
     function formatLinkList(urls) {
@@ -2571,6 +2691,8 @@ def render_html(
       document.getElementById("review-nodes").textContent = currentVisibleReviewNodes.length;
       document.getElementById("review-edges").textContent = currentVisibleReviewEdges.length;
       document.getElementById("review-candidates").textContent = visibleReviewCandidates.length;
+      renderSearchResults(term, visibleNodes);
+      renderViewSummary(visibleNodes, visibleEdges);
       renderVisibleTables();
 
       if (selectedNodeId) {
@@ -2580,8 +2702,63 @@ def render_html(
       }
     }
 
+    function fitVisibleGraph() {
+      window.setTimeout(() => {
+        if (currentVisibleNodes.length) {
+          network.fit({ animation: { duration: 250, easingFunction: "easeInOutQuad" } });
+        }
+      }, 50);
+    }
+
+    function resetView() {
+      document.getElementById("search").value = "";
+      document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
+        input.checked = true;
+      });
+      if (clusterModeInput) {
+        clusterModeInput.value = "off";
+      }
+      if (keywordClusterInput) {
+        keywordClusterInput.value = "";
+      }
+      selectedNodeId = null;
+      updateClusterModeHelp();
+      updateKeywordClusterControl();
+      applyFilters();
+      fitVisibleGraph();
+    }
+
     const debouncedApplyFilters = debounce(applyFilters, 120);
     document.getElementById("search").addEventListener("input", debouncedApplyFilters);
+    document.getElementById("search-results").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-node-id]");
+      if (!button) {
+        return;
+      }
+      focusNode(button.getAttribute("data-node-id"));
+    });
+    document.getElementById("reset-view").addEventListener("click", resetView);
+    document.getElementById("fit-graph").addEventListener("click", fitVisibleGraph);
+    document.getElementById("quick-connectivity").addEventListener("click", () => {
+      if (clusterModeInput) {
+        clusterModeInput.value = "connectivity";
+        updateClusterModeHelp();
+        updateKeywordClusterControl();
+      }
+      document.getElementById("search").value = "";
+      applyFilters();
+      fitVisibleGraph();
+    });
+    document.getElementById("quick-keyword").addEventListener("click", () => {
+      if (clusterModeInput) {
+        clusterModeInput.value = "keyword_group";
+        updateClusterModeHelp();
+        updateKeywordClusterControl();
+      }
+      document.getElementById("search").value = "";
+      applyFilters();
+      fitVisibleGraph();
+    });
     document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });

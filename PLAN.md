@@ -6,8 +6,8 @@
 
 ## Current State
 
-- 公開データは **535 nodes / 1512 edges / 255 review candidates**
-- 実在人物カウントは **508 / 1000**
+- 公開データは **1047 nodes / 2029 edges / 0 review candidates**
+- 実在人物カウントは **1017 / 1000**
 - 公開 UI は **単一の account-centric graph** に整理済み
 - relation semantics は `follow` / `profile_mention` / `affiliation` / `influence` などに明確化済み
 - 右側 detail panel では接続ノードを type ごとに見られる
@@ -65,19 +65,19 @@
 
 ### Graph Growth
 
-- following-guided wave を重ねて **500 実在人物** を突破
+- following-guided wave を重ねて **1000 実在人物** を突破
 - `えるスタ` を community として正しくモデリング
 - `utopua2`, `molmol-1919`, `nampa-girl`, `igaku-sato`, `kgori-0412`, `sen-xxv`, `nrtq5ihqepycy0n`, `25basabe`, `na-tu-sb` などの public-profile-backed node を追加
 - `palace-chilll` や `natu-douga` のような business / content side node も、関係が自然なものだけ増やしている
 
 ## Current Problems
 
-### 1. 1000 人まで増やす主戦略は following expansion
+### 1. 1000 人到達後も主戦略は following expansion
 
 公開プロフィールだけでも増やせるが、増加速度はどうしても鈍い。  
-1000 人規模に到達するには、**既存 seed account の following を辿って未登録 handle を大量発掘する流れ** が必要。
+1000 人規模には到達済みだが、主要 cluster の密度を上げるには、**既存 seed account の following を辿って未登録 handle を大量発掘する流れ** が引き続き有効。
 
-### 2. X authenticated following collection is currently blocked
+### 2. X authenticated following collection is partially recovered
 
 collector 側には以下がすでにある:
 
@@ -85,14 +85,14 @@ collector 側には以下がすでにある:
 - cookie file fallback
 - followed handle -> tracked account edge 化
 
-ただし今の環境では:
+今の環境では:
 
-- `data\\.x_auth_state.json` が未作成
-- `data\\.x_cookies.txt` も未作成
+- `data\\.x_auth_state.json` は期限切れで following page が login に戻る
+- `influencer_tweet_collector\\data\\.twitter_cookies.json` の cookie fallback で following smoke test は成功
 - headless Playwright / stealth login は X 側で `JavaScriptを使用できません` ページに落とされる
-- reference repo (`influencer_tweet_collector`) 由来の `undetected_chromedriver` 方式も、driver version と X login flow の両面でそのままでは安定しない
+- reference repo (`influencer_tweet_collector`) 由来の `undetected_chromedriver` 方式も、driver version は補正できたが X login flow は安定しない
 
-つまり、**following 収集ロジックはあるが、認証確立が未解決** という状態。
+つまり、**新規 login の自動化は未解決だが、cookie fallback による following expansion は再開可能** という状態。
 
 ### 3. Public-profile-only growth is still useful but slower
 
@@ -145,40 +145,39 @@ collector 側には以下がすでにある:
 ## Near-Term Milestones
 
 1. **Auth recovery milestone**
-   - auth_state または cookie による following 収集を 1 account で成功させる
+   - auth_state または cookie による following 収集を 1 account で成功済み
 
 2. **Next growth milestone**
-   - 550 real people 到達
-   - following reuse が通れば短期で突破可能
+   - 1000 real people 到達済み
+   - 次は候補の質を保ちながら cluster relation の密度を上げる
 
 3. **Mid growth milestone**
-   - 600-700 real people 到達
+   - following 候補の public profile screening を wave 化
    - cluster / side-account / community relation の密度も同時に上げる
 
 4. **Final target**
-   - 1000 real people
-   - ただし人数だけでなく、主要 cluster の relation richness も維持する
+   - 1000 real people は達成済み
+   - 今後は主要 cluster の relation richness を維持・改善する
 
 ## Concrete Next Execution Steps
 
-1. 通常ブラウザ login 完了後に `data\\.x_auth_state.json` を保存
-2. `collect_authenticated_following_handles()` を seed の代表アカウントで smoke test
-3. passing したら `x_profile_sources.json` の seed 群に対して following recollect
-4. unseen handles を候補一覧化
-5. public self-description があるものだけ seed / snapshot に昇格
-6. `python build_site.py --skip-collector` で再生成
-7. 実在人数と relation 増加量を記録
+1. cookie fallback を使って `collect_authenticated_following_handles()` を seed batch に再実行
+2. unseen handles を `data/growth/` に候補一覧化
+3. public self-description があるものだけ seed / snapshot に昇格
+4. `python build_site.py --skip-collector` で再生成
+5. 実在人数と relation 増加量を記録
+6. 期限切れに備えて通常ブラウザ login による `data\\.x_auth_state.json` 保存導線も残す
 
 ## Known Blockers
 
 - headless 自動ログインは X 側にブロックされる可能性が高い
-- authenticated following expansion は auth_state/cookie ができない限り本格始動できない
+- authenticated following expansion は現在の cookie が失効すると再ログインが必要
 - logged-out following page は現在の collector path ではほぼ使えない
 
 ## Decision For Now
 
 このプロジェクトの次のブレイクスルーは、  
-**新しい抽象化でも UI 改修でもなく、X 認証を通した following 収集の再開** である。
+**following 由来候補を安全に screening して、主要 cluster の relation density を上げる運用化** である。
 
-認証が通れば、現在のデータモデル・review workflow・Pages UI はそのまま活かして、  
-1000 人目標へかなり強く前進できる。
+cookie fallback で following expansion は再開できたので、現在のデータモデル・review workflow・Pages UI はそのまま活かして、
+人数だけでなく関係の濃さを育てる。

@@ -1,5 +1,18 @@
 [
   {
+    "source": "1388-pqq",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/1388_pqq"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "1tensaipua1",
     "target": "tokyo",
     "type": "activity",
@@ -76,6 +89,32 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate 666-mori__osaka__activity. Original evidence: 森｜スカウト募集・スカウトマン・求人 【関西・大阪・名古屋】 (@666___mori)\nナンパ師からスカウトに。主に歌舞伎町でぴえん狩り、港区でギャル狩りして活動。田舎で中卒で非行の道に走り暴走族特攻隊長某半グレ組織で幹部として成り上がる。某事件を経験し更生。現スカウト幹部＋大阪支部窓口。大規模な大阪支部部下募集中。質問はこちら▶︎ https://t.co/pmvzw7rRJD Approval note: bulk-approve"
+  },
+  {
+    "source": "aio5e7q1jl89900",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/AIO5e7q1jL89900"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "akari-pua",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/akari_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "ale-puapua",
@@ -918,6 +957,34 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '東京'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "hkun-theworld",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/hkun_theworld",
+      "https://note.com/hkun_theworld/n/n1827c389da35"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/ibu_photostyle",
+      "https://lin.ee/tzhouu3"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "jaws-girlhunter",
     "target": "tokyo",
     "type": "activity",
@@ -1190,6 +1257,20 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "kw1ew",
+    "target": "matching-apps",
+    "type": "activity",
+    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マッチングアプリ」の言及があるとして推定（自動）。",
+    "source_urls": [
+      "https://x.com/kw1ew",
+      "https://supreme-dingo-ae9.notion.site/11c4328b0cd78020b81fc05e5a4c1135?pvs=4"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'マッチングアプリ, マチアプ'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "liberty-pai",
@@ -2519,6 +2600,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "1388-pqq",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/1388_pqq"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "17go-pua",
     "target": "x",
     "type": "affiliation",
@@ -3108,6 +3202,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "aio5e7q1jl89900",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/AIO5e7q1jL89900"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "aiwoshiranai",
     "target": "x",
     "type": "affiliation",
@@ -3275,6 +3382,63 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "akari-pua",
+    "target": "dude123epic",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "akari-pua",
+    "target": "korilla-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "akari-pua",
+    "target": "shinkawa-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "akari-pua",
+    "target": "ururunpua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "akari-pua",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/akari_pua"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "akbgarrrr",
@@ -6289,6 +6453,52 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "dude123epic",
+    "target": "korilla-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "dude123epic",
+    "target": "shinkawa-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "dude123epic",
+    "target": "ururunpua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "dude123epic",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/Dude123Epic"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "dxiufncbzzmpmk6",
     "target": "x",
     "type": "affiliation",
@@ -8331,6 +8541,66 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "hkun-theworld",
+    "target": "ibu-photostyle",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "hkun-theworld",
+    "target": "note",
+    "type": "affiliation",
+    "description": "Profile links point to note.",
+    "source_urls": [
+      "https://x.com/hkun_theworld",
+      "https://note.com/hkun_theworld/n/n1827c389da35"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "hkun-theworld",
+    "target": "onizuka-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "hkun-theworld",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "hkun-theworld",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/hkun_theworld"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "honshit",
     "target": "tips",
     "type": "affiliation",
@@ -8421,6 +8691,55 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "line",
+    "type": "affiliation",
+    "description": "Profile links point to LINE.",
+    "source_urls": [
+      "https://x.com/ibu_photostyle",
+      "https://lin.ee/tzhouu3"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "onizuka-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/ibu_photostyle"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "idiot-pua",
@@ -8960,6 +9279,33 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kai0zero",
+    "target": "tips",
+    "type": "affiliation",
+    "description": "Profile links point to Tips.",
+    "source_urls": [
+      "https://x.com/kai0zero",
+      "https://tips.jp/s/fdSk4b"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "kai0zero",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kai0zero"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "kaiser-pua",
@@ -10167,6 +10513,19 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "kobarion15",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kobarion15"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
     "source": "kohaku-renai",
     "target": "x",
     "type": "affiliation",
@@ -10704,6 +11063,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kw1ew",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/kw1ew"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "kyo",
@@ -11312,6 +11684,19 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "maya159r",
+    "target": "x",
+    "type": "affiliation",
+    "description": "Profile links point to X.",
+    "source_urls": [
+      "https://x.com/maya159r"
+    ],
+    "confidence": 0.86,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
     "source": "mayuge-mbh",
@@ -21117,6 +21502,19 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "1388-pqq",
+    "target": "schon-nannpa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @シャン への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/1388_pqq"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シャン'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "5sato-pua",
     "target": "omamco-pua2",
     "type": "profile_mention",
@@ -21234,6 +21632,19 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "akari-pua",
+    "target": "puro-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @M氏 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/akari_pua"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "ale-puapua",
@@ -21888,6 +22299,19 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "dude123epic",
+    "target": "puro-nampa",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @M氏 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/Dude123Epic"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'M氏'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "ecchu2929",
     "target": "utaa-pua",
     "type": "profile_mention",
@@ -22477,6 +22901,20 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'うた'. This is review-only and not part of the canonical graph."
   },
   {
+    "source": "hkun-theworld",
+    "target": "kurosakikun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @黒崎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/hkun_theworld",
+      "https://note.com/hkun_theworld/n/n1827c389da35"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "honshit",
     "target": "rockpua-sub",
     "type": "profile_mention",
@@ -22489,6 +22927,20 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate honshit__rockpua-sub__profile_mention. Original evidence: パンくん (@honshit_)\n現役インスタグラマー｜インスタサロン運営｜現役インスタグラマーの外見・マーケ・マネタイズ指導｜ヤリラフィー ▶︎ 中小企業サラリーマン ▶︎ インスタ運用2ヶ月で1万フォロワー｜\nExternal link: https://tips.jp/s/MtpvX8 Approval note: bulk-approve"
+  },
+  {
+    "source": "ibu-photostyle",
+    "target": "kurosakikun",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @黒崎 への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/ibu_photostyle",
+      "https://lin.ee/tzhouu3"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "inpsub",
