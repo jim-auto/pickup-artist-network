@@ -1839,6 +1839,7 @@ def render_html(
     const allEdgeTypes = [...new Set(rawGraph.edges.map((edge) => edge.type))];
     const rawNodeById = new Map(rawGraph.nodes.map((node) => [node.id, node]));
     const nodeDegreeById = new Map();
+    const followDegreeById = new Map();
     rawGraph.edges.forEach((edge) => {
       const sourceNode = rawNodeById.get(edge.source);
       const targetNode = rawNodeById.get(edge.target);
@@ -1847,6 +1848,10 @@ def render_html(
       }
       nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
       nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
+      if (edge.type === "follow") {
+        followDegreeById.set(edge.source, (followDegreeById.get(edge.source) || 0) + 1);
+        followDegreeById.set(edge.target, (followDegreeById.get(edge.target) || 0) + 1);
+      }
     });
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))
@@ -1855,7 +1860,16 @@ def render_html(
         left.name.localeCompare(right.name, "ja")
       )
       .map((node) => node.id);
-    const defaultLabelNodeIds = new Set(rankedAccountNodeIds.slice(0, 22));
+    const rankedFollowNodeIds = rawGraph.nodes
+      .filter((node) => accountNodeTypes.has(node.type) && node.icon_url)
+      .sort((left, right) =>
+        (followDegreeById.get(right.id) || 0) - (followDegreeById.get(left.id) || 0) ||
+        (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
+        left.name.localeCompare(right.name, "ja")
+      )
+      .map((node) => node.id);
+    const defaultLabelNodeIds = new Set([...rankedAccountNodeIds.slice(0, 18), ...rankedFollowNodeIds.slice(0, 10)]);
+    const defaultIconNodeIds = new Set(rankedFollowNodeIds.slice(0, 48));
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
     let currentVisibleReviewNodes = [];
@@ -2660,10 +2674,21 @@ def render_html(
 
     function getNodeVisualValue(node, visibleNodes) {
       const degree = nodeDegreeById.get(node.id) || 0;
+      const followDegree = followDegreeById.get(node.id) || 0;
       if (visibleNodes.length > 500) {
-        return 1 + Math.min(9, Math.sqrt(degree) * 1.8);
+        return 1 + Math.min(10, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.8);
       }
       return 10 + Math.min(18, Math.sqrt(degree + 1) * 3);
+    }
+
+    function shouldShowNodeIcon(node, visibleNodes) {
+      if (!node.icon_url) {
+        return false;
+      }
+      if (visibleNodes.length <= 500) {
+        return true;
+      }
+      return defaultIconNodeIds.has(node.id);
     }
 
     function getNodeLabel(node, visibleNodes, term) {
@@ -2814,8 +2839,8 @@ def render_html(
           label: getNodeLabel(node, visibleNodes, term),
           group: node.type,
           value: getNodeVisualValue(node, visibleNodes),
-          shape: node.icon_url && (visibleNodes.length <= 500 || defaultLabelNodeIds.has(node.id)) ? "circularImage" : "dot",
-          image: node.icon_url && (visibleNodes.length <= 500 || defaultLabelNodeIds.has(node.id)) ? node.icon_url : undefined,
+          shape: shouldShowNodeIcon(node, visibleNodes) ? "circularImage" : "dot",
+          image: shouldShowNodeIcon(node, visibleNodes) ? node.icon_url : undefined,
           brokenImage: "icon.svg",
           color: {
             background: nodeColors[node.type] || "#64748b",
