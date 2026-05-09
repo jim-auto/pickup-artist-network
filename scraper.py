@@ -4,6 +4,7 @@ import argparse
 import copy
 import json
 import re
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
@@ -1294,7 +1295,11 @@ def materialize_inferred_social_edges(
 
 
 def infer_keyword_cluster_edges(graph: GraphData) -> int:
-    """キーワードクラスタ内で、既に共通隣接ノードを持つが未接続の人物ペアにaffiliation edgeを追加する。"""
+    """キーワードクラスタ内の弱い補助エッジを追加する。
+
+    まず共通隣接ノードを持つ人物ペアを接続し、さらに同じ明示キーワードを持つ
+    人物をクラスタ内ハブへ少数だけ接続する。全結合にはしない。
+    """
     from graph_model import KEYWORD_CLUSTER_RULES
 
     person_nodes = [node for node in graph.nodes if node.type == "person"]
@@ -1315,6 +1320,7 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
         adjacency[node_id] = set()
     for pair in existing_pairs:
         adjacency[pair[0]].add(pair[1])
+    node_by_id = {node.id: node for node in person_nodes}
 
     cluster_members: dict[str, list[str]] = {}
     for rule in KEYWORD_CLUSTER_RULES:
@@ -1366,6 +1372,73 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
                         },
                     )
                     added += 1
+                    existing_pairs.add((source_id, target_id))
+                    existing_pairs.add((target_id, source_id))
+                    adjacency[source_id].add(target_id)
+                    adjacency[target_id].add(source_id)
+                except ValueError:
+                    continue
+        sorted_members = sorted(
+            member_ids,
+            key=lambda node_id: (
+                -len(adjacency[node_id]),
+                node_by_id[node_id].name,
+                node_id,
+            ),
+        )
+        anchor_ids = sorted_members[: min(5, max(2, len(sorted_members) // 8))]
+        bridge_count_by_node: defaultdict[str, int] = defaultdict(int)
+        cluster_bridge_limit = min(36, max(6, len(sorted_members)))
+        cluster_bridge_added = 0
+        for source_id in sorted_members:
+            if cluster_bridge_added >= cluster_bridge_limit:
+                break
+            candidates = sorted(
+                (
+                    target_id
+                    for target_id in anchor_ids
+                    if target_id != source_id and (source_id, target_id) not in existing_pairs
+                ),
+                key=lambda node_id: (
+                    bridge_count_by_node[node_id],
+                    -len(adjacency[node_id]),
+                    node_by_id[node_id].name,
+                    node_id,
+                ),
+            )
+            for target_id in candidates:
+                if bridge_count_by_node[source_id] >= 1 or bridge_count_by_node[target_id] >= 6:
+                    continue
+                try:
+                    add_edge(
+                        graph,
+                        {
+                            "source": source_id,
+                            "target": target_id,
+                            "type": "affiliation",
+                            "description": (
+                                f"キーワードクラスタ「{rule_label}」に同時所属するため、"
+                                "クラスタ内の近い関係として補助接続（自動）。"
+                            ),
+                            "confidence": 0.27,
+                            "evidence_kind": "interpretation",
+                            "needs_review": True,
+                            "review_notes": (
+                                f"Keyword cluster '{rule_label}' bridge auto-edge. "
+                                "Added with per-node caps to avoid a full clique."
+                            ),
+                        },
+                    )
+                    added += 1
+                    cluster_bridge_added += 1
+                    bridge_count_by_node[source_id] += 1
+                    bridge_count_by_node[target_id] += 1
+                    existing_pairs.add((source_id, target_id))
+                    existing_pairs.add((target_id, source_id))
+                    adjacency[source_id].add(target_id)
+                    adjacency[target_id].add(source_id)
+                    if bridge_count_by_node[source_id] >= 1 or cluster_bridge_added >= cluster_bridge_limit:
+                        break
                 except ValueError:
                     continue
     return added

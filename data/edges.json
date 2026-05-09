@@ -2615,6 +2615,17 @@
   },
   {
     "source": "1388-pqq",
+    "target": "chomechome-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "1388-pqq",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -2758,6 +2769,17 @@
   },
   {
     "source": "25basabe",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "25basabe",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -2768,6 +2790,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "2gf3rchgar32924",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "2gf3rchgar32924",
@@ -2889,6 +2922,39 @@
   },
   {
     "source": "4meakg",
+    "target": "asumi-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "4meakg",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "4meakg",
+    "target": "jaws-girlhunter",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "4meakg",
     "target": "kimu-himitsu2",
     "type": "affiliation",
     "description": "Public X profile explicitly links @kimu__himitsu2 as the related sub account after repeated freezes.",
@@ -2899,6 +2965,17 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "4meakg",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "4meakg",
@@ -2925,6 +3002,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "4meakg",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "5963desuu",
@@ -3374,6 +3462,28 @@
   },
   {
     "source": "ak1-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ak1-pua",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ak1-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -3450,12 +3560,12 @@
     "source": "akari-pua",
     "target": "shinkawa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "akari-pua",
@@ -3718,6 +3828,17 @@
   },
   {
     "source": "amenbo-mbh",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "amenbo-mbh",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -3809,6 +3930,17 @@
   },
   {
     "source": "anus-asterisk",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 7 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 7."
+  },
+  {
+    "source": "anus-asterisk",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -3858,6 +3990,83 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 5."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 7 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 7."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "kibaaaana",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "araaraara-122",
@@ -3991,6 +4200,17 @@
   },
   {
     "source": "asahi-sao-pua",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ネクステ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ネクステ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "asahi-sao-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -4006,23 +4226,23 @@
     "source": "asahilove77",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 6."
   },
   {
     "source": "asahilove77",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 6."
   },
   {
     "source": "asahilove77",
@@ -4104,6 +4324,39 @@
   },
   {
     "source": "asumi-pua",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "asumi-pua",
+    "target": "jaws-girlhunter",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "asumi-pua",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "asumi-pua",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile uses the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
@@ -4127,6 +4380,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "asumi-pua",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "atannon-nampa",
@@ -4301,6 +4565,17 @@
   },
   {
     "source": "azuma-gouyin",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "azuma-gouyin",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -4353,25 +4628,36 @@
   },
   {
     "source": "bach-sokuhou",
-    "target": "doraemon-pua",
+    "target": "anus-asterisk",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "bach-sokuhou",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 6."
+  },
+  {
+    "source": "bach-sokuhou",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 13 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 13."
   },
   {
     "source": "bach-sokuhou",
@@ -4438,6 +4724,72 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bale-pua",
+    "target": "anus-asterisk",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "bale-pua",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "bale-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 5."
+  },
+  {
+    "source": "bale-pua",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "bale-pua",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "bale-pua",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "bale-pua",
@@ -4715,6 +5067,17 @@
   },
   {
     "source": "bird-pua",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "bird-pua",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -4820,6 +5183,17 @@
   },
   {
     "source": "bokupaipan",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "bokupaipan",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -4860,6 +5234,83 @@
   },
   {
     "source": "bonnoupua2",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "bale-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "bonnoupua2",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -4870,6 +5321,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "yuki100-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「雄華軍団」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '雄華軍団' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "bossnn-pua",
@@ -5069,6 +5531,17 @@
   },
   {
     "source": "chami-pua",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "chami-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -5079,6 +5552,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "chamuranaoto",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "chamuranaoto",
@@ -5116,17 +5600,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '東京ストナン会' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "chamuranaoto",
-    "target": "yk-yamate",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "change-jp",
@@ -5312,6 +5785,61 @@
   },
   {
     "source": "chiroru-pua",
+    "target": "anus-asterisk",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 6."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "chiroru-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -5322,6 +5850,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "chiroru-pua-main",
+    "target": "anus-asterisk",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "chiroru-pua-main",
@@ -5338,23 +5877,23 @@
     "source": "chiroru-pua-main",
     "target": "bach-sokuhou",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "chiroru-pua-main",
-    "target": "bach-sokuhou",
+    "target": "bale-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "chiroru-pua-main",
@@ -5366,28 +5905,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
-  },
-  {
-    "source": "chiroru-pua-main",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 2."
-  },
-  {
-    "source": "chiroru-pua-main",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "chiroru-pua-main",
@@ -5413,6 +5930,17 @@
   },
   {
     "source": "chiroru-pua-main",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "chiroru-pua-main",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
     "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -5432,17 +5960,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "chiroru-pua-main",
-    "target": "nanpanyan4545",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "chiroru-pua-main",
@@ -5468,25 +5985,25 @@
   },
   {
     "source": "chiroru-pua-main",
-    "target": "streets-bach",
+    "target": "rui0808-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「帝都」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '帝都' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "chiroru-pua-main",
     "target": "streets-bach",
     "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "chiroru-pua-main",
@@ -5545,12 +6062,12 @@
     "source": "chomechome-pua",
     "target": "shelly4821",
     "type": "affiliation",
-    "description": "キーワードクラスタ「東カレ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「東カレ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '東カレ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '東カレ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "chomechome-pua",
@@ -5712,6 +6229,17 @@
   },
   {
     "source": "clark-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "clark-pua",
     "target": "shunon-street",
     "type": "affiliation",
     "description": "キーワードクラスタ「ジュルマ一門」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -5867,6 +6395,28 @@
   },
   {
     "source": "cx-lm5",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「セクシーコマンドー」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'セクシーコマンドー' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "cx-lm5",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "cx-lm5",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -5943,6 +6493,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "daigakusei-pua",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "daigakusei-pua",
@@ -6061,6 +6622,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "dawson-nst",
+    "target": "senju-insta",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「NST」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'NST' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "dawson-nst",
@@ -6243,6 +6815,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "dobukasu123",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "dobukasu123",
@@ -6455,6 +7038,17 @@
   },
   {
     "source": "ds-mbh",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ds-mbh",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -6510,34 +7104,34 @@
     "source": "dude123epic",
     "target": "korilla-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "dude123epic",
     "target": "shinkawa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "dude123epic",
     "target": "ururunpua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "dude123epic",
@@ -7038,6 +7632,17 @@
   },
   {
     "source": "fake-nagase",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「セクシーコマンドー」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'セクシーコマンドー' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "fake-nagase",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -7048,6 +7653,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "fake-nagase",
+    "target": "yuki100-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「雄華軍団」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '雄華軍団' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "fake-pua",
@@ -7393,17 +8009,6 @@
   },
   {
     "source": "futaro-pua",
-    "target": "kazu-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「wing」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'wing' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "futaro-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -7682,45 +8287,56 @@
     "source": "goda-pua",
     "target": "resunnme",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "goda-pua",
     "target": "seiyoku-genkai",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "goda-pua",
     "target": "utaa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "goda-pua",
     "target": "utopua2",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "goda-pua",
+    "target": "wing-nampa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "goda-pua",
@@ -7739,12 +8355,12 @@
     "source": "goda-pua",
     "target": "xcandee",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "gogo-nishino",
@@ -7803,23 +8419,12 @@
     "source": "gokun-pua",
     "target": "nandeyanen-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「栗田」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「栗田」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '栗田' auto-edge. Shared neighbors: 3."
-  },
-  {
-    "source": "gokun-pua",
-    "target": "nandeyanen-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「KRT」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'KRT' auto-edge. Shared neighbors: 3."
+    "review_notes": "Keyword cluster '栗田' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "gokun-pua",
@@ -7836,6 +8441,17 @@
   },
   {
     "source": "gokurakuin69",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "gokurakuin69",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -7849,6 +8465,83 @@
   },
   {
     "source": "gorogoro-street",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 6."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "kibaaaana",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "gorogoro-street",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -7859,6 +8552,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "gorubakki-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "gorubakki-pua",
@@ -7952,6 +8656,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "gupy-pua",
+    "target": "wing-nampa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "gupy-pua",
@@ -8056,6 +8771,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "hamada-suto",
+    "target": "srs-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「淘汰男」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '淘汰男' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "hamada-suto",
@@ -8165,12 +8891,12 @@
     "source": "hanzo-prim",
     "target": "ayato-691",
     "type": "affiliation",
-    "description": "キーワードクラスタ「オタク」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「オタク」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'オタク' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'オタク' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "hanzo-prim",
@@ -8359,6 +9085,17 @@
   },
   {
     "source": "haruki010234",
+    "target": "riku-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「りお講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'りお講習' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "haruki010234",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -8514,6 +9251,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "chomechome-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "himotenohoshi",
@@ -8733,6 +9481,17 @@
   },
   {
     "source": "hpns-pua",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "hpns-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -8788,34 +9547,34 @@
     "source": "ibu-photostyle",
     "target": "onizuka-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "ibu-photostyle",
     "target": "razer-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "ibu-photostyle",
     "target": "suto-taro",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "ibu-photostyle",
@@ -8882,6 +9641,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "ike-pua",
+    "target": "wing-nampa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "ike-pua",
@@ -9016,6 +9786,17 @@
   },
   {
     "source": "instapua",
+    "target": "kgori-0412",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「NST」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'NST' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "instapua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -9026,6 +9807,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "inumaki-pua",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "inumaki-pua",
@@ -9147,6 +9939,28 @@
   },
   {
     "source": "jaws-girlhunter",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "jaws-girlhunter",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "jaws-girlhunter",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile states pickup activity with 東京ストナン会 starting from a posted date.",
@@ -9172,6 +9986,50 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "jaws-girlhunter",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "jim-nanpa",
+    "target": "nanpa-zin",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "jim-nanpa",
+    "target": "speedstarsora",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "jim-nanpa",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
     "source": "jim-nanpa",
     "target": "x",
     "type": "affiliation",
@@ -9183,6 +10041,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "jim-nanpa",
+    "target": "yuta-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "jimichas7",
@@ -9223,6 +10092,28 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "jiro-suto",
+    "target": "futaro-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「wing長期」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'wing長期' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "jiro-suto",
+    "target": "kazu-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "jiro-suto",
@@ -9398,6 +10289,17 @@
   },
   {
     "source": "kaiser-pua",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ネクステ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ネクステ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "kaiser-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -9434,6 +10336,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kamiya-pua",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "kamiya-pua",
@@ -9539,6 +10452,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kanbee-pua",
+    "target": "oskeeeer-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「雄華軍団」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '雄華軍団' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "kanbee-pua",
@@ -9660,6 +10584,83 @@
   },
   {
     "source": "karearitaberu",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "karearitaberu",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -9670,6 +10671,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "karon-pua",
+    "target": "ryuse-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「RiseUpLab」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'RiseUpLab' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "karon-pua",
@@ -9911,23 +10923,23 @@
     "source": "kazunanpa",
     "target": "asahilove77",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
@@ -9946,45 +10958,45 @@
     "source": "kazunanpa",
     "target": "konkatsu-nanpa",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
     "target": "nanpanyan4545",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
     "target": "reborn-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kazunanpa",
@@ -10213,6 +11225,17 @@
   },
   {
     "source": "kgori-0412",
+    "target": "senju-insta",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「NST」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'NST' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "kgori-0412",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -10228,27 +11251,16 @@
     "source": "kibaaaana",
     "target": "bach-sokuhou",
     "type": "affiliation",
-    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kibaaaana",
-    "target": "bach-sokuhou",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
-    "target": "bach-sokuhou",
+    "target": "chiroru-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
@@ -10270,36 +11282,25 @@
   },
   {
     "source": "kibaaaana",
-    "target": "chiroru-pua-main",
+    "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "kibaaaana",
-    "target": "doraemon-pua",
+    "target": "nanpanyan4545",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "kibaaaana",
@@ -10328,28 +11329,6 @@
   },
   {
     "source": "kibaaaana",
-    "target": "street-fami",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
-    "target": "street-fami",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
     "target": "street-win-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -10369,28 +11348,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
-    "target": "streets-bach",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "kibaaaana",
-    "target": "streets-bach",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "kibaaaana",
@@ -10430,6 +11387,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kill-pua",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "kill-pua",
@@ -10524,6 +11492,17 @@
   },
   {
     "source": "kirishima-nanpa",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "kirishima-nanpa",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -10577,6 +11556,17 @@
   },
   {
     "source": "kk-ganbaru",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "kk-ganbaru",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -10626,6 +11616,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "knt17760",
+    "target": "yuta-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "kobarion15",
@@ -10683,45 +11684,45 @@
     "source": "konkatsu-nanpa",
     "target": "asahilove77",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "konkatsu-nanpa",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "konkatsu-nanpa",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "konkatsu-nanpa",
     "target": "nanpanyan4545",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "konkatsu-nanpa",
@@ -10741,12 +11742,23 @@
     "source": "konkatsu-nanpa",
     "target": "reborn-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "speedstarsora",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ネクステ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ネクステ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "konkatsu-nanpa",
@@ -10805,12 +11817,12 @@
     "source": "korilla-pua",
     "target": "ururunpua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "korilla-pua",
@@ -10876,6 +11888,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "krazypua",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "krazypua",
@@ -11233,6 +12256,17 @@
   },
   {
     "source": "lcup-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "lcup-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -11256,6 +12290,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "leopard-nanpa",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "leopard-nanpa",
@@ -11571,6 +12616,17 @@
   },
   {
     "source": "madayaluyo",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "madayaluyo",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -11610,6 +12666,17 @@
   },
   {
     "source": "magic-kaito7",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "magic-kaito7",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -11620,6 +12687,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "makoto-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "makoto-pua",
@@ -11703,12 +12781,12 @@
     "source": "marifax-pua",
     "target": "pochama-izon",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "marifax-pua",
@@ -11727,12 +12805,12 @@
     "source": "maruoooon-pua",
     "target": "gureran-m3",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "maruoooon-pua",
@@ -11802,6 +12880,17 @@
   },
   {
     "source": "matchingmomonga",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "matchingmomonga",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -11854,6 +12943,17 @@
   },
   {
     "source": "mayuge-mbh",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "mayuge-mbh",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -11864,6 +12964,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "mbh-5",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "mbh-5",
@@ -11895,23 +13006,23 @@
     "source": "mbh-hal",
     "target": "gureran-m3",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "mbh-hal",
     "target": "maruoooon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "mbh-hal",
@@ -12006,6 +13117,28 @@
   },
   {
     "source": "mentaikopua-oji",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "mentaikopua-oji",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -12068,6 +13201,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "michimichi-mbh",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "michimichi-mbh",
@@ -12283,6 +13427,17 @@
   },
   {
     "source": "mina-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "mina-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -12479,6 +13634,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "mirinn-pua",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "mirinn-pua",
@@ -12891,6 +14057,17 @@
   },
   {
     "source": "moviefoodfc2",
+    "target": "rojou-ski",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「RiseUpLab」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'RiseUpLab' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "moviefoodfc2",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -12927,6 +14104,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "murakami-pua",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "murakami-pua",
@@ -12997,12 +14185,12 @@
     "source": "nagi-nanpa0922",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 7 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 7."
   },
   {
     "source": "nagi-nanpa0922",
@@ -13243,6 +14431,61 @@
   },
   {
     "source": "nampa1998",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "nampa1998",
+    "target": "puriketsu-nnp",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "nampa1998",
+    "target": "saku-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "nampa1998",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "nampa1998",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "nampa1998",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile lists the #東京ストナン会 hashtag alongside an @東京ストナン会 display label.",
@@ -13266,6 +14509,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "nampa1998",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "nampakago",
@@ -13492,6 +14746,17 @@
   },
   {
     "source": "nanpa-zin",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "nanpa-zin",
     "target": "pika-pua",
     "type": "affiliation",
     "description": "Public X profile explicitly says this account joined Pika's appearance-improvement course.",
@@ -13507,12 +14772,12 @@
     "source": "nanpa-zin",
     "target": "speedstarsora",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "nanpa-zin",
@@ -13555,47 +14820,47 @@
   },
   {
     "source": "nanpanyan4545",
+    "target": "anus-asterisk",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 6."
+  },
+  {
+    "source": "nanpanyan4545",
     "target": "asahilove77",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "nanpanyan4545",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "nanpanyan4545",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "nanpanyan4545",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "nanpanyan4545",
@@ -13899,6 +15164,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "neru-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "neru-pua",
@@ -14244,6 +15520,17 @@
   },
   {
     "source": "nsan-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "nsan-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -14558,6 +15845,17 @@
   },
   {
     "source": "oppsex1919",
+    "target": "speedstarsora",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ネクステ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ネクステ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "oppsex1919",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -14634,6 +15932,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "oscal-pua",
+    "target": "wing-nampa",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "oscal-pua",
@@ -15318,6 +16627,61 @@
   },
   {
     "source": "potato-pua",
+    "target": "4meakg",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "potato-pua",
+    "target": "asumi-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "potato-pua",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "potato-pua",
+    "target": "jaws-girlhunter",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "potato-pua",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "potato-pua",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile uses an @東京ストナン会 label in the display name.",
@@ -15341,6 +16705,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "potato-pua",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "pro-tinder",
@@ -15368,6 +16743,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "pua-2-yutty",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "pua-2-yutty",
@@ -15489,6 +16875,17 @@
   },
   {
     "source": "pua-donut",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "pua-donut",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -15575,6 +16972,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "pua-kei-mh",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "pua-kei-mh",
@@ -15736,6 +17144,17 @@
   },
   {
     "source": "pua-sakaki-40",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "pua-sakaki-40",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -15827,6 +17246,17 @@
   },
   {
     "source": "puapenguin",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "puapenguin",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -15853,6 +17283,50 @@
   },
   {
     "source": "puriketsu-nnp",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "saku-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "puriketsu-nnp",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile lists the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
@@ -15876,6 +17350,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "puriketsu-nnp",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "puro-nampa",
@@ -16066,23 +17551,23 @@
     "source": "razer-pua",
     "target": "onizuka-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "razer-pua",
     "target": "suto-taro",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "razer-pua",
@@ -16127,45 +17612,45 @@
     "source": "reborn-pua",
     "target": "asahilove77",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "reborn-pua",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "reborn-pua",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "reborn-pua",
     "target": "nanpanyan4545",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "reborn-pua",
@@ -16197,34 +17682,34 @@
     "source": "recoa-nanpa",
     "target": "gureran-m3",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "recoa-nanpa",
     "target": "maruoooon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "recoa-nanpa",
     "target": "mbh-hal",
     "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'MBH' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "recoa-nanpa",
@@ -16280,6 +17765,17 @@
   },
   {
     "source": "renren-pua",
+    "target": "senju-insta",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「NST」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'NST' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "renren-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16295,12 +17791,12 @@
     "source": "resunnme",
     "target": "utaa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 6."
   },
   {
     "source": "resunnme",
@@ -16357,6 +17853,17 @@
   },
   {
     "source": "riku-pua",
+    "target": "okarun-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「りお講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'りお講習' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "riku-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16367,6 +17874,39 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "riku-pua",
+    "target": "yuta-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "riku-pua0801",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "riku-pua0801",
+    "target": "qh0kum",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ナノ講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ナノ講習' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "riku-pua0801",
@@ -16448,6 +17988,72 @@
   },
   {
     "source": "river-p823",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "river-p823",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "river-p823",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 5."
+  },
+  {
+    "source": "river-p823",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "river-p823",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "river-p823",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "river-p823",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16497,6 +18103,28 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "rockpua-sub",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "rockpua-sub",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "rockpua-sub",
@@ -16631,6 +18259,17 @@
   },
   {
     "source": "rui0808-pua",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "rui0808-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16735,6 +18374,17 @@
   },
   {
     "source": "ryo-mindup",
+    "target": "cx-lm5",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「セクシーコマンドー」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'セクシーコマンドー' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ryo-mindup",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -16785,6 +18435,28 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "ryuse-pua",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ryuse-pua",
+    "target": "rojou-ski",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「RiseUpLab」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'RiseUpLab' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "ryuse-pua",
@@ -16932,6 +18604,39 @@
   },
   {
     "source": "saku-pua",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "saku-pua",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "saku-pua",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "saku-pua",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile uses an @東京ストナン会 label in the display name.",
@@ -16955,6 +18660,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "saku-pua",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "sala-chiki",
@@ -17089,6 +18805,72 @@
   },
   {
     "source": "schon-nannpa",
+    "target": "araaraara-122",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "bach-sokuhou",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 6 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 6."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "kibaaaana",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "schon-nannpa",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -17100,6 +18882,28 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "schon-nannpa",
@@ -17152,6 +18956,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "sei-pua1",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "sei-pua1",
@@ -17210,23 +19025,23 @@
     "source": "seiyoku-genkai",
     "target": "resunnme",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "seiyoku-genkai",
     "target": "utaa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "seiyoku-genkai",
@@ -17240,6 +19055,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "seizitunanpa",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "seizitunanpa",
@@ -17293,6 +19119,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "sendainanpa1234",
+    "target": "oskeeeer-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「雄華軍団」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '雄華軍団' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "sendainanpa1234",
@@ -17416,6 +19253,17 @@
   },
   {
     "source": "shelly4821",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "shelly4821",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -17426,6 +19274,28 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "shi-shimaru1983",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "shi-shimaru1983",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "shi-shimaru1983",
@@ -17661,12 +19531,12 @@
     "source": "shinkawa-pua",
     "target": "ururunpua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「こりらm氏講習」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'こりらm氏講習' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "shinkawa-pua",
@@ -17830,23 +19700,23 @@
     "source": "siofkn-pua",
     "target": "ugly-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "siofkn-pua",
     "target": "whity-dogging-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "siofkn-pua",
@@ -17928,6 +19798,28 @@
   },
   {
     "source": "so-pua",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "so-pua",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 5."
+  },
+  {
+    "source": "so-pua",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile lists the #東京ストナン会 hashtag with an @東京ストナン会 display label.",
@@ -17953,6 +19845,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "so-pua",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 10 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 10."
+  },
+  {
     "source": "sobakara-gaykid",
     "target": "x",
     "type": "affiliation",
@@ -17964,6 +19867,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "socool55555",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "socool55555",
@@ -17999,6 +19913,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '東カレ' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "soku-worker2",
+    "target": "suto-taro",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "soku-worker2",
@@ -18064,6 +19989,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "sorakaze12",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "sorakaze12",
@@ -18133,6 +20069,17 @@
   },
   {
     "source": "souyonesou",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "souyonesou",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -18186,6 +20133,39 @@
   },
   {
     "source": "srs-pua-main",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "srs-pua-main",
+    "target": "ryepua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「淘汰男」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '淘汰男' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "srs-pua-main",
+    "target": "speedstarsora",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "srs-pua-main",
     "target": "srs-pua-sub",
     "type": "affiliation",
     "description": "Public X profile explicitly links @srs_pua as the side account behind this profile.",
@@ -18209,6 +20189,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "srs-pua-sub",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ピカ講習 / ピカ外見コンサル」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ピカ講習 / ピカ外見コンサル' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "srs-pua-sub",
@@ -18304,78 +20295,45 @@
     "source": "street-fami",
     "target": "bach-sokuhou",
     "type": "affiliation",
-    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "street-fami",
-    "target": "bach-sokuhou",
+    "target": "chiroru-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "street-fami",
-    "target": "bach-sokuhou",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "street-fami",
     "target": "chiroru-pua-main",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "street-fami",
-    "target": "chiroru-pua-main",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "street-fami",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "street-fami",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "street-fami",
@@ -18390,6 +20348,17 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Page.goto: Timeout 120000ms exceeded. Call log: - navigating to \"https://x.com/street_Fami/following\", waiting until \"domcontentloaded\""
+  },
+  {
+    "source": "street-fami",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 7 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 7."
   },
   {
     "source": "street-fami",
@@ -18409,45 +20378,23 @@
     "source": "street-fami",
     "target": "street-win-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "street-fami",
     "target": "streets-bach",
     "type": "affiliation",
-    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「mスト部」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "street-fami",
-    "target": "streets-bach",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "street-fami",
-    "target": "streets-bach",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'mスト部' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "street-fami",
@@ -18492,45 +20439,45 @@
     "source": "street-win-pua",
     "target": "bach-sokuhou",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "street-win-pua",
     "target": "chiroru-pua-main",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "street-win-pua",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "street-win-pua",
     "target": "streets-bach",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "street-win-pua",
@@ -18573,6 +20520,17 @@
   },
   {
     "source": "streets-bach",
+    "target": "anus-asterisk",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 4."
+  },
+  {
+    "source": "streets-bach",
     "target": "bach-sokuhou",
     "type": "affiliation",
     "description": "Public X profile explicitly links @bach_sokuhou as the side account.",
@@ -18588,23 +20546,23 @@
     "source": "streets-bach",
     "target": "doraemon-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「のんちゃま」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'のんちゃま' auto-edge. Shared neighbors: 5."
   },
   {
     "source": "streets-bach",
-    "target": "doraemon-pua",
+    "target": "nanpanyan4545",
     "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 12 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 12."
   },
   {
     "source": "streets-bach",
@@ -18829,14 +20787,25 @@
   },
   {
     "source": "suto-taro",
+    "target": "chomechome-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東カレ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東カレ' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "suto-taro",
     "target": "onizuka-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「黒崎コンサル」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster '黒崎コンサル' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "suto-taro",
@@ -19037,6 +21006,17 @@
   },
   {
     "source": "syu-puanet",
+    "target": "chiroru-pua-main",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "syu-puanet",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -19102,6 +21082,17 @@
   },
   {
     "source": "taichi-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「明太子」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '明太子' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "taichi-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -19155,6 +21146,17 @@
   },
   {
     "source": "takenaka-pua",
+    "target": "riku-pua0801",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ナノ講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ナノ講習' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "takenaka-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -19194,6 +21196,72 @@
   },
   {
     "source": "taku-pua",
+    "target": "chamuranaoto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
+    "target": "nampa1998",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
+    "target": "puriketsu-nnp",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
+    "target": "saku-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
+    "target": "to-suto-tore",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ストナン会」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "taku-pua",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile dates membership text alongside the #東京ストナン会 hashtag.",
@@ -19217,6 +21285,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "taku-pua",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "takuya775551",
@@ -19323,6 +21402,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "taruchan100",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「帝都」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "taruchan100",
@@ -19456,6 +21546,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "tensai-nanpa4",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "tensai-nanpa4",
@@ -19671,6 +21772,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "to-suto-tore",
+    "target": "yk-yamate",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「東京ストナン会」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '東京ストナン会' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
     "source": "tocho-toan-pr",
     "target": "x",
     "type": "affiliation",
@@ -19786,6 +21898,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "tonpamiso",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "tonpamiso",
@@ -20198,34 +22321,34 @@
     "source": "utopua2",
     "target": "resunnme",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "utopua2",
     "target": "seiyoku-genkai",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "utopua2",
     "target": "utaa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 4 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 4."
   },
   {
     "source": "utopua2",
@@ -20444,23 +22567,23 @@
     "source": "west-pua",
     "target": "marifax-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "west-pua",
     "target": "pochama-izon",
     "type": "affiliation",
-    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「ポチャマ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'ポチャマ' auto-edge. Shared neighbors: 2."
   },
   {
     "source": "west-pua",
@@ -20479,12 +22602,12 @@
     "source": "whity-dogging-pua",
     "target": "ugly-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「SSB」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'SSB' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "whity-dogging-pua",
@@ -20498,6 +22621,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "wing-nampa",
+    "target": "jiro-suto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "wing-nampa",
@@ -20522,6 +22656,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "wlkrndstrt",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "wlkrndstrt",
@@ -20593,45 +22738,45 @@
     "source": "xcandee",
     "target": "resunnme",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "xcandee",
     "target": "seiyoku-genkai",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "xcandee",
     "target": "utaa-pua",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "xcandee",
     "target": "utopua2",
     "type": "affiliation",
-    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "description": "キーワードクラスタ「えるスタ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
     "source_urls": [],
     "confidence": 0.32,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 1."
+    "review_notes": "Keyword cluster 'えるスタ' auto-edge. Shared neighbors: 3."
   },
   {
     "source": "xcandee",
@@ -20988,6 +23133,17 @@
   },
   {
     "source": "yomaru-street",
+    "target": "ryepua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「淘汰男」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '淘汰男' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "yomaru-street",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -21014,6 +23170,17 @@
   },
   {
     "source": "yossy-st19",
+    "target": "nanpanyan4545",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「味噌」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '味噌' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "yossy-st19",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -21024,6 +23191,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "youkun-pua",
+    "target": "okarun-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「りお講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'りお講習' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "youkun-pua",
@@ -21053,6 +23231,17 @@
   },
   {
     "source": "yu-inst",
+    "target": "kgori-0412",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「NST」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'NST' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "yu-inst",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -21063,6 +23252,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "yuki100-pua",
+    "target": "oskeeeer-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「雄華軍団」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster '雄華軍団' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "yuki100-pua",
@@ -21144,6 +23344,28 @@
   },
   {
     "source": "yuta-pua",
+    "target": "jiro-suto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "yuta-pua",
+    "target": "kazu-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 2."
+  },
+  {
+    "source": "yuta-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -21154,6 +23376,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "yutayuta-pua",
+    "target": "jiro-suto",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「アツスト」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
+    "source_urls": [],
+    "confidence": 0.32,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'アツスト' auto-edge. Shared neighbors: 1."
   },
   {
     "source": "yutayuta-pua",
@@ -21191,6 +23424,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "yutty-2-pua",
+    "target": "doraemon-pua",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'ゆってぃ' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "yutty-2-pua",
@@ -21349,6 +23593,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "zushi-tokyo",
+    "target": "gureran-m",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "zushi-tokyo",
