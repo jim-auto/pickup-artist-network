@@ -786,6 +786,9 @@ def apply_source_snapshots(
         icon_url = str(snapshot.get("icon_url", "")).strip()
         if icon_url:
             source_node.icon_url = icon_url
+        follower_count = int(snapshot.get("follower_count", 0) or 0)
+        if follower_count > 0:
+            source_node.follower_count = follower_count
         source_node.evidence_kind = merge_evidence_kind(
             source_node.evidence_kind,
             str(snapshot.get("summary_evidence_kind", snapshot.get("evidence_kind", "fact"))),

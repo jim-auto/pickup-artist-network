@@ -192,6 +192,15 @@ def _normalize_bool(value: Any) -> bool:
     raise ValueError(f"Unsupported boolean value: {value!r}")
 
 
+def _normalize_non_negative_int(value: Any) -> int:
+    if value in (None, ""):
+        return 0
+    parsed = int(value)
+    if parsed < 0:
+        raise ValueError(f"Expected non-negative integer: {value!r}")
+    return parsed
+
+
 @dataclass(slots=True)
 class Node:
     id: str
@@ -200,6 +209,7 @@ class Node:
     aliases: list[str] = field(default_factory=list)
     description: str = ""
     icon_url: str = ""
+    follower_count: int = 0
     source_urls: list[str] = field(default_factory=list)
     confidence: float = 0.5
     evidence_kind: str = "fact"
@@ -215,6 +225,7 @@ class Node:
             aliases=_normalize_text_list(payload.get("aliases", [])),
             description=str(payload.get("description", "")).strip(),
             icon_url=str(payload.get("icon_url", "")).strip(),
+            follower_count=_normalize_non_negative_int(payload.get("follower_count", 0)),
             source_urls=_normalize_text_list(payload.get("source_urls", [])),
             confidence=_validate_confidence(float(payload.get("confidence", 0.5))),
             evidence_kind=_normalize_evidence_kind(payload.get("evidence_kind", "fact")),
@@ -230,6 +241,7 @@ class Node:
             "aliases": self.aliases,
             "description": self.description,
             "icon_url": self.icon_url,
+            "follower_count": self.follower_count,
             "source_urls": self.source_urls,
             "confidence": self.confidence,
             "evidence_kind": self.evidence_kind,
@@ -477,6 +489,7 @@ def export_csv(
                 "aliases",
                 "description",
                 "icon_url",
+                "follower_count",
                 "source_urls",
                 "confidence",
                 "evidence_kind",
@@ -494,6 +507,7 @@ def export_csv(
                     "aliases": " | ".join(node.aliases),
                     "description": node.description,
                     "icon_url": node.icon_url,
+                    "follower_count": node.follower_count,
                     "source_urls": " | ".join(node.source_urls),
                     "confidence": node.confidence,
                     "evidence_kind": node.evidence_kind,
@@ -928,6 +942,7 @@ def export_sqlite(
                 name TEXT NOT NULL,
                 description TEXT NOT NULL,
                 icon_url TEXT NOT NULL,
+                follower_count INTEGER NOT NULL,
                 confidence REAL NOT NULL,
                 evidence_kind TEXT NOT NULL,
                 needs_review INTEGER NOT NULL,
@@ -989,8 +1004,8 @@ def export_sqlite(
         for node in graph.nodes:
             connection.execute(
                 """
-                INSERT INTO nodes (id, type, name, description, icon_url, confidence, evidence_kind, needs_review, review_notes)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO nodes (id, type, name, description, icon_url, follower_count, confidence, evidence_kind, needs_review, review_notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     node.id,
@@ -998,6 +1013,7 @@ def export_sqlite(
                     node.name,
                     node.description,
                     node.icon_url,
+                    node.follower_count,
                     node.confidence,
                     node.evidence_kind,
                     int(node.needs_review),
@@ -1863,6 +1879,7 @@ def render_html(
     const rankedFollowNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type) && node.icon_url)
       .sort((left, right) =>
+        (right.follower_count || 0) - (left.follower_count || 0) ||
         (followDegreeById.get(right.id) || 0) - (followDegreeById.get(left.id) || 0) ||
         (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
         left.name.localeCompare(right.name, "ja")
@@ -1961,7 +1978,7 @@ def render_html(
         nodes: {
           shape: "dot",
           borderWidth: 1,
-          scaling: { min: 2, max: 14 },
+          scaling: { min: 2, max: 26 },
           font: { face: "Arial", size: 13, color: "#17212b" }
         },
         edges: {
@@ -2085,6 +2102,10 @@ def render_html(
 
     function formatEdgeType(value) {
       return edgeTypeLabels[value] || value;
+    }
+
+    function formatNumber(value) {
+      return Number(value || 0).toLocaleString("ja-JP");
     }
 
     function renderNodeTypeTag(value) {
@@ -2293,6 +2314,7 @@ def render_html(
           <div class="detail-meta">
             ${renderNodeTypeTag(node.type)}
             <span class="muted">${escapeHtml(node.id)}</span><br>
+            ${node.follower_count ? `<span class="muted">X followers: ${escapeHtml(formatNumber(node.follower_count))}</span><br>` : ""}
             <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
             ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
           </div>
@@ -2675,8 +2697,19 @@ def render_html(
     function getNodeVisualValue(node, visibleNodes) {
       const degree = nodeDegreeById.get(node.id) || 0;
       const followDegree = followDegreeById.get(node.id) || 0;
+      const followerCount = node.follower_count || 0;
+      const hasProfileIcon = node.icon_url && !node.icon_url.includes("/default_profile_");
       if (visibleNodes.length > 500) {
+        if (followerCount > 0) {
+          return 5 + Math.min(18, Math.log10(followerCount + 1) * 3.4);
+        }
+        if (hasProfileIcon) {
+          return 5 + Math.min(8, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.3);
+        }
         return 1 + Math.min(10, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.8);
+      }
+      if (followerCount > 0) {
+        return 8 + Math.min(22, Math.log10(followerCount + 1) * 4.5);
       }
       return 10 + Math.min(18, Math.sqrt(degree + 1) * 3);
     }
@@ -2685,10 +2718,13 @@ def render_html(
       if (!node.icon_url) {
         return false;
       }
+      if (node.icon_url.includes("/default_profile_")) {
+        return false;
+      }
       if (visibleNodes.length <= 500) {
         return true;
       }
-      return defaultIconNodeIds.has(node.id);
+      return true;
     }
 
     function getNodeLabel(node, visibleNodes, term) {
@@ -2847,7 +2883,11 @@ def render_html(
             border: "#ffffff",
             highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
           },
-          title: [node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`), node.description || ""]
+          title: [
+            node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`),
+            node.follower_count ? `X followers: ${formatNumber(node.follower_count)}` : "",
+            node.description || ""
+          ]
             .filter((value) => value)
             .join("\\n")
         }))

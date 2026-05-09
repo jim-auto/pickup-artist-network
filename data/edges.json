@@ -3616,17 +3616,6 @@
   },
   {
     "source": "ak1-pua",
-    "target": "chiroru-pua-main",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, @shi_shimaru1983."
-  },
-  {
-    "source": "ak1-pua",
     "target": "doraemon-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「ゆってぃ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
@@ -3638,7 +3627,7 @@
   },
   {
     "source": "ak1-pua",
-    "target": "shi-shimaru1983",
+    "target": "gureran-m",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -4059,7 +4048,7 @@
   },
   {
     "source": "amenbo-mbh",
-    "target": "gureran-m",
+    "target": "shi-shimaru1983",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -4137,23 +4126,23 @@
     "source": "anri-shibuya",
     "target": "beat-pro",
     "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+  },
+  {
+    "source": "anri-shibuya",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
-  },
-  {
-    "source": "anri-shibuya",
-    "target": "mentaikopua-oji",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
   },
   {
     "source": "anri-shibuya",
@@ -4164,29 +4153,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
-  },
-  {
-    "source": "anri-shibuya",
-    "target": "naruto-nanpa",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
-  },
-  {
-    "source": "anri-shibuya",
-    "target": "shibuya109suto",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
   },
   {
     "source": "anri-shibuya",
@@ -4210,7 +4177,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
   },
   {
     "source": "anshin-pua",
@@ -5195,6 +5162,17 @@
   },
   {
     "source": "ayase-mbh",
+    "target": "shi-shimaru1983",
+    "type": "affiliation",
+    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.27,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "ayase-mbh",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -5620,6 +5598,17 @@
   },
   {
     "source": "banabanasan",
+    "target": "cornwallcapital",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
+  },
+  {
+    "source": "banabanasan",
     "target": "etokyojam",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -5889,28 +5878,6 @@
   },
   {
     "source": "beat-pro",
-    "target": "cornwallcapital",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
-  },
-  {
-    "source": "beat-pro",
-    "target": "hayato-pua",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
-  },
-  {
-    "source": "beat-pro",
     "target": "heefoomee2",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -5933,6 +5900,17 @@
   },
   {
     "source": "beat-pro",
+    "target": "mote-hair00",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+  },
+  {
+    "source": "beat-pro",
     "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
@@ -5951,7 +5929,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @chouun_pua, 営業所長けーすけ@ブルバ100, モテ界隈特化美容師 えーちゃん."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @chouun_pua, 営業所長けーすけ@ブルバ100."
   },
   {
     "source": "beat-pro",
@@ -7595,18 +7573,7 @@
   },
   {
     "source": "cornwallcapital",
-    "target": "hayato-pua",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
-  },
-  {
-    "source": "cornwallcapital",
-    "target": "mentaikopua-oji",
+    "target": "beat-pro",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -7614,6 +7581,61 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "etokyojam",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "fami-ver2",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "saikyo-sutoti",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "shibuya109suto",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "tyopa-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
   },
   {
     "source": "cornwallcapital",
@@ -7626,18 +7648,18 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts. Generated snapshot differs from manual fields: profile_text."
   },
   {
     "source": "cornwallcapital",
-    "target": "yabuki-nampa",
+    "target": "zushi-tokyo",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
   },
   {
     "source": "court534",
@@ -8567,7 +8589,7 @@
   },
   {
     "source": "ds-mbh",
-    "target": "shi-shimaru1983",
+    "target": "gureran-m",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -10952,6 +10974,17 @@
   },
   {
     "source": "hayato-pua",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "hayato-pua",
     "target": "himotenohoshi",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -10965,12 +10998,23 @@
     "source": "hayato-pua",
     "target": "mentaikopua-oji",
     "type": "affiliation",
-    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.25,
+    "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
   },
   {
     "source": "hayato-pua",
@@ -10985,6 +11029,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "shibuya109suto",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
   },
   {
     "source": "hayato-pua",
@@ -11079,6 +11134,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "heefoomee2",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "henachoko-olive",
@@ -11395,7 +11461,7 @@
   },
   {
     "source": "hpns-pua",
-    "target": "shi-shimaru1983",
+    "target": "gureran-m",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -14135,7 +14201,7 @@
   },
   {
     "source": "krazypua",
-    "target": "gureran-m",
+    "target": "shi-shimaru1983",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -15559,17 +15625,6 @@
   },
   {
     "source": "mentaikopua-oji",
-    "target": "mote-hair00",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
-  },
-  {
-    "source": "mentaikopua-oji",
     "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -15578,6 +15633,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, ヤブキ＠ナンパ師."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
   },
   {
     "source": "mentaikopua-oji",
@@ -15668,7 +15734,7 @@
   },
   {
     "source": "michimichi-mbh",
-    "target": "shi-shimaru1983",
+    "target": "gureran-m",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -16362,7 +16428,7 @@
   },
   {
     "source": "mote-hair00",
-    "target": "beat-pro",
+    "target": "mentaikopua-oji",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -16370,28 +16436,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
-  },
-  {
-    "source": "mote-hair00",
-    "target": "naruto-nanpa",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
-  },
-  {
-    "source": "mote-hair00",
-    "target": "shibuya109suto",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
   },
   {
     "source": "mote-hair00",
@@ -19790,7 +19834,7 @@
   },
   {
     "source": "pua-donut",
-    "target": "gureran-m",
+    "target": "shi-shimaru1983",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -22335,17 +22379,6 @@
   },
   {
     "source": "shi-shimaru1983",
-    "target": "doraemon-pua",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
-    "source_urls": [],
-    "confidence": 0.32,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
-  },
-  {
-    "source": "shi-shimaru1983",
     "target": "gureran-m3",
     "type": "affiliation",
     "description": "キーワードクラスタ「MBH」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -24648,17 +24681,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "tensai-nanpa4",
-    "target": "gureran-m",
-    "type": "affiliation",
-    "description": "キーワードクラスタ「MBH」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.27,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Keyword cluster 'MBH' bridge auto-edge. Added with per-node caps to avoid a full clique."
   },
   {
     "source": "tensai-nanpa4",
@@ -28001,6 +28023,32 @@
     "review_notes": "Approved from review candidate colabo-yumeno__rockpua-sub__profile_mention. Original evidence: 仁藤夢乃 Yumeno Nito (@colabo_yumeno)\n@colabo_official 代表/ピンクの #バスカフェ #TsubomiCafe やシェルター、脱性売買相談所KEY運営/明治学院大学国際平和研究所研究員/著書・経歴等は https://t.co/uF6vt7kzkE #性搾取社会を見つめる #シリーズキモいおじさん #女性人権センター\nLocation: 日本 東京 Approval note: bulk-approve"
   },
   {
+    "source": "cornwallcapital",
+    "target": "kyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/cornwallcapital"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "streetkyo",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @kyo への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/cornwallcapital"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'kyo'. This is review-only and not part of the canonical graph."
+  },
+  {
     "source": "cry-curr-ar",
     "target": "streetkyo",
     "type": "profile_mention",
@@ -28789,19 +28837,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '黒崎'. This is review-only and not part of the canonical graph."
-  },
-  {
-    "source": "inpsub",
-    "target": "ryepua",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @ryepua への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/inpsub"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@ryepua, ryepua'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "inumaki-pua",
@@ -29650,19 +29685,6 @@
     "evidence_kind": "interpretation",
     "needs_review": false,
     "review_notes": "Approved from review candidate moneygirl-first__one__profile_mention. Original evidence: 非モテ.com (@moneygirl_first)\n魂のツイート。 Approval note: bulk-approve"
-  },
-  {
-    "source": "mote-hair00",
-    "target": "idol-project00",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @idol_project00 への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/mote_hair00"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@idol_project00, IDOL_project00, idol_project00'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "mote-hair00",
@@ -30906,19 +30928,6 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@roco_neko_, roco_neko_, @roco_neko, roco_neko'. This is review-only and not part of the canonical graph."
   },
   {
-    "source": "ryepua",
-    "target": "inpsub",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @inpsub への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/ryepua"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@inpsub, inpsub'. This is review-only and not part of the canonical graph."
-  },
-  {
     "source": "ryosuke-street2",
     "target": "bonds-wwww",
     "type": "profile_mention",
@@ -31702,20 +31711,6 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'リー'. This is review-only and not part of the canonical graph."
   },
   {
-    "source": "takenaka-pua",
-    "target": "lucky-tern262",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @lucky_tern262 への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/takenaka__pua",
-      "https://note.com/lucky_tern262"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from profile_text via mention match 'lucky_tern262'. This is review-only and not part of the canonical graph."
-  },
-  {
     "source": "taku-pua",
     "target": "tokyo-stonan-kai",
     "type": "profile_mention",
@@ -31741,6 +31736,19 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tantan_ura__, tantan_ura__, @tantan_ura, tantan_ura'. This is review-only and not part of the canonical graph."
+  },
+  {
+    "source": "tantan-ura",
+    "target": "tantan-pua",
+    "type": "profile_mention",
+    "description": "公開プロフィール・概要・固定ポストの文本から @tantan_pua_ への言及として推定（自動）。",
+    "source_urls": [
+      "https://x.com/tantan_ura__"
+    ],
+    "confidence": 0.4,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '@tantan_pua_, tantan_pua_, @tantan_pua, tantan_pua, しおたん'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "taru-pua",
@@ -31808,19 +31816,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'ゼロ'. This is review-only and not part of the canonical graph."
-  },
-  {
-    "source": "tensai-nanpa4",
-    "target": "pua-shin",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @シン への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/tensai_nanpa4"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'シン'. This is review-only and not part of the canonical graph."
   },
   {
     "source": "tinder-god",

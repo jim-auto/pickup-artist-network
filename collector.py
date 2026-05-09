@@ -780,6 +780,18 @@ def extract_profile_image_url_from_user_object(user_object: dict[str, object]) -
     return ""
 
 
+def extract_follower_count_from_user_object(user_object: dict[str, object]) -> int:
+    for field in ("followers_count", "normal_followers_count"):
+        value = user_object.get(field)
+        if value in (None, ""):
+            continue
+        try:
+            return max(0, int(value))
+        except (TypeError, ValueError):
+            continue
+    return 0
+
+
 def extract_x_embedded_profile(
     soup: BeautifulSoup,
     *,
@@ -807,10 +819,11 @@ def extract_x_embedded_profile(
                     "location": normalize_embedded_text(user_object.get("location")),
                     "external_url": extract_external_url_from_user_object(user_object),
                     "avatar_url": extract_profile_image_url_from_user_object(user_object),
+                    "follower_count": str(extract_follower_count_from_user_object(user_object)),
                 }
             match_index = script_text.find(handle_pattern, match_index + len(handle_pattern))
 
-    return {"handle": handle}
+    return {"handle": handle, "follower_count": "0"}
 
 
 def extract_display_name_from_title(raw_title: str, handle: str) -> str:
@@ -929,6 +942,7 @@ def extract_x_profile_details(
         "location": embedded_profile.get("location", ""),
         "external_url": embedded_profile.get("external_url", ""),
         "avatar_url": embedded_profile.get("avatar_url", ""),
+        "follower_count": embedded_profile.get("follower_count", "0"),
     }
 
 
@@ -1100,6 +1114,7 @@ def extract_x_profile_snapshot(
         "profile_url": fetched_url or source_url,
         "pinned_post_url": pinned_post["pinned_post_url"],
         "icon_url": str(details["avatar_url"]).strip(),
+        "follower_count": int(str(details.get("follower_count", "0") or "0")),
         "profile_text": profile_text,
         "pinned_post_text": pinned_post["pinned_post_text"],
         "links": links,
