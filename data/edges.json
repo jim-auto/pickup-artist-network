@@ -3110,6 +3110,28 @@
   },
   {
     "source": "666-mori",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "666-mori",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "666-mori",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -3904,6 +3926,17 @@
   },
   {
     "source": "anri-shibuya",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "anri-shibuya",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -4272,6 +4305,17 @@
   },
   {
     "source": "ashikaga-street",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "ashikaga-street",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -4391,6 +4435,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'ストナン会' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "atannon-nampa",
@@ -4976,6 +5031,28 @@
   },
   {
     "source": "beat-pro",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "beat-pro",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "beat-pro",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -5218,6 +5295,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 0 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bonds-wwww",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "bonds-wwww",
@@ -5639,6 +5727,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "charisma-doll",
@@ -6150,6 +6249,17 @@
   },
   {
     "source": "chouun-pua",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "chouun-pua",
     "target": "tips",
     "type": "affiliation",
     "description": "Profile links point to Tips.",
@@ -6327,6 +6437,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "cornwallcapital",
@@ -6517,6 +6638,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "daioki0430",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "daioki0430",
@@ -6907,6 +7039,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "doheyama",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
     "source": "dokuzetu819",
     "target": "x",
     "type": "affiliation",
@@ -7237,6 +7380,17 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": ""
+  },
+  {
+    "source": "ecchu2929",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "ecchu2929",
@@ -7813,6 +7967,17 @@
   },
   {
     "source": "foy-jibunmigaki",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "foy-jibunmigaki",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -8085,6 +8250,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "gamupua",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "garo-pua",
@@ -9148,6 +9324,17 @@
   },
   {
     "source": "hayato-pua",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "hayato-pua",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -9174,6 +9361,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "hayato-pua",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
     "source": "hciesa88",
     "target": "x",
     "type": "affiliation",
@@ -9185,6 +9383,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "heefoomee2",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "heefoomee2",
@@ -9275,6 +9484,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "hiro65247168",
@@ -10208,6 +10428,17 @@
   },
   {
     "source": "kageki-ashura",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kageki-ashura",
     "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "Public X profile explicitly links @mote_ren_ai7 as a related account.",
@@ -11065,6 +11296,17 @@
   },
   {
     "source": "kedama-camera",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kedama-camera",
     "target": "line",
     "type": "affiliation",
     "description": "Profile links point to LINE.",
@@ -11116,6 +11358,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "kei-nanpa",
@@ -11928,6 +12181,17 @@
   },
   {
     "source": "ktp5123",
+    "target": "bonds-wwww",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "ktp5123",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -12151,6 +12415,17 @@
   },
   {
     "source": "kurosaka-pua",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kurosaka-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -12175,6 +12450,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kurosaka-pua-wi",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "kurosaka-pua-wi",
@@ -12561,6 +12847,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "mabonasu-pua",
+    "target": "bonds-wwww",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "mabonasu-pua",
@@ -13898,6 +14195,17 @@
   },
   {
     "source": "mote-hair00",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mote-hair00",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -14167,6 +14475,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "nagasanpua",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "nagasanpua",
@@ -14929,6 +15248,17 @@
   },
   {
     "source": "nanpawars",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "nanpawars",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -15007,6 +15337,39 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "chouun-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "naruto-nanpa",
@@ -15895,6 +16258,17 @@
   },
   {
     "source": "osaka-kakuue",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "osaka-kakuue",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16171,6 +16545,17 @@
   },
   {
     "source": "paaman-pua",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "paaman-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16211,6 +16596,17 @@
   },
   {
     "source": "pako-dai",
+    "target": "bonds-wwww",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "pako-dai",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16221,6 +16617,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "pako-dai",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "palace-chilll",
@@ -16836,6 +17243,17 @@
   },
   {
     "source": "pua-co",
+    "target": "so-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「東京ストナン会」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'tokyo-stonan-kai' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "pua-co",
     "target": "tokyo-stonan-kai",
     "type": "affiliation",
     "description": "Public X profile explicitly references 東京ストナン会 alongside RiseUpLab-style onboarding guidance.",
@@ -17443,6 +17861,17 @@
   },
   {
     "source": "qrxt-a",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "qrxt-a",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -17837,6 +18266,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "right-pua",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "right-pua",
@@ -19383,6 +19823,17 @@
   },
   {
     "source": "shibuya109suto",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "shibuya109suto",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -19472,6 +19923,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Auto-collected from a public page. Review before relying on inferred meaning. Generated snapshot differs from manual fields: profile_url."
+  },
+  {
+    "source": "shinjukuashura",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "shinjukuashura",
@@ -19576,6 +20038,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "shouri-ikb",
+    "target": "chouun-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "shouri-ikb",
@@ -22816,6 +23289,39 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "yabuki-nampa",

@@ -1444,6 +1444,114 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
     return added
 
 
+def infer_shared_context_edges(graph: GraphData) -> int:
+    """同じ中規模コンテキストを共有する人物同士に補助 affiliation edge を追加する。"""
+
+    node_by_id = {node.id: node for node in graph.nodes}
+    context_members: defaultdict[str, set[str]] = defaultdict(set)
+    existing_pairs: set[tuple[str, str]] = set()
+    adjacency: defaultdict[str, set[str]] = defaultdict(set)
+    broad_context_ids = {
+        "tokyo",
+        "matching-apps",
+        "kanto",
+        "kansai",
+        "x",
+        "line",
+        "note",
+        "youtube",
+        "instagram",
+        "brain",
+        "tips",
+    }
+
+    for edge in graph.edges:
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type == "person" and target.type == "person":
+            existing_pairs.add((source.id, target.id))
+            existing_pairs.add((target.id, source.id))
+            adjacency[source.id].add(target.id)
+            adjacency[target.id].add(source.id)
+        if source.type == "person" and target.type in {"community", "location", "content"}:
+            context_members[target.id].add(source.id)
+        if target.type == "person" and source.type in {"community", "location", "content"}:
+            context_members[source.id].add(target.id)
+
+    added = 0
+    for context_id, member_set in sorted(
+        context_members.items(),
+        key=lambda item: (node_by_id[item[0]].type, node_by_id[item[0]].name),
+    ):
+        context_node = node_by_id.get(context_id)
+        if not context_node or context_id in broad_context_ids:
+            continue
+        members = sorted(
+            member_set,
+            key=lambda node_id: (-len(adjacency[node_id]), node_by_id[node_id].name, node_id),
+        )
+        if len(members) < 3 or len(members) > 24:
+            continue
+        anchor_ids = members[: min(4, max(2, len(members) // 4))]
+        bridge_count_by_node: defaultdict[str, int] = defaultdict(int)
+        context_limit = min(28, max(4, len(members) * 2))
+        context_added = 0
+        for source_id in members:
+            if context_added >= context_limit:
+                break
+            candidates = sorted(
+                (
+                    target_id
+                    for target_id in anchor_ids
+                    if target_id != source_id and (source_id, target_id) not in existing_pairs
+                ),
+                key=lambda node_id: (
+                    bridge_count_by_node[node_id],
+                    -len(adjacency[node_id]),
+                    node_by_id[node_id].name,
+                    node_id,
+                ),
+            )
+            for target_id in candidates:
+                if bridge_count_by_node[source_id] >= 1 or bridge_count_by_node[target_id] >= 5:
+                    continue
+                try:
+                    add_edge(
+                        graph,
+                        {
+                            "source": source_id,
+                            "target": target_id,
+                            "type": "affiliation",
+                            "description": (
+                                f"共通コンテキスト「{context_node.name}」につながるため、"
+                                "近い関係として補助接続（自動）。"
+                            ),
+                            "confidence": 0.25,
+                            "evidence_kind": "interpretation",
+                            "needs_review": True,
+                            "review_notes": (
+                                f"Shared context '{context_id}' bridge auto-edge. "
+                                "Broad generic contexts are excluded and per-node caps are applied."
+                            ),
+                        },
+                    )
+                    added += 1
+                    context_added += 1
+                    bridge_count_by_node[source_id] += 1
+                    bridge_count_by_node[target_id] += 1
+                    existing_pairs.add((source_id, target_id))
+                    existing_pairs.add((target_id, source_id))
+                    adjacency[source_id].add(target_id)
+                    adjacency[target_id].add(source_id)
+                    if bridge_count_by_node[source_id] >= 1 or context_added >= context_limit:
+                        break
+                except ValueError:
+                    continue
+    return added
+
+
 def save_review_candidates(payload: dict[str, object], output_path: Path = REVIEW_CANDIDATES_JSON) -> None:
     normalized_payload = {
         "generated_at": payload.get("generated_at"),

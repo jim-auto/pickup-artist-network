@@ -16,6 +16,7 @@ from scraper import (
     build_graph_from_sources,
     build_growth_targets_payload,
     infer_keyword_cluster_edges,
+    infer_shared_context_edges,
     load_all_source_snapshots,
     load_generated_snapshots,
     load_review_candidate_decisions,
@@ -88,6 +89,9 @@ def main() -> None:
     cluster_edges_added = infer_keyword_cluster_edges(graph)
     if cluster_edges_added:
         print(f"[OK] keyword cluster edges: +{cluster_edges_added}")
+    context_edges_added = infer_shared_context_edges(graph)
+    if context_edges_added:
+        print(f"[OK] shared context edges: +{context_edges_added}")
     refresh_outputs(graph)
     save_review_candidate_decisions(decisions_payload)
     review_candidates = refresh_review_candidates(
