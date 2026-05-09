@@ -1528,12 +1528,12 @@ def render_html(
         </div>
       </div>
       <div>
-        <label for="cluster-mode"><strong>関係クラスタ</strong></label>
+        <label for="cluster-mode"><strong>配置グループ</strong></label>
         <select id="cluster-mode" class="control-select">
           <option value="off">まとめない</option>
-          <option value="connectivity">つながりの近さでまとめる</option>
-          <option value="relation_pattern">関係パターンでまとめる</option>
-          <option value="keyword_group">キーワードでまとめる</option>
+          <option value="connectivity">つながりの近さ</option>
+          <option value="relation_pattern">関係パターン</option>
+          <option value="keyword_group">キーワード</option>
         </select>
         <div id="cluster-mode-help" class="muted">通常表示です。人やコミュニティをまとめずに相関を見ます。</div>
       </div>
@@ -1576,7 +1576,7 @@ def render_html(
           <h2>アカウント相関ビュー</h2>
           <div id="view-summary" class="view-summary"></div>
         </div>
-        <p class="muted">初期表示は関係が多いノードと近い塊を優先しています。探したい名前は検索から全件対象で開けます。</p>
+        <p class="muted">初期表示は全人物を表示します。名前と線は抑え、検索やクリックで近い関係を詳しく見られます。</p>
         <div id="network"></div>
       </section>
 
@@ -1848,6 +1848,14 @@ def render_html(
       nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
       nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
     });
+    const rankedAccountNodeIds = rawGraph.nodes
+      .filter((node) => accountNodeTypes.has(node.type))
+      .sort((left, right) =>
+        (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
+        left.name.localeCompare(right.name, "ja")
+      )
+      .map((node) => node.id);
+    const defaultLabelNodeIds = new Set(rankedAccountNodeIds.slice(0, 22));
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
     let currentVisibleReviewNodes = [];
@@ -1855,6 +1863,7 @@ def render_html(
     let currentVisibleReviewCandidates = [];
     let currentVisibleReviewCandidateDecisions = [];
     let currentNodeNameById = new Map();
+    let currentSearchTerm = "";
     let selectedNodeId = null;
     let activeClusterIds = new Set();
     let lastTableFilterKey = "";
@@ -1938,6 +1947,7 @@ def render_html(
         nodes: {
           shape: "dot",
           borderWidth: 1,
+          scaling: { min: 2, max: 14 },
           font: { face: "Arial", size: 13, color: "#17212b" }
         },
         edges: {
@@ -2120,10 +2130,12 @@ def render_html(
       }
       const people = visibleNodes.filter((node) => node.type === "person").length;
       const communities = visibleNodes.filter((node) => node.type === "community").length;
+      const allPeople = rawGraph.nodes.filter((node) => node.type === "person").length;
       container.innerHTML = `
         <span class="tag">${escapeHtml(people)} 人物</span>
         <span class="tag">${escapeHtml(communities)} コミュニティ</span>
         <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
+        <span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>
       `;
     }
 
@@ -2585,14 +2597,12 @@ def render_html(
 
     function computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster) {
       const positions = new Map();
-      const modePayload = rawClusters.modes?.[clusterMode];
+      const modePayload = rawClusters.modes?.[clusterMode] || rawClusters.modes?.connectivity;
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
         const assignedClusterId = modePayload?.assignments?.[node.id];
-        const bucketId = shouldCluster
-          ? (assignedClusterId || `unassigned:${hashText(node.id) % 6}`)
-          : `node:${node.id}`;
+        const bucketId = assignedClusterId || `unassigned:${hashText(node.id) % 12}`;
         if (!buckets.has(bucketId)) {
           buckets.set(bucketId, []);
         }
@@ -2623,8 +2633,8 @@ def render_html(
           }
           return left.name.localeCompare(right.name);
         });
-        const spreadX = Math.max(70, Math.min(210, 42 + sortedMembers.length * 9));
-        const spreadY = Math.max(55, Math.min(160, 32 + sortedMembers.length * 7));
+        const spreadX = Math.max(90, Math.min(300, 50 + sortedMembers.length * 8));
+        const spreadY = Math.max(70, Math.min(240, 40 + sortedMembers.length * 6));
 
         sortedMembers.forEach((node, memberIndex) => {
           if (sortedMembers.length === 1) {
@@ -2632,10 +2642,12 @@ def render_html(
             return;
           }
           const hash = hashText(`${bucketId}:${node.id}`);
-          const lane = memberIndex % 5;
-          const row = Math.floor(memberIndex / 5);
-          const offsetX = (lane - 2) * (spreadX / 3.2) + ((hash % 29) - 14);
-          const offsetY = (row - Math.floor(sortedMembers.length / 10)) * (spreadY / 2.8) + (((hash >> 3) % 31) - 15);
+          const columns = Math.max(5, Math.ceil(Math.sqrt(sortedMembers.length * 1.35)));
+          const lane = memberIndex % columns;
+          const row = Math.floor(memberIndex / columns);
+          const rowCount = Math.ceil(sortedMembers.length / columns);
+          const offsetX = (lane - (columns - 1) / 2) * (spreadX / columns) + ((hash % 23) - 11);
+          const offsetY = (row - (rowCount - 1) / 2) * (spreadY / rowCount) + (((hash >> 3) % 25) - 12);
           positions.set(node.id, {
             x: anchor.x + offsetX,
             y: anchor.y + offsetY
@@ -2646,6 +2658,71 @@ def render_html(
       return positions;
     }
 
+    function getNodeVisualValue(node, visibleNodes) {
+      const degree = nodeDegreeById.get(node.id) || 0;
+      if (visibleNodes.length > 500) {
+        return 1 + Math.min(9, Math.sqrt(degree) * 1.8);
+      }
+      return 10 + Math.min(18, Math.sqrt(degree + 1) * 3);
+    }
+
+    function getNodeLabel(node, visibleNodes, term) {
+      if (term) {
+        return visibleNodes.length <= 180 ? node.name : "";
+      }
+      if (visibleNodes.length > 500) {
+        return defaultLabelNodeIds.has(node.id) ? node.name : "";
+      }
+      return visibleNodes.length <= 140 ? node.name : "";
+    }
+
+    function getEdgeColor(visibleEdges) {
+      if (visibleEdges.length > 1200) {
+        return { color: "rgba(148, 163, 184, 0.13)", highlight: "#1d4ed8" };
+      }
+      if (visibleEdges.length > 500) {
+        return { color: "rgba(148, 163, 184, 0.24)", highlight: "#1d4ed8" };
+      }
+      return { color: "rgba(148, 163, 184, 0.42)", highlight: "#2f6feb" };
+    }
+
+    function updateNetworkEmphasis(selectedId = null) {
+      if (!currentVisibleNodes.length) {
+        return;
+      }
+      const baseEdgeColor = getEdgeColor(currentVisibleEdges);
+      const neighborIds = new Set();
+      if (selectedId) {
+        neighborIds.add(selectedId);
+        currentVisibleEdges.forEach((edge) => {
+          if (edge.source === selectedId) {
+            neighborIds.add(edge.target);
+          }
+          if (edge.target === selectedId) {
+            neighborIds.add(edge.source);
+          }
+        });
+      }
+
+      edgesDataSet.update(
+        currentVisibleEdges.map((edge, index) => {
+          const related = selectedId && (edge.source === selectedId || edge.target === selectedId);
+          return {
+            id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
+            color: related ? { color: "#1d4ed8", highlight: "#1d4ed8" } : baseEdgeColor,
+            width: related ? 2.2 : (currentVisibleEdges.length > 1200 ? 0.35 : 1)
+          };
+        })
+      );
+
+      nodesDataSet.update(
+        currentVisibleNodes.map((node) => ({
+          id: node.id,
+          label: selectedId && neighborIds.has(node.id) ? node.name : getNodeLabel(node, currentVisibleNodes, currentSearchTerm)
+        }))
+      );
+    }
+
     function applyFilters() {
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
@@ -2653,8 +2730,7 @@ def render_html(
       const clusterMode = getClusterMode();
       const selectedKeywordClusterId = getSelectedKeywordClusterId();
       const keywordAssignments = rawClusters.modes?.keyword_group?.assignments || {};
-      const overviewMode = !term && !selectedKeywordClusterId && clusterMode !== "off";
-      const shouldCluster = clusterMode !== "off" && !term && !selectedKeywordClusterId;
+      const shouldCluster = false;
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
@@ -2675,9 +2751,6 @@ def render_html(
           return false;
         }
         if (selectedKeywordClusterId && keywordAssignments[node.id] !== selectedKeywordClusterId) {
-          return false;
-        }
-        if (overviewMode && node.type !== "community" && (nodeDegreeById.get(node.id) || 0) < 4) {
           return false;
         }
         return true;
@@ -2703,6 +2776,8 @@ def render_html(
       const visibleNodeIds = new Set();
       if (term) {
         matchedIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+      } else {
+        eligibleIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
       }
       visibleEdges.forEach((edge) => {
         visibleNodeIds.add(edge.source);
@@ -2724,6 +2799,7 @@ def render_html(
       currentVisibleReviewCandidates = visibleReviewCandidates;
       currentVisibleReviewCandidateDecisions = visibleReviewCandidateDecisions;
       currentNodeNameById = nodeNameById;
+      currentSearchTerm = term;
 
       resetClusters();
       nodesDataSet.clear();
@@ -2735,11 +2811,11 @@ def render_html(
           id: node.id,
           x: layoutPositions.get(node.id)?.x,
           y: layoutPositions.get(node.id)?.y,
-          label: visibleNodes.length <= 100 ? node.name : "",
+          label: getNodeLabel(node, visibleNodes, term),
           group: node.type,
-          value: 12 + Math.round((node.confidence || 0) * 12),
-          shape: node.icon_url ? "circularImage" : "dot",
-          image: node.icon_url || undefined,
+          value: getNodeVisualValue(node, visibleNodes),
+          shape: node.icon_url && (visibleNodes.length <= 500 || defaultLabelNodeIds.has(node.id)) ? "circularImage" : "dot",
+          image: node.icon_url && (visibleNodes.length <= 500 || defaultLabelNodeIds.has(node.id)) ? node.icon_url : undefined,
           brokenImage: "icon.svg",
           color: {
             background: nodeColors[node.type] || "#64748b",
@@ -2757,7 +2833,10 @@ def render_html(
           id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
           from: edge.source,
           to: edge.target,
-          label: visibleEdges.length <= 320 ? formatEdgeType(edge.type) : undefined,
+          arrows: visibleEdges.length > 1200 ? "" : "to",
+          label: visibleEdges.length <= 260 ? formatEdgeType(edge.type) : undefined,
+          color: getEdgeColor(visibleEdges),
+          width: visibleEdges.length > 1200 ? 0.35 : 1,
           title: `${formatEdgeType(edge.type)}: ${edge.description || ""}`
         }))
       );
@@ -2765,6 +2844,7 @@ def render_html(
       if (shouldCluster) {
         applyRelationClusters(visibleNodes, clusterMode);
       }
+      updateNetworkEmphasis(null);
       fitVisibleGraph();
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
@@ -2895,11 +2975,13 @@ def render_html(
           network.openCluster(selectedId);
           renderDetailPanel(null);
         } else {
+          updateNetworkEmphasis(selectedId);
           renderDetailPanel(selectedId);
         }
       }
     });
     network.on("deselectNode", () => {
+      updateNetworkEmphasis(null);
       renderDetailPanel(null);
     });
 

@@ -238,7 +238,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertNotIn("実データ成長目標", html)
         self.assertIn("表示方針", html)
         self.assertIn("const visibleNodeIds = new Set();", html)
-        self.assertIn("初期表示は関係が多いノードと近い塊を優先しています。", html)
+        self.assertIn("初期表示は全人物を表示します。", html)
         self.assertNotIn('name="graph-view-mode"', html)
         self.assertNotIn("全体グラフ", html)
         self.assertIn("選択ノード詳細", html)
