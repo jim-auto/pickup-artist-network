@@ -1620,9 +1620,9 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
         ),
     )
     for (source_id, target_id), contexts in ranked_pairs:
-        if added >= 520:
+        if added >= 1000:
             break
-        if added_by_node[source_id] >= 5 or added_by_node[target_id] >= 5:
+        if added_by_node[source_id] >= 7 or added_by_node[target_id] >= 7:
             continue
         context_names = [
             node_by_id[context_id].name
