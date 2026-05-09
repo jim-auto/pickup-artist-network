@@ -6,6 +6,7 @@ import json
 import re
 from collections import defaultdict
 from datetime import datetime, timezone
+from itertools import combinations
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -1549,6 +1550,110 @@ def infer_shared_context_edges(graph: GraphData) -> int:
                         break
                 except ValueError:
                     continue
+    return added
+
+
+def infer_shared_neighbor_edges(graph: GraphData) -> int:
+    """複数の意味ある隣接ノードを共有する人物ペアを補助接続する。"""
+
+    node_by_id = {node.id: node for node in graph.nodes}
+    broad_context_ids = {
+        "tokyo",
+        "matching-apps",
+        "kanto",
+        "kansai",
+        "x",
+        "line",
+        "note",
+        "youtube",
+        "instagram",
+        "brain",
+        "tips",
+    }
+    existing_pairs: set[tuple[str, str]] = set()
+    context_to_people: defaultdict[str, set[str]] = defaultdict(set)
+
+    for edge in graph.edges:
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type == "person" and target.type == "person":
+            existing_pairs.add(tuple(sorted((source.id, target.id))))
+        if source.type == "person" and target.id not in broad_context_ids and target.type in {
+            "person",
+            "community",
+            "location",
+            "content",
+        }:
+            context_to_people[target.id].add(source.id)
+        if target.type == "person" and source.id not in broad_context_ids and source.type in {
+            "person",
+            "community",
+            "location",
+            "content",
+        }:
+            context_to_people[source.id].add(target.id)
+
+    pair_contexts: defaultdict[tuple[str, str], set[str]] = defaultdict(set)
+    for context_id, members in context_to_people.items():
+        if len(members) < 2 or len(members) > 35:
+            continue
+        for left_id, right_id in combinations(sorted(members), 2):
+            pair = tuple(sorted((left_id, right_id)))
+            if pair in existing_pairs:
+                continue
+            pair_contexts[pair].add(context_id)
+
+    added = 0
+    added_by_node: defaultdict[str, int] = defaultdict(int)
+    ranked_pairs = sorted(
+        (
+            (pair, contexts)
+            for pair, contexts in pair_contexts.items()
+            if len(contexts) >= 2
+        ),
+        key=lambda item: (
+            -len(item[1]),
+            node_by_id[item[0][0]].name,
+            node_by_id[item[0][1]].name,
+        ),
+    )
+    for (source_id, target_id), contexts in ranked_pairs:
+        if added >= 120:
+            break
+        if added_by_node[source_id] >= 2 or added_by_node[target_id] >= 2:
+            continue
+        context_names = [
+            node_by_id[context_id].name
+            for context_id in sorted(contexts)
+            if context_id in node_by_id
+        ]
+        try:
+            add_edge(
+                graph,
+                {
+                    "source": source_id,
+                    "target": target_id,
+                    "type": "affiliation",
+                    "description": (
+                        "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。"
+                    ),
+                    "confidence": 0.24,
+                    "evidence_kind": "interpretation",
+                    "needs_review": True,
+                    "review_notes": (
+                        "Shared-neighbor bridge auto-edge. "
+                        f"Shared contexts: {', '.join(context_names[:8])}."
+                    ),
+                },
+            )
+            added += 1
+            added_by_node[source_id] += 1
+            added_by_node[target_id] += 1
+            existing_pairs.add(tuple(sorted((source_id, target_id))))
+        except ValueError:
+            continue
     return added
 
 
