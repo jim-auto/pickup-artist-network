@@ -1624,9 +1624,10 @@ def render_html(
             <div class="filter-group">
               <label class="chip">
                 <input type="checkbox" id="profile-bridge-toggle" checked>
-                <span>プロフィール特徴語の補助線</span>
+                <span>自動補助線</span>
               </label>
             </div>
+            <div id="bridge-category-filters" class="filter-group"></div>
           </div>
         </div>
       </details>
@@ -1876,6 +1877,18 @@ def render_html(
       follow: "フォロー",
       profile_mention: "プロフィール言及"
     };
+    const bridgeCategoryDefinitions = [
+      { id: "miso", label: "味噌", patterns: ["味噌", "みそ"] },
+      { id: "mbh", label: "MBH", patterns: ["mbh", "MBH"] },
+      { id: "lesson", label: "講習", patterns: ["講習", "コンサル"] },
+      { id: "looks", label: "外見", patterns: ["外見", "ルックス", "美容", "メイク", "髪型", "整形"] },
+      { id: "pickup", label: "ナンパ", patterns: ["ナンパ", "ストナン", "ネトナン", "旅ナンパ", "海外ナンパ"] },
+      { id: "close", label: "即", patterns: ["即", "経験人数", "月間実績"] },
+      { id: "app", label: "アプリ", patterns: ["アプリ", "Tinder", "tinder", "東カレ"] },
+      { id: "business", label: "事業", patterns: ["事業", "SNS", "マーケティング", "代表", "稼ぐ"] },
+      { id: "nightlife", label: "夜職", patterns: ["夜職", "ホスト", "港区"] },
+      { id: "other", label: "その他", patterns: [] }
+    ];
     const basisLabels = {
       profile_text: "プロフィール",
       summary: "概要",
@@ -1999,6 +2012,17 @@ def render_html(
 
     buildFilters("node-type-filters", allNodeTypes, "data-node-type");
     buildFilters("edge-type-filters", allEdgeTypes, "data-edge-type");
+    const bridgeCategoryContainer = document.getElementById("bridge-category-filters");
+    if (bridgeCategoryContainer) {
+      bridgeCategoryContainer.innerHTML = bridgeCategoryDefinitions
+        .map((category) => `
+          <label class="chip">
+            <input type="checkbox" data-bridge-category="${category.id}" checked>
+            <span>${escapeHtml(category.label)}</span>
+          </label>
+        `)
+        .join("");
+    }
     const clusterModeInput = document.getElementById("cluster-mode");
     const keywordClusterPicker = document.getElementById("keyword-cluster-picker");
     const keywordClusterInput = document.getElementById("keyword-cluster-select");
@@ -2222,7 +2246,7 @@ def render_html(
       const people = visibleNodes.filter((node) => node.type === "person").length;
       const communities = visibleNodes.filter((node) => node.type === "community").length;
       const allPeople = rawGraph.nodes.filter((node) => node.type === "person").length;
-      const profileBridgeEdges = visibleEdges.filter((edge) => isProfileBridgeEdge(edge)).length;
+      const profileBridgeEdges = visibleEdges.filter((edge) => isAssistiveEdge(edge)).length;
       container.innerHTML = `
         <span class="tag">${escapeHtml(people)} 人物</span>
         <span class="tag">${escapeHtml(communities)} コミュニティ</span>
@@ -2257,6 +2281,32 @@ def render_html(
 
     function isProfileBridgeEdge(edge) {
       return String(edge.review_notes || "").includes("Profile bridge auto-edge");
+    }
+
+    function isKeywordBridgeEdge(edge) {
+      return String(edge.review_notes || "").includes("Keyword cluster");
+    }
+
+    function isAssistiveEdge(edge) {
+      const notes = String(edge.review_notes || "");
+      return (
+        isProfileBridgeEdge(edge) ||
+        isKeywordBridgeEdge(edge) ||
+        notes.includes("Shared context") ||
+        notes.includes("Shared-neighbor")
+      );
+    }
+
+    function bridgeCategoryIds(edge) {
+      if (!isAssistiveEdge(edge)) {
+        return [];
+      }
+      const text = `${edge.description || ""} ${edge.review_notes || ""}`.toLowerCase();
+      const categories = bridgeCategoryDefinitions
+        .filter((category) => category.id !== "other")
+        .filter((category) => category.patterns.some((pattern) => text.includes(String(pattern).toLowerCase())))
+        .map((category) => category.id);
+      return categories.length ? categories : ["other"];
     }
 
     function visiblePersonDegreeById(visibleEdges) {
@@ -2381,7 +2431,7 @@ def render_html(
         entry[direction].add(formatEdgeType(edge.type));
         entry.edgeCount += 1;
         entry.maxConfidence = Math.max(entry.maxConfidence, Number(edge.confidence || 0));
-        if (isProfileBridgeEdge(edge)) {
+        if (isAssistiveEdge(edge)) {
           entry.bridgeCount += 1;
         } else {
           entry.solidCount += 1;
@@ -2956,7 +3006,7 @@ def render_html(
             id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
             color: related
               ? { color: "#1d4ed8", highlight: "#1d4ed8" }
-              : (isProfileBridgeEdge(edge)
+              : (isAssistiveEdge(edge)
                 ? { color: "rgba(37, 99, 235, 0.10)", highlight: "#1d4ed8" }
                 : baseEdgeColor),
             width: related ? 2.2 : (currentVisibleEdges.length > 1200 ? 0.35 : 1)
@@ -2975,6 +3025,7 @@ def render_html(
     function applyFilters() {
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
+      const allowedBridgeCategories = selectedValues("[data-bridge-category]", "data-bridge-category");
       const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked !== false;
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
@@ -2984,6 +3035,7 @@ def render_html(
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
+        bridgeCategories: [...allowedBridgeCategories].sort(),
         profileBridge: includeProfileBridgeEdges,
         term,
         clusterMode,
@@ -3015,8 +3067,14 @@ def render_html(
         if (!allowedEdgeTypes.has(edge.type)) {
           return false;
         }
-        if (!includeProfileBridgeEdges && isProfileBridgeEdge(edge)) {
-          return false;
+        if (isAssistiveEdge(edge)) {
+          if (!includeProfileBridgeEdges) {
+            return false;
+          }
+          const categories = bridgeCategoryIds(edge);
+          if (!categories.some((categoryId) => allowedBridgeCategories.has(categoryId))) {
+            return false;
+          }
         }
         if (!eligibleIds.has(edge.source) || !eligibleIds.has(edge.target)) {
           return false;
@@ -3094,10 +3152,10 @@ def render_html(
           to: edge.target,
           arrows: visibleEdges.length > 1200 ? "" : "to",
           label: visibleEdges.length <= 260 ? formatEdgeType(edge.type) : undefined,
-          color: isProfileBridgeEdge(edge)
+          color: isAssistiveEdge(edge)
             ? { color: "rgba(37, 99, 235, 0.10)", highlight: "#1d4ed8" }
             : getEdgeColor(visibleEdges),
-          dashes: isProfileBridgeEdge(edge) && visibleEdges.length <= 1200 ? [3, 5] : false,
+          dashes: isAssistiveEdge(edge) && visibleEdges.length <= 1200 ? [3, 5] : false,
           width: visibleEdges.length > 1200 ? 0.35 : 1,
           title: `${formatEdgeType(edge.type)}: ${edge.description || ""}`
         }))
@@ -3142,6 +3200,9 @@ def render_html(
       if (profileBridgeToggle) {
         profileBridgeToggle.checked = true;
       }
+      document.querySelectorAll("[data-bridge-category]").forEach((input) => {
+        input.checked = true;
+      });
       if (clusterModeInput) {
         clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : "off";
       }
@@ -3186,7 +3247,7 @@ def render_html(
       applyFilters();
       fitVisibleGraph();
     });
-    document.querySelectorAll("[data-node-type], [data-edge-type], #profile-bridge-toggle").forEach((input) => {
+    document.querySelectorAll("[data-node-type], [data-edge-type], [data-bridge-category], #profile-bridge-toggle").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
     if (clusterModeInput) {
