@@ -1602,6 +1602,15 @@ def render_html(
             <strong>関係種別</strong>
             <div id="edge-type-filters" class="filter-group"></div>
           </div>
+          <div style="margin-top: 16px;">
+            <strong>補助線</strong>
+            <div class="filter-group">
+              <label class="chip">
+                <input type="checkbox" id="profile-bridge-toggle" checked>
+                <span>プロフィール特徴語の補助線</span>
+              </label>
+            </div>
+          </div>
         </div>
       </details>
     </section>
@@ -2196,10 +2205,12 @@ def render_html(
       const people = visibleNodes.filter((node) => node.type === "person").length;
       const communities = visibleNodes.filter((node) => node.type === "community").length;
       const allPeople = rawGraph.nodes.filter((node) => node.type === "person").length;
+      const profileBridgeEdges = visibleEdges.filter((edge) => isProfileBridgeEdge(edge)).length;
       container.innerHTML = `
         <span class="tag">${escapeHtml(people)} 人物</span>
         <span class="tag">${escapeHtml(communities)} コミュニティ</span>
         <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
+        <span class="tag">補助線 ${escapeHtml(profileBridgeEdges)} 本</span>
         <span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>
       `;
     }
@@ -2227,6 +2238,24 @@ def render_html(
       return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy">`;
     }
 
+    function isProfileBridgeEdge(edge) {
+      return String(edge.review_notes || "").includes("Profile bridge auto-edge");
+    }
+
+    function visiblePersonDegreeById(visibleEdges) {
+      const personDegrees = new Map();
+      visibleEdges.forEach((edge) => {
+        const source = rawNodeById.get(edge.source);
+        const target = rawNodeById.get(edge.target);
+        if (!source || !target || source.type !== "person" || target.type !== "person") {
+          return;
+        }
+        personDegrees.set(edge.source, (personDegrees.get(edge.source) || 0) + 1);
+        personDegrees.set(edge.target, (personDegrees.get(edge.target) || 0) + 1);
+      });
+      return personDegrees;
+    }
+
     function renderFeaturedNodes() {
       const featuredNodes = currentVisibleNodes
         .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node) && (node.follower_count || 0) > 0)
@@ -2249,6 +2278,41 @@ def render_html(
                 <span class="node-name-text">
                   <strong>${escapeHtml(node.name)}</strong>
                   <span class="muted">X followers: ${escapeHtml(formatNumber(node.follower_count || 0))}</span>
+                </span>
+              </button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderSparseFollowerNodes() {
+      const personDegrees = visiblePersonDegreeById(currentVisibleEdges);
+      const sparseNodes = currentVisibleNodes
+        .filter((node) =>
+          node.type === "person" &&
+          (node.follower_count || 0) >= 1000 &&
+          (personDegrees.get(node.id) || 0) < 8
+        )
+        .sort((left, right) =>
+          (personDegrees.get(left.id) || 0) - (personDegrees.get(right.id) || 0) ||
+          (right.follower_count || 0) - (left.follower_count || 0) ||
+          left.name.localeCompare(right.name, "ja")
+        )
+        .slice(0, 12);
+      if (!sparseNodes.length) {
+        return "";
+      }
+      return `
+        <div class="detail-section">
+          <h4>接続が薄い高フォロワー</h4>
+          <div class="featured-node-list">
+            ${sparseNodes.map((node) => `
+              <button type="button" class="featured-node-card" data-node-id="${escapeHtml(node.id)}">
+                ${formatNodeAvatar(node, "avatar-thumb")}
+                <span class="node-name-text">
+                  <strong>${escapeHtml(node.name)}</strong>
+                  <span class="muted">人物間 ${escapeHtml(personDegrees.get(node.id) || 0)} / X followers: ${escapeHtml(formatNumber(node.follower_count || 0))}</span>
                 </span>
               </button>
             `).join("")}
@@ -2360,6 +2424,7 @@ def render_html(
         panel.innerHTML = `
           <div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>
           ${renderFeaturedNodes()}
+          ${renderSparseFollowerNodes()}
         `;
         return;
       }
@@ -2826,7 +2891,11 @@ def render_html(
           const related = selectedId && (edge.source === selectedId || edge.target === selectedId);
           return {
             id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
-            color: related ? { color: "#1d4ed8", highlight: "#1d4ed8" } : baseEdgeColor,
+            color: related
+              ? { color: "#1d4ed8", highlight: "#1d4ed8" }
+              : (isProfileBridgeEdge(edge)
+                ? { color: "rgba(37, 99, 235, 0.10)", highlight: "#1d4ed8" }
+                : baseEdgeColor),
             width: related ? 2.2 : (currentVisibleEdges.length > 1200 ? 0.35 : 1)
           };
         })
@@ -2843,6 +2912,7 @@ def render_html(
     function applyFilters() {
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
+      const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked !== false;
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
       const selectedKeywordClusterId = getSelectedKeywordClusterId();
@@ -2851,6 +2921,7 @@ def render_html(
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
+        profileBridge: includeProfileBridgeEdges,
         term,
         clusterMode,
         keywordCluster: selectedKeywordClusterId
@@ -2879,6 +2950,9 @@ def render_html(
 
       const visibleEdges = rawGraph.edges.filter((edge) => {
         if (!allowedEdgeTypes.has(edge.type)) {
+          return false;
+        }
+        if (!includeProfileBridgeEdges && isProfileBridgeEdge(edge)) {
           return false;
         }
         if (!eligibleIds.has(edge.source) || !eligibleIds.has(edge.target)) {
@@ -2957,7 +3031,10 @@ def render_html(
           to: edge.target,
           arrows: visibleEdges.length > 1200 ? "" : "to",
           label: visibleEdges.length <= 260 ? formatEdgeType(edge.type) : undefined,
-          color: getEdgeColor(visibleEdges),
+          color: isProfileBridgeEdge(edge)
+            ? { color: "rgba(37, 99, 235, 0.10)", highlight: "#1d4ed8" }
+            : getEdgeColor(visibleEdges),
+          dashes: isProfileBridgeEdge(edge) && visibleEdges.length <= 1200 ? [3, 5] : false,
           width: visibleEdges.length > 1200 ? 0.35 : 1,
           title: `${formatEdgeType(edge.type)}: ${edge.description || ""}`
         }))
@@ -2998,6 +3075,10 @@ def render_html(
       document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
         input.checked = true;
       });
+      const profileBridgeToggle = document.getElementById("profile-bridge-toggle");
+      if (profileBridgeToggle) {
+        profileBridgeToggle.checked = true;
+      }
       if (clusterModeInput) {
         clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : "off";
       }
@@ -3042,7 +3123,7 @@ def render_html(
       applyFilters();
       fitVisibleGraph();
     });
-    document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
+    document.querySelectorAll("[data-node-type], [data-edge-type], #profile-bridge-toggle").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
     if (clusterModeInput) {
