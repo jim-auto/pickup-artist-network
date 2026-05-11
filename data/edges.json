@@ -28664,19 +28664,6 @@
     "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match '夜ト'. This is review-only and not part of the canonical graph."
   },
   {
-    "source": "hanasikikoka",
-    "target": "mendako-pua",
-    "type": "profile_mention",
-    "description": "公開プロフィール・概要・固定ポストの文本から @めんだこ への言及として推定（自動）。",
-    "source_urls": [
-      "https://x.com/hanasikikoka__"
-    ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Generated review candidate consolidated from summary, profile_text via mention match 'めんだこ'. This is review-only and not part of the canonical graph."
-  },
-  {
     "source": "hancho-pua",
     "target": "omamco-pua2",
     "type": "profile_mention",
