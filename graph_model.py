@@ -1880,11 +1880,12 @@ def render_html(
     const bridgeCategoryDefinitions = [
       { id: "miso", label: "味噌", patterns: ["味噌", "みそ"] },
       { id: "mbh", label: "MBH", patterns: ["mbh", "MBH"] },
+      { id: "online", label: "アプリ/オンライン", patterns: ["アプリ/オンライン", "アプリ", "オンライン", "ネトナン", "Tinder", "tinder", "東カレ", "チャットアプリ"] },
+      { id: "street", label: "ストリート", patterns: ["ストリート", "ストナン", "スト値", "スト高", "路上", "街"] },
+      { id: "club", label: "クラブ/箱", patterns: ["クラブ/箱", "クラブ", "箱", "相席", "バー", "ハプバー", "夜遊び"] },
       { id: "lesson", label: "講習", patterns: ["講習", "コンサル"] },
-      { id: "looks", label: "外見", patterns: ["外見", "ルックス", "美容", "メイク", "髪型", "整形"] },
-      { id: "pickup", label: "ナンパ", patterns: ["ナンパ", "ストナン", "ネトナン", "旅ナンパ", "海外ナンパ"] },
+      { id: "community", label: "界隈/一門", patterns: ["界隈", "一門", "軍団", "コミュニティ", "長期"] },
       { id: "close", label: "即", patterns: ["即", "経験人数", "月間実績"] },
-      { id: "app", label: "アプリ", patterns: ["アプリ", "Tinder", "tinder", "東カレ"] },
       { id: "business", label: "事業", patterns: ["事業", "SNS", "マーケティング", "代表", "稼ぐ"] },
       { id: "nightlife", label: "夜職", patterns: ["夜職", "ホスト", "港区"] },
       { id: "other", label: "その他", patterns: [] }
