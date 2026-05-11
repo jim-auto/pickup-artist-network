@@ -1508,6 +1508,23 @@ def render_html(
       gap: 6px;
       margin-top: 8px;
     }
+    .connected-node-card.is-bridge {
+      background: #f8fbff;
+      border-style: dashed;
+    }
+    .connected-node-rank {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .tag-bridge {
+      background: #edf5ff;
+      color: #1d4ed8;
+    }
+    .tag-solid {
+      background: #edf7ee;
+      color: #1f7a3d;
+    }
     .detail-list,
     .source-list {
       margin: 0;
@@ -2356,55 +2373,101 @@ def render_html(
           node: otherNode,
           incoming: new Set(),
           outgoing: new Set(),
-          edgeCount: 0
+          edgeCount: 0,
+          solidCount: 0,
+          bridgeCount: 0,
+          maxConfidence: 0
         };
         entry[direction].add(formatEdgeType(edge.type));
         entry.edgeCount += 1;
+        entry.maxConfidence = Math.max(entry.maxConfidence, Number(edge.confidence || 0));
+        if (isProfileBridgeEdge(edge)) {
+          entry.bridgeCount += 1;
+        } else {
+          entry.solidCount += 1;
+        }
         grouped.set(otherId, entry);
       }
 
       outgoingEdges.forEach((edge) => addEdge(edge, "outgoing"));
       incomingEdges.forEach((edge) => addEdge(edge, "incoming"));
 
-      const entries = Array.from(grouped.values()).sort((left, right) =>
-        right.edgeCount - left.edgeCount || left.node.name.localeCompare(right.node.name, "ja")
-      );
+      const entries = Array.from(grouped.values()).sort((left, right) => {
+        const leftIsBridgeOnly = left.solidCount === 0;
+        const rightIsBridgeOnly = right.solidCount === 0;
+        if (leftIsBridgeOnly !== rightIsBridgeOnly) {
+          return leftIsBridgeOnly ? 1 : -1;
+        }
+        if (left.node.type === "person" && right.node.type === "person") {
+          return (
+            (right.node.follower_count || 0) - (left.node.follower_count || 0) ||
+            right.edgeCount - left.edgeCount ||
+            right.maxConfidence - left.maxConfidence ||
+            left.node.name.localeCompare(right.node.name, "ja")
+          );
+        }
+        return (
+          right.edgeCount - left.edgeCount ||
+          right.maxConfidence - left.maxConfidence ||
+          left.node.name.localeCompare(right.node.name, "ja")
+        );
+      });
       if (!entries.length) {
         return '<div class="detail-empty">現在表示中のつながりノードはありません。</div>';
       }
 
       const entriesByType = new Map();
       entries.forEach((entry) => {
-        const nodeType = entry.node.type || "person";
+        const relationGroup = entry.solidCount > 0 ? "solid" : "bridge";
+        const nodeType = `${relationGroup}:${entry.node.type || "person"}`;
         if (!entriesByType.has(nodeType)) {
           entriesByType.set(nodeType, []);
         }
         entriesByType.get(nodeType).push(entry);
       });
 
+      const sectionOrder = [
+        ["solid:person", "人物 / 確定寄り"],
+        ["bridge:person", "人物 / 補助線"],
+        ["solid:community", "コミュニティ / 確定寄り"],
+        ["bridge:community", "コミュニティ / 補助線"],
+        ["solid:platform", "媒体 / 確定寄り"],
+        ["bridge:platform", "媒体 / 補助線"],
+        ["solid:location", "場所 / 確定寄り"],
+        ["bridge:location", "場所 / 補助線"],
+        ["solid:content", "コンテンツ / 確定寄り"],
+        ["bridge:content", "コンテンツ / 補助線"]
+      ];
+
       return `
         <div class="connected-node-list">
-          ${typeOrder
-            .filter((nodeType) => entriesByType.has(nodeType))
-            .map((nodeType) => `
+          ${sectionOrder
+            .filter(([sectionKey]) => entriesByType.has(sectionKey))
+            .map(([sectionKey, sectionLabel]) => `
               <section class="connected-type-group">
                 <div class="connected-type-heading">
-                  <strong>${escapeHtml(formatNodeType(nodeType))}</strong>
-                  <span>${escapeHtml(entriesByType.get(nodeType).length)} 件</span>
+                  <strong>${escapeHtml(sectionLabel)}</strong>
+                  <span>${escapeHtml(entriesByType.get(sectionKey).length)} 件</span>
                 </div>
-                ${entriesByType.get(nodeType).map((entry) => `
-                  <div class="connected-node-card">
+                ${entriesByType.get(sectionKey).map((entry) => `
+                  <div class="connected-node-card ${entry.solidCount === 0 ? "is-bridge" : ""}">
                     <div class="connected-node-header">
                       <div class="node-name-cell connected-node-body">
                         ${formatNodeAvatar(entry.node, "avatar-thumb")}
                         <div class="node-name-text">
                           <strong>${escapeHtml(entry.node.name)}</strong><br>
                           <span class="muted">${escapeHtml(entry.node.id)}</span>
+                          <div class="connected-node-rank">
+                            ${entry.node.follower_count ? `X followers: ${escapeHtml(formatNumber(entry.node.follower_count))} / ` : ""}
+                            関係 ${escapeHtml(entry.edgeCount)} / 確定 ${escapeHtml(entry.solidCount)} / 補助 ${escapeHtml(entry.bridgeCount)}
+                          </div>
                         </div>
                       </div>
                       <button type="button" class="inspect-button" data-node-id="${escapeHtml(entry.node.id)}">見る</button>
                     </div>
                     <div class="connected-node-tags">
+                      ${entry.solidCount ? `<span class="tag tag-solid">確定寄り ${escapeHtml(entry.solidCount)}</span>` : ""}
+                      ${entry.bridgeCount ? `<span class="tag tag-bridge">補助線 ${escapeHtml(entry.bridgeCount)}</span>` : ""}
                       ${Array.from(entry.outgoing).map((type) => `<span class="tag">→ ${escapeHtml(type)}</span>`).join("")}
                       ${Array.from(entry.incoming).map((type) => `<span class="tag">← ${escapeHtml(type)}</span>`).join("")}
                     </div>
