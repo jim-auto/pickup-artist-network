@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 from graph_model import (
     GraphData,
+    _build_account_projection,
     add_edge,
     add_node,
     export_html,
@@ -354,6 +355,53 @@ class GraphModelTests(unittest.TestCase):
         keyword_clusters = payload["clusters"]["modes"]["keyword_group"]["clusters"]
         elsta_labels = [info["label"] for info in keyword_clusters.values() if "えるスタ" in info["label"]]
         self.assertEqual(len(elsta_labels), 1)
+
+    def test_weak_profile_bridge_has_low_cluster_weight(self) -> None:
+        graph = GraphData()
+        for node_id in ("alpha", "beta", "gamma"):
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": node_id,
+                    "aliases": [],
+                    "description": "",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "alpha",
+                "target": "beta",
+                "type": "affiliation",
+                "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.",
+            },
+        )
+        add_edge(
+            graph,
+            {
+                "source": "alpha",
+                "target": "gamma",
+                "type": "affiliation",
+                "description": "プロフィール特徴語（PUA、講習）が重なるため、近い人物候補として補助接続（自動）。",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 講習. Score: 2.60.",
+            },
+        )
+
+        account_graph, _ = _build_account_projection(graph, "connectivity")
+
+        self.assertLess(account_graph["alpha"]["beta"]["weight"], 0.2)
+        self.assertGreater(account_graph["alpha"]["gamma"]["weight"], 0.8)
 
 
 if __name__ == "__main__":

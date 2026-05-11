@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import sqlite3
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
@@ -568,6 +569,34 @@ def _add_weighted_account_edge(account_graph: Any, source: str, target: str, wei
         account_graph.add_edge(source, target, weight=round(weight, 4))
 
 
+PROFILE_BRIDGE_TAGS_RE = re.compile(r"Shared profile tags:\s*([^.]*)\.")
+WEAK_PROFILE_BRIDGE_TAGS = frozenset({"PUA", "ナンパ", "ストリート"})
+
+
+def _profile_bridge_tags(edge: Edge) -> list[str]:
+    match = PROFILE_BRIDGE_TAGS_RE.search(edge.review_notes or "")
+    if not match:
+        return []
+    return [tag.strip() for tag in match.group(1).split(",") if tag.strip()]
+
+
+def _is_profile_bridge_edge(edge: Edge) -> bool:
+    return "Profile bridge auto-edge" in (edge.review_notes or "")
+
+
+def _is_weak_assistive_edge(edge: Edge) -> bool:
+    if not _is_profile_bridge_edge(edge):
+        return False
+    tags = _profile_bridge_tags(edge)
+    return len(tags) <= 1 and (tags[0] if tags else "") in WEAK_PROFILE_BRIDGE_TAGS
+
+
+def _cluster_edge_weight_scale(edge: Edge) -> float:
+    if _is_weak_assistive_edge(edge):
+        return 0.15
+    return 1.0
+
+
 def _build_account_projection(
     graph: GraphData,
     mode_key: str,
@@ -604,7 +633,11 @@ def _build_account_projection(
             pair_key = tuple(sorted((edge.source, edge.target)))
             direct_pair_directions[pair_key].add((edge.source, edge.target))
             direct_pair_types[pair_key].add(edge.type)
-            base_weight = direct_weights.get(edge.type, 1.0) * max(edge.confidence, 0.35)
+            base_weight = (
+                direct_weights.get(edge.type, 1.0)
+                * max(edge.confidence, 0.35)
+                * _cluster_edge_weight_scale(edge)
+            )
             _add_weighted_account_edge(account_graph, edge.source, edge.target, base_weight)
             continue
         if source_is_account == target_is_account:
