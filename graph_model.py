@@ -3128,8 +3128,8 @@ def render_html(
       return Math.abs(hash);
     }
 
-    function buildAnchor(index) {
-      const anchors = [
+    function buildAnchor(index, spacing = 1) {
+      const baseAnchors = [
         [0, 0],
         [-220, -95],
         [245, 85],
@@ -3144,20 +3144,22 @@ def render_html(
         [515, -60],
         [-530, 35]
       ];
+      const anchors = baseAnchors.map(([x, y]) => [x * spacing, y * spacing]);
       if (index < anchors.length) {
         return { x: anchors[index][0], y: anchors[index][1] };
       }
       const column = (index - anchors.length) % 7;
       const row = Math.floor((index - anchors.length) / 7);
       return {
-        x: (column - 3) * 170 + (row % 2 ? 55 : 0),
-        y: 375 + row * 120 + ((column % 2) * 35)
+        x: ((column - 3) * 170 + (row % 2 ? 55 : 0)) * spacing,
+        y: (375 + row * 120 + ((column % 2) * 35)) * spacing
       };
     }
 
     function computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster) {
       const positions = new Map();
       const modePayload = rawClusters.modes?.[clusterMode] || rawClusters.modes?.connectivity;
+      const clusterSpacing = shouldCluster ? (clusterMode === "region_group" ? 2.15 : 1.75) : 1;
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
@@ -3184,7 +3186,7 @@ def render_html(
       });
 
       orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
-        const anchor = buildAnchor(bucketIndex);
+        const anchor = buildAnchor(bucketIndex, clusterSpacing);
         const sortedMembers = [...members].sort((left, right) => {
           const rightDegree = connectedCounts.get(right.id) || 0;
           const leftDegree = connectedCounts.get(left.id) || 0;
@@ -3193,8 +3195,8 @@ def render_html(
           }
           return left.name.localeCompare(right.name);
         });
-        const spreadX = Math.max(90, Math.min(300, 50 + sortedMembers.length * 8));
-        const spreadY = Math.max(70, Math.min(240, 40 + sortedMembers.length * 6));
+        const spreadX = Math.max(90, Math.min(shouldCluster ? 430 : 300, 50 + sortedMembers.length * (shouldCluster ? 11 : 8)));
+        const spreadY = Math.max(70, Math.min(shouldCluster ? 340 : 240, 40 + sortedMembers.length * (shouldCluster ? 8 : 6)));
 
         sortedMembers.forEach((node, memberIndex) => {
           if (sortedMembers.length === 1) {
