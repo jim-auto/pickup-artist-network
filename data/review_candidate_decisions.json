@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T11:19:51+00:00",
+  "updated_at": "2026-05-11T11:39:09+00:00",
   "decisions": {
     "play-shibuya__shibuya__activity": {
       "candidate_id": "play-shibuya__shibuya__activity",
@@ -268,8 +268,8 @@
     },
     "korilla-pua__puro-nampa__profile_mention": {
       "candidate_id": "korilla-pua__puro-nampa__profile_mention",
-      "status": "approved",
-      "note": "Public X profile explicitly names this group or lesson.",
+      "status": "dismissed",
+      "note": "Dismissed after review: M氏 is too ambiguous here and appears inside こりらM氏講習 / M字, not as a reliable mention of puro-nampa.",
       "source": "korilla-pua",
       "target": "puro-nampa",
       "type": "profile_mention",
@@ -280,12 +280,12 @@
         "https://x.com/korilla_pua",
         "https://tips.jp/s/a15OMM"
       ],
-      "updated_at": "2026-05-01T21:44:26+00:00"
+      "updated_at": "2026-05-11T11:35:00+00:00"
     },
     "shinkawa-pua__puro-nampa__profile_mention": {
       "candidate_id": "shinkawa-pua__puro-nampa__profile_mention",
-      "status": "approved",
-      "note": "Public X profile explicitly names this group or lesson.",
+      "status": "dismissed",
+      "note": "Dismissed after review: M氏 is too ambiguous here and the public text is the こりらM氏講習 label.",
       "source": "shinkawa-pua",
       "target": "puro-nampa",
       "type": "profile_mention",
@@ -295,7 +295,7 @@
       "source_urls": [
         "https://x.com/shinkawa_pua"
       ],
-      "updated_at": "2026-05-01T21:44:27+00:00"
+      "updated_at": "2026-05-11T11:35:00+00:00"
     },
     "1time2time2time__tokyo__activity": {
       "candidate_id": "1time2time2time__tokyo__activity",

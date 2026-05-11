@@ -723,6 +723,49 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
 
         self.assertEqual(filtered_payload["candidates"], [])
 
+    def test_short_ambiguous_person_alias_is_not_a_review_match(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+            {"type": "person", "id": "m-teacher", "name": "M氏@講師", "aliases": ["M氏"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+        generated_snapshots = [
+            {
+                "account_id": "alpha",
+                "summary": "Alpha is taking #こりらM氏講習 and mentions M字 in profile.",
+                "profile_text": "Alpha is taking #こりらM氏講習 and mentions M字 in profile.",
+                "profile_url": "https://example.com/alpha",
+                "links": [],
+            }
+        ]
+
+        payload = generate_review_candidates(seed_entities, generated_snapshots, graph)
+
+        self.assertEqual(payload["candidates"], [])
+
+    def test_deshi_phrase_materializes_as_influence_edge(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "konamon", "name": "こなモン", "aliases": []},
+            {"type": "person", "id": "atsutaro", "name": "あつ太郎の本音bot", "aliases": ["あつ太郎"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+        generated_snapshots = [
+            {
+                "account_id": "konamon",
+                "summary": "35歳。職歴空白。あつ太郎の弟子。",
+                "profile_text": "こなモン (@konamon_nampa)\n35歳。職歴空白。あつ太郎の弟子。",
+                "profile_url": "https://example.com/konamon",
+                "links": [],
+            }
+        ]
+
+        added = materialize_inferred_social_edges(graph, seed_entities, generated_snapshots)
+
+        self.assertEqual(added, 1)
+        self.assertTrue(
+            any(edge.source == "konamon" and edge.target == "atsutaro" and edge.type == "influence" for edge in graph.edges)
+        )
+
     def test_set_review_candidate_decision_persists_candidate_metadata(self) -> None:
         decisions_payload = {"updated_at": "", "decisions": {}}
         candidate = {

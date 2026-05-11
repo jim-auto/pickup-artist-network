@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T11:19:51+00:00",
+  "generated_at": "2026-05-11T11:39:09+00:00",
   "nodes": [
     {
       "id": "5sato-pua",
@@ -15,14 +15,14 @@
       "type": "person",
       "degree_centrality": 0.0094,
       "betweenness_centrality": 0.0039,
-      "pagerank": 0.0006
+      "pagerank": 0.0005
     },
     {
       "id": "korea-pua",
       "name": "3/18-20🐙 いのっち@シーズン2(いのっち一門)",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.005,
+      "betweenness_centrality": 0.0046,
       "pagerank": 0.0007
     },
     {
@@ -86,7 +86,7 @@
       "name": "@1388_pqq",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0027,
+      "betweenness_centrality": 0.0028,
       "pagerank": 0.0011
     },
     {
@@ -174,7 +174,7 @@
       "name": "@4050_machiapp",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0235,
+      "betweenness_centrality": 0.0228,
       "pagerank": 0.0011
     },
     {
@@ -223,7 +223,7 @@
       "type": "person",
       "degree_centrality": 0.0245,
       "betweenness_centrality": 0.0034,
-      "pagerank": 0.001
+      "pagerank": 0.0011
     },
     {
       "id": "672fcdpa",
@@ -302,7 +302,7 @@
       "name": "@AIO5e7q1jL89900",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0014,
       "pagerank": 0.0005
     },
     {
@@ -349,9 +349,9 @@
       "id": "cx7flif6cz1tkxe",
       "name": "@CX7FLif6cz1tkxe",
       "type": "person",
-      "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0061,
-      "pagerank": 0.0009
+      "degree_centrality": 0.0113,
+      "betweenness_centrality": 0.0056,
+      "pagerank": 0.0008
     },
     {
       "id": "captured-alien",
@@ -398,8 +398,8 @@
       "name": "@Dude123Epic",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.001,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0002,
+      "pagerank": 0.0006
     },
     {
       "id": "enhypen",
@@ -494,7 +494,7 @@
       "name": "@MBH_5",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0029,
       "pagerank": 0.0006
     },
     {
@@ -550,7 +550,7 @@
       "name": "@Razer_pua",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0019,
+      "betweenness_centrality": 0.0023,
       "pagerank": 0.001
     },
     {
@@ -558,7 +558,7 @@
       "name": "@S050456236",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0005
     },
     {
@@ -606,7 +606,7 @@
       "name": "@TinderTips1000",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0007
     },
     {
@@ -655,7 +655,7 @@
       "type": "person",
       "degree_centrality": 0.0085,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0004
+      "pagerank": 0.0005
     },
     {
       "id": "yu-inst",
@@ -798,8 +798,8 @@
       "name": "@akari_pua",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0011,
-      "pagerank": 0.001
+      "betweenness_centrality": 0.0002,
+      "pagerank": 0.0011
     },
     {
       "id": "akbgarrrr",
@@ -838,8 +838,8 @@
       "name": "@alllllll_maito",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0005,
-      "pagerank": 0.0008
+      "betweenness_centrality": 0.0004,
+      "pagerank": 0.0009
     },
     {
       "id": "alpha-igakusei",
@@ -1078,7 +1078,7 @@
       "name": "@azuma_gouyin",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0008
     },
     {
@@ -1094,7 +1094,7 @@
       "name": "@b_ta46",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0004,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0009
     },
     {
@@ -1142,7 +1142,7 @@
       "name": "@banterin_duel",
       "type": "person",
       "degree_centrality": 0.0226,
-      "betweenness_centrality": 0.0125,
+      "betweenness_centrality": 0.0136,
       "pagerank": 0.0017
     },
     {
@@ -1390,7 +1390,7 @@
       "name": "@choro_tinder3",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0005
     },
     {
@@ -1574,7 +1574,7 @@
       "name": "@dayofikuta",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0015,
       "pagerank": 0.0005
     },
     {
@@ -1742,7 +1742,7 @@
       "name": "@ebios1000",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0008,
+      "betweenness_centrality": 0.0006,
       "pagerank": 0.0005
     },
     {
@@ -1798,7 +1798,7 @@
       "name": "@emiry_oinari",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0066,
+      "betweenness_centrality": 0.0083,
       "pagerank": 0.0005
     },
     {
@@ -1942,7 +1942,7 @@
       "name": "@gogomorikuma",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0004
     },
     {
@@ -1982,7 +1982,7 @@
       "name": "@hame_taro_7",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0005
     },
     {
@@ -1998,8 +1998,8 @@
       "name": "@hapuchantinder",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0011,
-      "pagerank": 0.0008
+      "betweenness_centrality": 0.001,
+      "pagerank": 0.0007
     },
     {
       "id": "haputinder",
@@ -2094,7 +2094,7 @@
       "name": "@hkun_theworld",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0004
     },
     {
@@ -2126,7 +2126,7 @@
       "name": "@ibu_photostyle",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0008,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0007
     },
     {
@@ -2190,7 +2190,7 @@
       "name": "@joker_nanpa",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.007,
+      "betweenness_centrality": 0.0062,
       "pagerank": 0.0006
     },
     {
@@ -2494,7 +2494,7 @@
       "name": "@lWE5Ne9d5PSfe9M",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0033,
+      "betweenness_centrality": 0.0032,
       "pagerank": 0.0005
     },
     {
@@ -2550,7 +2550,7 @@
       "name": "@luckypua017",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0107,
+      "betweenness_centrality": 0.0141,
       "pagerank": 0.0006
     },
     {
@@ -2678,7 +2678,7 @@
       "name": "@mina_kan_chan",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.011,
+      "betweenness_centrality": 0.0175,
       "pagerank": 0.0005
     },
     {
@@ -2774,16 +2774,16 @@
       "name": "@nagi1k8",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0091,
+      "betweenness_centrality": 0.0081,
       "pagerank": 0.0005
     },
     {
       "id": "nakaboshisama",
       "name": "@nakaboshisama",
       "type": "person",
-      "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0009,
-      "pagerank": 0.0005
+      "degree_centrality": 0.0104,
+      "betweenness_centrality": 0.0004,
+      "pagerank": 0.0004
     },
     {
       "id": "namedarumajan",
@@ -2822,8 +2822,8 @@
       "name": "@nann_panmann",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0032,
-      "pagerank": 0.0008
+      "betweenness_centrality": 0.0031,
+      "pagerank": 0.0007
     },
     {
       "id": "nanpaman-ashura",
@@ -2846,8 +2846,8 @@
       "name": "@naonao3827",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0016,
-      "pagerank": 0.0011
+      "betweenness_centrality": 0.0018,
+      "pagerank": 0.0012
     },
     {
       "id": "nasponsyy",
@@ -2862,7 +2862,7 @@
       "name": "@nekos_jf",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0008,
       "pagerank": 0.0005
     },
     {
@@ -2943,7 +2943,7 @@
       "type": "person",
       "degree_centrality": 0.0142,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0018
+      "pagerank": 0.0017
     },
     {
       "id": "nsj",
@@ -2998,7 +2998,7 @@
       "name": "@onnazukinp",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0056,
+      "betweenness_centrality": 0.0052,
       "pagerank": 0.0005
     },
     {
@@ -3078,7 +3078,7 @@
       "name": "@pro_tinder",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0005,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0005
     },
     {
@@ -3166,7 +3166,7 @@
       "name": "@rebirth_dogcat",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0024,
+      "betweenness_centrality": 0.0022,
       "pagerank": 0.0005
     },
     {
@@ -3206,7 +3206,7 @@
       "name": "@ruru_tinder",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0005
     },
     {
@@ -3230,7 +3230,7 @@
       "name": "@ryusei_pua",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0019,
       "pagerank": 0.001
     },
     {
@@ -3261,8 +3261,8 @@
       "id": "sanin-nanpa",
       "name": "@sanin__nanpa",
       "type": "person",
-      "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0003,
+      "degree_centrality": 0.0094,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0005
     },
     {
@@ -3334,7 +3334,7 @@
       "name": "@shi_shimaru1983",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0028,
+      "betweenness_centrality": 0.0029,
       "pagerank": 0.0011
     },
     {
@@ -3390,7 +3390,7 @@
       "name": "@snszebxuwxdcqdc",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0005
     },
     {
@@ -3503,7 +3503,7 @@
       "type": "person",
       "degree_centrality": 0.0123,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0014
+      "pagerank": 0.0013
     },
     {
       "id": "t-a-i-y-a-n",
@@ -3550,7 +3550,7 @@
       "name": "@taruchan100",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0072,
+      "betweenness_centrality": 0.0069,
       "pagerank": 0.0009
     },
     {
@@ -3566,8 +3566,8 @@
       "name": "@temomote1",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0138,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0134,
+      "pagerank": 0.0008
     },
     {
       "id": "tenshicos",
@@ -3766,8 +3766,8 @@
       "name": "@z1xnp6",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0001,
+      "pagerank": 0.001
     },
     {
       "id": "zgkzw",
@@ -3790,7 +3790,7 @@
       "name": "Bee@明太子ナンパ",
       "type": "person",
       "degree_centrality": 0.0311,
-      "betweenness_centrality": 0.0063,
+      "betweenness_centrality": 0.0064,
       "pagerank": 0.0022
     },
     {
@@ -3806,15 +3806,15 @@
       "name": "CRUBD 💎 / セクシーコマンドー部【mスト強化月間】",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0018,
-      "pagerank": 0.001
+      "betweenness_centrality": 0.0009,
+      "pagerank": 0.0009
     },
     {
       "id": "girl-pua",
       "name": "Cherry🍒",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0012,
+      "betweenness_centrality": 0.0013,
       "pagerank": 0.0007
     },
     {
@@ -3830,7 +3830,7 @@
       "name": "DD",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0047,
+      "betweenness_centrality": 0.0046,
       "pagerank": 0.0007
     },
     {
@@ -3894,7 +3894,7 @@
       "name": "K",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0252,
+      "betweenness_centrality": 0.0316,
       "pagerank": 0.0013
     },
     {
@@ -3902,7 +3902,7 @@
       "name": "K",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.002,
+      "betweenness_centrality": 0.0023,
       "pagerank": 0.0007
     },
     {
@@ -3926,7 +3926,7 @@
       "name": "KAISER",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0015,
       "pagerank": 0.0009
     },
     {
@@ -3935,7 +3935,7 @@
       "type": "location",
       "degree_centrality": 0.0123,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0039
+      "pagerank": 0.004
     },
     {
       "id": "kanto",
@@ -3973,8 +3973,8 @@
       "id": "lcup-pua",
       "name": "L@明太子",
       "type": "person",
-      "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0,
+      "degree_centrality": 0.0094,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0004
     },
     {
@@ -4015,15 +4015,15 @@
       "type": "location",
       "degree_centrality": 0.0453,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0084
+      "pagerank": 0.0088
     },
     {
       "id": "puro-nampa",
       "name": "M氏@ナンパ講師",
       "type": "person",
-      "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0046,
-      "pagerank": 0.0023
+      "degree_centrality": 0.0104,
+      "betweenness_centrality": 0.0012,
+      "pagerank": 0.001
     },
     {
       "id": "nagoya",
@@ -4047,7 +4047,7 @@
       "type": "location",
       "degree_centrality": 0.0198,
       "betweenness_centrality": 0.0001,
-      "pagerank": 0.0028
+      "pagerank": 0.0029
     },
     {
       "id": "pg-yoasobi",
@@ -4070,7 +4070,7 @@
       "name": "R-指定",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0009,
       "pagerank": 0.0004
     },
     {
@@ -4086,7 +4086,7 @@
       "name": "Reiya",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0074,
+      "betweenness_centrality": 0.0069,
       "pagerank": 0.0006
     },
     {
@@ -4094,8 +4094,8 @@
       "name": "S",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0021,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0023,
+      "pagerank": 0.001
     },
     {
       "id": "shsm-2024",
@@ -4110,7 +4110,7 @@
       "name": "SIOFKN シオフキン🧂@SSB",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.008,
+      "betweenness_centrality": 0.0075,
       "pagerank": 0.0007
     },
     {
@@ -4166,7 +4166,7 @@
       "name": "TB",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0005
     },
     {
@@ -4175,7 +4175,7 @@
       "type": "platform",
       "degree_centrality": 0.0245,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0035
+      "pagerank": 0.0039
     },
     {
       "id": "tokyo",
@@ -4190,7 +4190,7 @@
       "name": "V",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0004
     },
     {
@@ -4199,7 +4199,7 @@
       "type": "platform",
       "degree_centrality": 0.9849,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.2442
+      "pagerank": 0.2444
     },
     {
       "id": "25basabe",
@@ -4222,7 +4222,7 @@
       "name": "ZERO@リーマンのモテハック",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0005
     },
     {
@@ -4230,7 +4230,7 @@
       "name": "aaa",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0042,
+      "betweenness_centrality": 0.0041,
       "pagerank": 0.0006
     },
     {
@@ -4246,7 +4246,7 @@
       "name": "ami｜ファッション発信",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0016,
       "pagerank": 0.0004
     },
     {
@@ -4262,7 +4262,7 @@
       "name": "bcaafish（キレホージム言及）",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0025,
+      "betweenness_centrality": 0.003,
       "pagerank": 0.0004
     },
     {
@@ -4366,7 +4366,7 @@
       "name": "mi",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0008,
+      "betweenness_centrality": 0.0007,
       "pagerank": 0.0007
     },
     {
@@ -4422,7 +4422,7 @@
       "name": "n@東京ストナン会",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0014,
       "pagerank": 0.0005
     },
     {
@@ -4447,7 +4447,7 @@
       "type": "platform",
       "degree_centrality": 0.066,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0125
+      "pagerank": 0.0124
     },
     {
       "id": "oscal2189",
@@ -4518,7 +4518,7 @@
       "name": "st_r0817（ファッション系・参考）",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0017,
       "pagerank": 0.0006
     },
     {
@@ -4557,7 +4557,7 @@
       "id": "tohokupua",
       "name": "water",
       "type": "person",
-      "degree_centrality": 0.0094,
+      "degree_centrality": 0.0085,
       "betweenness_centrality": 0.0001,
       "pagerank": 0.0005
     },
@@ -4566,7 +4566,7 @@
       "name": "wing師範｜アツストサロン代表",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0016,
       "pagerank": 0.0021
     },
     {
@@ -4598,7 +4598,7 @@
       "name": "☚33歳リアルガチナンパ師 ゆ うや",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0006
     },
     {
@@ -4606,7 +4606,7 @@
       "name": "⚓️",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0022,
+      "betweenness_centrality": 0.0023,
       "pagerank": 0.0005
     },
     {
@@ -4614,16 +4614,16 @@
       "name": "『トーク刺しのまいく🎤』",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0004,
+      "betweenness_centrality": 0.0003,
       "pagerank": 0.0005
     },
     {
       "id": "aizen-pua",
       "name": "あいぜん@はんちょう講習生",
       "type": "person",
-      "degree_centrality": 0.0198,
-      "betweenness_centrality": 0.0034,
-      "pagerank": 0.002
+      "degree_centrality": 0.0208,
+      "betweenness_centrality": 0.003,
+      "pagerank": 0.0021
     },
     {
       "id": "aizen-puasub",
@@ -4646,7 +4646,7 @@
       "name": "あおとり",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0004
     },
     {
@@ -4654,7 +4654,7 @@
       "name": "あさひ@ゆってぃ長期12期生",
       "type": "person",
       "degree_centrality": 0.0245,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0012
     },
     {
@@ -4678,7 +4678,7 @@
       "name": "あたんのん@大阪ストサロン代表",
       "type": "person",
       "degree_centrality": 0.0226,
-      "betweenness_centrality": 0.0044,
+      "betweenness_centrality": 0.0043,
       "pagerank": 0.001
     },
     {
@@ -4695,7 +4695,7 @@
       "type": "person",
       "degree_centrality": 0.0085,
       "betweenness_centrality": 0.001,
-      "pagerank": 0.0007
+      "pagerank": 0.0008
     },
     {
       "id": "ak1-pua",
@@ -4710,7 +4710,7 @@
       "name": "あらまき@RiseUpLab",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0054,
+      "betweenness_centrality": 0.005,
       "pagerank": 0.0007
     },
     {
@@ -4734,7 +4734,7 @@
       "name": "いくらpua@ナノ講習",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0009
     },
     {
@@ -4758,7 +4758,7 @@
       "name": "うた",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0038,
+      "betweenness_centrality": 0.0044,
       "pagerank": 0.0015
     },
     {
@@ -4781,9 +4781,9 @@
       "id": "ururunpua",
       "name": "うるるん",
       "type": "person",
-      "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0003,
-      "pagerank": 0.0015
+      "degree_centrality": 0.0132,
+      "betweenness_centrality": 0.0001,
+      "pagerank": 0.0014
     },
     {
       "id": "enukun-pua",
@@ -4799,7 +4799,7 @@
       "type": "person",
       "degree_centrality": 0.0274,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0044
+      "pagerank": 0.0045
     },
     {
       "id": "elsta",
@@ -4830,7 +4830,7 @@
       "name": "おかるん@りお講習",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0025,
+      "betweenness_centrality": 0.0026,
       "pagerank": 0.0011
     },
     {
@@ -4870,7 +4870,7 @@
       "name": "かっざーま@さぶあか",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0019,
       "pagerank": 0.0004
     },
     {
@@ -4910,7 +4910,7 @@
       "name": "かわえi",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0041,
+      "betweenness_centrality": 0.0045,
       "pagerank": 0.0008
     },
     {
@@ -4918,7 +4918,7 @@
       "name": "がまぐっちぃ🐸仙人モード",
       "type": "person",
       "degree_centrality": 0.0245,
-      "betweenness_centrality": 0.0042,
+      "betweenness_centrality": 0.0041,
       "pagerank": 0.0018
     },
     {
@@ -4934,7 +4934,7 @@
       "name": "くくる@トク🐉一門",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0,
       "pagerank": 0.0004
     },
     {
@@ -4942,7 +4942,7 @@
       "name": "けい",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0024,
+      "betweenness_centrality": 0.0025,
       "pagerank": 0.0015
     },
     {
@@ -4950,7 +4950,7 @@
       "name": "けい@即画",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0235,
+      "betweenness_centrality": 0.024,
       "pagerank": 0.0009
     },
     {
@@ -4958,7 +4958,7 @@
       "name": "けい@味噌のホープ",
       "type": "person",
       "degree_centrality": 0.0236,
-      "betweenness_centrality": 0.0037,
+      "betweenness_centrality": 0.0036,
       "pagerank": 0.0015
     },
     {
@@ -4966,15 +4966,15 @@
       "name": "けいすけ",
       "type": "person",
       "degree_centrality": 0.0415,
-      "betweenness_centrality": 0.0302,
-      "pagerank": 0.0057
+      "betweenness_centrality": 0.031,
+      "pagerank": 0.0056
     },
     {
       "id": "kei-male-apex",
       "name": "けい｜恋愛先生",
       "type": "person",
       "degree_centrality": 0.016,
-      "betweenness_centrality": 0.012,
+      "betweenness_centrality": 0.0116,
       "pagerank": 0.0009
     },
     {
@@ -4982,7 +4982,7 @@
       "name": "こあ太郎@🦉の天才",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0342,
+      "betweenness_centrality": 0.0356,
       "pagerank": 0.0004
     },
     {
@@ -5014,14 +5014,14 @@
       "name": "こなんぱん┃24hいつでも現場合流",
       "type": "person",
       "degree_centrality": 0.0189,
-      "betweenness_centrality": 0.005,
+      "betweenness_centrality": 0.0048,
       "pagerank": 0.001
     },
     {
       "id": "konamon-nampa",
       "name": "こなモン@△▽監督",
       "type": "person",
-      "degree_centrality": 0.0009,
+      "degree_centrality": 0.0019,
       "betweenness_centrality": 0.0,
       "pagerank": 0.0004
     },
@@ -5038,8 +5038,8 @@
       "name": "こりら🧸",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0003,
-      "pagerank": 0.0013
+      "betweenness_centrality": 0.0001,
+      "pagerank": 0.0021
     },
     {
       "id": "gorogoro-street",
@@ -5062,7 +5062,7 @@
       "name": "さぼのサブ@部長",
       "type": "person",
       "degree_centrality": 0.0066,
-      "betweenness_centrality": 0.0126,
+      "betweenness_centrality": 0.0118,
       "pagerank": 0.0006
     },
     {
@@ -5070,7 +5070,7 @@
       "name": "さぼ団長@相席講習",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0126,
+      "betweenness_centrality": 0.0119,
       "pagerank": 0.001
     },
     {
@@ -5078,8 +5078,8 @@
       "name": "しおたん",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0012,
-      "pagerank": 0.0008
+      "betweenness_centrality": 0.0013,
+      "pagerank": 0.0009
     },
     {
       "id": "tantan-ura",
@@ -5118,7 +5118,7 @@
       "name": "しゅり@外見コンサル-Imagine-",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0004
     },
     {
@@ -5142,7 +5142,7 @@
       "name": "じんじん",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0098,
+      "betweenness_centrality": 0.0095,
       "pagerank": 0.0006
     },
     {
@@ -5158,7 +5158,7 @@
       "name": "せいや",
       "type": "person",
       "degree_centrality": 0.0179,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0016,
       "pagerank": 0.0015
     },
     {
@@ -5166,7 +5166,7 @@
       "name": "そうし｜声かけpua",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0005,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0008
     },
     {
@@ -5182,7 +5182,7 @@
       "name": "そらじろー @短髪強いられ勢",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0017,
       "pagerank": 0.0021
     },
     {
@@ -5214,7 +5214,7 @@
       "name": "たまン子@春案件",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0005
     },
     {
@@ -5222,7 +5222,7 @@
       "name": "たる活動記録",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0069,
+      "betweenness_centrality": 0.0065,
       "pagerank": 0.0007
     },
     {
@@ -5230,7 +5230,7 @@
       "name": "ちゃぱんこ🎐",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0034,
+      "betweenness_centrality": 0.0033,
       "pagerank": 0.0007
     },
     {
@@ -5262,15 +5262,15 @@
       "name": "ちょめ🎩NSJ流",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.003,
-      "pagerank": 0.0015
+      "betweenness_centrality": 0.0029,
+      "pagerank": 0.0014
     },
     {
       "id": "chori-pua",
       "name": "ちょり",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0015,
       "pagerank": 0.0005
     },
     {
@@ -5294,7 +5294,7 @@
       "name": "てぃぺた@タップル即日アポ攻略•with1位",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0049,
+      "betweenness_centrality": 0.0047,
       "pagerank": 0.0007
     },
     {
@@ -5318,8 +5318,8 @@
       "name": "とむりどる",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0043,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0038,
+      "pagerank": 0.001
     },
     {
       "id": "pua-donut",
@@ -5358,7 +5358,7 @@
       "name": "なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習",
       "type": "person",
       "degree_centrality": 0.0292,
-      "betweenness_centrality": 0.002,
+      "betweenness_centrality": 0.0022,
       "pagerank": 0.0016
     },
     {
@@ -5366,7 +5366,7 @@
       "name": "なつ。",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0012,
+      "betweenness_centrality": 0.0013,
       "pagerank": 0.0008
     },
     {
@@ -5397,9 +5397,9 @@
       "id": "nami-pua",
       "name": "なみへい👴脱非モテ",
       "type": "person",
-      "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0031,
-      "pagerank": 0.0017
+      "degree_centrality": 0.0142,
+      "betweenness_centrality": 0.003,
+      "pagerank": 0.0014
     },
     {
       "id": "rk0613i",
@@ -5430,7 +5430,7 @@
       "name": "ねる@ゆってぃ長期11期生",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0008
     },
     {
@@ -5454,15 +5454,15 @@
       "name": "はちサブ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0041,
-      "pagerank": 0.001
+      "betweenness_centrality": 0.0031,
+      "pagerank": 0.0011
     },
     {
       "id": "hpns-pua",
       "name": "はぴなす@MBH🐟さん一門",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0005
     },
     {
@@ -5470,8 +5470,8 @@
       "name": "はめゆ＠マッチングアプリカメラマン",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0006,
-      "pagerank": 0.001
+      "betweenness_centrality": 0.0003,
+      "pagerank": 0.0008
     },
     {
       "id": "mbh-hal",
@@ -5494,8 +5494,8 @@
       "name": "はんちょう",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0016,
-      "pagerank": 0.0012
+      "betweenness_centrality": 0.0009,
+      "pagerank": 0.0013
     },
     {
       "id": "babao-wtpf",
@@ -5518,16 +5518,16 @@
       "name": "ひのまる@面長一門@(女友達いない系)女性脳",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0004
     },
     {
       "id": "foy-jibunmigaki",
       "name": "ふぉい@不屈の行動家🏃💨",
       "type": "person",
-      "degree_centrality": 0.0245,
-      "betweenness_centrality": 0.0031,
-      "pagerank": 0.0011
+      "degree_centrality": 0.0255,
+      "betweenness_centrality": 0.0037,
+      "pagerank": 0.0012
     },
     {
       "id": "puriketsu-nnp",
@@ -5550,7 +5550,7 @@
       "name": "ぽてと@東京ストナン会",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0009,
       "pagerank": 0.0004
     },
     {
@@ -5558,7 +5558,7 @@
       "name": "まっちゃ@インスタグラマー級 外見改善【えるスタ講師】",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0013,
       "pagerank": 0.0008
     },
     {
@@ -5566,15 +5566,15 @@
       "name": "まゆげ@MBH_4月さかなさん一門",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.004,
       "pagerank": 0.0006
     },
     {
       "id": "marifax-pua",
       "name": "まり@ポチャマ留年講習",
       "type": "person",
-      "degree_centrality": 0.0226,
-      "betweenness_centrality": 0.0361,
+      "degree_centrality": 0.0236,
+      "betweenness_centrality": 0.0365,
       "pagerank": 0.0041
     },
     {
@@ -5606,16 +5606,16 @@
       "name": "みっきー",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0037,
+      "betweenness_centrality": 0.0038,
       "pagerank": 0.0009
     },
     {
       "id": "mky-match",
       "name": "みっきー@サブ",
       "type": "person",
-      "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0003,
-      "pagerank": 0.0009
+      "degree_centrality": 0.0094,
+      "betweenness_centrality": 0.0004,
+      "pagerank": 0.001
     },
     {
       "id": "michimichi-mbh",
@@ -5646,7 +5646,7 @@
       "name": "みな",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0034,
+      "betweenness_centrality": 0.0036,
       "pagerank": 0.0005
     },
     {
@@ -5654,7 +5654,7 @@
       "name": "みなと Vさん 1ヶ月チャレンジ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.006,
+      "betweenness_centrality": 0.0057,
       "pagerank": 0.0005
     },
     {
@@ -5686,7 +5686,7 @@
       "name": "みらい🚂＠裏垢",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0008,
+      "betweenness_centrality": 0.0009,
       "pagerank": 0.0007
     },
     {
@@ -5718,7 +5718,7 @@
       "name": "めんだこ",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.002,
+      "betweenness_centrality": 0.0018,
       "pagerank": 0.0012
     },
     {
@@ -5742,7 +5742,7 @@
       "name": "ももんが",
       "type": "person",
       "degree_centrality": 0.016,
-      "betweenness_centrality": 0.0023,
+      "betweenness_centrality": 0.0015,
       "pagerank": 0.0006
     },
     {
@@ -5822,7 +5822,7 @@
       "name": "ゆーとぴあ@えるスタ",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0,
       "pagerank": 0.0005
     },
     {
@@ -5830,7 +5830,7 @@
       "name": "ようくん@りお講習",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0,
       "pagerank": 0.0004
     },
     {
@@ -5854,7 +5854,7 @@
       "name": "らいりー",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0005
     },
     {
@@ -5894,7 +5894,7 @@
       "name": "りょう🌌エモく若返らせる人📸",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0031,
+      "betweenness_centrality": 0.0032,
       "pagerank": 0.0006
     },
     {
@@ -5918,7 +5918,7 @@
       "name": "るす@インスタナンパの人",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0034,
+      "betweenness_centrality": 0.003,
       "pagerank": 0.0008
     },
     {
@@ -5926,7 +5926,7 @@
       "name": "れん@無所属",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0014,
       "pagerank": 0.0009
     },
     {
@@ -5950,15 +5950,15 @@
       "name": "ろじゅ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0039,
-      "pagerank": 0.0006
+      "betweenness_centrality": 0.0035,
+      "pagerank": 0.0005
     },
     {
       "id": "kazunanpa",
       "name": "わかしゃも🔥@ゆってぃ長期1期生",
       "type": "person",
       "degree_centrality": 0.0245,
-      "betweenness_centrality": 0.0038,
+      "betweenness_centrality": 0.0039,
       "pagerank": 0.001
     },
     {
@@ -5982,7 +5982,7 @@
       "name": "アポ取りの翁",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0082,
+      "betweenness_centrality": 0.01,
       "pagerank": 0.0008
     },
     {
@@ -5990,15 +5990,15 @@
       "name": "アヤセ@MBH",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0002,
-      "pagerank": 0.0004
+      "betweenness_centrality": 0.0052,
+      "pagerank": 0.0005
     },
     {
       "id": "ayato-691",
       "name": "アヤト@マッチングアプリ婚",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0045,
+      "betweenness_centrality": 0.0047,
       "pagerank": 0.0007
     },
     {
@@ -6006,8 +6006,8 @@
       "name": "アラフィフのヨッシー｜路上の伝説",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0015,
-      "pagerank": 0.0013
+      "betweenness_centrality": 0.0016,
+      "pagerank": 0.0012
     },
     {
       "id": "anus-pua",
@@ -6038,7 +6038,7 @@
       "name": "イーブラ2",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0273,
+      "betweenness_centrality": 0.0169,
       "pagerank": 0.0006
     },
     {
@@ -6054,7 +6054,7 @@
       "name": "ウエスト@留年ポチャマ講習",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0005
     },
     {
@@ -6070,7 +6070,7 @@
       "name": "エンヴィ@高校生PUA",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0024,
+      "betweenness_centrality": 0.0026,
       "pagerank": 0.0008
     },
     {
@@ -6078,7 +6078,7 @@
       "name": "エース@体刺し一門関東代表",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0039,
+      "betweenness_centrality": 0.0033,
       "pagerank": 0.0006
     },
     {
@@ -6094,16 +6094,16 @@
       "name": "オタク",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0019,
       "pagerank": 0.0006
     },
     {
       "id": "onaken-pua",
       "name": "オナケン@界隈No.1王道彼氏",
       "type": "person",
-      "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0106,
-      "pagerank": 0.0007
+      "degree_centrality": 0.0123,
+      "betweenness_centrality": 0.0091,
+      "pagerank": 0.0006
     },
     {
       "id": "pua-kaikun",
@@ -6118,7 +6118,7 @@
       "name": "カッザーマ",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0005
     },
     {
@@ -6134,7 +6134,7 @@
       "name": "カヤック",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.0007,
       "pagerank": 0.0006
     },
     {
@@ -6150,7 +6150,7 @@
       "name": "カロン@RiseUpLab",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0052,
+      "betweenness_centrality": 0.0047,
       "pagerank": 0.0007
     },
     {
@@ -6173,16 +6173,16 @@
       "id": "gash01nx",
       "name": "ガッシュ｜すべての社会人に、モテを。",
       "type": "person",
-      "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0013,
-      "pagerank": 0.0013
+      "degree_centrality": 0.0142,
+      "betweenness_centrality": 0.0011,
+      "pagerank": 0.0012
     },
     {
       "id": "gamupua",
       "name": "ガム",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0009
     },
     {
@@ -6198,7 +6198,7 @@
       "name": "キバナ👃@味噌",
       "type": "person",
       "degree_centrality": 0.0264,
-      "betweenness_centrality": 0.0044,
+      "betweenness_centrality": 0.0043,
       "pagerank": 0.0009
     },
     {
@@ -6206,7 +6206,7 @@
       "name": "キム即ジン🇰🇷@🥧一門",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0,
       "pagerank": 0.0004
     },
     {
@@ -6230,7 +6230,7 @@
       "name": "キルア⚡️",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0019,
+      "betweenness_centrality": 0.0018,
       "pagerank": 0.0014
     },
     {
@@ -6262,7 +6262,7 @@
       "name": "ゲンキ GENKI【ゲンキジャパン】",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0005
     },
     {
@@ -6270,7 +6270,7 @@
       "name": "コイキングなかで",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0024,
+      "betweenness_centrality": 0.0022,
       "pagerank": 0.0007
     },
     {
@@ -6318,7 +6318,7 @@
       "name": "サンジ@遊び人",
       "type": "person",
       "degree_centrality": 0.0179,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.002,
       "pagerank": 0.0015
     },
     {
@@ -6350,7 +6350,7 @@
       "name": "シャン🫥",
       "type": "person",
       "degree_centrality": 0.0255,
-      "betweenness_centrality": 0.0029,
+      "betweenness_centrality": 0.0031,
       "pagerank": 0.002
     },
     {
@@ -6366,7 +6366,7 @@
       "name": "シュークリーム",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0008,
+      "betweenness_centrality": 0.0007,
       "pagerank": 0.0007
     },
     {
@@ -6382,7 +6382,7 @@
       "name": "シン",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0026,
+      "betweenness_centrality": 0.0031,
       "pagerank": 0.0022
     },
     {
@@ -6390,7 +6390,7 @@
       "name": "シンバ",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0007,
+      "betweenness_centrality": 0.0008,
       "pagerank": 0.0009
     },
     {
@@ -6422,7 +6422,7 @@
       "name": "ジロー@清湯醤油ラーメン",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0021,
+      "betweenness_centrality": 0.0022,
       "pagerank": 0.0017
     },
     {
@@ -6437,9 +6437,9 @@
       "id": "suzuniki-pua",
       "name": "スズキ(アラフォー会社員)",
       "type": "person",
-      "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0008,
-      "pagerank": 0.0007
+      "degree_centrality": 0.0104,
+      "betweenness_centrality": 0.0009,
+      "pagerank": 0.0008
     },
     {
       "id": "moviefoodfc2",
@@ -6462,15 +6462,15 @@
       "name": "スライス",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0011,
-      "pagerank": 0.0007
+      "betweenness_centrality": 0.001,
+      "pagerank": 0.0006
     },
     {
       "id": "hyndp2qxwq4n3xb",
       "name": "スーパービックボーイ",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.008,
+      "betweenness_centrality": 0.0074,
       "pagerank": 0.0005
     },
     {
@@ -6486,7 +6486,7 @@
       "name": "ゼロ",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0042,
+      "betweenness_centrality": 0.0045,
       "pagerank": 0.0014
     },
     {
@@ -6502,7 +6502,7 @@
       "name": "ソク@",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0006
     },
     {
@@ -6534,7 +6534,7 @@
       "name": "チバ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0119,
+      "betweenness_centrality": 0.0025,
       "pagerank": 0.0004
     },
     {
@@ -6558,7 +6558,7 @@
       "name": "チロル",
       "type": "person",
       "degree_centrality": 0.0443,
-      "betweenness_centrality": 0.0246,
+      "betweenness_centrality": 0.0247,
       "pagerank": 0.0037
     },
     {
@@ -6574,7 +6574,7 @@
       "name": "トノス",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0012,
+      "betweenness_centrality": 0.0013,
       "pagerank": 0.0007
     },
     {
@@ -6590,7 +6590,7 @@
       "name": "トレニー",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0004,
+      "betweenness_centrality": 0.0003,
       "pagerank": 0.0004
     },
     {
@@ -6622,7 +6622,7 @@
       "name": "ドラえもん",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0014,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.001
     },
     {
@@ -6630,7 +6630,7 @@
       "name": "ドラサム",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.003,
+      "betweenness_centrality": 0.0029,
       "pagerank": 0.0005
     },
     {
@@ -6678,7 +6678,7 @@
       "name": "ナンパ師んぽくぬ",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0047,
+      "betweenness_centrality": 0.0113,
       "pagerank": 0.0005
     },
     {
@@ -6686,7 +6686,7 @@
       "name": "ナンパ次郎",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.0079,
       "pagerank": 0.0009
     },
     {
@@ -6718,7 +6718,7 @@
       "name": "ナーガ@SHSM2024幹事",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.0008,
       "pagerank": 0.0006
     },
     {
@@ -6734,7 +6734,7 @@
       "name": "ニケ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0004,
+      "betweenness_centrality": 0.0003,
       "pagerank": 0.0004
     },
     {
@@ -6774,7 +6774,7 @@
       "name": "ハーパー",
       "type": "person",
       "degree_centrality": 0.0151,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0006
     },
     {
@@ -6782,7 +6782,7 @@
       "name": "バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督",
       "type": "person",
       "degree_centrality": 0.034,
-      "betweenness_centrality": 0.0088,
+      "betweenness_centrality": 0.0094,
       "pagerank": 0.0063
     },
     {
@@ -6790,7 +6790,7 @@
       "name": "バッハ福田麻呂@サブ垢",
       "type": "person",
       "degree_centrality": 0.0283,
-      "betweenness_centrality": 0.0025,
+      "betweenness_centrality": 0.0027,
       "pagerank": 0.0024
     },
     {
@@ -6798,15 +6798,15 @@
       "name": "バンギ@TinderTips1000部突破",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0006
     },
     {
       "id": "bantan-pua",
       "name": "バンタン@外見コンサルReMake®︎",
       "type": "person",
-      "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0015,
+      "degree_centrality": 0.0123,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0006
     },
     {
@@ -6814,7 +6814,7 @@
       "name": "パキパキピキリチュウ@lv553",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0012
     },
     {
@@ -6829,7 +6829,7 @@
       "id": "hiroyukinanpa",
       "name": "ヒロユキ@46歳現役ナンパ師",
       "type": "person",
-      "degree_centrality": 0.0151,
+      "degree_centrality": 0.0142,
       "betweenness_centrality": 0.0004,
       "pagerank": 0.001
     },
@@ -6869,7 +6869,7 @@
       "id": "1x5r7zr6nufyswr",
       "name": "ファントム@巨乳狙い 質重視",
       "type": "person",
-      "degree_centrality": 0.0132,
+      "degree_centrality": 0.0123,
       "betweenness_centrality": 0.0026,
       "pagerank": 0.0009
     },
@@ -6878,7 +6878,7 @@
       "name": "フェイタン@ペアーズ完全攻略tips発売",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0051,
+      "betweenness_centrality": 0.0041,
       "pagerank": 0.0012
     },
     {
@@ -6886,8 +6886,8 @@
       "name": "フェイタンサブ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0055,
-      "pagerank": 0.001
+      "betweenness_centrality": 0.0046,
+      "pagerank": 0.0012
     },
     {
       "id": "paxnpa123",
@@ -6902,7 +6902,7 @@
       "name": "フェニックス🪽＠🍚セクシーコマンドー部🍚",
       "type": "person",
       "degree_centrality": 0.0236,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0018
     },
     {
@@ -6910,7 +6910,7 @@
       "name": "フクナガ@タップル完全攻略tips等800部突破✨＆マッチングアプリコンサル＆運用アドバイザー",
       "type": "person",
       "degree_centrality": 0.0236,
-      "betweenness_centrality": 0.0021,
+      "betweenness_centrality": 0.0025,
       "pagerank": 0.0016
     },
     {
@@ -6926,7 +6926,7 @@
       "name": "フランク",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0053,
+      "betweenness_centrality": 0.005,
       "pagerank": 0.0006
     },
     {
@@ -6942,7 +6942,7 @@
       "name": "ブラックサンダー@kyo統失一門",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0037,
+      "betweenness_centrality": 0.0038,
       "pagerank": 0.0007
     },
     {
@@ -6974,7 +6974,7 @@
       "name": "ベティ",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0003,
       "pagerank": 0.0005
     },
     {
@@ -6982,8 +6982,8 @@
       "name": "ペガサス@マッチングアプリ攻略🦄",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0022,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0024,
+      "pagerank": 0.001
     },
     {
       "id": "niko-pua",
@@ -6997,9 +6997,9 @@
       "id": "bossnn-pua",
       "name": "ボッスン@あいぜん一番弟子",
       "type": "person",
-      "degree_centrality": 0.0075,
+      "degree_centrality": 0.0094,
       "betweenness_centrality": 0.0002,
-      "pagerank": 0.001
+      "pagerank": 0.0011
     },
     {
       "id": "pochi-tama11",
@@ -7014,7 +7014,7 @@
       "name": "ポチャマ",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0038,
+      "betweenness_centrality": 0.0039,
       "pagerank": 0.0018
     },
     {
@@ -7054,7 +7054,7 @@
       "name": "マツザキ",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0004
     },
     {
@@ -7070,7 +7070,7 @@
       "name": "マーボ茄子",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0007,
+      "betweenness_centrality": 0.0006,
       "pagerank": 0.0007
     },
     {
@@ -7078,7 +7078,7 @@
       "name": "ミズノ",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0039,
+      "betweenness_centrality": 0.0043,
       "pagerank": 0.001
     },
     {
@@ -7086,7 +7086,7 @@
       "name": "ミナム【670部】突破『ミナム式』直ホの極意発売中🔥",
       "type": "person",
       "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0038,
+      "betweenness_centrality": 0.0039,
       "pagerank": 0.0007
     },
     {
@@ -7102,7 +7102,7 @@
       "name": "モテコンサル🅐🅢🅗🅤🅡🅐👹",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.0007,
       "pagerank": 0.0008
     },
     {
@@ -7110,7 +7110,7 @@
       "name": "モテマガJAPAN",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0188,
+      "betweenness_centrality": 0.0171,
       "pagerank": 0.0007
     },
     {
@@ -7118,7 +7118,7 @@
       "name": "モテ特化ボイトレ",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0044,
+      "betweenness_centrality": 0.0035,
       "pagerank": 0.0004
     },
     {
@@ -7126,7 +7126,7 @@
       "name": "モテ界隈特化美容師 えーちゃん",
       "type": "person",
       "degree_centrality": 0.0189,
-      "betweenness_centrality": 0.013,
+      "betweenness_centrality": 0.0137,
       "pagerank": 0.0011
     },
     {
@@ -7158,7 +7158,7 @@
       "name": "ユウ@東カレの王👑",
       "type": "person",
       "degree_centrality": 0.0292,
-      "betweenness_centrality": 0.0052,
+      "betweenness_centrality": 0.0054,
       "pagerank": 0.0021
     },
     {
@@ -7199,7 +7199,7 @@
       "type": "person",
       "degree_centrality": 0.0028,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0006
+      "pagerank": 0.0005
     },
     {
       "id": "right-pua",
@@ -7222,7 +7222,7 @@
       "name": "リク@ナノ講習",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0029,
+      "betweenness_centrality": 0.0025,
       "pagerank": 0.001
     },
     {
@@ -7246,16 +7246,16 @@
       "name": "リー",
       "type": "person",
       "degree_centrality": 0.0736,
-      "betweenness_centrality": 0.0476,
-      "pagerank": 0.0113
+      "betweenness_centrality": 0.0514,
+      "pagerank": 0.0112
     },
     {
       "id": "rui0808-pua",
       "name": "ルイ",
       "type": "person",
       "degree_centrality": 0.0208,
-      "betweenness_centrality": 0.0012,
-      "pagerank": 0.0041
+      "betweenness_centrality": 0.0013,
+      "pagerank": 0.004
     },
     {
       "id": "gorubakki-pua",
@@ -7270,7 +7270,7 @@
       "name": "ルート10",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0017,
+      "betweenness_centrality": 0.0016,
       "pagerank": 0.0006
     },
     {
@@ -7302,7 +7302,7 @@
       "name": "レジュメ@2期生",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0005,
+      "betweenness_centrality": 0.0009,
       "pagerank": 0.0007
     },
     {
@@ -7342,30 +7342,30 @@
       "name": "ワカシャモ🔥のレポ垢",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0028,
+      "betweenness_centrality": 0.0029,
       "pagerank": 0.0005
     },
     {
       "id": "nano-pua",
       "name": "㌨氏",
       "type": "person",
-      "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0004,
-      "pagerank": 0.0004
+      "degree_centrality": 0.0104,
+      "betweenness_centrality": 0.0074,
+      "pagerank": 0.0005
     },
     {
       "id": "hayato-pua",
       "name": "一ノ瀬",
       "type": "person",
       "degree_centrality": 0.034,
-      "betweenness_centrality": 0.0139,
+      "betweenness_centrality": 0.014,
       "pagerank": 0.002
     },
     {
       "id": "ffk0772",
       "name": "一条りん@会話刺しのプロ",
       "type": "person",
-      "degree_centrality": 0.0132,
+      "degree_centrality": 0.0142,
       "betweenness_centrality": 0.0004,
       "pagerank": 0.0008
     },
@@ -7390,7 +7390,7 @@
       "name": "中山@乳追い",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0027,
+      "betweenness_centrality": 0.0026,
       "pagerank": 0.0005
     },
     {
@@ -7406,7 +7406,7 @@
       "name": "伊藤誠@100即達成した男",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0008,
       "pagerank": 0.0009
     },
     {
@@ -7429,16 +7429,16 @@
       "id": "shingen-pua",
       "name": "信玄",
       "type": "person",
-      "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0117,
-      "pagerank": 0.0007
+      "degree_centrality": 0.0113,
+      "betweenness_centrality": 0.0112,
+      "pagerank": 0.0006
     },
     {
       "id": "kent-o-o",
       "name": "健人",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0019,
       "pagerank": 0.0006
     },
     {
@@ -7454,7 +7454,7 @@
       "name": "円堂くん｜革命家👑",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0033,
+      "betweenness_centrality": 0.0034,
       "pagerank": 0.0006
     },
     {
@@ -7494,7 +7494,7 @@
       "name": "勃良@札幌⛄️",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0003,
+      "betweenness_centrality": 0.0002,
       "pagerank": 0.0005
     },
     {
@@ -7502,7 +7502,7 @@
       "name": "医学生佐藤@🔞で月収100万",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0005,
+      "betweenness_centrality": 0.0004,
       "pagerank": 0.0004
     },
     {
@@ -7510,7 +7510,7 @@
       "name": "千咒",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0102,
+      "betweenness_centrality": 0.0119,
       "pagerank": 0.0013
     },
     {
@@ -7518,7 +7518,7 @@
       "name": "千賀",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0024,
+      "betweenness_centrality": 0.0028,
       "pagerank": 0.001
     },
     {
@@ -7526,8 +7526,8 @@
       "name": "半蔵@マッチングアプリ撮影",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.006,
-      "pagerank": 0.0007
+      "betweenness_centrality": 0.0051,
+      "pagerank": 0.0008
     },
     {
       "id": "hanzo-prim-sub",
@@ -7542,7 +7542,7 @@
       "name": "即リーマン",
       "type": "person",
       "degree_centrality": 0.016,
-      "betweenness_centrality": 0.0022,
+      "betweenness_centrality": 0.0017,
       "pagerank": 0.0011
     },
     {
@@ -7550,15 +7550,15 @@
       "name": "呪怨れのん@🍙おにぎり一門🍙",
       "type": "person",
       "degree_centrality": 0.0264,
-      "betweenness_centrality": 0.0028,
-      "pagerank": 0.0012
+      "betweenness_centrality": 0.0029,
+      "pagerank": 0.0011
     },
     {
       "id": "socool55555",
       "name": "味噌どガス",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0006
     },
     {
@@ -7566,7 +7566,7 @@
       "name": "営業所長けーすけ@ブルバ100",
       "type": "person",
       "degree_centrality": 0.0217,
-      "betweenness_centrality": 0.0399,
+      "betweenness_centrality": 0.0413,
       "pagerank": 0.0017
     },
     {
@@ -7574,7 +7574,7 @@
       "name": "図鑑@mTech",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0004
     },
     {
@@ -7598,7 +7598,7 @@
       "name": "夜ト",
       "type": "person",
       "degree_centrality": 0.0217,
-      "betweenness_centrality": 0.0047,
+      "betweenness_centrality": 0.0055,
       "pagerank": 0.0025
     },
     {
@@ -7630,7 +7630,7 @@
       "name": "小栗",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0057,
+      "betweenness_centrality": 0.0054,
       "pagerank": 0.0005
     },
     {
@@ -7663,7 +7663,7 @@
       "type": "person",
       "degree_centrality": 0.0085,
       "betweenness_centrality": 0.0005,
-      "pagerank": 0.0012
+      "pagerank": 0.0013
     },
     {
       "id": "greed-pua-sub",
@@ -7686,7 +7686,7 @@
       "name": "怒りのシラス💢@ピカ講習@淘汰男FC",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0053,
+      "betweenness_centrality": 0.0055,
       "pagerank": 0.0014
     },
     {
@@ -7694,7 +7694,7 @@
       "name": "恋愛のドグマ🦁マッチングアプリ恋活婚活で幸福を掴ませる",
       "type": "person",
       "degree_centrality": 0.017,
-      "betweenness_centrality": 0.003,
+      "betweenness_centrality": 0.0027,
       "pagerank": 0.0006
     },
     {
@@ -7702,8 +7702,8 @@
       "name": "恋愛マスター阿修羅",
       "type": "person",
       "degree_centrality": 0.0179,
-      "betweenness_centrality": 0.0152,
-      "pagerank": 0.0014
+      "betweenness_centrality": 0.0133,
+      "pagerank": 0.0013
     },
     {
       "id": "nmpst913",
@@ -7718,7 +7718,7 @@
       "name": "打ち上げ花火@ゆってぃ長期8期生",
       "type": "person",
       "degree_centrality": 0.033,
-      "betweenness_centrality": 0.0041,
+      "betweenness_centrality": 0.0043,
       "pagerank": 0.0038
     },
     {
@@ -7735,14 +7735,14 @@
       "type": "person",
       "degree_centrality": 0.0132,
       "betweenness_centrality": 0.0001,
-      "pagerank": 0.0011
+      "pagerank": 0.001
     },
     {
       "id": "nanpawars",
       "name": "新宿ナンパ大戦争",
       "type": "person",
       "degree_centrality": 0.016,
-      "betweenness_centrality": 0.0077,
+      "betweenness_centrality": 0.0069,
       "pagerank": 0.0007
     },
     {
@@ -7750,8 +7750,8 @@
       "name": "新川氏🌟@こりらM氏講習",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0005,
-      "pagerank": 0.0009
+      "betweenness_centrality": 0.0003,
+      "pagerank": 0.001
     },
     {
       "id": "yuu-renai",
@@ -7774,7 +7774,7 @@
       "name": "服部@ﾉﾝﾊﾞﾏﾝﾄﾙ",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0009,
       "pagerank": 0.001
     },
     {
@@ -7790,7 +7790,7 @@
       "name": "本膣情報@一般弱者男性",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0019,
+      "betweenness_centrality": 0.0018,
       "pagerank": 0.0023
     },
     {
@@ -7814,7 +7814,7 @@
       "name": "東カレ太郎@Another、体刺し一門",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0136,
+      "betweenness_centrality": 0.0174,
       "pagerank": 0.0024
     },
     {
@@ -7862,7 +7862,7 @@
       "name": "梶",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0013,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0005
     },
     {
@@ -7879,7 +7879,7 @@
       "type": "person",
       "degree_centrality": 0.0217,
       "betweenness_centrality": 0.0037,
-      "pagerank": 0.003
+      "pagerank": 0.0029
     },
     {
       "id": "okinawa-nampa",
@@ -7934,7 +7934,7 @@
       "name": "潔",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0011,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0006
     },
     {
@@ -7950,7 +7950,7 @@
       "name": "無料ナンパ講習塾教室。イルカ先生。本日講習予定135※念のためdmと返信を両方お願いします",
       "type": "person",
       "degree_centrality": 0.0198,
-      "betweenness_centrality": 0.0375,
+      "betweenness_centrality": 0.0388,
       "pagerank": 0.0009
     },
     {
@@ -7958,7 +7958,7 @@
       "name": "狗巻@ピカ講習",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0021,
       "pagerank": 0.0013
     },
     {
@@ -7966,7 +7966,7 @@
       "name": "石川達也 Tatsuya Ishikawa ナンパ工学アカデミー",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0001,
+      "betweenness_centrality": 0.0,
       "pagerank": 0.0005
     },
     {
@@ -7990,7 +7990,7 @@
       "name": "神吉",
       "type": "person",
       "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0041,
+      "betweenness_centrality": 0.0038,
       "pagerank": 0.001
     },
     {
@@ -7998,7 +7998,7 @@
       "name": "福",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.001,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0006
     },
     {
@@ -8006,7 +8006,7 @@
       "name": "竹中即兵衛",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0008
     },
     {
@@ -8014,7 +8014,7 @@
       "name": "筋肉マン",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0036,
+      "betweenness_centrality": 0.0033,
       "pagerank": 0.0005
     },
     {
@@ -8022,7 +8022,7 @@
       "name": "米流",
       "type": "person",
       "degree_centrality": 0.0274,
-      "betweenness_centrality": 0.003,
+      "betweenness_centrality": 0.0029,
       "pagerank": 0.0011
     },
     {
@@ -8046,7 +8046,7 @@
       "name": "美容りどる",
       "type": "person",
       "degree_centrality": 0.0066,
-      "betweenness_centrality": 0.0039,
+      "betweenness_centrality": 0.0036,
       "pagerank": 0.0006
     },
     {
@@ -8061,9 +8061,9 @@
       "id": "syu-puanet",
       "name": "舐め太郎",
       "type": "person",
-      "degree_centrality": 0.0142,
-      "betweenness_centrality": 0.0021,
-      "pagerank": 0.0021
+      "degree_centrality": 0.0132,
+      "betweenness_centrality": 0.0018,
+      "pagerank": 0.002
     },
     {
       "id": "negitoro-nannpa",
@@ -8102,8 +8102,8 @@
       "name": "裏えむち@最強ナンパ師",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0047,
-      "pagerank": 0.0014
+      "betweenness_centrality": 0.0015,
+      "pagerank": 0.0009
     },
     {
       "id": "gatiikepua",
@@ -8118,7 +8118,7 @@
       "name": "裏ポチャマ",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0166,
+      "betweenness_centrality": 0.0164,
       "pagerank": 0.0015
     },
     {
@@ -8126,7 +8126,7 @@
       "name": "裏拳",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.0007,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0006
     },
     {
@@ -8174,7 +8174,7 @@
       "name": "過激な♥a♥s♥h♥u♥r♥a♥",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.008,
+      "betweenness_centrality": 0.0065,
       "pagerank": 0.0007
     },
     {
@@ -8214,7 +8214,7 @@
       "name": "雄華@雄華軍団団長",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0018,
+      "betweenness_centrality": 0.0019,
       "pagerank": 0.001
     },
     {
@@ -8230,7 +8230,7 @@
       "name": "零時レイ＠モテの法則",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0053,
+      "betweenness_centrality": 0.0049,
       "pagerank": 0.0005
     },
     {
@@ -8246,7 +8246,7 @@
       "name": "青PUA@オープン率100%ナンパ",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0007,
+      "betweenness_centrality": 0.0008,
       "pagerank": 0.0007
     },
     {
@@ -8254,7 +8254,7 @@
       "name": "面長瀬智也👺@雄華軍団,SC一門",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.0011,
       "pagerank": 0.0009
     },
     {
@@ -8262,23 +8262,23 @@
       "name": "顔面淘汰男(よまる)",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0005,
+      "betweenness_centrality": 0.0006,
       "pagerank": 0.0006
     },
     {
       "id": "futaro-pua",
       "name": "風太郎@あだちファミリー",
       "type": "person",
-      "degree_centrality": 0.0132,
-      "betweenness_centrality": 0.0038,
-      "pagerank": 0.0013
+      "degree_centrality": 0.0142,
+      "betweenness_centrality": 0.0042,
+      "pagerank": 0.0014
     },
     {
       "id": "hantenkinoyama",
       "name": "飯店マインドきの山",
       "type": "person",
       "degree_centrality": 0.0075,
-      "betweenness_centrality": 0.0014,
+      "betweenness_centrality": 0.0013,
       "pagerank": 0.0008
     },
     {
@@ -8286,7 +8286,7 @@
       "name": "養🐷場のゼロ@外見コンサルReMake®︎",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0013,
+      "betweenness_centrality": 0.0015,
       "pagerank": 0.0008
     },
     {
@@ -8302,7 +8302,7 @@
       "name": "鬼塚",
       "type": "person",
       "degree_centrality": 0.0113,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0018,
       "pagerank": 0.0017
     },
     {
@@ -8326,7 +8326,7 @@
       "name": "鳥太郎PUA@アンチAI",
       "type": "person",
       "degree_centrality": 0.0236,
-      "betweenness_centrality": 0.0047,
+      "betweenness_centrality": 0.0049,
       "pagerank": 0.0023
     },
     {
@@ -8334,7 +8334,7 @@
       "name": "鴉",
       "type": "person",
       "degree_centrality": 0.0123,
-      "betweenness_centrality": 0.008,
+      "betweenness_centrality": 0.0076,
       "pagerank": 0.0007
     },
     {
@@ -8342,7 +8342,7 @@
       "name": "麻雀大好きホワイトドッグ🐶@SSB クンニ垢 兼 ラップ垢",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.006,
+      "betweenness_centrality": 0.0057,
       "pagerank": 0.0006
     },
     {
@@ -8350,7 +8350,7 @@
       "name": "黎@🦉事変/kk廻遊",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0002,
+      "betweenness_centrality": 0.0003,
       "pagerank": 0.0005
     },
     {
@@ -8398,8 +8398,8 @@
       "name": "黒崎",
       "type": "person",
       "degree_centrality": 0.0217,
-      "betweenness_centrality": 0.025,
-      "pagerank": 0.0032
+      "betweenness_centrality": 0.0312,
+      "pagerank": 0.0031
     },
     {
       "id": "kanbee-pua",
@@ -8414,7 +8414,7 @@
       "name": "黒豆",
       "type": "person",
       "degree_centrality": 0.0104,
-      "betweenness_centrality": 0.0187,
+      "betweenness_centrality": 0.0169,
       "pagerank": 0.0009
     },
     {
@@ -8438,7 +8438,7 @@
       "name": "𝓢𝓮𝓷",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0103,
+      "betweenness_centrality": 0.012,
       "pagerank": 0.0008
     },
     {
@@ -8446,7 +8446,7 @@
       "name": "🇰🇷(路上)",
       "type": "person",
       "degree_centrality": 0.0085,
-      "betweenness_centrality": 0.0026,
+      "betweenness_centrality": 0.0027,
       "pagerank": 0.0005
     },
     {
@@ -8454,7 +8454,7 @@
       "name": "🍵",
       "type": "person",
       "degree_centrality": 0.0094,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0012,
       "pagerank": 0.0008
     },
     {
@@ -8462,7 +8462,7 @@
       "name": "🎩まじっく快斗⭕️味噌の天才",
       "type": "person",
       "degree_centrality": 0.017,
-      "betweenness_centrality": 0.0015,
+      "betweenness_centrality": 0.0016,
       "pagerank": 0.0013
     },
     {

@@ -1949,15 +1949,34 @@ def render_html(
     function hasRealProfileIcon(node) {
       return Boolean(node?.icon_url) && !node.icon_url.includes("/default_profile_");
     }
+    function nodeSearchText(node) {
+      return [node.id, node.name, node.description, ...(node.aliases || [])].join(" ").toLocaleLowerCase("ja-JP");
+    }
+    function isNetworkRelevantPerson(node) {
+      if (!node || node.type !== "person") {
+        return false;
+      }
+      if ((nodeDegreeById.get(node.id) || 0) > 0) {
+        return true;
+      }
+      const text = nodeSearchText(node);
+      return [
+        "ナンパ", "pua", "即", "ストナン", "ネトナン", "クラナン", "ストリート",
+        "マッチングアプリ", "講習", "コンサル", "モテ", "恋愛", "界隈", "一門",
+        "味噌", "mbh", "こりら", "アツスト", "女遊び", "経験人数", "箱", "クラブ"
+      ].some((keyword) => text.includes(keyword.toLocaleLowerCase("ja-JP")));
+    }
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))
       .sort((left, right) =>
+        (Number(isNetworkRelevantPerson(right)) - Number(isNetworkRelevantPerson(left))) ||
+        (isNetworkRelevantPerson(right) ? (right.follower_count || 0) : 0) - (isNetworkRelevantPerson(left) ? (left.follower_count || 0) : 0) ||
         (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
         left.name.localeCompare(right.name, "ja")
       )
       .map((node) => node.id);
     const rankedFollowNodeIds = rawGraph.nodes
-      .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node))
+      .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node) && isNetworkRelevantPerson(node))
       .sort((left, right) =>
         (right.follower_count || 0) - (left.follower_count || 0) ||
         (followDegreeById.get(right.id) || 0) - (followDegreeById.get(left.id) || 0) ||
@@ -1965,6 +1984,7 @@ def render_html(
         left.name.localeCompare(right.name, "ja")
       )
       .map((node) => node.id);
+    const followerRankById = new Map(rankedFollowNodeIds.map((nodeId, index) => [nodeId, index + 1]));
     const defaultLabelNodeIds = new Set([...rankedAccountNodeIds.slice(0, 18), ...rankedFollowNodeIds.slice(0, 16)]);
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
@@ -2339,7 +2359,7 @@ def render_html(
 
     function renderFeaturedNodes() {
       const featuredNodes = currentVisibleNodes
-        .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node) && (node.follower_count || 0) > 0)
+        .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node) && isNetworkRelevantPerson(node) && (node.follower_count || 0) > 0)
         .sort((left, right) =>
           (right.follower_count || 0) - (left.follower_count || 0) ||
           (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
@@ -2357,7 +2377,7 @@ def render_html(
               <button type="button" class="featured-node-card" data-node-id="${escapeHtml(node.id)}">
                 ${formatNodeAvatar(node, "avatar-thumb")}
                 <span class="node-name-text">
-                  <strong>${escapeHtml(node.name)}</strong>
+                  <strong>#${escapeHtml(followerRankById.get(node.id) || "-")} ${escapeHtml(node.name)}</strong>
                   <span class="muted">X followers: ${escapeHtml(formatNumber(node.follower_count || 0))}</span>
                 </span>
               </button>
@@ -2372,27 +2392,28 @@ def render_html(
       const sparseNodes = currentVisibleNodes
         .filter((node) =>
           node.type === "person" &&
+          isNetworkRelevantPerson(node) &&
           (node.follower_count || 0) >= 1000 &&
           (personDegrees.get(node.id) || 0) < 8
         )
         .sort((left, right) =>
-          (personDegrees.get(left.id) || 0) - (personDegrees.get(right.id) || 0) ||
           (right.follower_count || 0) - (left.follower_count || 0) ||
+          (personDegrees.get(left.id) || 0) - (personDegrees.get(right.id) || 0) ||
           left.name.localeCompare(right.name, "ja")
         )
-        .slice(0, 12);
+        .slice(0, 16);
       if (!sparseNodes.length) {
         return "";
       }
       return `
         <div class="detail-section">
-          <h4>接続が薄い高フォロワー</h4>
+          <h4>精査候補（フォロワー順）</h4>
           <div class="featured-node-list">
-            ${sparseNodes.map((node) => `
+            ${sparseNodes.map((node, index) => `
               <button type="button" class="featured-node-card" data-node-id="${escapeHtml(node.id)}">
                 ${formatNodeAvatar(node, "avatar-thumb")}
                 <span class="node-name-text">
-                  <strong>${escapeHtml(node.name)}</strong>
+                  <strong>#${escapeHtml(index + 1)} ${escapeHtml(node.name)}</strong>
                   <span class="muted">人物間 ${escapeHtml(personDegrees.get(node.id) || 0)} / X followers: ${escapeHtml(formatNumber(node.follower_count || 0))}</span>
                 </span>
               </button>
@@ -3001,17 +3022,33 @@ def render_html(
       const followDegree = followDegreeById.get(node.id) || 0;
       const followerCount = node.follower_count || 0;
       const hasProfileIcon = hasRealProfileIcon(node);
-      if (visibleNodes.length > 500) {
-        if (followerCount > 0) {
-          return 4 + Math.min(24, Math.log10(followerCount + 1) * 4.2);
+      const followerVisualSize = () => {
+        if (followerCount >= 1000000) return 42;
+        if (followerCount >= 300000) return 38;
+        if (followerCount >= 100000) return 34;
+        if (followerCount >= 50000) return 31;
+        if (followerCount >= 20000) return 28;
+        if (followerCount >= 10000) return 25;
+        if (followerCount >= 5000) return 22;
+        if (followerCount >= 1000) return 19;
+        if (followerCount >= 300) return 16;
+        if (followerCount > 0) return 13;
+        return 0;
+      };
+      const followerSize = followerVisualSize();
+      if (node.type === "person" && followerSize > 0) {
+        if (isNetworkRelevantPerson(node)) {
+          return visibleNodes.length > 500 ? Math.max(9, followerSize - 6) : followerSize;
         }
+        return visibleNodes.length > 500
+          ? 2 + Math.min(5, Math.sqrt(Math.max(degree, followDegree)))
+          : 7 + Math.min(10, Math.sqrt(Math.max(degree, followDegree) + 1) * 2);
+      }
+      if (visibleNodes.length > 500) {
         if (hasProfileIcon) {
           return 3 + Math.min(6, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.1);
         }
         return 1 + Math.min(7, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.4);
-      }
-      if (followerCount > 0) {
-        return 8 + Math.min(22, Math.log10(followerCount + 1) * 4.5);
       }
       return 10 + Math.min(18, Math.sqrt(degree + 1) * 3);
     }
@@ -3200,6 +3237,8 @@ def render_html(
           title: [
             node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`),
             node.follower_count ? `X followers: ${formatNumber(node.follower_count)}` : "",
+            node.follower_count ? `フォロワー順位: #${followerRankById.get(node.id) || "-"}` : "",
+            node.follower_count ? "アイコンサイズ: Xフォロワー数ベース" : "",
             node.description || ""
           ]
             .filter((value) => value)

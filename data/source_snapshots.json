@@ -1371,18 +1371,6 @@
         "confidence": 0.68,
         "evidence_kind": "mixed",
         "needs_review": false
-      },
-      {
-        "target": "puro-nampa",
-        "type": "profile_mention",
-        "description": "Approved review candidate from summary, profile_text mentioning M氏.",
-        "source_urls": [
-          "https://x.com/shinkawa_pua"
-        ],
-        "confidence": 0.4,
-        "evidence_kind": "interpretation",
-        "needs_review": false,
-        "review_notes": "Approved from review candidate shinkawa-pua__puro-nampa__profile_mention. Original evidence: 新川氏🌟@こりらM氏講習 (@shinkawa_pua)\n通算86即（スト21即） #こりらM氏講習\nLocation: 🐙 Approval note: Public X profile explicitly names this group or lesson."
       }
     ]
   },
@@ -2505,21 +2493,7 @@
       "https://tips.jp/s/a15OMM"
     ],
     "summary": "元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌",
-    "observations": [
-      {
-        "target": "puro-nampa",
-        "type": "profile_mention",
-        "description": "Approved review candidate from summary, profile_text mentioning M氏.",
-        "source_urls": [
-          "https://x.com/korilla_pua",
-          "https://tips.jp/s/a15OMM"
-        ],
-        "confidence": 0.4,
-        "evidence_kind": "interpretation",
-        "needs_review": false,
-        "review_notes": "Approved from review candidate korilla-pua__puro-nampa__profile_mention. Original evidence: こりら🧸 (@korilla_pua)\n元ブサイク&M字ハゲ&ビール腹のオバサー｜戦略的に“マッチングアプリのみ”で経験人数300人超え｜コンプレックスまみれでもアプリで無双したい人はフォロー必須🧸｜日本一非モテ男性を救済してる #こりらM氏講習 の依頼はDMまで🧸💌\nLocation: 講習の概要はこちら➡️ Approval note: Public X profile explicitly names this group or lesson."
-      }
-    ],
+    "observations": [],
     "snapshot_origin": "manual"
   },
   {

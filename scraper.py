@@ -63,6 +63,7 @@ REAL_GROWTH_PHASES = (
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
 X_STYLE_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{3,15}$")
+AMBIGUOUS_PERSON_ALIAS_RE = re.compile(r"^[A-Za-zＡ-Ｚａ-ｚ][氏さん様くんちゃん]$")
 DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset(
     {"profile_mention", "activity", "collaboration", "influence", "affiliation"}
 )
@@ -1010,6 +1011,13 @@ def _seed_handle_match_strings(entity: dict[str, object]) -> list[str]:
     return ordered
 
 
+def is_ambiguous_review_match_token(token: str) -> bool:
+    normalized = str(token).strip()
+    if not normalized:
+        return True
+    return bool(AMBIGUOUS_PERSON_ALIAS_RE.fullmatch(normalized))
+
+
 def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> list[dict[str, str]]:
     matchers: list[dict[str, str]] = []
     for entity in seed_entities:
@@ -1020,6 +1028,8 @@ def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> l
         for raw_token in [entity.get("name", ""), *entity.get("aliases", [])]:
             token = str(raw_token).strip()
             if len(token) < 3 and not (len(token) >= 2 and CJK_TOKEN_RE.search(token)):
+                continue
+            if is_ambiguous_review_match_token(token):
                 continue
             matchers.append(
                 {
@@ -1058,6 +1068,9 @@ def review_candidate_type(source_type: str, target_type: str, text: str, basis: 
             "credits",
             "参考",
             "影響",
+            "師匠",
+            "弟子",
+            "の元",
         )
     ):
         return "influence"
