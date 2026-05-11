@@ -1587,6 +1587,15 @@ def render_html(
           <button type="button" id="quick-connectivity" class="action-button">近い関係</button>
           <button type="button" id="quick-keyword" class="action-button">キーワード</button>
         </div>
+        <div class="action-row">
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="solid">確定寄り</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="online">アプリ/オンライン</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="street">ストリート</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="club">クラブ/箱</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="field">実戦寄り</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="community">界隈キーワード</button>
+          <button type="button" class="action-button bridge-preset-button" data-bridge-preset="all">全補助</button>
+        </div>
       </div>
       <div>
         <label for="cluster-mode"><strong>配置グループ</strong></label>
@@ -3192,6 +3201,28 @@ def render_html(
       }, 50);
     }
 
+    function setBridgePreset(presetId) {
+      const categorySets = {
+        all: bridgeCategoryDefinitions.map((category) => category.id),
+        solid: [],
+        online: ["online"],
+        street: ["street"],
+        club: ["club"],
+        field: ["online", "street", "club", "close"],
+        community: ["miso", "mbh", "lesson", "community"]
+      };
+      const enabledCategories = new Set(categorySets[presetId] || categorySets.all);
+      const profileBridgeToggle = document.getElementById("profile-bridge-toggle");
+      if (profileBridgeToggle) {
+        profileBridgeToggle.checked = presetId !== "solid";
+      }
+      document.querySelectorAll("[data-bridge-category]").forEach((input) => {
+        input.checked = enabledCategories.has(input.getAttribute("data-bridge-category"));
+      });
+      applyFilters();
+      fitVisibleGraph();
+    }
+
     function resetView() {
       document.getElementById("search").value = "";
       document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
@@ -3228,6 +3259,11 @@ def render_html(
     });
     document.getElementById("reset-view").addEventListener("click", resetView);
     document.getElementById("fit-graph").addEventListener("click", fitVisibleGraph);
+    document.querySelectorAll("[data-bridge-preset]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setBridgePreset(button.getAttribute("data-bridge-preset"));
+      });
+    });
     document.getElementById("quick-connectivity").addEventListener("click", () => {
       if (clusterModeInput) {
         clusterModeInput.value = "connectivity";
