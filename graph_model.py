@@ -159,6 +159,71 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "nst", "label": "NST", "patterns": ("NST",), "priority": 64},
     {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
 )
+SEMANTIC_FALLBACK_CLUSTER_RULES = (
+    {
+        "id": "app_online",
+        "label": "アプリ/オンライン",
+        "tags": ("アプリ/オンライン", "マッチングアプリ", "東カレ"),
+        "patterns": ("アプリ", "tinder", "with", "タップル", "東カレ", "ネトナン", "オンライン"),
+        "priority": 100,
+    },
+    {
+        "id": "street",
+        "label": "ストリート/ナンパ",
+        "tags": ("ストリート", "ナンパ", "合流", "ソロ"),
+        "patterns": ("ストナン", "ストリート", "street", "路上", "街", "合流", "ナンパ", "pua"),
+        "priority": 95,
+    },
+    {
+        "id": "club_night",
+        "label": "クラブ/夜遊び",
+        "tags": ("クラブ/箱", "夜職", "裏垢"),
+        "patterns": ("クラブ", "クラナン", "箱", "相席", "バー", "夜職", "ホスト", "裏垢"),
+        "priority": 90,
+    },
+    {
+        "id": "appearance",
+        "label": "外見/美容",
+        "tags": ("美容/整形", "ファッション", "男磨き", "筋トレ"),
+        "patterns": ("外見", "美容", "整形", "ファッション", "服", "垢抜け", "筋トレ", "マッチョ"),
+        "priority": 85,
+    },
+    {
+        "id": "lessons",
+        "label": "講習/コンサル",
+        "tags": ("講習", "審査制"),
+        "patterns": ("講習", "コンサル", "サロン", "受講", "スクール"),
+        "priority": 80,
+    },
+    {
+        "id": "relationship",
+        "label": "恋愛/関係構築",
+        "tags": ("恋愛", "モテ", "デート", "関係構築"),
+        "patterns": ("恋愛", "モテ", "彼女", "デート", "王道彼氏", "関係構築"),
+        "priority": 75,
+    },
+    {
+        "id": "business",
+        "label": "ビジネス/SNS",
+        "tags": ("ビジネス", "SNSマーケ"),
+        "patterns": ("事業", "起業", "会社", "代表", "稼ぐ", "sns", "マーケ"),
+        "priority": 70,
+    },
+    {
+        "id": "travel_region",
+        "label": "地方/遠征",
+        "tags": ("旅ナンパ", "地方", "関西", "名古屋", "福岡", "仙台", "札幌"),
+        "patterns": ("旅ナンパ", "海外", "地方", "関西", "大阪", "名古屋", "福岡", "仙台", "札幌"),
+        "priority": 65,
+    },
+    {
+        "id": "results",
+        "label": "実績/攻略",
+        "tags": ("即", "即報", "攻略", "経験人数", "月間実績", "美女", "女遊び", "プレイヤー"),
+        "patterns": ("即", "攻略", "経験人数", "月間", "美女", "女遊び", "プレイヤー", "斬り"),
+        "priority": 60,
+    },
+)
 REGION_CLUSTER_RULES = (
     {
         "id": "tokyo",
@@ -951,6 +1016,167 @@ def _build_region_cluster_mode_payload(
     return mode_payload
 
 
+def _profile_tags_by_node(graph: GraphData) -> dict[str, Counter[str]]:
+    tags_by_node: dict[str, Counter[str]] = defaultdict(Counter)
+    for edge in graph.edges:
+        tags = _profile_bridge_tags(edge)
+        if not tags:
+            continue
+        tags_by_node[edge.source].update(tags)
+        tags_by_node[edge.target].update(tags)
+    return tags_by_node
+
+
+def _semantic_fallback_rule_for_node(node: Node, tag_counts: Counter[str]) -> dict[str, Any] | None:
+    text = _keyword_text(node)
+    best_rule: dict[str, Any] | None = None
+    best_score = 0
+    best_priority = -1
+    for rule in SEMANTIC_FALLBACK_CLUSTER_RULES:
+        score = 0
+        for tag in rule["tags"]:
+            score += tag_counts.get(str(tag), 0) * 3
+        score += sum(2 for pattern in rule["patterns"] if str(pattern).casefold() in text)
+        if score <= 0:
+            continue
+        priority = int(rule["priority"])
+        if score > best_score or (score == best_score and priority > best_priority):
+            best_rule = rule
+            best_score = score
+            best_priority = priority
+    return best_rule
+
+
+def _account_neighbor_counts(graph: GraphData, nodes_by_id: dict[str, Node]) -> Counter[str]:
+    counts: Counter[str] = Counter()
+    for edge in graph.edges:
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type in ACCOUNT_NODE_TYPES and target.type in ACCOUNT_NODE_TYPES:
+            counts[edge.source] += 1
+            counts[edge.target] += 1
+    return counts
+
+
+def _backfill_semantic_clusters(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    mode_key: str,
+    min_size: int,
+) -> None:
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    account_degrees = _account_neighbor_counts(graph, nodes_by_id)
+    profile_tags = _profile_tags_by_node(graph)
+    assigned_sizes = Counter(mode_payload["assignments"].values())
+    buckets: dict[str, list[str]] = defaultdict(list)
+    node_rule_ids: dict[str, str] = {}
+
+    for node in graph.nodes:
+        if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        if account_degrees[node.id] <= 0:
+            continue
+        current_cluster_id = mode_payload["assignments"].get(node.id)
+        if current_cluster_id and assigned_sizes[current_cluster_id] >= 5:
+            continue
+        rule = _semantic_fallback_rule_for_node(node, profile_tags.get(node.id, Counter()))
+        if rule is None:
+            continue
+        rule_id = str(rule["id"])
+        buckets[rule_id].append(node.id)
+        node_rule_ids[node.id] = rule_id
+
+    usable_rule_ids = {rule_id for rule_id, member_ids in buckets.items() if len(set(member_ids)) >= min_size}
+    if not usable_rule_ids:
+        return
+
+    for node_id, rule_id in node_rule_ids.items():
+        if rule_id not in usable_rule_ids:
+            continue
+        mode_payload["assignments"][node_id] = f"{mode_key}:semantic:{rule_id}"
+
+    assigned_after = Counter(mode_payload["assignments"].values())
+    for cluster_id in list(mode_payload["clusters"]):
+        if assigned_after[cluster_id] <= 0:
+            del mode_payload["clusters"][cluster_id]
+
+    rules_by_id = {str(rule["id"]): rule for rule in SEMANTIC_FALLBACK_CLUSTER_RULES}
+    for rule_id in sorted(usable_rule_ids, key=lambda value: -int(rules_by_id[value]["priority"])):
+        cluster_id = f"{mode_key}:semantic:{rule_id}"
+        member_ids = sorted(
+            {node_id for node_id, assigned_cluster_id in mode_payload["assignments"].items() if assigned_cluster_id == cluster_id},
+            key=lambda node_id: nodes_by_id[node_id].name,
+        )
+        if len(member_ids) < min_size:
+            continue
+        label = str(rules_by_id[rule_id]["label"])
+        preview = [nodes_by_id[node_id].name for node_id in member_ids[:4]]
+        preview_suffix = f" ほか {len(member_ids) - len(preview)} 件" if len(member_ids) > len(preview) else ""
+        mode_payload["clusters"][cluster_id] = {
+            "label": f"{label} 補助 ({len(member_ids)})",
+            "title": f"{label} 補助クラスタ: {', '.join(preview)}{preview_suffix}",
+            "size": len(member_ids),
+        }
+
+
+def _backfill_neighbor_clusters(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    min_cluster_size: int = 5,
+) -> None:
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assigned_sizes = Counter(mode_payload["assignments"].values())
+    candidate_ids = {
+        node.id
+        for node in graph.nodes
+        if node.type in CLUSTER_MEMBER_NODE_TYPES
+        and (
+            not mode_payload["assignments"].get(node.id)
+            or assigned_sizes[mode_payload["assignments"][node.id]] < min_cluster_size
+        )
+    }
+    if not candidate_ids:
+        return
+
+    scores_by_node: dict[str, Counter[str]] = defaultdict(Counter)
+    for edge in graph.edges:
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type not in ACCOUNT_NODE_TYPES or target.type not in ACCOUNT_NODE_TYPES:
+            continue
+        for node_id, neighbor_id in ((edge.source, edge.target), (edge.target, edge.source)):
+            if node_id not in candidate_ids:
+                continue
+            neighbor_cluster_id = mode_payload["assignments"].get(neighbor_id)
+            if not neighbor_cluster_id:
+                continue
+            if assigned_sizes[neighbor_cluster_id] < min_cluster_size and ":semantic:" not in neighbor_cluster_id:
+                continue
+            scale = 0.25 if _is_weak_assistive_edge(edge) else 1.0
+            scores_by_node[node_id][neighbor_cluster_id] += max(edge.confidence, 0.2) * scale
+
+    for node_id, cluster_scores in scores_by_node.items():
+        if not cluster_scores:
+            continue
+        cluster_id, score = max(
+            cluster_scores.items(),
+            key=lambda item: (item[1], assigned_sizes[item[0]], item[0]),
+        )
+        if score < 0.7:
+            continue
+        mode_payload["assignments"][node_id] = cluster_id
+
+    assigned_after = Counter(mode_payload["assignments"].values())
+    for cluster_id, info in mode_payload["clusters"].items():
+        info["size"] = assigned_after[cluster_id]
+        label = str(info.get("label", ""))
+        info["label"] = re.sub(r"\(\d+\)$", f"({assigned_after[cluster_id]})", label)
+
+
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
     payload = {"default_mode": "off", "modes": {}}
@@ -991,6 +1217,8 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
                     mode_payload["assignments"][node_id] = cluster_id
                 cluster_index += 1
 
+        _backfill_semantic_clusters(graph, mode_payload, mode_key, int(definition["min_size"]))
+        _backfill_neighbor_clusters(graph, mode_payload)
         payload["modes"][mode_key] = mode_payload
 
     return payload

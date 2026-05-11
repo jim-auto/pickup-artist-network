@@ -386,6 +386,54 @@ class GraphModelTests(unittest.TestCase):
         atsu_labels = [info["label"] for info in keyword_clusters.values() if "あつ代表/△▽" in info["label"]]
         self.assertEqual(len(atsu_labels), 1)
 
+    def test_export_html_backfills_weak_app_profiles_into_semantic_cluster(self) -> None:
+        graph = GraphData()
+        for node_id, name in [
+            ("app-one", "アプリ攻略A"),
+            ("app-two", "アプリ攻略B"),
+            ("app-three", "アプリ攻略C"),
+        ]:
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": name,
+                    "aliases": [],
+                    "description": "マッチングアプリ攻略",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        for source, target in [("app-one", "app-two"), ("app-two", "app-three")]:
+            add_edge(
+                graph,
+                {
+                    "source": source,
+                    "target": target,
+                    "type": "affiliation",
+                    "description": "Weak profile bridge",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.23,
+                    "evidence_kind": "interpretation",
+                    "needs_review": True,
+                    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン.",
+                },
+            )
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        connectivity = payload["clusters"]["modes"]["connectivity"]
+        labels = [info["label"] for info in connectivity["clusters"].values()]
+        self.assertIn("アプリ/オンライン 補助 (3)", labels)
+        self.assertEqual(
+            {connectivity["assignments"][node_id] for node_id in ("app-one", "app-two", "app-three")},
+            {"connectivity:semantic:app_online"},
+        )
+
     def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
         graph = GraphData()
         for node_id, name, description in [
