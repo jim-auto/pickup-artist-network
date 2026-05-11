@@ -43,6 +43,11 @@ CLUSTER_MODE_DEFINITIONS = {
         "description": "MBH や セクシーコマンドー、ピカ講習、いわし長期、アツスト など、公開プロフィールのキーワードでまとめます。",
         "min_size": 2,
     },
+    "region_group": {
+        "label": "地域で大分類",
+        "description": "東京・名古屋・大阪などの大きな地域でまとめ、講習や一門を中分類として見ます。",
+        "min_size": 3,
+    },
 }
 CONNECTIVITY_DIRECT_WEIGHTS = {
     "influence": 2.8,
@@ -147,6 +152,19 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "tokyo_stonan", "label": "ストナン会", "patterns": ("ストナン会",), "priority": 65},
     {"id": "nst", "label": "NST", "patterns": ("NST",), "priority": 64},
     {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
+)
+REGION_CLUSTER_RULES = (
+    {
+        "id": "tokyo",
+        "label": "東京",
+        "patterns": ("tokyo", "東京", "東京都", "都内", "渋谷", "新宿", "池袋", "恵比寿", "町田"),
+    },
+    {"id": "nagoya", "label": "名古屋", "patterns": ("nagoya", "名古屋", "愛知", "栄", "錦")},
+    {"id": "osaka", "label": "大阪", "patterns": ("osaka", "大阪", "梅田", "難波", "心斎橋")},
+    {"id": "kansai", "label": "関西", "patterns": ("kansai", "関西", "京都", "神戸", "兵庫", "奈良")},
+    {"id": "sapporo", "label": "札幌", "patterns": ("sapporo", "札幌", "北海道")},
+    {"id": "fukuoka", "label": "福岡", "patterns": ("fukuoka", "福岡", "博多", "天神")},
+    {"id": "sendai", "label": "仙台", "patterns": ("sendai", "仙台", "宮城")},
 )
 
 
@@ -809,6 +827,15 @@ def _keyword_text(node: Node) -> str:
     ).casefold()
 
 
+def _keyword_labels_for_node(node: Node) -> list[str]:
+    text = _keyword_text(node)
+    labels: list[str] = []
+    for rule in KEYWORD_CLUSTER_RULES:
+        if any(str(pattern).casefold() in text for pattern in rule["patterns"]):
+            labels.append(str(rule["label"]))
+    return labels
+
+
 def _build_keyword_cluster_mode_payload(
     graph: GraphData,
     definition: dict[str, Any],
@@ -862,6 +889,62 @@ def _build_keyword_cluster_mode_payload(
     return mode_payload
 
 
+def _build_region_cluster_mode_payload(
+    graph: GraphData,
+    definition: dict[str, Any],
+) -> dict[str, Any]:
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    location_text_by_account: defaultdict[str, list[str]] = defaultdict(list)
+    for edge in graph.edges:
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type in ACCOUNT_NODE_TYPES and target.type == "location":
+            location_text_by_account[source.id].extend([target.id, target.name, *target.aliases])
+        if target.type in ACCOUNT_NODE_TYPES and source.type == "location":
+            location_text_by_account[target.id].extend([source.id, source.name, *source.aliases])
+
+    buckets: dict[str, list[str]] = defaultdict(list)
+    for node in graph.nodes:
+        if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        text = " ".join(
+            [node.id, node.name, node.description, *node.aliases, *location_text_by_account.get(node.id, [])]
+        ).casefold()
+        for rule in REGION_CLUSTER_RULES:
+            if any(str(pattern).casefold() in text for pattern in rule["patterns"]):
+                buckets[str(rule["id"])].append(node.id)
+                break
+
+    mode_payload = {
+        "label": definition["label"],
+        "description": definition["description"],
+        "assignments": {},
+        "clusters": {},
+    }
+    min_size = int(definition.get("min_size", 3))
+    for rule in REGION_CLUSTER_RULES:
+        member_ids = sorted(set(buckets.get(str(rule["id"]), [])), key=lambda node_id: nodes_by_id[node_id].name)
+        if len(member_ids) < min_size:
+            continue
+        keyword_counts: Counter[str] = Counter()
+        for node_id in member_ids:
+            keyword_counts.update(_keyword_labels_for_node(nodes_by_id[node_id]))
+        medium_labels = ", ".join(f"{label} {count}" for label, count in keyword_counts.most_common(5)) or "中分類なし"
+        preview = [nodes_by_id[node_id].name for node_id in member_ids[:5]]
+        preview_suffix = f" ほか {len(member_ids) - len(preview)} 件" if len(member_ids) > len(preview) else ""
+        cluster_id = f"region_group:{rule['id']}"
+        mode_payload["clusters"][cluster_id] = {
+            "label": f"{rule['label']} 大分類",
+            "title": f"{rule['label']} 大分類: {', '.join(preview)}{preview_suffix}\n中分類: {medium_labels}",
+            "size": len(member_ids),
+        }
+        for node_id in member_ids:
+            mode_payload["assignments"][node_id] = cluster_id
+    return mode_payload
+
+
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
     payload = {"default_mode": "off", "modes": {}}
@@ -869,6 +952,9 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     for mode_key, definition in CLUSTER_MODE_DEFINITIONS.items():
         if mode_key == "keyword_group":
             payload["modes"][mode_key] = _build_keyword_cluster_mode_payload(graph, definition)
+            continue
+        if mode_key == "region_group":
+            payload["modes"][mode_key] = _build_region_cluster_mode_payload(graph, definition)
             continue
         account_graph, account_contexts = _build_account_projection(graph, mode_key)
         clustered_graph = _prune_account_graph_for_clustering(account_graph, mode_key)
@@ -1645,6 +1731,7 @@ def render_html(
           <option value="connectivity">つながりの近さ</option>
           <option value="relation_pattern">関係パターン</option>
           <option value="keyword_group">キーワード</option>
+          <option value="region_group">地域</option>
         </select>
         <div id="cluster-mode-help" class="muted">通常表示です。人やコミュニティをまとめずに相関を見ます。</div>
       </div>
@@ -1966,6 +2053,10 @@ def render_html(
       keyword_group: rawClusters.modes?.keyword_group || {
         label: "キーワードでまとめる",
         description: "MBH や セクシーコマンドー など、公開プロフィールのキーワードでまとめます。"
+      },
+      region_group: rawClusters.modes?.region_group || {
+        label: "地域で大分類",
+        description: "東京・名古屋・大阪などの大きな地域でまとめ、講習や一門を中分類として見ます。"
       }
     };
 

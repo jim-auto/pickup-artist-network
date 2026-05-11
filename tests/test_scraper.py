@@ -16,6 +16,7 @@ from scraper import (
     format_review_candidates_output,
     format_query_output,
     generate_review_candidates,
+    infer_keyword_cluster_edges,
     load_generated_snapshots,
     load_seed_entities,
     materialize_inferred_social_edges,
@@ -765,6 +766,26 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertTrue(
             any(edge.source == "konamon" and edge.target == "atsutaro" and edge.type == "influence" for edge in graph.edges)
         )
+
+    def test_mbh_keyword_cluster_prefers_gureran_anchor(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "gureran-m", "name": "まーぼーMBH@ナンパ講師", "aliases": ["gureran_m"]},
+            {"type": "person", "id": "gureran-m3", "name": "まーぼー@MBHナンパコーチ", "aliases": ["gureran_m3"]},
+            {"type": "person", "id": "ds-mbh", "name": "@DS_MBH", "aliases": ["DS_MBH"]},
+            {"type": "person", "id": "amenbo-mbh", "name": "@amenbo_MBH", "aliases": ["amenbo_MBH"]},
+            {"type": "person", "id": "mbh-hal", "name": "はる@MBH", "aliases": ["mbh_hal"]},
+            {"type": "person", "id": "mayuge-mbh", "name": "まゆげ@MBH", "aliases": ["mayuge_mbh"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+
+        infer_keyword_cluster_edges(graph)
+
+        gureran_neighbors = {
+            edge.target if edge.source == "gureran-m" else edge.source
+            for edge in graph.edges
+            if edge.source == "gureran-m" or edge.target == "gureran-m"
+        }
+        self.assertGreaterEqual(len(gureran_neighbors & {"ds-mbh", "amenbo-mbh", "mbh-hal", "mayuge-mbh"}), 3)
 
     def test_set_review_candidate_decision_persists_candidate_metadata(self) -> None:
         decisions_payload = {"updated_at": "", "decisions": {}}

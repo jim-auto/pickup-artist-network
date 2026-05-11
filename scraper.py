@@ -117,6 +117,9 @@ PROFILE_BRIDGE_PATTERNS = (
     ("札幌", ("札幌",)),
     ("マッチングアプリ", ("マッチングアプリ", "tinder", "Tinder", "東カレ", "アプリ")),
 )
+KEYWORD_CLUSTER_PREFERRED_ANCHORS = {
+    "mbh": ("gureran-m", "gureran-m3"),
+}
 
 DEFAULT_PLATFORM_NODES = {
     "x": {
@@ -1451,13 +1454,27 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
                 node_id,
             ),
         )
-        anchor_ids = sorted_members[: min(5, max(2, len(sorted_members) // 8))]
+        preferred_anchor_ids = [
+            node_id
+            for node_id in KEYWORD_CLUSTER_PREFERRED_ANCHORS.get(rule_id, ())
+            if node_id in member_ids
+        ]
+        anchor_limit = min(5, max(2, len(sorted_members) // 8))
+        anchor_ids = [
+            *preferred_anchor_ids,
+            *[node_id for node_id in sorted_members if node_id not in preferred_anchor_ids],
+        ][:anchor_limit]
         bridge_count_by_node: defaultdict[str, int] = defaultdict(int)
         cluster_bridge_limit = min(36, max(6, len(sorted_members)))
         cluster_bridge_added = 0
         for source_id in sorted_members:
             if cluster_bridge_added >= cluster_bridge_limit:
                 break
+            def anchor_priority(node_id: str) -> int:
+                if node_id in preferred_anchor_ids:
+                    return preferred_anchor_ids.index(node_id)
+                return len(preferred_anchor_ids)
+
             candidates = sorted(
                 (
                     target_id
@@ -1465,6 +1482,7 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
                     if target_id != source_id and (source_id, target_id) not in existing_pairs
                 ),
                 key=lambda node_id: (
+                    anchor_priority(node_id),
                     bridge_count_by_node[node_id],
                     -len(adjacency[node_id]),
                     node_by_id[node_id].name,
@@ -1472,7 +1490,8 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
                 ),
             )
             for target_id in candidates:
-                if bridge_count_by_node[source_id] >= 1 or bridge_count_by_node[target_id] >= 6:
+                target_limit = 18 if target_id in preferred_anchor_ids else 6
+                if bridge_count_by_node[source_id] >= 1 or bridge_count_by_node[target_id] >= target_limit:
                     continue
                 try:
                     add_edge(

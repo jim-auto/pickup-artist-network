@@ -307,6 +307,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("connectivity", payload["clusters"]["modes"])
         self.assertIn("relation_pattern", payload["clusters"]["modes"])
         self.assertIn("keyword_group", payload["clusters"]["modes"])
+        self.assertIn("region_group", payload["clusters"]["modes"])
 
     def test_export_html_includes_elsta_keyword_cluster(self) -> None:
         graph = GraphData()
@@ -355,6 +356,38 @@ class GraphModelTests(unittest.TestCase):
         keyword_clusters = payload["clusters"]["modes"]["keyword_group"]["clusters"]
         elsta_labels = [info["label"] for info in keyword_clusters.values() if "えるスタ" in info["label"]]
         self.assertEqual(len(elsta_labels), 1)
+
+    def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
+        graph = GraphData()
+        for node_id, name, description in [
+            ("tokyo-one", "東京MBH", "東京 MBH 講習"),
+            ("tokyo-two", "渋谷味噌", "渋谷 味噌"),
+            ("tokyo-three", "新宿一門", "新宿 一門"),
+            ("nagoya-one", "名古屋PUA", "名古屋 ナンパ"),
+        ]:
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": name,
+                    "aliases": [],
+                    "description": description,
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        region_clusters = payload["clusters"]["modes"]["region_group"]["clusters"]
+        tokyo_clusters = [info for info in region_clusters.values() if info["label"] == "東京 大分類"]
+        self.assertEqual(len(tokyo_clusters), 1)
+        self.assertIn("中分類", tokyo_clusters[0]["title"])
+        self.assertIn("MBH", tokyo_clusters[0]["title"])
 
     def test_weak_profile_bridge_has_low_cluster_weight(self) -> None:
         graph = GraphData()
