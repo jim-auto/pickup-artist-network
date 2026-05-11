@@ -68,6 +68,37 @@ DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset(
 )
 LEGACY_EDGE_TYPES = frozenset({"reference"})
 FOLLOW_REFERENCE_PREFIX = "authenticated x following list shows this account follows @"
+PROFILE_BRIDGE_PATTERNS = (
+    ("即", ("即",)),
+    ("即報", ("即報",)),
+    ("合流", ("合流",)),
+    ("講習", ("講習", "コンサル")),
+    ("外見", ("外見", "ルックス")),
+    ("恋愛", ("恋愛",)),
+    ("モテ", ("モテ", "彼女")),
+    ("ナンパ", ("ナンパ", "界隈")),
+    ("ストナン", ("ストナン", "スト値", "スト高", "スト師")),
+    ("アプリ", ("アプリ", "Tinder", "tinder")),
+    ("ソロ", ("ソロ", "完ソロ")),
+    ("コンビ", ("コンビ",)),
+    ("MVP", ("mvp", "MVP")),
+    ("新人賞", ("新人賞",)),
+    ("ベストソロ", ("ベストソロ",)),
+    ("ベストコンビ", ("ベストコンビ",)),
+    ("経験人数", ("経験人数",)),
+    ("月間実績", ("月間", "月")),
+    ("社会人", ("社会人",)),
+    ("同棲", ("同棲",)),
+    ("審査制", ("審査制",)),
+    ("地方", ("地方",)),
+    ("帝都", ("帝都",)),
+    ("関西", ("関西", "大阪", "梅田")),
+    ("名古屋", ("名古屋",)),
+    ("福岡", ("福岡",)),
+    ("仙台", ("仙台",)),
+    ("札幌", ("札幌",)),
+    ("マッチングアプリ", ("マッチングアプリ", "tinder", "Tinder", "東カレ")),
+)
 
 DEFAULT_PLATFORM_NODES = {
     "x": {
@@ -1657,6 +1688,141 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
             existing_pairs.add(tuple(sorted((source_id, target_id))))
         except ValueError:
             continue
+    return added
+
+
+def infer_profile_bridge_edges(graph: GraphData) -> int:
+    """プロフィール特徴語が近い低次数人物へ、最低限の人物間エッジを補う。"""
+
+    from graph_model import KEYWORD_CLUSTER_RULES
+
+    node_by_id = {node.id: node for node in graph.nodes}
+    person_nodes = [node for node in graph.nodes if node.type == "person"]
+    existing_pairs: set[tuple[str, str]] = set()
+    person_degree: defaultdict[str, int] = defaultdict(int)
+    for edge in graph.edges:
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type == "person" and target.type == "person":
+            pair = tuple(sorted((source.id, target.id)))
+            existing_pairs.add(pair)
+            person_degree[source.id] += 1
+            person_degree[target.id] += 1
+
+    node_tags: dict[str, set[str]] = {}
+    tag_members: defaultdict[str, set[str]] = defaultdict(set)
+    for node in person_nodes:
+        text = " ".join([node.id, node.name, node.description, *node.aliases])
+        lowered_text = text.casefold()
+        tags: set[str] = set()
+        for rule in KEYWORD_CLUSTER_RULES:
+            label = str(rule.get("label", rule.get("id", ""))).strip()
+            if not label:
+                continue
+            for pattern in rule.get("patterns", ()):
+                if str(pattern).casefold() in lowered_text:
+                    tags.add(label)
+                    break
+        for label, patterns in PROFILE_BRIDGE_PATTERNS:
+            for pattern in patterns:
+                if str(pattern).casefold() in lowered_text:
+                    tags.add(label)
+                    break
+        if tags:
+            node_tags[node.id] = tags
+            for tag in tags:
+                tag_members[tag].add(node.id)
+
+    tag_weight: dict[str, float] = {}
+    for tag, members in tag_members.items():
+        count = len(members)
+        if count < 2 or count > 180:
+            continue
+        if count <= 8:
+            tag_weight[tag] = 3.0
+        elif count <= 24:
+            tag_weight[tag] = 2.4
+        elif count <= 60:
+            tag_weight[tag] = 1.6
+        elif count <= 110:
+            tag_weight[tag] = 1.0
+        else:
+            tag_weight[tag] = 0.55
+
+    candidates_by_node: defaultdict[str, list[tuple[float, str, tuple[str, ...]]]] = defaultdict(list)
+    for left, right in combinations(sorted(node_tags), 2):
+        pair = tuple(sorted((left, right)))
+        if pair in existing_pairs:
+            continue
+        shared_tags = tuple(sorted(tag for tag in (node_tags[left] & node_tags[right]) if tag in tag_weight))
+        if not shared_tags:
+            continue
+        score = sum(tag_weight[tag] for tag in shared_tags)
+        if len(shared_tags) >= 2:
+            score += 0.7
+        if score < 1.6:
+            continue
+        candidates_by_node[left].append((score, right, shared_tags))
+        candidates_by_node[right].append((score, left, shared_tags))
+
+    added = 0
+    for source in sorted(
+        person_nodes,
+        key=lambda node: (person_degree[node.id], -(node.follower_count or 0), node.name, node.id),
+    ):
+        source_id = source.id
+        target_degree = 8 if node_tags.get(source_id) else 3
+        remaining = max(0, target_degree - person_degree[source_id])
+        if remaining <= 0:
+            continue
+        ranked_candidates = sorted(
+            candidates_by_node.get(source_id, []),
+            key=lambda item: (
+                -item[0],
+                person_degree[item[1]],
+                -int(node_by_id[item[1]].follower_count or 0),
+                node_by_id[item[1]].name,
+            ),
+        )
+        per_node_added = 0
+        for score, target_id, shared_tags in ranked_candidates:
+            if added >= 3000 or per_node_added >= min(remaining, 6):
+                break
+            pair = tuple(sorted((source_id, target_id)))
+            if pair in existing_pairs:
+                continue
+            if person_degree[target_id] >= 18 and score < 4.0:
+                continue
+            tag_label = "、".join(shared_tags[:5])
+            try:
+                add_edge(
+                    graph,
+                    {
+                        "source": source_id,
+                        "target": target_id,
+                        "type": "affiliation",
+                        "description": (
+                            f"プロフィール特徴語（{tag_label}）が重なるため、"
+                            "近い人物候補として補助接続（自動）。"
+                        ),
+                        "confidence": 0.23,
+                        "evidence_kind": "interpretation",
+                        "needs_review": True,
+                        "review_notes": (
+                            "Profile bridge auto-edge for low-degree node coverage. "
+                            f"Shared profile tags: {', '.join(shared_tags)}. Score: {score:.2f}."
+                        ),
+                    },
+                )
+                added += 1
+                per_node_added += 1
+                person_degree[source_id] += 1
+                person_degree[target_id] += 1
+                existing_pairs.add(pair)
+            except ValueError:
+                continue
     return added
 
 

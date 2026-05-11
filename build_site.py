@@ -16,6 +16,7 @@ from scraper import (
     build_graph_from_sources,
     build_growth_targets_payload,
     infer_keyword_cluster_edges,
+    infer_profile_bridge_edges,
     infer_shared_context_edges,
     infer_shared_neighbor_edges,
     load_all_source_snapshots,
@@ -96,6 +97,9 @@ def main() -> None:
     neighbor_edges_added = infer_shared_neighbor_edges(graph)
     if neighbor_edges_added:
         print(f"[OK] shared neighbor edges: +{neighbor_edges_added}")
+    profile_edges_added = infer_profile_bridge_edges(graph)
+    if profile_edges_added:
+        print(f"[OK] profile bridge edges: +{profile_edges_added}")
     refresh_outputs(graph)
     save_review_candidate_decisions(decisions_payload)
     review_candidates = refresh_review_candidates(
