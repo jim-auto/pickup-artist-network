@@ -159,6 +159,7 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "nst", "label": "NST", "patterns": ("NST",), "priority": 64},
     {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
 )
+AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset({"mbh", "atsust", "wing_longterm", "wing", "atsu_chill"})
 SEMANTIC_FALLBACK_CLUSTER_RULES = (
     {
         "id": "app_online",
@@ -907,6 +908,23 @@ def _keyword_labels_for_node(node: Node) -> list[str]:
     return labels
 
 
+def _best_keyword_cluster_rule_for_node(node: Node) -> dict[str, Any] | None:
+    text = _keyword_text(node)
+    best_rule: dict[str, Any] | None = None
+    best_score = 0
+    best_priority = -1
+    for rule in KEYWORD_CLUSTER_RULES:
+        score = sum(1 for pattern in rule["patterns"] if str(pattern).casefold() in text)
+        if score <= 0:
+            continue
+        priority = int(rule["priority"])
+        if score > best_score or (score == best_score and priority > best_priority):
+            best_rule = rule
+            best_score = score
+            best_priority = priority
+    return best_rule
+
+
 def _build_keyword_cluster_mode_payload(
     graph: GraphData,
     definition: dict[str, Any],
@@ -917,18 +935,7 @@ def _build_keyword_cluster_mode_payload(
     for node in graph.nodes:
         if node.type not in CLUSTER_MEMBER_NODE_TYPES:
             continue
-        text = _keyword_text(node)
-        best_rule: dict[str, Any] | None = None
-        best_score = 0
-        best_priority = -1
-        for rule in KEYWORD_CLUSTER_RULES:
-            score = sum(1 for pattern in rule["patterns"] if str(pattern).casefold() in text)
-            if score <= 0:
-                continue
-            if score > best_score or (score == best_score and int(rule["priority"]) > best_priority):
-                best_rule = rule
-                best_score = score
-                best_priority = int(rule["priority"])
+        best_rule = _best_keyword_cluster_rule_for_node(node)
         if best_rule is not None:
             buckets[str(best_rule["id"])].append(node.id)
 
@@ -1060,6 +1067,47 @@ def _account_neighbor_counts(graph: GraphData, nodes_by_id: dict[str, Node]) -> 
     return counts
 
 
+def _apply_affinity_keyword_clusters(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    min_size: int = 2,
+) -> None:
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    buckets: dict[str, list[str]] = defaultdict(list)
+    rules_by_id = {str(rule["id"]): rule for rule in KEYWORD_CLUSTER_RULES}
+
+    for node in graph.nodes:
+        if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        rule = _best_keyword_cluster_rule_for_node(node)
+        if rule is None:
+            continue
+        rule_id = str(rule["id"])
+        if rule_id in AFFINITY_KEYWORD_CLUSTER_RULE_IDS:
+            buckets[rule_id].append(node.id)
+
+    for rule_id, node_ids in buckets.items():
+        member_ids = sorted(set(node_ids), key=lambda node_id: nodes_by_id[node_id].name)
+        if len(member_ids) < min_size:
+            continue
+        rule = rules_by_id[rule_id]
+        cluster_id = f"keyword_group:{rule_id}"
+        preview = [nodes_by_id[node_id].name for node_id in member_ids[:4]]
+        preview_suffix = f" ほか {len(member_ids) - len(preview)} 件" if len(member_ids) > len(preview) else ""
+        mode_payload["clusters"][cluster_id] = {
+            "label": f"{rule['label']} ({len(member_ids)})",
+            "title": f"キーワード {rule['label']}: {', '.join(preview)}{preview_suffix}",
+            "size": len(member_ids),
+        }
+        for node_id in member_ids:
+            mode_payload["assignments"][node_id] = cluster_id
+
+
+def _has_affinity_keyword_cluster(node: Node) -> bool:
+    rule = _best_keyword_cluster_rule_for_node(node)
+    return rule is not None and str(rule["id"]) in AFFINITY_KEYWORD_CLUSTER_RULE_IDS
+
+
 def _backfill_semantic_clusters(
     graph: GraphData,
     mode_payload: dict[str, Any],
@@ -1075,6 +1123,8 @@ def _backfill_semantic_clusters(
 
     for node in graph.nodes:
         if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        if _has_affinity_keyword_cluster(node):
             continue
         if account_degrees[node.id] <= 0:
             continue
@@ -1132,6 +1182,7 @@ def _backfill_neighbor_clusters(
         node.id
         for node in graph.nodes
         if node.type in CLUSTER_MEMBER_NODE_TYPES
+        and not _has_affinity_keyword_cluster(node)
         and (
             not mode_payload["assignments"].get(node.id)
             or assigned_sizes[mode_payload["assignments"][node.id]] < min_cluster_size
@@ -1217,6 +1268,7 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
                     mode_payload["assignments"][node_id] = cluster_id
                 cluster_index += 1
 
+        _apply_affinity_keyword_clusters(graph, mode_payload)
         _backfill_semantic_clusters(graph, mode_payload, mode_key, int(definition["min_size"]))
         _backfill_neighbor_clusters(graph, mode_payload)
         payload["modes"][mode_key] = mode_payload

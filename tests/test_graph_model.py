@@ -385,6 +385,11 @@ class GraphModelTests(unittest.TestCase):
         keyword_clusters = payload["clusters"]["modes"]["keyword_group"]["clusters"]
         atsu_labels = [info["label"] for info in keyword_clusters.values() if "あつ代表/△▽" in info["label"]]
         self.assertEqual(len(atsu_labels), 1)
+        for mode in ("connectivity", "relation_pattern"):
+            self.assertEqual(
+                payload["clusters"]["modes"][mode]["assignments"]["sub-chilll"],
+                "keyword_group:atsu_chill",
+            )
 
     def test_export_html_backfills_weak_app_profiles_into_semantic_cluster(self) -> None:
         graph = GraphData()
