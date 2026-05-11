@@ -78,16 +78,17 @@ PROFILE_BRIDGE_PATTERNS = (
     ("モテ", ("モテ", "彼女")),
     ("美女", ("美女",)),
     ("男磨き", ("男磨き",)),
-    ("ナンパ", ("ナンパ", "界隈")),
+    ("ナンパ", ("ナンパ", "nampa", "nanpa", "界隈")),
     ("PUA", ("pua", "PUA")),
     ("プレイヤー", ("プレイヤー",)),
     ("女遊び", ("女遊び", "女の子")),
     ("デート", ("デート", "王道彼氏", "彼氏感")),
     ("攻略", ("攻略", "人斬り", "斬り")),
-    ("ストリート", ("ストナン", "スト値", "スト高", "スト師", "路上", "街", "ストリート")),
-    ("アプリ/オンライン", ("アプリ", "Tinder", "tinder", "ネトナン", "オンライン", "チャットアプリ")),
-    ("クラブ/箱", ("クラブ", "箱", "相席", "バー", "ハプバー", "夜遊び")),
+    ("ストリート", ("ストナン", "stonan", "street", "スト値", "スト高", "スト師", "路上", "街", "ストリート")),
+    ("アプリ/オンライン", ("アプリ", "Tinder", "tinder", "ネトナン", "ネト", "オンライン", "チャットアプリ")),
+    ("クラブ/箱", ("クラブ", "クラナン", "箱", "相席", "バー", "ハプバー", "夜遊び")),
     ("関係構築", ("関係構築",)),
+    ("美容/整形", ("美容", "整形", "外見", "メンズメイク", "メイク", "垢抜け", "ブサイク", "イケメン")),
     ("ファッション", ("ファッション", "服", "垢抜け")),
     ("筋トレ", ("筋トレ", "マッチョ", "ダイエット")),
     ("SNSマーケ", ("SNS", "マーケティング", "発信")),
@@ -102,6 +103,7 @@ PROFILE_BRIDGE_PATTERNS = (
     ("ベストソロ", ("ベストソロ",)),
     ("ベストコンビ", ("ベストコンビ",)),
     ("経験人数", ("経験人数",)),
+    ("△▽", ("△▽", "男優", "監督")),
     ("月間実績", ("月間", "月")),
     ("社会人", ("社会人",)),
     ("同棲", ("同棲",)),
@@ -1795,7 +1797,7 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         left_followers = int(node_by_id[left].follower_count or 0)
         right_followers = int(node_by_id[right].follower_count or 0)
         high_follower_pair = max(left_followers, right_followers) >= 1000
-        if score < (0.7 if high_follower_pair else 1.6):
+        if score < (0.35 if high_follower_pair else 1.6):
             continue
         candidates_by_node[left].append((score, right, shared_tags))
         candidates_by_node[right].append((score, left, shared_tags))
