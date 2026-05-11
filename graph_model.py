@@ -2319,6 +2319,10 @@ def render_html(
       return categories.length ? categories : ["other"];
     }
 
+    function bridgeCategoryLabel(categoryId) {
+      return bridgeCategoryDefinitions.find((category) => category.id === categoryId)?.label || categoryId;
+    }
+
     function visiblePersonDegreeById(visibleEdges) {
       const personDegrees = new Map();
       visibleEdges.forEach((edge) => {
@@ -2436,6 +2440,7 @@ def render_html(
           edgeCount: 0,
           solidCount: 0,
           bridgeCount: 0,
+          bridgeCategories: new Map(),
           maxConfidence: 0
         };
         entry[direction].add(formatEdgeType(edge.type));
@@ -2443,6 +2448,9 @@ def render_html(
         entry.maxConfidence = Math.max(entry.maxConfidence, Number(edge.confidence || 0));
         if (isAssistiveEdge(edge)) {
           entry.bridgeCount += 1;
+          bridgeCategoryIds(edge).forEach((categoryId) => {
+            entry.bridgeCategories.set(categoryId, (entry.bridgeCategories.get(categoryId) || 0) + 1);
+          });
         } else {
           entry.solidCount += 1;
         }
@@ -2477,9 +2485,34 @@ def render_html(
       }
 
       const entriesByType = new Map();
+      const bridgeCategoryOrder = [
+        "online",
+        "street",
+        "club",
+        "miso",
+        "mbh",
+        "lesson",
+        "community",
+        "close",
+        "business",
+        "nightlife",
+        "other"
+      ];
+      function primaryBridgeCategory(entry) {
+        if (!entry.bridgeCategories.size) {
+          return "other";
+        }
+        return bridgeCategoryOrder.find((categoryId) => entry.bridgeCategories.has(categoryId)) || "other";
+      }
+      function bridgeCategoryOrderIndex(categoryId) {
+        const index = bridgeCategoryOrder.indexOf(categoryId);
+        return index === -1 ? bridgeCategoryOrder.length : index;
+      }
       entries.forEach((entry) => {
         const relationGroup = entry.solidCount > 0 ? "solid" : "bridge";
-        const nodeType = `${relationGroup}:${entry.node.type || "person"}`;
+        const nodeType = relationGroup === "bridge"
+          ? `${relationGroup}:${primaryBridgeCategory(entry)}:${entry.node.type || "person"}`
+          : `${relationGroup}:${entry.node.type || "person"}`;
         if (!entriesByType.has(nodeType)) {
           entriesByType.set(nodeType, []);
         }
@@ -2488,15 +2521,30 @@ def render_html(
 
       const sectionOrder = [
         ["solid:person", "人物 / 確定寄り"],
-        ["bridge:person", "人物 / 補助線"],
+        ...bridgeCategoryOrder.map((categoryId) => [
+          `bridge:${categoryId}:person`,
+          `人物 / ${bridgeCategoryLabel(categoryId)}`
+        ]),
         ["solid:community", "コミュニティ / 確定寄り"],
-        ["bridge:community", "コミュニティ / 補助線"],
+        ...bridgeCategoryOrder.map((categoryId) => [
+          `bridge:${categoryId}:community`,
+          `コミュニティ / ${bridgeCategoryLabel(categoryId)}`
+        ]),
         ["solid:platform", "媒体 / 確定寄り"],
-        ["bridge:platform", "媒体 / 補助線"],
+        ...bridgeCategoryOrder.map((categoryId) => [
+          `bridge:${categoryId}:platform`,
+          `媒体 / ${bridgeCategoryLabel(categoryId)}`
+        ]),
         ["solid:location", "場所 / 確定寄り"],
-        ["bridge:location", "場所 / 補助線"],
+        ...bridgeCategoryOrder.map((categoryId) => [
+          `bridge:${categoryId}:location`,
+          `場所 / ${bridgeCategoryLabel(categoryId)}`
+        ]),
         ["solid:content", "コンテンツ / 確定寄り"],
-        ["bridge:content", "コンテンツ / 補助線"]
+        ...bridgeCategoryOrder.map((categoryId) => [
+          `bridge:${categoryId}:content`,
+          `コンテンツ / ${bridgeCategoryLabel(categoryId)}`
+        ])
       ];
 
       return `
@@ -2528,6 +2576,10 @@ def render_html(
                     <div class="connected-node-tags">
                       ${entry.solidCount ? `<span class="tag tag-solid">確定寄り ${escapeHtml(entry.solidCount)}</span>` : ""}
                       ${entry.bridgeCount ? `<span class="tag tag-bridge">補助線 ${escapeHtml(entry.bridgeCount)}</span>` : ""}
+                      ${Array.from(entry.bridgeCategories.entries())
+                        .sort((left, right) => bridgeCategoryOrderIndex(left[0]) - bridgeCategoryOrderIndex(right[0]))
+                        .map(([categoryId, count]) => `<span class="tag">${escapeHtml(bridgeCategoryLabel(categoryId))} ${escapeHtml(count)}</span>`)
+                        .join("")}
                       ${Array.from(entry.outgoing).map((type) => `<span class="tag">→ ${escapeHtml(type)}</span>`).join("")}
                       ${Array.from(entry.incoming).map((type) => `<span class="tag">← ${escapeHtml(type)}</span>`).join("")}
                     </div>
