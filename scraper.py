@@ -1496,11 +1496,11 @@ def infer_shared_context_edges(graph: GraphData) -> int:
             member_set,
             key=lambda node_id: (-len(adjacency[node_id]), node_by_id[node_id].name, node_id),
         )
-        if len(members) < 3 or len(members) > 24:
+        if len(members) < 3 or len(members) > 50:
             continue
-        anchor_ids = members[: min(4, max(2, len(members) // 4))]
+        anchor_ids = members[: min(8, max(2, len(members) // 4))]
         bridge_count_by_node: defaultdict[str, int] = defaultdict(int)
-        context_limit = min(28, max(4, len(members) * 2))
+        context_limit = min(80, max(4, len(members) * 4))
         context_added = 0
         for source_id in members:
             if context_added >= context_limit:
@@ -1519,7 +1519,7 @@ def infer_shared_context_edges(graph: GraphData) -> int:
                 ),
             )
             for target_id in candidates:
-                if bridge_count_by_node[source_id] >= 1 or bridge_count_by_node[target_id] >= 5:
+                if bridge_count_by_node[source_id] >= 3 or bridge_count_by_node[target_id] >= 10:
                     continue
                 try:
                     add_edge(
@@ -1549,7 +1549,7 @@ def infer_shared_context_edges(graph: GraphData) -> int:
                     existing_pairs.add((target_id, source_id))
                     adjacency[source_id].add(target_id)
                     adjacency[target_id].add(source_id)
-                    if bridge_count_by_node[source_id] >= 1 or context_added >= context_limit:
+                    if bridge_count_by_node[source_id] >= 3 or context_added >= context_limit:
                         break
                 except ValueError:
                     continue
@@ -1600,7 +1600,7 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
 
     pair_contexts: defaultdict[tuple[str, str], set[str]] = defaultdict(set)
     for context_id, members in context_to_people.items():
-        if len(members) < 2 or len(members) > 35:
+        if len(members) < 2 or len(members) > 60:
             continue
         for left_id, right_id in combinations(sorted(members), 2):
             pair = tuple(sorted((left_id, right_id)))
@@ -1623,9 +1623,9 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
         ),
     )
     for (source_id, target_id), contexts in ranked_pairs:
-        if added >= 1000:
+        if added >= 1600:
             break
-        if added_by_node[source_id] >= 7 or added_by_node[target_id] >= 7:
+        if added_by_node[source_id] >= 16 or added_by_node[target_id] >= 16:
             continue
         context_names = [
             node_by_id[context_id].name

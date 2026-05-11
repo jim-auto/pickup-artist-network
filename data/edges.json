@@ -2979,6 +2979,17 @@
   },
   {
     "source": "4meakg",
+    "target": "pua-co",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: こいち @東京ストナン会×ジェイソン, レオン@東京ストナン会, 東京ストナン会, 山手キッズ【Y&K】."
+  },
+  {
+    "source": "4meakg",
     "target": "puriketsu-nnp",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -3172,29 +3183,40 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
-  },
-  {
-    "source": "666-mori",
-    "target": "banterin-duel",
-    "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.25,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "666-mori",
     "target": "bonds-wwww",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "666-mori",
+    "target": "charisma-doll",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "666-mori",
+    "target": "ecchu2929",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "666-mori",
@@ -3205,29 +3227,73 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, ユウ@東カレの王👑, Osaka, 夜ト."
   },
   {
     "source": "666-mori",
-    "target": "kurosaka-pua-wi",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "666-mori",
+    "target": "ktp5123",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, 黒坂PUA, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
+  },
+  {
+    "source": "666-mori",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, 黒坂PUA With You, Osaka, @pako_dai, 夜ト."
+  },
+  {
+    "source": "666-mori",
+    "target": "mabonasu-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
+  },
+  {
+    "source": "666-mori",
+    "target": "paaman-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
   },
   {
     "source": "666-mori",
     "target": "pako-dai",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Nagoya, Osaka."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "666-mori",
@@ -3249,18 +3315,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "666-mori",
-    "target": "right-pua",
+    "target": "rockpua-sub",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, オオサカ."
   },
   {
     "source": "666-mori",
@@ -3274,6 +3340,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "666-mori",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "672fcdpa",
@@ -3810,6 +3887,17 @@
   },
   {
     "source": "ale-puapua",
+    "target": "cornwallcapital",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @kyo, kyo."
+  },
+  {
+    "source": "ale-puapua",
     "target": "etokyojam",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4126,16 +4214,27 @@
     "source": "anri-shibuya",
     "target": "beat-pro",
     "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "anri-shibuya",
+    "target": "cornwallcapital",
+    "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "anri-shibuya",
-    "target": "mentaikopua-oji",
+    "target": "hayato-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -4146,6 +4245,17 @@
   },
   {
     "source": "anri-shibuya",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "anri-shibuya",
     "target": "mote-hair00",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4153,7 +4263,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "anri-shibuya",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "anri-shibuya",
+    "target": "shibuya109suto",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "anri-shibuya",
@@ -4177,7 +4309,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "anshin-pua",
@@ -4201,7 +4333,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "asahilove77",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "anus-asterisk",
@@ -4212,7 +4355,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, 米流, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, 米流, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "anus-asterisk",
@@ -4234,7 +4377,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "anus-asterisk",
@@ -4245,7 +4388,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "anus-asterisk",
@@ -4256,7 +4410,62 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, 🧀, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, 🧀, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "anus-asterisk",
@@ -4267,7 +4476,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "anus-asterisk",
@@ -4278,7 +4487,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "anus-asterisk",
@@ -4292,6 +4512,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "anus-asterisk",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "anus-pua",
@@ -4334,6 +4565,17 @@
   },
   {
     "source": "araaraara-122",
+    "target": "asahilove77",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "araaraara-122",
     "target": "bach-sokuhou",
     "type": "affiliation",
     "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
@@ -4345,6 +4587,28 @@
   },
   {
     "source": "araaraara-122",
+    "target": "bale-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "bonnoupua2",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "araaraara-122",
     "target": "chiroru-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4352,7 +4616,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "araaraara-122",
@@ -4385,7 +4649,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "araaraara-122",
@@ -4396,7 +4660,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "araaraara-122",
@@ -4408,6 +4683,28 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "araaraara-122",
@@ -4429,7 +4726,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "araaraara-122",
@@ -4440,7 +4759,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "araaraara-122",
@@ -4462,7 +4781,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "araaraara-122",
@@ -4487,6 +4806,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "araaraara-122",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "araba-1010",
@@ -4638,7 +4968,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "asahilove77",
@@ -4649,7 +4979,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "asahilove77",
@@ -4660,7 +4990,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "asahilove77",
+    "target": "chiroru-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "asahilove77",
@@ -4675,6 +5016,17 @@
   },
   {
     "source": "asahilove77",
+    "target": "gorogoro-street",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "asahilove77",
     "target": "kibaaaana",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4682,7 +5034,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "asahilove77",
@@ -4697,6 +5049,17 @@
   },
   {
     "source": "asahilove77",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
+  },
+  {
+    "source": "asahilove77",
     "target": "pua-kei-mh",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4708,6 +5071,39 @@
   },
   {
     "source": "asahilove77",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "asahilove77",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
+  },
+  {
+    "source": "asahilove77",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "asahilove77",
     "target": "street-fami",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4715,7 +5111,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "asahilove77",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
   },
   {
     "source": "asahilove77",
@@ -4726,7 +5133,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "asahilove77",
@@ -4758,12 +5165,34 @@
     "source": "ashikaga-street",
     "target": "beat-pro",
     "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "chouun-pua",
+    "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, リー."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "daioki0430",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "ashikaga-street",
@@ -4774,7 +5203,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "ashikaga-street",
@@ -4785,7 +5214,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, リー."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "mote-hair00",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, リー."
   },
   {
     "source": "ashikaga-street",
@@ -4800,6 +5251,28 @@
   },
   {
     "source": "ashikaga-street",
+    "target": "nanpawars",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "ashikaga-street",
     "target": "shinjukuashura",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -4807,7 +5280,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "ashikaga-street",
@@ -4821,6 +5294,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "ashikaga-street",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "asobiju",
@@ -5001,12 +5485,45 @@
     "source": "atannon-nampa",
     "target": "banterin-duel",
     "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.25,
+    "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai, 夜ト."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "charisma-doll",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "doheyama",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "ecchu2929",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "atannon-nampa",
@@ -5017,7 +5534,62 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "kedama-camera",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "atannon-nampa",
@@ -5028,7 +5600,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai."
   },
   {
     "source": "atannon-nampa",
@@ -5046,14 +5618,25 @@
   },
   {
     "source": "atannon-nampa",
-    "target": "right-pua",
+    "target": "osaka-kakuue",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "atannon-nampa",
@@ -5067,6 +5650,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "atannon-nampa",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "atannon-sabu",
@@ -5328,7 +5922,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bach-sokuhou",
@@ -5339,7 +5933,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bach-sokuhou",
@@ -5350,7 +5944,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団, チロル."
   },
   {
     "source": "bach-sokuhou",
@@ -5361,7 +5955,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bach-sokuhou",
@@ -5376,6 +5970,17 @@
   },
   {
     "source": "bach-sokuhou",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "bach-sokuhou",
     "target": "pua-shin",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -5384,6 +5989,39 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, ファミチキ🍗弾丸即マシン."
+  },
+  {
+    "source": "bach-sokuhou",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "bach-sokuhou",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ, のんちゃま® プロナンパ師."
+  },
+  {
+    "source": "bach-sokuhou",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ."
   },
   {
     "source": "bach-sokuhou",
@@ -5397,6 +6035,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bach-sokuhou",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bakaha-sandbag",
@@ -5482,7 +6131,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bale-pua",
@@ -5497,6 +6146,39 @@
   },
   {
     "source": "bale-pua",
+    "target": "gorogoro-street",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bale-pua",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bale-pua",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "bale-pua",
     "target": "kibaaaana",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -5504,7 +6186,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bale-pua",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bale-pua",
@@ -5526,7 +6219,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bale-pua",
@@ -5548,7 +6241,40 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bale-pua",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "bale-pua",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bale-pua",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bale-pua",
@@ -5559,7 +6285,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bale-pua",
@@ -5570,7 +6296,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bale-pua",
@@ -5595,6 +6321,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bale-pua",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "banabanasan",
@@ -5729,25 +6466,58 @@
   },
   {
     "source": "banterin-duel",
-    "target": "kedama-camera",
+    "target": "666-mori",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "banterin-duel",
-    "target": "kei-nanpa",
+    "target": "bonds-wwww",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "doheyama",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "ecchu2929",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai, 夜ト."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @_charisma_doll, ふぉい@不屈の行動家🏃💨, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "banterin-duel",
@@ -5758,18 +6528,51 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, 黒坂PUA With You, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 黒坂PUA With You, Osaka, @pako_dai, 夜ト."
   },
   {
     "source": "banterin-duel",
-    "target": "nagasanpua",
+    "target": "mentaikopua-oji",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 一ノ瀬, リー."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "mote-hair00",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 一ノ瀬, リー."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai, リー."
+  },
+  {
+    "source": "banterin-duel",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "banterin-duel",
@@ -5878,18 +6681,7 @@
   },
   {
     "source": "beat-pro",
-    "target": "heefoomee2",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
-  },
-  {
-    "source": "beat-pro",
-    "target": "mentaikopua-oji",
+    "target": "hayato-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -5897,17 +6689,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
-  },
-  {
-    "source": "beat-pro",
-    "target": "mote-hair00",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 営業所長けーすけ@ブルバ100, Shibuya."
   },
   {
     "source": "beat-pro",
@@ -5929,18 +6710,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @chouun_pua, 営業所長けーすけ@ブルバ100."
-  },
-  {
-    "source": "beat-pro",
-    "target": "shouri-ikb",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @chouun_pua, Ikebukuro."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 足利, @chouun_pua, 営業所長けーすけ@ブルバ100, モテ界隈特化美容師 えーちゃん."
   },
   {
     "source": "beat-pro",
@@ -6046,6 +6816,17 @@
   },
   {
     "source": "bird-pua",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー."
+  },
+  {
+    "source": "bird-pua",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -6057,6 +6838,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "bird-pua",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー."
   },
   {
     "source": "bird-pua",
@@ -6189,6 +6981,61 @@
   },
   {
     "source": "bonds-wwww",
+    "target": "doheyama",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "bonds-wwww",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "bonds-wwww",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "bonds-wwww",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "bonds-wwww",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
+  },
+  {
+    "source": "bonds-wwww",
     "target": "pika-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
@@ -6197,17 +7044,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
-  },
-  {
-    "source": "bonds-wwww",
-    "target": "qrxt-a",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "bonds-wwww",
@@ -6246,6 +7082,17 @@
   },
   {
     "source": "bonnoupua2",
+    "target": "chiroru-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
     "target": "chiroru-pua-main",
     "type": "affiliation",
     "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -6268,6 +7115,17 @@
   },
   {
     "source": "bonnoupua2",
+    "target": "gorogoro-street",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
     "target": "karearitaberu",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -6275,7 +7133,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bonnoupua2",
@@ -6286,7 +7155,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bonnoupua2",
@@ -6298,6 +7178,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '帝都' bridge auto-edge. Added with per-node caps to avoid a full clique."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "bonnoupua2",
@@ -6319,7 +7210,40 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "bonnoupua2",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bonnoupua2",
@@ -6330,7 +7254,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bonnoupua2",
@@ -6341,7 +7265,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "bonnoupua2",
@@ -6687,7 +7611,18 @@
   },
   {
     "source": "charisma-doll",
-    "target": "ecchu2929",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "doheyama",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -6695,6 +7630,39 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "ecchu2929",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "foy-jibunmigaki",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka, 夜ト."
   },
   {
     "source": "charisma-doll",
@@ -6706,6 +7674,50 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "kedama-camera",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka, 夜ト."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
   },
   {
     "source": "charisma-doll",
@@ -6727,7 +7739,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "charisma-doll",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, ユウ@東カレの王👑, Osaka."
   },
   {
     "source": "charisma-doll",
@@ -6746,12 +7769,12 @@
     "source": "charisma-doll",
     "target": "yato-mote",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "chiaki-nnp",
@@ -6925,7 +7948,51 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "chiroru-pua",
@@ -6947,7 +8014,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "chiroru-pua",
@@ -6958,7 +8047,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "chiroru-pua",
@@ -6969,7 +8058,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "chiroru-pua",
@@ -6980,7 +8069,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "chiroru-pua",
@@ -7005,6 +8094,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "chiroru-pua",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "chiroru-pua-main",
@@ -7059,7 +8159,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: フェニックス🪽＠🍚セクシーコマンドー部🍚, ファミチキ🍗弾丸即マシン."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: フェニックス🪽＠🍚セクシーコマンドー部🍚, リー, ファミチキ🍗弾丸即マシン."
   },
   {
     "source": "chiroru-pua-main",
@@ -7114,7 +8214,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Bee@明太子ナンパ, ルイ."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Bee@明太子ナンパ, リー, ルイ."
   },
   {
     "source": "chiroru-pua-main",
@@ -7148,6 +8248,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Bee@明太子ナンパ, リボーン@ゆってぃ長期12期生."
+  },
+  {
+    "source": "chiroru-pua-main",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "chiroru-pua-main",
@@ -7270,6 +8381,17 @@
   },
   {
     "source": "chomechome-pua",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, リー."
+  },
+  {
+    "source": "chomechome-pua",
     "target": "shelly4821",
     "type": "affiliation",
     "description": "キーワードクラスタ「東カレ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
@@ -7371,6 +8493,39 @@
   },
   {
     "source": "chouun-pua",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 無料ナンパ講習塾教室。イルカ先生。本日講習予定135※念のためdmと返信を両方お願いします, ヤブキ＠ナンパ師."
+  },
+  {
+    "source": "chouun-pua",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, リー."
+  },
+  {
+    "source": "chouun-pua",
+    "target": "mote-hair00",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, リー."
+  },
+  {
+    "source": "chouun-pua",
     "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -7378,7 +8533,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 無料ナンパ講習塾教室。イルカ先生。本日講習予定135※念のためdmと返信を両方お願いします."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 無料ナンパ講習塾教室。イルカ先生。本日講習予定135※念のためdmと返信を両方お願いします, ヤブキ＠ナンパ師."
   },
   {
     "source": "chouun-pua",
@@ -7406,17 +8561,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "chouun-pua",
-    "target": "yabuki-nampa",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Ikebukuro."
   },
   {
     "source": "chumtegoshi",
@@ -7606,6 +8750,50 @@
   },
   {
     "source": "cornwallcapital",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "mote-hair00",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "cornwallcapital",
     "target": "saikyo-sutoti",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -7624,7 +8812,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "cornwallcapital",
@@ -7649,6 +8837,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 0 handles and matched 0 tracked accounts. Generated snapshot differs from manual fields: profile_text."
+  },
+  {
+    "source": "cornwallcapital",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "cornwallcapital",
@@ -7734,6 +8933,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: フェニックス🪽＠🍚セクシーコマンドー部🍚, ファミチキ🍗弾丸即マシン."
+  },
+  {
+    "source": "cx-lm5",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: リー, ファミチキ🍗弾丸即マシン."
   },
   {
     "source": "cx-lm5",
@@ -7884,6 +9094,17 @@
   },
   {
     "source": "daioki0430",
+    "target": "heefoomee2",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "daioki0430",
     "target": "kageki-ashura",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -7891,18 +9112,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "daioki0430",
     "target": "mote-ren-ai7",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "daioki0430",
@@ -7913,7 +9134,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "daioki0430",
@@ -7924,7 +9145,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "daioki0430",
@@ -7935,7 +9156,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "daioki0430",
@@ -7959,7 +9180,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "daioki0430",
@@ -8311,14 +9532,36 @@
   },
   {
     "source": "doheyama",
-    "target": "gamupua",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "doheyama",
+    "target": "ecchu2929",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "doheyama",
+    "target": "foy-jibunmigaki",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
   },
   {
     "source": "doheyama",
@@ -8329,18 +9572,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
   },
   {
     "source": "doheyama",
     "target": "himotenohoshi",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "doheyama",
@@ -8358,14 +9601,80 @@
   },
   {
     "source": "doheyama",
-    "target": "pako-dai",
+    "target": "kedama-camera",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+  },
+  {
+    "source": "doheyama",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "doheyama",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "doheyama",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "doheyama",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "doheyama",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "doheyama",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "doheyama",
@@ -8384,12 +9693,12 @@
     "source": "doheyama",
     "target": "yato-mote",
     "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.25,
+    "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, ユウ@東カレの王👑, Osaka."
   },
   {
     "source": "dokuzetu819",
@@ -8437,7 +9746,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団, チロル."
   },
   {
     "source": "doraemon-pua",
@@ -8471,6 +9780,28 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, ファミチキ🍗弾丸即マシン."
+  },
+  {
+    "source": "doraemon-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ, のんちゃま® プロナンパ師."
+  },
+  {
+    "source": "doraemon-pua",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
   },
   {
     "source": "doraemon-pua",
@@ -8791,6 +10122,28 @@
   },
   {
     "source": "ecchu2929",
+    "target": "foy-jibunmigaki",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "ecchu2929",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+  },
+  {
+    "source": "ecchu2929",
     "target": "himotenohoshi",
     "type": "affiliation",
     "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
@@ -8802,6 +10155,50 @@
   },
   {
     "source": "ecchu2929",
+    "target": "kedama-camera",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+  },
+  {
+    "source": "ecchu2929",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai."
+  },
+  {
+    "source": "ecchu2929",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai, 夜ト."
+  },
+  {
+    "source": "ecchu2929",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai."
+  },
+  {
+    "source": "ecchu2929",
     "target": "osaka-kakuue",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -8809,18 +10206,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
   },
   {
     "source": "ecchu2929",
-    "target": "paaman-pua",
+    "target": "pako-dai",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "ecchu2929",
@@ -8839,12 +10236,12 @@
     "source": "ecchu2929",
     "target": "yato-mote",
     "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.24,
+    "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "ed-himo",
@@ -9496,6 +10893,61 @@
   },
   {
     "source": "foy-jibunmigaki",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka, 夜ト."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "kedama-camera",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka, 夜ト."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, 夜ト."
+  },
+  {
+    "source": "foy-jibunmigaki",
     "target": "kurosaka-pua-wi",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -9521,7 +10973,18 @@
   },
   {
     "source": "foy-jibunmigaki",
-    "target": "right-pua",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "paaman-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -9529,6 +10992,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, ユウ@東カレの王👑, Osaka."
   },
   {
     "source": "foy-jibunmigaki",
@@ -9542,6 +11016,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "foy-jibunmigaki",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "foy-jikokensan",
@@ -9802,39 +11287,6 @@
   },
   {
     "source": "gamupua",
-    "target": "hayato-pua",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
-  },
-  {
-    "source": "gamupua",
-    "target": "himotenohoshi",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
-  },
-  {
-    "source": "gamupua",
-    "target": "pako-dai",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
-  },
-  {
-    "source": "gamupua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -9845,17 +11297,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "gamupua",
-    "target": "yato-mote",
-    "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.25,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "garo-pua",
@@ -10280,6 +11721,28 @@
   },
   {
     "source": "gorogoro-street",
+    "target": "karearitaberu",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "kazunanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "gorogoro-street",
     "target": "kibaaaana",
     "type": "affiliation",
     "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -10288,6 +11751,28 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "gorogoro-street",
@@ -10309,7 +11794,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "gorogoro-street",
@@ -10320,7 +11816,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "gorogoro-street",
@@ -10331,7 +11827,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "gorogoro-street",
@@ -10353,7 +11849,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "gorogoro-street",
@@ -10378,6 +11874,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "gorogoro-street",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "gorubakki-pua",
@@ -10974,14 +12481,25 @@
   },
   {
     "source": "hayato-pua",
-    "target": "beat-pro",
+    "target": "666-mori",
     "type": "affiliation",
-    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "hayato-pua",
@@ -10992,29 +12510,62 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, 夜ト."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "kedama-camera",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka, 夜ト."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "kurosaka-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
   },
   {
     "source": "hayato-pua",
-    "target": "mentaikopua-oji",
+    "target": "kurosaka-pua-wi",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
   },
   {
     "source": "hayato-pua",
-    "target": "naruto-nanpa",
+    "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 無料ナンパ講習塾教室。イルカ先生。本日講習予定135※念のためdmと返信を両方お願いします, ヤブキ＠ナンパ師."
   },
   {
     "source": "hayato-pua",
@@ -11032,14 +12583,47 @@
   },
   {
     "source": "hayato-pua",
-    "target": "shibuya109suto",
+    "target": "osaka-kakuue",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "paaman-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
+  },
+  {
+    "source": "hayato-pua",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, 営業所長けーすけ@ブルバ100, モテ界隈特化美容師 えーちゃん."
   },
   {
     "source": "hayato-pua",
@@ -11080,6 +12664,17 @@
   },
   {
     "source": "heefoomee2",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "heefoomee2",
     "target": "kageki-ashura",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -11087,7 +12682,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "heefoomee2",
@@ -11102,6 +12697,17 @@
   },
   {
     "source": "heefoomee2",
+    "target": "nanpawars",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "heefoomee2",
     "target": "naruto-nanpa",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -11109,7 +12715,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "heefoomee2",
@@ -11120,7 +12726,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "heefoomee2",
@@ -11144,7 +12750,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 恋愛マスター阿修羅, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "henachoko-olive",
@@ -11212,14 +12818,47 @@
   },
   {
     "source": "himotenohoshi",
-    "target": "pako-dai",
+    "target": "kedama-camera",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, 夜ト."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "kei-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, 黒坂PUA, Osaka, @pako_dai."
+  },
+  {
+    "source": "himotenohoshi",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "himotenohoshi",
@@ -11941,6 +13580,17 @@
   },
   {
     "source": "jaws-girlhunter",
+    "target": "pua-co",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: こいち @東京ストナン会×ジェイソン, レオン@東京ストナン会, 東京ストナン会, 山手キッズ【Y&K】."
+  },
+  {
+    "source": "jaws-girlhunter",
     "target": "puriketsu-nnp",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -12297,7 +13947,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "kageki-ashura",
@@ -12725,7 +14375,40 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ルイ."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー, ルイ."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "karearitaberu",
@@ -12740,6 +14423,28 @@
   },
   {
     "source": "karearitaberu",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, リー, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, える."
+  },
+  {
+    "source": "karearitaberu",
     "target": "river-p823",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -12747,7 +14452,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "karearitaberu",
@@ -12780,7 +14485,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "karearitaberu",
@@ -12791,7 +14496,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "karearitaberu",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "karearitaberu",
@@ -13108,7 +14824,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "kazunanpa",
@@ -13145,6 +14861,17 @@
   },
   {
     "source": "kazunanpa",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kazunanpa",
     "target": "reborn-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。",
@@ -13156,6 +14883,61 @@
   },
   {
     "source": "kazunanpa",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kazunanpa",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
+  },
+  {
+    "source": "kazunanpa",
     "target": "streets-bach",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -13163,7 +14945,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "kazunanpa",
@@ -13243,6 +15025,17 @@
   },
   {
     "source": "kedama-camera",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kedama-camera",
     "target": "kei-nanpa",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -13250,7 +15043,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
   },
   {
     "source": "kedama-camera",
@@ -13261,7 +15054,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, 夜ト."
+  },
+  {
+    "source": "kedama-camera",
+    "target": "kurosaka-pua-wi",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
   },
   {
     "source": "kedama-camera",
@@ -13279,7 +15083,7 @@
   },
   {
     "source": "kedama-camera",
-    "target": "nagasanpua",
+    "target": "osaka-kakuue",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -13287,6 +15091,28 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+  },
+  {
+    "source": "kedama-camera",
+    "target": "paaman-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "kedama-camera",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
   },
   {
     "source": "kedama-camera",
@@ -13300,6 +15126,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kedama-camera",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "kei-male-apex",
@@ -13341,6 +15178,17 @@
   },
   {
     "source": "kei-nanpa",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kei-nanpa",
     "target": "kurosaka-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -13348,18 +15196,62 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: Osaka, @pako_dai."
   },
   {
     "source": "kei-nanpa",
-    "target": "nagasanpua",
+    "target": "kurosaka-pua-wi",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka, @pako_dai."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "paaman-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "kei-nanpa",
@@ -13373,6 +15265,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kei-nanpa",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, Osaka."
   },
   {
     "source": "kei-pua",
@@ -13548,6 +15451,28 @@
   },
   {
     "source": "kibaaaana",
+    "target": "konkatsu-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kibaaaana",
+    "target": "nagi-nanpa0922",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kibaaaana",
     "target": "nanpanyan4545",
     "type": "affiliation",
     "description": "キーワードクラスタ「味噌」に属し、共通のつながりが 5 件あるため同クラスタ関係として推定（自動）。",
@@ -13573,6 +15498,28 @@
   },
   {
     "source": "kibaaaana",
+    "target": "pua-kei-mh",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kibaaaana",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "kibaaaana",
     "target": "river-p823",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -13580,7 +15527,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "kibaaaana",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, のんちゃま® プロナンパ師."
   },
   {
     "source": "kibaaaana",
@@ -13627,6 +15585,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kibaaaana",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "kibana1031",
@@ -13970,6 +15939,17 @@
   },
   {
     "source": "konkatsu-nanpa",
+    "target": "marifax-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, ルイ."
+  },
+  {
+    "source": "konkatsu-nanpa",
     "target": "nagi-nanpa0922",
     "type": "affiliation",
     "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
@@ -13981,17 +15961,6 @@
   },
   {
     "source": "konkatsu-nanpa",
-    "target": "nanpa-zin",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, そらじろー @短髪強いられ勢."
-  },
-  {
-    "source": "konkatsu-nanpa",
     "target": "nanpanyan4545",
     "type": "affiliation",
     "description": "キーワードクラスタ「ゆってぃ」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。",
@@ -14000,6 +15969,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster 'ゆってぃ' auto-edge. Shared neighbors: 3."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
   },
   {
     "source": "konkatsu-nanpa",
@@ -14039,6 +16019,28 @@
   },
   {
     "source": "konkatsu-nanpa",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "konkatsu-nanpa",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "konkatsu-nanpa",
     "target": "speedstarsora",
     "type": "affiliation",
     "description": "キーワードクラスタ「ネクステ」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
@@ -14057,7 +16059,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "konkatsu-nanpa",
@@ -14068,7 +16070,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "konkatsu-nanpa",
@@ -14289,7 +16291,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "ktp5123",
@@ -14300,18 +16302,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "ktp5123",
     "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "ktp5123",
+    "target": "qrxt-a",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "ktp5123",
@@ -14560,7 +16573,7 @@
   },
   {
     "source": "kurosaka-pua",
-    "target": "666-mori",
+    "target": "himotenohoshi",
     "type": "affiliation",
     "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -14571,14 +16584,25 @@
   },
   {
     "source": "kurosaka-pua",
-    "target": "nagasanpua",
+    "target": "osaka-kakuue",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka, @pako_dai."
+  },
+  {
+    "source": "kurosaka-pua",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "kurosaka-pua",
@@ -14592,6 +16616,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kurosaka-pua",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "kurosaka-pua",
@@ -14609,6 +16644,17 @@
   },
   {
     "source": "kurosaka-pua-wi",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kurosaka-pua-wi",
     "target": "banterin-duel",
     "type": "affiliation",
     "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
@@ -14620,7 +16666,18 @@
   },
   {
     "source": "kurosaka-pua-wi",
-    "target": "right-pua",
+    "target": "osaka-kakuue",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, Osaka, @pako_dai."
+  },
+  {
+    "source": "kurosaka-pua-wi",
+    "target": "paaman-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -14628,6 +16685,28 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
+  },
+  {
+    "source": "kurosaka-pua-wi",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "kurosaka-pua-wi",
+    "target": "pika-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "kurosaka-pua-wi",
@@ -14641,6 +16720,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "kurosaka-pua-wi",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @banterin_duel, 黒坂PUA, Osaka."
   },
   {
     "source": "kurosakikun",
@@ -15035,18 +17125,29 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "mabonasu-pua",
     "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mabonasu-pua",
+    "target": "qrxt-a",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
   },
   {
     "source": "mabonasu-pua",
@@ -15265,6 +17366,17 @@
   },
   {
     "source": "marifax-pua",
+    "target": "mentaikopua-oji",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: リー, ルイ."
+  },
+  {
+    "source": "marifax-pua",
     "target": "nanpanyan4545",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -15272,7 +17384,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団, チロル."
   },
   {
     "source": "marifax-pua",
@@ -15294,7 +17406,18 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: 米流, ぼんのう寺@鬼ころし一門/雄華軍団, チロル."
+  },
+  {
+    "source": "marifax-pua",
+    "target": "syu-puanet",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー."
   },
   {
     "source": "marifax-pua",
@@ -15625,6 +17748,28 @@
   },
   {
     "source": "mentaikopua-oji",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mentaikopua-oji",
     "target": "karearitaberu",
     "type": "affiliation",
     "description": "キーワードクラスタ「明太子」に属し、共通のつながりが 1 件あるため同クラスタ関係として推定（自動）。",
@@ -15636,14 +17781,14 @@
   },
   {
     "source": "mentaikopua-oji",
-    "target": "mote-ren-ai7",
+    "target": "mote-hair00",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, ヤブキ＠ナンパ師."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, リー, Shibuya."
   },
   {
     "source": "mentaikopua-oji",
@@ -15654,7 +17799,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "mentaikopua-oji",
@@ -15676,7 +17821,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shibuya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "mentaikopua-oji",
@@ -15690,6 +17835,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "mentaikopua-oji",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "mero-tinder",
@@ -16439,7 +18595,7 @@
   },
   {
     "source": "mote-hair00",
-    "target": "mentaikopua-oji",
+    "target": "beat-pro",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -16447,6 +18603,39 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "mote-hair00",
+    "target": "shibuya109suto",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "mote-hair00",
@@ -16462,6 +18651,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "mote-hair00",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
     "source": "mote-ren-ai7",
     "target": "kageki-ashura",
     "type": "affiliation",
@@ -16474,17 +18674,6 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 21 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "mote-ren-ai7",
-    "target": "nanpawars",
-    "type": "affiliation",
-    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.24,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
   },
   {
     "source": "mote-ren-ai7",
@@ -16733,17 +18922,6 @@
   },
   {
     "source": "nagasanpua",
-    "target": "666-mori",
-    "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.25,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
-  },
-  {
-    "source": "nagasanpua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -16768,6 +18946,17 @@
   },
   {
     "source": "nagi-nanpa0922",
+    "target": "nonchama-pro",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
+  },
+  {
+    "source": "nagi-nanpa0922",
     "target": "pua-kei-mh",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -16779,6 +18968,39 @@
   },
   {
     "source": "nagi-nanpa0922",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "nagi-nanpa0922",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
+  },
+  {
+    "source": "nagi-nanpa0922",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "nagi-nanpa0922",
     "target": "street-fami",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -16786,7 +19008,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "nagi-nanpa0922",
@@ -16797,7 +19019,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "nagi-nanpa0922",
@@ -17410,6 +19632,17 @@
   },
   {
     "source": "nanpa-zin",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, ジム＠Claude/味噌/ピカ講習."
+  },
+  {
+    "source": "nanpa-zin",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -17500,7 +19733,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "nanpanyan4545",
@@ -17526,6 +19759,28 @@
   },
   {
     "source": "nanpanyan4545",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ."
+  },
+  {
+    "source": "nanpanyan4545",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
+  },
+  {
+    "source": "nanpanyan4545",
     "target": "street-win-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -17533,7 +19788,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "nanpanyan4545",
@@ -17613,6 +19868,28 @@
   },
   {
     "source": "nanpawars",
+    "target": "mote-ren-ai7",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shinjuku' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "nanpawars",
+    "target": "naruto-nanpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "nanpawars",
     "target": "note",
     "type": "affiliation",
     "description": "Profile links point to note.",
@@ -17634,7 +19911,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "nanpawars",
@@ -17648,6 +19925,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "nanpawars",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
   },
   {
     "source": "nanpayasuno",
@@ -17707,12 +19995,12 @@
     "source": "naruto-nanpa",
     "target": "beat-pro",
     "type": "affiliation",
-    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.25,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "naruto-nanpa",
@@ -17727,6 +20015,17 @@
   },
   {
     "source": "naruto-nanpa",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "naruto-nanpa",
     "target": "mote-ren-ai7",
     "type": "affiliation",
     "description": "共通コンテキスト「Shinjuku」につながるため、近い関係として補助接続（自動）。",
@@ -17738,6 +20037,17 @@
   },
   {
     "source": "naruto-nanpa",
+    "target": "shibuya109suto",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
+  },
+  {
+    "source": "naruto-nanpa",
     "target": "shinjukuashura",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -17746,6 +20056,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 恋愛マスター阿修羅, Shinjuku."
+  },
+  {
+    "source": "naruto-nanpa",
+    "target": "shouri-ikb",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, @chouun_pua, Ikebukuro."
   },
   {
     "source": "naruto-nanpa",
@@ -17769,7 +20090,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, Ikebukuro, 恋愛マスター阿修羅, Shibuya, Shinjuku."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, @chouun_pua, 一ノ瀬, Ikebukuro, 恋愛マスター阿修羅, Shibuya, Shinjuku."
   },
   {
     "source": "nasponsyy",
@@ -18231,6 +20552,39 @@
   },
   {
     "source": "nonchama-pro",
+    "target": "reborn-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
+  },
+  {
+    "source": "nonchama-pro",
+    "target": "river-p823",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+  },
+  {
+    "source": "nonchama-pro",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー."
+  },
+  {
+    "source": "nonchama-pro",
     "target": "schon-nannpa",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -18238,7 +20592,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "nonchama-pro",
@@ -18656,6 +21010,17 @@
   },
   {
     "source": "osaka-kakuue",
+    "target": "666-mori",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "osaka-kakuue",
     "target": "himotenohoshi",
     "type": "affiliation",
     "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
@@ -18667,14 +21032,25 @@
   },
   {
     "source": "osaka-kakuue",
-    "target": "paaman-pua",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "osaka-kakuue",
+    "target": "pika-pua",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, @pako_dai."
   },
   {
     "source": "osaka-kakuue",
@@ -18698,7 +21074,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, ユウ@東カレの王👑, Osaka."
   },
   {
     "source": "osathi-nanpa",
@@ -18951,7 +21327,7 @@
   },
   {
     "source": "paaman-pua",
-    "target": "himotenohoshi",
+    "target": "banterin-duel",
     "type": "affiliation",
     "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -18959,6 +21335,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "paaman-pua",
+    "target": "pako-dai",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
   },
   {
     "source": "paaman-pua",
@@ -18982,7 +21369,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: ユウ@東カレの王👑, Osaka."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, Osaka."
   },
   {
     "source": "pachi-summer",
@@ -19013,6 +21400,17 @@
   },
   {
     "source": "pako-dai",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "pako-dai",
     "target": "bonds-wwww",
     "type": "affiliation",
     "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
@@ -19024,14 +21422,58 @@
   },
   {
     "source": "pako-dai",
+    "target": "himotenohoshi",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "pako-dai",
     "target": "pika-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "pako-dai",
+    "target": "qrxt-a",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: suke, Nagoya, ピカちう@ナンパ講師/外見改善 東京 名古屋."
+  },
+  {
+    "source": "pako-dai",
+    "target": "rockpua-sub",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @banterin_duel, オオサカ."
+  },
+  {
+    "source": "pako-dai",
+    "target": "utaa-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @ecchu2929, ユウ@東カレの王👑."
   },
   {
     "source": "pako-dai",
@@ -19050,12 +21492,12 @@
     "source": "pako-dai",
     "target": "yato-mote",
     "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
     "source_urls": [],
-    "confidence": 0.25,
+    "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @666___mori, あたんのん@大阪ストサロン代表, @banterin_duel, @ecchu2929, ユウ@東カレの王👑, 黒坂PUA, Osaka."
   },
   {
     "source": "palace-chilll",
@@ -19966,6 +22408,17 @@
   },
   {
     "source": "pua-kei-mh",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "pua-kei-mh",
     "target": "street-fami",
     "type": "affiliation",
     "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
@@ -20178,6 +22631,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "pua-shin",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: がまぐっちぃ🐸仙人モード, ファミチキ🍗弾丸即マシン."
   },
   {
     "source": "pua-shin",
@@ -20443,6 +22907,17 @@
   },
   {
     "source": "qrxt-a",
+    "target": "bonds-wwww",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'nagoya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "qrxt-a",
     "target": "pika-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Nagoya」につながるため、近い関係として補助接続（自動）。",
@@ -20665,6 +23140,61 @@
   },
   {
     "source": "reborn-pua",
+    "target": "rui0808-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
+  },
+  {
+    "source": "reborn-pua",
+    "target": "schon-nannpa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "reborn-pua",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "reborn-pua",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
+  },
+  {
+    "source": "reborn-pua",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
+    "source": "reborn-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -20848,17 +23378,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "right-pua",
-    "target": "banterin-duel",
-    "type": "affiliation",
-    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.25,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "right-pua",
@@ -21061,7 +23580,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "river-p823",
@@ -21073,6 +23592,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '味噌' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "river-p823",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "river-p823",
@@ -21097,6 +23627,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "river-p823",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "rizin-pua",
@@ -21158,6 +23699,39 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '帝都' auto-edge. Shared neighbors: 1."
+  },
+  {
+    "source": "rockpua-sub",
+    "target": "street-fami",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, CRUBD 💎 / セクシーコマンドー部【mスト強化月間】, のんちゃま® プロナンパ師."
+  },
+  {
+    "source": "rockpua-sub",
+    "target": "street-win-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, のんちゃま® プロナンパ師."
+  },
+  {
+    "source": "rockpua-sub",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ, のんちゃま® プロナンパ師."
   },
   {
     "source": "rockpua-sub",
@@ -21325,6 +23899,28 @@
   },
   {
     "source": "rui0808-pua",
+    "target": "streets-bach",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, Bee@明太子ナンパ."
+  },
+  {
+    "source": "rui0808-pua",
+    "target": "syu-puanet",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, リー."
+  },
+  {
+    "source": "rui0808-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -21335,6 +23931,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "rui0808-pua",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, なぎさ＠ゆってぃ長期4期生＆ネクステ2期生＆S1講習."
   },
   {
     "source": "ruisboss",
@@ -21980,7 +24587,7 @@
     "confidence": 0.24,
     "evidence_kind": "interpretation",
     "needs_review": true,
-    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: バッハ福田麻呂@サブ垢, チロル, けいすけ, キバナ👃@味噌, ファミチキ🍗弾丸即マシン, バッハ@のんちゃま一門 散歩部部長×スト値上げ部 監督."
   },
   {
     "source": "schon-nannpa",
@@ -22005,6 +24612,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "schon-nannpa",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "science11tech",
@@ -22471,6 +25089,17 @@
   },
   {
     "source": "shibuya109suto",
+    "target": "hayato-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'shibuya' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "shibuya109suto",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -22481,6 +25110,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "shibuya109suto",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, 一ノ瀬, Shibuya."
   },
   {
     "source": "shigurui",
@@ -22689,6 +25329,17 @@
   },
   {
     "source": "shouri-ikb",
+    "target": "beat-pro",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "shouri-ikb",
     "target": "chouun-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
@@ -22724,6 +25375,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "shouri-ikb",
+    "target": "yabuki-nampa",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: プロのナンパ師, @chouun_pua, Ikebukuro."
   },
   {
     "source": "shsm-2024",
@@ -23542,6 +26204,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Page.goto: Timeout 120000ms exceeded. Call log: - navigating to \"https://x.com/street_Fami/following\", waiting until \"domcontentloaded\""
   },
   {
+    "source": "street-fami",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
+  },
+  {
     "source": "street-pua",
     "target": "x",
     "type": "affiliation",
@@ -23623,6 +26296,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "street-win-pua",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ."
   },
   {
     "source": "streetbucha",
@@ -23722,6 +26406,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "streets-bach",
+    "target": "yutty-pua",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: チロル, けいすけ, 打ち上げ花火@ゆってぃ長期8期生."
   },
   {
     "source": "ststst-pua",
@@ -25448,6 +28143,17 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "source": "utaa-pua",
+    "target": "yato-mote",
+    "type": "affiliation",
+    "description": "複数の共通隣接ノードを持つため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.24,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared-neighbor bridge auto-edge. Shared contexts: @ecchu2929, ユウ@東カレの王👑."
+  },
+  {
     "source": "utopua2",
     "target": "elsta",
     "type": "affiliation",
@@ -25973,7 +28679,18 @@
   },
   {
     "source": "yabuki-nampa",
-    "target": "mentaikopua-oji",
+    "target": "chouun-pua",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Ikebukuro」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'ikebukuro' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
+  },
+  {
+    "source": "yabuki-nampa",
+    "target": "hayato-pua",
     "type": "affiliation",
     "description": "共通コンテキスト「Shibuya」につながるため、近い関係として補助接続（自動）。",
     "source_urls": [],
@@ -26070,6 +28787,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "yato-mote",
+    "target": "banterin-duel",
+    "type": "affiliation",
+    "description": "共通コンテキスト「Osaka」につながるため、近い関係として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.25,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Shared context 'osaka' bridge auto-edge. Broad generic contexts are excluded and per-node caps are applied."
   },
   {
     "source": "yato-mote",
