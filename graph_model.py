@@ -3159,7 +3159,7 @@ def render_html(
     function computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster) {
       const positions = new Map();
       const modePayload = rawClusters.modes?.[clusterMode] || rawClusters.modes?.connectivity;
-      const clusterSpacing = shouldCluster ? (clusterMode === "region_group" ? 2.15 : 1.75) : 1;
+      const clusterSpacing = shouldCluster ? (clusterMode === "region_group" ? 1.45 : 1.25) : 1;
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
@@ -3195,8 +3195,8 @@ def render_html(
           }
           return left.name.localeCompare(right.name);
         });
-        const spreadX = Math.max(90, Math.min(shouldCluster ? 430 : 300, 50 + sortedMembers.length * (shouldCluster ? 11 : 8)));
-        const spreadY = Math.max(70, Math.min(shouldCluster ? 340 : 240, 40 + sortedMembers.length * (shouldCluster ? 8 : 6)));
+        const spreadX = Math.max(90, Math.min(shouldCluster ? 340 : 300, 50 + sortedMembers.length * (shouldCluster ? 9 : 8)));
+        const spreadY = Math.max(70, Math.min(shouldCluster ? 270 : 240, 40 + sortedMembers.length * (shouldCluster ? 7 : 6)));
 
         sortedMembers.forEach((node, memberIndex) => {
           if (sortedMembers.length === 1) {
