@@ -208,7 +208,7 @@
       background: #f9fbff;
     }
     #network {
-      height: 560px;
+      height: 650px;
       border: 1px solid var(--border);
       border-radius: 8px;
       background: #fff;
@@ -302,7 +302,7 @@
     .graph-layout {
       display: grid;
       gap: 20px;
-      grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+      grid-template-columns: minmax(0, 2.8fr) minmax(300px, 0.9fr);
       align-items: start;
     }
     .network-panel {
@@ -315,6 +315,34 @@
     .detail-empty {
       color: var(--muted);
       line-height: 1.6;
+    }
+    .featured-node-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .featured-node-card {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .featured-node-card:hover {
+      border-color: var(--accent);
+      background: #f6f9ff;
+    }
+    .featured-node-card strong,
+    .featured-node-card span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .detail-card h3 {
       margin: 0 0 8px;
@@ -409,7 +437,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-11 03:33 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-11 04:14 UTC。</p>
       </div>
     </div>
   </header>
@@ -756,6 +784,9 @@
         followDegreeById.set(edge.target, (followDegreeById.get(edge.target) || 0) + 1);
       }
     });
+    function hasRealProfileIcon(node) {
+      return Boolean(node?.icon_url) && !node.icon_url.includes("/default_profile_");
+    }
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))
       .sort((left, right) =>
@@ -764,7 +795,7 @@
       )
       .map((node) => node.id);
     const rankedFollowNodeIds = rawGraph.nodes
-      .filter((node) => accountNodeTypes.has(node.type) && node.icon_url)
+      .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node))
       .sort((left, right) =>
         (right.follower_count || 0) - (left.follower_count || 0) ||
         (followDegreeById.get(right.id) || 0) - (followDegreeById.get(left.id) || 0) ||
@@ -772,8 +803,7 @@
         left.name.localeCompare(right.name, "ja")
       )
       .map((node) => node.id);
-    const defaultLabelNodeIds = new Set([...rankedAccountNodeIds.slice(0, 18), ...rankedFollowNodeIds.slice(0, 10)]);
-    const defaultIconNodeIds = new Set(rankedFollowNodeIds.slice(0, 48));
+    const defaultLabelNodeIds = new Set([...rankedAccountNodeIds.slice(0, 18), ...rankedFollowNodeIds.slice(0, 16)]);
     let currentVisibleNodes = [];
     let currentVisibleEdges = [];
     let currentVisibleReviewNodes = [];
@@ -865,7 +895,7 @@
         nodes: {
           shape: "dot",
           borderWidth: 1,
-          scaling: { min: 2, max: 26 },
+          scaling: { min: 2, max: 32 },
           font: { face: "Arial", size: 13, color: "#17212b" }
         },
         edges: {
@@ -1084,6 +1114,36 @@
       return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy">`;
     }
 
+    function renderFeaturedNodes() {
+      const featuredNodes = currentVisibleNodes
+        .filter((node) => accountNodeTypes.has(node.type) && hasRealProfileIcon(node) && (node.follower_count || 0) > 0)
+        .sort((left, right) =>
+          (right.follower_count || 0) - (left.follower_count || 0) ||
+          (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
+          left.name.localeCompare(right.name, "ja")
+        )
+        .slice(0, 12);
+      if (!featuredNodes.length) {
+        return "";
+      }
+      return `
+        <div class="detail-section">
+          <h4>フォロワー上位</h4>
+          <div class="featured-node-list">
+            ${featuredNodes.map((node) => `
+              <button type="button" class="featured-node-card" data-node-id="${escapeHtml(node.id)}">
+                ${formatNodeAvatar(node, "avatar-thumb")}
+                <span class="node-name-text">
+                  <strong>${escapeHtml(node.name)}</strong>
+                  <span class="muted">X followers: ${escapeHtml(formatNumber(node.follower_count || 0))}</span>
+                </span>
+              </button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
     function renderDetailList(edges, direction) {
       if (!edges.length) {
         return '<li class="muted">-</li>';
@@ -1184,8 +1244,10 @@
       const node = currentVisibleNodes.find((candidate) => candidate.id === nodeId);
       if (!node) {
         selectedNodeId = null;
-        panel.innerHTML =
-          '<div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>';
+        panel.innerHTML = `
+          <div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>
+          ${renderFeaturedNodes()}
+        `;
         return;
       }
 
@@ -1585,15 +1647,15 @@
       const degree = nodeDegreeById.get(node.id) || 0;
       const followDegree = followDegreeById.get(node.id) || 0;
       const followerCount = node.follower_count || 0;
-      const hasProfileIcon = node.icon_url && !node.icon_url.includes("/default_profile_");
+      const hasProfileIcon = hasRealProfileIcon(node);
       if (visibleNodes.length > 500) {
         if (followerCount > 0) {
-          return 5 + Math.min(18, Math.log10(followerCount + 1) * 3.4);
+          return 4 + Math.min(24, Math.log10(followerCount + 1) * 4.2);
         }
         if (hasProfileIcon) {
-          return 5 + Math.min(8, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.3);
+          return 3 + Math.min(6, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.1);
         }
-        return 1 + Math.min(10, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.8);
+        return 1 + Math.min(7, Math.sqrt(Math.max(degree, followDegree * 1.35)) * 1.4);
       }
       if (followerCount > 0) {
         return 8 + Math.min(22, Math.log10(followerCount + 1) * 4.5);
@@ -1605,13 +1667,7 @@
       if (!node.icon_url) {
         return false;
       }
-      if (node.icon_url.includes("/default_profile_")) {
-        return false;
-      }
-      if (visibleNodes.length <= 500) {
-        return true;
-      }
-      return true;
+      return hasRealProfileIcon(node);
     }
 
     function getNodeLabel(node, visibleNodes, term) {
@@ -1765,9 +1821,10 @@
           shape: shouldShowNodeIcon(node, visibleNodes) ? "circularImage" : "dot",
           image: shouldShowNodeIcon(node, visibleNodes) ? node.icon_url : undefined,
           brokenImage: "icon.svg",
+          borderWidth: (node.follower_count || 0) > 0 ? 2 : 1,
           color: {
             background: nodeColors[node.type] || "#64748b",
-            border: "#ffffff",
+            border: (node.follower_count || 0) > 0 ? "#ffffff" : "#d8e2f0",
             highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
           },
           title: [
