@@ -462,7 +462,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-11 22:48 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-11 22:58 UTC。</p>
       </div>
     </div>
   </header>
@@ -1069,6 +1069,26 @@
 
     function getClusterNodeId(clusterId) {
       return `cluster:${clusterId}`;
+    }
+
+    const affinityKeywordClusterIds = new Set([
+      "keyword_group:mbh",
+      "keyword_group:atsust",
+      "keyword_group:wing_longterm",
+      "keyword_group:wing",
+      "keyword_group:atsu_chill"
+    ]);
+
+    function clusterBucketIdForNode(node, clusterMode, modePayload) {
+      const keywordClusterId = rawClusters.modes?.keyword_group?.assignments?.[node.id];
+      if (clusterMode !== "keyword_group" && affinityKeywordClusterIds.has(keywordClusterId)) {
+        return keywordClusterId;
+      }
+      return modePayload?.assignments?.[node.id] || "";
+    }
+
+    function clusterInfoFor(clusterId, modePayload) {
+      return modePayload?.clusters?.[clusterId] || rawClusters.modes?.keyword_group?.clusters?.[clusterId] || {};
     }
 
     function resetTableRenderState() {
@@ -1832,7 +1852,7 @@
       }
       const bucketMap = new Map();
       visibleNodes.forEach((node) => {
-        const clusterId = modePayload.assignments[node.id];
+        const clusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
         if (!clusterId) {
           return;
         }
@@ -1854,7 +1874,7 @@
         const personCount = members.filter((node) => node.type === "person").length;
         const dominantType = personCount >= (members.length - personCount) ? "person" : "community";
         const clusterNodeId = getClusterNodeId(clusterId);
-        const clusterInfo = modePayload.clusters?.[clusterId] || {};
+        const clusterInfo = clusterInfoFor(clusterId, modePayload);
         const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
         const clusterColor = clusterColors[idx % clusterColors.length];
         const topMembers = members
@@ -1931,7 +1951,7 @@
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
-        const assignedClusterId = modePayload?.assignments?.[node.id];
+        const assignedClusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
         const bucketId = assignedClusterId || `unassigned:${hashText(node.id) % 12}`;
         if (!buckets.has(bucketId)) {
           buckets.set(bucketId, []);

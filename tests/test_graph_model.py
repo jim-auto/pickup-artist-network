@@ -357,6 +357,35 @@ class GraphModelTests(unittest.TestCase):
         elsta_labels = [info["label"] for info in keyword_clusters.values() if "えるスタ" in info["label"]]
         self.assertEqual(len(elsta_labels), 1)
 
+    def test_export_html_includes_atsu_chill_keyword_cluster(self) -> None:
+        graph = GraphData()
+        for node_id, name, aliases, description in [
+            ("pua-chilll", "あつ代表", ["pua_chilll"], "@eroeromancotin @sub_chilll @palace_chilll"),
+            ("sub-chilll", "あつ太郎の本音bot", ["sub_chilll", "あつ太郎"], "あつ代表 周辺"),
+            ("eroeromancotin", "△▽男優兼監督", ["eroeromancotin"], "△▽"),
+        ]:
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": name,
+                    "aliases": aliases,
+                    "description": description,
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        keyword_clusters = payload["clusters"]["modes"]["keyword_group"]["clusters"]
+        atsu_labels = [info["label"] for info in keyword_clusters.values() if "あつ代表/△▽" in info["label"]]
+        self.assertEqual(len(atsu_labels), 1)
+
     def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
         graph = GraphData()
         for node_id, name, description in [

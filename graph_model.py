@@ -112,6 +112,12 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "iwashi_longterm", "label": "いわし長期", "patterns": ("いわし長期",), "priority": 95},
     {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
     {
+        "id": "atsu_chill",
+        "label": "あつ代表/△▽",
+        "patterns": ("あつ代表", "あつ太郎", "sub_chilll", "pua_chilll", "eroeromancotin", "△▽"),
+        "priority": 93,
+    },
+    {
         "id": "tokyo_stonan_kai",
         "label": "東京ストナン会",
         "patterns": ("東京ストナン会", "#東京ストナン会"),
@@ -2303,6 +2309,26 @@ def render_html(
       return `cluster:${clusterId}`;
     }
 
+    const affinityKeywordClusterIds = new Set([
+      "keyword_group:mbh",
+      "keyword_group:atsust",
+      "keyword_group:wing_longterm",
+      "keyword_group:wing",
+      "keyword_group:atsu_chill"
+    ]);
+
+    function clusterBucketIdForNode(node, clusterMode, modePayload) {
+      const keywordClusterId = rawClusters.modes?.keyword_group?.assignments?.[node.id];
+      if (clusterMode !== "keyword_group" && affinityKeywordClusterIds.has(keywordClusterId)) {
+        return keywordClusterId;
+      }
+      return modePayload?.assignments?.[node.id] || "";
+    }
+
+    function clusterInfoFor(clusterId, modePayload) {
+      return modePayload?.clusters?.[clusterId] || rawClusters.modes?.keyword_group?.clusters?.[clusterId] || {};
+    }
+
     function resetTableRenderState() {
       Object.keys(tablePageSizes).forEach((key) => {
         tableRenderState[key] = tablePageSizes[key];
@@ -3064,7 +3090,7 @@ def render_html(
       }
       const bucketMap = new Map();
       visibleNodes.forEach((node) => {
-        const clusterId = modePayload.assignments[node.id];
+        const clusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
         if (!clusterId) {
           return;
         }
@@ -3086,7 +3112,7 @@ def render_html(
         const personCount = members.filter((node) => node.type === "person").length;
         const dominantType = personCount >= (members.length - personCount) ? "person" : "community";
         const clusterNodeId = getClusterNodeId(clusterId);
-        const clusterInfo = modePayload.clusters?.[clusterId] || {};
+        const clusterInfo = clusterInfoFor(clusterId, modePayload);
         const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
         const clusterColor = clusterColors[idx % clusterColors.length];
         const topMembers = members
@@ -3163,7 +3189,7 @@ def render_html(
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
-        const assignedClusterId = modePayload?.assignments?.[node.id];
+        const assignedClusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
         const bucketId = assignedClusterId || `unassigned:${hashText(node.id) % 12}`;
         if (!buckets.has(bucketId)) {
           buckets.set(bucketId, []);
