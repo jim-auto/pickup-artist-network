@@ -76,9 +76,27 @@ PROFILE_BRIDGE_PATTERNS = (
     ("外見", ("外見", "ルックス")),
     ("恋愛", ("恋愛",)),
     ("モテ", ("モテ", "彼女")),
+    ("美女", ("美女",)),
+    ("男磨き", ("男磨き",)),
     ("ナンパ", ("ナンパ", "界隈")),
+    ("PUA", ("pua", "PUA")),
+    ("プレイヤー", ("プレイヤー",)),
+    ("女遊び", ("女遊び", "女の子")),
+    ("デート", ("デート", "王道彼氏", "彼氏感")),
+    ("攻略", ("攻略", "人斬り", "斬り")),
     ("ストナン", ("ストナン", "スト値", "スト高", "スト師")),
+    ("ネトナン", ("ネトナン",)),
     ("アプリ", ("アプリ", "Tinder", "tinder")),
+    ("関係構築", ("関係構築",)),
+    ("ファッション", ("ファッション", "服", "垢抜け")),
+    ("美容", ("美容", "メイク", "髪型", "イケメン")),
+    ("整形", ("整形", "容姿")),
+    ("筋トレ", ("筋トレ", "マッチョ", "ダイエット")),
+    ("SNSマーケ", ("SNS", "マーケティング", "発信")),
+    ("ビジネス", ("事業", "起業", "会社", "代表", "稼ぐ")),
+    ("夜職", ("夜職", "ホスト", "港区")),
+    ("旅ナンパ", ("旅ナンパ", "海外ナンパ", "旅行", "国内旅行", "海外", "地方")),
+    ("裏垢", ("裏垢",)),
     ("ソロ", ("ソロ", "完ソロ")),
     ("コンビ", ("コンビ",)),
     ("MVP", ("mvp", "MVP")),
@@ -1738,7 +1756,7 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
     tag_weight: dict[str, float] = {}
     for tag, members in tag_members.items():
         count = len(members)
-        if count < 2 or count > 180:
+        if count < 2:
             continue
         if count <= 8:
             tag_weight[tag] = 3.0
@@ -1748,8 +1766,10 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
             tag_weight[tag] = 1.6
         elif count <= 110:
             tag_weight[tag] = 1.0
-        else:
+        elif count <= 180:
             tag_weight[tag] = 0.55
+        else:
+            tag_weight[tag] = 0.35
 
     candidates_by_node: defaultdict[str, list[tuple[float, str, tuple[str, ...]]]] = defaultdict(list)
     for left, right in combinations(sorted(node_tags), 2):
@@ -1762,7 +1782,10 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         score = sum(tag_weight[tag] for tag in shared_tags)
         if len(shared_tags) >= 2:
             score += 0.7
-        if score < 1.6:
+        left_followers = int(node_by_id[left].follower_count or 0)
+        right_followers = int(node_by_id[right].follower_count or 0)
+        high_follower_pair = max(left_followers, right_followers) >= 1000
+        if score < (0.7 if high_follower_pair else 1.6):
             continue
         candidates_by_node[left].append((score, right, shared_tags))
         candidates_by_node[right].append((score, left, shared_tags))
@@ -1773,7 +1796,15 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         key=lambda node: (person_degree[node.id], -(node.follower_count or 0), node.name, node.id),
     ):
         source_id = source.id
-        target_degree = 8 if node_tags.get(source_id) else 3
+        follower_count = int(source.follower_count or 0)
+        if follower_count >= 10000:
+            target_degree = 14
+        elif follower_count >= 5000:
+            target_degree = 12
+        elif follower_count >= 1000:
+            target_degree = 10
+        else:
+            target_degree = 8 if node_tags.get(source_id) else 3
         remaining = max(0, target_degree - person_degree[source_id])
         if remaining <= 0:
             continue
@@ -1788,12 +1819,12 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         )
         per_node_added = 0
         for score, target_id, shared_tags in ranked_candidates:
-            if added >= 3000 or per_node_added >= min(remaining, 6):
+            if added >= 4200 or per_node_added >= min(remaining, 8):
                 break
             pair = tuple(sorted((source_id, target_id)))
             if pair in existing_pairs:
                 continue
-            if person_degree[target_id] >= 18 and score < 4.0:
+            if person_degree[target_id] >= 24 and score < 4.0:
                 continue
             tag_label = "、".join(shared_tags[:5])
             try:
