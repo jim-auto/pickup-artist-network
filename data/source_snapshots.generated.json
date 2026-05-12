@@ -36514,7 +36514,7 @@
     "summary": "【ブサイクでもナンパで経験人数3桁】｜大学中退&低身長&ブサイク｜高マインド｜月間最高20即(ALLスト)｜重量挙げ競技元日本代表🇯🇵｜アツストブサイク代表取締役｜#アツストサロン｜ハイライトにナンパ音声",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 43 handles and matched 20 tracked accounts.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -36538,7 +36538,268 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pua-chilll",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @pua_chilll.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "eroeromancotin",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @eroeromancotin.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "sub-chilll",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sub_chilll.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "palace-chilll",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @palace_chilll.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "sshi-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sshi_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "happy0210h",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @happy0210h.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "hancho-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @hancho_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "onaken-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @onaken_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "nsj",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NSJ____.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "kazama-0425",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kazama_0425.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "puainoki",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @PUAINOKI.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "ststst-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ststst_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "chiba-gqn",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @chiba_gqn.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "nanpawars",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @nanpawars.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "shouri-ikb",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @shouri_ikb.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "rate-beauty",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @rate_beauty.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "bantan-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @bantan_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "greed-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @greed_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "greed-pua-sub",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @greed_pua_sub.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "suihanki-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @suihanki_pua.",
+        "source_urls": [
+          "https://x.com/wing__nampa",
+          "https://x.com/wing__nampa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1679309198138683392/Kpwij0_T_400x400.jpg",
     "follower_count": 9192
   },

@@ -110,7 +110,12 @@ KEYWORD_CLUSTER_RULES = (
     },
     {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
     {"id": "iwashi_longterm", "label": "いわし長期", "patterns": ("いわし長期",), "priority": 95},
-    {"id": "atsust", "label": "アツスト", "patterns": ("アツスト",), "priority": 94},
+    {
+        "id": "atsust",
+        "label": "アツスト",
+        "patterns": ("アツスト", "atsustreet", "🐶🦁", "犬住み"),
+        "priority": 94,
+    },
     {
         "id": "atsu_chill",
         "label": "あつ代表/△▽",
@@ -896,6 +901,7 @@ def _keyword_text(node: Node) -> str:
             node.name,
             node.description,
             *node.aliases,
+            *node.source_urls,
         ]
     ).casefold()
 

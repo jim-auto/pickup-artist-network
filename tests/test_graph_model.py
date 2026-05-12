@@ -445,6 +445,7 @@ class GraphModelTests(unittest.TestCase):
             ("wing", "wing師範", "アツストサロン代表"),
             ("mixed", "ジム", "ピカ講習 味噌 元アツスト"),
             ("longterm", "おちゃめ", "wing長期 アツストサロン"),
+            ("emoji", "絵文字勢", "🐶🦁 合流歓迎"),
         ]:
             add_node(
                 graph,
@@ -466,7 +467,7 @@ class GraphModelTests(unittest.TestCase):
 
         connectivity = payload["clusters"]["modes"]["connectivity"]
         self.assertEqual(
-            {connectivity["assignments"][node_id] for node_id in ("wing", "mixed", "longterm")},
+            {connectivity["assignments"][node_id] for node_id in ("wing", "mixed", "longterm", "emoji")},
             {"keyword_group:atsust"},
         )
 
