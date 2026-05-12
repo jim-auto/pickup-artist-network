@@ -643,6 +643,10 @@ def collect_authenticated_following_handles(
         if "login" in page.url.casefold():
             browser.close()
             raise RuntimeError("Authenticated following page redirected to X login.")
+        try:
+            page.locator('div[data-testid="cellInnerDiv"] a[href]').first.wait_for(timeout=12000)
+        except Exception:
+            page.wait_for_timeout(4000)
 
         collected: list[str] = []
         stagnant_rounds = 0
@@ -652,8 +656,11 @@ def collect_authenticated_following_handles(
                 "elements => elements.map(element => element.getAttribute('href') || '')",
             )
             handles = extract_x_following_handles_from_hrefs(hrefs, source_handle=source_handle)
-            if len(handles) > len(collected):
-                collected = handles
+            previous_count = len(collected)
+            for handle in handles:
+                if handle not in collected:
+                    collected.append(handle)
+            if len(collected) > previous_count:
                 stagnant_rounds = 0
             else:
                 stagnant_rounds += 1
