@@ -224,6 +224,32 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertTrue(merged[0]["needs_review"])
         self.assertIn("Generated snapshot differs from manual fields", merged[0]["review_notes"])
 
+    def test_generated_follower_count_fills_manual_snapshot_gap(self) -> None:
+        manual_snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "manual://alpha",
+                "summary": "Manual summary",
+                "observations": [],
+            }
+        ]
+        generated_snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/generated_alpha",
+                "summary": "Generated summary",
+                "follower_count": 4875,
+                "collector": {"type": "x_profile"},
+                "snapshot_origin": "generated",
+                "observations": [],
+            }
+        ]
+
+        merged = merge_snapshots_by_account(manual_snapshots, generated_snapshots)
+
+        self.assertEqual(merged[0]["summary"], "Manual summary")
+        self.assertEqual(merged[0]["follower_count"], 4875)
+
     def test_load_generated_snapshots_combines_collector_output_and_hint_fixtures(self) -> None:
         generated_snapshots = [{"account_id": "alpha", "profile_url": "https://example.com/alpha"}]
         hint_snapshots = [{"account_id": "beta", "profile_url": "manual://generated-hint/beta"}]

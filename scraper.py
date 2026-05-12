@@ -728,6 +728,11 @@ def merge_snapshots_by_account(
         conflicts: list[str] = []
 
         for snapshot in ordered[1:]:
+            current_follower_count = int(merged.get("follower_count", 0) or 0)
+            incoming_follower_count = int(snapshot.get("follower_count", 0) or 0)
+            if current_follower_count <= 0 < incoming_follower_count:
+                merged["follower_count"] = incoming_follower_count
+
             for field in text_fields:
                 current_value = str(merged.get(field, "")).strip()
                 incoming_value = str(snapshot.get(field, "")).strip()
