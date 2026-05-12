@@ -160,6 +160,7 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
 )
 AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset({"mbh", "atsust", "wing_longterm", "wing", "atsu_chill"})
+AFFINITY_KEYWORD_CLUSTER_RULE_ORDER = ("mbh", "atsu_chill", "atsust", "wing_longterm", "wing")
 SEMANTIC_FALLBACK_CLUSTER_RULES = (
     {
         "id": "app_online",
@@ -925,6 +926,16 @@ def _best_keyword_cluster_rule_for_node(node: Node) -> dict[str, Any] | None:
     return best_rule
 
 
+def _affinity_keyword_cluster_rule_for_node(node: Node) -> dict[str, Any] | None:
+    text = _keyword_text(node)
+    rules_by_id = {str(rule["id"]): rule for rule in KEYWORD_CLUSTER_RULES}
+    for rule_id in AFFINITY_KEYWORD_CLUSTER_RULE_ORDER:
+        rule = rules_by_id.get(rule_id)
+        if rule and any(str(pattern).casefold() in text for pattern in rule["patterns"]):
+            return rule
+    return None
+
+
 def _build_keyword_cluster_mode_payload(
     graph: GraphData,
     definition: dict[str, Any],
@@ -935,7 +946,7 @@ def _build_keyword_cluster_mode_payload(
     for node in graph.nodes:
         if node.type not in CLUSTER_MEMBER_NODE_TYPES:
             continue
-        best_rule = _best_keyword_cluster_rule_for_node(node)
+        best_rule = _affinity_keyword_cluster_rule_for_node(node) or _best_keyword_cluster_rule_for_node(node)
         if best_rule is not None:
             buckets[str(best_rule["id"])].append(node.id)
 
@@ -1079,12 +1090,11 @@ def _apply_affinity_keyword_clusters(
     for node in graph.nodes:
         if node.type not in CLUSTER_MEMBER_NODE_TYPES:
             continue
-        rule = _best_keyword_cluster_rule_for_node(node)
+        rule = _affinity_keyword_cluster_rule_for_node(node)
         if rule is None:
             continue
         rule_id = str(rule["id"])
-        if rule_id in AFFINITY_KEYWORD_CLUSTER_RULE_IDS:
-            buckets[rule_id].append(node.id)
+        buckets[rule_id].append(node.id)
 
     for rule_id, node_ids in buckets.items():
         member_ids = sorted(set(node_ids), key=lambda node_id: nodes_by_id[node_id].name)
@@ -1104,8 +1114,7 @@ def _apply_affinity_keyword_clusters(
 
 
 def _has_affinity_keyword_cluster(node: Node) -> bool:
-    rule = _best_keyword_cluster_rule_for_node(node)
-    return rule is not None and str(rule["id"]) in AFFINITY_KEYWORD_CLUSTER_RULE_IDS
+    return _affinity_keyword_cluster_rule_for_node(node) is not None
 
 
 def _backfill_semantic_clusters(

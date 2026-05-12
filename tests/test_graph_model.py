@@ -439,6 +439,37 @@ class GraphModelTests(unittest.TestCase):
             {"connectivity:semantic:app_online"},
         )
 
+    def test_anchor_affinity_keeps_atsust_profiles_together(self) -> None:
+        graph = GraphData()
+        for node_id, name, description in [
+            ("wing", "wing師範", "アツストサロン代表"),
+            ("mixed", "ジム", "ピカ講習 味噌 元アツスト"),
+            ("longterm", "おちゃめ", "wing長期 アツストサロン"),
+        ]:
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": name,
+                    "aliases": [],
+                    "description": description,
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        connectivity = payload["clusters"]["modes"]["connectivity"]
+        self.assertEqual(
+            {connectivity["assignments"][node_id] for node_id in ("wing", "mixed", "longterm")},
+            {"keyword_group:atsust"},
+        )
+
     def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
         graph = GraphData()
         for node_id, name, description in [
