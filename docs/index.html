@@ -462,7 +462,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-12 19:19 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-13 12:02 UTC。</p>
       </div>
     </div>
   </header>
@@ -856,15 +856,14 @@
       if (!node || node.type !== "person") {
         return false;
       }
-      if ((nodeDegreeById.get(node.id) || 0) > 0) {
-        return true;
-      }
       const text = nodeSearchText(node);
-      return [
+      const hasNetworkKeyword = [
         "ナンパ", "pua", "即", "ストナン", "ネトナン", "クラナン", "ストリート",
+        "nanpa", "nampa", "stonan", "netonan", "kuranan", "mote",
         "マッチングアプリ", "講習", "コンサル", "モテ", "恋愛", "界隈", "一門",
         "味噌", "mbh", "こりら", "アツスト", "女遊び", "経験人数", "箱", "クラブ"
       ].some((keyword) => text.includes(keyword.toLocaleLowerCase("ja-JP")));
+      return hasNetworkKeyword || (followDegreeById.get(node.id) || 0) >= 2;
     }
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))

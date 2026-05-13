@@ -2389,15 +2389,14 @@ def render_html(
       if (!node || node.type !== "person") {
         return false;
       }
-      if ((nodeDegreeById.get(node.id) || 0) > 0) {
-        return true;
-      }
       const text = nodeSearchText(node);
-      return [
+      const hasNetworkKeyword = [
         "ナンパ", "pua", "即", "ストナン", "ネトナン", "クラナン", "ストリート",
+        "nanpa", "nampa", "stonan", "netonan", "kuranan", "mote",
         "マッチングアプリ", "講習", "コンサル", "モテ", "恋愛", "界隈", "一門",
         "味噌", "mbh", "こりら", "アツスト", "女遊び", "経験人数", "箱", "クラブ"
       ].some((keyword) => text.includes(keyword.toLocaleLowerCase("ja-JP")));
+      return hasNetworkKeyword || (followDegreeById.get(node.id) || 0) >= 2;
     }
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))
