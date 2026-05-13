@@ -1276,6 +1276,12 @@ def collect_x_profile_snapshots(
 
 
 def merge_generated_snapshots(snapshots: list[dict[str, object]]) -> list[dict[str, object]]:
+    def add_note_parts(notes: list[str], note: str) -> None:
+        for part in re.split(r"(?<=\.)\s+", note.strip()):
+            normalized = part.strip()
+            if normalized and normalized not in notes:
+                notes.append(normalized)
+
     def priority(snapshot: dict[str, object]) -> int:
         collector_meta = snapshot.get("collector", {})
         collector_type = collector_meta.get("type") if isinstance(collector_meta, dict) else ""
@@ -1319,6 +1325,7 @@ def merge_generated_snapshots(snapshots: list[dict[str, object]]) -> list[dict[s
             "snapshot_origin": "generated",
             "collector": {"sources": []},
             "observations": [],
+            "follower_count": 0,
         }
         notes: list[str] = []
         observations: list[dict[str, object]] = []
@@ -1328,11 +1335,14 @@ def merge_generated_snapshots(snapshots: list[dict[str, object]]) -> list[dict[s
                 value = str(snapshot.get(field, "")).strip()
                 if value and not str(merged.get(field, "")).strip():
                     merged[field] = value
+            follower_count = int(snapshot.get("follower_count", 0) or 0)
+            if follower_count > int(merged.get("follower_count", 0) or 0):
+                merged["follower_count"] = follower_count
             merged["links"] = list(dict.fromkeys([*merged["links"], *snapshot.get("links", [])]))
             merged["needs_review"] = bool(merged["needs_review"] or snapshot.get("needs_review", False))
             note = str(snapshot.get("review_notes", "")).strip()
-            if note and note not in notes:
-                notes.append(note)
+            if note:
+                add_note_parts(notes, note)
             collector_meta = snapshot.get("collector", {})
             if collector_meta and collector_meta not in merged["collector"]["sources"]:
                 merged["collector"]["sources"].append(collector_meta)

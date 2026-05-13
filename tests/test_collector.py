@@ -13,6 +13,7 @@ from collector import (
     extract_snapshot_from_html,
     extract_x_following_handles_from_hrefs,
     extract_x_profile_snapshot,
+    merge_generated_snapshots,
     preserve_missing_generated_snapshots,
     load_playwright_cookies,
     load_dotenv_values,
@@ -291,6 +292,28 @@ class CollectorTests(unittest.TestCase):
         )
 
         self.assertEqual(preserved, [{"account_id": "beta", "summary": "old beta"}])
+
+    def test_merge_generated_snapshots_keeps_largest_follower_count(self) -> None:
+        merged = merge_generated_snapshots(
+            [
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "icon_url": "https://example.com/alpha.jpg",
+                    "follower_count": 0,
+                    "collector": {"type": "x_profile"},
+                },
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "follower_count": 1234,
+                    "collector": {"type": "x_profile"},
+                },
+            ]
+        )
+
+        self.assertEqual(merged[0]["icon_url"], "https://example.com/alpha.jpg")
+        self.assertEqual(merged[0]["follower_count"], 1234)
 
     def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
         with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
