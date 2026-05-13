@@ -170,66 +170,6 @@
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 12px;
     }
-    .social-dashboard {
-      display: grid;
-      gap: 14px;
-    }
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 12px;
-    }
-    .dashboard-card {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #f9fbff;
-      padding: 12px;
-      min-width: 0;
-    }
-    .dashboard-card h3 {
-      margin: 0 0 8px;
-      font-size: 14px;
-    }
-    .metric-value {
-      display: block;
-      font-size: 26px;
-      font-weight: 700;
-      margin: 4px 0;
-    }
-    .metric-sub {
-      display: block;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .rank-list {
-      display: grid;
-      gap: 8px;
-    }
-    .rank-row {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
-      padding: 8px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 9px;
-      align-items: center;
-      text-align: left;
-      cursor: pointer;
-    }
-    .rank-row:hover {
-      border-color: var(--accent);
-      background: #f6f9ff;
-    }
-    .rank-row strong,
-    .rank-row span {
-      display: block;
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
     .stat {
       background: #f9fbff;
       border: 1px solid var(--border);
@@ -522,7 +462,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-13 19:56 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-13 12:53 UTC。</p>
       </div>
     </div>
   </header>
@@ -605,17 +545,6 @@
     <span id="review-candidates" hidden>0</span>
     <span id="total-nodes" hidden>0</span>
     <span id="total-edges" hidden>0</span>
-
-    <section class="panel social-dashboard">
-      <div class="network-head">
-        <div>
-          <h2>Xアカウント分析</h2>
-          <p class="muted">フォロワー数、アイコン、接続密度から、見るべき人物と追加調査候補を出します。</p>
-        </div>
-        <div id="dashboard-summary" class="view-summary"></div>
-      </div>
-      <div id="social-dashboard-grid" class="dashboard-grid"></div>
-    </section>
 
     <section class="graph-layout">
       <section class="panel network-panel">
@@ -1273,110 +1202,6 @@
         <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
         <span class="tag">補助線 ${escapeHtml(profileBridgeEdges)} 本</span>
         <span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>
-      `;
-    }
-
-    function influenceScore(node) {
-      const followers = node.follower_count || 0;
-      const degree = nodeDegreeById.get(node.id) || 0;
-      const follows = followDegreeById.get(node.id) || 0;
-      return Math.round(Math.log10(followers + 10) * 100 + degree * 3 + follows * 18);
-    }
-
-    function renderRankRows(nodes, metaForNode) {
-      if (!nodes.length) {
-        return '<span class="muted">該当なし</span>';
-      }
-      return `
-        <div class="rank-list">
-          ${nodes.map((node, index) => `
-            <button type="button" class="rank-row" data-node-id="${escapeHtml(node.id)}">
-              ${formatNodeAvatar(node, "avatar-thumb")}
-              <span class="node-name-text">
-                <strong>#${escapeHtml(index + 1)} ${escapeHtml(node.name)}</strong>
-                <span class="muted">${escapeHtml(metaForNode(node))}</span>
-              </span>
-            </button>
-          `).join("")}
-        </div>
-      `;
-    }
-
-    function renderSocialDashboard(visibleNodes, visibleEdges) {
-      const summary = document.getElementById("dashboard-summary");
-      const grid = document.getElementById("social-dashboard-grid");
-      if (!summary || !grid) {
-        return;
-      }
-      const visiblePersonIds = new Set(visibleNodes.filter((node) => node.type === "person").map((node) => node.id));
-      const visiblePeople = rawGraph.nodes.filter((node) => node.type === "person" && visiblePersonIds.has(node.id));
-      const allPeople = rawGraph.nodes.filter((node) => node.type === "person");
-      const peopleWithFollowers = allPeople.filter((node) => (node.follower_count || 0) > 0);
-      const visibleWithFollowers = visiblePeople.filter((node) => (node.follower_count || 0) > 0);
-      const visibleRelevant = visiblePeople.filter((node) => isNetworkRelevantPerson(node));
-      const coverage = allPeople.length ? Math.round((peopleWithFollowers.length / allPeople.length) * 100) : 0;
-      const visibleCoverage = visiblePeople.length ? Math.round((visibleWithFollowers.length / visiblePeople.length) * 100) : 0;
-      const personDegrees = visiblePersonDegreeById(visibleEdges);
-      const topFollowers = visibleRelevant
-        .filter((node) => hasRealProfileIcon(node) && (node.follower_count || 0) > 0)
-        .sort((left, right) =>
-          (right.follower_count || 0) - (left.follower_count || 0) ||
-          influenceScore(right) - influenceScore(left) ||
-          left.name.localeCompare(right.name, "ja")
-        )
-        .slice(0, 6);
-      const topInfluence = visibleRelevant
-        .filter((node) => hasRealProfileIcon(node) && (node.follower_count || 0) > 0)
-        .sort((left, right) =>
-          influenceScore(right) - influenceScore(left) ||
-          (right.follower_count || 0) - (left.follower_count || 0) ||
-          left.name.localeCompare(right.name, "ja")
-        )
-        .slice(0, 6);
-      const sparseHighFollowers = visibleRelevant
-        .filter((node) => (node.follower_count || 0) >= 3000 && (personDegrees.get(node.id) || 0) < 8)
-        .sort((left, right) =>
-          (right.follower_count || 0) - (left.follower_count || 0) ||
-          (personDegrees.get(left.id) || 0) - (personDegrees.get(right.id) || 0) ||
-          left.name.localeCompare(right.name, "ja")
-        )
-        .slice(0, 6);
-      const missingFollowers = visibleRelevant
-        .filter((node) => (node.follower_count || 0) <= 0)
-        .sort((left, right) =>
-          Number(hasRealProfileIcon(right)) - Number(hasRealProfileIcon(left)) ||
-          (nodeDegreeById.get(right.id) || 0) - (nodeDegreeById.get(left.id) || 0) ||
-          left.name.localeCompare(right.name, "ja")
-        )
-        .slice(0, 6);
-
-      summary.innerHTML = `
-        <span class="tag">取得率 ${escapeHtml(coverage)}%</span>
-        <span class="tag">表示内 ${escapeHtml(visibleCoverage)}%</span>
-        <span class="tag">未取得 ${escapeHtml(allPeople.length - peopleWithFollowers.length)} 人</span>
-      `;
-      grid.innerHTML = `
-        <section class="dashboard-card">
-          <h3>フォロワー取得状況</h3>
-          <span class="metric-value">${escapeHtml(formatNumber(peopleWithFollowers.length))} / ${escapeHtml(formatNumber(allPeople.length))}</span>
-          <span class="metric-sub">表示中: ${escapeHtml(formatNumber(visibleWithFollowers.length))} / ${escapeHtml(formatNumber(visiblePeople.length))}</span>
-        </section>
-        <section class="dashboard-card">
-          <h3>フォロワー上位</h3>
-          ${renderRankRows(topFollowers, (node) => `X followers: ${formatNumber(node.follower_count || 0)}`)}
-        </section>
-        <section class="dashboard-card">
-          <h3>影響力スコア</h3>
-          ${renderRankRows(topInfluence, (node) => `score ${formatNumber(influenceScore(node))} / follow ${formatNumber(followDegreeById.get(node.id) || 0)}`)}
-        </section>
-        <section class="dashboard-card">
-          <h3>接続精査候補</h3>
-          ${renderRankRows(sparseHighFollowers, (node) => `人物間 ${formatNumber(personDegrees.get(node.id) || 0)} / X followers ${formatNumber(node.follower_count || 0)}`)}
-        </section>
-        <section class="dashboard-card">
-          <h3>フォロワー未取得</h3>
-          ${renderRankRows(missingFollowers, (node) => `接続 ${formatNumber(nodeDegreeById.get(node.id) || 0)} / アイコン ${hasRealProfileIcon(node) ? "あり" : "なし"}`)}
-        </section>
       `;
     }
 
@@ -2440,7 +2265,6 @@
       document.getElementById("review-candidates").textContent = visibleReviewCandidates.length;
       renderSearchResults(term, visibleNodes);
       renderViewSummary(visibleNodes, visibleEdges);
-      renderSocialDashboard(visibleNodes, visibleEdges);
       renderVisibleTables();
 
       if (selectedNodeId) {
@@ -2583,13 +2407,6 @@
       focusNode(button.getAttribute("data-node-id"));
     });
     document.getElementById("detail-panel").addEventListener("click", (event) => {
-      const button = event.target.closest("[data-node-id]");
-      if (!button) {
-        return;
-      }
-      focusNode(button.getAttribute("data-node-id"));
-    });
-    document.getElementById("social-dashboard-grid").addEventListener("click", (event) => {
       const button = event.target.closest("[data-node-id]");
       if (!button) {
         return;
