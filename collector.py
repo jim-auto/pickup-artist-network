@@ -22,6 +22,8 @@ SEED_FILE = Path("seed_entities.txt")
 X_AUTH_STATE_FILE = Path("data/.x_auth_state.json")
 X_COOKIE_FILE = Path("data/.x_cookies.json")
 DEFAULT_TIMEOUT = 20
+X_API_USERS_BY_URL = "https://api.x.com/2/users/by"
+X_API_USER_FIELDS = "description,location,name,profile_image_url,public_metrics,url,username,verified"
 
 
 def resolve_x_cookie_file(cookie_file_path: Path | None) -> Path | None:
@@ -163,6 +165,21 @@ def load_x_login_credentials(dotenv_path: Path | None = None) -> tuple[str, str]
     username = dotenv_values.get("TWITTER_USERNAME") or dotenv_values.get("X_USERNAME") or ""
     password = dotenv_values.get("TWITTER_PASSWORD") or dotenv_values.get("X_PASSWORD") or ""
     return username, password
+
+
+def load_x_api_bearer_token(dotenv_path: Path | None = None) -> str:
+    for env_name in ("X_BEARER_TOKEN", "TWITTER_BEARER_TOKEN", "X_API_BEARER_TOKEN"):
+        value = os.getenv(env_name, "").strip()
+        if value:
+            return value
+    if dotenv_path is None:
+        return ""
+    dotenv_values = load_dotenv_values(dotenv_path)
+    for env_name in ("X_BEARER_TOKEN", "TWITTER_BEARER_TOKEN", "X_API_BEARER_TOKEN"):
+        value = dotenv_values.get(env_name, "").strip()
+        if value:
+            return value
+    return ""
 
 
 def load_playwright_cookies(cookie_file_path: Path) -> list[dict[str, object]]:
@@ -833,6 +850,90 @@ def extract_x_embedded_profile(
     return {"handle": handle, "follower_count": "0"}
 
 
+def fetch_x_api_user_details(
+    sources: list[dict[str, object]],
+    bearer_token: str,
+    timeout: int = DEFAULT_TIMEOUT,
+) -> dict[str, dict[str, object]]:
+    if not bearer_token:
+        return {}
+    handle_to_account_id = {
+        extract_x_handle_from_url(str(source["url"])).casefold(): str(source["account_id"])
+        for source in sources
+        if extract_x_handle_from_url(str(source["url"]))
+    }
+    handles = sorted(handle_to_account_id)
+    details_by_account_id: dict[str, dict[str, object]] = {}
+    headers = {"Authorization": f"Bearer {bearer_token}", "User-Agent": USER_AGENT}
+    for start in range(0, len(handles), 100):
+        batch = handles[start : start + 100]
+        response = requests.get(
+            X_API_USERS_BY_URL,
+            params={"usernames": ",".join(batch), "user.fields": X_API_USER_FIELDS},
+            headers=headers,
+            timeout=timeout,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        for user in payload.get("data", []):
+            if not isinstance(user, dict):
+                continue
+            username = str(user.get("username", "")).casefold()
+            account_id = handle_to_account_id.get(username)
+            if account_id:
+                details_by_account_id[account_id] = user
+    return details_by_account_id
+
+
+def merge_x_api_user_details_into_snapshot(
+    snapshot: dict[str, object],
+    user_details: dict[str, object],
+) -> dict[str, object]:
+    merged = dict(snapshot)
+    username = normalize_embedded_text(user_details.get("username"))
+    display_name = normalize_embedded_text(user_details.get("name"))
+    description = normalize_embedded_text(user_details.get("description"))
+    location = normalize_embedded_text(user_details.get("location"))
+    external_url = normalize_embedded_text(user_details.get("url"))
+    profile_image_url = normalize_x_profile_image_url(str(user_details.get("profile_image_url", "")).strip())
+    public_metrics = user_details.get("public_metrics", {})
+    follower_count = 0
+    if isinstance(public_metrics, dict):
+        follower_count = extract_follower_count_from_user_object(
+            {"followers_count": public_metrics.get("followers_count")}
+        )
+
+    if username:
+        merged["profile_url"] = f"https://x.com/{username}"
+        merged["links"] = list(dict.fromkeys([*merged.get("links", []), f"https://x.com/{username}"]))
+    if external_url:
+        merged["links"] = list(dict.fromkeys([*merged.get("links", []), external_url]))
+    if profile_image_url:
+        merged["icon_url"] = profile_image_url
+    if follower_count > int(merged.get("follower_count", 0) or 0):
+        merged["follower_count"] = follower_count
+    if description:
+        merged["summary"] = compress_line(description, max_chars=MAX_SUMMARY_CHARS)
+    profile_lines = []
+    if display_name or username:
+        profile_lines.append(f"{display_name or '@' + username} (@{username})" if username else display_name)
+    if description:
+        profile_lines.append(description)
+    if location:
+        profile_lines.append(f"Location: {location}")
+    if profile_lines:
+        merged["profile_text"] = compress_profile_text(profile_lines)
+    merged["review_notes"] = " ".join(
+        dict.fromkeys(
+            [
+                str(merged.get("review_notes", "")).strip(),
+                "X API public profile fields were used to refresh icon and follower coverage.",
+            ]
+        )
+    ).strip()
+    return merged
+
+
 def extract_display_name_from_title(raw_title: str, handle: str) -> str:
     if not raw_title:
         return ""
@@ -1188,10 +1289,23 @@ def collect_x_profile_snapshots(
     continue_on_error: bool = True,
     auth_state_path: Path = X_AUTH_STATE_FILE,
     cookie_file_path: Path | None = None,
+    x_api_bearer_token: str = "",
     *,
     following_limit_override: int | None = None,
 ) -> list[dict[str, object]]:
     snapshots: list[dict[str, object]] = []
+    api_details_by_account_id: dict[str, dict[str, object]] = {}
+    if x_api_bearer_token:
+        try:
+            api_details_by_account_id = fetch_x_api_user_details(
+                sources,
+                x_api_bearer_token,
+                timeout=timeout,
+            )
+        except requests.RequestException as exc:
+            if not continue_on_error:
+                raise
+            print(f"[WARN] skipped X API profile lookup: {exc}")
     handle_to_account_id = {
         extract_x_handle_from_url(str(source["url"])).casefold(): str(source["account_id"])
         for source in sources
@@ -1256,22 +1370,24 @@ def collect_x_profile_snapshots(
                 if not continue_on_error:
                     raise
                 print(f"[WARN] skipped authenticated following for {source['url']}: {exc}")
-        snapshots.append(
-            extract_x_profile_snapshot(
-                str(source["account_id"]),
-                source_url,
-                html,
-                label=str(source.get("label", "")),
-                fetched_url=fetched_url,
-                pinned_post_url=pinned_post_url,
-                pinned_post_html=pinned_post_html,
-                pinned_post_fetched_url=pinned_post_fetched_url or None,
-                pinned_post_fetch_error=pinned_post_fetch_error,
-                profile_fetch_error=profile_fetch_error,
-                following_observations=following_observations,
-                following_note=following_note,
-            )
+        snapshot = extract_x_profile_snapshot(
+            str(source["account_id"]),
+            source_url,
+            html,
+            label=str(source.get("label", "")),
+            fetched_url=fetched_url,
+            pinned_post_url=pinned_post_url,
+            pinned_post_html=pinned_post_html,
+            pinned_post_fetched_url=pinned_post_fetched_url or None,
+            pinned_post_fetch_error=pinned_post_fetch_error,
+            profile_fetch_error=profile_fetch_error,
+            following_observations=following_observations,
+            following_note=following_note,
         )
+        api_details = api_details_by_account_id.get(str(source["account_id"]))
+        if api_details:
+            snapshot = merge_x_api_user_details_into_snapshot(snapshot, api_details)
+        snapshots.append(snapshot)
     return snapshots
 
 
@@ -1398,12 +1514,14 @@ def collect_to_file(
     continue_on_error: bool = True,
     auth_state_path: Path = X_AUTH_STATE_FILE,
     cookie_file_path: Path | None = None,
+    x_api_bearer_token: str = "",
     *,
     max_links_override: int | None = None,
     following_limit_override: int | None = None,
     public_pages_only: bool = False,
 ) -> list[dict[str, object]]:
     cookie_file_path = resolve_x_cookie_file(cookie_file_path)
+    x_api_bearer_token = x_api_bearer_token.strip() or load_x_api_bearer_token()
     existing_snapshots = load_existing_generated_snapshots(output_path)
     sources = load_collector_sources(config_path)
     public_snapshots = collect_snapshots(
@@ -1422,6 +1540,7 @@ def collect_to_file(
             continue_on_error=continue_on_error,
             auth_state_path=auth_state_path,
             cookie_file_path=cookie_file_path,
+            x_api_bearer_token=x_api_bearer_token,
             following_limit_override=following_limit_override,
         )
     configured_account_ids = {
@@ -1505,7 +1624,12 @@ def main() -> None:
         "--dotenv",
         type=Path,
         default=None,
-        help="Optional dotenv file used to load TWITTER_USERNAME / TWITTER_PASSWORD for --login-x-auto.",
+        help="Optional dotenv file used to load TWITTER_USERNAME / TWITTER_PASSWORD and X API bearer tokens.",
+    )
+    parser.add_argument(
+        "--x-api-bearer-token",
+        default="",
+        help="Optional X API v2 Bearer Token. If omitted, X_BEARER_TOKEN / TWITTER_BEARER_TOKEN / X_API_BEARER_TOKEN is used when present.",
     )
     parser.add_argument(
         "--cookie-file",
@@ -1561,6 +1685,7 @@ def main() -> None:
         continue_on_error=not args.strict,
         auth_state_path=args.auth_state,
         cookie_file_path=args.cookie_file,
+        x_api_bearer_token=args.x_api_bearer_token or load_x_api_bearer_token(args.dotenv),
         max_links_override=args.max_links,
         following_limit_override=args.following_limit,
         public_pages_only=args.public_pages_only,

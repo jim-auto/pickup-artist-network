@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 import requests
 
@@ -13,7 +13,10 @@ from collector import (
     extract_snapshot_from_html,
     extract_x_following_handles_from_hrefs,
     extract_x_profile_snapshot,
+    fetch_x_api_user_details,
+    load_x_api_bearer_token,
     merge_generated_snapshots,
+    merge_x_api_user_details_into_snapshot,
     preserve_missing_generated_snapshots,
     load_playwright_cookies,
     load_dotenv_values,
@@ -259,6 +262,15 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(username, "test_user")
         self.assertEqual(password, "test_pass")
 
+    def test_load_x_api_bearer_token_reads_dotenv(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            dotenv_path = Path(temp_dir) / ".env"
+            dotenv_path.write_text("X_BEARER_TOKEN=test_token\n", encoding="utf-8")
+
+            token = load_x_api_bearer_token(dotenv_path)
+
+        self.assertEqual(token, "test_token")
+
     def test_load_playwright_cookies_converts_selenium_cookie_shape(self) -> None:
         with TemporaryDirectory() as temp_dir:
             cookie_path = Path(temp_dir) / "cookies.json"
@@ -314,6 +326,53 @@ class CollectorTests(unittest.TestCase):
 
         self.assertEqual(merged[0]["icon_url"], "https://example.com/alpha.jpg")
         self.assertEqual(merged[0]["follower_count"], 1234)
+
+    def test_fetch_x_api_user_details_batches_public_metrics(self) -> None:
+        response = Mock()
+        response.json.return_value = {
+            "data": [
+                {
+                    "username": "alpha_user",
+                    "public_metrics": {"followers_count": 1234},
+                    "profile_image_url": "https://pbs.twimg.com/profile_images/example_normal.jpg",
+                }
+            ]
+        }
+        response.raise_for_status.return_value = None
+        with patch("collector.requests.get", return_value=response) as get_mock:
+            details = fetch_x_api_user_details(
+                [{"account_id": "alpha", "url": "https://x.com/alpha_user"}],
+                "bearer",
+            )
+
+        self.assertEqual(details["alpha"]["public_metrics"]["followers_count"], 1234)
+        self.assertEqual(get_mock.call_args.kwargs["headers"]["Authorization"], "Bearer bearer")
+
+    def test_merge_x_api_user_details_into_snapshot_updates_icon_and_followers(self) -> None:
+        snapshot = {
+            "account_id": "alpha",
+            "profile_url": "https://x.com/alpha_user",
+            "links": ["https://x.com/alpha_user"],
+            "summary": "Old summary",
+            "review_notes": "Old note.",
+            "follower_count": 0,
+        }
+        merged = merge_x_api_user_details_into_snapshot(
+            snapshot,
+            {
+                "username": "alpha_user",
+                "name": "Alpha",
+                "description": "Fresh public description",
+                "location": "Tokyo",
+                "profile_image_url": "https://pbs.twimg.com/profile_images/example_normal.jpg",
+                "public_metrics": {"followers_count": 1234},
+            },
+        )
+
+        self.assertEqual(merged["follower_count"], 1234)
+        self.assertEqual(merged["icon_url"], "https://pbs.twimg.com/profile_images/example_400x400.jpg")
+        self.assertEqual(merged["summary"], "Fresh public description")
+        self.assertIn("Location: Tokyo", merged["profile_text"])
 
     def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
         with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
