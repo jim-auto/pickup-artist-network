@@ -42450,5 +42450,29 @@
     },
     "observations": [],
     "follower_count": 18
+  },
+  {
+    "account_id": "jokernanpa",
+    "profile_url": "https://x.com/JokerNanpa",
+    "pinned_post_url": "",
+    "profile_text": "Joker@特別企画の通知|表で出せないモテの裏側 (@JokerNanpa)\n特別企画を逃したくない人はフォロー必須|美女アポ、有名芸能チャレンジ詳細、テキトーにつぶやく、ちょっとした日常載せるので鍵アカ。対美女アポやモテる男の裏側を事例から学べる唯一無二のアカウント。口説きの本質や個人戦の美女攻略は本アカへ@joker_nanpa",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/JokerNanpa"
+    ],
+    "summary": "特別企画を逃したくない人はフォロー必須|美女アポ、有名芸能チャレンジ詳細、テキトーにつぶやく、ちょっとした日常載せるので鍵アカ。対美女アポやモテる男の裏側を事例から学べる唯一無二のアカウント。口説きの本質や個人戦の美女攻略は本アカへ@joker_nanpa",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "x_web_profile",
+      "source_url": "https://x.com/JokerNanpa",
+      "collected_at": "2026-05-14T10:33:31+00:00"
+    },
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1588152704404029441/CuPA_gIU_400x400.jpg",
+    "follower_count": 439
   }
 ]

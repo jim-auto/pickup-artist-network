@@ -1517,6 +1517,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "jokernanpa",
+    "type": "person",
+    "name": "@JokerNanpa",
+    "aliases": [
+      "JokerNanpa"
+    ],
+    "description": "特別企画を逃したくない人はフォロー必須|美女アポ、有名芸能チャレンジ詳細、テキトーにつぶやく、ちょっとした日常載せるので鍵アカ。対美女アポやモテる男の裏側を事例から学べる唯一無二のアカウント。口説きの本質や個人戦の美女攻略は本アカへ@joker_nanpa",
+    "icon_url": "https://pbs.twimg.com/profile_images/1588152704404029441/CuPA_gIU_400x400.jpg",
+    "follower_count": 439,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/JokerNanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
     "id": "junkunnotenshi",
     "type": "person",
     "name": "@Junkunnotenshi",
