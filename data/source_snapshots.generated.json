@@ -20376,12 +20376,13 @@
     "profile_text": "@kyo",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/kyo"
+      "https://x.com/kyo",
+      "https://x.com/KYO"
     ],
     "summary": "X profile for @kyo.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -20402,10 +20403,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/kyo",
+          "collected_at": "2026-05-14T06:56:53+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1555005780335935488/m-E93Z7g_400x400.jpg",
+    "follower_count": 228
   },
   {
     "account_id": "kyouuya-sata",
@@ -21984,12 +21992,13 @@
     "profile_text": "@MBH_5",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/MBH_5"
+      "https://x.com/MBH_5",
+      "https://x.com/mbh_5"
     ],
     "summary": "X profile for @MBH_5.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -22010,10 +22019,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/MBH_5",
+          "collected_at": "2026-05-14T06:57:14+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/614230125404487681/VRpPQxqY_400x400.jpg",
+    "follower_count": 1
   },
   {
     "account_id": "mbh-hal",
@@ -24198,12 +24214,13 @@
     "profile_text": "@mTech",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/mTech"
+      "https://x.com/mTech",
+      "https://x.com/mtech"
     ],
     "summary": "X profile for @mTech.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -24224,10 +24241,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/mTech",
+          "collected_at": "2026-05-14T06:57:46+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1141498869500350464/xqWpwlaR_400x400.png",
+    "follower_count": 23
   },
   {
     "account_id": "murakami-pua",
@@ -26828,12 +26852,13 @@
     "profile_text": "@nsj____",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/nsj____"
+      "https://x.com/nsj____",
+      "https://x.com/NSJ____"
     ],
     "summary": "X profile for @nsj____.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -26854,10 +26879,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/nsj____",
+          "collected_at": "2026-05-14T06:58:10+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1932086706796482560/3NFX7T43_400x400.jpg",
+    "follower_count": 18956
   },
   {
     "account_id": "nsjact",
@@ -27451,12 +27483,13 @@
     "profile_text": "@ONE",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/ONE"
+      "https://x.com/ONE",
+      "https://x.com/one"
     ],
     "summary": "X profile for @ONE.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -27477,10 +27510,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/ONE",
+          "collected_at": "2026-05-14T06:58:15+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1603789699948187650/ReTdsodE_400x400.jpg",
+    "follower_count": 12858
   },
   {
     "account_id": "one-sith-pua",
@@ -29183,12 +29223,13 @@
     "profile_text": "@pua_aki_",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/pua_aki_"
+      "https://x.com/pua_aki_",
+      "https://x.com/PUA_aki_"
     ],
     "summary": "X profile for @pua_aki_.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -29209,10 +29250,17 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/pua_aki_",
+          "collected_at": "2026-05-14T06:58:27+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1688900972532363266/DYRpnQ3C_400x400.jpg",
+    "follower_count": 1820
   },
   {
     "account_id": "pua-chilll",

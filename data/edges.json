@@ -2817,7 +2817,18 @@
   },
   {
     "source": "1tensaipua1",
-    "target": "isaac-pua",
+    "target": "doronpa-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "1tensaipua1",
+    "target": "jackie-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -2839,7 +2850,18 @@
   },
   {
     "source": "1tensaipua1",
-    "target": "nojob-pua",
+    "target": "kamekame-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "1tensaipua1",
+    "target": "naepua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -2861,40 +2883,7 @@
   },
   {
     "source": "1tensaipua1",
-    "target": "pua-marcelo",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "1tensaipua1",
-    "target": "r-pua-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "1tensaipua1",
-    "target": "ryu-8585",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "1tensaipua1",
-    "target": "shu-pua",
+    "target": "pineapple-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -2915,6 +2904,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "1tensaipua1",
+    "target": "yumaru-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "1time2time2time",
@@ -4578,7 +4578,7 @@
   },
   {
     "source": "aizen-puasub",
-    "target": "chomechome-pua",
+    "target": "dogma-pua666",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -4589,7 +4589,7 @@
   },
   {
     "source": "aizen-puasub",
-    "target": "kenichi-pua",
+    "target": "karasu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -4600,7 +4600,18 @@
   },
   {
     "source": "aizen-puasub",
-    "target": "pua-miura",
+    "target": "simba-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "aizen-puasub",
+    "target": "sshi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -4621,17 +4632,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "aizen-puasub",
-    "target": "xcandee",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "aizfr",
@@ -5040,6 +5040,17 @@
   },
   {
     "source": "akikan-pua",
+    "target": "bantan-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "akikan-pua",
     "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -5084,17 +5095,6 @@
   },
   {
     "source": "akikan-pua",
-    "target": "puainoki",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "akikan-pua",
     "target": "renren-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -5106,7 +5106,7 @@
   },
   {
     "source": "akikan-pua",
-    "target": "ststst-pua",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -5117,7 +5117,7 @@
   },
   {
     "source": "akikan-pua",
-    "target": "tantan-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -6740,17 +6740,6 @@
   },
   {
     "source": "ararenocha-pua",
-    "target": "5sato-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "ararenocha-pua",
     "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -6806,6 +6795,17 @@
   },
   {
     "source": "ararenocha-pua",
+    "target": "puainoki",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "ararenocha-pua",
     "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -6817,7 +6817,7 @@
   },
   {
     "source": "ararenocha-pua",
-    "target": "t3vde",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -6955,7 +6955,7 @@
   },
   {
     "source": "arrester-pua",
-    "target": "bantan-pua",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7021,7 +7021,7 @@
   },
   {
     "source": "arrester-pua",
-    "target": "shuri-pua",
+    "target": "simba-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7032,7 +7032,7 @@
   },
   {
     "source": "arrester-pua",
-    "target": "simba-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7069,7 +7069,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "5sato-pua",
+    "target": "chouun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7080,7 +7080,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "efu-pua",
+    "target": "isagi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7091,7 +7091,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "korea-pua",
+    "target": "nagasanpua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7102,7 +7102,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "luckypua017",
+    "target": "nano-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7113,7 +7113,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "pika-sublol",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7124,7 +7124,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "pua-happy",
+    "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7135,7 +7135,7 @@
   },
   {
     "source": "asahi-pua",
-    "target": "t3vde",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7159,7 +7159,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "1tensaipua1",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7170,7 +7170,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "garo-pua",
+    "target": "nekominto-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7181,7 +7181,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "juru-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7192,7 +7192,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "mine-chan-pua",
+    "target": "pua-core",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7203,7 +7203,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "nami-pua",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7214,7 +7214,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "shingen-pua",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7225,7 +7225,7 @@
   },
   {
     "source": "asahi-pua2",
-    "target": "simba-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7249,7 +7249,7 @@
   },
   {
     "source": "asahi-sao-pua",
-    "target": "garp-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7268,17 +7268,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ネクステ. Score: 4.05."
-  },
-  {
-    "source": "asahi-sao-pua",
-    "target": "kayakkupua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "asahi-sao-pua",
@@ -7304,7 +7293,7 @@
   },
   {
     "source": "asahi-sao-pua",
-    "target": "ryusei-pua",
+    "target": "osugi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -7323,6 +7312,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ネクステ. Score: 3.00."
+  },
+  {
+    "source": "asahi-sao-pua",
+    "target": "sshi-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "asahi-sao-pua",
@@ -7562,17 +7562,6 @@
   {
     "source": "asai-pua",
     "target": "onaken-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
-  },
-  {
-    "source": "asai-pua",
-    "target": "pua-rusu",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8330,7 +8319,7 @@
   },
   {
     "source": "aup-itas",
-    "target": "enukun-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8341,7 +8330,7 @@
   },
   {
     "source": "aup-itas",
-    "target": "nagasanpua",
+    "target": "chori-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8352,7 +8341,7 @@
   },
   {
     "source": "aup-itas",
-    "target": "nekominto-pua",
+    "target": "kenichi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8363,7 +8352,7 @@
   },
   {
     "source": "aup-itas",
-    "target": "pua-core",
+    "target": "riokun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8374,18 +8363,7 @@
   },
   {
     "source": "aup-itas",
-    "target": "puainoki",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "aup-itas",
-    "target": "tantan-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -8406,6 +8384,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "aup-itas",
+    "target": "xcandee",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "ayase-mbh",
@@ -9861,6 +9850,17 @@
   },
   {
     "source": "baoupua",
+    "target": "bantan-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "baoupua",
     "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -9873,17 +9873,6 @@
   {
     "source": "baoupua",
     "target": "korilla-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "baoupua",
-    "target": "kurita-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -9938,7 +9927,7 @@
   },
   {
     "source": "baoupua",
-    "target": "ststst-pua",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12328,7 +12317,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "chomechome-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12339,7 +12328,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "chouun-pua",
+    "target": "chomechome-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12361,7 +12350,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "kill-pua",
+    "target": "kurita-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12372,7 +12361,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "nano-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12383,7 +12372,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "puainoki",
+    "target": "riokun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -12405,7 +12394,7 @@
   },
   {
     "source": "chinkawa-pua",
-    "target": "tantan-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -15478,17 +15467,6 @@
   },
   {
     "source": "doronpa-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "doronpa-pua",
     "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -17196,7 +17174,29 @@
   },
   {
     "source": "eren-pua",
-    "target": "enukun-pua",
+    "target": "chouun-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "eren-pua",
+    "target": "kill-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "eren-pua",
+    "target": "nano-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -17229,7 +17229,7 @@
   },
   {
     "source": "eren-pua",
-    "target": "pua-vinsmoke",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -17240,29 +17240,7 @@
   },
   {
     "source": "eren-pua",
-    "target": "sati-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "eren-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "eren-pua",
-    "target": "task-pua",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -17646,29 +17624,7 @@
   },
   {
     "source": "fake-pua",
-    "target": "anshin-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
-  },
-  {
-    "source": "fake-pua",
     "target": "juru-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
-  },
-  {
-    "source": "fake-pua",
-    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -17690,6 +17646,17 @@
   },
   {
     "source": "fake-pua",
+    "target": "pua-rusu",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
+  },
+  {
+    "source": "fake-pua",
     "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
@@ -17701,7 +17668,18 @@
   },
   {
     "source": "fake-pua",
-    "target": "riokun-pua",
+    "target": "scream-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
+  },
+  {
+    "source": "fake-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -17948,6 +17926,17 @@
   },
   {
     "source": "felix-dtbro",
+    "target": "asai-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（即）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即. Score: 0.35."
+  },
+  {
+    "source": "felix-dtbro",
     "target": "coloskechan",
     "type": "affiliation",
     "description": "プロフィール特徴語（即）が重なるため、近い人物候補として補助接続（自動）。",
@@ -17981,18 +17970,7 @@
   },
   {
     "source": "felix-dtbro",
-    "target": "ruto10-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（即）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即. Score: 0.35."
-  },
-  {
-    "source": "felix-dtbro",
-    "target": "shuta-pua",
+    "target": "shu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -19000,7 +18978,7 @@
   },
   {
     "source": "gatiikepua",
-    "target": "bantan-pua",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -19011,7 +18989,7 @@
   },
   {
     "source": "gatiikepua",
-    "target": "karasu-pua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -19022,7 +19000,18 @@
   },
   {
     "source": "gatiikepua",
-    "target": "shuri-pua",
+    "target": "pika-sublol",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "gatiikepua",
+    "target": "pua-happy",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -19043,17 +19032,6 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "gatiikepua",
-    "target": "sshi-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "gatiikepua",
@@ -20405,17 +20383,6 @@
   },
   {
     "source": "greed-pua-sub",
-    "target": "chouun-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "greed-pua-sub",
     "target": "greed-pua",
     "type": "affiliation",
     "description": "Public X profile explicitly links @greed_pua as a related account.",
@@ -20429,7 +20396,18 @@
   },
   {
     "source": "greed-pua-sub",
-    "target": "isagi-pua",
+    "target": "korilla-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "greed-pua-sub",
+    "target": "oriha-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -21913,6 +21891,17 @@
   },
   {
     "source": "haruki010234",
+    "target": "madayaluyo",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（即、講習）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 講習. Score: 1.60."
+  },
+  {
+    "source": "haruki010234",
     "target": "okarun-pua",
     "type": "affiliation",
     "description": "キーワードクラスタ「りお講習」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。",
@@ -21947,17 +21936,6 @@
   {
     "source": "haruki010234",
     "target": "shunon-street",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（即、講習）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 講習. Score: 1.60."
-  },
-  {
-    "source": "haruki010234",
-    "target": "suzaku-street",
     "type": "affiliation",
     "description": "プロフィール特徴語（即、講習）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23009,7 +22987,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "ak1-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23020,7 +22998,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "isagi-pua",
+    "target": "chori-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23031,7 +23009,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "kill-pua",
+    "target": "kenichi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23042,7 +23020,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "nagasanpua",
+    "target": "pua-miura",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23053,7 +23031,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "nekominto-pua",
+    "target": "renren-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23064,7 +23042,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "puainoki",
+    "target": "riokun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23075,18 +23053,7 @@
   },
   {
     "source": "hosoki-pua",
-    "target": "puro-nampa",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "hosoki-pua",
-    "target": "tantan-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23107,6 +23074,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "hosoki-pua",
+    "target": "xcandee",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "hosuto-suda",
@@ -23303,28 +23281,6 @@
   },
   {
     "source": "hzen-pua",
-    "target": "1tensaipua1",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "hzen-pua",
-    "target": "5sato-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "hzen-pua",
     "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -23336,7 +23292,7 @@
   },
   {
     "source": "hzen-pua",
-    "target": "luckypua017",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23347,7 +23303,7 @@
   },
   {
     "source": "hzen-pua",
-    "target": "pika-sublol",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23369,7 +23325,7 @@
   },
   {
     "source": "hzen-pua",
-    "target": "pua-rusu",
+    "target": "pua-vinsmoke",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23380,7 +23336,29 @@
   },
   {
     "source": "hzen-pua",
-    "target": "t3vde",
+    "target": "sati-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "hzen-pua",
+    "target": "scream-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "hzen-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -23578,6 +23556,17 @@
   },
   {
     "source": "igaku-sato",
+    "target": "akari-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 月間実績, 講習. Score: 1.80."
+  },
+  {
+    "source": "igaku-sato",
     "target": "alllllll-maito",
     "type": "affiliation",
     "description": "プロフィール特徴語（月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。",
@@ -23601,17 +23590,6 @@
   {
     "source": "igaku-sato",
     "target": "inumaki-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 月間実績, 講習. Score: 1.80."
-  },
-  {
-    "source": "igaku-sato",
-    "target": "madayaluyo",
     "type": "affiliation",
     "description": "プロフィール特徴語（月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -24569,7 +24547,7 @@
   },
   {
     "source": "jackie-pua",
-    "target": "enukun-pua",
+    "target": "kayakkupua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -24624,7 +24602,7 @@
   },
   {
     "source": "jackie-pua",
-    "target": "sati-pua",
+    "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -24635,18 +24613,7 @@
   },
   {
     "source": "jackie-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "jackie-pua",
-    "target": "task-pua",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26256,29 +26223,7 @@
   },
   {
     "source": "kamekame-pua",
-    "target": "korilla-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "kamekame-pua",
     "target": "luckypua017",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "kamekame-pua",
-    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26301,6 +26246,17 @@
   {
     "source": "kamekame-pua",
     "target": "pua-happy",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "kamekame-pua",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26563,7 +26519,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "chomechome-pua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26574,7 +26530,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "chouun-pua",
+    "target": "korilla-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26585,7 +26541,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "isagi-pua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26596,7 +26552,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "motebody-pua",
+    "target": "oriha-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26607,7 +26563,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "nano-pua",
+    "target": "pua-miura",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -26618,7 +26574,7 @@
   },
   {
     "source": "kanipe-pua",
-    "target": "puro-nampa",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -27473,17 +27429,6 @@
   },
   {
     "source": "kayakkupuasub",
-    "target": "chori-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、ファッション）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ファッション. Score: 3.45."
-  },
-  {
-    "source": "kayakkupuasub",
     "target": "ebios1000",
     "type": "affiliation",
     "description": "プロフィール特徴語（ファッション、即）が重なるため、近い人物候補として補助接続（自動）。",
@@ -27492,6 +27437,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ファッション, 即. Score: 3.45."
+  },
+  {
+    "source": "kayakkupuasub",
+    "target": "nekominto-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA、ファッション）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ファッション. Score: 3.45."
   },
   {
     "source": "kayakkupuasub",
@@ -29490,7 +29446,7 @@
   },
   {
     "source": "kkk-pua",
-    "target": "akari-pua",
+    "target": "atari100pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -29501,7 +29457,7 @@
   },
   {
     "source": "kkk-pua",
-    "target": "atari100pua",
+    "target": "bossnn-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -29523,7 +29479,7 @@
   },
   {
     "source": "kkk-pua",
-    "target": "neru-pua",
+    "target": "inumaki-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30523,7 +30479,7 @@
   },
   {
     "source": "koumei-pua",
-    "target": "bantan-pua",
+    "target": "1tensaipua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30534,7 +30490,7 @@
   },
   {
     "source": "koumei-pua",
-    "target": "dogma-pua666",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30545,7 +30501,7 @@
   },
   {
     "source": "koumei-pua",
-    "target": "karasu-pua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30567,7 +30523,7 @@
   },
   {
     "source": "koumei-pua",
-    "target": "nami-pua",
+    "target": "pika-sublol",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30578,18 +30534,7 @@
   },
   {
     "source": "koumei-pua",
-    "target": "osugi-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "koumei-pua",
-    "target": "shuri-pua",
+    "target": "pua-rusu",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -30601,6 +30546,17 @@
   {
     "source": "koumei-pua",
     "target": "simba-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "koumei-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31055,7 +31011,7 @@
   },
   {
     "source": "kuroinu-pua",
-    "target": "anshin-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31066,7 +31022,7 @@
   },
   {
     "source": "kuroinu-pua",
-    "target": "doc-mote",
+    "target": "dogma-pua666",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31077,7 +31033,7 @@
   },
   {
     "source": "kuroinu-pua",
-    "target": "kenichi-pua",
+    "target": "karasu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31099,6 +31055,17 @@
   },
   {
     "source": "kuroinu-pua",
+    "target": "nami-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "kuroinu-pua",
     "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -31110,7 +31077,7 @@
   },
   {
     "source": "kuroinu-pua",
-    "target": "oriha-pua",
+    "target": "osugi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31121,18 +31088,7 @@
   },
   {
     "source": "kuroinu-pua",
-    "target": "pua-miura",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "kuroinu-pua",
-    "target": "renren-pua",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -31722,7 +31678,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "kyouuya-sata",
@@ -32142,7 +32098,7 @@
   },
   {
     "source": "long-island-pua",
-    "target": "bantan-pua",
+    "target": "dogma-pua666",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32153,7 +32109,7 @@
   },
   {
     "source": "long-island-pua",
-    "target": "dogma-pua666",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32208,7 +32164,7 @@
   },
   {
     "source": "long-island-pua",
-    "target": "shuri-pua",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32440,7 +32396,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "chomechome-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32462,7 +32418,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "kayakkupua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32473,7 +32429,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "kurita-pua",
+    "target": "kenichi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32484,7 +32440,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "motebody-pua",
+    "target": "oriha-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32495,7 +32451,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "riokun-pua",
+    "target": "pua-miura",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -32506,7 +32462,7 @@
   },
   {
     "source": "lsd-pua",
-    "target": "ryusei-pua",
+    "target": "renren-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -33900,7 +33856,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "mbh-hal",
@@ -34646,7 +34602,7 @@
   },
   {
     "source": "mikio-pua",
-    "target": "ak1-pua",
+    "target": "chomechome-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -34668,7 +34624,7 @@
   },
   {
     "source": "mikio-pua",
-    "target": "isagi-pua",
+    "target": "kayakkupua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -34679,7 +34635,18 @@
   },
   {
     "source": "mikio-pua",
-    "target": "kill-pua",
+    "target": "kurita-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "mikio-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -34701,7 +34668,7 @@
   },
   {
     "source": "mikio-pua",
-    "target": "puainoki",
+    "target": "riokun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -34712,18 +34679,7 @@
   },
   {
     "source": "mikio-pua",
-    "target": "puro-nampa",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "mikio-pua",
-    "target": "tantan-pua",
+    "target": "ryusei-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35635,7 +35591,29 @@
   },
   {
     "source": "mmmmmellow-pua",
-    "target": "enukun-pua",
+    "target": "ak1-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "mmmmmellow-pua",
+    "target": "isagi-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "mmmmmellow-pua",
+    "target": "kill-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35668,7 +35646,7 @@
   },
   {
     "source": "mmmmmellow-pua",
-    "target": "pua-vinsmoke",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35679,7 +35657,7 @@
   },
   {
     "source": "mmmmmellow-pua",
-    "target": "sati-pua",
+    "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35690,29 +35668,7 @@
   },
   {
     "source": "mmmmmellow-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "mmmmmellow-pua",
-    "target": "sg-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "mmmmmellow-pua",
-    "target": "task-pua",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35749,17 +35705,6 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "5sato-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "mog1ta-pua",
     "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -35771,7 +35716,7 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "juru-pua",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35782,7 +35727,7 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "korea-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35793,7 +35738,7 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "luckypua017",
+    "target": "pua-vinsmoke",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35804,7 +35749,7 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "pika-sublol",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35815,7 +35760,7 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "pua-happy",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -35826,7 +35771,18 @@
   },
   {
     "source": "mog1ta-pua",
-    "target": "t3vde",
+    "target": "sg-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "mog1ta-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36620,7 +36576,7 @@
   },
   {
     "source": "moviefoodfc2",
-    "target": "chomechome-pua",
+    "target": "1tensaipua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36631,7 +36587,7 @@
   },
   {
     "source": "moviefoodfc2",
-    "target": "chori-pua",
+    "target": "garo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36653,7 +36609,7 @@
   },
   {
     "source": "moviefoodfc2",
-    "target": "kayakkupua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36664,7 +36620,18 @@
   },
   {
     "source": "moviefoodfc2",
-    "target": "motebody-pua",
+    "target": "osugi-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "moviefoodfc2",
+    "target": "pua-happy",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36709,17 +36676,6 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
-    "source": "moviefoodfc2",
-    "target": "xcandee",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
     "source": "mr-rolex-love",
     "target": "x",
     "type": "affiliation",
@@ -36743,7 +36699,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "murakami-pua",
@@ -36782,7 +36738,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "garo-pua",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36793,7 +36749,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "mine-chan-pua",
+    "target": "juru-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36804,7 +36760,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "nami-pua",
+    "target": "korea-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36815,7 +36771,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "osugi-pua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36826,7 +36782,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "pua-rusu",
+    "target": "pika-sublol",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36837,7 +36793,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "shingen-pua",
+    "target": "pua-happy",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36848,7 +36804,7 @@
   },
   {
     "source": "mush-pua",
-    "target": "simba-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36896,17 +36852,6 @@
   },
   {
     "source": "naepua",
-    "target": "kayakkupua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "naepua",
     "target": "kenichi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -36918,7 +36863,18 @@
   },
   {
     "source": "naepua",
-    "target": "puro-nampa",
+    "target": "korilla-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "naepua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -36952,17 +36908,6 @@
   {
     "source": "naepua",
     "target": "ststst-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "naepua",
-    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -37944,28 +37889,6 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "bantan-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "nanashi-pua",
-    "target": "doc-mote",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "nanashi-pua",
     "target": "dogma-pua666",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
@@ -37977,7 +37900,7 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "karasu-pua",
+    "target": "garo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -37988,7 +37911,7 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "korilla-pua",
+    "target": "mine-chan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -37999,7 +37922,7 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "onaken-pua",
+    "target": "nami-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -38010,7 +37933,7 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "shuri-pua",
+    "target": "osugi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -38021,7 +37944,29 @@
   },
   {
     "source": "nanashi-pua",
-    "target": "sshi-pua",
+    "target": "pua-rusu",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "nanashi-pua",
+    "target": "shingen-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "nanashi-pua",
+    "target": "simba-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40161,6 +40106,17 @@
   },
   {
     "source": "neru-pua",
+    "target": "sei-pua1",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA、ゆってぃ、ナンパ、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ゆってぃ, ナンパ, 即, 月間実績. Score: 4.70."
+  },
+  {
+    "source": "neru-pua",
     "target": "x",
     "type": "affiliation",
     "description": "Profile links point to X.",
@@ -40405,7 +40361,7 @@
   },
   {
     "source": "night-army-pua",
-    "target": "anshin-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40416,7 +40372,7 @@
   },
   {
     "source": "night-army-pua",
-    "target": "chori-pua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40427,7 +40383,29 @@
   },
   {
     "source": "night-army-pua",
-    "target": "kenichi-pua",
+    "target": "karasu-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "night-army-pua",
+    "target": "korilla-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "night-army-pua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40449,7 +40427,7 @@
   },
   {
     "source": "night-army-pua",
-    "target": "pua-miura",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40460,18 +40438,7 @@
   },
   {
     "source": "night-army-pua",
-    "target": "renren-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "night-army-pua",
-    "target": "ststst-pua",
+    "target": "sshi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40494,19 +40461,8 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
-    "source": "night-army-pua",
-    "target": "xcandee",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
     "source": "nikepuamiso",
-    "target": "doc-mote",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40517,7 +40473,7 @@
   },
   {
     "source": "nikepuamiso",
-    "target": "kurita-pua",
+    "target": "juru-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40528,7 +40484,7 @@
   },
   {
     "source": "nikepuamiso",
-    "target": "onaken-pua",
+    "target": "korea-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40539,7 +40495,7 @@
   },
   {
     "source": "nikepuamiso",
-    "target": "oriha-pua",
+    "target": "pika-sublol",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40550,7 +40506,7 @@
   },
   {
     "source": "nikepuamiso",
-    "target": "renren-pua",
+    "target": "sg-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40572,7 +40528,7 @@
   },
   {
     "source": "nikepuamiso",
-    "target": "ststst-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40596,7 +40552,40 @@
   },
   {
     "source": "niko-pua",
-    "target": "efu-pua",
+    "target": "chomechome-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "niko-pua",
+    "target": "kayakkupua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "niko-pua",
+    "target": "kurita-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "niko-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -40621,40 +40610,7 @@
   },
   {
     "source": "niko-pua",
-    "target": "sati-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "niko-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "niko-pua",
-    "target": "sg-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "niko-pua",
-    "target": "task-pua",
+    "target": "ryusei-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -41339,7 +41295,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "nsjact",
@@ -42140,11 +42096,11 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "one-sith-pua",
-    "target": "anshin-pua",
+    "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42155,7 +42111,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "bantan-pua",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42166,7 +42122,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "garo-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42177,7 +42133,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "osugi-pua",
+    "target": "pua-core",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42188,7 +42144,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "pua-miura",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42199,7 +42155,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "shuri-pua",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -42210,7 +42166,7 @@
   },
   {
     "source": "one-sith-pua",
-    "target": "sshi-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -44187,29 +44143,18 @@
   },
   {
     "source": "pineapple-pua",
+    "target": "akari-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 月間実績. Score: 1.95."
+  },
+  {
+    "source": "pineapple-pua",
     "target": "atari100pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 月間実績. Score: 1.95."
-  },
-  {
-    "source": "pineapple-pua",
-    "target": "bossnn-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 月間実績. Score: 1.95."
-  },
-  {
-    "source": "pineapple-pua",
-    "target": "inumaki-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -44949,17 +44894,6 @@
   },
   {
     "source": "pua-2-yutty",
-    "target": "osugi-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "pua-2-yutty",
     "target": "sei-pua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ゆってぃ）が重なるため、近い人物候補として補助接続（自動）。",
@@ -44968,6 +44902,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ゆってぃ. Score: 3.45."
+  },
+  {
+    "source": "pua-2-yutty",
+    "target": "sg-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "pua-2-yutty",
@@ -45017,7 +44962,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "ak1-pua",
+    "target": "isaac-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45028,7 +44973,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "isagi-pua",
+    "target": "kahlo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45039,7 +44984,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "kill-pua",
+    "target": "nojob-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45050,7 +44995,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "nagasanpua",
+    "target": "pua-marcelo",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45061,7 +45006,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "nekominto-pua",
+    "target": "r-pua-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45072,7 +45017,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "puainoki",
+    "target": "ruto10-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45083,7 +45028,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "puro-nampa",
+    "target": "ryu-8585",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45094,7 +45039,7 @@
   },
   {
     "source": "pua-aki",
-    "target": "tantan-pua",
+    "target": "shuta-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45114,7 +45059,7 @@
     "confidence": 0.86,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "source": "pua-chilll",
@@ -45480,7 +45425,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "efu-pua",
+    "target": "chomechome-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45491,7 +45436,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "enukun-pua",
+    "target": "chouun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45502,7 +45447,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "pua-core",
+    "target": "kayakkupua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45513,7 +45458,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "pua-vinsmoke",
+    "target": "kurita-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45524,7 +45469,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "sati-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45535,7 +45480,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "scream-pua",
+    "target": "nano-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45546,7 +45491,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "sg-pua",
+    "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45557,7 +45502,7 @@
   },
   {
     "source": "pua-hinotori",
-    "target": "task-pua",
+    "target": "ryusei-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45798,7 +45743,7 @@
   },
   {
     "source": "pua-kei-sg",
-    "target": "kayakkupua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45809,7 +45754,7 @@
   },
   {
     "source": "pua-kei-sg",
-    "target": "kurita-pua",
+    "target": "mine-chan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45820,7 +45765,7 @@
   },
   {
     "source": "pua-kei-sg",
-    "target": "ryusei-pua",
+    "target": "nami-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -45831,7 +45776,7 @@
   },
   {
     "source": "pua-kei-sg",
-    "target": "ststst-pua",
+    "target": "shingen-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46063,7 +46008,7 @@
   },
   {
     "source": "pua-miura",
-    "target": "kahlo-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46120,7 +46065,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "bantan-pua",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46131,7 +46076,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "doc-mote",
+    "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46142,7 +46087,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "karasu-pua",
+    "target": "korea-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46153,7 +46098,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "korilla-pua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46164,7 +46109,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "onaken-pua",
+    "target": "pika-sublol",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46175,7 +46120,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "shuri-pua",
+    "target": "pua-happy",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46186,7 +46131,7 @@
   },
   {
     "source": "pua-nico",
-    "target": "sshi-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46210,7 +46155,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "efu-pua",
+    "target": "chomechome-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46221,7 +46166,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "enukun-pua",
+    "target": "chouun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46232,7 +46177,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "pua-core",
+    "target": "garp-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46243,7 +46188,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "pua-vinsmoke",
+    "target": "kayakkupua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46254,7 +46199,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "sati-pua",
+    "target": "kurita-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46265,7 +46210,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "scream-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46276,7 +46221,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "sg-pua",
+    "target": "nano-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46287,7 +46232,7 @@
   },
   {
     "source": "pua-ofline",
-    "target": "task-pua",
+    "target": "ryusei-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46311,7 +46256,7 @@
   },
   {
     "source": "pua-poke",
-    "target": "anshin-pua",
+    "target": "garo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46322,7 +46267,7 @@
   },
   {
     "source": "pua-poke",
-    "target": "riokun-pua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46655,7 +46600,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "chomechome-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46666,7 +46611,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "chouun-pua",
+    "target": "chori-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46677,7 +46622,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "kayakkupua",
+    "target": "kenichi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46688,7 +46633,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "kurita-pua",
+    "target": "pua-miura",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46699,18 +46644,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "motebody-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "pua1-panda",
-    "target": "nano-pua",
+    "target": "renren-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46732,7 +46666,7 @@
   },
   {
     "source": "pua1-panda",
-    "target": "ryusei-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46753,6 +46687,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "source": "pua1-panda",
+    "target": "xcandee",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "puainoki",
@@ -46859,7 +46804,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "1tensaipua1",
+    "target": "ak1-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46870,7 +46815,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "5sato-pua",
+    "target": "isagi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46881,7 +46826,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "juru-pua",
+    "target": "kill-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46892,7 +46837,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "korea-pua",
+    "target": "nagasanpua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46903,7 +46848,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "luckypua017",
+    "target": "nekominto-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46914,7 +46859,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "pika-sublol",
+    "target": "pua-core",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46925,7 +46870,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "pua-happy",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -46936,7 +46881,7 @@
   },
   {
     "source": "puapua-ririri",
-    "target": "t3vde",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48155,7 +48100,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "dogma-pua666",
+    "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48166,7 +48111,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "garo-pua",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48177,7 +48122,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "mine-chan-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48188,7 +48133,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "nami-pua",
+    "target": "pua-vinsmoke",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48199,7 +48144,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "osugi-pua",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48210,7 +48155,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "pua-rusu",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48221,7 +48166,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "shingen-pua",
+    "target": "sg-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48232,7 +48177,7 @@
   },
   {
     "source": "religion-pua",
-    "target": "simba-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48728,7 +48673,7 @@
   },
   {
     "source": "riokun-pua-sub",
-    "target": "doc-mote",
+    "target": "1tensaipua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48739,7 +48684,7 @@
   },
   {
     "source": "riokun-pua-sub",
-    "target": "korilla-pua",
+    "target": "korea-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48750,7 +48695,7 @@
   },
   {
     "source": "riokun-pua-sub",
-    "target": "onaken-pua",
+    "target": "pua-rusu",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -48761,7 +48706,7 @@
   },
   {
     "source": "riokun-pua-sub",
-    "target": "oriha-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -49609,7 +49554,7 @@
   },
   {
     "source": "ryepua",
-    "target": "1tensaipua1",
+    "target": "enukun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -49644,7 +49589,18 @@
   },
   {
     "source": "ryepua",
-    "target": "pua-rusu",
+    "target": "nagasanpua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "ryepua",
+    "target": "pua-core",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -49663,17 +49619,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Keyword cluster '淘汰男' bridge auto-edge. Added with per-node caps to avoid a full clique."
-  },
-  {
-    "source": "ryepua",
-    "target": "t3vde",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "ryepua",
@@ -50241,7 +50186,7 @@
   },
   {
     "source": "s050456236",
-    "target": "shunon-street",
+    "target": "suzaku-street",
     "type": "affiliation",
     "description": "プロフィール特徴語（月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50533,7 +50478,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "1tensaipua1",
+    "target": "ak1-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50544,7 +50489,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "5sato-pua",
+    "target": "isagi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50555,7 +50500,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "juru-pua",
+    "target": "kill-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50566,7 +50511,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "korea-pua",
+    "target": "nagasanpua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50577,7 +50522,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "luckypua017",
+    "target": "nekominto-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50588,7 +50533,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "pika-sublol",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50599,7 +50544,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "pua-happy",
+    "target": "puro-nampa",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50610,7 +50555,7 @@
   },
   {
     "source": "sandarupua",
-    "target": "t3vde",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50746,7 +50691,7 @@
   },
   {
     "source": "sato-legend",
-    "target": "garo-pua",
+    "target": "pua-aki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50757,7 +50702,7 @@
   },
   {
     "source": "sato-legend",
-    "target": "mine-chan-pua",
+    "target": "sati-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50768,7 +50713,7 @@
   },
   {
     "source": "sato-legend",
-    "target": "shingen-pua",
+    "target": "scream-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -50779,7 +50724,7 @@
   },
   {
     "source": "sato-legend",
-    "target": "simba-pua",
+    "target": "task-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53086,7 +53031,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "bantan-pua",
+    "target": "1tensaipua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53097,7 +53042,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "doc-mote",
+    "target": "5sato-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53108,7 +53053,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "karasu-pua",
+    "target": "juru-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53119,7 +53064,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "korilla-pua",
+    "target": "korea-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53130,7 +53075,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "onaken-pua",
+    "target": "luckypua017",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53141,7 +53086,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "oriha-pua",
+    "target": "pika-sublol",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53152,7 +53097,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "shuri-pua",
+    "target": "pua-happy",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53163,7 +53108,7 @@
   },
   {
     "source": "slime-pua",
-    "target": "sshi-pua",
+    "target": "t3vde",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53187,7 +53132,7 @@
   },
   {
     "source": "slinky-pua",
-    "target": "5sato-pua",
+    "target": "chouun-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53198,7 +53143,7 @@
   },
   {
     "source": "slinky-pua",
-    "target": "korea-pua",
+    "target": "isagi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53209,7 +53154,7 @@
   },
   {
     "source": "slinky-pua",
-    "target": "luckypua017",
+    "target": "nano-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53220,7 +53165,7 @@
   },
   {
     "source": "slinky-pua",
-    "target": "pika-sublol",
+    "target": "puainoki",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -53231,7 +53176,7 @@
   },
   {
     "source": "slinky-pua",
-    "target": "pua-happy",
+    "target": "tantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55031,7 +54976,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "anshin-pua",
+    "target": "dogma-pua666",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55042,7 +54987,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "chori-pua",
+    "target": "garo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55053,7 +54998,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "kenichi-pua",
+    "target": "mine-chan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55064,7 +55009,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "pua-miura",
+    "target": "nami-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55075,7 +55020,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "renren-pua",
+    "target": "osugi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55086,7 +55031,7 @@
   },
   {
     "source": "suda-puasub",
-    "target": "riokun-pua",
+    "target": "pua-rusu",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55097,7 +55042,18 @@
   },
   {
     "source": "suda-puasub",
-    "target": "ststst-pua",
+    "target": "shingen-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "suda-puasub",
+    "target": "simba-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55120,8 +55076,8 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
-    "source": "suda-puasub",
-    "target": "xcandee",
+    "source": "suihanki-pua",
+    "target": "anshin-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55132,7 +55088,7 @@
   },
   {
     "source": "suihanki-pua",
-    "target": "enukun-pua",
+    "target": "chomechome-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55143,7 +55099,7 @@
   },
   {
     "source": "suihanki-pua",
-    "target": "nekominto-pua",
+    "target": "chori-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55154,7 +55110,7 @@
   },
   {
     "source": "suihanki-pua",
-    "target": "pua-core",
+    "target": "kayakkupua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55165,7 +55121,7 @@
   },
   {
     "source": "suihanki-pua",
-    "target": "sati-pua",
+    "target": "motebody-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55176,29 +55132,7 @@
   },
   {
     "source": "suihanki-pua",
-    "target": "scream-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "suihanki-pua",
-    "target": "sg-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "suihanki-pua",
-    "target": "task-pua",
+    "target": "ststst-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -55219,6 +55153,17 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "source": "suihanki-pua",
+    "target": "xcandee",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "suisei-nanpa",
@@ -56155,7 +56100,7 @@
   },
   {
     "source": "tantan-ura",
-    "target": "motebody-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -56166,7 +56111,7 @@
   },
   {
     "source": "tantan-ura",
-    "target": "nano-pua",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57777,7 +57722,7 @@
   },
   {
     "source": "try-pua",
-    "target": "chouun-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57788,7 +57733,7 @@
   },
   {
     "source": "try-pua",
-    "target": "isagi-pua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57799,7 +57744,7 @@
   },
   {
     "source": "try-pua",
-    "target": "nagasanpua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57810,7 +57755,7 @@
   },
   {
     "source": "try-pua",
-    "target": "nano-pua",
+    "target": "oriha-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57821,7 +57766,7 @@
   },
   {
     "source": "try-pua",
-    "target": "puainoki",
+    "target": "pua-miura",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57832,7 +57777,7 @@
   },
   {
     "source": "try-pua",
-    "target": "puro-nampa",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -57843,7 +57788,7 @@
   },
   {
     "source": "try-pua",
-    "target": "tantan-pua",
+    "target": "sshi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58461,7 +58406,7 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "anshin-pua",
+    "target": "1tensaipua1",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58472,7 +58417,7 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "chori-pua",
+    "target": "garo-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58483,7 +58428,7 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "kenichi-pua",
+    "target": "karasu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58494,7 +58439,7 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "pua-miura",
+    "target": "mine-chan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58505,7 +58450,7 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "riokun-pua",
+    "target": "nami-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58516,7 +58461,18 @@
   },
   {
     "source": "ura-osugi-pua",
-    "target": "ststst-pua",
+    "target": "shingen-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "ura-osugi-pua",
+    "target": "simba-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -58537,17 +58493,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "source": "ura-osugi-pua",
-    "target": "xcandee",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "uraca-pua",
@@ -60611,7 +60556,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "chomechome-pua",
+    "target": "bantan-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60622,7 +60567,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "chouun-pua",
+    "target": "doc-mote",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60633,7 +60578,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "garp-pua",
+    "target": "karasu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60644,7 +60589,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "kayakkupua",
+    "target": "korilla-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60655,7 +60600,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "kurita-pua",
+    "target": "onaken-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60666,7 +60611,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "motebody-pua",
+    "target": "oriha-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60677,7 +60622,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "nano-pua",
+    "target": "shuri-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60688,7 +60633,7 @@
   },
   {
     "source": "yossy-pua",
-    "target": "ryusei-pua",
+    "target": "sshi-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60929,18 +60874,7 @@
   },
   {
     "source": "yuki100-pua",
-    "target": "dogma-pua666",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
-  },
-  {
-    "source": "yuki100-pua",
-    "target": "nami-pua",
+    "target": "efu-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
     "source_urls": [],
@@ -60959,6 +60893,17 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 雄華軍団. Score: 4.05."
+  },
+  {
+    "source": "yuki100-pua",
+    "target": "sg-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "yuki100-pua",
@@ -60985,17 +60930,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
-  },
-  {
-    "source": "yumaru-pua",
-    "target": "akari-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA、即、月間実績）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 月間実績. Score: 1.95."
   },
   {
     "source": "yumaru-pua",
@@ -61332,6 +61266,17 @@
   },
   {
     "source": "yutty-2-pua",
+    "target": "juru-pua",
+    "type": "affiliation",
+    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
+    "source_urls": [],
+    "confidence": 0.23,
+    "evidence_kind": "interpretation",
+    "needs_review": true,
+    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
+  },
+  {
+    "source": "yutty-2-pua",
     "target": "kamiya-pua",
     "type": "affiliation",
     "description": "プロフィール特徴語（PUA、ゆってぃ）が重なるため、近い人物候補として補助接続（自動）。",
@@ -61351,17 +61296,6 @@
     "evidence_kind": "interpretation",
     "needs_review": true,
     "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ゆってぃ. Score: 3.45."
-  },
-  {
-    "source": "yutty-2-pua",
-    "target": "oriha-pua",
-    "type": "affiliation",
-    "description": "プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。",
-    "source_urls": [],
-    "confidence": 0.23,
-    "evidence_kind": "interpretation",
-    "needs_review": true,
-    "review_notes": "Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35."
   },
   {
     "source": "yutty-2-pua",
