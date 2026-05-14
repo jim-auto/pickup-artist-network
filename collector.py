@@ -21,6 +21,7 @@ X_PROFILE_CONFIG = Path("data/x_profile_sources.json")
 SEED_FILE = Path("seed_entities.txt")
 X_AUTH_STATE_FILE = Path("data/.x_auth_state.json")
 X_COOKIE_FILE = Path("data/.x_cookies.json")
+X_WEB_PROFILE_SKIP_FILE = Path("data/x_web_profile_skip.json")
 DEFAULT_TIMEOUT = 20
 X_API_USERS_BY_URL = "https://api.x.com/2/users/by"
 X_API_USER_FIELDS = "description,location,name,profile_image_url,public_metrics,url,username,verified"
@@ -1599,6 +1600,131 @@ def load_existing_generated_snapshots(path: Path) -> list[dict[str, object]]:
     return snapshots
 
 
+def load_x_web_profile_skip(path: Path = X_WEB_PROFILE_SKIP_FILE) -> dict[str, object]:
+    if not path.exists():
+        return {"profiles": {}}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("X web profile skip file must contain an object")
+    profiles = payload.get("profiles", {})
+    if not isinstance(profiles, dict):
+        raise ValueError("X web profile skip file profiles must contain an object")
+    return {"profiles": profiles}
+
+
+def save_x_web_profile_skip(payload: dict[str, object], path: Path = X_WEB_PROFILE_SKIP_FILE) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def record_x_web_profile_skip(
+    payload: dict[str, object],
+    *,
+    account_id: str,
+    handle: str,
+    source_url: str,
+    reason: str,
+) -> bool:
+    profiles = payload.setdefault("profiles", {})
+    if not isinstance(profiles, dict):
+        raise ValueError("X web profile skip payload profiles must contain an object")
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    existing = profiles.get(account_id)
+    entry = {
+        "handle": handle,
+        "source_url": source_url,
+        "reason": reason,
+        "last_checked_at": now,
+    }
+    if existing == entry:
+        return False
+    profiles[account_id] = entry
+    return True
+
+
+def merge_refreshed_snapshots_into_existing(
+    existing_snapshots: list[dict[str, object]],
+    refreshed_snapshots: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    def add_note_parts(notes: list[str], note: str) -> None:
+        for part in re.split(r"(?<=\.)\s+", note.strip()):
+            normalized = part.strip()
+            if normalized and normalized not in notes:
+                notes.append(normalized)
+
+    def merge_one(existing: dict[str, object], refreshed: dict[str, object]) -> dict[str, object]:
+        merged = {**existing}
+        for field in (
+            "profile_url",
+            "pinned_post_url",
+            "icon_url",
+            "profile_text",
+            "pinned_post_text",
+            "summary",
+            "evidence_kind",
+            "summary_evidence_kind",
+        ):
+            value = str(refreshed.get(field, "")).strip()
+            if value and not str(merged.get(field, "")).strip():
+                merged[field] = value
+        follower_count = int(refreshed.get("follower_count", 0) or 0)
+        if follower_count > int(merged.get("follower_count", 0) or 0):
+            merged["follower_count"] = follower_count
+        if refreshed.get("icon_url"):
+            merged["icon_url"] = refreshed["icon_url"]
+        merged["links"] = list(
+            dict.fromkeys([*list(merged.get("links", [])), *list(refreshed.get("links", []))])
+        )
+        merged["needs_review"] = bool(merged.get("needs_review", False) or refreshed.get("needs_review", False))
+        notes: list[str] = []
+        add_note_parts(notes, str(merged.get("review_notes", "")))
+        add_note_parts(notes, str(refreshed.get("review_notes", "")))
+        merged["review_notes"] = " ".join(notes).strip()
+        observations = list(merged.get("observations", []))
+        for observation in refreshed.get("observations", []):
+            if observation not in observations:
+                observations.append(observation)
+        merged["observations"] = observations
+
+        refreshed_collector = refreshed.get("collector", {})
+        existing_collector = merged.get("collector", {})
+        if isinstance(refreshed_collector, dict) and refreshed_collector:
+            if isinstance(existing_collector, dict) and isinstance(existing_collector.get("sources"), list):
+                sources = list(existing_collector["sources"])
+                if refreshed_collector not in sources:
+                    sources.append(refreshed_collector)
+                merged["collector"] = {**existing_collector, "sources": sources}
+            elif isinstance(existing_collector, dict) and existing_collector:
+                sources = [existing_collector]
+                if refreshed_collector not in sources:
+                    sources.append(refreshed_collector)
+                merged["collector"] = {"sources": sources}
+            else:
+                merged["collector"] = refreshed_collector
+        return merged
+
+    if not refreshed_snapshots:
+        return existing_snapshots
+    refreshed_by_id = {
+        str(snapshot.get("account_id", "")).strip(): snapshot
+        for snapshot in refreshed_snapshots
+        if str(snapshot.get("account_id", "")).strip()
+    }
+    seen: set[str] = set()
+    merged_snapshots: list[dict[str, object]] = []
+    for snapshot in existing_snapshots:
+        account_id = str(snapshot.get("account_id", "")).strip()
+        refreshed = refreshed_by_id.get(account_id)
+        if refreshed:
+            merged_snapshots.append(merge_one(snapshot, refreshed))
+            seen.add(account_id)
+        else:
+            merged_snapshots.append(snapshot)
+    for account_id in sorted(set(refreshed_by_id) - seen):
+        merged_snapshots.append(refreshed_by_id[account_id])
+    return merged_snapshots
+
+
 def preserve_missing_generated_snapshots(
     existing_snapshots: list[dict[str, object]],
     fresh_snapshots: list[dict[str, object]],
@@ -1627,6 +1753,8 @@ def refresh_missing_x_web_profiles(
     timeout: int = DEFAULT_TIMEOUT,
     limit: int | None = None,
     pause_seconds: float = 0.25,
+    skip_file_path: Path = X_WEB_PROFILE_SKIP_FILE,
+    retry_skipped: bool = False,
 ) -> list[dict[str, object]]:
     cookie_file = resolve_x_cookie_file(cookie_file_path)
     if cookie_file is None:
@@ -1638,10 +1766,13 @@ def refresh_missing_x_web_profiles(
         for snapshot in existing_snapshots
         if int(snapshot.get("follower_count", 0) or 0) > 0
     }
+    skip_payload = load_x_web_profile_skip(skip_file_path)
+    skipped_ids = set(skip_payload.get("profiles", {}).keys()) if not retry_skipped else set()
     sources = [
         source
         for source in load_x_profile_sources(x_profile_config_path)
         if str(source.get("account_id")) not in positive_ids
+        and str(source.get("account_id")) not in skipped_ids
         and extract_x_handle_from_url(str(source.get("url", "")))
     ]
     sources.sort(key=lambda source: str(source["account_id"]))
@@ -1649,9 +1780,11 @@ def refresh_missing_x_web_profiles(
         sources = sources[: max(0, limit)]
 
     refreshed_snapshots: list[dict[str, object]] = []
+    skip_changed = False
     for index, source in enumerate(sources, 1):
         account_id = str(source["account_id"])
-        handle = extract_x_handle_from_url(str(source["url"]))
+        source_url = str(source["url"])
+        handle = extract_x_handle_from_url(source_url)
         if not handle:
             continue
         try:
@@ -1666,14 +1799,22 @@ def refresh_missing_x_web_profiles(
             print(f"[WARN] skipped X web profile {handle}: {exc}")
             continue
         if not details:
+            skip_changed = record_x_web_profile_skip(
+                skip_payload,
+                account_id=account_id,
+                handle=handle,
+                source_url=source_url,
+                reason="empty_or_unavailable",
+            ) or skip_changed
+            print(f"[SKIP] X web profile {account_id} @{handle}: empty or unavailable")
             continue
         snapshot = {
             "account_id": account_id,
-            "profile_url": str(source["url"]),
+            "profile_url": source_url,
             "pinned_post_url": "",
             "profile_text": f"@{handle}",
             "pinned_post_text": "",
-            "links": [str(source["url"])],
+            "links": [source_url],
             "summary": f"X profile for @{handle}.",
             "evidence_kind": "fact",
             "needs_review": True,
@@ -1682,7 +1823,7 @@ def refresh_missing_x_web_profiles(
             "snapshot_origin": "generated",
             "collector": {
                 "type": "x_web_profile",
-                "source_url": str(source["url"]),
+                "source_url": source_url,
                 "collected_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             },
             "observations": [],
@@ -1698,11 +1839,13 @@ def refresh_missing_x_web_profiles(
             time.sleep(pause_seconds)
 
     if refreshed_snapshots:
-        merged = merge_generated_snapshots([*existing_snapshots, *refreshed_snapshots])
+        merged = merge_refreshed_snapshots_into_existing(existing_snapshots, refreshed_snapshots)
         output_path.write_text(
             json.dumps(merged, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
+    if skip_changed:
+        save_x_web_profile_skip(skip_payload, skip_file_path)
     return refreshed_snapshots
 
 
@@ -1881,6 +2024,17 @@ def main() -> None:
         metavar="SECONDS",
         help="Pause between authenticated X web profile lookups.",
     )
+    parser.add_argument(
+        "--x-web-skip-file",
+        type=Path,
+        default=X_WEB_PROFILE_SKIP_FILE,
+        help="JSON file that records unavailable X web profiles skipped by refresh runs.",
+    )
+    parser.add_argument(
+        "--retry-x-web-skips",
+        action="store_true",
+        help="Retry profiles previously recorded as unavailable in the X web skip file.",
+    )
     args = parser.parse_args()
     args.cookie_file = resolve_x_cookie_file(args.cookie_file)
 
@@ -1903,6 +2057,8 @@ def main() -> None:
             timeout=args.timeout,
             limit=args.x_web_refresh_limit,
             pause_seconds=args.x_web_refresh_pause,
+            skip_file_path=args.x_web_skip_file,
+            retry_skipped=args.retry_x_web_skips,
         )
         print(f"[OK] refreshed {len(refreshed)} missing X web profiles -> {args.output}")
         return

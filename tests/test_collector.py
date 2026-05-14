@@ -16,10 +16,14 @@ from collector import (
     fetch_x_api_user_details,
     fetch_x_web_user_details,
     load_x_api_bearer_token,
+    load_x_web_profile_skip,
     merge_generated_snapshots,
+    merge_refreshed_snapshots_into_existing,
     merge_x_api_user_details_into_snapshot,
     merge_x_web_user_details_into_snapshot,
     preserve_missing_generated_snapshots,
+    refresh_missing_x_web_profiles,
+    save_x_web_profile_skip,
     load_playwright_cookies,
     load_dotenv_values,
     load_x_login_credentials,
@@ -329,6 +333,47 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(merged[0]["icon_url"], "https://example.com/alpha.jpg")
         self.assertEqual(merged[0]["follower_count"], 1234)
 
+    def test_merge_refreshed_snapshots_updates_only_matching_entries(self) -> None:
+        merged = merge_refreshed_snapshots_into_existing(
+            [
+                {
+                    "account_id": "beta",
+                    "profile_url": "https://x.com/beta",
+                    "follower_count": 0,
+                    "collector": {"type": "x_profile"},
+                },
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "follower_count": 0,
+                    "collector": {"type": "x_profile"},
+                },
+            ],
+            [
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "follower_count": 1234,
+                    "collector": {"type": "x_web_profile"},
+                }
+            ],
+        )
+
+        self.assertEqual([snapshot["account_id"] for snapshot in merged], ["beta", "alpha"])
+        self.assertEqual(merged[1]["follower_count"], 1234)
+        self.assertEqual(
+            merged[1]["collector"]["sources"],
+            [{"type": "x_profile"}, {"type": "x_web_profile"}],
+        )
+
+    def test_x_web_profile_skip_roundtrip(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            skip_path = Path(tmp_dir) / "skip.json"
+            payload = {"profiles": {"alpha": {"handle": "alpha", "reason": "empty_or_unavailable"}}}
+            save_x_web_profile_skip(payload, skip_path)
+
+            self.assertEqual(load_x_web_profile_skip(skip_path), payload)
+
     def test_fetch_x_api_user_details_batches_public_metrics(self) -> None:
         response = Mock()
         response.json.return_value = {
@@ -423,6 +468,74 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(merged["follower_count"], 1234)
         self.assertEqual(merged["icon_url"], "https://pbs.twimg.com/profile_images/example_400x400.jpg")
         self.assertIn("UserByScreenName", merged["review_notes"])
+
+    def test_refresh_missing_x_web_profiles_records_unavailable_and_skips_next_time(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            base = Path(tmp_dir)
+            config_path = base / "x_profile_sources.json"
+            output_path = base / "source_snapshots.generated.json"
+            skip_path = base / "x_web_profile_skip.json"
+            config_path.write_text(
+                """
+                [
+                  {"account_id": "alpha", "url": "https://x.com/alpha_user"},
+                  {"account_id": "beta", "url": "https://x.com/beta_user"}
+                ]
+                """,
+                encoding="utf-8",
+            )
+            output_path.write_text(
+                """
+                [
+                  {"account_id": "alpha", "profile_url": "https://x.com/alpha_user", "links": [], "follower_count": 0},
+                  {"account_id": "beta", "profile_url": "https://x.com/beta_user", "links": [], "follower_count": 0}
+                ]
+                """,
+                encoding="utf-8",
+            )
+
+            seed_entities = [
+                {"id": "alpha", "type": "person"},
+                {"id": "beta", "type": "person"},
+            ]
+            with patch("collector.load_seed_entities", return_value=seed_entities), patch(
+                "collector.resolve_x_cookie_file", return_value=base / "cookies.json"
+            ), patch("collector.x_web_cookie_headers", return_value={"authorization": "Bearer token"}), patch(
+                "collector.fetch_x_web_user_details",
+                side_effect=[
+                    {},
+                    {
+                        "__typename": "User",
+                        "core": {"screen_name": "beta_user", "name": "Beta"},
+                        "legacy": {"followers_count": 1234},
+                    },
+                ],
+            ) as fetch_mock:
+                refreshed = refresh_missing_x_web_profiles(
+                    x_profile_config_path=config_path,
+                    output_path=output_path,
+                    skip_file_path=skip_path,
+                    pause_seconds=0,
+                )
+
+            self.assertEqual([snapshot["account_id"] for snapshot in refreshed], ["beta"])
+            self.assertEqual(fetch_mock.call_count, 2)
+            self.assertIn("alpha", load_x_web_profile_skip(skip_path)["profiles"])
+
+            with patch("collector.load_seed_entities", return_value=seed_entities), patch(
+                "collector.resolve_x_cookie_file", return_value=base / "cookies.json"
+            ), patch("collector.x_web_cookie_headers", return_value={"authorization": "Bearer token"}), patch(
+                "collector.fetch_x_web_user_details"
+            ) as second_fetch_mock:
+                second = refresh_missing_x_web_profiles(
+                    x_profile_config_path=config_path,
+                    output_path=output_path,
+                    skip_file_path=skip_path,
+                    pause_seconds=0,
+                )
+
+            self.assertEqual(second, [])
+            second_fetch_mock.assert_not_called()
 
     def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
         with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
