@@ -1756,22 +1756,33 @@ def refresh_missing_x_web_profiles(
     skip_file_path: Path = X_WEB_PROFILE_SKIP_FILE,
     retry_skipped: bool = False,
 ) -> list[dict[str, object]]:
+    def snapshot_has_x_web_profile(snapshot: dict[str, object]) -> bool:
+        collector_meta = snapshot.get("collector", {})
+        if not isinstance(collector_meta, dict):
+            return False
+        if collector_meta.get("type") == "x_web_profile":
+            return True
+        sources = collector_meta.get("sources", [])
+        if not isinstance(sources, list):
+            return False
+        return any(isinstance(source, dict) and source.get("type") == "x_web_profile" for source in sources)
+
     cookie_file = resolve_x_cookie_file(cookie_file_path)
     if cookie_file is None:
         raise FileNotFoundError("Missing cookie file for authenticated X web profile refresh.")
     headers = x_web_cookie_headers(cookie_file)
     existing_snapshots = load_existing_generated_snapshots(output_path)
-    positive_ids = {
+    refreshed_or_positive_ids = {
         str(snapshot.get("account_id"))
         for snapshot in existing_snapshots
-        if int(snapshot.get("follower_count", 0) or 0) > 0
+        if int(snapshot.get("follower_count", 0) or 0) > 0 or snapshot_has_x_web_profile(snapshot)
     }
     skip_payload = load_x_web_profile_skip(skip_file_path)
     skipped_ids = set(skip_payload.get("profiles", {}).keys()) if not retry_skipped else set()
     sources = [
         source
         for source in load_x_profile_sources(x_profile_config_path)
-        if str(source.get("account_id")) not in positive_ids
+        if str(source.get("account_id")) not in refreshed_or_positive_ids
         and str(source.get("account_id")) not in skipped_ids
         and extract_x_handle_from_url(str(source.get("url", "")))
     ]
@@ -1829,12 +1840,10 @@ def refresh_missing_x_web_profiles(
             "observations": [],
         }
         refreshed = merge_x_web_user_details_into_snapshot(snapshot, details)
-        if int(refreshed.get("follower_count", 0) or 0) > 0:
-            refreshed_snapshots.append(refreshed)
-            print(
-                f"[OK] X web profile {account_id} @{handle}: "
-                f"{refreshed['follower_count']} followers"
-            )
+        refreshed_snapshots.append(refreshed)
+        follower_count = int(refreshed.get("follower_count", 0) or 0)
+        icon_note = " with icon" if refreshed.get("icon_url") else ""
+        print(f"[OK] X web profile {account_id} @{handle}: {follower_count} followers{icon_note}")
         if pause_seconds > 0:
             time.sleep(pause_seconds)
 

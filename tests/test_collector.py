@@ -537,6 +537,60 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual(second, [])
             second_fetch_mock.assert_not_called()
 
+    def test_refresh_missing_x_web_profiles_persists_zero_follower_profiles_once(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            base = Path(tmp_dir)
+            config_path = base / "x_profile_sources.json"
+            output_path = base / "source_snapshots.generated.json"
+            skip_path = base / "x_web_profile_skip.json"
+            config_path.write_text(
+                '[{"account_id": "alpha", "url": "https://x.com/alpha_user"}]',
+                encoding="utf-8",
+            )
+            output_path.write_text(
+                '[{"account_id": "alpha", "profile_url": "https://x.com/alpha_user", "links": [], "follower_count": 0}]',
+                encoding="utf-8",
+            )
+            seed_entities = [{"id": "alpha", "type": "person"}]
+
+            with patch("collector.load_seed_entities", return_value=seed_entities), patch(
+                "collector.resolve_x_cookie_file", return_value=base / "cookies.json"
+            ), patch("collector.x_web_cookie_headers", return_value={"authorization": "Bearer token"}), patch(
+                "collector.fetch_x_web_user_details",
+                return_value={
+                    "__typename": "User",
+                    "core": {"screen_name": "alpha_user", "name": "Alpha"},
+                    "legacy": {"followers_count": 0},
+                    "avatar": {"image_url": "https://pbs.twimg.com/profile_images/example_normal.jpg"},
+                },
+            ) as fetch_mock:
+                refreshed = refresh_missing_x_web_profiles(
+                    x_profile_config_path=config_path,
+                    output_path=output_path,
+                    skip_file_path=skip_path,
+                    pause_seconds=0,
+                )
+
+            self.assertEqual([snapshot["account_id"] for snapshot in refreshed], ["alpha"])
+            self.assertEqual(refreshed[0].get("follower_count", 0), 0)
+            self.assertEqual(refreshed[0]["icon_url"], "https://pbs.twimg.com/profile_images/example_400x400.jpg")
+            self.assertEqual(fetch_mock.call_count, 1)
+
+            with patch("collector.load_seed_entities", return_value=seed_entities), patch(
+                "collector.resolve_x_cookie_file", return_value=base / "cookies.json"
+            ), patch("collector.x_web_cookie_headers", return_value={"authorization": "Bearer token"}), patch(
+                "collector.fetch_x_web_user_details"
+            ) as second_fetch_mock:
+                second = refresh_missing_x_web_profiles(
+                    x_profile_config_path=config_path,
+                    output_path=output_path,
+                    skip_file_path=skip_path,
+                    pause_seconds=0,
+                )
+
+            self.assertEqual(second, [])
+            second_fetch_mock.assert_not_called()
+
     def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
         with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
             snapshots = collect_x_profile_snapshots(

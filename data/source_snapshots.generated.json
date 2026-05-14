@@ -596,7 +596,7 @@
     "summary": "X profile for ら (@238383).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -617,6 +617,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/238383",
+          "collected_at": "2026-05-14T08:52:55+00:00"
         }
       ]
     },
@@ -1257,7 +1262,7 @@
     "summary": "X profile for workout 24/7 (@7_workout).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -1278,6 +1283,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/7_workout",
+          "collected_at": "2026-05-14T08:52:57+00:00"
         }
       ]
     },
@@ -1519,12 +1529,13 @@
     "profile_text": "@a0i_7",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/a0i_7"
+      "https://x.com/a0i_7",
+      "https://x.com/A0i_7"
     ],
     "summary": "X profile for @a0i_7.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -1545,10 +1556,16 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/a0i_7",
+          "collected_at": "2026-05-14T08:52:59+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1926023269909495808/WgvAgAqi_400x400.jpg"
   },
   {
     "account_id": "a31bi8",
@@ -8852,7 +8869,7 @@
     "summary": "X profile for 正論 (@dkZC1Rz0G1SrhDW).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -8873,6 +8890,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/dkZC1Rz0G1SrhDW",
+          "collected_at": "2026-05-14T08:53:00+00:00"
         }
       ]
     },
@@ -21140,7 +21162,7 @@
     "summary": "X profile for Laura Silva (@lv554).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -21161,6 +21183,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/lv554",
+          "collected_at": "2026-05-14T08:53:02+00:00"
         }
       ]
     },
@@ -23334,7 +23361,7 @@
     "summary": "X profile for みずいし (@mizunoex).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -23355,6 +23382,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/mizunoex",
+          "collected_at": "2026-05-14T08:53:03+00:00"
         }
       ]
     },
@@ -28513,12 +28545,13 @@
     "profile_text": "@peben",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/peben"
+      "https://x.com/peben",
+      "https://x.com/peBen"
     ],
     "summary": "X profile for @peben.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -28539,10 +28572,16 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/peben",
+          "collected_at": "2026-05-14T08:53:05+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"
   },
   {
     "account_id": "pen-pen-st",
@@ -30352,7 +30391,7 @@
     "summary": "X profile for putri yunita s. (@putyun).",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -30373,6 +30412,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/putyun",
+          "collected_at": "2026-05-14T08:53:06+00:00"
         }
       ]
     },
@@ -32164,12 +32208,13 @@
     "profile_text": "@ruisboss",
     "pinned_post_text": "",
     "links": [
-      "https://x.com/ruisboss"
+      "https://x.com/ruisboss",
+      "https://x.com/RuisBoss"
     ],
     "summary": "X profile for @ruisboss.",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -32190,10 +32235,16 @@
               ]
             }
           ]
+        },
+        {
+          "type": "x_web_profile",
+          "source_url": "https://x.com/ruisboss",
+          "collected_at": "2026-05-14T08:53:07+00:00"
         }
       ]
     },
-    "observations": []
+    "observations": [],
+    "icon_url": "https://pbs.twimg.com/profile_images/1484159013642448898/mVzbPYAl_400x400.jpg"
   },
   {
     "account_id": "ruru-tinder",
