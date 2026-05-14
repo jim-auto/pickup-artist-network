@@ -1824,6 +1824,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "shun77222218",
+    "type": "person",
+    "name": "@SHUN77222218",
+    "aliases": [
+      "SHUN77222218"
+    ],
+    "description": "なし",
+    "icon_url": "https://pbs.twimg.com/profile_images/1967589203371540482/g6I7x4Jg_400x400.jpg",
+    "follower_count": 3307,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/SHUN77222218"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mikeynosub."
+  },
+  {
     "id": "ssb",
     "type": "person",
     "name": "@SSB",
@@ -2108,6 +2127,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "rxynn",
+    "type": "person",
+    "name": "@_rxynn",
+    "aliases": [
+      "_rxynn"
+    ],
+    "description": "マチアプ運用✖️女性攻略｜ 経験人数300人超えI元非モテ→美女を選べる男に｜ 女性に選ばれるトークスクリプト、リアルな女性攻略の様子をお届け（🍎、🍐、🗼🍛、🔥攻略済み）｜ Tiktokもやってます！長期コンサルはDMまで",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040616501888327680/sZL1nSE6_400x400.jpg",
+    "follower_count": 917,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/_rxynn"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: feitan-sub."
   },
   {
     "id": "yuno-angel",
@@ -7714,6 +7752,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "oyasugaoo",
+    "type": "person",
+    "name": "@oyasugaoo",
+    "aliases": [
+      "oyasugaoo"
+    ],
+    "description": "パスなしソロスト70↑ 味噌と遠征🎩 箱とか入れて〜100 元鬼ブラックリーマン/ナンパ/マネタイズ 師匠→@emuchi_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/1980282024339345409/uvPnXdOt_400x400.jpg",
+    "follower_count": 83,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/oyasugaoo"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: emuchi-pua."
+  },
+  {
     "id": "ozora-krinuki",
     "type": "person",
     "name": "@ozora_krinuki",
@@ -7731,6 +7788,44 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "pa-nanx",
+    "type": "person",
+    "name": "@pa_nanX",
+    "aliases": [
+      "pa_nanX"
+    ],
+    "description": "ストリートナンパ/アラフォー/DT(196/200)/MBH 210926~/活動報告/避難垢:@pananXYZ",
+    "icon_url": "https://pbs.twimg.com/profile_images/2042507416483565569/_kNOUuqq_400x400.jpg",
+    "follower_count": 371,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pa_nanX"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: cx-lm5."
+  },
+  {
+    "id": "paichan-go",
+    "type": "person",
+    "name": "@paichan_go",
+    "aliases": [
+      "paichan_go"
+    ],
+    "description": "ちぎゅおじ/🐙勢 /ゆってぃ長期7期生 /5月15日〜2ヶ月間講習／講習中1即/1即",
+    "icon_url": "https://pbs.twimg.com/profile_images/1097544119943979008/TJAbeihe_400x400.jpg",
+    "follower_count": 446,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/paichan_go"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: bokupaipan."
   },
   {
     "id": "pako-dai",
@@ -7751,6 +7846,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "pananxyz",
+    "type": "person",
+    "name": "@pananXYZ",
+    "aliases": [
+      "pananXYZ"
+    ],
+    "description": "アラフォー童貞→ストリートナンパで経験人数150人OVER/僕に出来たんだから、あなたに出来ないはずがない/活動垢:@pa_nanX",
+    "icon_url": "https://pbs.twimg.com/profile_images/2049459045002825728/1_yg2mWc_400x400.jpg",
+    "follower_count": 51,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/pananXYZ"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: cx-lm5."
   },
   {
     "id": "pi-uou",
@@ -9077,6 +9191,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "torahiko-5963",
+    "type": "person",
+    "name": "@torahiko_5963",
+    "aliases": [
+      "torahiko_5963"
+    ],
+    "description": "ナソパ・マチアプ･恋愛指導者｜思想強めの元カリスマスカウト｜路上声かけ7年間で1万人以上の女性を見てきた｜ 女に動じない鋼のメンタルを作る 元スカウトだからこそ言えるダークで表では人が言いたがらない実践的な技術を伝授｜ 相談事など気軽にDMください💌",
+    "icon_url": "https://pbs.twimg.com/profile_images/2044776218239877120/7wtd2pkG_400x400.jpg",
+    "follower_count": 505,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/torahiko_5963"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: feitan-sub."
+  },
+  {
     "id": "toramar-gekok",
     "type": "person",
     "name": "@toramar_gekok",
@@ -9132,6 +9265,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "tribe11119999",
+    "type": "person",
+    "name": "@tribe11119999",
+    "aliases": [
+      "tribe11119999"
+    ],
+    "description": "こりらM氏講習生 202508スタート",
+    "icon_url": "https://pbs.twimg.com/profile_images/1959977235714347008/LG9inRVN_400x400.jpg",
+    "follower_count": 27,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/tribe11119999"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: cx-lm5."
   },
   {
     "id": "tryc6",
@@ -9344,6 +9496,44 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
+    "id": "yamineko-note",
+    "type": "person",
+    "name": "@yamineko_note",
+    "aliases": [
+      "yamineko_note"
+    ],
+    "description": "アラフォー既婚者。ほんの少しだけ日常から離れた話。既婚者マッチングアプリのリアルと攻略法を発信。 note書いてます↓",
+    "icon_url": "https://pbs.twimg.com/profile_images/2034063135712362496/NdDO5RRI_400x400.jpg",
+    "follower_count": 268,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yamineko_note"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mote-ren-ai7."
+  },
+  {
+    "id": "yatora-matching",
+    "type": "person",
+    "name": "@yatora_matching",
+    "aliases": [
+      "yatora_matching"
+    ],
+    "description": "PUA３０代 理想の結婚相手を探すために活動しています。 ストアプリ二刀流 現在144即 マッチングアプリ、Withの運用が大得意です。 （Withだけで100人越え） 写真撮影、アプリプロフ添削完全無料でやりますので、DMください。",
+    "icon_url": "https://pbs.twimg.com/profile_images/2039314873377812480/ckrTv71M_400x400.jpg",
+    "follower_count": 75,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yatora_matching"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mine-chan-pua."
   },
   {
     "id": "yattesayonaraa",
