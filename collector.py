@@ -24,6 +24,31 @@ X_COOKIE_FILE = Path("data/.x_cookies.json")
 DEFAULT_TIMEOUT = 20
 X_API_USERS_BY_URL = "https://api.x.com/2/users/by"
 X_API_USER_FIELDS = "description,location,name,profile_image_url,public_metrics,url,username,verified"
+X_WEB_USER_BY_SCREEN_NAME_URL = "https://x.com/i/api/graphql/IGgvgiOx4QZndDHuD3x9TQ/UserByScreenName"
+X_WEB_BEARER_TOKEN = (
+    "Bearer "
+    "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D"
+    "1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
+)
+X_WEB_USER_FEATURES = {
+    "hidden_profile_subscriptions_enabled": True,
+    "profile_label_improvements_pcf_label_in_post_enabled": True,
+    "responsive_web_profile_redirect_enabled": False,
+    "rweb_tipjar_consumption_enabled": False,
+    "verified_phone_label_enabled": False,
+    "subscriptions_verification_info_is_identity_verified_enabled": True,
+    "subscriptions_verification_info_verified_since_enabled": True,
+    "highlights_tweets_tab_ui_enabled": True,
+    "responsive_web_twitter_article_notes_tab_enabled": True,
+    "subscriptions_feature_can_gift_premium": True,
+    "creator_subscriptions_tweet_preview_api_enabled": True,
+    "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+    "responsive_web_graphql_timeline_navigation_enabled": True,
+}
+X_WEB_USER_FIELD_TOGGLES = {
+    "withPayments": False,
+    "withAuxiliaryUserLabels": True,
+}
 
 
 def resolve_x_cookie_file(cookie_file_path: Path | None) -> Path | None:
@@ -934,6 +959,94 @@ def merge_x_api_user_details_into_snapshot(
     return merged
 
 
+def x_web_cookie_headers(cookie_file_path: Path) -> dict[str, str]:
+    cookies = load_playwright_cookies(cookie_file_path)
+    cookie_jar = {str(cookie["name"]): str(cookie["value"]) for cookie in cookies}
+    auth_token = cookie_jar.get("auth_token", "")
+    csrf_token = cookie_jar.get("ct0", "")
+    if not auth_token or not csrf_token:
+        raise RuntimeError(f"Cookie file must include auth_token and ct0: {cookie_file_path}")
+    return {
+        "authorization": X_WEB_BEARER_TOKEN,
+        "x-csrf-token": csrf_token,
+        "x-twitter-active-user": "yes",
+        "x-twitter-auth-type": "OAuth2Session",
+        "x-twitter-client-language": "ja",
+        "user-agent": "Mozilla/5.0",
+        "cookie": "; ".join(f"{key}={value}" for key, value in cookie_jar.items()),
+    }
+
+
+def fetch_x_web_user_details(
+    handle: str,
+    headers: dict[str, str],
+    timeout: int = DEFAULT_TIMEOUT,
+) -> dict[str, object]:
+    params = {
+        "variables": json.dumps(
+            {"screen_name": handle, "withGrokTranslatedBio": True},
+            separators=(",", ":"),
+        ),
+        "features": json.dumps(X_WEB_USER_FEATURES, separators=(",", ":")),
+        "fieldToggles": json.dumps(X_WEB_USER_FIELD_TOGGLES, separators=(",", ":")),
+    }
+    response = requests.get(
+        X_WEB_USER_BY_SCREEN_NAME_URL,
+        params=params,
+        headers={**headers, "referer": f"https://x.com/{handle}"},
+        timeout=timeout,
+    )
+    if response.status_code == 429:
+        raise RuntimeError("X web profile lookup was rate limited.")
+    response.raise_for_status()
+    payload = response.json()
+    result = (((payload.get("data") or {}).get("user") or {}).get("result") or {})
+    if result.get("__typename") != "User":
+        return {}
+    return result
+
+
+def merge_x_web_user_details_into_snapshot(
+    snapshot: dict[str, object],
+    user_details: dict[str, object],
+) -> dict[str, object]:
+    core = user_details.get("core", {}) if isinstance(user_details.get("core"), dict) else {}
+    legacy = user_details.get("legacy", {}) if isinstance(user_details.get("legacy"), dict) else {}
+    avatar = user_details.get("avatar", {}) if isinstance(user_details.get("avatar"), dict) else {}
+    location_payload = user_details.get("location", {}) if isinstance(user_details.get("location"), dict) else {}
+    screen_name = normalize_embedded_text(core.get("screen_name"))
+    display_name = normalize_embedded_text(core.get("name"))
+    description = normalize_embedded_text(legacy.get("description"))
+    location = normalize_embedded_text(location_payload.get("location") or legacy.get("location"))
+    icon_url = normalize_x_profile_image_url(
+        str(avatar.get("image_url") or legacy.get("profile_image_url_https") or "").strip()
+    )
+    follower_count = extract_follower_count_from_user_object(
+        {
+            "followers_count": legacy.get("followers_count"),
+            "normal_followers_count": legacy.get("normal_followers_count"),
+        }
+    )
+    api_payload = {
+        "username": screen_name,
+        "name": display_name,
+        "description": description,
+        "location": location,
+        "profile_image_url": icon_url,
+        "public_metrics": {"followers_count": follower_count},
+    }
+    merged = merge_x_api_user_details_into_snapshot(snapshot, api_payload)
+    merged["review_notes"] = " ".join(
+        dict.fromkeys(
+            [
+                str(merged.get("review_notes", "")).strip(),
+                "Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+            ]
+        )
+    ).strip()
+    return merged
+
+
 def extract_display_name_from_title(raw_title: str, handle: str) -> str:
     if not raw_title:
         return ""
@@ -1506,6 +1619,93 @@ def preserve_missing_generated_snapshots(
     return preserved
 
 
+def refresh_missing_x_web_profiles(
+    *,
+    x_profile_config_path: Path = X_PROFILE_CONFIG,
+    output_path: Path = GENERATED_SNAPSHOT_FILE,
+    cookie_file_path: Path | None = None,
+    timeout: int = DEFAULT_TIMEOUT,
+    limit: int | None = None,
+    pause_seconds: float = 0.25,
+) -> list[dict[str, object]]:
+    cookie_file = resolve_x_cookie_file(cookie_file_path)
+    if cookie_file is None:
+        raise FileNotFoundError("Missing cookie file for authenticated X web profile refresh.")
+    headers = x_web_cookie_headers(cookie_file)
+    existing_snapshots = load_existing_generated_snapshots(output_path)
+    positive_ids = {
+        str(snapshot.get("account_id"))
+        for snapshot in existing_snapshots
+        if int(snapshot.get("follower_count", 0) or 0) > 0
+    }
+    sources = [
+        source
+        for source in load_x_profile_sources(x_profile_config_path)
+        if str(source.get("account_id")) not in positive_ids
+        and extract_x_handle_from_url(str(source.get("url", "")))
+    ]
+    sources.sort(key=lambda source: str(source["account_id"]))
+    if limit is not None:
+        sources = sources[: max(0, limit)]
+
+    refreshed_snapshots: list[dict[str, object]] = []
+    for index, source in enumerate(sources, 1):
+        account_id = str(source["account_id"])
+        handle = extract_x_handle_from_url(str(source["url"]))
+        if not handle:
+            continue
+        try:
+            details = fetch_x_web_user_details(handle, headers, timeout=timeout)
+        except RuntimeError as exc:
+            if "rate limited" in str(exc):
+                print(f"[WARN] stopped X web profile refresh at {index}/{len(sources)}: {exc}")
+                break
+            print(f"[WARN] skipped X web profile {handle}: {exc}")
+            continue
+        except requests.RequestException as exc:
+            print(f"[WARN] skipped X web profile {handle}: {exc}")
+            continue
+        if not details:
+            continue
+        snapshot = {
+            "account_id": account_id,
+            "profile_url": str(source["url"]),
+            "pinned_post_url": "",
+            "profile_text": f"@{handle}",
+            "pinned_post_text": "",
+            "links": [str(source["url"])],
+            "summary": f"X profile for @{handle}.",
+            "evidence_kind": "fact",
+            "needs_review": True,
+            "review_notes": "",
+            "summary_evidence_kind": "fact",
+            "snapshot_origin": "generated",
+            "collector": {
+                "type": "x_web_profile",
+                "source_url": str(source["url"]),
+                "collected_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            },
+            "observations": [],
+        }
+        refreshed = merge_x_web_user_details_into_snapshot(snapshot, details)
+        if int(refreshed.get("follower_count", 0) or 0) > 0:
+            refreshed_snapshots.append(refreshed)
+            print(
+                f"[OK] X web profile {account_id} @{handle}: "
+                f"{refreshed['follower_count']} followers"
+            )
+        if pause_seconds > 0:
+            time.sleep(pause_seconds)
+
+    if refreshed_snapshots:
+        merged = merge_generated_snapshots([*existing_snapshots, *refreshed_snapshots])
+        output_path.write_text(
+            json.dumps(merged, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    return refreshed_snapshots
+
+
 def collect_to_file(
     config_path: Path = COLLECTOR_CONFIG,
     x_profile_config_path: Path = X_PROFILE_CONFIG,
@@ -1662,6 +1862,25 @@ def main() -> None:
         action="store_true",
         help="Skip X profile HTTP collection; refresh public-page snapshots only and preserve existing X snapshots.",
     )
+    parser.add_argument(
+        "--refresh-missing-x-web-profiles",
+        action="store_true",
+        help="Use authenticated X web UserByScreenName public fields to fill missing follower_count/icon_url snapshots.",
+    )
+    parser.add_argument(
+        "--x-web-refresh-limit",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Limit how many missing X web profiles to try in one run.",
+    )
+    parser.add_argument(
+        "--x-web-refresh-pause",
+        type=float,
+        default=0.25,
+        metavar="SECONDS",
+        help="Pause between authenticated X web profile lookups.",
+    )
     args = parser.parse_args()
     args.cookie_file = resolve_x_cookie_file(args.cookie_file)
 
@@ -1675,6 +1894,17 @@ def main() -> None:
     if args.login_x_auto:
         saved_path = auto_login_x_and_save_auth_state(args.auth_state, dotenv_path=args.dotenv)
         print(f"[OK] saved X auth state -> {saved_path}")
+        return
+    if args.refresh_missing_x_web_profiles:
+        refreshed = refresh_missing_x_web_profiles(
+            x_profile_config_path=args.x_profile_config,
+            output_path=args.output,
+            cookie_file_path=args.cookie_file,
+            timeout=args.timeout,
+            limit=args.x_web_refresh_limit,
+            pause_seconds=args.x_web_refresh_pause,
+        )
+        print(f"[OK] refreshed {len(refreshed)} missing X web profiles -> {args.output}")
         return
 
     snapshots = collect_to_file(

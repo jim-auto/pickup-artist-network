@@ -14,9 +14,11 @@ from collector import (
     extract_x_following_handles_from_hrefs,
     extract_x_profile_snapshot,
     fetch_x_api_user_details,
+    fetch_x_web_user_details,
     load_x_api_bearer_token,
     merge_generated_snapshots,
     merge_x_api_user_details_into_snapshot,
+    merge_x_web_user_details_into_snapshot,
     preserve_missing_generated_snapshots,
     load_playwright_cookies,
     load_dotenv_values,
@@ -373,6 +375,54 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(merged["icon_url"], "https://pbs.twimg.com/profile_images/example_400x400.jpg")
         self.assertEqual(merged["summary"], "Fresh public description")
         self.assertIn("Location: Tokyo", merged["profile_text"])
+
+    def test_fetch_x_web_user_details_parses_user_by_screen_name(self) -> None:
+        response = Mock()
+        response.status_code = 200
+        response.ok = True
+        response.json.return_value = {
+            "data": {
+                "user": {
+                    "result": {
+                        "__typename": "User",
+                        "core": {"screen_name": "alpha_user"},
+                        "legacy": {"followers_count": 1234},
+                    }
+                }
+            }
+        }
+        response.raise_for_status.return_value = None
+        with patch("collector.requests.get", return_value=response) as get_mock:
+            details = fetch_x_web_user_details(
+                "alpha_user",
+                {"authorization": "Bearer token", "x-csrf-token": "ct0"},
+            )
+
+        self.assertEqual(details["legacy"]["followers_count"], 1234)
+        self.assertIn("UserByScreenName", get_mock.call_args.args[0])
+
+    def test_fetch_x_web_user_details_raises_on_rate_limit(self) -> None:
+        response = Mock()
+        response.status_code = 429
+        response.ok = False
+        with patch("collector.requests.get", return_value=response):
+            with self.assertRaisesRegex(RuntimeError, "rate limited"):
+                fetch_x_web_user_details("alpha_user", {"authorization": "Bearer token"})
+
+    def test_merge_x_web_user_details_into_snapshot_updates_followers(self) -> None:
+        merged = merge_x_web_user_details_into_snapshot(
+            {"account_id": "alpha", "links": [], "follower_count": 0},
+            {
+                "core": {"screen_name": "alpha_user", "name": "Alpha"},
+                "legacy": {"description": "Fresh bio", "followers_count": 1234},
+                "avatar": {"image_url": "https://pbs.twimg.com/profile_images/example_normal.jpg"},
+                "location": {"location": "Tokyo"},
+            },
+        )
+
+        self.assertEqual(merged["follower_count"], 1234)
+        self.assertEqual(merged["icon_url"], "https://pbs.twimg.com/profile_images/example_400x400.jpg")
+        self.assertIn("UserByScreenName", merged["review_notes"])
 
     def test_collect_x_profile_snapshots_falls_back_when_profile_fetch_fails(self) -> None:
         with patch("collector.fetch_page", side_effect=requests.RequestException("boom")):
