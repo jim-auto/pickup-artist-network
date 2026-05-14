@@ -664,6 +664,12 @@ def snapshot_priority(snapshot: dict[str, object]) -> int:
         return 100
     collector_meta = snapshot.get("collector", {})
     collector_type = collector_meta.get("type") if isinstance(collector_meta, dict) else ""
+    if not collector_type and isinstance(collector_meta, dict):
+        for source in collector_meta.get("sources", []):
+            if isinstance(source, dict) and source.get("type") == "x_web_profile":
+                return 35
+    if collector_type == "x_web_profile":
+        return 35
     if collector_type == "x_profile":
         return 30
     if collector_type == "public_page":

@@ -250,6 +250,34 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertEqual(merged[0]["summary"], "Manual summary")
         self.assertEqual(merged[0]["follower_count"], 4875)
 
+    def test_x_web_profile_snapshot_can_override_generated_profile_gap(self) -> None:
+        merged = merge_snapshots_by_account(
+            [],
+            [
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "summary": "HTML fallback",
+                    "follower_count": 0,
+                    "collector": {"type": "x_profile"},
+                    "snapshot_origin": "generated",
+                    "observations": [],
+                },
+                {
+                    "account_id": "alpha",
+                    "profile_url": "https://x.com/alpha",
+                    "summary": "Authenticated web profile",
+                    "follower_count": 5860,
+                    "collector": {"type": "x_web_profile"},
+                    "snapshot_origin": "generated",
+                    "observations": [],
+                },
+            ],
+        )
+
+        self.assertEqual(merged[0]["summary"], "Authenticated web profile")
+        self.assertEqual(merged[0]["follower_count"], 5860)
+
     def test_load_generated_snapshots_combines_collector_output_and_hint_fixtures(self) -> None:
         generated_snapshots = [{"account_id": "alpha", "profile_url": "https://example.com/alpha"}]
         hint_snapshots = [{"account_id": "beta", "profile_url": "manual://generated-hint/beta"}]
