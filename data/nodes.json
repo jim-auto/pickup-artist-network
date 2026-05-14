@@ -9593,6 +9593,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "yosame-kagami",
+    "type": "person",
+    "name": "@yosame_kagami",
+    "aliases": [
+      "yosame_kagami"
+    ],
+    "description": "旅行先でのナンパが趣味。職業はタイミーさん。デカ🥧に弱いアラサーです。大体60即くらい。路上と🍎🔥がメイン。時々GG。",
+    "icon_url": "https://pbs.twimg.com/profile_images/2040701712865140736/d6go8Vlp_400x400.jpg",
+    "follower_count": 18,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yosame_kagami"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: cx-lm5."
+  },
+  {
     "id": "yossy-pua",
     "type": "person",
     "name": "@yossy_pua",

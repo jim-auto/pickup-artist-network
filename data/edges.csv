@@ -338,6 +338,7 @@ cx-lm5,x,affiliation,Profile links point to X.,https://x.com/cx_lm5,0.86,fact,Tr
 cx-lm5,pa-nanx,follow,Authenticated X following list shows this account follows @pa_nanX.,https://x.com/cx_lm5 | https://x.com/pa_nanX,0.64,mixed,True,Following-guided public profile screening from data/growth/following_screened.json.
 cx-lm5,pananxyz,follow,Authenticated X following list shows this account follows @pananXYZ.,https://x.com/cx_lm5 | https://x.com/pananXYZ,0.64,mixed,True,Following-guided public profile screening from data/growth/following_screened.json.
 cx-lm5,tribe11119999,follow,Authenticated X following list shows this account follows @tribe11119999.,https://x.com/cx_lm5 | https://x.com/tribe11119999,0.64,mixed,True,Following-guided public profile screening from data/growth/following_screened.json.
+cx-lm5,yosame-kagami,follow,Authenticated X following list shows this account follows @yosame_kagami.,https://x.com/cx_lm5 | https://x.com/yosame_kagami,0.64,mixed,True,Following-guided public profile screening from data/growth/following_screened.json.
 cx7flif6cz1tkxe,x,affiliation,Profile links point to X.,https://x.com/CX7FLif6cz1tkxe,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 cx7flif6cz1tkxe,note,affiliation,Profile links point to note.,https://x.com/CX7FLif6cz1tkxe | https://note.com/sekinan48,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 cx7flif6cz1tkxe,pua-yossy,profile_mention,Approved review candidate from profile_text mentioning ヨッシー.,https://x.com/CX7FLif6cz1tkxe | https://note.com/sekinan48,0.4,interpretation,False,"Approved from review candidate cx7flif6cz1tkxe__pua-yossy__profile_mention. Original evidence: ヨッシー (@CX7FLif6cz1tkxe)
@@ -1879,6 +1880,7 @@ yolu-pua,x,affiliation,Profile links point to X.,https://x.com/yolu_pua,0.86,fac
 yolu-pua,yolusub,affiliation,Public X profile explicitly links @yolusub as a related account.,https://x.com/yolu_pua,0.72,fact,False,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 yolusub,x,affiliation,Profile links point to X.,https://x.com/yolusub,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 yomaru-street,x,affiliation,Profile links point to X.,https://x.com/yomaru_street,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
+yosame-kagami,x,affiliation,Profile links point to X.,https://x.com/yosame_kagami,0.86,fact,True,Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: cx-lm5.
 yossy-pua,x,affiliation,Profile links point to X.,https://x.com/yossy_pua,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 yossy-st19,x,affiliation,Profile links point to X.,https://x.com/yossy_st19,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
 youkun-pua,x,affiliation,Profile links point to X.,https://x.com/youkun_pua,0.86,fact,True,Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.
@@ -2400,7 +2402,7 @@ kibaaaana,streets-bach,affiliation,キーワードクラスタ「mスト部」�
 kibaaaana,bach-sokuhou,affiliation,キーワードクラスタ「mスト部」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。,,0.32,interpretation,True,Keyword cluster 'mスト部' auto-edge. Shared neighbors: 2.
 street-fami,streets-bach,affiliation,キーワードクラスタ「mスト部」に属し、共通のつながりが 2 件あるため同クラスタ関係として推定（自動）。,,0.32,interpretation,True,Keyword cluster 'mスト部' auto-edge. Shared neighbors: 2.
 street-fami,bach-sokuhou,affiliation,キーワードクラスタ「mスト部」に属し、共通のつながりが 3 件あるため同クラスタ関係として推定（自動）。,,0.32,interpretation,True,Keyword cluster 'mスト部' auto-edge. Shared neighbors: 3.
-street-fami,cx-lm5,affiliation,キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。,,0.27,interpretation,True,Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique.
+cx-lm5,street-fami,affiliation,キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。,,0.27,interpretation,True,Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique.
 kibaaaana,cx-lm5,affiliation,キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。,,0.27,interpretation,True,Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique.
 streets-bach,cx-lm5,affiliation,キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。,,0.27,interpretation,True,Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique.
 bach-sokuhou,cx-lm5,affiliation,キーワードクラスタ「mスト部」に同時所属するため、クラスタ内の近い関係として補助接続（自動）。,,0.27,interpretation,True,Keyword cluster 'mスト部' bridge auto-edge. Added with per-node caps to avoid a full clique.
@@ -3844,7 +3846,7 @@ ebios1000,norinori-10goku,affiliation,プロフィール特徴語（地方、旅
 ebios1000,suzuniki-pua,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
 ebios1000,dayofikuta,affiliation,プロフィール特徴語（ファッション、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ファッション, 旅ナンパ. Score: 5.50."
 ebios1000,wlkrndstrt,affiliation,プロフィール特徴語（ファッション、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ファッション, 即. Score: 3.45."
-ebios1000,kayakkupua,affiliation,プロフィール特徴語（ファッション、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ファッション, 即. Score: 3.45."
+ebios1000,yosame-kagami,affiliation,プロフィール特徴語（即、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 旅ナンパ. Score: 3.45."
 change-jp,kitiku-pu,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
 change-jp,gogo-nishino,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
 change-jp,edadesu1111,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
@@ -3983,12 +3985,12 @@ shuri-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA、恋愛、�
 shuri-pua,senga-pua,affiliation,プロフィール特徴語（PUA、恋愛、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 恋愛, 講習. Score: 3.20."
 clubtropixxx1,kuma-661,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 clubtropixxx1,z1xnp6,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
+clubtropixxx1,yosame-kagami,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 clubtropixxx1,genki-japan,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 clubtropixxx1,nannpashitai,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 clubtropixxx1,dayofikuta,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 clubtropixxx1,1x5r7zr6nufyswr,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 clubtropixxx1,dobukasu123,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
-clubtropixxx1,suzuniki-pua,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 kw1ew,soku-worker2,affiliation,プロフィール特徴語（SNSマーケ、アプリ/オンライン、ビジネス、マッチングアプリ、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, アプリ/オンライン, ビジネス, マッチングアプリ, モテ. Score: 6.45."
 kw1ew,himotenohoshi,affiliation,プロフィール特徴語（SNSマーケ、ビジネス、マッチングアプリ、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, ビジネス, マッチングアプリ, モテ. Score: 5.90."
 kw1ew,nakame-pua,affiliation,プロフィール特徴語（SNSマーケ、ビジネス、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, ビジネス, モテ. Score: 4.90."
@@ -4421,7 +4423,7 @@ z1xnp6,norinori-10goku,affiliation,プロフィール特徴語（アプリ/オ�
 z1xnp6,nannpashitai,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
 z1xnp6,suzuniki-pua,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
 z1xnp6,1x5r7zr6nufyswr,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
-z1xnp6,nanpayasuno,affiliation,プロフィール特徴語（アプリ/オンライン、ストリート、ナンパ、マッチングアプリ、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ストリート, ナンパ, マッチングアプリ, 講習. Score: 3.70."
+z1xnp6,yosame-kagami,affiliation,プロフィール特徴語（ストリート、ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ, 旅ナンパ. Score: 4.00."
 mange-pua,yolu-pua,affiliation,プロフィール特徴語（PUA、クラブ/箱、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, クラブ/箱, ナンパ. Score: 2.40."
 mange-pua,riokun-pua,affiliation,プロフィール特徴語（PUA、クラブ/箱、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, クラブ/箱, ナンパ. Score: 2.40."
 mange-pua,puro-nampa,affiliation,プロフィール特徴語（PUA、クラブ/箱、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, クラブ/箱, ナンパ. Score: 2.40."
@@ -4454,11 +4456,11 @@ ponponpon142,pananxyz,affiliation,プロフィール特徴語（ストリート�
 ponponpon142,nanpayasuno,affiliation,プロフィール特徴語（ストリート、ナンパ、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ, 経験人数. Score: 3.20."
 ponponpon142,pua-vinsmoke,affiliation,プロフィール特徴語（ストリート、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, 経験人数. Score: 2.85."
 1x5r7zr6nufyswr,nannpashitai,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
-1x5r7zr6nufyswr,norinori-10goku,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
+1x5r7zr6nufyswr,suzuniki-pua,affiliation,プロフィール特徴語（地方、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 地方, 旅ナンパ. Score: 6.10."
 liberty-pai,nanpa-pegasasu,affiliation,プロフィール特徴語（アプリ/オンライン、ナンパ、マッチングアプリ、モテ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ナンパ, マッチングアプリ, モテ, 美容/整形. Score: 4.60."
 liberty-pai,zenitsu-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、モテ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, モテ, 美容/整形. Score: 4.25."
-liberty-pai,korilla-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、モテ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, モテ, 美容/整形. Score: 4.25."
 liberty-pai,norinori-10goku,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、モテ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, モテ, 美容/整形. Score: 4.25."
+liberty-pai,korilla-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、モテ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, モテ, 美容/整形. Score: 4.25."
 liberty-pai,kaji-kaji-3,affiliation,プロフィール特徴語（アプリ/オンライン、ナンパ、マッチングアプリ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ナンパ, マッチングアプリ, 美容/整形. Score: 3.60."
 matagi-pua,yuu-renai,affiliation,プロフィール特徴語（SNSマーケ、ストリート、ナンパ、美女）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, ストリート, ナンパ, 美女. Score: 5.60."
 matagi-pua,nanpayasuno,affiliation,プロフィール特徴語（SNSマーケ、ストリート、ナンパ、美女）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, ストリート, ナンパ, 美女. Score: 5.60."
@@ -4523,8 +4525,8 @@ anus-pua,renren-pua,affiliation,プロフィール特徴語（PUA、即）が重
 anus-pua,t3vde,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 anus-pua,ststst-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 anus-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
+anus-pua,kayakkupua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 anus-pua,ak1-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
-anus-pua,pika-sublol,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 midori-nanpa,nanpasd,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 midori-nanpa,ryo-mindup,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 midori-nanpa,nanpahamehame,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -4641,9 +4643,9 @@ shuta-pua,t3vde,affiliation,プロフィール特徴語（PUA、即）が重な�
 shuta-pua,doc-mote,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 shuta-pua,renren-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 shuta-pua,ststst-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
+shuta-pua,pika-sublol,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 shuta-pua,5sato-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 shuta-pua,juru-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
-shuta-pua,pua-rusu,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 streetbucha,vegeta-street,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 streetbucha,lonely-stonan,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 streetbucha,nanpahamehame,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
@@ -4706,12 +4708,12 @@ minato-pua,mine-chan-pua,affiliation,プロフィール特徴語（PUA、夜職�
 minato-pua,nakame-pua,affiliation,プロフィール特徴語（PUA、夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 夜職. Score: 2.65."
 minato-pua,machapua3,affiliation,プロフィール特徴語（PUA、夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 夜職. Score: 2.65."
 asai-pua,t3vde,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
+asai-pua,pua-rusu,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 asai-pua,onaken-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 asai-pua,doc-mote,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 asai-pua,renren-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 asai-pua,ststst-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 asai-pua,kayakkupua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
-asai-pua,5sato-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 seikoupenguin,vegeta-street,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 seikoupenguin,lonely-stonan,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 seikoupenguin,nanpahamehame,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
@@ -4841,17 +4843,17 @@ pineapple-pua,neru-pua,affiliation,プロフィール特徴語（PUA、即、月
 naepua,task-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 naepua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 naepua,luckypua017,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+naepua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 naepua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 naepua,simba-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 naepua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-naepua,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+jackie-pua,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 jackie-pua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-jackie-pua,renren-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 choumi-pua,tomo-pua11,affiliation,プロフィール特徴語（PUA、攻略）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 攻略. Score: 2.65."
 choumi-pua,scream-pua,affiliation,プロフィール特徴語（PUA、攻略）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 攻略. Score: 2.65."
 choumi-pua,task-pua,affiliation,プロフィール特徴語（PUA、攻略）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 攻略. Score: 2.65."
@@ -4880,7 +4882,7 @@ vo-gnj,miraitinder4545,affiliation,プロフィール特徴語（裏垢）が重
 vo-gnj,senju-insta,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 vo-gnj,miraitinder6969,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 vo-gnj,simba-pua,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
-vo-gnj,machapua3,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
+vo-gnj,norinori-10goku,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 emu-pua,pua-sakaki-40,affiliation,プロフィール特徴語（PUA、ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ストリート. Score: 1.60."
 emu-pua,mirinn-pua,affiliation,プロフィール特徴語（PUA、ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ストリート. Score: 1.60."
 emu-pua,instapua,affiliation,プロフィール特徴語（PUA、ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ストリート. Score: 1.60."
@@ -4909,6 +4911,7 @@ hirosi444,pua-vinsmoke,affiliation,プロフィール特徴語（アプリ/オ�
 hirosi444,z1xnp6,affiliation,プロフィール特徴語（アプリ/オンライン、ストリート、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ストリート, マッチングアプリ. Score: 2.80."
 hirosi444,hiroyukinanpa,affiliation,プロフィール特徴語（アプリ/オンライン、ストリート、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ストリート, マッチングアプリ. Score: 2.80."
 hirosi444,syu-puanet,affiliation,プロフィール特徴語（アプリ/オンライン、ストリート、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ストリート, マッチングアプリ. Score: 2.80."
+long-island-pua,renren-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 long-island-pua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 long-island-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 long-island-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -4916,7 +4919,6 @@ long-island-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が�
 long-island-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 long-island-pua,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 long-island-pua,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-long-island-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 fake-pua,juru-pua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
 fake-pua,onaken-pua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
 fake-pua,riokun-pua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
@@ -5013,6 +5015,7 @@ ajnanpa,nanpaoh-yuya,affiliation,プロフィール特徴語（ナンパ）が�
 ajnanpa,nakayamasoku,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 ajnanpa,maya159r,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 ajnanpa,weekly-nanpa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
+akikan-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 akikan-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 akikan-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 akikan-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5020,7 +5023,6 @@ akikan-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重な�
 akikan-pua,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 akikan-pua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 akikan-pua,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-akikan-pua,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 amato-nanpa,ryo-mindup,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 amato-nanpa,gintoki-street,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 amato-nanpa,nanpahamehame,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -5028,6 +5030,7 @@ amato-nanpa,dawson-nst,affiliation,プロフィール特徴語（ナンパ）が
 amato-nanpa,wlkrndstrt,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 amato-nanpa,ao-nampa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 amato-nanpa,chiba-gqn,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
+ararenocha-pua,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ararenocha-pua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ararenocha-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ararenocha-pua,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5035,7 +5038,7 @@ ararenocha-pua,renren-pua,affiliation,プロフィール特徴語（PUA）が重
 ararenocha-pua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ararenocha-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ararenocha-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-ararenocha-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+arrester-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 arrester-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 arrester-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 arrester-pua,ak1-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5043,7 +5046,7 @@ arrester-pua,pua-core,affiliation,プロフィール特徴語（PUA）が重な�
 arrester-pua,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 arrester-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 arrester-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-arrester-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+baoupua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 baoupua,luckypua017,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 baoupua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 baoupua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5051,7 +5054,7 @@ baoupua,pua-rusu,affiliation,プロフィール特徴語（PUA）が重なるた
 baoupua,simba-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 baoupua,mine-chan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 baoupua,nami-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-baoupua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+chinkawa-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 chinkawa-pua,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 chinkawa-pua,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 chinkawa-pua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5059,13 +5062,13 @@ chinkawa-pua,shuri-pua,affiliation,プロフィール特徴語（PUA）が重な
 chinkawa-pua,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 chinkawa-pua,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 chinkawa-pua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-chinkawa-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 choro-tinder3,ura-kaneki-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 choro-tinder3,tindertips1000,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 choro-tinder3,hapuchantinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 choro-tinder3,haputinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 choro-tinder3,mero-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 choro-tinder3,ruru-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+eren-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 eren-pua,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 eren-pua,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 eren-pua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5073,12 +5076,12 @@ eren-pua,renren-pua,affiliation,プロフィール特徴語（PUA）が重なる
 eren-pua,anshin-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 eren-pua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 eren-pua,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-eren-pua,kurita-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 haputinder,solty-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 haputinder,momonga-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 haputinder,bakunakioji,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 haputinder,ayato-691,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 haputinder,tinder109,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+hzen-pua,kurita-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hzen-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hzen-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hzen-pua,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5086,7 +5089,7 @@ hzen-pua,motebody-pua,affiliation,プロフィール特徴語（PUA）が重な�
 hzen-pua,nano-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hzen-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hzen-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-hzen-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+koumei-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 koumei-pua,kill-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 koumei-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 koumei-pua,ak1-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5094,7 +5097,7 @@ koumei-pua,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重�
 koumei-pua,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 koumei-pua,pua-vinsmoke,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 koumei-pua,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-koumei-pua,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+kuroinu-pua,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kuroinu-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kuroinu-pua,scream-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kuroinu-pua,task-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5102,7 +5105,7 @@ kuroinu-pua,efu-pua,affiliation,プロフィール特徴語（PUA）が重なる
 kuroinu-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kuroinu-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kuroinu-pua,luckypua017,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-kuroinu-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+lsd-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lsd-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lsd-pua,juru-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lsd-pua,1tensaipua1,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5110,12 +5113,12 @@ lsd-pua,pua-rusu,affiliation,プロフィール特徴語（PUA）が重なるた
 lsd-pua,simba-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lsd-pua,mine-chan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lsd-pua,nami-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-lsd-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mero-tinder,hameyuuuu,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 mero-tinder,1388-pqq,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 mero-tinder,hachi-tinder02,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 mero-tinder,naonao3827,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 mero-tinder,yamineko-note,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+mikio-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikio-pua,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikio-pua,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikio-pua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5123,7 +5126,7 @@ mikio-pua,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なる
 mikio-pua,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikio-pua,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikio-pua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-mikio-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+mmmmmellow-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mmmmmellow-pua,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mmmmmellow-pua,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mmmmmellow-pua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5131,7 +5134,7 @@ mmmmmellow-pua,renren-pua,affiliation,プロフィール特徴語（PUA）が重
 mmmmmellow-pua,anshin-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mmmmmellow-pua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mmmmmellow-pua,chori-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-mmmmmellow-pua,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+mog1ta-pua,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mog1ta-pua,kurita-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mog1ta-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mog1ta-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5139,7 +5142,7 @@ mog1ta-pua,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重
 mog1ta-pua,motebody-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mog1ta-pua,nano-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mog1ta-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-mog1ta-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+mush-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mush-pua,isagi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mush-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mush-pua,kill-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5147,7 +5150,7 @@ mush-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なる�
 mush-pua,ak1-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mush-pua,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mush-pua,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-mush-pua,pua-vinsmoke,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+nanashi-pua,pua-vinsmoke,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanashi-pua,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanashi-pua,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanashi-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5155,7 +5158,6 @@ nanashi-pua,scream-pua,affiliation,プロフィール特徴語（PUA）が重な
 nanashi-pua,task-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanashi-pua,sg-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanashi-pua,efu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-nanashi-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nanpaman-ashura,nakaboshisama,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nanpaman-ashura,nampa-girl,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nanpaman-ashura,genki-japan,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -5163,6 +5165,7 @@ nanpaman-ashura,nampa-urajirou,affiliation,プロフィール特徴語（ナン�
 nanpaman-ashura,fuku-second,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nanpaman-ashura,kuma-661,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nanpaman-ashura,nkdsoj,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
+night-army-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 night-army-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 night-army-pua,luckypua017,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 night-army-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5170,7 +5173,6 @@ night-army-pua,korea-pua,affiliation,プロフィール特徴語（PUA）が重�
 night-army-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 night-army-pua,juru-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 night-army-pua,1tensaipua1,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-night-army-pua,pua-rusu,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 onigiri7nanpa,pypynanpa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 onigiri7nanpa,ranbousto2,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 onigiri7nanpa,nanpasd,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -5179,6 +5181,7 @@ onigiri7nanpa,nakayamasoku,affiliation,プロフィール特徴語（ナンパ�
 onigiri7nanpa,maya159r,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 onigiri7nanpa,weekly-nanpa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 onigiri7nanpa,ryo-mindup,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
+pua1-panda,pua-rusu,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua1-panda,garo-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua1-panda,simba-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua1-panda,mine-chan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5186,7 +5189,7 @@ pua1-panda,shingen-pua,affiliation,プロフィール特徴語（PUA）が重な
 pua1-panda,nami-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua1-panda,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua1-panda,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-pua1-panda,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+pua-hinotori,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-hinotori,sshi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-hinotori,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-hinotori,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5194,7 +5197,7 @@ pua-hinotori,onaken-pua,affiliation,プロフィール特徴語（PUA）が重�
 pua-hinotori,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-hinotori,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-hinotori,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-pua-hinotori,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+puapua-ririri,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapua-ririri,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapua-ririri,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapua-ririri,renren-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5202,7 +5205,7 @@ puapua-ririri,anshin-pua,affiliation,プロフィール特徴語（PUA）が重�
 puapua-ririri,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapua-ririri,chori-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapua-ririri,xcandee,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-puapua-ririri,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+religion-pua,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 religion-pua,garp-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 religion-pua,kurita-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 religion-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5210,12 +5213,12 @@ religion-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重�
 religion-pua,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 religion-pua,motebody-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 religion-pua,nano-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-religion-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ruru-tinder,ura-kaneki-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 ruru-tinder,senga-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 ruru-tinder,yatora-matching,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 ruru-tinder,tindertips1000,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 ruru-tinder,hapuchantinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+slime-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slime-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slime-pua,isagi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slime-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5223,7 +5226,6 @@ slime-pua,kill-pua,affiliation,プロフィール特徴語（PUA）が重なる�
 slime-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slime-pua,ak1-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slime-pua,nagasanpua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-slime-pua,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 snszebxuwxdcqdc,sen-xxv,affiliation,プロフィール特徴語（SNSマーケ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ. Score: 1.60.
 snszebxuwxdcqdc,pua-kk,affiliation,プロフィール特徴語（SNSマーケ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ. Score: 1.60.
 snszebxuwxdcqdc,ao-pua,affiliation,プロフィール特徴語（SNSマーケ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ. Score: 1.60.
@@ -5235,6 +5237,7 @@ solty-tinder,bakunakioji,affiliation,プロフィール特徴語（アプリ/オ
 solty-tinder,tinder109,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 solty-tinder,shelly4821,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 solty-tinder,hameyuuuu,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+suda-puasub,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suda-puasub,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suda-puasub,pua-vinsmoke,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suda-puasub,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5242,7 +5245,7 @@ suda-puasub,pua-aki,affiliation,プロフィール特徴語（PUA）が重なる
 suda-puasub,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suda-puasub,scream-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suda-puasub,task-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-suda-puasub,sg-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+yossy-pua,sg-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yossy-pua,efu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yossy-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yossy-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5250,7 +5253,6 @@ yossy-pua,luckypua017,affiliation,プロフィール特徴語（PUA）が重な�
 yossy-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yossy-pua,korea-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yossy-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-yossy-pua,juru-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 fami-nanpa,gintoki-street,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 fami-nanpa,ayase-mbh,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 fami-nanpa,gash01nx,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -5259,6 +5261,7 @@ fami-nanpa,dawson-nst,affiliation,プロフィール特徴語（ナンパ）が�
 fami-nanpa,wlkrndstrt,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 fami-nanpa,ao-nampa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 fami-nanpa,qrxt-a,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
+hosoki-pua,juru-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hosoki-pua,1tensaipua1,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hosoki-pua,pua-rusu,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hosoki-pua,garo-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5266,11 +5269,11 @@ hosoki-pua,simba-pua,affiliation,プロフィール特徴語（PUA）が重な�
 hosoki-pua,mine-chan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hosoki-pua,shingen-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hosoki-pua,nami-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-hosoki-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 momonga-tinder,1388-pqq,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 momonga-tinder,hachi-tinder02,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 momonga-tinder,yamineko-note,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 momonga-tinder,ura-kaneki-pua,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
+pua-ofline,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-ofline,dogma-pua666,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-ofline,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-ofline,sshi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5278,7 +5281,6 @@ pua-ofline,bantan-pua,affiliation,プロフィール特徴語（PUA）が重な�
 pua-ofline,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-ofline,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 pua-ofline,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-pua-ofline,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 babao-wtpf,colabo-yumeno,affiliation,プロフィール特徴語（ビジネス）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ビジネス. Score: 1.60.
 babao-wtpf,kazu-consult,affiliation,プロフィール特徴語（ビジネス）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ビジネス. Score: 1.60.
 babao-wtpf,cry-curr-ar,affiliation,プロフィール特徴語（ビジネス）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ビジネス. Score: 1.60.
@@ -5294,6 +5296,7 @@ pua-sanji,shime-pua,affiliation,プロフィール特徴語（PUA、アプリ/�
 pua-sanji,tohokupua,affiliation,プロフィール特徴語（PUA、アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, アプリ/オンライン. Score: 1.60."
 pua-sanji,ura-kaneki-pua,affiliation,プロフィール特徴語（PUA、アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, アプリ/オンライン. Score: 1.60."
 pua-sanji,akari-pua,affiliation,プロフィール特徴語（PUA、アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, アプリ/オンライン. Score: 1.60."
+sandarupua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sandarupua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sandarupua,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sandarupua,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
@@ -5301,7 +5304,6 @@ sandarupua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重な
 sandarupua,renren-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sandarupua,anshin-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sandarupua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-sandarupua,chori-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 soshi-mote-pua,okasidaisuki-pua,affiliation,プロフィール特徴語（PUA、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, モテ. Score: 2.05."
 soshi-mote-pua,pua-ishikawa,affiliation,プロフィール特徴語（PUA、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, モテ. Score: 2.05."
 soshi-mote-pua,slice-pua,affiliation,プロフィール特徴語（PUA、モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, モテ. Score: 2.05."
@@ -5377,17 +5379,17 @@ nbmmind,jinjin-mote9,affiliation,プロフィール特徴語（関係構築）�
 hapuchan,miraitinder4545,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,senju-insta,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,miraitinder6969,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
-hapuchan,norinori-10goku,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,machapua3,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
+hapuchan,norinori-10goku,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,simba-pua,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,seiyoku-genkai,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 hapuchan,pochama-tuwaou,affiliation,プロフィール特徴語（裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 裏垢. Score: 2.40.
 kuma-661,21doragon-pua,affiliation,プロフィール特徴語（ナンパ、仙台）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 仙台. Score: 4.05."
+kuma-661,yosame-kagami,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 kuma-661,genki-japan,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 kuma-661,z1xnp6,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
 kuma-661,dobukasu123,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 kuma-661,ebios1000,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
-kuma-661,nannpashitai,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 nkdsoj,syu-puanet,affiliation,プロフィール特徴語（アプリ/オンライン、クラブ/箱、ストリート、ナンパ、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, クラブ/箱, ストリート, ナンパ, マッチングアプリ. Score: 4.15."
 nkdsoj,pua-vinsmoke,affiliation,プロフィール特徴語（アプリ/オンライン、クラブ/箱、ストリート、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, クラブ/箱, ストリート, マッチングアプリ. Score: 3.80."
 nkdsoj,minamu-nanpa,affiliation,プロフィール特徴語（アプリ/オンライン、クラブ/箱、ナンパ、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, クラブ/箱, ナンパ, マッチングアプリ. Score: 3.60."
@@ -5649,20 +5651,20 @@ mirinn-pua,taichi-pua,affiliation,プロフィール特徴語（PUA、即、明�
 yamineko-note,kenichi-pua,affiliation,プロフィール特徴語（SNSマーケ、アプリ/オンライン、マッチングアプリ、攻略）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, アプリ/オンライン, マッチングアプリ, 攻略. Score: 5.45."
 ura-kaneki-pua,senga-pua,affiliation,プロフィール特徴語（PUA、アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, アプリ/オンライン, マッチングアプリ. Score: 2.60."
 ura-kaneki-pua,yatora-matching,affiliation,プロフィール特徴語（PUA、アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, アプリ/オンライン, マッチングアプリ. Score: 2.60."
+one-sith-pua,chori-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,xcandee,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,nano-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 one-sith-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-one-sith-pua,nagasanpua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 moviefoodfc2,karon-pua,affiliation,プロフィール特徴語（PUA、RiseUpLab）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, RiseUpLab. Score: 4.05."
 moviefoodfc2,ryuse-pua,affiliation,プロフィール特徴語（PUA、RiseUpLab）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, RiseUpLab. Score: 4.05."
+moviefoodfc2,nagasanpua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 moviefoodfc2,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 moviefoodfc2,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 moviefoodfc2,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 moviefoodfc2,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-moviefoodfc2,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 puapenguin,taichi-pua,affiliation,プロフィール特徴語（PUA、即、明太子）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 明太子. Score: 3.80."
 puapenguin,clark-pua,affiliation,プロフィール特徴語（PUA、即、明太子）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 明太子. Score: 3.80."
 puapenguin,mirinn-pua,affiliation,プロフィール特徴語（PUA、即、明太子）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 明太子. Score: 3.80."
@@ -5704,13 +5706,13 @@ kickpua,gogo-nishino,affiliation,プロフィール特徴語（合流、美容/�
 slice-pua,pua-rusu,affiliation,プロフィール特徴語（PUA、ナンパ、モテ、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ, モテ, 月間実績. Score: 2.95."
 slice-pua,alllllll-maito,affiliation,プロフィール特徴語（ナンパ、モテ、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, モテ, 月間実績. Score: 2.60."
 slice-pua,carbii-pua,affiliation,プロフィール特徴語（PUA、モテ、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, モテ, 月間実績. Score: 2.60."
+try-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,scream-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,task-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,efu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,pua-happy,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,pika-sublol,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 try-pua,luckypua017,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-try-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 s-pua0213,srs-pua-sub,affiliation,プロフィール特徴語（PUA、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 講習. Score: 1.60."
 s-pua0213,shinkawa-pua,affiliation,プロフィール特徴語（PUA、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 講習. Score: 1.60."
 s-pua0213,youkun-pua,affiliation,プロフィール特徴語（PUA、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 講習. Score: 1.60."
@@ -5771,24 +5773,26 @@ nekos-jf,kurosakikun,affiliation,プロフィール特徴語（モテ、夜職�
 nekos-jf,yuu-renai,affiliation,プロフィール特徴語（モテ、夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ, 夜職. Score: 3.30."
 nekos-jf,k-932654,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
 nekos-jf,1388-pqq,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
+suihanki-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,korea-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,juru-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,1tensaipua1,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,garo-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 suihanki-pua,shingen-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-suihanki-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 lwe5ne9d5psfe9m,nampakago,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
 lwe5ne9d5psfe9m,nanpa-obiwan,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
 lwe5ne9d5psfe9m,pa-nanx,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
+lwe5ne9d5psfe9m,yosame-kagami,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
 lwe5ne9d5psfe9m,nandeyanen-pua,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
-lwe5ne9d5psfe9m,sub-kurita,affiliation,プロフィール特徴語（ストリート、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ. Score: 1.60."
 karon-pua,rojou-ski,affiliation,プロフィール特徴語（RiseUpLab）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: RiseUpLab. Score: 3.00.
 karon-pua,kira-pua7,affiliation,プロフィール特徴語（PUA、ナンパ、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ, 即. Score: 1.75."
 karon-pua,yolu-pua,affiliation,プロフィール特徴語（PUA、ナンパ、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ, 即. Score: 1.75."
 2gf3rchgar32924,riku-pua0801,affiliation,プロフィール特徴語（アプリ/オンライン、即、合流）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, 即, 合流. Score: 3.20."
 2gf3rchgar32924,makoto-pua,affiliation,プロフィール特徴語（アプリ/オンライン、即、味噌）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, 即, 味噌. Score: 3.20."
 2gf3rchgar32924,kirishima-nanpa,affiliation,プロフィール特徴語（アプリ/オンライン、即、味噌）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, 即, 味噌. Score: 3.20."
+yosame-kagami,genki-japan,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
+yosame-kagami,1x5r7zr6nufyswr,affiliation,プロフィール特徴語（即、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 旅ナンパ. Score: 3.45."
 tindertips1000,hapuchantinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 tindertips1000,hachi-tinder02,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 tindertips1000,ayato-691,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
@@ -5801,20 +5805,20 @@ amenbo-mbh,pa-nanx,affiliation,プロフィール特徴語（MBH）が重なる�
 amenbo-mbh,ayase-mbh,affiliation,プロフィール特徴語（MBH）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: MBH. Score: 2.40.
 amenbo-mbh,salmon-nnp,affiliation,プロフィール特徴語（MBH）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: MBH. Score: 2.40.
 amenbo-mbh,negitoro-nannpa,affiliation,プロフィール特徴語（MBH）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: MBH. Score: 2.40.
+asahi-pua,osugi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,sshi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-asahi-pua,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+asahi-pua2,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,anshin-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,chori-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,xcandee,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-pua2,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-asahi-pua2,garp-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hapuchantinder,bakunakioji,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 hapuchantinder,tomu-riddle,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 hapuchantinder,matchingmomonga,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
@@ -5838,13 +5842,13 @@ minigola-street,tinder-god,affiliation,プロフィール特徴語（ストリ�
 minigola-street,onnazukinp,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 minigola-street,oyajii-nanpa,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 minigola-street,ashikaga-street,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
+ura-osugi-pua,garp-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,ryusei-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,motebody-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,nano-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ura-osugi-pua,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-ura-osugi-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 nampa-girl,alpha-nanpa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nampa-girl,choppy-nanpa,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nampa-girl,pua-poke,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -5888,7 +5892,7 @@ lonely-stonan,ryosuke-street2,affiliation,プロフィール特徴語（スト�
 lonely-stonan,sub-riddle,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 lonely-stonan,nampakago,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 lonely-stonan,nanpa-obiwan,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
-lonely-stonan,pananxyz,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
+lonely-stonan,sub-kurita,affiliation,プロフィール特徴語（ストリート）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート. Score: 0.55.
 onesan-doumo,pua-vinsmoke,affiliation,プロフィール特徴語（アプリ/オンライン、ストリート、マッチングアプリ、恋愛、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ストリート, マッチングアプリ, 恋愛, 経験人数. Score: 6.00."
 tinder109,kw1ew,affiliation,プロフィール特徴語（アプリ/オンライン、ビジネス、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ビジネス, マッチングアプリ. Score: 3.85."
 hameyuuuu,zenitsu-tinder,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、美容/整形、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, 美容/整形, 講習. Score: 3.80."
@@ -5902,7 +5906,7 @@ pua-kaikun,krazypua,affiliation,プロフィール特徴語（PUA、美容/整�
 pua-kaikun,kickpua,affiliation,プロフィール特徴語（PUA、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 美容/整形. Score: 2.05."
 pua-kaikun,suzuniki-pua,affiliation,プロフィール特徴語（PUA、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 美容/整形. Score: 2.05."
 pua-kaikun,sexercisepua,affiliation,プロフィール特徴語（PUA、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 美容/整形. Score: 2.05."
-pua-kaikun,street-pua,affiliation,プロフィール特徴語（PUA、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 美容/整形. Score: 2.05."
+pua-kaikun,machapua3,affiliation,プロフィール特徴語（PUA、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 美容/整形. Score: 2.05."
 rxynn,mamemame-nanpa,affiliation,プロフィール特徴語（モテ、攻略、経験人数、美女、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ, 攻略, 経験人数, 美女, 講習. Score: 7.85."
 rxynn,kurosakikun,affiliation,プロフィール特徴語（モテ、攻略、経験人数、美女、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ, 攻略, 経験人数, 美女, 講習. Score: 7.85."
 mina-pua,ryuse-pua,affiliation,プロフィール特徴語（PUA、帝都）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 帝都. Score: 2.65."
@@ -5948,21 +5952,21 @@ kiri-stomach,siofkn-pua,affiliation,プロフィール特徴語（クラブ/箱�
 asahi-sao-pua,kaiser-pua,affiliation,プロフィール特徴語（PUA、ネクステ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ネクステ. Score: 4.05."
 asahi-sao-pua,oppsex1919,affiliation,プロフィール特徴語（ネクステ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ネクステ. Score: 3.00.
 asahi-sao-pua,speedstarsora,affiliation,プロフィール特徴語（ネクステ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ネクステ. Score: 3.00.
+asahi-sao-pua,puro-nampa,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-sao-pua,isagi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 asahi-sao-pua,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-asahi-sao-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 shinkawa-pua,akari-pua,affiliation,プロフィール特徴語（PUA、こりらm氏講習、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, こりらm氏講習, 即, 講習. Score: 4.95."
 shinkawa-pua,ururunpua,affiliation,プロフィール特徴語（PUA、こりらm氏講習、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, こりらm氏講習, 即, 講習. Score: 4.95."
 shinkawa-pua,okarun-pua,affiliation,プロフィール特徴語（PUA、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 講習. Score: 1.95."
 shinkawa-pua,razer-pua,affiliation,プロフィール特徴語（PUA、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 講習. Score: 1.95."
 oppsex1919,rei-app-pua,affiliation,プロフィール特徴語（アプリ/オンライン、クラブ/箱、コンビ、ソロ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, クラブ/箱, コンビ, ソロ. Score: 7.05."
 tomo-pua11,hanasikikoka,affiliation,プロフィール特徴語（PUA、合流、攻略）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 合流, 攻略. Score: 4.25."
+kanipe-pua,puainoki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kanipe-pua,nagasanpua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kanipe-pua,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kanipe-pua,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kanipe-pua,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 kanipe-pua,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-kanipe-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 dobukasu123,norinori-10goku,affiliation,プロフィール特徴語（モテ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ, 旅ナンパ. Score: 4.10."
 dobukasu123,kill-pua,affiliation,プロフィール特徴語（モテ、明太子）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ, 明太子. Score: 4.10."
 dobukasu123,souyonesou,affiliation,プロフィール特徴語（明太子）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 明太子. Score: 2.40.
@@ -5997,10 +6001,9 @@ real-nampa,weekly-nanpa,affiliation,プロフィール特徴語（ナンパ、�
 real-nampa,juru-pua,affiliation,プロフィール特徴語（ナンパ、女遊び）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 女遊び. Score: 3.45."
 real-nampa,pananxyz,affiliation,プロフィール特徴語（ナンパ、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 経験人数. Score: 2.65."
 genki-japan,z1xnp6,affiliation,プロフィール特徴語（ナンパ、旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ, 旅ナンパ. Score: 3.45."
+genki-japan,nannpashitai,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 genki-japan,dobukasu123,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 genki-japan,ebios1000,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
-genki-japan,heefoomee2,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
-genki-japan,nannpashitai,affiliation,プロフィール特徴語（旅ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 旅ナンパ. Score: 2.40.
 nampa-urajirou,kira-pua7,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nampa-urajirou,pua-poke,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
 nampa-urajirou,kazunanpa2,affiliation,プロフィール特徴語（ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ナンパ. Score: 0.35.
@@ -6028,7 +6031,7 @@ k-932654,oguri-mote,affiliation,プロフィール特徴語（夜職）が重な
 k-932654,ura-aka-nanpa,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
 k-932654,korasyo-renai,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
 k-932654,1388-pqq,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
-k-932654,machapua3,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
+k-932654,street-pua,affiliation,プロフィール特徴語（夜職）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 夜職. Score: 1.60.
 pypynanpa,magic-boy69,affiliation,プロフィール特徴語（審査制、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 審査制, 美容/整形. Score: 4.70."
 pypynanpa,mizuno-qreep,affiliation,プロフィール特徴語（審査制）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 審査制. Score: 3.00.
 pypynanpa,kaji-kaji-3,affiliation,プロフィール特徴語（アプリ/オンライン、ナンパ、美容/整形）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, ナンパ, 美容/整形. Score: 2.60."
@@ -6038,20 +6041,20 @@ motemaga-japan,rxynn,affiliation,プロフィール特徴語（モテ）が重�
 motemaga-japan,pua-ishikawa,affiliation,プロフィール特徴語（モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ. Score: 1.00.
 motemaga-japan,okasidaisuki-pua,affiliation,プロフィール特徴語（モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ. Score: 1.00.
 motemaga-japan,ffk0772,affiliation,プロフィール特徴語（モテ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: モテ. Score: 1.00.
+niko-pua,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 niko-pua,5sato-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 niko-pua,korea-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 niko-pua,t3vde,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 niko-pua,1tensaipua1,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-niko-pua,garo-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 srs-pua-sub,inumaki-pua,affiliation,プロフィール特徴語（PUA、ピカ講習 / ピカ外見コンサル、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ピカ講習 / ピカ外見コンサル, 講習. Score: 4.60."
 srs-pua-sub,nanpa-zin,affiliation,プロフィール特徴語（PUA、ピカ講習 / ピカ外見コンサル、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ピカ講習 / ピカ外見コンサル, 講習. Score: 4.60."
 srs-pua-sub,speedstarsora,affiliation,プロフィール特徴語（ピカ講習 / ピカ外見コンサル、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ピカ講習 / ピカ外見コンサル, 講習. Score: 4.25."
 srs-pua-sub,jim-nanpa,affiliation,プロフィール特徴語（ピカ講習 / ピカ外見コンサル、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ピカ講習 / ピカ外見コンサル, 講習. Score: 4.25."
+slinky-pua,garo-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slinky-pua,simba-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slinky-pua,mine-chan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slinky-pua,shingen-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 slinky-pua,karasu-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-slinky-pua,sshi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 paichan-go,sei-pua1,affiliation,プロフィール特徴語（ゆってぃ、即、月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ゆってぃ, 即, 月間実績, 講習. Score: 4.55."
 paichan-go,konkatsu-nanpa,affiliation,プロフィール特徴語（ゆってぃ、即、月間実績、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ゆってぃ, 即, 月間実績, 講習. Score: 4.55."
 nampakago,sanin-nanpa,affiliation,プロフィール特徴語（ストリート、ナンパ、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ, 講習. Score: 2.15."
@@ -6078,9 +6081,9 @@ tyopa-sub,rizin-pua,affiliation,プロフィール特徴語（PUA、合流）が
 tyopa-sub,tomo-pua11,affiliation,プロフィール特徴語（PUA、合流）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 合流. Score: 2.65."
 ryepua,hamada-suto,affiliation,プロフィール特徴語（淘汰男）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 淘汰男. Score: 3.00.
 ryepua,yomaru-street,affiliation,プロフィール特徴語（淘汰男）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 淘汰男. Score: 3.00.
+ryepua,sshi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ryepua,bantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 ryepua,shuri-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-ryepua,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 inpsub,bunshun-online,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
 inpsub,miraitinder6969,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
 inpsub,hanzo-prim,affiliation,プロフィール特徴語（アプリ/オンライン）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン. Score: 0.55.
@@ -6109,10 +6112,10 @@ roco-neko,tinder-ban,affiliation,プロフィール特徴語（即、攻略）�
 shelly4821,matchingmomonga,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、東カレ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, 東カレ. Score: 5.25."
 miraitinder4545,norinori-10goku,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, 裏垢. Score: 4.65."
 miraitinder4545,kurosakikun,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、裏垢）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, 裏垢. Score: 4.65."
+sato-legend,onaken-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sato-legend,korilla-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sato-legend,pua-nico,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 sato-legend,doc-mote,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-sato-legend,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 okarun-pua,zero-pua,affiliation,プロフィール特徴語（PUA、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 講習. Score: 1.95."
 okarun-pua,razer-pua,affiliation,プロフィール特徴語（PUA、即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即, 講習. Score: 1.95."
 haruki010234,hkun-theworld,affiliation,プロフィール特徴語（即、講習）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 講習. Score: 1.60."
@@ -6125,28 +6128,29 @@ hamada-suto,nrtq5ihqepycy0n,affiliation,プロフィール特徴語（合流）�
 hamada-suto,pua-marcelo,affiliation,プロフィール特徴語（合流）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 合流. Score: 1.60.
 hamada-suto,nanpashi-miffy,affiliation,プロフィール特徴語（合流）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 合流. Score: 1.60.
 yuki100-pua,oskeeeer-pua,affiliation,プロフィール特徴語（PUA、雄華軍団）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 雄華軍団. Score: 4.05."
+yuki100-pua,oriha-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yuki100-pua,pua-miura,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-yuki100-pua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+gatiikepua,kenichi-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 gatiikepua,anshin-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 gatiikepua,ststst-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 gatiikepua,xcandee,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-gatiikepua,riokun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 yayaya-zyakudan,seizitunanpa,affiliation,プロフィール特徴語（講習、関係構築）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 講習, 関係構築. Score: 3.65."
 yayaya-zyakudan,fukunaga-pua,affiliation,プロフィール特徴語（講習、関係構築）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 講習, 関係構築. Score: 3.65."
 riokun-pua-sub,kurita-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 riokun-pua-sub,kayakkupua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 riokun-pua-sub,chomechome-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 riokun-pua-sub,motebody-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+pua-poke,riokun-pua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
 pua-poke,nano-pua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
-pua-poke,nagasanpua,affiliation,プロフィール特徴語（PUA、ナンパ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, ナンパ. Score: 1.40."
 pua-kei-sg,isagi-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 pua-kei-sg,puainoki,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 pua-kei-sg,sg-pua,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
 pua-kei-sg,pika-sublol,affiliation,プロフィール特徴語（PUA、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, 即. Score: 1.40."
+pananxyz,garp-pua,affiliation,プロフィール特徴語（ストリート、ナンパ、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: ストリート, ナンパ, 経験人数. Score: 3.20."
 aizen-puasub,chouun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 aizen-puasub,tantan-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
+aizen-puasub,nagasanpua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 aizen-puasub,nekominto-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-aizen-puasub,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 whity-dogging-pua,yolu-pua,affiliation,プロフィール特徴語（PUA、クラブ/箱、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, クラブ/箱, 即. Score: 2.40."
 whity-dogging-pua,ryuuk-pua,affiliation,プロフィール特徴語（PUA、クラブ/箱、即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, クラブ/箱, 即. Score: 2.40."
 yobi-gunn,kitiku-pu,affiliation,プロフィール特徴語（即）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即. Score: 0.35.
@@ -6191,11 +6195,11 @@ matchingmomonga,1388-pqq,affiliation,プロフィール特徴語（アプリ/オ
 outlook-sub4,hyndp2qxwq4n3xb,affiliation,プロフィール特徴語（即、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 月間実績. Score: 1.60."
 outlook-sub4,sub-kurita,affiliation,プロフィール特徴語（即、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 即, 月間実績. Score: 1.60."
 pochama-izon,masao-renai,affiliation,プロフィール特徴語（恋愛）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: 恋愛. Score: 1.60.
+tantan-ura,pua-core,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 tantan-ura,enukun-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-tantan-ura,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 hantenkinoyama,kei-pua,affiliation,プロフィール特徴語（PUA、プレイヤー）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA, プレイヤー. Score: 4.05."
+greed-pua-sub,pua-aki,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 greed-pua-sub,sati-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
-greed-pua-sub,scream-pua,affiliation,プロフィール特徴語（PUA）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,Profile bridge auto-edge for low-degree node coverage. Shared profile tags: PUA. Score: 0.35.
 mikeymikey0601,aizen-pua,affiliation,プロフィール特徴語（SNSマーケ、モテ、攻略、月間実績）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: SNSマーケ, モテ, 攻略, 月間実績. Score: 5.45."
 hanzo-prim,hachi-tinder02,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ. Score: 2.25."
 zero-n2,kawae0021,affiliation,プロフィール特徴語（アプリ/オンライン、マッチングアプリ、月間実績、経験人数）が重なるため、近い人物候補として補助接続（自動）。,,0.23,interpretation,True,"Profile bridge auto-edge for low-degree node coverage. Shared profile tags: アプリ/オンライン, マッチングアプリ, 月間実績, 経験人数. Score: 4.40."
