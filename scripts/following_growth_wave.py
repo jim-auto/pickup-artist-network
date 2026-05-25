@@ -21,6 +21,7 @@ from collector import (  # noqa: E402
     collect_authenticated_following_handles,
     extract_x_handle_from_url,
     fetch_x_web_user_details,
+    load_playwright_cookies,
     load_x_profile_sources,
     merge_x_web_user_details_into_snapshot,
     resolve_x_cookie_file,
@@ -50,6 +51,21 @@ def _write_json(path: Path, payload: object) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def _cookie_names(cookie_file: Path) -> set[str]:
+    return {str(cookie.get("name", "")) for cookie in load_playwright_cookies(cookie_file)}
+
+
+def _explicit_following_source_ids() -> set[str]:
+    payload = json.loads((ROOT / "data" / "x_profile_sources.json").read_text(encoding="utf-8"))
+    if not isinstance(payload, list):
+        raise ValueError("data/x_profile_sources.json must contain a list")
+    return {
+        str(entry.get("account_id", "")).strip()
+        for entry in payload
+        if isinstance(entry, dict) and entry.get("enabled", True) and entry.get("collect_following") is True
+    }
+
+
 def _existing_handles_and_ids() -> set[str]:
     existing: set[str] = set()
     for line in SEED_FILE.read_text(encoding="utf-8").splitlines():
@@ -74,6 +90,7 @@ def _existing_handles_and_ids() -> set[str]:
 
 def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
     x_sources = {str(source["account_id"]): source for source in load_x_profile_sources()}
+    following_source_ids = _explicit_following_source_ids()
     scanned = {
         str(row.get("account_id", ""))
         for row in _load_json_list(FOLLOWING_SOURCES_FILE)
@@ -85,6 +102,8 @@ def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
         if not isinstance(node, dict) or node.get("type") != "person":
             continue
         account_id = str(node.get("id", ""))
+        if account_id not in following_source_ids:
+            continue
         source = x_sources.get(account_id)
         if not source or account_id in scanned:
             continue
@@ -102,10 +121,16 @@ def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
     return rows[:limit]
 
 
-def _merge_candidates(rows: list[dict[str, object]]) -> list[dict[str, object]]:
+def _candidate_has_allowed_source(row: dict[str, object], allowed_source_ids: set[str]) -> bool:
+    return bool({str(source) for source in row.get("sources", [])} & allowed_source_ids)
+
+
+def _merge_candidates(rows: list[dict[str, object]], allowed_source_ids: set[str]) -> list[dict[str, object]]:
     merged: dict[str, dict[str, object]] = {}
     for row in _load_json_list(FOLLOWING_CANDIDATES_FILE):
         account_id = str(row.get("account_id", "")).strip()
+        if not _candidate_has_allowed_source(row, allowed_source_ids):
+            continue
         if account_id:
             merged[account_id] = {
                 **row,
@@ -225,10 +250,23 @@ def main() -> None:
     if cookie_file is None or not cookie_file.exists():
         raise FileNotFoundError("Missing cookie file for following growth wave.")
 
+    cookie_names = _cookie_names(cookie_file)
     existing = _existing_handles_and_ids()
     grouped: dict[str, dict[str, object]] = {}
-    source_log = _load_json_list(FOLLOWING_SOURCES_FILE)
-    for source in _source_rows(args.source_limit, args.min_source_followers):
+    allowed_source_ids = _explicit_following_source_ids()
+    source_log = [
+        row for row in _load_json_list(FOLLOWING_SOURCES_FILE)
+        if str(row.get("account_id", "")) in allowed_source_ids
+    ]
+    if not args.auth_state.exists() and "auth_token" not in cookie_names:
+        print(
+            f"[WARN] {cookie_file} has no auth_token and {args.auth_state} does not exist; "
+            "skipping authenticated following collection."
+        )
+        sources: list[dict[str, object]] = []
+    else:
+        sources = _source_rows(args.source_limit, args.min_source_followers)
+    for source in sources:
         source_id = str(source["account_id"])
         try:
             handles, following_url = collect_authenticated_following_handles(
@@ -271,17 +309,27 @@ def main() -> None:
         )
         print(f"[OK] following {source_id}: seen={len(handles)} new_unseeded={added}")
 
-    candidates = _merge_candidates(list(grouped.values()))
+    candidates = _merge_candidates(list(grouped.values()), allowed_source_ids)
+    candidate_ids = {str(row.get("account_id", "")) for row in candidates}
     _write_json(FOLLOWING_CANDIDATES_FILE, candidates)
     _write_json(FOLLOWING_SOURCES_FILE, source_log)
-    screened = _screen_candidates(
-        candidates,
-        cookie_file=cookie_file,
-        limit=max(0, args.screen_limit),
-        timeout=args.timeout,
-        pause_seconds=args.pause_seconds,
-    )
-    _write_json(FOLLOWING_SCREENED_FILE, screened)
+    screened = [
+        row for row in _load_json_list(FOLLOWING_SCREENED_FILE)
+        if str(row.get("account_id", "")) in candidate_ids
+    ]
+    if args.screen_limit > 0 and candidates:
+        if {"auth_token", "ct0"}.issubset(cookie_names):
+            screened = _screen_candidates(
+                candidates,
+                cookie_file=cookie_file,
+                limit=args.screen_limit,
+                timeout=args.timeout,
+                pause_seconds=args.pause_seconds,
+            )
+            screened = [row for row in screened if str(row.get("account_id", "")) in candidate_ids]
+            _write_json(FOLLOWING_SCREENED_FILE, screened)
+        else:
+            print(f"[WARN] {cookie_file} has no auth_token/ct0 pair; skipping X Web profile screening.")
     ok_count = sum(1 for row in screened if row.get("ok_bio_scene"))
     print(f"[OK] candidates={len(candidates)} screened={len(screened)} ok_bio_scene={ok_count}")
 

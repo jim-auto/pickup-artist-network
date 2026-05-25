@@ -23,6 +23,7 @@ from scraper import (
     load_generated_snapshots,
     load_review_candidate_decisions,
     load_seed_entities,
+    load_thin_candidate_decisions,
     materialize_inferred_social_edges,
     refresh_review_candidates,
     refresh_outputs,
@@ -81,6 +82,7 @@ def main() -> None:
     growth_targets_payload = build_growth_targets_payload(seed_entities)
     snapshots = load_all_source_snapshots()
     decisions_payload = load_review_candidate_decisions()
+    thin_decisions_payload = load_thin_candidate_decisions()
     graph = build_graph_from_sources(seed_entities, snapshots)
     materialize_inferred_social_edges(
         graph,
@@ -114,6 +116,7 @@ def main() -> None:
         title="Pickup Artist Network",
         review_candidates_payload=review_candidates,
         review_candidate_decisions_payload=decisions_payload,
+        thin_candidate_decisions_payload=thin_decisions_payload,
         growth_targets_payload=growth_targets_payload,
     )
     headline = growth_targets_payload.get("headline", {})

@@ -46,6 +46,7 @@ X_WEB_USER_FEATURES = {
     "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
     "responsive_web_graphql_timeline_navigation_enabled": True,
 }
+X_COOKIE_DOMAINS = {".x.com", "x.com", ".twitter.com", "twitter.com"}
 X_WEB_USER_FIELD_TOGGLES = {
     "withPayments": False,
     "withAuxiliaryUserLabels": True,
@@ -240,6 +241,135 @@ def load_playwright_cookies(cookie_file_path: Path) -> list[dict[str, object]]:
             cookie["sameSite"] = same_site
         cookies.append(cookie)
     return cookies
+
+
+def load_cookie_entries(cookie_file_path: Path) -> list[dict[str, object]]:
+    """Read cookie entries from either Playwright storage_state or Selenium-style JSON."""
+    if not cookie_file_path.exists():
+        raise FileNotFoundError(f"Missing cookie file: {cookie_file_path}")
+    payload = json.loads(cookie_file_path.read_text(encoding="utf-8"))
+    if isinstance(payload, dict):
+        cookies = payload.get("cookies", [])
+    else:
+        cookies = payload
+    if not isinstance(cookies, list):
+        raise ValueError(f"Cookie payload must contain a cookie list: {cookie_file_path}")
+    return [entry for entry in cookies if isinstance(entry, dict)]
+
+
+def cookie_file_has_names(cookie_file_path: Path, required_names: set[str]) -> bool:
+    if not cookie_file_path.exists():
+        return False
+    try:
+        cookies = load_cookie_entries(cookie_file_path)
+    except (OSError, json.JSONDecodeError, ValueError):
+        return False
+    names = {str(cookie.get("name", "")) for cookie in cookies}
+    return required_names.issubset(names)
+
+
+def normalize_x_cookie_entries(cookie_file_path: Path) -> list[dict[str, object]]:
+    cookies: list[dict[str, object]] = []
+    for index, entry in enumerate(load_cookie_entries(cookie_file_path)):
+        name = str(entry.get("name", "")).strip()
+        value = str(entry.get("value", "")).strip()
+        domain = str(entry.get("domain", "")).strip().lower()
+        if not name or not value or not domain:
+            continue
+        if domain not in X_COOKIE_DOMAINS:
+            raise ValueError(f"cookie[{index}] has unsupported domain for X auth import: {domain}")
+        cookie: dict[str, object] = {
+            "name": name,
+            "value": value,
+            "domain": domain,
+            "path": str(entry.get("path", "/") or "/"),
+            "httpOnly": bool(entry.get("httpOnly", False)),
+            "secure": bool(entry.get("secure", True)),
+        }
+        expiry = entry.get("expires", entry.get("expiry"))
+        if isinstance(expiry, (int, float)) and expiry > 0:
+            cookie["expiry"] = float(expiry)
+        same_site = str(entry.get("sameSite", "")).strip()
+        if same_site in {"Lax", "None", "Strict"}:
+            cookie["sameSite"] = same_site
+        cookies.append(cookie)
+    by_name = {str(cookie["name"]): cookie for cookie in cookies}
+    missing = sorted({"auth_token", "ct0"} - set(by_name))
+    if missing:
+        raise ValueError(f"Imported X cookie file is missing required cookies: {', '.join(missing)}")
+    return cookies
+
+
+def import_x_cookies(
+    source_path: Path,
+    *,
+    output_path: Path = X_COOKIE_FILE,
+    force: bool = False,
+) -> list[str]:
+    if output_path.exists() and not force:
+        raise FileExistsError(f"Refusing to overwrite existing cookie file without --force: {output_path}")
+    cookies = normalize_x_cookie_entries(source_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(cookies, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    names = sorted({str(cookie["name"]) for cookie in cookies})
+    return names
+
+
+def _cookie_expiry_text(cookie: dict[str, object]) -> str:
+    raw_expiry = cookie.get("expires", cookie.get("expiry"))
+    if not isinstance(raw_expiry, (int, float)) or raw_expiry <= 0:
+        return "session/unknown"
+    try:
+        return datetime.fromtimestamp(float(raw_expiry), tz=timezone.utc).isoformat(timespec="seconds")
+    except (OSError, OverflowError, ValueError):
+        return "invalid"
+
+
+def x_auth_status_lines(
+    *,
+    auth_state_path: Path = X_AUTH_STATE_FILE,
+    cookie_file_path: Path | None = None,
+) -> list[str]:
+    cookie_file = resolve_x_cookie_file(cookie_file_path)
+    rows = [
+        ("auth_state", auth_state_path, {"auth_token"}),
+        ("cookie_file", cookie_file, {"auth_token", "ct0"}),
+    ]
+    lines = ["X auth status:"]
+    found_required: set[str] = set()
+    for label, path, required in rows:
+        if path is None:
+            lines.append(f"[WARN] {label}: not configured")
+            continue
+        if not path.exists():
+            lines.append(f"[WARN] {label}: missing ({path})")
+            continue
+        try:
+            cookies = load_cookie_entries(path)
+        except (OSError, json.JSONDecodeError, ValueError) as exc:
+            lines.append(f"[FAIL] {label}: unreadable ({path}): {type(exc).__name__}: {exc}")
+            continue
+        by_name = {str(cookie.get("name", "")): cookie for cookie in cookies}
+        present = sorted(name for name in required if name in by_name)
+        missing = sorted(required - set(by_name))
+        found_required.update(present)
+        if missing:
+            lines.append(f"[WARN] {label}: missing {', '.join(missing)} ({path})")
+        else:
+            lines.append(f"[OK] {label}: required cookies present ({path})")
+        visible_names = ", ".join(sorted(name for name in by_name if name)) or "none"
+        lines.append(f"       cookie names: {visible_names}")
+        for name in present:
+            domain = str(by_name[name].get("domain", "") or "unknown")
+            lines.append(f"       {name}: domain={domain}, expires={_cookie_expiry_text(by_name[name])}")
+    if {"auth_token", "ct0"}.issubset(found_required):
+        lines.append("[OK] authenticated cookie pair available for X web requests")
+    elif "auth_token" in found_required:
+        lines.append("[WARN] auth_token found, but ct0 is missing; X web requests may fail")
+    else:
+        lines.append("[FAIL] no auth_token found; authenticated following collection will redirect to login")
+    lines.append("[WARN] auth files contain secret-bearing browser state; do not commit or share them")
+    return lines
 
 
 def fill_first_visible(page: object, selectors: list[str], value: str) -> bool:
@@ -530,39 +660,82 @@ def login_x_and_save_auth_state(
 ) -> Path:
     try:
         from playwright.sync_api import sync_playwright
-        from playwright_stealth import Stealth
     except ImportError as exc:
-        raise RuntimeError("Playwright and playwright-stealth are required for authenticated X login.") from exc
+        raise RuntimeError("Playwright is required for authenticated X login.") from exc
+    try:
+        from playwright_stealth import Stealth
+    except ImportError:
+        Stealth = None  # type: ignore[assignment,misc]
 
-    auth_state_path.parent.mkdir(parents=True, exist_ok=True)
-    with Stealth().use_sync(sync_playwright()) as playwright:
-        browser = playwright.chromium.launch(headless=False)
+    def run_manual_login_attempt(playwright: object, *, use_minimal_stealth: bool) -> None:
+        browser = playwright.chromium.launch(
+            headless=False,
+            args=[
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ],
+        )
         context = browser.new_context(
             locale="ja-JP",
             timezone_id="Asia/Tokyo",
             viewport={"width": 1366, "height": 900},
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/125.0.0.0 Safari/537.36"
+            ),
         )
-        page = context.new_page()
-        page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
-        if ready_file is None:
-            print("=" * 60)
-            print("X login browser opened.")
-            print("Log in in the browser, then press Enter here to save auth state.")
-            print("=" * 60)
-        _wait_after_manual_x_login(ready_file)
-        page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(3000)
-        cookies = context.cookies()
-        has_auth = any(c["name"] == "auth_token" for c in cookies)
-        if not has_auth:
-            body = page.locator("body").inner_text(timeout=5000) or ""
-            if "login" in page.url.casefold() or "flow/login" in page.url:
-                browser.close()
-                raise RuntimeError("Still on X login flow after manual confirmation.")
-            if "For you" not in body and "タイムライン" not in body and "Following" not in body:
-                print("WARNING: Login may not be complete. Continuing anyway...")
-        context.storage_state(path=str(auth_state_path))
-        browser.close()
+        if use_minimal_stealth:
+            add_x_stealth_init_script(context)
+        try:
+            page = context.new_page()
+            page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
+            page.wait_for_timeout(3000)
+            body_text = page.locator("body").text_content(timeout=10000) or ""
+            if "JavaScriptを使用できません" in body_text:
+                raise RuntimeError("X returned the JavaScript-disabled page during manual login.")
+            if ready_file is None:
+                print("=" * 60)
+                print("X login browser opened.")
+                print("Log in in the browser, then press Enter here to save auth state.")
+                print("=" * 60)
+            _wait_after_manual_x_login(ready_file)
+            page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
+            page.wait_for_timeout(3000)
+            cookies = context.cookies()
+            has_auth = any(c["name"] == "auth_token" for c in cookies)
+            if not has_auth:
+                body = page.locator("body").inner_text(timeout=5000) or ""
+                if "login" in page.url.casefold() or "flow/login" in page.url:
+                    raise RuntimeError("Still on X login flow after manual confirmation.")
+                if "For you" not in body and "タイムライン" not in body and "Following" not in body:
+                    print("WARNING: Login may not be complete. Continuing anyway...")
+            context.storage_state(path=str(auth_state_path))
+        finally:
+            browser.close()
+
+    auth_state_path.parent.mkdir(parents=True, exist_ok=True)
+    attempts = [(True, False), (False, True), (False, False)] if Stealth is not None else [(False, True), (False, False)]
+    last_error: RuntimeError | None = None
+    for use_stealth_wrapper, use_minimal_stealth in attempts:
+        try:
+            if use_stealth_wrapper:
+                with Stealth().use_sync(sync_playwright()) as playwright:
+                    run_manual_login_attempt(playwright, use_minimal_stealth=False)
+            else:
+                with sync_playwright() as playwright:
+                    run_manual_login_attempt(playwright, use_minimal_stealth=use_minimal_stealth)
+            return auth_state_path
+        except RuntimeError as exc:
+            last_error = exc
+            if "JavaScript-disabled" in str(exc) and (use_stealth_wrapper or use_minimal_stealth):
+                next_mode = "minimal stealth" if use_stealth_wrapper else "plain Playwright"
+                print(f"[WARN] X returned the JavaScript-disabled page; retrying with {next_mode}.")
+                continue
+            raise
+    if last_error is not None:
+        raise last_error
     return auth_state_path
 
 
@@ -573,82 +746,111 @@ def auto_login_x_and_save_auth_state(
 ) -> Path:
     try:
         from playwright.sync_api import sync_playwright
-        from playwright_stealth import Stealth
     except ImportError as exc:
-        raise RuntimeError("Playwright and playwright-stealth are required for authenticated X login.") from exc
+        raise RuntimeError("Playwright is required for authenticated X login.") from exc
+    try:
+        from playwright_stealth import Stealth
+    except ImportError:
+        Stealth = None  # type: ignore[assignment,misc]
 
     username, password = load_x_login_credentials(dotenv_path)
     if not username or not password:
         dotenv_note = f" or dotenv file {dotenv_path}" if dotenv_path is not None else ""
         raise RuntimeError(f"Missing TWITTER_USERNAME / TWITTER_PASSWORD in environment{dotenv_note}.")
 
-    auth_state_path.parent.mkdir(parents=True, exist_ok=True)
-    with Stealth().use_sync(sync_playwright()) as playwright:
+    def run_login_attempt(playwright: object, *, use_minimal_stealth: bool) -> None:
         browser = playwright.chromium.launch(
             headless=False,
             args=[
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
             ],
         )
         context = browser.new_context(
             locale="ja-JP",
             timezone_id="Asia/Tokyo",
             viewport={"width": 1366, "height": 900},
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/125.0.0.0 Safari/537.36"
+            ),
         )
-        page = context.new_page()
-        page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(8000)
-
-        body_text = page.locator("body").text_content(timeout=10000) or ""
-        if "JavaScriptを使用できません" in body_text:
-            browser.close()
-            raise RuntimeError("X returned the JavaScript-disabled page during automatic login.")
-        if "問題が発生" in body_text or "やりなおす" in body_text:
+        if use_minimal_stealth:
+            add_x_stealth_init_script(context)
+        try:
+            page = context.new_page()
             page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
             page.wait_for_timeout(8000)
 
-        if not type_first_visible(
-            page,
-            ['input[autocomplete="username"]', 'input[name="text"]', 'input[type="text"]'],
-            username,
-            timeout_ms=10000,
-        ):
-            browser.close()
-            raise RuntimeError("Could not find the X username input.")
-        page.keyboard.press("Enter")
-        page.wait_for_timeout(5000)
+            body_text = page.locator("body").text_content(timeout=10000) or ""
+            if "JavaScriptを使用できません" in body_text:
+                raise RuntimeError("X returned the JavaScript-disabled page during automatic login.")
+            if "問題が発生" in body_text or "やりなおす" in body_text:
+                page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=120000)
+                page.wait_for_timeout(8000)
 
-        challenge_input = page.locator('input[data-testid="ocfEnterTextTextInput"]').first
+            if not type_first_visible(
+                page,
+                ['input[autocomplete="username"]', 'input[name="text"]', 'input[type="text"]'],
+                username,
+                timeout_ms=10000,
+            ):
+                raise RuntimeError("Could not find the X username input.")
+            page.keyboard.press("Enter")
+            page.wait_for_timeout(5000)
+
+            challenge_input = page.locator('input[data-testid="ocfEnterTextTextInput"]').first
+            try:
+                if challenge_input.is_visible(timeout=4000):
+                    challenge_input.click()
+                    challenge_input.fill("")
+                    challenge_input.type(username, delay=90)
+                    page.keyboard.press("Enter")
+                    page.wait_for_timeout(4000)
+            except Exception:
+                pass
+
+            if not type_first_visible(page, ['input[name="password"]'], password, timeout_ms=15000):
+                raise RuntimeError("Could not find the X password input.")
+            page.keyboard.press("Enter")
+            page.wait_for_timeout(8000)
+            page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
+            page.wait_for_timeout(5000)
+            cookies = context.cookies()
+            has_auth = any(c["name"] == "auth_token" for c in cookies)
+            if not has_auth:
+                if "login" in page.url.casefold() or "flow/login" in page.url:
+                    raise RuntimeError("Automatic X login still ended on the login flow.")
+                body = page.locator("body").inner_text(timeout=5000) or ""
+                if "For you" not in body and "タイムライン" not in body:
+                    raise RuntimeError("Automatic X login did not reach the timeline.")
+            context.storage_state(path=str(auth_state_path))
+        finally:
+            browser.close()
+
+    auth_state_path.parent.mkdir(parents=True, exist_ok=True)
+    attempts = [(True, False), (False, True), (False, False)] if Stealth is not None else [(False, True), (False, False)]
+    last_error: RuntimeError | None = None
+    for use_stealth_wrapper, use_minimal_stealth in attempts:
         try:
-            if challenge_input.is_visible(timeout=4000):
-                challenge_input.click()
-                challenge_input.fill("")
-                challenge_input.type(username, delay=90)
-                page.keyboard.press("Enter")
-                page.wait_for_timeout(4000)
-        except Exception:
-            pass
-
-        if not type_first_visible(page, ['input[name="password"]'], password, timeout_ms=15000):
-            browser.close()
-            raise RuntimeError("Could not find the X password input.")
-        page.keyboard.press("Enter")
-        page.wait_for_timeout(8000)
-        page.goto("https://x.com/home", wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(5000)
-        cookies = context.cookies()
-        has_auth = any(c["name"] == "auth_token" for c in cookies)
-        if not has_auth:
-            if "login" in page.url.casefold() or "flow/login" in page.url:
-                browser.close()
-                raise RuntimeError("Automatic X login still ended on the login flow.")
-            body = page.locator("body").inner_text(timeout=5000) or ""
-            if "For you" not in body and "タイムライン" not in body:
-                browser.close()
-                raise RuntimeError("Automatic X login did not reach the timeline.")
-        context.storage_state(path=str(auth_state_path))
-        browser.close()
+            if use_stealth_wrapper:
+                with Stealth().use_sync(sync_playwright()) as playwright:
+                    run_login_attempt(playwright, use_minimal_stealth=False)
+            else:
+                with sync_playwright() as playwright:
+                    run_login_attempt(playwright, use_minimal_stealth=use_minimal_stealth)
+            return auth_state_path
+        except RuntimeError as exc:
+            last_error = exc
+            if "JavaScript-disabled" in str(exc) and (use_stealth_wrapper or use_minimal_stealth):
+                next_mode = "minimal stealth" if use_stealth_wrapper else "plain Playwright"
+                print(f"[WARN] X returned the JavaScript-disabled page; retrying with {next_mode}.")
+                continue
+            raise
+    if last_error is not None:
+        raise last_error
     return auth_state_path
 
 
@@ -670,16 +872,18 @@ def collect_authenticated_following_handles(
     following_url = f"https://x.com/{source_handle}/following"
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        if auth_state_path.exists():
+        auth_state_has_auth = cookie_file_has_names(auth_state_path, {"auth_token"})
+        cookie_file = resolve_x_cookie_file(cookie_file_path)
+        if auth_state_has_auth:
             context = browser.new_context(storage_state=str(auth_state_path))
         else:
-            if cookie_file_path is None:
+            if cookie_file is None or not cookie_file.exists():
                 browser.close()
                 raise FileNotFoundError(
                     f"Missing X auth state file: {auth_state_path}. Provide --cookie-file or create auth state first."
                 )
             context = browser.new_context()
-            context.add_cookies(load_playwright_cookies(cookie_file_path))
+            context.add_cookies(load_playwright_cookies(cookie_file))
         page = context.new_page()
         page.goto(following_url, wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(2500)
@@ -1957,6 +2161,23 @@ def main() -> None:
         help="Use TWITTER_USERNAME / TWITTER_PASSWORD to log in automatically and save local auth state.",
     )
     parser.add_argument(
+        "--check-x-auth",
+        action="store_true",
+        help="Safely report whether local X auth state/cookie files contain required authenticated cookies.",
+    )
+    parser.add_argument(
+        "--import-x-cookies",
+        type=Path,
+        default=None,
+        metavar="PATH",
+        help="Import Selenium/Playwright-style X cookies containing auth_token and ct0 into the local cookie file.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Allow commands such as --import-x-cookies to overwrite their output file.",
+    )
+    parser.add_argument(
         "--login-x-ready-file",
         type=Path,
         default=None,
@@ -2057,6 +2278,16 @@ def main() -> None:
     if args.login_x_auto:
         saved_path = auto_login_x_and_save_auth_state(args.auth_state, dotenv_path=args.dotenv)
         print(f"[OK] saved X auth state -> {saved_path}")
+        return
+    if args.check_x_auth:
+        print("\n".join(x_auth_status_lines(auth_state_path=args.auth_state, cookie_file_path=args.cookie_file)))
+        return
+    if args.import_x_cookies is not None:
+        output_path = args.cookie_file or X_COOKIE_FILE
+        names = import_x_cookies(args.import_x_cookies, output_path=output_path, force=args.force)
+        print(f"[OK] imported X cookies -> {output_path}")
+        print(f"[OK] cookie names: {', '.join(names)}")
+        print("[WARN] imported cookies contain authenticated secrets; do not commit or share them")
         return
     if args.refresh_missing_x_web_profiles:
         refreshed = refresh_missing_x_web_profiles(

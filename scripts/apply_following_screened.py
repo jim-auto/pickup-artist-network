@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -11,14 +12,22 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(SCRIPT_DIR))
 
 SEED_FILE = ROOT / "seed_entities.txt"
 X_PROFILE_FILE = ROOT / "data" / "x_profile_sources.json"
 GENERATED_SNAPSHOT_FILE = ROOT / "data" / "source_snapshots.generated.json"
 FOLLOWING_SCREENED_FILE = ROOT / "data" / "growth" / "following_screened.json"
 
+from growth_probe_candidates import BIO_SCENE  # noqa: E402
+
 X_PROFILE_LABEL = "following由来候補（screened）"
 NOTE = "Following-guided public profile screening from data/growth/following_screened.json."
+PROMOTION_BIO_SCENE = re.compile(
+    r"(ナンパ|ナンパ師|恋愛コンサル|恋愛工学|関係構築|女性攻略|美女|TAV|"
+    r"ストリート|🍑スト|講師|講習|講習生|経験人数|女修行|抱き|ネト即|即数|連続即|直🏩|ハメ)",
+    re.IGNORECASE,
+)
 
 
 def _load_json_list(path: Path) -> list[dict[str, object]]:
@@ -49,6 +58,11 @@ def _existing_seed_values() -> set[str]:
     return values
 
 
+def _has_profile_scene_evidence(row: dict[str, object]) -> bool:
+    text = f"{row.get('summary', '')}\n{row.get('profile_text', '')}"
+    return bool(BIO_SCENE.search(text) or PROMOTION_BIO_SCENE.search(text))
+
+
 def _screened_rows(limit: int | None) -> list[dict[str, object]]:
     existing = _existing_seed_values()
     rows: list[dict[str, object]] = []
@@ -57,6 +71,8 @@ def _screened_rows(limit: int | None) -> list[dict[str, object]]:
         account_id = str(row.get("account_id", "")).strip()
         handle = str(row.get("handle", "")).strip()
         if not account_id or not handle or not row.get("ok_bio_scene"):
+            continue
+        if not _has_profile_scene_evidence(row):
             continue
         if account_id.casefold() in existing or handle.casefold() in existing:
             continue
@@ -68,6 +84,92 @@ def _screened_rows(limit: int | None) -> list[dict[str, object]]:
     if limit is not None:
         rows = rows[: max(0, limit)]
     return rows
+
+
+def _eligible_screened_ids() -> set[str]:
+    eligible: set[str] = set()
+    for row in _load_json_list(FOLLOWING_SCREENED_FILE):
+        account_id = str(row.get("account_id", "")).strip()
+        handle = str(row.get("handle", "")).strip()
+        if account_id and handle and row.get("ok_bio_scene") and _has_profile_scene_evidence(row):
+            eligible.add(account_id.casefold())
+    return eligible
+
+
+def _following_screened_profile_ids() -> set[str]:
+    ids: set[str] = set()
+    for snapshot in _load_json_list(GENERATED_SNAPSHOT_FILE):
+        collector = snapshot.get("collector")
+        if not isinstance(collector, dict) or collector.get("type") != "following_screened_profile":
+            continue
+        account_id = str(snapshot.get("account_id", "")).strip()
+        if account_id:
+            ids.add(account_id.casefold())
+    return ids
+
+
+def _x_profile_following_label_ids() -> set[str]:
+    ids: set[str] = set()
+    for row in _load_json_list(X_PROFILE_FILE):
+        if row.get("label") != X_PROFILE_LABEL:
+            continue
+        account_id = str(row.get("account_id", "")).strip()
+        if account_id:
+            ids.add(account_id.casefold())
+    return ids
+
+
+def _ineligible_applied_profile_ids() -> set[str]:
+    eligible = _eligible_screened_ids()
+    applied = _following_screened_profile_ids() & _x_profile_following_label_ids()
+    return applied - eligible
+
+
+def _prune_ineligible_applied_profiles() -> set[str]:
+    prune_ids = _ineligible_applied_profile_ids()
+    if not prune_ids:
+        return set()
+
+    seed_lines = SEED_FILE.read_text(encoding="utf-8").splitlines()
+    kept_seed_lines = []
+    for line in seed_lines:
+        parts = [part.strip() for part in line.split("|")]
+        if len(parts) >= 2 and parts[0] == "person" and parts[1].casefold() in prune_ids:
+            continue
+        kept_seed_lines.append(line)
+    SEED_FILE.write_text("\n".join(kept_seed_lines) + "\n", encoding="utf-8")
+
+    x_profiles = [
+        row for row in _load_json_list(X_PROFILE_FILE)
+        if not (row.get("label") == X_PROFILE_LABEL and str(row.get("account_id", "")).casefold() in prune_ids)
+    ]
+    _write_json(X_PROFILE_FILE, x_profiles)
+
+    snapshots = []
+    for snapshot in _load_json_list(GENERATED_SNAPSHOT_FILE):
+        account_id = str(snapshot.get("account_id", "")).casefold()
+        collector = snapshot.get("collector")
+        if (
+            account_id in prune_ids
+            and isinstance(collector, dict)
+            and collector.get("type") == "following_screened_profile"
+        ):
+            continue
+        observations = []
+        for observation in snapshot.get("observations", []) or []:
+            if not isinstance(observation, dict):
+                observations.append(observation)
+                continue
+            if (
+                str(observation.get("target", "")).casefold() in prune_ids
+                and observation.get("review_notes") == NOTE
+            ):
+                continue
+            observations.append(observation)
+        snapshot["observations"] = observations
+        snapshots.append(snapshot)
+    _write_json(GENERATED_SNAPSHOT_FILE, snapshots)
+    return prune_ids
 
 
 def _append_seed_rows(rows: list[dict[str, object]]) -> None:
@@ -186,7 +288,18 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Apply following-screened growth rows")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--prune-ineligible",
+        action="store_true",
+        help="Remove earlier auto-applied following-screened profiles that no longer meet promotion evidence rules.",
+    )
     args = parser.parse_args()
+
+    if args.prune_ineligible:
+        prune_ids = _ineligible_applied_profile_ids() if args.dry_run else _prune_ineligible_applied_profiles()
+        print(f"pruned_ineligible={len(prune_ids)}")
+        for account_id in sorted(prune_ids):
+            print(account_id)
 
     rows = _screened_rows(args.limit)
     print(f"apply_candidates={len(rows)}")

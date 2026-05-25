@@ -4,7 +4,8 @@ import argparse
 import copy
 import json
 import re
-from collections import defaultdict
+import sys
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from itertools import combinations
 from pathlib import Path
@@ -32,6 +33,7 @@ GENERATED_SNAPSHOT_FILE = Path("data/source_snapshots.generated.json")
 GENERATED_HINT_SNAPSHOT_FILE = Path("data/source_snapshots.generated.hints.json")
 REVIEW_CANDIDATES_JSON = Path("data/review_candidates.json")
 REVIEW_CANDIDATE_DECISIONS_JSON = Path("data/review_candidate_decisions.json")
+THIN_CANDIDATE_DECISIONS_JSON = Path("data/thin_candidate_decisions.json")
 NODES_JSON = Path("data/nodes.json")
 EDGES_JSON = Path("data/edges.json")
 NODES_CSV = Path("data/nodes.csv")
@@ -46,6 +48,52 @@ REVIEW_CANDIDATE_BASE_CONFIDENCE = {
     "profile_text": 0.4,
     "pinned_post_text": 0.46,
 }
+NETWORK_RELEVANCE_KEYWORDS = (
+    "ナンパ",
+    "pua",
+    "即",
+    "ストナン",
+    "ネトナン",
+    "クラナン",
+    "ストリート",
+    "路上",
+    "nanpa",
+    "nannpa",
+    "nampa",
+    "stonan",
+    "rojou",
+    "suto_nan",
+    "suto-nan",
+    "netonan",
+    "kuranan",
+    "street",
+    "tinder",
+    "tapple",
+    "pairs",
+    "omiai",
+    "タップル",
+    "ペアーズ",
+    "東カレ",
+    "mote",
+    "マッチングアプリ",
+    "講習",
+    "コンサル",
+    "モテ",
+    "攻略",
+    "美女攻略",
+    "恋愛",
+    "界隈",
+    "一門",
+    "味噌",
+    "mbh",
+    "こりら",
+    "アツスト",
+    "女遊び",
+    "経験人数",
+    "箱",
+    "クラブ",
+)
+THIN_CANDIDATE_STATUSES = ("keep", "exclude", "review")
 REAL_GROWTH_TARGETS = {
     "person": {"min": 1000, "max": 1000},
     "community": {"min": 8, "max": 12},
@@ -267,6 +315,13 @@ SAMPLE_NODE_DETAILS = {
         "description": "Real public location node used for Chubu-area activity references.",
         "source_urls": ["https://www.city.nagoya.jp/"],
         "confidence": 0.98,
+    },
+    "miso": {
+        "description": "Curated field/location label for public profiles that identify activity around 味噌.",
+        "source_urls": ["manual://seed/miso"],
+        "confidence": 0.76,
+        "evidence_kind": "mixed",
+        "review_notes": "Use profile-backed activity edges for account-level evidence.",
     },
     "shibuya": {
         "description": "Real public location node used as a common field example.",
@@ -537,6 +592,28 @@ def normalize_review_candidate_decision(decision: dict[str, object]) -> dict[str
         description=str(decision.get("evidence_text", decision.get("description", ""))).strip(),
     )
     return normalized
+
+
+def normalize_thin_candidate_decision(decision: dict[str, object]) -> dict[str, object]:
+    status = str(decision.get("status", "")).strip().lower()
+    if status and status not in THIN_CANDIDATE_STATUSES:
+        raise ValueError(f"Unsupported thin candidate decision status: {status}")
+    return {
+        "node_id": str(decision.get("node_id", "")).strip(),
+        "status": status,
+        "note": str(decision.get("note", "")).strip(),
+        "name": str(decision.get("name", "")).strip(),
+        "score": int(decision.get("score", 0) or 0),
+        "degree": int(decision.get("degree", 0) or 0),
+        "solid_degree": int(decision.get("solid_degree", decision.get("degree", 0)) or 0),
+        "assistive_degree": int(decision.get("assistive_degree", 0) or 0),
+        "reasons": [
+            str(reason).strip()
+            for reason in decision.get("reasons", [])
+            if str(reason).strip()
+        ],
+        "updated_at": str(decision.get("updated_at", "")).strip(),
+    }
 
 
 def validate_source_snapshots(
@@ -1346,6 +1423,12 @@ def materialize_inferred_social_edges(
             description = (
                 f"公開文本から {ctype} 関係（一致: {matched}）として推定（自動）。"
             )
+        basis = str(cand.get("basis", "")).strip() or "generated_text"
+        match_label = str(cand.get("matched_text", "")).strip() or matched or "?"
+        review_notes = (
+            f"Materialized generated candidate from {basis} via mention match "
+            f"'{match_label}'. Needs manual confirmation before treating as fact."
+        )
         try:
             add_edge(
                 graph,
@@ -1362,7 +1445,7 @@ def materialize_inferred_social_edges(
                     "confidence": float(cand.get("confidence", REVIEW_CANDIDATE_BASE_CONFIDENCE["profile_text"])),
                     "evidence_kind": "interpretation",
                     "needs_review": True,
-                    "review_notes": str(cand.get("review_notes", "")).strip(),
+                    "review_notes": review_notes,
                 },
             )
             added += 1
@@ -2110,6 +2193,541 @@ def set_review_candidate_decision(
     return decisions[candidate_id]
 
 
+def load_thin_candidate_decisions(
+    path: Path = THIN_CANDIDATE_DECISIONS_JSON,
+) -> dict[str, object]:
+    if not path.exists():
+        return {"updated_at": "", "decisions": {}}
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("thin_candidate_decisions.json must contain an object")
+    decisions = payload.get("decisions", {})
+    if not isinstance(decisions, dict):
+        raise ValueError("thin_candidate_decisions.json decisions must be an object")
+    return {
+        "updated_at": str(payload.get("updated_at", "")).strip(),
+        "decisions": {
+            node_id: normalize_thin_candidate_decision(decision)
+            for node_id, decision in decisions.items()
+            if isinstance(decision, dict)
+        },
+    }
+
+
+def save_thin_candidate_decisions(
+    payload: dict[str, object],
+    path: Path = THIN_CANDIDATE_DECISIONS_JSON,
+) -> None:
+    normalized_payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "decisions": payload.get("decisions", {}),
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(normalized_payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def is_assistive_edge(edge: object) -> bool:
+    review_notes = str(getattr(edge, "review_notes", "") or "")
+    return any(
+        marker in review_notes
+        for marker in (
+            "Profile bridge auto-edge",
+            "Keyword cluster",
+            "Shared context",
+            "Shared-neighbor",
+        )
+    )
+
+
+def graph_account_degree_stats(
+    graph: GraphData,
+) -> tuple[defaultdict[str, int], defaultdict[str, int], defaultdict[str, int], defaultdict[str, int]]:
+    node_by_id = {node.id: node for node in graph.nodes}
+    degree_by_id: defaultdict[str, int] = defaultdict(int)
+    follow_degree_by_id: defaultdict[str, int] = defaultdict(int)
+    solid_degree_by_id: defaultdict[str, int] = defaultdict(int)
+    assistive_degree_by_id: defaultdict[str, int] = defaultdict(int)
+    for edge in graph.edges:
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type not in {"person", "community"} or target.type not in {"person", "community"}:
+            continue
+        degree_by_id[edge.source] += 1
+        degree_by_id[edge.target] += 1
+        if is_assistive_edge(edge):
+            assistive_degree_by_id[edge.source] += 1
+            assistive_degree_by_id[edge.target] += 1
+        else:
+            solid_degree_by_id[edge.source] += 1
+            solid_degree_by_id[edge.target] += 1
+        if edge.type == "follow":
+            follow_degree_by_id[edge.source] += 1
+            follow_degree_by_id[edge.target] += 1
+    return degree_by_id, follow_degree_by_id, solid_degree_by_id, assistive_degree_by_id
+
+
+def graph_account_degrees(graph: GraphData) -> tuple[defaultdict[str, int], defaultdict[str, int]]:
+    degree_by_id, follow_degree_by_id, _solid_degree_by_id, _assistive_degree_by_id = (
+        graph_account_degree_stats(graph)
+    )
+    return degree_by_id, follow_degree_by_id
+
+
+def node_search_text(node: object) -> str:
+    return " ".join(
+        str(value)
+        for value in [
+            getattr(node, "id", ""),
+            getattr(node, "name", ""),
+            getattr(node, "description", ""),
+            *getattr(node, "aliases", []),
+        ]
+    ).casefold()
+
+
+def node_has_network_relevance_keyword(node: object) -> bool:
+    text = node_search_text(node)
+    return any(keyword.casefold() in text for keyword in NETWORK_RELEVANCE_KEYWORDS)
+
+
+def has_real_profile_icon(node: object) -> bool:
+    icon_url = str(getattr(node, "icon_url", "") or "")
+    return bool(icon_url) and "/default_profile_" not in icon_url
+
+
+def thin_candidate_decision_status(
+    decisions_payload: dict[str, object] | None,
+    node_id: str,
+) -> str:
+    decisions = (decisions_payload or {}).get("decisions", {})
+    if not isinstance(decisions, dict):
+        return ""
+    decision = decisions.get(node_id)
+    if not isinstance(decision, dict):
+        return ""
+    return str(decision.get("status", "")).strip().lower()
+
+
+def network_relevant_person_ids(
+    graph: GraphData,
+    decisions_payload: dict[str, object] | None = None,
+) -> set[str]:
+    _degree_by_id, follow_degree_by_id, _solid_degree_by_id, _assistive_degree_by_id = (
+        graph_account_degree_stats(graph)
+    )
+    node_by_id = {node.id: node for node in graph.nodes}
+    base_relevant_ids: set[str] = set()
+    for node in graph.nodes:
+        if node.type != "person":
+            continue
+        decision_status = thin_candidate_decision_status(decisions_payload, node.id)
+        if decision_status == "exclude":
+            continue
+        if (
+            decision_status == "keep"
+            or node_has_network_relevance_keyword(node)
+            or follow_degree_by_id[node.id] >= 2
+        ):
+            base_relevant_ids.add(node.id)
+
+    relevant_ids = set(base_relevant_ids)
+    for edge in graph.edges:
+        if is_assistive_edge(edge):
+            continue
+        source_node = node_by_id.get(edge.source)
+        target_node = node_by_id.get(edge.target)
+        if not source_node or not target_node:
+            continue
+        if source_node.type != "person" or target_node.type != "person":
+            continue
+        target_decision_status = thin_candidate_decision_status(decisions_payload, edge.target)
+        source_decision_status = thin_candidate_decision_status(decisions_payload, edge.source)
+        if edge.source in base_relevant_ids and target_decision_status != "exclude":
+            relevant_ids.add(edge.target)
+        if edge.target in base_relevant_ids and source_decision_status != "exclude":
+            relevant_ids.add(edge.source)
+    return relevant_ids
+
+
+def is_network_relevant_node(
+    node: object,
+    follow_degree_by_id: defaultdict[str, int],
+    thin_decisions_payload: dict[str, object] | None = None,
+    relevant_person_ids: set[str] | None = None,
+) -> bool:
+    node_id = str(getattr(node, "id", ""))
+    if relevant_person_ids is not None:
+        return node_id in relevant_person_ids
+    if thin_candidate_decision_status(thin_decisions_payload, node_id) == "keep":
+        return True
+    return node_has_network_relevance_keyword(node) or follow_degree_by_id[node_id] >= 2
+
+
+def thin_candidate_score(node: object, degree: int, solid_degree: int | None = None) -> int:
+    effective_degree = degree if solid_degree is None else solid_degree
+    followers = int(getattr(node, "follower_count", 0) or 0)
+    if followers >= 100000:
+        score = 72
+    elif followers >= 10000:
+        score = 56
+    elif followers >= 1000:
+        score = 38
+    elif followers > 0:
+        score = 18
+    else:
+        score = 8
+    if effective_degree == 0:
+        score += 26
+    elif effective_degree < 3:
+        score += 14
+    elif effective_degree < 8:
+        score += 6
+    if not has_real_profile_icon(node):
+        score += 10
+    description = str(getattr(node, "description", "") or "")
+    if not description.strip() or re.match(r"^X profile for\s", description, re.IGNORECASE):
+        score += 8
+    return score
+
+
+def thin_priority_label(score: int) -> str:
+    if score >= 80:
+        return "high"
+    if score >= 45:
+        return "medium"
+    return "low"
+
+
+def thin_candidate_reasons(
+    node: object,
+    degree: int,
+    solid_degree: int | None = None,
+    assistive_degree: int = 0,
+) -> list[str]:
+    effective_solid_degree = degree if solid_degree is None else solid_degree
+    reasons = ["missing relevance keyword"]
+    followers = int(getattr(node, "follower_count", 0) or 0)
+    if followers >= 10000:
+        reasons.append("high-follower outlier")
+    elif followers == 0:
+        reasons.append("missing follower count")
+    if degree == 0:
+        reasons.append("no account edges")
+    elif effective_solid_degree == 0:
+        reasons.append("no solid account edges")
+    elif effective_solid_degree < 3:
+        reasons.append(f"only {effective_solid_degree} solid account edges")
+    if assistive_degree:
+        reasons.append(f"{assistive_degree} auto bridge edges")
+    if not has_real_profile_icon(node):
+        reasons.append("missing real icon")
+    description = str(getattr(node, "description", "") or "")
+    if not description.strip() or re.match(r"^X profile for\s", description, re.IGNORECASE):
+        reasons.append("thin profile text")
+    return reasons
+
+
+def build_thin_candidates_payload(
+    graph: GraphData,
+    decisions_payload: dict[str, object] | None = None,
+    *,
+    min_score: int = 0,
+    limit: int | None = None,
+) -> dict[str, object]:
+    degree_by_id, follow_degree_by_id, solid_degree_by_id, assistive_degree_by_id = (
+        graph_account_degree_stats(graph)
+    )
+    decisions = (decisions_payload or {}).get("decisions", {})
+    if not isinstance(decisions, dict):
+        decisions = {}
+    relevant_person_ids = network_relevant_person_ids(graph, decisions_payload)
+
+    candidates: list[dict[str, object]] = []
+    for node in graph.nodes:
+        if node.type != "person":
+            continue
+        decision = decisions.get(node.id)
+        decision_status = thin_candidate_decision_status(decisions_payload, node.id)
+        if decision_status in {"exclude", "keep"}:
+            continue
+        if is_network_relevant_node(
+            node,
+            follow_degree_by_id,
+            decisions_payload,
+            relevant_person_ids,
+        ):
+            continue
+        degree = int(degree_by_id[node.id])
+        solid_degree = int(solid_degree_by_id[node.id])
+        assistive_degree = int(assistive_degree_by_id[node.id])
+        follow_degree = int(follow_degree_by_id[node.id])
+        score = thin_candidate_score(node, degree, solid_degree)
+        if score < max(0, int(min_score)):
+            continue
+        candidates.append(
+            {
+                "id": node.id,
+                "name": node.name,
+                "score": score,
+                "priority": thin_priority_label(score),
+                "reasons": thin_candidate_reasons(node, degree, solid_degree, assistive_degree),
+                "follower_count": int(node.follower_count or 0),
+                "degree": degree,
+                "solid_degree": solid_degree,
+                "assistive_degree": assistive_degree,
+                "follow_degree": follow_degree,
+                "source_urls": list(node.source_urls),
+                "decision_status": decision_status,
+                "decision_note": str(decision.get("note", "")).strip()
+                if isinstance(decision, dict)
+                else "",
+            }
+        )
+    candidates.sort(
+        key=lambda item: (
+            -int(item.get("score", 0)),
+            -int(item.get("follower_count", 0)),
+            str(item.get("name", "")),
+            str(item.get("id", "")),
+        )
+    )
+    if limit is not None:
+        candidates = candidates[: max(0, int(limit))]
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "candidates": candidates,
+    }
+
+
+def get_graph_node(graph: GraphData, node_id: str):
+    normalized_id = node_id.strip()
+    for node in graph.nodes:
+        if node.id == normalized_id:
+            return node
+    raise ValueError(f"Unknown graph node id: {node_id}")
+
+
+def set_thin_candidate_decision(
+    decisions_payload: dict[str, object],
+    graph: GraphData,
+    node_id: str,
+    *,
+    status: str,
+    note: str = "",
+) -> dict[str, object]:
+    normalized_status = status.strip().lower()
+    if normalized_status not in THIN_CANDIDATE_STATUSES:
+        raise ValueError(f"Unsupported thin candidate decision status: {status}")
+    node = get_graph_node(graph, node_id)
+    if node.type != "person":
+        raise ValueError(f"Thin candidate decisions are only supported for person nodes: {node_id}")
+    degree_by_id, _follow_degree_by_id, solid_degree_by_id, assistive_degree_by_id = (
+        graph_account_degree_stats(graph)
+    )
+    degree = int(degree_by_id[node.id])
+    solid_degree = int(solid_degree_by_id[node.id])
+    assistive_degree = int(assistive_degree_by_id[node.id])
+    score = thin_candidate_score(node, degree, solid_degree)
+    decisions = decisions_payload.setdefault("decisions", {})
+    if not isinstance(decisions, dict):
+        raise ValueError("thin candidate decisions must be an object")
+    decisions[node.id] = {
+        "node_id": node.id,
+        "status": normalized_status,
+        "note": note.strip(),
+        "name": node.name,
+        "score": score,
+        "reasons": thin_candidate_reasons(node, degree, solid_degree, assistive_degree),
+        "degree": degree,
+        "solid_degree": solid_degree,
+        "assistive_degree": assistive_degree,
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    return decisions[node.id]
+
+
+def set_thin_candidate_decisions(
+    decisions_payload: dict[str, object],
+    graph: GraphData,
+    node_ids: list[str],
+    *,
+    status: str,
+    note: str = "",
+) -> list[dict[str, object]]:
+    decisions: list[dict[str, object]] = []
+    seen: set[str] = set()
+    for node_id in node_ids:
+        normalized_id = str(node_id).strip()
+        if not normalized_id or normalized_id in seen:
+            continue
+        seen.add(normalized_id)
+        decisions.append(
+            set_thin_candidate_decision(
+                decisions_payload,
+                graph,
+                normalized_id,
+                status=status,
+                note=note,
+            )
+        )
+    return decisions
+
+
+def _connection_audit_edge_row(
+    edge: object,
+    node_id: str,
+    node_by_id: dict[str, object],
+) -> dict[str, object]:
+    source_id = str(getattr(edge, "source", ""))
+    target_id = str(getattr(edge, "target", ""))
+    if source_id == node_id:
+        direction = "outgoing"
+        neighbor_id = target_id
+    elif target_id == node_id:
+        direction = "incoming"
+        neighbor_id = source_id
+    else:
+        direction = "outside"
+        neighbor_id = target_id
+    neighbor = node_by_id.get(neighbor_id)
+    kind = "assistive" if is_assistive_edge(edge) else "solid"
+    return {
+        "source": source_id,
+        "target": target_id,
+        "type": str(getattr(edge, "type", "")),
+        "direction": direction,
+        "neighbor_id": neighbor_id,
+        "neighbor_name": str(getattr(neighbor, "name", neighbor_id)),
+        "neighbor_type": str(getattr(neighbor, "type", "")),
+        "kind": kind,
+        "needs_review": bool(getattr(edge, "needs_review", False)),
+        "evidence_kind": str(getattr(edge, "evidence_kind", "") or ""),
+        "confidence": float(getattr(edge, "confidence", 0.0) or 0.0),
+        "description": str(getattr(edge, "description", "") or ""),
+        "review_notes": str(getattr(edge, "review_notes", "") or ""),
+        "source_urls": list(getattr(edge, "source_urls", []) or []),
+    }
+
+
+def build_connection_audit_payload(
+    graph: GraphData,
+    node_id: str,
+    *,
+    direction: str = "both",
+    limit: int | None = None,
+) -> dict[str, object]:
+    if direction not in {"both", "incoming", "outgoing"}:
+        raise ValueError(f"Unsupported audit direction: {direction}")
+    node = get_graph_node(graph, node_id)
+    node_by_id = {node.id: node for node in graph.nodes}
+    rows = [
+        _connection_audit_edge_row(edge, node.id, node_by_id)
+        for edge in graph.edges
+        if (direction in {"both", "outgoing"} and edge.source == node.id)
+        or (direction in {"both", "incoming"} and edge.target == node.id)
+    ]
+    kind_counts = Counter(str(row["kind"]) for row in rows)
+    evidence_counts = Counter(str(row["evidence_kind"]) or "unknown" for row in rows)
+    type_counts = Counter(str(row["type"]) for row in rows)
+    needs_review_count = sum(1 for row in rows if row["needs_review"])
+    rows.sort(
+        key=lambda row: (
+            row["kind"] != "assistive",
+            not bool(row["needs_review"]),
+            str(row["type"]),
+            -float(row["confidence"]),
+            str(row["neighbor_name"]),
+            str(row["neighbor_id"]),
+        )
+    )
+    visible_rows = rows
+    if limit is not None:
+        visible_rows = rows[: max(0, int(limit))]
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "node": node.to_dict(),
+        "direction": direction,
+        "summary": {
+            "total": len(rows),
+            "solid": int(kind_counts.get("solid", 0)),
+            "assistive": int(kind_counts.get("assistive", 0)),
+            "needs_review": int(needs_review_count),
+            "accepted": len(rows) - int(needs_review_count),
+            "evidence_kind": dict(sorted(evidence_counts.items())),
+            "edge_type": dict(sorted(type_counts.items())),
+            "shown": len(visible_rows),
+        },
+        "edges": visible_rows,
+    }
+
+
+def format_connection_audit_output(payload: dict[str, object]) -> str:
+    node = payload.get("node", {})
+    node_id = str(node.get("id", "") if isinstance(node, dict) else "")
+    node_name = str(node.get("name", node_id) if isinstance(node, dict) else node_id)
+    node_type = str(node.get("type", "") if isinstance(node, dict) else "")
+    direction = str(payload.get("direction", "both"))
+    summary = payload.get("summary", {})
+    if not isinstance(summary, dict):
+        summary = {}
+    evidence_counts = summary.get("evidence_kind", {})
+    edge_type_counts = summary.get("edge_type", {})
+    evidence_label = ", ".join(
+        f"{key}={value}" for key, value in evidence_counts.items() if key
+    )
+    type_label = ", ".join(f"{key}={value}" for key, value in edge_type_counts.items() if key)
+    lines = [
+        f"[OK] connection audit: {node_name} ({node_id}) [{node_type}]",
+        f"direction: {direction}",
+        (
+            "summary: "
+            f"total={int(summary.get('total', 0) or 0)} "
+            f"shown={int(summary.get('shown', 0) or 0)} "
+            f"solid={int(summary.get('solid', 0) or 0)} "
+            f"assistive={int(summary.get('assistive', 0) or 0)} "
+            f"needs_review={int(summary.get('needs_review', 0) or 0)} "
+            f"accepted={int(summary.get('accepted', 0) or 0)}"
+        ),
+    ]
+    if evidence_label:
+        lines.append(f"evidence: {evidence_label}")
+    if type_label:
+        lines.append(f"edge types: {type_label}")
+    rows = [row for row in payload.get("edges", []) if isinstance(row, dict)]
+    lines.append("edges:")
+    if not rows:
+        lines.append("- none")
+        return "\n".join(lines)
+    for row in rows:
+        flags = [str(row.get("kind", ""))]
+        if row.get("needs_review"):
+            flags.append("needs_review")
+        evidence_kind = str(row.get("evidence_kind", "")).strip()
+        if evidence_kind:
+            flags.append(evidence_kind)
+        line = (
+            f"- {'/'.join(flag for flag in flags if flag)} "
+            f"{row.get('direction', '')} {row.get('type', '')}: "
+            f"{row.get('neighbor_name', row.get('neighbor_id', ''))} "
+            f"({row.get('neighbor_id', '')})"
+        )
+        confidence = float(row.get("confidence", 0.0) or 0.0)
+        line += f" confidence={confidence:.2f}"
+        description = str(row.get("description", "")).strip()
+        if description:
+            line += f" - {description}"
+        lines.append(line)
+        review_notes = str(row.get("review_notes", "")).strip()
+        if review_notes:
+            lines.append(f"  review: {review_notes}")
+    return "\n".join(lines)
+
+
 def format_query_output(result: dict[str, object]) -> str:
     nodes = list(result.get("nodes", []))
     edges = list(result.get("edges", []))
@@ -2233,6 +2851,68 @@ def format_review_candidate_decisions_output(
     return "\n".join(lines)
 
 
+def format_thin_candidates_output(payload: dict[str, object]) -> str:
+    candidates = [item for item in payload.get("candidates", []) if isinstance(item, dict)]
+    lines = [f"[OK] thin candidates: {len(candidates)}"]
+    if not candidates:
+        lines.append("- none")
+        return "\n".join(lines)
+
+    for candidate in candidates:
+        node_id = str(candidate.get("id", "")).strip()
+        name = str(candidate.get("name", node_id)).strip()
+        priority = str(candidate.get("priority", "")).strip()
+        score = int(candidate.get("score", 0) or 0)
+        followers = int(candidate.get("follower_count", 0) or 0)
+        degree = int(candidate.get("degree", 0) or 0)
+        solid_degree = int(candidate.get("solid_degree", degree) or 0)
+        assistive_degree = int(candidate.get("assistive_degree", 0) or 0)
+        reasons = ", ".join(str(reason) for reason in candidate.get("reasons", []))
+        line = (
+            f"- {priority} score={score}: {name} ({node_id}) "
+            f"followers={followers} degree={degree} solid={solid_degree} bridge={assistive_degree}"
+        )
+        if reasons:
+            line += f" reasons={reasons}"
+        lines.append(line)
+        note = str(candidate.get("decision_note", "")).strip()
+        if note:
+            lines.append(f"  note: {note}")
+    return "\n".join(lines)
+
+
+def format_thin_candidate_decisions_output(payload: dict[str, object]) -> str:
+    raw_decisions = payload.get("decisions", {})
+    if not isinstance(raw_decisions, dict):
+        raise ValueError("thin candidate decisions payload must contain an object")
+    decisions = [
+        (node_id, decision)
+        for node_id, decision in raw_decisions.items()
+        if isinstance(decision, dict)
+    ]
+    decisions.sort(key=lambda item: str(item[1].get("updated_at", "")).strip(), reverse=True)
+    lines = [f"[OK] thin candidate decisions: {len(decisions)}"]
+    if not decisions:
+        lines.append("- none")
+        return "\n".join(lines)
+
+    for node_id, decision in decisions:
+        status = str(decision.get("status", "")).strip() or "unknown"
+        name = str(decision.get("name", node_id)).strip()
+        score = int(decision.get("score", 0) or 0)
+        degree = int(decision.get("degree", 0) or 0)
+        solid_degree = int(decision.get("solid_degree", degree) or 0)
+        assistive_degree = int(decision.get("assistive_degree", 0) or 0)
+        lines.append(
+            f"- {status}: {name} ({node_id}) score={score} "
+            f"degree={degree} solid={solid_degree} bridge={assistive_degree}"
+        )
+        note = str(decision.get("note", "")).strip()
+        if note:
+            lines.append(f"  note: {note}")
+    return "\n".join(lines)
+
+
 def format_growth_targets_output(payload: dict[str, object]) -> str:
     headline = payload.get("headline", {})
     label = str(headline.get("label", "Growth target")).strip() or "Growth target"
@@ -2264,6 +2944,9 @@ def format_growth_targets_output(payload: dict[str, object]) -> str:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser(
         description="Manual-first graph bootstrapper inspired by sokusuu-ranking."
     )
@@ -2309,6 +2992,30 @@ def main() -> None:
         help="Print query_relations output as JSON.",
     )
     parser.add_argument(
+        "--audit-connections",
+        default="",
+        metavar="NODE_ID",
+        help="Audit one node's immediate connections by solid/assistive/review status.",
+    )
+    parser.add_argument(
+        "--audit-direction",
+        choices=("both", "incoming", "outgoing"),
+        default="both",
+        help="Connection direction for --audit-connections.",
+    )
+    parser.add_argument(
+        "--audit-limit",
+        type=int,
+        default=80,
+        metavar="N",
+        help="Limit connection audit rows after sorting.",
+    )
+    parser.add_argument(
+        "--audit-json",
+        action="store_true",
+        help="Print connection audit output as JSON.",
+    )
+    parser.add_argument(
         "--approve-candidate",
         default="",
         help="Approve one review candidate id into manual source_snapshots observations.",
@@ -2339,6 +3046,53 @@ def main() -> None:
         help="List approved/dismissed candidate decisions in the terminal.",
     )
     parser.add_argument(
+        "--list-thin-candidates",
+        action="store_true",
+        help="List low-signal person nodes hidden by the related-person default view.",
+    )
+    parser.add_argument(
+        "--thin-limit",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Limit --list-thin-candidates to the top N rows after sorting.",
+    )
+    parser.add_argument(
+        "--thin-min-score",
+        type=int,
+        default=0,
+        metavar="N",
+        help="Only list thin candidates with score >= N.",
+    )
+    parser.add_argument(
+        "--list-thin-decisions",
+        action="store_true",
+        help="List saved keep/exclude/review decisions for thin candidates.",
+    )
+    parser.add_argument(
+        "--mark-thin-candidate",
+        default="",
+        help="Save a keep/exclude/review decision for one thin candidate node id.",
+    )
+    parser.add_argument(
+        "--mark-thin-candidates",
+        nargs="+",
+        default=[],
+        metavar="NODE_ID",
+        help="Save the same keep/exclude/review decision for multiple thin candidate node ids.",
+    )
+    parser.add_argument(
+        "--thin-status",
+        choices=THIN_CANDIDATE_STATUSES,
+        default="review",
+        help="Decision status for --mark-thin-candidate or --mark-thin-candidates.",
+    )
+    parser.add_argument(
+        "--thin-note",
+        default="",
+        help="Optional note to attach when marking a thin candidate.",
+    )
+    parser.add_argument(
         "--review-json",
         action="store_true",
         help="Print review candidate or decision listings as JSON.",
@@ -2355,9 +3109,13 @@ def main() -> None:
     snapshots = load_all_source_snapshots()
     approval_mode = bool(str(args.approve_candidate).strip())
     dismiss_mode = bool(str(args.dismiss_candidate).strip())
+    mark_thin_candidate_mode = bool(str(args.mark_thin_candidate).strip()) or bool(args.mark_thin_candidates)
     list_review_candidates_mode = bool(args.list_review_candidates)
     list_candidate_decisions_mode = bool(args.list_candidate_decisions)
+    list_thin_candidates_mode = bool(args.list_thin_candidates)
+    list_thin_decisions_mode = bool(args.list_thin_decisions)
     growth_progress_mode = bool(args.growth_progress)
+    audit_connections_mode = bool(str(args.audit_connections).strip())
     query_mode = any(
         [
             bool(str(args.query).strip()),
@@ -2366,6 +3124,18 @@ def main() -> None:
             args.query_edge_type is not None,
         ]
     )
+
+    def load_current_graph() -> GraphData:
+        if NODES_JSON.exists() and EDGES_JSON.exists():
+            return load_graph(NODES_JSON, EDGES_JSON)
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        materialize_inferred_social_edges(
+            graph,
+            seed_entities,
+            load_generated_snapshots(),
+            load_review_candidate_decisions(REVIEW_CANDIDATE_DECISIONS_JSON),
+        )
+        return graph
 
     if args.validate_only:
         graph = build_graph_from_sources(seed_entities, snapshots)
@@ -2427,6 +3197,9 @@ def main() -> None:
             title="Pickup Artist Network",
             review_candidates_payload=refreshed_candidates,
             review_candidate_decisions_payload=decisions_payload,
+            thin_candidate_decisions_payload=load_thin_candidate_decisions(
+                THIN_CANDIDATE_DECISIONS_JSON
+            ),
             growth_targets_payload=growth_targets_payload,
         )
         print(
@@ -2467,6 +3240,9 @@ def main() -> None:
             title="Pickup Artist Network",
             review_candidates_payload=refreshed_candidates,
             review_candidate_decisions_payload=decisions_payload,
+            thin_candidate_decisions_payload=load_thin_candidate_decisions(
+                THIN_CANDIDATE_DECISIONS_JSON
+            ),
             growth_targets_payload=growth_targets_payload,
         )
         print(
@@ -2475,6 +3251,45 @@ def main() -> None:
         )
         if decision.get("note"):
             print(f"[OK] dismiss note: {decision['note']}")
+        return
+
+    if mark_thin_candidate_mode:
+        graph = load_current_graph()
+        thin_decisions_payload = load_thin_candidate_decisions(THIN_CANDIDATE_DECISIONS_JSON)
+        thin_node_ids = [
+            str(args.mark_thin_candidate).strip(),
+            *[str(node_id).strip() for node_id in args.mark_thin_candidates],
+        ]
+        decisions = set_thin_candidate_decisions(
+            thin_decisions_payload,
+            graph,
+            thin_node_ids,
+            status=str(args.thin_status),
+            note=str(args.thin_note),
+        )
+        save_thin_candidate_decisions(thin_decisions_payload, THIN_CANDIDATE_DECISIONS_JSON)
+        review_candidates_payload = load_review_candidates(REVIEW_CANDIDATES_JSON)
+        review_candidate_decisions_payload = load_review_candidate_decisions(
+            REVIEW_CANDIDATE_DECISIONS_JSON
+        )
+        export_html(
+            graph,
+            "docs/index.html",
+            title="Pickup Artist Network",
+            review_candidates_payload=review_candidates_payload,
+            review_candidate_decisions_payload=review_candidate_decisions_payload,
+            thin_candidate_decisions_payload=thin_decisions_payload,
+            growth_targets_payload=growth_targets_payload,
+        )
+        status_label = str(args.thin_status)
+        print(f"[OK] marked {len(decisions)} thin candidates as {status_label}")
+        for decision in decisions:
+            print(
+                f"- {decision['node_id']}: {decision['name']} "
+                f"score={decision['score']}"
+            )
+        if str(args.thin_note).strip():
+            print(f"[OK] thin note: {str(args.thin_note).strip()}")
         return
 
     if list_review_candidates_mode:
@@ -2500,6 +3315,29 @@ def main() -> None:
             print(format_review_candidate_decisions_output(decisions_payload, seed_entities))
         return
 
+    if list_thin_candidates_mode:
+        graph = load_current_graph()
+        thin_decisions_payload = load_thin_candidate_decisions(THIN_CANDIDATE_DECISIONS_JSON)
+        thin_candidates_payload = build_thin_candidates_payload(
+            graph,
+            decisions_payload=thin_decisions_payload,
+            min_score=max(0, int(args.thin_min_score or 0)),
+            limit=args.thin_limit,
+        )
+        if args.review_json:
+            print(json.dumps(thin_candidates_payload, ensure_ascii=False, indent=2))
+        else:
+            print(format_thin_candidates_output(thin_candidates_payload))
+        return
+
+    if list_thin_decisions_mode:
+        thin_decisions_payload = load_thin_candidate_decisions(THIN_CANDIDATE_DECISIONS_JSON)
+        if args.review_json:
+            print(json.dumps(thin_decisions_payload, ensure_ascii=False, indent=2))
+        else:
+            print(format_thin_candidate_decisions_output(thin_decisions_payload))
+        return
+
     if growth_progress_mode:
         if args.review_json:
             print(json.dumps(growth_targets_payload, ensure_ascii=False, indent=2))
@@ -2507,8 +3345,22 @@ def main() -> None:
             print(format_growth_targets_output(growth_targets_payload))
         return
 
+    if audit_connections_mode:
+        graph = load_current_graph()
+        payload = build_connection_audit_payload(
+            graph,
+            str(args.audit_connections).strip(),
+            direction=str(args.audit_direction),
+            limit=args.audit_limit,
+        )
+        if args.audit_json:
+            print(json.dumps(payload, ensure_ascii=False, indent=2))
+        else:
+            print(format_connection_audit_output(payload))
+        return
+
     if query_mode:
-        graph = build_graph_from_sources(seed_entities, snapshots)
+        graph = load_current_graph()
         result = query_relations(
             graph,
             search_term=str(args.query).strip(),
@@ -2524,6 +3376,7 @@ def main() -> None:
         return
 
     decisions_payload = load_review_candidate_decisions(REVIEW_CANDIDATE_DECISIONS_JSON)
+    thin_decisions_payload = load_thin_candidate_decisions(THIN_CANDIDATE_DECISIONS_JSON)
     if args.force_sample or not NODES_JSON.exists() or not EDGES_JSON.exists():
         graph = build_graph_from_sources(seed_entities, snapshots)
         materialize_inferred_social_edges(
@@ -2549,6 +3402,7 @@ def main() -> None:
         title="Pickup Artist Network",
         review_candidates_payload=refreshed_candidates,
         review_candidate_decisions_payload=decisions_payload,
+        thin_candidate_decisions_payload=thin_decisions_payload,
         growth_targets_payload=growth_targets_payload,
     )
     headline = growth_targets_payload.get("headline", {})

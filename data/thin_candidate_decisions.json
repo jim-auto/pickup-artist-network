@@ -1,0 +1,6137 @@
+{
+  "updated_at": "2026-05-25T02:13:20+00:00",
+  "decisions": {
+    "enhypen": {
+      "node_id": "enhypen",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@ENHYPEN",
+      "score": 98,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "disclosetv": {
+      "node_id": "disclosetv",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@disclosetv",
+      "score": 98,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "012-diana": {
+      "node_id": "012-diana",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@012_diana_",
+      "score": 98,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "tenshicos": {
+      "node_id": "tenshicos",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@tenshicos",
+      "score": 98,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "taichinakaj": {
+      "node_id": "taichinakaj",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@taichinakaj",
+      "score": 98,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "a31bi8": {
+      "node_id": "a31bi8",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@a31bi8",
+      "score": 90,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "leo111417": {
+      "node_id": "leo111417",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@Leo111417",
+      "score": 90,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "satetu4401": {
+      "node_id": "satetu4401",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@satetu4401",
+      "score": 86,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 1 account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "20-zxt02k": {
+      "node_id": "20-zxt02k",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@20_ZXT02K",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "unachanpp": {
+      "node_id": "unachanpp",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@unachanpp",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "5roume": {
+      "node_id": "5roume",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@5roume",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "ern-xxer": {
+      "node_id": "ern-xxer",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@ern_xxer",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "kataru0000": {
+      "node_id": "kataru0000",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@kataru0000",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "wangchanghardy": {
+      "node_id": "wangchanghardy",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@WangChangHardy",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "mihoimiofficial": {
+      "node_id": "mihoimiofficial",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@mihoimiofficial",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "suu0880": {
+      "node_id": "suu0880",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@suu0880",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "kankanyonce": {
+      "node_id": "kankanyonce",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@kankanyonce",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "dann-swano": {
+      "node_id": "dann-swano",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@dann_swano",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "bekkaku": {
+      "node_id": "bekkaku",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@bekkaku_",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "matsuripon": {
+      "node_id": "matsuripon",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower outlier without network relevance keyword",
+      "name": "@matsuripon",
+      "score": 82,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T00:13:46+00:00"
+    },
+    "mina-kan-chan": {
+      "node_id": "mina-kan-chan",
+      "status": "exclude",
+      "note": "bulk dogfood: no public profile evidence for nanpa/PUA relevance; bridge-only/adult-adjacent candidate",
+      "name": "@mina_kan_chan",
+      "score": 106,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "9 auto bridge edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T00:30:16+00:00"
+    },
+    "pako-dai": {
+      "node_id": "pako-dai",
+      "status": "exclude",
+      "note": "bulk dogfood: no public profile evidence for nanpa/PUA relevance; bridge-only/adult-adjacent candidate",
+      "name": "@pako_dai",
+      "score": 82,
+      "degree": 21,
+      "solid_degree": 0,
+      "assistive_degree": 21,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "21 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:30:16+00:00"
+    },
+    "ikuogakuruo": {
+      "node_id": "ikuogakuruo",
+      "status": "exclude",
+      "note": "bulk dogfood: no public profile evidence for nanpa/PUA relevance; bridge-only/adult-adjacent candidate",
+      "name": "@ikuogakuruo",
+      "score": 82,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:30:16+00:00"
+    },
+    "bunshun-online": {
+      "node_id": "bunshun-online",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "@bunshun_online",
+      "score": 98,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "emiry-oinari": {
+      "node_id": "emiry-oinari",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "@emiry_oinari",
+      "score": 98,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "ami-t1010": {
+      "node_id": "ami-t1010",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "ami｜ファッション発信",
+      "score": 90,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "9 auto bridge edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "charisma-doll": {
+      "node_id": "charisma-doll",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "@_charisma_doll",
+      "score": 82,
+      "degree": 18,
+      "solid_degree": 0,
+      "assistive_degree": 18,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "18 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "asozan-daifunka": {
+      "node_id": "asozan-daifunka",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "@asozan_daifunka",
+      "score": 82,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "change-jp": {
+      "node_id": "change-jp",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "@change_jp",
+      "score": 82,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "bcaafish": {
+      "node_id": "bcaafish",
+      "status": "exclude",
+      "note": "bulk dogfood: high-follower off-topic after solid/bridge split",
+      "name": "bcaafish（キレホージム言及）",
+      "score": 82,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "no solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T00:27:59+00:00"
+    },
+    "kazu-fujisawa": {
+      "node_id": "kazu-fujisawa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@kazu_fujisawa",
+      "score": 78,
+      "degree": 3,
+      "solid_degree": 3,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "na-tu-sb": {
+      "node_id": "na-tu-sb",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "なつ。",
+      "score": 78,
+      "degree": 3,
+      "solid_degree": 3,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "banabanasan": {
+      "node_id": "banabanasan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@banabanasan",
+      "score": 78,
+      "degree": 10,
+      "solid_degree": 3,
+      "assistive_degree": 7,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "7 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "jimichas7": {
+      "node_id": "jimichas7",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@jimichas7",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "lp3moxpnhkbkcmw": {
+      "node_id": "lp3moxpnhkbkcmw",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@lp3moxpnhkbkcmw",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "azusa-ux-ou": {
+      "node_id": "azusa-ux-ou",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@azusa_ux_ou",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "endou-truth2": {
+      "node_id": "endou-truth2",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@endou_truth2",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "cu0y3ycfhlty9y9": {
+      "node_id": "cu0y3ycfhlty9y9",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@cu0y3ycfhlty9y9",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "momomo-star": {
+      "node_id": "momomo-star",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@momomo__star",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "takuya775551": {
+      "node_id": "takuya775551",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@takuya775551",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "ruukun13": {
+      "node_id": "ruukun13",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@ruukun13",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "t-b-heit": {
+      "node_id": "t-b-heit",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@t_b_heit_",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "devdevzx": {
+      "node_id": "devdevzx",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@devdevzx",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "colabo-yumeno": {
+      "node_id": "colabo-yumeno",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@colabo_yumeno",
+      "score": 70,
+      "degree": 10,
+      "solid_degree": 1,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 1 solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "cornwallcapital": {
+      "node_id": "cornwallcapital",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@cornwallcapital",
+      "score": 70,
+      "degree": 17,
+      "solid_degree": 2,
+      "assistive_degree": 15,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 2 solid account edges",
+        "15 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "kazu-consult": {
+      "node_id": "kazu-consult",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "かず@ONE代表",
+      "score": 70,
+      "degree": 11,
+      "solid_degree": 1,
+      "assistive_degree": 10,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 1 solid account edges",
+        "10 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "selfcomestomine": {
+      "node_id": "selfcomestomine",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@selfcomestomine",
+      "score": 70,
+      "degree": 10,
+      "solid_degree": 1,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 1 solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "cry-curr-ar": {
+      "node_id": "cry-curr-ar",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@cry_curr_ar",
+      "score": 70,
+      "degree": 12,
+      "solid_degree": 1,
+      "assistive_degree": 11,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 1 solid account edges",
+        "11 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "ochimpo-samurai": {
+      "node_id": "ochimpo-samurai",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@ochimpo_samurai",
+      "score": 70,
+      "degree": 2,
+      "solid_degree": 2,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 2 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "kgori-0412": {
+      "node_id": "kgori-0412",
+      "status": "exclude",
+      "note": "bulk dogfood: medium-priority candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "Kousuke【人生を変えるボディメイク】",
+      "score": 70,
+      "degree": 14,
+      "solid_degree": 2,
+      "assistive_degree": 12,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 2 solid account edges",
+        "12 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:20:29+00:00"
+    },
+    "one": {
+      "node_id": "one",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@ONE",
+      "score": 64,
+      "degree": 13,
+      "solid_degree": 13,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "daioki0430": {
+      "node_id": "daioki0430",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@daioki0430",
+      "score": 64,
+      "degree": 12,
+      "solid_degree": 0,
+      "assistive_degree": 12,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "12 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "mf": {
+      "node_id": "mf",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@mf",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "usjapan7": {
+      "node_id": "usjapan7",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@usjapan7",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "dr74015037": {
+      "node_id": "dr74015037",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@Dr74015037",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "paradise787": {
+      "node_id": "paradise787",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@Paradise787",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "ima-coco30": {
+      "node_id": "ima-coco30",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@ima_coco30",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "solemonbrothers": {
+      "node_id": "solemonbrothers",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@SolemonBrothers",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "sala-chiki": {
+      "node_id": "sala-chiki",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@sala_chiki",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "bokkihayo4545": {
+      "node_id": "bokkihayo4545",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@bokkihayo4545",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "0413fumiya3": {
+      "node_id": "0413fumiya3",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@0413fumiya3",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "waniwanipanick4": {
+      "node_id": "waniwanipanick4",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@waniwanipanick4",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "daibutsu-da": {
+      "node_id": "daibutsu-da",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@daibutsu_da",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "araba-1010": {
+      "node_id": "araba-1010",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "タイガーやなぎ",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "zgkzw": {
+      "node_id": "zgkzw",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@zgkzw",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "dayofikuta": {
+      "node_id": "dayofikuta",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@dayofikuta",
+      "score": 64,
+      "degree": 10,
+      "solid_degree": 0,
+      "assistive_degree": 10,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "10 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "rz-tekito": {
+      "node_id": "rz-tekito",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@rz_tekito",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "henachoko-olive": {
+      "node_id": "henachoko-olive",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@henachoko_olive",
+      "score": 64,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "court534": {
+      "node_id": "court534",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@court534",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "kd-ixi": {
+      "node_id": "kd-ixi",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@kd_ixi",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "rururirikiki": {
+      "node_id": "rururirikiki",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@rururirikiki",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "gogomorikuma": {
+      "node_id": "gogomorikuma",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@gogomorikuma",
+      "score": 64,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "korasyo-renai": {
+      "node_id": "korasyo-renai",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "こらしょ",
+      "score": 64,
+      "degree": 11,
+      "solid_degree": 0,
+      "assistive_degree": 11,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "11 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "anri-shibuya": {
+      "node_id": "anri-shibuya",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@anri_shibuya",
+      "score": 64,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "hiro65247168": {
+      "node_id": "hiro65247168",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@hiro65247168",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "333ginza": {
+      "node_id": "333ginza",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@333ginza",
+      "score": 64,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "br10082608": {
+      "node_id": "br10082608",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@br10082608",
+      "score": 64,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "doheyama": {
+      "node_id": "doheyama",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@doheyama",
+      "score": 64,
+      "degree": 15,
+      "solid_degree": 0,
+      "assistive_degree": 15,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "15 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "haisupe-bijo": {
+      "node_id": "haisupe-bijo",
+      "status": "exclude",
+      "note": "bulk dogfood: score-64 candidate without public profile evidence for nanpa/PUA relevance",
+      "name": "@haisupe_bijo",
+      "score": 64,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:21:41+00:00"
+    },
+    "k-932654": {
+      "node_id": "k-932654",
+      "status": "keep",
+      "note": "bulk dogfood: sparse profile but linked to relevant main/account context",
+      "name": "K",
+      "score": 62,
+      "degree": 12,
+      "solid_degree": 3,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:24:08+00:00"
+    },
+    "fuku-third": {
+      "node_id": "fuku-third",
+      "status": "keep",
+      "note": "bulk dogfood: sparse profile but linked to relevant main/account context",
+      "name": "副",
+      "score": 52,
+      "degree": 2,
+      "solid_degree": 2,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 2 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:24:08+00:00"
+    },
+    "ecchu2929": {
+      "node_id": "ecchu2929",
+      "status": "keep",
+      "note": "bulk dogfood: sparse profile but linked to relevant main/account context",
+      "name": "@ecchu2929",
+      "score": 52,
+      "degree": 17,
+      "solid_degree": 1,
+      "assistive_degree": 16,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "16 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:24:08+00:00"
+    },
+    "yagi31": {
+      "node_id": "yagi31",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "yagi31",
+      "score": 62,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "bukkake-taro": {
+      "node_id": "bukkake-taro",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@bukkake_taro",
+      "score": 62,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "ring6565": {
+      "node_id": "ring6565",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@ring6565",
+      "score": 62,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "mickey-11": {
+      "node_id": "mickey-11",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "mickey_11",
+      "score": 62,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "aizfr1": {
+      "node_id": "aizfr1",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@aizfr1",
+      "score": 60,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "hiroki-camera": {
+      "node_id": "hiroki-camera",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@hiroki__camera",
+      "score": 60,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "yukishiro-yuki": {
+      "node_id": "yukishiro-yuki",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "雪代ゆき",
+      "score": 60,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "monobothakuso": {
+      "node_id": "monobothakuso",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@monobothakuso",
+      "score": 54,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "kanataevv": {
+      "node_id": "kanataevv",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@kanataevv",
+      "score": 54,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "missing real icon"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "wllt8o": {
+      "node_id": "wllt8o",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@Wllt8O",
+      "score": 52,
+      "degree": 8,
+      "solid_degree": 1,
+      "assistive_degree": 7,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "7 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "69image-part2": {
+      "node_id": "69image-part2",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@69image_part2",
+      "score": 52,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "mcv0sm0pdu9esbt": {
+      "node_id": "mcv0sm0pdu9esbt",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@MCV0Sm0pdu9esBT",
+      "score": 52,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "busudanaaaa": {
+      "node_id": "busudanaaaa",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@busudanaaaa",
+      "score": 52,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "shun77222218": {
+      "node_id": "shun77222218",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@SHUN77222218",
+      "score": 52,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "sen-xxv": {
+      "node_id": "sen-xxv",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "𝓢𝓮𝓷",
+      "score": 52,
+      "degree": 10,
+      "solid_degree": 1,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges",
+        "9 auto bridge edges"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "kuro-sub05": {
+      "node_id": "kuro-sub05",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@kuro_sub05",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "deepimpotenz": {
+      "node_id": "deepimpotenz",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@deepimpotenz",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "mh4wailgbaorcmt": {
+      "node_id": "mh4wailgbaorcmt",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@mh4wailgbaorcmt",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "post-akaikei": {
+      "node_id": "post-akaikei",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@post_akaikei",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "eraturbo2": {
+      "node_id": "eraturbo2",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@eraturbo2",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "lucky95641": {
+      "node_id": "lucky95641",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@lucky95641",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "isagi-heart": {
+      "node_id": "isagi-heart",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@isagi_heart",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "taka815": {
+      "node_id": "taka815",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "taka815",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "bakaha-sandbag": {
+      "node_id": "bakaha-sandbag",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@bakaha_sandbag",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "erabpxhxy1jnfev": {
+      "node_id": "erabpxhxy1jnfev",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@erabpxhxy1jnfev",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "akaoni119": {
+      "node_id": "akaoni119",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@akaoni119",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "namejan": {
+      "node_id": "namejan",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@namejan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "ace7-4": {
+      "node_id": "ace7-4",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@ace7_4",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "0036st": {
+      "node_id": "0036st",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@0036st",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "03saei": {
+      "node_id": "03saei",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@03saei",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "080uuzcs": {
+      "node_id": "080uuzcs",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@080uuzcs",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "2034567fir": {
+      "node_id": "2034567fir",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@2034567fir",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "2y60402860": {
+      "node_id": "2y60402860",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@2Y60402860",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "2-me-5": {
+      "node_id": "2-me-5",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@2_me_5",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "2ql1shy8xdr7gr8": {
+      "node_id": "2ql1shy8xdr7gr8",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@2ql1sHy8XdR7Gr8",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "3mbga": {
+      "node_id": "3mbga",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@3mBga",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "44o5ia2bz7awzsb": {
+      "node_id": "44o5ia2bz7awzsb",
+      "status": "exclude",
+      "note": "bulk dogfood: low-signal sparse profile without public nanpa/PUA relevance evidence",
+      "name": "@44o5ia2bZ7aWZSB",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:25:32+00:00"
+    },
+    "44o5ia2bzawzsb": {
+      "node_id": "44o5ia2bzawzsb",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@44o5ia2bZaWZSB",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "5963desuu": {
+      "node_id": "5963desuu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@5963desuu",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "651st16mile": {
+      "node_id": "651st16mile",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@651st16mile",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "672fcdpa": {
+      "node_id": "672fcdpa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@672fcdpa",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "777www7777": {
+      "node_id": "777www7777",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@777www7777",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "7-workout": {
+      "node_id": "7-workout",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@7_workout",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "7son-goku777": {
+      "node_id": "7son-goku777",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@7son_goku777",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "8rcttqd7y9hirnz": {
+      "node_id": "8rcttqd7y9hirnz",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@8RcttQD7Y9Hirnz",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "92march5": {
+      "node_id": "92march5",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@92march5",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "9fb2tw1tmasj5xh": {
+      "node_id": "9fb2tw1tmasj5xh",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@9fb2tw1tmasj5xh",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "a9xujlhq5r39bvy": {
+      "node_id": "a9xujlhq5r39bvy",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@A9xuJlhQ5r39bvY",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "atap-kun": {
+      "node_id": "atap-kun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Atap__kun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "blue-papurika": {
+      "node_id": "blue-papurika",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Blue__papurika",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "btotheseishun": {
+      "node_id": "btotheseishun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Btotheseishun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "chiya-s9": {
+      "node_id": "chiya-s9",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@CHIYA_S9",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "captured-alien": {
+      "node_id": "captured-alien",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Captured_Alien",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "d9jxaotxbd62r8a": {
+      "node_id": "d9jxaotxbd62r8a",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@D9jxAoTXBD62R8a",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "definitenojob": {
+      "node_id": "definitenojob",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@DefiniteNoJob",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "haramikarubi3": {
+      "node_id": "haramikarubi3",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@HARAMIKARUBI3",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "iysdgpmhnm66233": {
+      "node_id": "iysdgpmhnm66233",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@IYsDgPMHNM66233",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "j5ywobn7txbjepi": {
+      "node_id": "j5ywobn7txbjepi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@J5yWOBN7Txbjepi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "junkunnotenshi": {
+      "node_id": "junkunnotenshi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Junkunnotenshi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "king-bange": {
+      "node_id": "king-bange",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@KING_BANGE",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "logos-folk": {
+      "node_id": "logos-folk",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@LOGOS_FOLK",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "t44dw": {
+      "node_id": "t44dw",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@T44dW",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "top-of-himo": {
+      "node_id": "top-of-himo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Top_of_himo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "yu-inst": {
+      "node_id": "yu-inst",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@Yu_inst",
+      "score": 52,
+      "degree": 5,
+      "solid_degree": 0,
+      "assistive_degree": 5,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no solid account edges",
+        "5 auto bridge edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "um-mu": {
+      "node_id": "um-mu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@___Um_mU",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "nurui-nemuri": {
+      "node_id": "nurui-nemuri",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@_nurui_nemuri_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "yuno-angel": {
+      "node_id": "yuno-angel",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@_yuno_angel",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "a-bunp": {
+      "node_id": "a-bunp",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@a_bunp",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "aab07020702": {
+      "node_id": "aab07020702",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@aab07020702",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "aiiw4jnzkweqiw9": {
+      "node_id": "aiiw4jnzkweqiw9",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@aiiw4jnzkweqiw9",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "aiwoshiranai": {
+      "node_id": "aiwoshiranai",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@aiwoshiranai",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "aka-blackchrome": {
+      "node_id": "aka-blackchrome",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@aka_blackchrome",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "akbgarrrr": {
+      "node_id": "akbgarrrr",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@akbgarrrr",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "akihiro-koyama": {
+      "node_id": "akihiro-koyama",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@akihiro_koyama",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "alajinco": {
+      "node_id": "alajinco",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@alajinco",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "alpha-igakusei": {
+      "node_id": "alpha-igakusei",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@alpha_igakusei",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "amakusafiend716": {
+      "node_id": "amakusafiend716",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@amakusafiend716",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "amakusano1": {
+      "node_id": "amakusano1",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@amakusano1",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "amakusashirooh": {
+      "node_id": "amakusashirooh",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@amakusashirooh",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "amakusathefiend": {
+      "node_id": "amakusathefiend",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@amakusathefiend",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "amakusathegreat": {
+      "node_id": "amakusathegreat",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@amakusathegreat",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "ami-urrrrr": {
+      "node_id": "ami-urrrrr",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ami_urrrrr",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "anmirukuaji": {
+      "node_id": "anmirukuaji",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@anmirukuaji",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "araive-ceo": {
+      "node_id": "araive-ceo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@araive_ceo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "arashi-fed": {
+      "node_id": "arashi-fed",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@arashi_fed",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "aruaruiwasete": {
+      "node_id": "aruaruiwasete",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@aruaruiwasete_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "asobiju": {
+      "node_id": "asobiju",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@asobiju",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "asobou777": {
+      "node_id": "asobou777",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@asobou777",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "atannon-sabu": {
+      "node_id": "atannon-sabu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@atannon_sabu",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "atsurna": {
+      "node_id": "atsurna",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@atsurna",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "ayataka-style": {
+      "node_id": "ayataka-style",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ayataka_style",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bancha-chaban": {
+      "node_id": "bancha-chaban",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bancha_chaban",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bancha-nmp": {
+      "node_id": "bancha-nmp",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bancha_nmp",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "batman-shin": {
+      "node_id": "batman-shin",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@batman__shin",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "beam-ny": {
+      "node_id": "beam-ny",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@beam_ny",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "beauty-fucku": {
+      "node_id": "beauty-fucku",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@beauty_fucku",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bigbigspkun": {
+      "node_id": "bigbigspkun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bigbigspkun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bikkkkkkkkkkkk": {
+      "node_id": "bikkkkkkkkkkkk",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bikkkkkkkkkkkk",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "blacrow-kat": {
+      "node_id": "blacrow-kat",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@blacrow_kat",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bokunoyomaigoto": {
+      "node_id": "bokunoyomaigoto",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bokunoyomaigoto",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bou-ike": {
+      "node_id": "bou-ike",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bou_ike",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:00+00:00"
+    },
+    "bunbunbunyaa": {
+      "node_id": "bunbunbunyaa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@bunbunbunyaa",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chaanhaaybaboo": {
+      "node_id": "chaanhaaybaboo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chaanhaaybaboo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chiaki-nnp": {
+      "node_id": "chiaki-nnp",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chiaki_nnp",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chiakiasami": {
+      "node_id": "chiakiasami",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chiakiasami",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chiigram423": {
+      "node_id": "chiigram423",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chiigram423",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chin-chin20xx": {
+      "node_id": "chin-chin20xx",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chin_chin20xx",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chingechansuki": {
+      "node_id": "chingechansuki",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chingechansuki",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "chumtegoshi": {
+      "node_id": "chumtegoshi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@chumtegoshi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ciel-np": {
+      "node_id": "ciel-np",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ciel_np",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "cjd-tsuchi": {
+      "node_id": "cjd-tsuchi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@cjd_tsuchi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "crazy9352": {
+      "node_id": "crazy9352",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@crazy9352",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dy7vlsuuggrysdj": {
+      "node_id": "dy7vlsuuggrysdj",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dY7vLSuUGGRYsdJ",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "daidai66ga": {
+      "node_id": "daidai66ga",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@daidai66ga",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dakochitex": {
+      "node_id": "dakochitex",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dakochitex",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dancer-karaoke": {
+      "node_id": "dancer-karaoke",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dancer_karaoke",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "danna-dannakun": {
+      "node_id": "danna-dannakun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@danna_dannakun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dddwakaba0321": {
+      "node_id": "dddwakaba0321",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dddwakaba0321",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dededenobun": {
+      "node_id": "dededenobun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dededenobun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "denma1212": {
+      "node_id": "denma1212",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@denma1212",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "desuyoco": {
+      "node_id": "desuyoco",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@desuyoco",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dhkwd6bvlsetsom": {
+      "node_id": "dhkwd6bvlsetsom",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dhkwd6bvlsetsom",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dkzc1rz0g1srhdw": {
+      "node_id": "dkzc1rz0g1srhdw",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dkZC1Rz0G1SrhDW",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "doromi-zususuru": {
+      "node_id": "doromi-zususuru",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@doromi_zususuru",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "doromizufukuoka": {
+      "node_id": "doromizufukuoka",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@doromizufukuoka",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dqn-nao": {
+      "node_id": "dqn-nao",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dqn__nao",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dripupsex": {
+      "node_id": "dripupsex",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dripupsex",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "drrrrr888": {
+      "node_id": "drrrrr888",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@drrrrr888",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "dxiufncbzzmpmk6": {
+      "node_id": "dxiufncbzzmpmk6",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@dxiufncbzzmpmk6",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ejs85ycv29q1imc": {
+      "node_id": "ejs85ycv29q1imc",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@eJS85yCV29Q1iMc",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ed-himo": {
+      "node_id": "ed-himo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ed_himo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "edanosub1": {
+      "node_id": "edanosub1",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@edanosub1",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "egaozashi": {
+      "node_id": "egaozashi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@egaozashi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "eromaplechan": {
+      "node_id": "eromaplechan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@eromaplechan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "eroodasu": {
+      "node_id": "eroodasu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@eroodasu",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "etoriasan": {
+      "node_id": "etoriasan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@etoriasan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "f7qc022ndds8id8": {
+      "node_id": "f7qc022ndds8id8",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@f7qc022NDDS8iD8",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "fiend-amakusa": {
+      "node_id": "fiend-amakusa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@fiend_amakusa",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "fujiha-tomo-nv": {
+      "node_id": "fujiha-tomo-nv",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@fujiha_tomo_nv",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "fusicyoooo": {
+      "node_id": "fusicyoooo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@fusicyoooo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "g-menguts-ch": {
+      "node_id": "g-menguts-ch",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@g_menguts_ch",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "goalb-jp": {
+      "node_id": "goalb-jp",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@goalb_jp",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "gyozanoou": {
+      "node_id": "gyozanoou",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@gyozanoou",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "harumin11111": {
+      "node_id": "harumin11111",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@harumin11111",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "haruparustr": {
+      "node_id": "haruparustr",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@haruparuSTR",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "hciesa88": {
+      "node_id": "hciesa88",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@hciesa88",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "hiroto7722": {
+      "node_id": "hiroto7722",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@hiroto7722",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "hosuto-suda": {
+      "node_id": "hosuto-suda",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@hosuto_suda",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ikeojimind": {
+      "node_id": "ikeojimind",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ikeojimind",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ikirijyakusya": {
+      "node_id": "ikirijyakusya",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ikirijyakusya",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "itaitiktok": {
+      "node_id": "itaitiktok",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@itaiTikTok",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kgicopppvxhp6te": {
+      "node_id": "kgicopppvxhp6te",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kGICOpPpVxhp6Te",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kanato2004x": {
+      "node_id": "kanato2004x",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kanato2004x",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kanatono1": {
+      "node_id": "kanatono1",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kanatono1",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kanatoshinki": {
+      "node_id": "kanatoshinki",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kanatoshinki",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kanaudondesu": {
+      "node_id": "kanaudondesu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kanaudondesu",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kapi-san1121": {
+      "node_id": "kapi-san1121",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kapi_san1121",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kawasaki-47": {
+      "node_id": "kawasaki-47",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kawasaki_47",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kazaboshi1": {
+      "node_id": "kazaboshi1",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kazaboshi1",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kazut-mitugas": {
+      "node_id": "kazut-mitugas",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kazut_mitugas",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kbtmskar": {
+      "node_id": "kbtmskar",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kbtmskar",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kisho-mens": {
+      "node_id": "kisho-mens",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kisho_mens",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kohaku-renai": {
+      "node_id": "kohaku-renai",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kohaku_renai",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kou19960209": {
+      "node_id": "kou19960209",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kou19960209",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "kqsq": {
+      "node_id": "kqsq",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@kqsq_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "lil-suguo-999": {
+      "node_id": "lil-suguo-999",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@lil_suguo_999",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "lostvirgincafe": {
+      "node_id": "lostvirgincafe",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@lostvirgincafe",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "lovelovehhk": {
+      "node_id": "lovelovehhk",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@lovelovehhk",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "lv554": {
+      "node_id": "lv554",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@lv554",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "masa-princesama": {
+      "node_id": "masa-princesama",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@masa_princesama",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "matchkuntv": {
+      "node_id": "matchkuntv",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@matchkuntv",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "mei2002n": {
+      "node_id": "mei2002n",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@mei2002n",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "mild-oniisan": {
+      "node_id": "mild-oniisan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@mild_oniisan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "mj-perfecthuman": {
+      "node_id": "mj-perfecthuman",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@mj_perfecthuman",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "modelkidori": {
+      "node_id": "modelkidori",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@modelkidori",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "monkey-n-gaap": {
+      "node_id": "monkey-n-gaap",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@monkey_n_gaap",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "mr-rolex-love": {
+      "node_id": "mr-rolex-love",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@mr_rolex_love",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "namedarumajan": {
+      "node_id": "namedarumajan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@namedarumajan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "nangoku-gumi": {
+      "node_id": "nangoku-gumi",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@nangoku_gumi",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "nekosan": {
+      "node_id": "nekosan",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@nekosan",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "nexnex7755": {
+      "node_id": "nexnex7755",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@nexnex7755",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "nirbananan-biz": {
+      "node_id": "nirbananan-biz",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@nirbananan_biz",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "nsubj": {
+      "node_id": "nsubj",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@nsubj_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "o-pien-o": {
+      "node_id": "o-pien-o",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@o_pien_o",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "ozora-krinuki": {
+      "node_id": "ozora-krinuki",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ozora_krinuki",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "pieandc5": {
+      "node_id": "pieandc5",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@pieandc5",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "pitarin77": {
+      "node_id": "pitarin77",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@pitarin77",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "putyun": {
+      "node_id": "putyun",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@putyun",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "r93472551": {
+      "node_id": "r93472551",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@r93472551",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "rabbit-deepdown": {
+      "node_id": "rabbit-deepdown",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@rabbit_deepdown",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "rita-chu": {
+      "node_id": "rita-chu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@rita_chu_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "roppongi-makino": {
+      "node_id": "roppongi-makino",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@roppongi_makino",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "scout-sudadayo": {
+      "node_id": "scout-sudadayo",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@scout_sudadayo",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:01+00:00"
+    },
+    "sh-0mi15": {
+      "node_id": "sh-0mi15",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@sh_0mi15",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "shibuya109suto": {
+      "node_id": "shibuya109suto",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@shibuya109suto",
+      "score": 52,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no solid account edges",
+        "8 auto bridge edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "shigurui": {
+      "node_id": "shigurui",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@shigurui_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "shikodori": {
+      "node_id": "shikodori",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@shikodori",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "shinsi-wanwa": {
+      "node_id": "shinsi-wanwa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@shinsi_wanwa",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "shiro123321": {
+      "node_id": "shiro123321",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@shiro123321",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "snszebxuwxdcqdc": {
+      "node_id": "snszebxuwxdcqdc",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@snszebxuwxdcqdc",
+      "score": 52,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no solid account edges",
+        "8 auto bridge edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "solemon-fund": {
+      "node_id": "solemon-fund",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@solemon_fund",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "sora-korean-boy": {
+      "node_id": "sora-korean-boy",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@sora_korean_boy",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "ssjmind": {
+      "node_id": "ssjmind",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@ssjmind",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "style-np": {
+      "node_id": "style-np",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@style_np",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "suzukiozora1": {
+      "node_id": "suzukiozora1",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@suzukiozora1",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "suzukiozora2": {
+      "node_id": "suzukiozora2",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@suzukiozora2",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "suzukiozora3": {
+      "node_id": "suzukiozora3",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@suzukiozora3",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "toramar-gekok": {
+      "node_id": "toramar-gekok",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@toramar_gekok",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "toyokogurisita": {
+      "node_id": "toyokogurisita",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@toyokogurisita",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "traknariagari": {
+      "node_id": "traknariagari",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@traknariagari",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "tryc6": {
+      "node_id": "tryc6",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@tryc6",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "uu8y93zoyrwthh3": {
+      "node_id": "uu8y93zoyrwthh3",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@uu8y93zoyrwthh3",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "vcktgtzctrku01n": {
+      "node_id": "vcktgtzctrku01n",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@vcKTgtZCTrKU01N",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "x-f-r-e-e-x": {
+      "node_id": "x-f-r-e-e-x",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@x_f_r_e_e_x",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "xxxxxxxxxyyyeee": {
+      "node_id": "xxxxxxxxxyyyeee",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@xxxxxxxxxyyyeee",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "yattesayonaraa": {
+      "node_id": "yattesayonaraa",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@yattesayonaraa",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "yd5up": {
+      "node_id": "yd5up",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@yd5up",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "yes-summerdays": {
+      "node_id": "yes-summerdays",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@yes_summerdays_",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "yuri-expand": {
+      "node_id": "yuri-expand",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@yuri_expand",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "yuruyuru20yuru": {
+      "node_id": "yuruyuru20yuru",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "@yuruyuru20yuru",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "chome-chome1919": {
+      "node_id": "chome-chome1919",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "chome_chome1919",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "fsljk-daisuki": {
+      "node_id": "fsljk-daisuki",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "fsljk_daisuki",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "future1919": {
+      "node_id": "future1919",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "future1919",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "kibana1031": {
+      "node_id": "kibana1031",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "kibana1031",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "lucky-tern262": {
+      "node_id": "lucky-tern262",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "lucky_tern262",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "minamiseikei": {
+      "node_id": "minamiseikei",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "minamiseikei",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "minikarashu": {
+      "node_id": "minikarashu",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "minikarashu",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "mizunoex": {
+      "node_id": "mizunoex",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "mizunoex",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "nemunemu-neet": {
+      "node_id": "nemunemu-neet",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "nemunemu_neet",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "peben": {
+      "node_id": "peben",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "peben",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "romiromi630": {
+      "node_id": "romiromi630",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "romiromi630",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "royal-rail7313": {
+      "node_id": "royal-rail7313",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "royal_rail7313",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "sn-wars245": {
+      "node_id": "sn-wars245",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "sn_wars245",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "sobakara-gaykid": {
+      "node_id": "sobakara-gaykid",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "sobakara_gaykid",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "taku-lol": {
+      "node_id": "taku-lol",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "taku__lol",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "vast-plover989": {
+      "node_id": "vast-plover989",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "vast_plover989",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "rk0613i": {
+      "node_id": "rk0613i",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "なめだるまジャン",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "babao-wtpf": {
+      "node_id": "babao-wtpf",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "ばばお@30代会社員",
+      "score": 52,
+      "degree": 9,
+      "solid_degree": 0,
+      "assistive_degree": 9,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no solid account edges",
+        "9 auto bridge edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "fuji-bange": {
+      "node_id": "fuji-bange",
+      "status": "exclude",
+      "note": "bulk dogfood: medium thin candidate with no solid account evidence",
+      "name": "フジ@0→1超特化フジ長期",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "updated_at": "2026-05-24T22:27:02+00:00"
+    },
+    "namuskun": {
+      "node_id": "namuskun",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "ナムス👼🏻",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword"
+      ],
+      "degree": 3,
+      "solid_degree": 3,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "bbseac": {
+      "node_id": "bbseac",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@bbseac",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "happy-0721-nan": {
+      "node_id": "happy-0721-nan",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "奈落の花",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "bakker7": {
+      "node_id": "bakker7",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@bakker7",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "science11tech": {
+      "node_id": "science11tech",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@science11tech",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "sougo-zido-01": {
+      "node_id": "sougo-zido-01",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@sougo_zido_01",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "pi-uou": {
+      "node_id": "pi-uou",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@pi_uou",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "heefoomee2": {
+      "node_id": "heefoomee2",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@heefoomee2",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "10 auto bridge edges"
+      ],
+      "degree": 10,
+      "solid_degree": 0,
+      "assistive_degree": 10,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "bed-gekitsuiou": {
+      "node_id": "bed-gekitsuiou",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@bed_gekitsuiou",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "takigare3": {
+      "node_id": "takigare3",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@takigare3",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "ankoromochi2017": {
+      "node_id": "ankoromochi2017",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@ankoromochi2017",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "seikoupenguin": {
+      "node_id": "seikoupenguin",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@seikoupenguin",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "sp6hf": {
+      "node_id": "sp6hf",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@Sp6hF",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "tateshiiiiiiiii": {
+      "node_id": "tateshiiiiiiiii",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@tateshiiiiiiiii",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "danqdao": {
+      "node_id": "danqdao",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@danqdao",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "lr0tvq4eaehngq9": {
+      "node_id": "lr0tvq4eaehngq9",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@Lr0tvQ4eAehngQ9",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "all-seiron2": {
+      "node_id": "all-seiron2",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@ALL_SEIRON2",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "kk-ganbaru": {
+      "node_id": "kk-ganbaru",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@kk_ganbaru",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "0530riri": {
+      "node_id": "0530riri",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@0530riri",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "t-a-i-y-a-n": {
+      "node_id": "t-a-i-y-a-n",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@t_a_i_y_a_n",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "vo-gnj": {
+      "node_id": "vo-gnj",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@vo_gnj",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "8 auto bridge edges"
+      ],
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "1time2time2time": {
+      "node_id": "1time2time2time",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@1time2time2time",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "dontwannawork": {
+      "node_id": "dontwannawork",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@dontwannawork",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "hgdbsc": {
+      "node_id": "hgdbsc",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@hgdbsc",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "238383": {
+      "node_id": "238383",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@238383",
+      "score": 42,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "thin profile text"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "a0i-7": {
+      "node_id": "a0i-7",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@a0i_7",
+      "score": 42,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "thin profile text"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "ruisboss": {
+      "node_id": "ruisboss",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "ruisboss",
+      "score": 42,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "no account edges",
+        "thin profile text"
+      ],
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "aizfr": {
+      "node_id": "aizfr",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@aizfr",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "amekundayo": {
+      "node_id": "amekundayo",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@amekundayo_",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "charai-nezumi": {
+      "node_id": "charai-nezumi",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@charai_nezumi",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "charai-nezumi2": {
+      "node_id": "charai-nezumi2",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@charai_nezumi2",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "meimei-money": {
+      "node_id": "meimei-money",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@meimei_money",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "neoneet-ai2": {
+      "node_id": "neoneet-ai2",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@neoneet_ai2",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "newamekundayo": {
+      "node_id": "newamekundayo",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@newamekundayo",
+      "score": 40,
+      "reasons": [
+        "missing relevance keyword",
+        "missing follower count",
+        "only 1 solid account edges",
+        "missing real icon",
+        "thin profile text"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "moneygirl-first": {
+      "node_id": "moneygirl-first",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "@moneygirl_first",
+      "score": 32,
+      "reasons": [
+        "missing relevance keyword",
+        "only 1 solid account edges"
+      ],
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "namusubkun": {
+      "node_id": "namusubkun",
+      "status": "exclude",
+      "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
+      "name": "namusub",
+      "score": 24,
+      "reasons": [
+        "missing relevance keyword"
+      ],
+      "degree": 3,
+      "solid_degree": 3,
+      "assistive_degree": 0,
+      "updated_at": "2026-05-25T02:13:20+00:00"
+    }
+  }
+}

@@ -33,8 +33,7 @@
 
 ## 現在の数値目標
 
-次の明確な到達目標は **real person 1000人** です。  
-現在は **500人** まで到達しました。界隈全体を見渡せる地図に近づけるには 200 人ではまだ足りないため、最終目標を 1000 人へ引き上げます。運用上は 20 / 50 / 100 / 200 / 500 / 1000 の段階で増やします。
+現在は **real person 1000人** の段階目標を超え、次は収集済み候補の精査とノイズ除外を優先します。界隈全体を見渡せる地図に近づけるには人数だけでなく、公開プロフィール・出典・関係線の密度を揃える必要があります。運用上は 20 / 50 / 100 / 200 / 500 / 1000 の段階で増やし、1000 人到達後は「関連人物中心の表示」と「薄い候補のレビュー」で品質を上げます。
 
 | type | target |
 | --- | --- |
@@ -123,7 +122,12 @@ relation を CLI で確認したい場合:
 python scraper.py --query "shibuya"
 python scraper.py --query-node-id shibuya --query-direction incoming
 python scraper.py --query "Alpha" --query-edge-type affiliation --query-json
+python scraper.py --audit-connections miso
+python scraper.py --audit-connections miso --audit-direction incoming --audit-limit 20
+python scraper.py --audit-connections miso --audit-json
 ```
+
+`--query` は近傍のノードと edge をざっと見る用途です。`--audit-connections` は1ノードの直接接続を `solid` / `assistive` / `needs_review` / `evidence_kind` で集計し、推定 edge と確定寄り edge を分けて spot-check するために使います。
 
 review candidate を manual observation に昇格したい場合:
 
@@ -135,9 +139,19 @@ python scraper.py --list-review-candidates
 python scraper.py --list-candidate-decisions
 python scraper.py --list-review-candidates --review-json
 python scraper.py --growth-progress
+python scraper.py --list-thin-candidates
+python scraper.py --list-thin-candidates --thin-min-score 80 --thin-limit 20
+python scraper.py --list-thin-decisions
+python scraper.py --mark-thin-candidate "<node-id>" --thin-status keep --thin-note "relevant after manual check"
+python scraper.py --mark-thin-candidate "<node-id>" --thin-status exclude --thin-note "off-topic source"
+python scraper.py --mark-thin-candidates "<node-id-1>" "<node-id-2>" --thin-status exclude --thin-note "off-topic batch"
 ```
 
 `candidate-id` は `data/review_candidates.json` または HTML の review candidate queue を見て使います。承認すると `data/source_snapshots.json` に observation を追記し、canonical graph / review candidate / `docs/index.html` まで再生成します。dismiss すると `data/review_candidate_decisions.json` に記録され、同じ candidate は再生成時に queue から除外されます。`--list-review-candidates` と `--list-candidate-decisions` を使うと、同じ triage 情報を terminal からも確認できます。`--growth-progress` は real/fictitious scope をもとに 1000人目標への現在地を表示します。HTML には active queue に加えて **approved / dismissed の candidate decision log** も表示されます。
+
+薄い候補レビューの判断は `data/thin_candidate_decisions.json` に保存します。`keep` は関連人物として初期表示へ戻し、`exclude` は薄い候補レビュー表から外し、`review` はメモつきでレビュー対象に残します。HTML の薄い候補レビュー表には表示中候補 / 未判断 / 高優先 / keep / exclude / review の進捗サマリ、空 queue の状態、最新判断、各行の判断コマンド、上位高優先候補の一括判断コマンドを出しているため、画面で確認して terminal で実行できます。保存後は **薄い候補判断ログ** で状態とメモを追えます。
+
+薄い候補のスコアは、確定寄りの人物関係と自動補助線を分けて計算します。`degree` が多く見えても、それが profile bridge / shared context だけなら `solid=0` として扱うため、見かけの接続数で off-topic 候補を取り逃がしにくくなります。
 
 出力:
 
@@ -168,6 +182,18 @@ python build_site.py
 
 これは **collector -> validation -> graph generation -> review candidate export -> docs/index.html** をまとめて実行し、最後に real person target の現在値も表示します。
 
+### 7. 生成 HTML を dogfood する
+
+```bash
+pip install -r requirements-dev.txt
+python -m playwright install chromium
+python scripts/verify_docs_ui.py --screenshot-dir data/growth/docs-ui-verify
+```
+
+`scripts/verify_docs_ui.py` は `docs/` を一時ローカルサーバで開き、desktop / mobile / review open の3パターンで薄い候補サマリ、判断ログ、横はみ出し、page error を確認します。既に起動中の URL を使う場合は `--url http://127.0.0.1:4173/` を指定できます。
+
+GitHub Actions でも Pages build の後に同じ検証を実行し、スクショを `docs-ui-verify` artifact として保存します。ローカルの `data/growth/docs-ui-verify/` は検証生成物なので git には含めません。
+
 ## 収集フロー
 
 現時点のフローは次の通りです。
@@ -193,13 +219,13 @@ python build_site.py
   - まずは本人が公開 X profile で **自分で「ナンパ師」「プロナンパ師」「ストリートナンパのプロ」などと名乗っている** アカウントだけを少数 seed に追加する
   - 第三者の噂・暴露・まとめではなく、本人プロフィールや本人導線の public page を優先する
   - 公開プロフィール文で確認できる範囲だけを取り込み、推測的な所属・対立・影響関係はすぐに確定しない
-  - 現在は公開 X profile ベースで **500 アカウント** まで追加済み
+  - 現在は公開 X profile ベースで **1000 アカウント超** まで追加済み
 
 つまり、**実在の個人や小規模コミュニティを最初から大量投入しない**方針です。まずは official site や public institution に近い safe public community を少量ずつ足し、その次に **本人が自称している public X profile** や、そこから明示的にリンクされた関連アカウントを少数ずつ追加し、人・コミュニティ系の実データは公開情報・source URL・confidence を揃えたうえで段階的に追加します。
 
 ## GitHub Pages
 
-`docs/index.html` を GitHub Pages の公開対象にする想定です。静的 HTML だけで動作し、ノード一覧、エッジ一覧、相関図ビュー、type フィルタ、名前検索、**選択ノードの detail panel** を提供します。
+`docs/index.html` を GitHub Pages の公開対象にする想定です。静的 HTML だけで動作し、ノード一覧、エッジ一覧、相関図ビュー、type フィルタ、名前検索、**選択ノードの detail panel** を提供します。初期表示は関連人物を優先し、薄い候補や外れ値まで含めたい場合は「関連人物だけ表示」を外して全量を確認できます。非表示になった候補は **薄い候補レビュー** に優先度つきで出し、必要な候補だけ全量表示へ戻して確認できます。
 
 加えて、**real growth targets** panel で `seed_entities.txt` に基づく real node の現在値と target を確認できます。
 

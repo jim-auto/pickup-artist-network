@@ -1482,6 +1482,7 @@ def render_html(
     title: str = "Pickup Artist Network",
     review_candidates_payload: dict[str, Any] | None = None,
     review_candidate_decisions_payload: dict[str, Any] | None = None,
+    thin_candidate_decisions_payload: dict[str, Any] | None = None,
     growth_targets_payload: dict[str, Any] | None = None,
     site_data_path: str = "graph-data.json",
 ) -> str:
@@ -1549,6 +1550,11 @@ def render_html(
       --muted: #5c6b7a;
       --accent: #2f6feb;
     }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -1611,6 +1617,7 @@ def render_html(
       padding: 20px;
       display: grid;
       gap: 20px;
+      min-width: 0;
     }
     .panel {
       background: var(--panel);
@@ -1618,6 +1625,7 @@ def render_html(
       border-radius: 14px;
       padding: 16px;
       box-shadow: 0 10px 24px rgba(23, 33, 43, 0.06);
+      min-width: 0;
     }
     .controls {
       display: grid;
@@ -1639,6 +1647,13 @@ def render_html(
       gap: 8px;
       margin-top: 8px;
     }
+    .relevance-control {
+      align-items: center;
+    }
+    .relevance-control .muted {
+      font-size: 12px;
+      line-height: 1.4;
+    }
     .chip {
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -1658,6 +1673,12 @@ def render_html(
       gap: 8px;
     }
     .action-row {
+      margin-top: 10px;
+    }
+    .starter-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
       margin-top: 10px;
     }
     .search-results {
@@ -1687,6 +1708,12 @@ def render_html(
     }
     .view-summary {
       align-items: center;
+    }
+    .summary-note {
+      flex-basis: 100%;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
     }
     .network-head {
       display: flex;
@@ -1725,6 +1752,7 @@ def render_html(
       cursor: pointer;
       font-weight: 700;
       list-style: none;
+      min-width: 0;
     }
     .foldout summary::-webkit-details-marker {
       display: none;
@@ -1733,9 +1761,11 @@ def render_html(
       display: flex;
       flex-direction: column;
       gap: 4px;
+      min-width: 0;
     }
     .foldout-content {
       margin-top: 16px;
+      min-width: 0;
     }
     .foldout .panel {
       background: #f9fbff;
@@ -1774,6 +1804,7 @@ def render_html(
       padding: 10px 8px;
       text-align: left;
       vertical-align: top;
+      overflow-wrap: anywhere;
     }
     th {
       color: var(--muted);
@@ -1782,8 +1813,11 @@ def render_html(
       top: 0;
     }
     .table-wrap {
+      width: 100%;
+      max-width: 100%;
       max-height: 360px;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: auto;
       border: 1px solid var(--border);
       border-radius: 8px;
     }
@@ -1832,6 +1866,9 @@ def render_html(
       gap: 20px;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+    .two-column > * {
+      min-width: 0;
+    }
     .graph-layout {
       display: grid;
       gap: 20px;
@@ -1851,11 +1888,15 @@ def render_html(
     }
     .featured-node-list {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: 8px;
       margin-top: 12px;
+      min-width: 0;
     }
     .featured-node-card {
       width: 100%;
+      max-width: 100%;
+      min-width: 0;
       border: 1px solid var(--border);
       border-radius: 8px;
       background: #fff;
@@ -1869,6 +1910,10 @@ def render_html(
     .featured-node-card:hover {
       border-color: var(--accent);
       background: #f6f9ff;
+    }
+    .featured-node-card .node-name-text {
+      flex: 1 1 auto;
+      min-width: 0;
     }
     .featured-node-card strong,
     .featured-node-card span {
@@ -1957,11 +2002,17 @@ def render_html(
     .source-list {
       margin: 0;
       padding-left: 18px;
+      max-width: 100%;
     }
     .detail-list li,
     .source-list li {
       margin-bottom: 8px;
       line-height: 1.5;
+      min-width: 0;
+    }
+    .source-list a {
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
     .inspect-button {
       border: 1px solid var(--border);
@@ -1976,6 +2027,17 @@ def render_html(
       border-color: var(--accent);
       background: #f6f9ff;
     }
+    .command-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(72px, 1fr));
+      gap: 6px;
+    }
+    .command-hint {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
     a {
       color: var(--accent);
     }
@@ -1985,6 +2047,39 @@ def render_html(
       }
       .detail-panel {
         position: static;
+      }
+    }
+    @media (max-width: 640px) {
+      header {
+        padding: 22px 20px;
+      }
+      main {
+        padding: 12px;
+        gap: 14px;
+      }
+      .panel {
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .controls {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .action-row {
+        width: 100%;
+      }
+      .action-button {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+        white-space: normal;
+      }
+      .starter-actions {
+        grid-template-columns: 1fr;
+      }
+      #network {
+        height: 520px;
       }
     }
   </style>
@@ -2023,6 +2118,13 @@ def render_html(
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="field">実戦寄り</button>
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="community">界隈キーワード</button>
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="all">全補助</button>
+        </div>
+        <div class="filter-group relevance-control">
+          <label class="chip">
+            <input type="checkbox" id="relevance-filter-toggle" checked>
+            <span>関連人物だけ表示</span>
+          </label>
+          <span class="muted">外すと収集中の薄い候補も含めます。</span>
         </div>
       </div>
       <div>
@@ -2085,7 +2187,7 @@ def render_html(
           <h2>アカウント相関ビュー</h2>
           <div id="view-summary" class="view-summary"></div>
         </div>
-        <p class="muted">初期表示は全人物を表示します。名前と線は抑え、検索やクリックで近い関係を詳しく見られます。</p>
+        <p class="muted">初期表示は関連人物を優先します。名前と線は抑え、検索やクリックで近い関係を詳しく見られます。</p>
         <div id="network"></div>
       </section>
 
@@ -2150,6 +2252,33 @@ def render_html(
         </section>
 
         <section class="panel">
+          <h2>薄い候補レビュー</h2>
+          <p class="muted">初期表示から外した候補です。高フォロワーなのに関係線や関連語が薄いものを先に確認します。</p>
+          <div id="thin-review-summary" class="view-summary"></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>詳細</th>
+                  <th>優先度</th>
+                  <th>名前</th>
+                  <th>理由</th>
+                  <th>フォロワー</th>
+                  <th>関係</th>
+                  <th>出典</th>
+                  <th>判断</th>
+                </tr>
+              </thead>
+              <tbody id="thin-candidates-table"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="thin-candidates-table-status" class="table-status muted"></span>
+            <button type="button" id="thin-candidates-table-more" class="inspect-button" hidden>さらに表示</button>
+          </div>
+        </section>
+
+        <section class="panel">
           <h2>レビュー候補一覧</h2>
           <p class="muted">プロフィール / 概要 / 固定ポストのヒントから機械的に作った候補です。これはレビュー専用で、確定データにはまだ入りません。</p>
           <div class="table-wrap">
@@ -2194,6 +2323,30 @@ def render_html(
           <div class="table-footer">
             <span id="review-candidate-decisions-table-status" class="table-status muted"></span>
             <button type="button" id="review-candidate-decisions-table-more" class="inspect-button" hidden>さらに表示</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>薄い候補判断ログ</h2>
+          <p class="muted">keep / exclude / review の判断は <code>data/thin_candidate_decisions.json</code> に保持されます。</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>詳細</th>
+                  <th>状態</th>
+                  <th>名前</th>
+                  <th>スコア</th>
+                  <th>理由</th>
+                  <th>メモ</th>
+                </tr>
+              </thead>
+              <tbody id="thin-candidate-decisions-table"></tbody>
+            </table>
+          </div>
+          <div class="table-footer">
+            <span id="thin-candidate-decisions-table-status" class="table-status muted"></span>
+            <button type="button" id="thin-candidate-decisions-table-more" class="inspect-button" hidden>さらに表示</button>
           </div>
         </section>
       </div>
@@ -2282,6 +2435,7 @@ def render_html(
     const rawGraph = rawSiteData.graph || { nodes: [], edges: [] };
     const rawReviewCandidates = rawSiteData.review_candidates || { generated_at: "", candidates: [] };
     const rawReviewCandidateDecisions = rawSiteData.review_candidate_decisions || { updated_at: "", decisions: {} };
+    const rawThinCandidateDecisions = rawSiteData.thin_candidate_decisions || { updated_at: "", decisions: {} };
     const rawClusters = rawSiteData.clusters || { default_mode: "off", modes: {} };
     const nodeColors = {
       person: "#2f6feb",
@@ -2337,6 +2491,11 @@ def render_html(
       approved: "承認",
       dismissed: "却下"
     };
+    const thinDecisionStatusLabels = {
+      keep: "残す",
+      exclude: "除外",
+      review: "要確認"
+    };
     const accountNodeTypes = new Set(["person", "community"]);
     const clusterModeDefinitions = {
       off: {
@@ -2366,6 +2525,8 @@ def render_html(
     const rawNodeById = new Map(rawGraph.nodes.map((node) => [node.id, node]));
     const nodeDegreeById = new Map();
     const followDegreeById = new Map();
+    const solidDegreeById = new Map();
+    const assistiveDegreeById = new Map();
     rawGraph.edges.forEach((edge) => {
       const sourceNode = rawNodeById.get(edge.source);
       const targetNode = rawNodeById.get(edge.target);
@@ -2374,6 +2535,13 @@ def render_html(
       }
       nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
       nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
+      if (isAssistiveEdge(edge)) {
+        assistiveDegreeById.set(edge.source, (assistiveDegreeById.get(edge.source) || 0) + 1);
+        assistiveDegreeById.set(edge.target, (assistiveDegreeById.get(edge.target) || 0) + 1);
+      } else {
+        solidDegreeById.set(edge.source, (solidDegreeById.get(edge.source) || 0) + 1);
+        solidDegreeById.set(edge.target, (solidDegreeById.get(edge.target) || 0) + 1);
+      }
       if (edge.type === "follow") {
         followDegreeById.set(edge.source, (followDegreeById.get(edge.source) || 0) + 1);
         followDegreeById.set(edge.target, (followDegreeById.get(edge.target) || 0) + 1);
@@ -2385,18 +2553,60 @@ def render_html(
     function nodeSearchText(node) {
       return [node.id, node.name, node.description, ...(node.aliases || [])].join(" ").toLocaleLowerCase("ja-JP");
     }
+    function thinCandidateDecision(nodeId) {
+      const decision = rawThinCandidateDecisions.decisions?.[nodeId];
+      return decision && typeof decision === "object" ? decision : {};
+    }
+    function thinCandidateDecisionStatus(nodeId) {
+      return String(thinCandidateDecision(nodeId).status || "").trim();
+    }
+    const networkRelevanceKeywords = [
+      "ナンパ", "pua", "即", "ストナン", "ネトナン", "クラナン", "ストリート", "路上",
+      "nanpa", "nannpa", "nampa", "stonan", "rojou", "suto_nan", "suto-nan", "netonan", "kuranan", "street", "tinder", "tapple",
+      "pairs", "omiai", "タップル", "ペアーズ", "東カレ", "mote",
+      "マッチングアプリ", "講習", "コンサル", "モテ", "攻略", "美女攻略", "恋愛", "界隈", "一門",
+      "味噌", "mbh", "こりら", "アツスト", "女遊び", "経験人数", "箱", "クラブ"
+    ];
+    function hasNetworkRelevanceKeyword(node) {
+      const text = nodeSearchText(node);
+      return networkRelevanceKeywords.some((keyword) => text.includes(keyword.toLocaleLowerCase("ja-JP")));
+    }
+    const baseNetworkRelevantPersonIds = new Set(rawGraph.nodes
+      .filter((node) =>
+        node.type === "person" &&
+        thinCandidateDecisionStatus(node.id) !== "exclude" &&
+        (
+          thinCandidateDecisionStatus(node.id) === "keep" ||
+          hasNetworkRelevanceKeyword(node) ||
+          (followDegreeById.get(node.id) || 0) >= 2
+        )
+      )
+      .map((node) => node.id));
+    const networkRelevantPersonIds = new Set(baseNetworkRelevantPersonIds);
+    rawGraph.edges.forEach((edge) => {
+      if (isAssistiveEdge(edge)) {
+        return;
+      }
+      const sourceNode = rawNodeById.get(edge.source);
+      const targetNode = rawNodeById.get(edge.target);
+      if (!sourceNode || !targetNode || sourceNode.type !== "person" || targetNode.type !== "person") {
+        return;
+      }
+      if (baseNetworkRelevantPersonIds.has(edge.source) && thinCandidateDecisionStatus(edge.target) !== "exclude") {
+        networkRelevantPersonIds.add(edge.target);
+      }
+      if (baseNetworkRelevantPersonIds.has(edge.target) && thinCandidateDecisionStatus(edge.source) !== "exclude") {
+        networkRelevantPersonIds.add(edge.source);
+      }
+    });
     function isNetworkRelevantPerson(node) {
       if (!node || node.type !== "person") {
         return false;
       }
-      const text = nodeSearchText(node);
-      const hasNetworkKeyword = [
-        "ナンパ", "pua", "即", "ストナン", "ネトナン", "クラナン", "ストリート",
-        "nanpa", "nampa", "stonan", "netonan", "kuranan", "mote",
-        "マッチングアプリ", "講習", "コンサル", "モテ", "恋愛", "界隈", "一門",
-        "味噌", "mbh", "こりら", "アツスト", "女遊び", "経験人数", "箱", "クラブ"
-      ].some((keyword) => text.includes(keyword.toLocaleLowerCase("ja-JP")));
-      return hasNetworkKeyword || (followDegreeById.get(node.id) || 0) >= 2;
+      if (thinCandidateDecisionStatus(node.id) === "exclude") {
+        return false;
+      }
+      return networkRelevantPersonIds.has(node.id);
     }
     const rankedAccountNodeIds = rawGraph.nodes
       .filter((node) => accountNodeTypes.has(node.type))
@@ -2422,6 +2632,8 @@ def render_html(
     let currentVisibleEdges = [];
     let currentVisibleReviewNodes = [];
     let currentVisibleReviewEdges = [];
+    let currentThinCandidateEntries = [];
+    let currentThinDecisionEntries = [];
     let currentVisibleReviewCandidates = [];
     let currentVisibleReviewCandidateDecisions = [];
     let currentNodeNameById = new Map();
@@ -2432,8 +2644,10 @@ def render_html(
     const tablePageSizes = {
       reviewNodes: 60,
       reviewEdges: 120,
+      thinCandidates: 80,
       reviewCandidates: 80,
       reviewCandidateDecisions: 80,
+      thinCandidateDecisions: 80,
       nodes: 120,
       edges: 200
     };
@@ -2458,6 +2672,61 @@ def render_html(
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#39;");
+    }
+
+    function shellDoubleQuote(value) {
+      const safeValue = String(value).replace(/[^A-Za-z0-9_.:-]/g, "-");
+      return `"${safeValue}"`;
+    }
+
+    function thinDecisionCommand(nodeId, status) {
+      return [
+        "python",
+        "scraper.py",
+        "--mark-thin-candidate",
+        shellDoubleQuote(nodeId),
+        "--thin-status",
+        status,
+        "--thin-note",
+        '""'
+      ].join(" ");
+    }
+
+    function thinBulkDecisionCommand(entries, status) {
+      const nodeIds = entries.map((entry) => shellDoubleQuote(entry.node.id));
+      return [
+        "python",
+        "scraper.py",
+        "--mark-thin-candidates",
+        ...nodeIds,
+        "--thin-status",
+        status,
+        "--thin-note",
+        '""'
+      ].join(" ");
+    }
+
+    async function copyTextToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return;
+        } catch (error) {
+          // Fall through to the textarea fallback for browsers that gate clipboard access.
+        }
+      }
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.setAttribute("readonly", "");
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      const copied = document.execCommand("copy");
+      textarea.remove();
+      if (!copied) {
+        throw new Error("copy command failed");
+      }
     }
 
     function buildFilters(containerId, values, attributeName) {
@@ -2685,6 +2954,10 @@ def render_html(
       return decisionStatusLabels[value] || value || "-";
     }
 
+    function formatThinDecisionStatus(value) {
+      return thinDecisionStatusLabels[value] || value || "-";
+    }
+
     function matchesSearch(node, term) {
       if (!term) {
         return true;
@@ -2728,13 +3001,17 @@ def render_html(
       const people = visibleNodes.filter((node) => node.type === "person").length;
       const communities = visibleNodes.filter((node) => node.type === "community").length;
       const allPeople = rawGraph.nodes.filter((node) => node.type === "person").length;
+      const relevantPeople = rawGraph.nodes.filter((node) => node.type === "person" && isNetworkRelevantPerson(node)).length;
+      const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
       const profileBridgeEdges = visibleEdges.filter((edge) => isAssistiveEdge(edge)).length;
       container.innerHTML = `
         <span class="tag">${escapeHtml(people)} 人物</span>
         <span class="tag">${escapeHtml(communities)} コミュニティ</span>
         <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
         <span class="tag">補助線 ${escapeHtml(profileBridgeEdges)} 本</span>
-        <span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>
+        ${onlyRelevantAccounts
+          ? `<span class="tag">薄い候補 ${escapeHtml(allPeople - relevantPeople)} 件非表示</span>`
+          : `<span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>`}
       `;
     }
 
@@ -2758,7 +3035,7 @@ def render_html(
       if (!node || !node.icon_url) {
         return "";
       }
-      return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy">`;
+      return `<img class="${escapeHtml(className)}" src="${escapeHtml(node.icon_url)}" alt="${escapeHtml(node.name)} icon" loading="lazy" onerror="this.hidden=true">`;
     }
 
     function isProfileBridgeEdge(edge) {
@@ -2930,6 +3207,191 @@ def render_html(
                 </span>
               </button>
             `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function thinCandidateScore(node) {
+      const degree = nodeDegreeById.get(node.id) || 0;
+      const solidDegree = solidDegreeById.get(node.id) || 0;
+      const followers = node.follower_count || 0;
+      let score = 0;
+      if (followers >= 100000) {
+        score += 72;
+      } else if (followers >= 10000) {
+        score += 56;
+      } else if (followers >= 1000) {
+        score += 38;
+      } else if (followers > 0) {
+        score += 18;
+      } else {
+        score += 8;
+      }
+      if (solidDegree === 0) {
+        score += 26;
+      } else if (solidDegree < 3) {
+        score += 14;
+      } else if (solidDegree < 8) {
+        score += 6;
+      }
+      if (!hasRealProfileIcon(node)) {
+        score += 10;
+      }
+      if (!node.description || /^X profile for\\s/i.test(String(node.description))) {
+        score += 8;
+      }
+      return score;
+    }
+
+    function thinPriorityLabel(score) {
+      if (score >= 80) {
+        return "高";
+      }
+      if (score >= 45) {
+        return "中";
+      }
+      return "低";
+    }
+
+    function thinPriorityClass(score) {
+      if (score >= 80) {
+        return "tag-review";
+      }
+      if (score >= 45) {
+        return "tag-evidence-interpretation";
+      }
+      return "tag-evidence-mixed";
+    }
+
+    function thinCandidateReasons(node) {
+      const reasons = ["関連語なし"];
+      const degree = nodeDegreeById.get(node.id) || 0;
+      const solidDegree = solidDegreeById.get(node.id) || 0;
+      const assistiveDegree = assistiveDegreeById.get(node.id) || 0;
+      const followers = node.follower_count || 0;
+      if (followers >= 10000) {
+        reasons.push("高フォロワー外れ値");
+      } else if (followers === 0) {
+        reasons.push("フォロワー未取得");
+      }
+      if (degree === 0) {
+        reasons.push("関係線なし");
+      } else if (solidDegree === 0) {
+        reasons.push("確定寄り関係線なし");
+      } else if (solidDegree < 3) {
+        reasons.push(`確定寄り ${solidDegree} 本`);
+      }
+      if (assistiveDegree) {
+        reasons.push(`自動補助 ${assistiveDegree} 本`);
+      }
+      if (!hasRealProfileIcon(node)) {
+        reasons.push("実アイコン未取得");
+      }
+      if (!node.description || /^X profile for\\s/i.test(String(node.description))) {
+        reasons.push("プロフィール本文が薄い");
+      }
+      return reasons;
+    }
+
+    function buildThinCandidateEntries(term) {
+      return rawGraph.nodes
+        .filter((node) => node.type === "person" && !isNetworkRelevantPerson(node))
+        .filter((node) => thinCandidateDecisionStatus(node.id) !== "exclude")
+        .filter((node) => matchesSearch(node, term))
+        .map((node) => ({
+          node,
+          score: thinCandidateScore(node),
+          reasons: thinCandidateReasons(node),
+          solidDegree: solidDegreeById.get(node.id) || 0,
+          assistiveDegree: assistiveDegreeById.get(node.id) || 0,
+          decision: thinCandidateDecision(node.id)
+        }))
+        .sort((left, right) =>
+          right.score - left.score ||
+          (right.node.follower_count || 0) - (left.node.follower_count || 0) ||
+          left.node.name.localeCompare(right.node.name, "ja")
+        );
+    }
+
+    function normalizeThinDecisionEntry(nodeId, decision) {
+      const node = rawNodeById.get(nodeId) || {};
+      return {
+        node_id: String(decision.node_id || nodeId || "").trim(),
+        status: String(decision.status || "").trim(),
+        note: String(decision.note || "").trim(),
+        name: String(decision.name || node.name || nodeId || "").trim(),
+        score: Number(decision.score || 0),
+        degree: Number(decision.degree || 0),
+        solid_degree: Number(decision.solid_degree || decision.degree || 0),
+        assistive_degree: Number(decision.assistive_degree || 0),
+        reasons: Array.isArray(decision.reasons) ? decision.reasons : [],
+        updated_at: String(decision.updated_at || "").trim()
+      };
+    }
+
+    function buildThinDecisionEntries() {
+      return Object.entries(rawThinCandidateDecisions.decisions || {})
+        .map(([nodeId, decision]) => normalizeThinDecisionEntry(nodeId, decision || {}))
+        .filter((entry) => entry.node_id)
+        .sort((left, right) =>
+          right.updated_at.localeCompare(left.updated_at) ||
+          right.score - left.score ||
+          left.name.localeCompare(right.name, "ja")
+        );
+    }
+
+    function renderThinReviewSummary(thinCandidateEntries, thinDecisionEntries) {
+      const container = document.getElementById("thin-review-summary");
+      if (!container) {
+        return;
+      }
+      const statusCounts = thinDecisionEntries.reduce((counts, entry) => {
+        const status = entry.status || "unknown";
+        counts[status] = (counts[status] || 0) + 1;
+        return counts;
+      }, {});
+      const reviewRemaining = thinCandidateEntries.filter((entry) => String(entry.decision?.status || "").trim() === "review").length;
+      const undecidedRemaining = thinCandidateEntries.filter((entry) => !String(entry.decision?.status || "").trim()).length;
+      const highPriorityRemaining = thinCandidateEntries.filter((entry) => entry.score >= 80).length;
+      const highPriorityBatch = thinCandidateEntries.filter((entry) => entry.score >= 80).slice(0, 20);
+      const latestDecision = thinDecisionEntries[0] || null;
+      const completionNote = thinCandidateEntries.length
+        ? `表示中候補 ${thinCandidateEntries.length} 件のうち、未判断 ${undecidedRemaining} 件 / 要確認 ${reviewRemaining} 件です。`
+        : "現在の検索条件で薄い候補は残っていません。新しい候補が入るとこの表に表示されます。";
+      const latestNote = latestDecision
+        ? `最新判断: ${formatThinDecisionStatus(latestDecision.status)} / ${latestDecision.name || latestDecision.node_id} / score ${latestDecision.score || 0}`
+        : "保存済み判断はまだありません。";
+      const bulkActions = highPriorityBatch.length
+        ? `
+          <div class="command-actions">
+            <button type="button" class="inspect-button" data-copy-command="${escapeHtml(thinBulkDecisionCommand(highPriorityBatch, "exclude"))}">高優先20 exclude</button>
+            <button type="button" class="inspect-button" data-copy-command="${escapeHtml(thinBulkDecisionCommand(highPriorityBatch, "review"))}">高優先20 review</button>
+          </div>
+        `
+        : "";
+      container.innerHTML = `
+        <span class="tag">表示中候補 ${escapeHtml(thinCandidateEntries.length)} 件</span>
+        <span class="tag">未判断 ${escapeHtml(undecidedRemaining)} 件</span>
+        <span class="tag tag-review">高優先 ${escapeHtml(highPriorityRemaining)} 件</span>
+        <span class="tag tag-evidence-fact">keep ${escapeHtml(statusCounts.keep || 0)}</span>
+        <span class="tag tag-review">exclude ${escapeHtml(statusCounts.exclude || 0)}</span>
+        <span class="tag tag-evidence-interpretation">review ${escapeHtml(statusCounts.review || 0)}</span>
+        <span class="summary-note">${escapeHtml(completionNote)} ${escapeHtml(latestNote)}</span>
+        ${bulkActions}
+      `;
+    }
+
+    function renderStarterPanel() {
+      return `
+        <div class="detail-section">
+          <h4>おすすめビュー</h4>
+          <div class="starter-actions">
+            <button type="button" class="action-button" data-starter-action="connectivity">近い関係</button>
+            <button type="button" class="action-button" data-starter-action="keyword">キーワード</button>
+            <button type="button" class="action-button" data-starter-action="solid">確定寄り</button>
+            <button type="button" class="action-button" data-starter-action="online">アプリ/オンライン</button>
+            <button type="button" class="action-button" data-starter-action="all-accounts">全人物</button>
           </div>
         </div>
       `;
@@ -3140,6 +3602,7 @@ def render_html(
         selectedNodeId = null;
         panel.innerHTML = `
           <div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>
+          ${renderStarterPanel()}
           ${renderFeaturedNodes()}
           ${renderSparseFollowerNodes()}
         `;
@@ -3215,6 +3678,25 @@ def render_html(
         }
       });
       renderDetailPanel(nodeId);
+    }
+
+    function revealAndFocusNode(nodeId) {
+      const relevanceFilterToggle = document.getElementById("relevance-filter-toggle");
+      if (relevanceFilterToggle) {
+        relevanceFilterToggle.checked = false;
+      }
+      document.querySelectorAll("[data-node-type]").forEach((input) => {
+        if (input.getAttribute("data-node-type") === "person") {
+          input.checked = true;
+        }
+      });
+      document.getElementById("search").value = "";
+      if (keywordClusterInput) {
+        keywordClusterInput.value = "";
+      }
+      updateKeywordClusterControl();
+      applyFilters();
+      window.setTimeout(() => focusNode(nodeId), 120);
     }
 
     function renderNodeTable(nodes) {
@@ -3300,6 +3782,48 @@ def render_html(
       });
     }
 
+    function renderThinCandidateTable(entries) {
+      renderTableSlice({
+        items: entries,
+        tableKey: "thinCandidates",
+        tbodyId: "thin-candidates-table",
+        statusId: "thin-candidates-table-status",
+        moreButtonId: "thin-candidates-table-more",
+        emptyHtml: '<tr><td colspan="8" class="muted">現在の検索条件に一致する薄い候補はありません。</td></tr>',
+        renderRow: (entry) => {
+          const node = entry.node;
+          const degree = nodeDegreeById.get(node.id) || 0;
+          const followDegree = followDegreeById.get(node.id) || 0;
+          const solidDegree = entry.solidDegree || 0;
+          const assistiveDegree = entry.assistiveDegree || 0;
+          const decisionStatus = String(entry.decision?.status || "").trim();
+          const decisionNote = String(entry.decision?.note || "").trim();
+          const keepCommand = thinDecisionCommand(node.id, "keep");
+          const excludeCommand = thinDecisionCommand(node.id, "exclude");
+          const reviewCommand = thinDecisionCommand(node.id, "review");
+          return `
+            <tr>
+              <td><button type="button" class="inspect-button" data-thin-node-id="${escapeHtml(node.id)}">表示</button></td>
+              <td><span class="tag ${thinPriorityClass(entry.score)}">${escapeHtml(thinPriorityLabel(entry.score))}</span><br><span class="muted">${escapeHtml(entry.score)}</span></td>
+              <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(node.name)}</strong><br><span class="muted">${escapeHtml(node.id)}</span></div></div></td>
+              <td>${entry.reasons.map((reason) => `<span class="tag">${escapeHtml(reason)}</span>`).join("")}${decisionStatus ? `<br><span class="muted">判断: ${escapeHtml(decisionStatus)}${decisionNote ? ` / ${escapeHtml(decisionNote)}` : ""}</span>` : ""}</td>
+              <td>${escapeHtml(formatNumber(node.follower_count || 0))}</td>
+              <td>${escapeHtml(solidDegree)} 確定寄り<br><span class="muted">補助 ${escapeHtml(assistiveDegree)} / 全 ${escapeHtml(degree)} / follow ${escapeHtml(followDegree)}</span></td>
+              <td>${formatLinkList(node.source_urls || [])}</td>
+              <td>
+                <div class="command-actions">
+                  <button type="button" class="inspect-button" data-copy-command="${escapeHtml(keepCommand)}">keep</button>
+                  <button type="button" class="inspect-button" data-copy-command="${escapeHtml(excludeCommand)}">exclude</button>
+                  <button type="button" class="inspect-button" data-copy-command="${escapeHtml(reviewCommand)}">review</button>
+                </div>
+                <span class="command-hint muted">コピー後、terminal で実行します。</span>
+              </td>
+            </tr>
+          `;
+        }
+      });
+    }
+
     function renderReviewCandidateTable(candidates, nodeNameById) {
       renderTableSlice({
         items: candidates,
@@ -3359,13 +3883,40 @@ def render_html(
       });
     }
 
+    function renderThinCandidateDecisionTable(decisionEntries) {
+      renderTableSlice({
+        items: decisionEntries,
+        tableKey: "thinCandidateDecisions",
+        tbodyId: "thin-candidate-decisions-table",
+        statusId: "thin-candidate-decisions-table-status",
+        moreButtonId: "thin-candidate-decisions-table-more",
+        emptyHtml: '<tr><td colspan="6" class="muted">保存済みの薄い候補判断はありません。</td></tr>',
+        renderRow: (entry) => {
+          const node = rawNodeById.get(entry.node_id);
+          return `
+            <tr>
+              <td><button type="button" class="inspect-button" data-thin-node-id="${escapeHtml(entry.node_id)}">表示</button></td>
+              <td><span class="tag ${entry.status === "exclude" ? "tag-review" : "tag-evidence-fact"}">${escapeHtml(formatThinDecisionStatus(entry.status || "-"))}</span><br><span class="muted">${escapeHtml(entry.updated_at || "-")}</span></td>
+              <td><div class="node-name-cell">${formatNodeAvatar(node, "avatar-thumb")}<div class="node-name-text"><strong>${escapeHtml(entry.name || entry.node_id)}</strong><br><span class="muted">${escapeHtml(entry.node_id)}</span></div></div></td>
+              <td>${escapeHtml(entry.score || 0)}<br><span class="muted">確定寄り ${escapeHtml(entry.solid_degree || 0)} / 補助 ${escapeHtml(entry.assistive_degree || 0)}</span></td>
+              <td>${entry.reasons.map((reason) => `<span class="tag">${escapeHtml(reason)}</span>`).join("") || '<span class="muted">-</span>'}</td>
+              <td>${escapeHtml(entry.note || "-")}</td>
+            </tr>
+          `;
+        }
+      });
+    }
+
     function renderVisibleTables() {
       renderNodeTable(currentVisibleNodes);
       renderEdgeTable(currentVisibleEdges, currentNodeNameById);
       renderReviewNodeTable(currentVisibleReviewNodes);
       renderReviewEdgeTable(currentVisibleReviewEdges, currentNodeNameById);
+      renderThinReviewSummary(currentThinCandidateEntries, currentThinDecisionEntries);
+      renderThinCandidateTable(currentThinCandidateEntries);
       renderReviewCandidateTable(currentVisibleReviewCandidates, currentNodeNameById);
       renderReviewCandidateDecisionTable(currentVisibleReviewCandidateDecisions, currentNodeNameById);
+      renderThinCandidateDecisionTable(currentThinDecisionEntries);
     }
 
     function resetClusters() {
@@ -3649,6 +4200,7 @@ def render_html(
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const allowedBridgeCategories = selectedValues("[data-bridge-category]", "data-bridge-category");
       const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked !== false;
+      const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
       const selectedKeywordClusterId = getSelectedKeywordClusterId();
@@ -3659,6 +4211,7 @@ def render_html(
         edgeTypes: [...allowedEdgeTypes].sort(),
         bridgeCategories: [...allowedBridgeCategories].sort(),
         profileBridge: includeProfileBridgeEdges,
+        onlyRelevantAccounts,
         term,
         clusterMode,
         keywordCluster: selectedKeywordClusterId
@@ -3673,6 +4226,9 @@ def render_html(
           return false;
         }
         if (!accountNodeTypes.has(node.type)) {
+          return false;
+        }
+        if (onlyRelevantAccounts && node.type === "person" && !isNetworkRelevantPerson(node)) {
           return false;
         }
         if (selectedKeywordClusterId && keywordAssignments[node.id] !== selectedKeywordClusterId) {
@@ -3726,10 +4282,14 @@ def render_html(
       const visibleReviewCandidateDecisions = Object.entries(rawReviewCandidateDecisions.decisions || {})
         .map(([candidateId, decision]) => normalizeDecisionEntry(candidateId, decision || {}))
         .filter((entry) => visibleNodeIds.has(entry.source) && visibleNodeIds.has(entry.target));
+      const thinCandidateEntries = buildThinCandidateEntries(term);
+      const thinDecisionEntries = buildThinDecisionEntries().filter((entry) => matchesSearch(rawNodeById.get(entry.node_id) || { id: entry.node_id, name: entry.name, description: "", aliases: [] }, term));
       currentVisibleNodes = visibleNodes;
       currentVisibleEdges = visibleEdges;
       currentVisibleReviewNodes = visibleNodes.filter((node) => node.needs_review);
       currentVisibleReviewEdges = visibleEdges.filter((edge) => edge.needs_review);
+      currentThinCandidateEntries = thinCandidateEntries;
+      currentThinDecisionEntries = thinDecisionEntries;
       currentVisibleReviewCandidates = visibleReviewCandidates;
       currentVisibleReviewCandidateDecisions = visibleReviewCandidateDecisions;
       currentNodeNameById = nodeNameById;
@@ -3846,6 +4406,10 @@ def render_html(
       if (profileBridgeToggle) {
         profileBridgeToggle.checked = true;
       }
+      const relevanceFilterToggle = document.getElementById("relevance-filter-toggle");
+      if (relevanceFilterToggle) {
+        relevanceFilterToggle.checked = true;
+      }
       document.querySelectorAll("[data-bridge-category]").forEach((input) => {
         input.checked = true;
       });
@@ -3898,7 +4462,7 @@ def render_html(
       applyFilters();
       fitVisibleGraph();
     });
-    document.querySelectorAll("[data-node-type], [data-edge-type], [data-bridge-category], #profile-bridge-toggle").forEach((input) => {
+    document.querySelectorAll("[data-node-type], [data-edge-type], [data-bridge-category], #profile-bridge-toggle, #relevance-filter-toggle").forEach((input) => {
       input.addEventListener("change", applyFilters);
     });
     if (clusterModeInput) {
@@ -3915,8 +4479,10 @@ def render_html(
     [
       ["reviewNodes", "review-nodes-table-more"],
       ["reviewEdges", "review-edges-table-more"],
+      ["thinCandidates", "thin-candidates-table-more"],
       ["reviewCandidates", "review-candidates-table-more"],
       ["reviewCandidateDecisions", "review-candidate-decisions-table-more"],
+      ["thinCandidateDecisions", "thin-candidate-decisions-table-more"],
       ["nodes", "nodes-table-more"],
       ["edges", "edges-table-more"]
     ].forEach(([tableKey, buttonId]) => {
@@ -3939,7 +4505,57 @@ def render_html(
       }
       focusNode(button.getAttribute("data-node-id"));
     });
+    document.getElementById("thin-candidates-table").addEventListener("click", async (event) => {
+      const copyButton = event.target.closest("[data-copy-command]");
+      if (copyButton) {
+        const originalText = copyButton.textContent;
+        try {
+          await copyTextToClipboard(copyButton.getAttribute("data-copy-command") || "");
+          copyButton.textContent = "コピー済";
+          window.setTimeout(() => {
+            copyButton.textContent = originalText;
+          }, 1200);
+        } catch (error) {
+          copyButton.textContent = "失敗";
+          window.setTimeout(() => {
+            copyButton.textContent = originalText;
+          }, 1200);
+        }
+        return;
+      }
+      const button = event.target.closest("[data-thin-node-id]");
+      if (!button) {
+        return;
+      }
+      revealAndFocusNode(button.getAttribute("data-thin-node-id"));
+    });
+    document.getElementById("thin-candidate-decisions-table").addEventListener("click", (event) => {
+      const button = event.target.closest("[data-thin-node-id]");
+      if (!button) {
+        return;
+      }
+      revealAndFocusNode(button.getAttribute("data-thin-node-id"));
+    });
     document.getElementById("detail-panel").addEventListener("click", (event) => {
+      const starterButton = event.target.closest("[data-starter-action]");
+      if (starterButton) {
+        const action = starterButton.getAttribute("data-starter-action");
+        if (action === "connectivity") {
+          document.getElementById("quick-connectivity").click();
+        } else if (action === "keyword") {
+          document.getElementById("quick-keyword").click();
+        } else if (action === "solid" || action === "online") {
+          setBridgePreset(action);
+          applyFilters();
+        } else if (action === "all-accounts") {
+          const relevanceFilterToggle = document.getElementById("relevance-filter-toggle");
+          if (relevanceFilterToggle) {
+            relevanceFilterToggle.checked = false;
+          }
+          applyFilters();
+        }
+        return;
+      }
       const button = event.target.closest("[data-node-id]");
       if (!button) {
         return;
@@ -3994,6 +4610,7 @@ def export_html(
     title: str = "Pickup Artist Network",
     review_candidates_payload: dict[str, Any] | None = None,
     review_candidate_decisions_payload: dict[str, Any] | None = None,
+    thin_candidate_decisions_payload: dict[str, Any] | None = None,
     growth_targets_payload: dict[str, Any] | None = None,
 ) -> None:
     output_file = Path(output_path)
@@ -4004,6 +4621,8 @@ def export_html(
         "graph": graph.to_dict(),
         "review_candidates": review_candidates_payload or {"generated_at": "", "candidates": []},
         "review_candidate_decisions": review_candidate_decisions_payload
+        or {"updated_at": "", "decisions": {}},
+        "thin_candidate_decisions": thin_candidate_decisions_payload
         or {"updated_at": "", "decisions": {}},
         "clusters": relation_clusters_payload,
     }
@@ -4017,6 +4636,7 @@ def export_html(
             title=title,
             review_candidates_payload=review_candidates_payload,
             review_candidate_decisions_payload=review_candidate_decisions_payload,
+            thin_candidate_decisions_payload=thin_candidate_decisions_payload,
             growth_targets_payload=growth_targets_payload,
             site_data_path=site_data_file.name,
         ),

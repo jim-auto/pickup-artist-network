@@ -6780,7 +6780,60 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "k13nanpa",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @k13nanpa.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://x.com/k13nanpa"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "queenquest-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @queenquest_pua.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://x.com/queenquest_pua"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "bii5pquqan14571",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @bii5PQuQan14571.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://x.com/bii5PQuQan14571"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "preciou91828145",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Preciou91828145.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://x.com/Preciou91828145"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1812058941041364992/DEv82jk0_400x400.jpg",
     "follower_count": 45630
   },
@@ -9115,7 +9168,34 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:35+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "yonhiiro",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @yonhiiro.",
+        "source_urls": [
+          "https://x.com/dogmapua666",
+          "https://x.com/yonhiiro"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "7obayashi",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @7obayashi_.",
+        "source_urls": [
+          "https://x.com/dogmapua666",
+          "https://x.com/7obayashi_"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ]
   },
   {
     "account_id": "doheyama",
@@ -11815,7 +11895,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "goph",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @goph_.",
+        "source_urls": [
+          "https://x.com/genkiforfun",
+          "https://x.com/goph_"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1916789369165303808/QCHbsxrE_400x400.jpg",
     "follower_count": 31861
   },
@@ -13485,7 +13579,47 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "0-q4a",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @0_q4a.",
+        "source_urls": [
+          "https://x.com/hapuchan___",
+          "https://x.com/0_q4a"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "preciou91828145",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Preciou91828145.",
+        "source_urls": [
+          "https://x.com/hapuchan___",
+          "https://x.com/Preciou91828145"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "aoijoseijidou",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @aoijoseijidou.",
+        "source_urls": [
+          "https://x.com/hapuchan___",
+          "https://x.com/aoijoseijidou"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2019282524938334208/V1-LIvHL_400x400.jpg",
     "follower_count": 21265
   },
@@ -17032,7 +17166,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:00+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "around60g",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @around60g.",
+        "source_urls": [
+          "https://x.com/karasu_pua",
+          "https://x.com/around60g"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ]
   },
   {
     "account_id": "karasu-sr1",
@@ -18108,7 +18256,34 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "goph",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @goph_.",
+        "source_urls": [
+          "https://x.com/kei_male_apex",
+          "https://x.com/goph_"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "1046-essential",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @1046_essential.",
+        "source_urls": [
+          "https://x.com/kei_male_apex",
+          "https://x.com/1046_essential"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1924399957848489984/5LCuo_ci_400x400.jpg",
     "follower_count": 24420
   },
@@ -21668,7 +21843,73 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "yonhiiro",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @yonhiiro.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa",
+          "https://x.com/yonhiiro"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "preciou91828145",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Preciou91828145.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa",
+          "https://x.com/Preciou91828145"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "himotekiwami45",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @himotekiwami45.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa",
+          "https://x.com/himotekiwami45"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "bioremame",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @bioremame.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa",
+          "https://x.com/bioremame"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "bcjfoclkcr19120",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @bCJFoClkcR19120.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa",
+          "https://x.com/bCJFoClkcR19120"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1145574509778391041/3CQ987cJ_400x400.jpg",
     "follower_count": 24113
   },
@@ -28246,7 +28487,60 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kuroda-nanpa00",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kuroda_nanpa00.",
+        "source_urls": [
+          "https://x.com/osugi_pua",
+          "https://x.com/kuroda_nanpa00"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "puayone",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @PuaYone.",
+        "source_urls": [
+          "https://x.com/osugi_pua",
+          "https://x.com/PuaYone"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "tanatana-puaa",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @tanatana_puaa.",
+        "source_urls": [
+          "https://x.com/osugi_pua",
+          "https://x.com/tanatana_puaa"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "yonhiiro",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @yonhiiro.",
+        "source_urls": [
+          "https://x.com/osugi_pua",
+          "https://x.com/yonhiiro"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/912702120868012032/oCsOBmCo_400x400.jpg",
     "follower_count": 38777
   },
@@ -30911,7 +31205,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nampa-douga",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @nampa_douga.",
+        "source_urls": [
+          "https://x.com/real_nampa",
+          "https://x.com/nampa_douga"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1911320637303341057/0Y0A7On9_400x400.jpg",
     "follower_count": 129513
   },
@@ -42474,5 +42782,450 @@
     "observations": [],
     "icon_url": "https://pbs.twimg.com/profile_images/1588152704404029441/CuPA_gIU_400x400.jpg",
     "follower_count": 439
+  },
+  {
+    "account_id": "k13nanpa",
+    "profile_url": "https://x.com/k13nanpa",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1845449656572182530/Z6TZRTgw_400x400.jpg",
+    "profile_text": "ケイ | 美女専門恋愛コンサルタント (@k13nanpa)\n「上位美女に刺さる魅力」を設計。心理×非言語×会話を構造化し、再現性のある関係構築を実現。選ばれる側から選ぶ側へ。｜講師6年目。コンサル実績：有名アイドル、モデル、女優、50万人インフルエンサーなど美女との長期事例\nLocation: 美女を抱いた実録音声を無料で公開中▶︎",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/k13nanpa"
+    ],
+    "summary": "「上位美女に刺さる魅力」を設計。心理×非言語×会話を構造化し、再現性のある関係構築を実現。選ばれる側から選ぶ側へ。｜講師6年目。コンサル実績：有名アイドル、モデル、女優、50万人インフルエンサーなど美女との長期事例",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/k13nanpa",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 3071
+  },
+  {
+    "account_id": "nampa-douga",
+    "profile_url": "https://x.com/nampa_douga",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1977900448360341504/cwV0Sgk0_400x400.jpg",
+    "profile_text": "ナンパ次郎(動画垢) (@nampa_douga)\nナンパ次郎の動画垢です。\nLocation: ファンクラブ限定動画→",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/nampa_douga"
+    ],
+    "summary": "ナンパ次郎の動画垢です。",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: real-nampa.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/nampa_douga",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 1989
+  },
+  {
+    "account_id": "kuroda-nanpa00",
+    "profile_url": "https://x.com/kuroda_nanpa00",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1818155203042201600/vEnKkTHh_400x400.jpg",
+    "profile_text": "くろだ@熟女狩り (@kuroda_nanpa00)\n熟女が大好きなナンパ師の熟女日記 #BBA狩猟日記\nLocation: 179(スト163即)",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/kuroda_nanpa00"
+    ],
+    "summary": "熟女が大好きなナンパ師の熟女日記 #BBA狩猟日記",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/kuroda_nanpa00",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 498
+  },
+  {
+    "account_id": "puayone",
+    "profile_url": "https://x.com/PuaYone",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1355318289929396227/iWtNkDBa_400x400.jpg",
+    "profile_text": "イーグルス (@PuaYone)\n30代 / TAV歴10年 / 元ヨネ → イーグルス ▶︎ナンパ10年停滞男がガチ集中した90日間の変化記録まとめ https://t.co/0T2myPFAcS",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/PuaYone"
+    ],
+    "summary": "30代 / TAV歴10年 / 元ヨネ → イーグルス ▶︎ナンパ10年停滞男がガチ集中した90日間の変化記録まとめ https://t.co/0T2myPFAcS",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/PuaYone",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 189
+  },
+  {
+    "account_id": "tanatana-puaa",
+    "profile_url": "https://x.com/tanatana_puaa",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1680707193866424321/7I4ssLzo_400x400.jpg",
+    "profile_text": "たなか (@tanatana_puaa)\n🍑スト アラサー 29 引退しました",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/tanatana_puaa"
+    ],
+    "summary": "🍑スト アラサー 29 引退しました",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/tanatana_puaa",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 97
+  },
+  {
+    "account_id": "queenquest-pua",
+    "profile_url": "https://x.com/queenquest_pua",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1954564483860590592/EeyVP6o5_400x400.jpg",
+    "profile_text": "月 (@queenquest_pua)\n人生と真摯に向き合う。 今日もストリートに立つ。100↑",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/queenquest_pua"
+    ],
+    "summary": "人生と真摯に向き合う。 今日もストリートに立つ。100↑",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/queenquest_pua",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 56
+  },
+  {
+    "account_id": "bii5pquqan14571",
+    "profile_url": "https://x.com/bii5PQuQan14571",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978083154952085504/b3BDsFUX_400x400.jpg",
+    "profile_text": "キンタロウ (@bii5PQuQan14571)\nアラサーリーマンナンパ師の記録 完ソロ勢 200即~",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/bii5PQuQan14571"
+    ],
+    "summary": "アラサーリーマンナンパ師の記録 完ソロ勢 200即~",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/bii5PQuQan14571",
+      "collected_at": "2026-05-21T00:38:36+00:00"
+    },
+    "observations": [],
+    "follower_count": 16
+  },
+  {
+    "account_id": "goph",
+    "profile_url": "https://x.com/goph_",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1499908813394411520/KTzEdmNw_400x400.jpg",
+    "profile_text": "ゴッホ@オトコ磨きラボ (@goph_)\nナンパ系有料オンラインサロン #オトコ磨きラボ ファウンダー /何でも相談できるLINE公式https://t.co/BMIzZYnI3O /有料note https://t.co/yKUP32vQb2 /著書に恋愛工学の教科書/ハイライトにバズった恋愛動画解説",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/goph_"
+    ],
+    "summary": "ナンパ系有料オンラインサロン #オトコ磨きラボ ファウンダー /何でも相談できるLINE公式https://t.co/BMIzZYnI3O /有料note https://t.co/yKUP32vQb2 /著書に恋愛工学の教科書/ハイライトにバズった恋愛動画解説",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: genki-japan, kei-male-apex.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/goph_",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 30595
+  },
+  {
+    "account_id": "yonhiiro",
+    "profile_url": "https://x.com/yonhiiro",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1941271398049107968/wnkx-UV4_400x400.jpg",
+    "profile_text": "あかおぎ(元ヨン)@関係構築キャンプ (@yonhiiro)\n理想の彼女を作り、自然体の関係を築く『関係構築キャンプ』 ＆ 男の自己肯定感を高める『メンタル道場』運営 | フェスでナンパした彼女と結婚 | 2児の父 | サービス受講300名超 | 面談→https://t.co/5WXTx1obTj\nLocation: note累計スキ数8000超え、ありがとうございます",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/yonhiiro"
+    ],
+    "summary": "理想の彼女を作り、自然体の関係を築く『関係構築キャンプ』 ＆ 男の自己肯定感を高める『メンタル道場』運営 | フェスでナンパした彼女と結婚 | 2児の父 | サービス受講300名超 | 面談→https://t.co/5WXTx1obTj",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666, mamemame-nanpa, osugi-pua.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/yonhiiro",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 11026
+  },
+  {
+    "account_id": "1046-essential",
+    "profile_url": "https://x.com/1046_essential",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1911964949334704128/i4RHml6z_400x400.jpg",
+    "profile_text": "潔 世一 (@1046_essential)\nNo.1韓国外見×恋愛コンサル 【 식구￤シック 】 運営中。非モテ会社員が最速で垢抜け。 アプリでは元アイドル、路上で声をかけたラウンジ嬢、モデルと交際",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/1046_essential"
+    ],
+    "summary": "No.1韓国外見×恋愛コンサル 【 식구￤シック 】 運営中。非モテ会社員が最速で垢抜け。 アプリでは元アイドル、路上で声をかけたラウンジ嬢、モデルと交際",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: kei-male-apex.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/1046_essential",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 7587
+  },
+  {
+    "account_id": "0-q4a",
+    "profile_url": "https://x.com/0_q4a",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/2032440562377482240/goVTJHlJ_400x400.jpg",
+    "profile_text": "ジャイ口/35歳〜60歳の恋愛塾 (@0_q4a)\n30代/164センチ/65キロ/田舎/経験人数200人以上/35歳〜60歳の講習生に恋愛を教えてます。パソコン、スマホ苦手な人もzoomで丁寧に教えてます\nLocation: なんでも質問してください！→",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/0_q4a"
+    ],
+    "summary": "30代/164センチ/65キロ/田舎/経験人数200人以上/35歳〜60歳の講習生に恋愛を教えてます。パソコン、スマホ苦手な人もzoomで丁寧に教えてます",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: hapuchan.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/0_q4a",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 6062
+  },
+  {
+    "account_id": "preciou91828145",
+    "profile_url": "https://x.com/Preciou91828145",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1845419461597331456/rWzPAkjE_400x400.jpg",
+    "profile_text": "ば ば お (@Preciou91828145)\n【仕事×家庭×遊び】30代後半JTC→激務→最速管理職｜入籍3年目→週末フルコミ→円満｜隙間のiPhone登録文→427人と関係→仕事終わりは毎晩アポ徹底｜201708垢開始→元1.8万垢→tips4桁&講習3桁｜サブ@ElChasquiMdlp\nLocation: バズはハイライト↓｜真似るだけ各種メソッド計5,796部↓",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/Preciou91828145"
+    ],
+    "summary": "【仕事×家庭×遊び】30代後半JTC→激務→最速管理職｜入籍3年目→週末フルコミ→円満｜隙間のiPhone登録文→427人と関係→仕事終わりは毎晩アポ徹底｜201708垢開始→元1.8万垢→tips4桁&講習3桁｜サブ@ElChasquiMdlp",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn, hapuchan, mamemame-nanpa.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/Preciou91828145",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 4519
+  },
+  {
+    "account_id": "around60g",
+    "profile_url": "https://x.com/around60g",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1862836986941231105/_dKBnA56_400x400.jpg",
+    "profile_text": "吉田衰作 ＠還暦超えスト＆ネトナン師 (@around60g)\n還暦超え💴無しネト即数日本一🙌/99%直🏩直♨️/21年42即/22年53即/23年38即/24年34即/25年28即/26年7即🤩/55ヶ月連続即記録😇/羽目🦜90本/合流した方に📹公開/年齢不詳/縦にデカめ/🍌太め/🦪裂いたこと有り🤣/駅🍱で体重測れます/ハメ🐳マイスター/元女風セラピ\nLocation: よこはめ🏖",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/around60g"
+    ],
+    "summary": "還暦超え💴無しネト即数日本一🙌/99%直🏩直♨️/21年42即/22年53即/23年38即/24年34即/25年28即/26年7即🤩/55ヶ月連続即記録😇/羽目🦜90本/合流した方に📹公開/年齢不詳/縦にデカめ/🍌太め/🦪裂いたこと有り🤣/駅🍱で体重測れます/ハメ🐳マイスター/元女風セラピ",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: karasu-pua.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/around60g",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 1106
+  },
+  {
+    "account_id": "aoijoseijidou",
+    "profile_url": "https://x.com/aoijoseijidou",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1829766279961722881/udlaGPYA_400x400.jpg",
+    "profile_text": "レオ@女性自動集客講師 (@aoijoseijidou)\n女性自動集客特化恋愛コンサルタント/可愛い女の子との出会いを増やすのが得意です/講習生実績多数etc...\nLocation: ↓可愛い女の子と自動でデート組む方法はこちら",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/aoijoseijidou"
+    ],
+    "summary": "女性自動集客特化恋愛コンサルタント/可愛い女の子との出会いを増やすのが得意です/講習生実績多数etc...",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: hapuchan.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/aoijoseijidou",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 430
+  },
+  {
+    "account_id": "himotekiwami45",
+    "profile_url": "https://x.com/himotekiwami45",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1951571875995484160/kgNuqhTd_400x400.jpg",
+    "profile_text": "むね/騙されて借金400万→黒豆組 (@himotekiwami45)\n29歳/真性包茎治すため包茎手術で160万借金→女性攻略のためマッチングアプリでアポGet、お茶するも詐欺に会い140万借金→うつ病で外に出られなくなり出前しまくりリボ地獄→４００万借金抱えてた典型的な情弱男がこれから借金完済して爆美女抱きまくるリアルな過程を発信します。",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/himotekiwami45"
+    ],
+    "summary": "29歳/真性包茎治すため包茎手術で160万借金→女性攻略のためマッチングアプリでアポGet、お茶するも詐欺に会い140万借金→うつ病で外に出られなくなり出前しまくりリボ地獄→４００万借金抱えてた典型的な情弱男がこれから借金完済して爆美女抱きまくるリアルな過程を発信します。",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/himotekiwami45",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public X profile mentions matching-app activity.",
+        "source_urls": [
+          "https://x.com/himotekiwami45"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "fact",
+        "needs_review": true,
+        "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      }
+    ],
+    "follower_count": 140
+  },
+  {
+    "account_id": "7obayashi",
+    "profile_url": "https://x.com/7obayashi_",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/2008821880149737472/HFrV-nOW_400x400.jpg",
+    "profile_text": "おおばやし@マッチングアプリで女修行中 (@7obayashi_)\n女修行中 | 20代後半 | ドグマさん単発講習生 | 味噌",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/7obayashi_"
+    ],
+    "summary": "女修行中 | 20代後半 | ドグマさん単発講習生 | 味噌",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/7obayashi_",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 76
+  },
+  {
+    "account_id": "bioremame",
+    "profile_url": "https://x.com/bioremame",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978253751279624192/9TMhw6aW_400x400.jpg",
+    "profile_text": "Biore@黒豆組 (@bioremame)\nお硬めサラリーマン／講習開始2ヶ月で経験人数倍増／過去最高を求めて、今夜も激務をこなし街へ／バンジーで気絶／",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/bioremame"
+    ],
+    "summary": "お硬めサラリーマン／講習開始2ヶ月で経験人数倍増／過去最高を求めて、今夜も激務をこなし街へ／バンジーで気絶／",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/bioremame",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 41
+  },
+  {
+    "account_id": "bcjfoclkcr19120",
+    "profile_url": "https://x.com/bCJFoClkcR19120",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978496875826393088/kh7W0bF7_400x400.jpg",
+    "profile_text": "すっぽん 黒豆講習生 (@bCJFoClkcR19120)\n18期黒豆講習生/営業/学生ホスト→彼女まで2人と真面目に付き合う→最後浮気されて振られる→講習生に/好きな言葉は成長と下剋上/仕事も遊びも全力で",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/bCJFoClkcR19120"
+    ],
+    "summary": "18期黒豆講習生/営業/学生ホスト→彼女まで2人と真面目に付き合う→最後浮気されて振られる→講習生に/好きな言葉は成長と下剋上/仕事も遊びも全力で",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa.",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "following_screened_profile",
+      "source_url": "https://x.com/bCJFoClkcR19120",
+      "collected_at": "2026-05-23T08:50:01+00:00"
+    },
+    "observations": [],
+    "follower_count": 37
   }
 ]

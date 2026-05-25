@@ -15,6 +15,9 @@ from collector import (
     extract_x_profile_snapshot,
     fetch_x_api_user_details,
     fetch_x_web_user_details,
+    cookie_file_has_names,
+    import_x_cookies,
+    load_cookie_entries,
     load_x_api_bearer_token,
     load_x_web_profile_skip,
     merge_generated_snapshots,
@@ -27,6 +30,8 @@ from collector import (
     load_playwright_cookies,
     load_dotenv_values,
     load_x_login_credentials,
+    normalize_x_cookie_entries,
+    x_auth_status_lines,
 )
 
 
@@ -292,6 +297,104 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(cookies[0]["domain"], ".x.com")
         self.assertEqual(cookies[0]["sameSite"], "None")
         self.assertEqual(cookies[0]["expires"], 1893456000.0)
+
+    def test_load_cookie_entries_reads_playwright_storage_state(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            auth_path = Path(temp_dir) / "auth.json"
+            auth_path.write_text(
+                '{"cookies":[{"name":"auth_token","value":"secret","domain":".x.com"}],"origins":[]}',
+                encoding="utf-8",
+            )
+
+            cookies = load_cookie_entries(auth_path)
+
+        self.assertEqual(len(cookies), 1)
+        self.assertEqual(cookies[0]["name"], "auth_token")
+
+    def test_cookie_file_has_names_handles_playwright_storage_state(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            auth_path = Path(temp_dir) / "auth.json"
+            auth_path.write_text(
+                '{"cookies":[{"name":"auth_token","value":"secret","domain":".x.com"}],"origins":[]}',
+                encoding="utf-8",
+            )
+
+            self.assertTrue(cookie_file_has_names(auth_path, {"auth_token"}))
+            self.assertFalse(cookie_file_has_names(auth_path, {"auth_token", "ct0"}))
+
+    def test_x_auth_status_lines_do_not_print_cookie_values(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            base = Path(temp_dir)
+            auth_path = base / "auth.json"
+            cookie_path = base / "cookies.json"
+            auth_path.write_text(
+                '{"cookies":[{"name":"auth_token","value":"secret_auth","domain":".x.com","expires":1893456000}],"origins":[]}',
+                encoding="utf-8",
+            )
+            cookie_path.write_text(
+                '['
+                '{"name":"auth_token","value":"secret_cookie","domain":".x.com","expiry":1893456000},'
+                '{"name":"ct0","value":"secret_ct0","domain":".x.com","expiry":1893456000}'
+                ']',
+                encoding="utf-8",
+            )
+
+            output = "\n".join(x_auth_status_lines(auth_state_path=auth_path, cookie_file_path=cookie_path))
+
+        self.assertIn("[OK] authenticated cookie pair available", output)
+        self.assertIn("auth_token", output)
+        self.assertIn("ct0", output)
+        self.assertNotIn("secret_auth", output)
+        self.assertNotIn("secret_cookie", output)
+        self.assertNotIn("secret_ct0", output)
+
+    def test_normalize_x_cookie_entries_requires_authenticated_cookie_pair(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            cookie_path = Path(temp_dir) / "cookies.json"
+            cookie_path.write_text(
+                '[{"name":"auth_token","value":"secret","domain":".x.com"}]',
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "ct0"):
+                normalize_x_cookie_entries(cookie_path)
+
+    def test_import_x_cookies_writes_normalized_file_without_printing_values(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            base = Path(temp_dir)
+            source = base / "source.json"
+            output = base / "out.json"
+            source.write_text(
+                '['
+                '{"name":"auth_token","value":"secret_auth","domain":".x.com","expiry":1893456000},'
+                '{"name":"ct0","value":"secret_ct0","domain":"x.com","expiry":1893456000}'
+                ']',
+                encoding="utf-8",
+            )
+
+            names = import_x_cookies(source, output_path=output)
+            written = output.read_text(encoding="utf-8")
+
+        self.assertEqual(names, ["auth_token", "ct0"])
+        self.assertIn("secret_auth", written)
+        self.assertIn("secret_ct0", written)
+
+    def test_import_x_cookies_refuses_overwrite_without_force(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            base = Path(temp_dir)
+            source = base / "source.json"
+            output = base / "out.json"
+            source.write_text(
+                '['
+                '{"name":"auth_token","value":"secret_auth","domain":".x.com"},'
+                '{"name":"ct0","value":"secret_ct0","domain":"x.com"}'
+                ']',
+                encoding="utf-8",
+            )
+            output.write_text("[]", encoding="utf-8")
+
+            with self.assertRaises(FileExistsError):
+                import_x_cookies(source, output_path=output)
 
     def test_preserve_missing_generated_snapshots_keeps_configured_accounts(self) -> None:
         existing_snapshots = [

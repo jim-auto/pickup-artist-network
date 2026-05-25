@@ -464,6 +464,26 @@
     "review_notes": ""
   },
   {
+    "id": "miso",
+    "type": "location",
+    "name": "味噌",
+    "aliases": [
+      "miso",
+      "みそ",
+      "味噌m"
+    ],
+    "description": "Curated field/location label for public profiles that identify activity around 味噌.",
+    "icon_url": "",
+    "follower_count": 0,
+    "source_urls": [
+      "manual://seed/miso"
+    ],
+    "confidence": 0.76,
+    "evidence_kind": "mixed",
+    "needs_review": false,
+    "review_notes": "Use profile-backed activity edges for account-level evidence."
+  },
+  {
     "id": "5sato-pua",
     "type": "person",
     "name": "116階の佐藤｜20代の反面教師",
@@ -637,6 +657,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "0-q4a",
+    "type": "person",
+    "name": "@0_q4a",
+    "aliases": [
+      "0_q4a"
+    ],
+    "description": "30代/164センチ/65キロ/田舎/経験人数200人以上/35歳〜60歳の講習生に恋愛を教えてます。パソコン、スマホ苦手な人もzoomで丁寧に教えてます",
+    "icon_url": "https://pbs.twimg.com/profile_images/2032440562377482240/goVTJHlJ_400x400.jpg",
+    "follower_count": 6062,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/0_q4a"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: hapuchan."
+  },
+  {
     "id": "1010ttajt",
     "type": "person",
     "name": "@1010ttajt",
@@ -654,6 +693,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "1046-essential",
+    "type": "person",
+    "name": "@1046_essential",
+    "aliases": [
+      "1046_essential"
+    ],
+    "description": "No.1韓国外見×恋愛コンサル 【 식구￤シック 】 運営中。非モテ会社員が最速で垢抜け。 アプリでは元アイドル、路上で声をかけたラウンジ嬢、モデルと交際",
+    "icon_url": "https://pbs.twimg.com/profile_images/1911964949334704128/i4RHml6z_400x400.jpg",
+    "follower_count": 7587,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/1046_essential"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: kei-male-apex."
   },
   {
     "id": "1388-pqq",
@@ -1075,6 +1133,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
+    "id": "7obayashi",
+    "type": "person",
+    "name": "@7obayashi_",
+    "aliases": [
+      "7obayashi_"
+    ],
+    "description": "女修行中 | 20代後半 | ドグマさん単発講習生 | 味噌",
+    "icon_url": "https://pbs.twimg.com/profile_images/2008821880149737472/HFrV-nOW_400x400.jpg",
+    "follower_count": 76,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/7obayashi_"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666."
   },
   {
     "id": "7son-goku777",
@@ -1784,6 +1861,44 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "preciou91828145",
+    "type": "person",
+    "name": "@Preciou91828145",
+    "aliases": [
+      "Preciou91828145"
+    ],
+    "description": "【仕事×家庭×遊び】30代後半JTC→激務→最速管理職｜入籍3年目→週末フルコミ→円満｜隙間のiPhone登録文→427人と関係→仕事終わりは毎晩アポ徹底｜201708垢開始→元1.8万垢→tips4桁&講習3桁｜サブ@ElChasquiMdlp",
+    "icon_url": "https://pbs.twimg.com/profile_images/1845419461597331456/rWzPAkjE_400x400.jpg",
+    "follower_count": 4519,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/Preciou91828145"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn, hapuchan, mamemame-nanpa."
+  },
+  {
+    "id": "puayone",
+    "type": "person",
+    "name": "@PuaYone",
+    "aliases": [
+      "PuaYone"
+    ],
+    "description": "30代 / TAV歴10年 / 元ヨネ → イーグルス ▶︎ナンパ10年停滞男がガチ集中した90日間の変化記録まとめ https://t.co/0T2myPFAcS",
+    "icon_url": "https://pbs.twimg.com/profile_images/1355318289929396227/iWtNkDBa_400x400.jpg",
+    "follower_count": 189,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/PuaYone"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua."
   },
   {
     "id": "razer-pua",
@@ -2779,6 +2894,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "aoijoseijidou",
+    "type": "person",
+    "name": "@aoijoseijidou",
+    "aliases": [
+      "aoijoseijidou"
+    ],
+    "description": "女性自動集客特化恋愛コンサルタント/可愛い女の子との出会いを増やすのが得意です/講習生実績多数etc...",
+    "icon_url": "https://pbs.twimg.com/profile_images/1829766279961722881/udlaGPYA_400x400.jpg",
+    "follower_count": 430,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/aoijoseijidou"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: hapuchan."
+  },
+  {
     "id": "araive-ceo",
     "type": "person",
     "name": "@araive_ceo",
@@ -2854,6 +2988,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "around60g",
+    "type": "person",
+    "name": "@around60g",
+    "aliases": [
+      "around60g"
+    ],
+    "description": "還暦超え💴無しネト即数日本一🙌/99%直🏩直♨️/21年42即/22年53即/23年38即/24年34即/25年28即/26年7即🤩/55ヶ月連続即記録😇/羽目🦜90本/合流した方に📹公開/年齢不詳/縦にデカめ/🍌太め/🦪裂いたこと有り🤣/駅🍱で体重測れます/ハメ🐳マイスター/元女風セラピ",
+    "icon_url": "https://pbs.twimg.com/profile_images/1862836986941231105/_dKBnA56_400x400.jpg",
+    "follower_count": 1106,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/around60g"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: karasu-pua."
   },
   {
     "id": "arrester-pua",
@@ -3121,6 +3274,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
+    "id": "bcjfoclkcr19120",
+    "type": "person",
+    "name": "@bCJFoClkcR19120",
+    "aliases": [
+      "bCJFoClkcR19120"
+    ],
+    "description": "18期黒豆講習生/営業/学生ホスト→彼女まで2人と真面目に付き合う→最後浮気されて振られる→講習生に/好きな言葉は成長と下剋上/仕事も遊びも全力で",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978496875826393088/kh7W0bF7_400x400.jpg",
+    "follower_count": 37,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bCJFoClkcR19120"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa."
   },
   {
     "id": "b-ta46",
@@ -3412,6 +3584,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "bii5pquqan14571",
+    "type": "person",
+    "name": "@bii5PQuQan14571",
+    "aliases": [
+      "bii5PQuQan14571"
+    ],
+    "description": "アラサーリーマンナンパ師の記録 完ソロ勢 200即~",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978083154952085504/b3BDsFUX_400x400.jpg",
+    "follower_count": 16,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bii5PQuQan14571"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn."
+  },
+  {
     "id": "bikkkkkkkkkkkk",
     "type": "person",
     "name": "@bikkkkkkkkkkkk",
@@ -3429,6 +3620,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "bioremame",
+    "type": "person",
+    "name": "@bioremame",
+    "aliases": [
+      "bioremame"
+    ],
+    "description": "お硬めサラリーマン／講習開始2ヶ月で経験人数倍増／過去最高を求めて、今夜も激務をこなし街へ／バンジーで気絶／",
+    "icon_url": "https://pbs.twimg.com/profile_images/1978253751279624192/9TMhw6aW_400x400.jpg",
+    "follower_count": 41,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/bioremame"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa."
   },
   {
     "id": "blacrow-kat",
@@ -5179,6 +5389,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "goph",
+    "type": "person",
+    "name": "@goph_",
+    "aliases": [
+      "goph_"
+    ],
+    "description": "ナンパ系有料オンラインサロン #オトコ磨きラボ ファウンダー /何でも相談できるLINE公式https://t.co/BMIzZYnI3O /有料note https://t.co/yKUP32vQb2 /著書に恋愛工学の教科書/ハイライトにバズった恋愛動画解説",
+    "icon_url": "https://pbs.twimg.com/profile_images/1499908813394411520/KTzEdmNw_400x400.jpg",
+    "follower_count": 30595,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/goph_"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: genki-japan, kei-male-apex."
+  },
+  {
     "id": "gureran-m2",
     "type": "person",
     "name": "@gureran_m2",
@@ -5443,6 +5672,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "himotekiwami45",
+    "type": "person",
+    "name": "@himotekiwami45",
+    "aliases": [
+      "himotekiwami45"
+    ],
+    "description": "29歳/真性包茎治すため包茎手術で160万借金→女性攻略のためマッチングアプリでアポGet、お茶するも詐欺に会い140万借金→うつ病で外に出られなくなり出前しまくりリボ地獄→４００万借金抱えてた典型的な情弱男がこれから借金完済して爆美女抱きまくるリアルな過程を発信します。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1951571875995484160/kgNuqhTd_400x400.jpg",
+    "follower_count": 140,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/himotekiwami45"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: mamemame-nanpa."
   },
   {
     "id": "hiro65247168",
@@ -5772,6 +6020,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "k13nanpa",
+    "type": "person",
+    "name": "@k13nanpa",
+    "aliases": [
+      "k13nanpa"
+    ],
+    "description": "「上位美女に刺さる魅力」を設計。心理×非言語×会話を構造化し、再現性のある関係構築を実現。選ばれる側から選ぶ側へ。｜講師6年目。コンサル実績：有名アイドル、モデル、女優、50万人インフルエンサーなど美女との長期事例",
+    "icon_url": "https://pbs.twimg.com/profile_images/1845449656572182530/Z6TZRTgw_400x400.jpg",
+    "follower_count": 3071,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/k13nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn."
   },
   {
     "id": "kgicopppvxhp6te",
@@ -6406,6 +6673,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
+    "id": "kuroda-nanpa00",
+    "type": "person",
+    "name": "@kuroda_nanpa00",
+    "aliases": [
+      "kuroda_nanpa00"
+    ],
+    "description": "熟女が大好きなナンパ師の熟女日記 #BBA狩猟日記",
+    "icon_url": "https://pbs.twimg.com/profile_images/1818155203042201600/vEnKkTHh_400x400.jpg",
+    "follower_count": 498,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kuroda_nanpa00"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua."
   },
   {
     "id": "kuroinu-pua",
@@ -7230,6 +7516,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "nampa-douga",
+    "type": "person",
+    "name": "@nampa_douga",
+    "aliases": [
+      "nampa_douga"
+    ],
+    "description": "ナンパ次郎の動画垢です。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1977900448360341504/cwV0Sgk0_400x400.jpg",
+    "follower_count": 1989,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/nampa_douga"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: real-nampa."
   },
   {
     "id": "nanashi-pua",
@@ -8134,6 +8439,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
+  },
+  {
+    "id": "queenquest-pua",
+    "type": "person",
+    "name": "@queenquest_pua",
+    "aliases": [
+      "queenquest_pua"
+    ],
+    "description": "人生と真摯に向き合う。 今日もストリートに立つ。100↑",
+    "icon_url": "https://pbs.twimg.com/profile_images/1954564483860590592/EeyVP6o5_400x400.jpg",
+    "follower_count": 56,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/queenquest_pua"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn."
   },
   {
     "id": "r93472551",
@@ -9093,6 +9417,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "tanatana-puaa",
+    "type": "person",
+    "name": "@tanatana_puaa",
+    "aliases": [
+      "tanatana_puaa"
+    ],
+    "description": "🍑スト アラサー 29 引退しました",
+    "icon_url": "https://pbs.twimg.com/profile_images/1680707193866424321/7I4ssLzo_400x400.jpg",
+    "follower_count": 97,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/tanatana_puaa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: osugi-pua."
+  },
+  {
     "id": "taruchan100",
     "type": "person",
     "name": "@taruchan100",
@@ -9610,6 +9953,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "yonhiiro",
+    "type": "person",
+    "name": "@yonhiiro",
+    "aliases": [
+      "yonhiiro"
+    ],
+    "description": "理想の彼女を作り、自然体の関係を築く『関係構築キャンプ』 ＆ 男の自己肯定感を高める『メンタル道場』運営 | フェスでナンパした彼女と結婚 | 2児の父 | サービス受講300名超 | 面談→https://t.co/5WXTx1obTj",
+    "icon_url": "https://pbs.twimg.com/profile_images/1941271398049107968/wnkx-UV4_400x400.jpg",
+    "follower_count": 11026,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/yonhiiro"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666, mamemame-nanpa, osugi-pua."
   },
   {
     "id": "yosame-kagami",

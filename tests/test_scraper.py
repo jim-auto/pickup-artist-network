@@ -5,15 +5,20 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from graph_model import query_relations
+from graph_model import add_edge, query_relations
 from scraper import (
     approve_review_candidate,
+    build_connection_audit_payload,
     build_graph_from_sources,
+    build_thin_candidates_payload,
     build_growth_targets_payload,
     candidate_to_observation,
+    format_connection_audit_output,
     format_growth_targets_output,
     format_review_candidate_decisions_output,
     format_review_candidates_output,
+    format_thin_candidate_decisions_output,
+    format_thin_candidates_output,
     format_query_output,
     generate_review_candidates,
     infer_keyword_cluster_edges,
@@ -22,6 +27,8 @@ from scraper import (
     materialize_inferred_social_edges,
     merge_snapshots_by_account,
     set_review_candidate_decision,
+    set_thin_candidate_decision,
+    set_thin_candidate_decisions,
 )
 
 
@@ -437,6 +444,49 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
             )
         )
 
+    def test_materialize_inferred_social_edges_promotes_cjk_location_activity(self) -> None:
+        seed_entities = [
+            {
+                "type": "person",
+                "id": "leopard-nanpa",
+                "name": "レオパ",
+                "aliases": ["Leopard_nanpa"],
+            },
+            {"type": "location", "id": "miso", "name": "味噌", "aliases": ["miso", "みそ", "味噌m"]},
+        ]
+        graph = build_graph_from_sources(seed_entities, [])
+        generated_snapshots = [
+            {
+                "account_id": "leopard-nanpa",
+                "summary": "味噌/23年9月〜/アラサー",
+                "profile_text": "レオパ (@Leopard_nanpa)\n味噌/23年9月〜/アラサー",
+                "pinned_post_text": "",
+                "profile_url": "https://x.com/Leopard_nanpa",
+                "pinned_post_url": "",
+                "links": [],
+            }
+        ]
+
+        added = materialize_inferred_social_edges(graph, seed_entities, generated_snapshots, None)
+
+        self.assertEqual(added, 1)
+        self.assertTrue(
+            any(
+                edge.source == "leopard-nanpa"
+                and edge.target == "miso"
+                and edge.type == "activity"
+                and edge.needs_review
+                for edge in graph.edges
+            )
+        )
+        edge = next(
+            edge
+            for edge in graph.edges
+            if edge.source == "leopard-nanpa" and edge.target == "miso" and edge.type == "activity"
+        )
+        self.assertIn("Materialized generated candidate", edge.review_notes)
+        self.assertNotIn("not part of the canonical graph", edge.review_notes)
+
     def test_generate_review_candidates_can_infer_monetization_for_content(self) -> None:
         seed_entities = [
             {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
@@ -576,6 +626,485 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertIn("dismissed: Alpha (alpha) -[collaboration]-> Beta (beta)", output)
         self.assertIn("basis=profile_text", output)
         self.assertIn("note: already reviewed", output)
+
+    def test_build_thin_candidates_payload_prioritizes_low_signal_outliers(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+            {"type": "person", "id": "street", "name": "ストナン講師", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+            {
+                "account_id": "street",
+                "profile_url": "https://x.com/street",
+                "summary": "ストナン講習をしています。",
+                "follower_count": 10,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+        self.assertEqual(payload["candidates"][0]["priority"], "high")
+        self.assertIn("high-follower outlier", payload["candidates"][0]["reasons"])
+
+    def test_build_thin_candidates_payload_treats_dating_app_terms_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "dating-app-tips", "name": "@dating_app_tips", "aliases": []},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "dating-app-tips",
+                "profile_url": "https://x.com/tips",
+                "summary": "TinderTips とタップル攻略を発信しています。",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_treats_romanized_street_handle_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "street-handle", "name": "@K_suto_nan", "aliases": ["K_suto_nan"]},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "street-handle",
+                "profile_url": "https://x.com/K_suto_nan",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_treats_english_street_handle_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "vegeta-street", "name": "V", "aliases": ["vegeta_street"]},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "vegeta-street",
+                "profile_url": "https://x.com/vegeta_street",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_treats_rojou_terms_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "street-profile", "name": "路上メモ", "aliases": ["rojou_ski"]},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "street-profile",
+                "profile_url": "https://x.com/rojou_ski",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_treats_nannpa_typo_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "nannpa-profile", "name": "mi", "aliases": ["nannpashitai"]},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "nannpa-profile",
+                "profile_url": "https://x.com/nannpashitai",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_treats_solid_relevant_neighbor_as_relevant(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "main", "name": "Main", "aliases": []},
+            {"type": "person", "id": "side", "name": "Side", "aliases": []},
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "main",
+                "profile_url": "https://x.com/main",
+                "summary": "ストナン講習をしています。",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "side",
+                "profile_url": "https://x.com/side",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+                "observations": [
+                    {
+                        "target": "main",
+                        "type": "affiliation",
+                        "description": "Public profile links the main account.",
+                        "confidence": 0.9,
+                    }
+                ],
+            },
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["idol"])
+
+    def test_build_thin_candidates_payload_does_not_propagate_relevance_over_assistive_edges(
+        self,
+    ) -> None:
+        seed_entities = [
+            {"type": "person", "id": "main", "name": "Main", "aliases": []},
+            {"type": "person", "id": "side", "name": "Side", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "main",
+                "profile_url": "https://x.com/main",
+                "summary": "ストナン講習をしています。",
+                "follower_count": 20000,
+            },
+            {
+                "account_id": "side",
+                "profile_url": "https://x.com/side",
+                "summary": "Diary account.",
+                "follower_count": 20000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        add_edge(
+            graph,
+            {
+                "source": "side",
+                "target": "main",
+                "type": "affiliation",
+                "description": "Auto bridge.",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage.",
+            },
+        )
+
+        payload = build_thin_candidates_payload(graph)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["side"])
+        self.assertEqual(payload["candidates"][0]["solid_degree"], 0)
+        self.assertEqual(payload["candidates"][0]["assistive_degree"], 1)
+
+    def test_build_thin_candidates_payload_can_filter_score_and_limit(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "large", "name": "@large", "aliases": []},
+            {"type": "person", "id": "small", "name": "@small", "aliases": []},
+            {"type": "person", "id": "medium", "name": "@medium", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "large",
+                "profile_url": "https://x.com/large",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+            {
+                "account_id": "small",
+                "profile_url": "https://x.com/small",
+                "summary": "Diary account.",
+                "follower_count": 10,
+            },
+            {
+                "account_id": "medium",
+                "profile_url": "https://x.com/medium",
+                "summary": "Official account.",
+                "follower_count": 1000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+
+        payload = build_thin_candidates_payload(graph, min_score=80, limit=1)
+
+        self.assertEqual([candidate["id"] for candidate in payload["candidates"]], ["large"])
+
+    def test_thin_candidates_score_bridge_only_nodes_by_solid_degree(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+            {"type": "person", "id": "neighbor", "name": "@neighbor", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "icon_url": "https://example.com/idol.jpg",
+                "summary": "X profile for idol.",
+                "follower_count": 100000,
+            },
+            {
+                "account_id": "neighbor",
+                "profile_url": "https://x.com/neighbor",
+                "summary": "Official account.",
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        add_edge(
+            graph,
+            {
+                "source": "idol",
+                "target": "neighbor",
+                "type": "affiliation",
+                "description": "Auto bridge.",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage.",
+            },
+        )
+
+        payload = build_thin_candidates_payload(graph)
+        candidate = payload["candidates"][0]
+
+        self.assertEqual(candidate["id"], "idol")
+        self.assertEqual(candidate["degree"], 1)
+        self.assertEqual(candidate["solid_degree"], 0)
+        self.assertEqual(candidate["assistive_degree"], 1)
+        self.assertEqual(candidate["score"], 106)
+        self.assertIn("no solid account edges", candidate["reasons"])
+        self.assertIn("1 auto bridge edges", candidate["reasons"])
+
+    def test_thin_candidate_decision_keep_removes_candidate_from_queue(self) -> None:
+        seed_entities = [{"type": "person", "id": "idol", "name": "@idol", "aliases": []}]
+        snapshots = [
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            }
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        decisions_payload = {"updated_at": "", "decisions": {}}
+
+        decision = set_thin_candidate_decision(
+            decisions_payload,
+            graph,
+            "idol",
+            status="keep",
+            note="Relevant despite sparse profile text.",
+        )
+        payload = build_thin_candidates_payload(graph, decisions_payload=decisions_payload)
+
+        self.assertEqual(decision["node_id"], "idol")
+        self.assertEqual(decision["status"], "keep")
+        self.assertEqual(payload["candidates"], [])
+
+    def test_thin_candidate_decisions_can_mark_multiple_nodes(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "idol", "name": "@idol", "aliases": []},
+            {"type": "person", "id": "news", "name": "@news", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "idol",
+                "profile_url": "https://x.com/idol",
+                "summary": "Official music account.",
+                "follower_count": 100000,
+            },
+            {
+                "account_id": "news",
+                "profile_url": "https://x.com/news",
+                "summary": "Breaking news account.",
+                "follower_count": 50000,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        decisions_payload = {"updated_at": "", "decisions": {}}
+
+        decisions = set_thin_candidate_decisions(
+            decisions_payload,
+            graph,
+            ["idol", "news", "idol"],
+            status="exclude",
+            note="Off-topic batch.",
+        )
+        payload = build_thin_candidates_payload(graph, decisions_payload=decisions_payload)
+
+        self.assertEqual([decision["node_id"] for decision in decisions], ["idol", "news"])
+        self.assertEqual(decisions_payload["decisions"]["idol"]["status"], "exclude")
+        self.assertEqual(decisions_payload["decisions"]["news"]["note"], "Off-topic batch.")
+        self.assertEqual(payload["candidates"], [])
+
+    def test_format_thin_candidate_outputs_include_context(self) -> None:
+        candidates_output = format_thin_candidates_output(
+            {
+                "generated_at": "2026-05-24T00:00:00+00:00",
+                "candidates": [
+                    {
+                        "id": "idol",
+                        "name": "@idol",
+                        "priority": "high",
+                        "score": 98,
+                        "follower_count": 100000,
+                        "degree": 0,
+                        "reasons": ["missing relevance keyword", "no account edges"],
+                    }
+                ],
+            }
+        )
+        decisions_output = format_thin_candidate_decisions_output(
+            {
+                "updated_at": "2026-05-24T00:00:00+00:00",
+                "decisions": {
+                    "idol": {
+                        "node_id": "idol",
+                        "name": "@idol",
+                        "status": "exclude",
+                        "score": 98,
+                        "note": "Off-topic.",
+                        "updated_at": "2026-05-24T00:00:00+00:00",
+                    }
+                },
+            }
+        )
+
+        self.assertIn("[OK] thin candidates: 1", candidates_output)
+        self.assertIn("high score=98: @idol (idol)", candidates_output)
+        self.assertIn("reasons=missing relevance keyword, no account edges", candidates_output)
+        self.assertIn("[OK] thin candidate decisions: 1", decisions_output)
+        self.assertIn("exclude: @idol (idol) score=98", decisions_output)
+        self.assertIn("note: Off-topic.", decisions_output)
+
+    def test_connection_audit_payload_splits_solid_assistive_and_review_edges(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+            {"type": "person", "id": "beta", "name": "Beta", "aliases": []},
+            {"type": "location", "id": "miso", "name": "Miso", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/alpha",
+                "summary": "Alpha account.",
+                "observations": [
+                    {
+                        "target": "miso",
+                        "type": "activity",
+                        "description": "Manual profile states Miso field.",
+                        "confidence": 0.9,
+                        "evidence_kind": "fact",
+                    }
+                ],
+            },
+            {
+                "account_id": "beta",
+                "profile_url": "https://x.com/beta",
+                "summary": "Beta account.",
+                "observations": [
+                    {
+                        "target": "miso",
+                        "type": "activity",
+                        "description": "Generated profile text mentions Miso.",
+                        "confidence": 0.42,
+                        "evidence_kind": "interpretation",
+                        "needs_review": True,
+                        "review_notes": "Auto profile text match.",
+                    }
+                ],
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        add_edge(
+            graph,
+            {
+                "source": "beta",
+                "target": "miso",
+                "type": "affiliation",
+                "description": "Auto bridge.",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage.",
+            },
+        )
+
+        payload = build_connection_audit_payload(graph, "miso")
+        output = format_connection_audit_output(payload)
+
+        self.assertEqual(payload["summary"]["total"], 3)
+        self.assertEqual(payload["summary"]["solid"], 2)
+        self.assertEqual(payload["summary"]["assistive"], 1)
+        self.assertEqual(payload["summary"]["needs_review"], 2)
+        self.assertEqual(payload["summary"]["evidence_kind"]["fact"], 1)
+        self.assertEqual(payload["summary"]["evidence_kind"]["interpretation"], 2)
+        self.assertIn("[OK] connection audit: Miso (miso) [location]", output)
+        self.assertIn("solid=2 assistive=1 needs_review=2", output)
+        self.assertIn("assistive/needs_review/interpretation incoming affiliation: Beta", output)
 
     def test_candidate_to_observation_marks_approved_manual_interpretation(self) -> None:
         observation = candidate_to_observation(

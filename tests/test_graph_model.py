@@ -236,10 +236,32 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('rel="icon" href="icon.svg"', html)
         self.assertIn('class="header-icon" src="icon.svg"', html)
         self.assertIn("avatar-thumb", html)
+        self.assertIn("overflow-wrap: anywhere", html)
+        self.assertIn('onerror="this.hidden=true"', html)
         self.assertNotIn("実データ成長目標", html)
         self.assertIn("表示方針", html)
         self.assertIn("const visibleNodeIds = new Set();", html)
-        self.assertIn("初期表示は全人物を表示します。", html)
+        self.assertIn("初期表示は関連人物を優先します。", html)
+        self.assertIn('id="relevance-filter-toggle"', html)
+        self.assertIn("関連人物だけ表示", html)
+        self.assertIn("薄い候補", html)
+        self.assertIn("薄い候補レビュー", html)
+        self.assertIn('id="thin-review-summary"', html)
+        self.assertIn("renderThinReviewSummary", html)
+        self.assertIn("表示中候補", html)
+        self.assertIn("現在の検索条件で薄い候補は残っていません。", html)
+        self.assertIn("最新判断:", html)
+        self.assertIn('id="thin-candidates-table"', html)
+        self.assertIn("data-thin-node-id", html)
+        self.assertIn("revealAndFocusNode", html)
+        self.assertIn("rawThinCandidateDecisions", html)
+        self.assertIn("thinCandidateDecisionStatus", html)
+        self.assertIn("thinDecisionCommand", html)
+        self.assertIn("data-copy-command", html)
+        self.assertIn("copyTextToClipboard", html)
+        self.assertIn("薄い候補判断ログ", html)
+        self.assertIn('id="thin-candidate-decisions-table"', html)
+        self.assertIn("renderThinCandidateDecisionTable", html)
         self.assertNotIn('name="graph-view-mode"', html)
         self.assertNotIn("全体グラフ", html)
         self.assertIn("選択ノード詳細", html)
@@ -289,6 +311,10 @@ class GraphModelTests(unittest.TestCase):
                     "updated_at": "2026-04-24T01:00:00+00:00",
                     "decisions": {"candidate-1": {"status": "approved", "source": "alpha", "target": "beta", "type": "profile_mention"}},
                 },
+                thin_candidate_decisions_payload={
+                    "updated_at": "2026-05-24T00:00:00+00:00",
+                    "decisions": {"thin-1": {"status": "exclude", "node_id": "thin-1"}},
+                },
             )
 
             html = output_path.read_text(encoding="utf-8")
@@ -303,6 +329,7 @@ class GraphModelTests(unittest.TestCase):
             payload["review_candidate_decisions"]["decisions"]["candidate-1"]["status"],
             "approved",
         )
+        self.assertEqual(payload["thin_candidate_decisions"]["decisions"]["thin-1"]["status"], "exclude")
         self.assertIn("clusters", payload)
         self.assertIn("connectivity", payload["clusters"]["modes"])
         self.assertIn("relation_pattern", payload["clusters"]["modes"])
