@@ -8,13 +8,39 @@
   <link rel="stylesheet" href="https://unpkg.com/vis-network@9.1.9/styles/vis-network.min.css">
   <style>
     :root {
-      color-scheme: light;
-      --bg: #f5f7fb;
+      color-scheme: light dark;
+      --bg: #eaeef6;
+      --bg-accent: #dfe6f4;
       --panel: #ffffff;
-      --border: #dbe2ea;
-      --text: #17212b;
-      --muted: #5c6b7a;
+      --panel-2: #f6f9ff;
+      --border: #e1e8f2;
+      --border-strong: #cdd7e6;
+      --text: #16202b;
+      --muted: #64748b;
       --accent: #2f6feb;
+      --accent-strong: #1d4ed8;
+      --accent-soft: #eaf1ff;
+      --shadow: 0 10px 30px rgba(23, 33, 43, 0.08);
+      --shadow-sm: 0 2px 8px rgba(23, 33, 43, 0.05);
+      --radius: 16px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d131b;
+        --bg-accent: #111a24;
+        --panel: #161f2b;
+        --panel-2: #1b2636;
+        --border: #2a3543;
+        --border-strong: #38465a;
+        --text: #e6edf5;
+        --muted: #93a3b7;
+        --accent: #5b93ff;
+        --accent-strong: #7aa8ff;
+        --accent-soft: #1a2740;
+        --shadow: 0 14px 40px rgba(0, 0, 0, 0.42);
+        --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
     }
     *,
     *::before,
@@ -23,14 +49,44 @@
     }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+        "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI",
+        Meiryo, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% -10%, var(--bg-accent), transparent 60%),
+        var(--bg);
+      background-attachment: fixed;
       color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4 {
+      letter-spacing: -0.01em;
     }
     header {
-      padding: 24px;
-      background: linear-gradient(135deg, #17212b, #234f9d);
+      position: relative;
+      overflow: hidden;
+      padding: 34px 24px 30px;
+      background:
+        radial-gradient(900px 300px at 88% -40%, rgba(94, 148, 255, 0.55), transparent 70%),
+        radial-gradient(700px 320px at 8% 130%, rgba(126, 87, 194, 0.4), transparent 70%),
+        linear-gradient(135deg, #10203a 0%, #1c3a72 55%, #2450b0 100%);
       color: #fff;
+      box-shadow: 0 12px 32px rgba(16, 32, 58, 0.28);
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1.4px);
+      background-size: 22px 22px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .header-brand {
+      position: relative;
+      z-index: 1;
     }
     .header-brand {
       display: flex;
@@ -38,22 +94,29 @@
       gap: 14px;
     }
     .header-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 8px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
       flex: 0 0 auto;
     }
     .header-copy h1 {
       margin: 0;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
     }
     .avatar-thumb {
       width: 36px;
       height: 36px;
       border-radius: 50%;
       object-fit: cover;
-      background: #eef4ff;
+      background: var(--accent-soft);
       border: 1px solid var(--border);
       flex: 0 0 auto;
     }
@@ -62,7 +125,7 @@
       height: 52px;
       border-radius: 50%;
       object-fit: cover;
-      background: #eef4ff;
+      background: var(--accent-soft);
       border: 1px solid var(--border);
       flex: 0 0 auto;
     }
@@ -78,6 +141,15 @@
     header p {
       margin: 8px 0 0;
       color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      max-width: 70ch;
+    }
+    header code,
+    header p code {
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 5px;
+      padding: 1px 5px;
+      font-size: 0.9em;
     }
     main {
       padding: 20px;
@@ -88,10 +160,20 @@
     .panel {
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 10px 24px rgba(23, 33, 43, 0.06);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
       min-width: 0;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 700;
+    }
+    h4 {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 12px;
     }
     .controls {
       display: grid;
@@ -100,9 +182,8 @@
       align-items: start;
     }
     .sticky-controls {
-      position: sticky;
-      top: 0;
-      z-index: 20;
+      position: relative;
+      z-index: 1;
     }
     .search-control {
       min-width: 0;
@@ -122,14 +203,29 @@
     }
     .chip {
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 6px 10px;
+      border-radius: 999px;
+      padding: 6px 12px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #fff;
+      background: var(--panel);
       color: var(--muted);
       font-size: 13px;
+      cursor: pointer;
+      transition: border-color 0.16s var(--ease), background 0.16s var(--ease), color 0.16s var(--ease);
+    }
+    .chip:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+    .chip:has(input:checked) {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      font-weight: 600;
+    }
+    .chip input {
+      accent-color: var(--accent);
     }
     .action-row,
     .search-results,
@@ -153,12 +249,15 @@
     .search-result-button,
     .action-button {
       border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 10px;
+      background: var(--panel);
       color: var(--text);
-      padding: 8px 10px;
+      padding: 8px 12px;
       font-size: 13px;
+      font-weight: 500;
       cursor: pointer;
+      transition: border-color 0.16s var(--ease), background 0.16s var(--ease),
+        color 0.16s var(--ease), transform 0.12s var(--ease), box-shadow 0.16s var(--ease);
     }
     .search-result-button {
       max-width: 100%;
@@ -169,8 +268,18 @@
     .search-result-button:hover,
     .action-button:hover {
       border-color: var(--accent);
-      background: #f6f9ff;
-      color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+    .action-button:active {
+      transform: translateY(0);
+    }
+    .action-button.is-active {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
     }
     .view-summary {
       align-items: center;
@@ -197,14 +306,16 @@
       gap: 12px;
     }
     .stat {
-      background: #f9fbff;
+      background: var(--panel-2);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px;
+      border-radius: 12px;
+      padding: 14px;
     }
     .stat strong {
       display: block;
-      font-size: 24px;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       margin-top: 6px;
     }
     .foldout {
@@ -234,31 +345,42 @@
       min-width: 0;
     }
     .foldout .panel {
-      background: #f9fbff;
+      background: var(--panel-2);
+    }
+    .foldout summary {
+      padding: 4px 2px;
+      border-radius: 8px;
+      transition: color 0.16s var(--ease);
+    }
+    .foldout summary:hover {
+      color: var(--accent);
     }
     #network {
       height: 650px;
       border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(47, 111, 235, 0.05), transparent 45%),
+        var(--panel);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
     }
-    input[type="search"] {
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-size: 14px;
-    }
+    input[type="search"],
     .control-select {
       width: 100%;
       box-sizing: border-box;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
       padding: 10px 12px;
       font-size: 14px;
-      background: #fff;
+      background: var(--panel);
       color: var(--text);
+      transition: border-color 0.16s var(--ease), box-shadow 0.16s var(--ease);
+    }
+    input[type="search"]:focus,
+    .control-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
     }
     table {
       width: 100%;
@@ -274,9 +396,12 @@
     }
     th {
       color: var(--muted);
-      background: #fafcff;
+      background: var(--panel-2);
       position: sticky;
       top: 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
     .table-wrap {
       width: 100%;
@@ -299,14 +424,19 @@
     }
     .tag {
       display: inline-block;
-      padding: 2px 8px;
-      border-radius: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
       font-size: 12px;
       font-weight: 700;
       background: #eef4ff;
       color: #224a8f;
       margin-right: 6px;
       margin-bottom: 6px;
+    }
+    .view-summary .tag {
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
     }
     .tag-evidence-fact {
       background: #eef7ee;
@@ -364,18 +494,25 @@
       max-width: 100%;
       min-width: 0;
       border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
-      padding: 8px;
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 9px 11px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       text-align: left;
       cursor: pointer;
+      transition: border-color 0.16s var(--ease), background 0.16s var(--ease),
+        transform 0.12s var(--ease), box-shadow 0.16s var(--ease);
     }
     .featured-node-card:hover {
       border-color: var(--accent);
-      background: #f6f9ff;
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+    .featured-node-card strong {
+      font-weight: 700;
     }
     .featured-node-card .node-name-text {
       flex: 1 1 auto;
@@ -419,9 +556,9 @@
     }
     .connected-node-card {
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 10px;
-      background: #f9fbff;
+      background: var(--panel-2);
     }
     .connected-node-header {
       display: flex;
@@ -440,7 +577,7 @@
       margin-top: 8px;
     }
     .connected-node-card.is-bridge {
-      background: #f8fbff;
+      background: var(--panel-2);
       border-style: dashed;
     }
     .connected-node-rank {
@@ -483,15 +620,16 @@
     .inspect-button {
       border: 1px solid var(--border);
       border-radius: 8px;
-      background: #fff;
+      background: var(--panel);
       color: var(--accent);
       padding: 6px 10px;
       font-size: 12px;
       cursor: pointer;
+      transition: border-color 0.16s var(--ease), background 0.16s var(--ease);
     }
     .inspect-button:hover {
       border-color: var(--accent);
-      background: #f6f9ff;
+      background: var(--accent-soft);
     }
     .command-actions {
       display: grid;
@@ -506,6 +644,40 @@
     }
     a {
       color: var(--accent);
+      text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+      text-underline-offset: 2px;
+    }
+    a:hover {
+      text-decoration-color: var(--accent);
+    }
+    code {
+      font-family: "SFMono-Regular", "Cascadia Code", Consolas, "Liberation Mono", monospace;
+      font-size: 0.88em;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 1px 5px;
+    }
+    ::selection {
+      background: color-mix(in srgb, var(--accent) 28%, transparent);
+    }
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-strong) transparent;
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--muted);
+      background-clip: padding-box;
     }
     @media (max-width: 1024px) {
       .graph-layout {
@@ -556,7 +728,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-05-25 07:41 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-07-15 13:38 UTC。</p>
       </div>
     </div>
   </header>
@@ -1229,6 +1401,11 @@
 
     const nodesDataSet = new vis.DataSet([]);
     const edgesDataSet = new vis.DataSet([]);
+    const prefersDarkGraph = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const graphLabelColor = prefersDarkGraph ? "#e6edf5" : "#17212b";
+    const graphLabelStroke = prefersDarkGraph ? "rgba(10, 15, 22, 0.85)" : "rgba(255, 255, 255, 0.92)";
+    const graphEdgeColor = prefersDarkGraph ? "rgba(125, 145, 172, 0.4)" : "rgba(148, 163, 184, 0.42)";
+    const graphEdgeHighlight = prefersDarkGraph ? "#7aa8ff" : "#2f6feb";
     const network = new vis.Network(
       document.getElementById("network"),
       { nodes: nodesDataSet, edges: edgesDataSet },
@@ -1256,12 +1433,18 @@
           shape: "dot",
           borderWidth: 1,
           scaling: { min: 2, max: 32 },
-          font: { face: "Arial", size: 13, color: "#17212b" }
+          font: {
+            face: "Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif",
+            size: 13,
+            color: graphLabelColor,
+            strokeWidth: 3,
+            strokeColor: graphLabelStroke
+          }
         },
         edges: {
           arrows: "to",
-          color: { color: "rgba(148, 163, 184, 0.42)", highlight: "#2f6feb" },
-          font: { align: "top", size: 11 },
+          color: { color: graphEdgeColor, highlight: graphEdgeHighlight },
+          font: { align: "top", size: 11, color: graphLabelColor, strokeWidth: 3, strokeColor: graphLabelStroke },
           smooth: false
         },
         interaction: {
