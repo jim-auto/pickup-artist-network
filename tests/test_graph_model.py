@@ -471,7 +471,8 @@ class GraphModelTests(unittest.TestCase):
         for node_id, name, description in [
             ("wing", "wing師範", "アツストサロン代表"),
             ("mixed", "ジム", "ピカ講習 味噌 元アツスト"),
-            ("longterm", "おちゃめ", "wing長期 アツストサロン"),
+            # Keep アツスト as the shared affinity anchor (not wing長期 alone).
+            ("longterm", "おちゃめ", "アツストサロン 長期"),
             ("emoji", "絵文字勢", "🐶🦁 合流歓迎"),
         ]:
             add_node(
