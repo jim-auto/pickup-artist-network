@@ -527,7 +527,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/1388_pqq"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2044295764231565312/6YKo8cXz_400x400.jpg",
     "follower_count": 1574
   },
@@ -650,6 +663,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/1tensaipua1"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ]
   },
@@ -1372,7 +1397,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:28+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/333ginza"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "3mbga",
@@ -2634,7 +2672,34 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "chai-mote",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/aizfr1",
+          "https://x.com/chai_mote"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "shun77222218",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/aizfr1",
+          "https://x.com/SHUN77222218"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1600147764045697024/lGOy0ErZ_400x400.png",
     "follower_count": 5860
   },
@@ -4533,7 +4598,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:27+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kansai",
+        "type": "activity",
+        "description": "Public bio references 関西 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/anshin__pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "anus-asterisk",
@@ -6008,7 +6086,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Public bio references 新宿 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ashikaga_street"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ashikaga_street"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1853025063135858688/vBMgjRU__400x400.jpg",
     "follower_count": 1420
   },
@@ -6116,7 +6219,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:28+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/asozan_daifunka"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "asumi-pua",
@@ -6500,7 +6616,33 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/atannon_nampa"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/atannon_nampa",
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1678805589391192069/J6gpPaHP_400x400.jpg",
     "follower_count": 2505
   },
@@ -6870,7 +7012,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ayato691"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1635604316844359680/BdWzPoZO_400x400.jpg",
     "follower_count": 17697
   },
@@ -6900,7 +7055,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:29+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "activity",
+        "description": "Public bio references 関東 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/azukikouhai"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "azuma-gouyin",
@@ -6938,7 +7106,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "miso",
+        "type": "activity",
+        "description": "Public bio references 味噌 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/azuma_gouyin"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1577981651874811904/wOMlJeYS_400x400.jpg",
     "follower_count": 2006
   },
@@ -7015,7 +7196,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:29+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/b_ta46"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "babao-wtpf",
@@ -7606,7 +7800,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "selfcomestomine",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/banabanasan",
+          "https://x.com/selfcomestomine"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1639206397480148992/yR9omhWw_400x400.jpg",
     "follower_count": 182006
   },
@@ -8019,7 +8227,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/banterin_duel"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1000560979522961409/8RuhBAG5_400x400.jpg",
     "follower_count": 5962
   },
@@ -8472,6 +8693,42 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "shibuya",
+        "type": "activity",
+        "description": "Public bio references 渋谷 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/982thebeat"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Public bio references 新宿 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/982thebeat"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "ikebukuro",
+        "type": "activity",
+        "description": "Public bio references 池袋 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/982thebeat"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1937213216440090624/y_DP0oeK_400x400.jpg",
@@ -10093,7 +10350,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:33+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/bunshun_online"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "busudanaaaa",
@@ -10503,6 +10773,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "aizfr1",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/chai_mote",
+          "https://x.com/aizfr1"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ]
   },
@@ -10711,6 +10994,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/chami_pua",
+          "https://x.com/chami_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1716268265604079616/gePG2V_p_400x400.jpg",
@@ -11204,7 +11500,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/_charisma_doll"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1541617612022779905/Y9AneRQS_400x400.jpg",
     "follower_count": 76903
   },
@@ -13783,7 +14092,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/colabo_yumeno"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1922987568863604736/ogw0i1vz_400x400.jpg",
     "follower_count": 87370
   },
@@ -13921,7 +14243,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:34+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/court534"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "crazy9352",
@@ -14666,7 +15001,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Public bio references 新宿 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/daioki0430"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/daioki0430"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1920415081113825280/Xg5qw6Rf_400x400.jpg",
     "follower_count": 6964
   },
@@ -15219,6 +15579,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "pua-rusu",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/Dawson_nst",
+          "https://x.com/pua_rusu"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1637485513203671042/eQccjGRK_400x400.jpg",
@@ -18272,7 +18645,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ecchu2929"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1407630936095612930/GqAp_6PT_400x400.jpg",
     "follower_count": 1077
   },
@@ -19497,7 +19883,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:41+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ern_xxer"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "eroeromancotin",
@@ -19889,6 +20288,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/fake_nagase",
+          "https://x.com/fake_nagase/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2017937864160653312/4Dz67any_400x400.jpg",
@@ -21354,6 +21766,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "atannon-nampa",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/futaro_pua",
+          "https://x.com/atannon_nampa"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2037104066095177729/zYXz-SnR_400x400.jpg",
@@ -21846,7 +22271,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Gash01NX"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1970423368462802948/6mRIFL4o_400x400.jpg",
     "follower_count": 1656
   },
@@ -22008,7 +22446,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tora-maru005",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/gintoki_street",
+          "https://x.com/tora_maru005"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1807268243826196480/bM7rOVmt_400x400.jpg",
     "follower_count": 2259
   },
@@ -22435,7 +22887,34 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:45+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "rebirth-dogcat",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/gogo_nishino",
+          "https://x.com/rebirth_dogcat"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "no-place123",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/gogo_nishino",
+          "https://x.com/no_place123"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "gogomorikuma",
@@ -23840,7 +24319,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:47+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kanto",
+        "type": "activity",
+        "description": "Public bio references 関東 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/hame_taro_7"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "hameyuuuu",
@@ -26174,7 +26666,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:47+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kansai",
+        "type": "activity",
+        "description": "Public bio references 関西 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/henachoko_olive"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "hgdbsc",
@@ -26562,7 +27067,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:48+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/hiro65247168"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "hiroki-camera",
@@ -26941,7 +27459,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/hkun_theworld"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1985216260318347264/RbaIz4eD_400x400.jpg",
     "follower_count": 1979
   },
@@ -27204,7 +27735,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ibu_photostyle"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1895759902452428800/vNpyXfYy_400x400.jpg",
     "follower_count": 2187
   },
@@ -27409,6 +27953,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ura1ten",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ura1ten.",
+        "source_urls": [
+          "https://x.com/igaku_sato",
+          "https://x.com/igaku_sato/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2014167009471389696/5MKQQzu4_400x400.jpg",
@@ -29594,7 +30151,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "syahudearu",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/jimichas7",
+          "https://x.com/syahudearu"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 5941,
     "icon_url": "https://pbs.twimg.com/profile_images/1904079544216371200/0dhRLIj6_400x400.jpg"
   },
@@ -30175,6 +30746,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/jiro_suto",
+          "https://x.com/jiro_suto/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1915777625194397696/-mtFCJ0V_400x400.jpg",
@@ -30433,7 +31017,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "chamu-photo",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/K_932654",
+          "https://x.com/chamu_photo_"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1847927109861376000/jsxZRfs2_400x400.jpg",
     "follower_count": 11423
   },
@@ -30809,6 +31407,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "maya159r",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/kageki_ashura",
+          "https://x.com/maya159r"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1959823903490277376/LDaRW19J_400x400.jpg",
@@ -32126,6 +32737,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-suto",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @k_suto_.",
+        "source_urls": [
+          "https://x.com/kaoguda_sugoi",
+          "https://x.com/kaoguda_sugoi/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ]
   },
@@ -32533,6 +33157,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "pypynanpa",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/karasu_sr1",
+          "https://x.com/pypynanpa"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ]
   },
@@ -32974,7 +33611,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "katsuki-seike",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @katsuki_seikei.",
+        "source_urls": [
+          "https://x.com/katsuki_seikei"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1775495386779750400/3W_PW3t__400x400.jpg",
     "follower_count": 2676
   },
@@ -33109,6 +33759,44 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kawae0021"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "pua-rusu",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/kawae0021",
+          "https://x.com/pua_rusu"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "preciou91828145",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/kawae0021",
+          "https://x.com/Preciou91828145"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ]
   },
@@ -34800,7 +35488,44 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kedama_camera"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kedama_camera"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "kansai",
+        "type": "activity",
+        "description": "Public bio references 関西 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kedama_camera"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1809231175355092992/UWUGLyxU_400x400.jpg",
     "follower_count": 3053
   },
@@ -35166,7 +35891,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:04+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kenichi_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "kent-o-o",
@@ -36890,7 +37628,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:03+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kitiku_pu"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "kk-ganbaru",
@@ -37878,6 +38629,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ura1ten",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ura1ten.",
+        "source_urls": [
+          "https://x.com/komanyan28",
+          "https://x.com/komanyan28/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1983825628156907520/NkXWkJMh_400x400.jpg",
@@ -39444,7 +40208,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:04+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kansai",
+        "type": "activity",
+        "description": "Public bio references 関西 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kuma661"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "kurita-pua",
@@ -40311,6 +41088,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "ura1ten",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ura1ten.",
+        "source_urls": [
+          "https://x.com/kuroiwa_45",
+          "https://x.com/kuroiwa_45/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1949801207817781248/lnHmbSJm_400x400.jpg",
@@ -41165,7 +41955,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:05+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kw1ew"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "kyo",
@@ -42437,7 +43240,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:08+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/m_kumagawa"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "mabonasu-pua",
@@ -45672,7 +46488,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:08+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "kageki-ashura",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/maya159r",
+          "https://x.com/kageki_ashura"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "mayuge-mbh",
@@ -46670,7 +47500,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/mero__tinder"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1812599541461340161/_oMiUD-S.jpg",
     "follower_count": 3065
   },
@@ -48475,6 +49318,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/miraitinder4545"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1949029261370949635/j4nW1s3X_400x400.jpg",
@@ -51732,7 +52587,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:20+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "ranbousto2",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/nagi1k8",
+          "https://x.com/ranbousto2"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "nakaboshisama",
@@ -51761,7 +52630,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:13+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/nakaboshisama"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "nakame-pua",
@@ -51831,7 +52713,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:17+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "no-place123",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/nakayamasoku",
+          "https://x.com/no_place123"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "namedarumajan",
@@ -55812,6 +56708,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ura1ten",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ura1ten.",
+        "source_urls": [
+          "https://x.com/negitoro_nannpa",
+          "https://x.com/negitoro_nannpa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ]
   },
@@ -56758,7 +57667,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/nkdsoj"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1188454499179909122/WDduImKN_400x400.jpg",
     "follower_count": 10081
   },
@@ -57299,7 +58221,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/norinori_10goku"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1958805999839846401/JzED3AuS_400x400.jpg",
     "follower_count": 2313
   },
@@ -58479,6 +59414,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/okarun_pua",
+          "https://x.com/okarun_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1924431937629749248/bl_A6GXb_400x400.jpg",
@@ -59518,6 +60466,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/omamco_pua2",
+          "https://x.com/omamco_pua2/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1933154659637899264/t7M4K_aX_400x400.jpg",
@@ -60253,7 +61214,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:28+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/oriha_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "osaka-kakuue",
@@ -62083,7 +63057,44 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pako_dai"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "nagoya",
+        "type": "activity",
+        "description": "Public bio references 名古屋 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pako_dai"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pako_dai"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1693572648213897216/-jM8cePp_400x400.jpg",
     "follower_count": 60310
   },
@@ -63015,6 +64026,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "ura1ten",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ura1ten.",
+        "source_urls": [
+          "https://x.com/pika_pua",
+          "https://x.com/pika_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1578815020250505216/Oj3wjq3E_400x400.jpg",
@@ -63974,6 +64998,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-suto",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @k_suto_.",
+        "source_urls": [
+          "https://x.com/ponponpon142",
+          "https://x.com/ponponpon142/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ]
   },
@@ -64084,7 +65121,32 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:38+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pro_tinder"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pro_tinder"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "pua-2-yutty",
@@ -64808,7 +65870,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:39+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pua_happy"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ]
   },
   {
     "account_id": "pua-hinotori",
@@ -66352,6 +67427,45 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "kawae0021",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/pua_rusu",
+          "https://x.com/kawae0021"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "no-place123",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/pua_rusu",
+          "https://x.com/no_place123"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "dawson-nst",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/pua_rusu",
+          "https://x.com/Dawson_nst"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ]
   },
@@ -66536,6 +67650,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pua_vinsmoke"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1776498309299150848/L6ylp67T_400x400.jpg",
@@ -66646,7 +67772,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:42+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "tora-maru005",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/PUAINOKI",
+          "https://x.com/tora_maru005"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "puapenguin",
@@ -67197,7 +68337,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:42+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "karasu-sr1",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/pypynanpa",
+          "https://x.com/karasu_sr1"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "qh0kum",
@@ -67451,7 +68605,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nagoya",
+        "type": "activity",
+        "description": "Public bio references 名古屋 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/qrxt_a"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1864690508045668352/4JR81tMM_400x400.jpg",
     "follower_count": 1120
   },
@@ -67797,7 +68964,34 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:41+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "inoue-matching",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/ranbousto2",
+          "https://x.com/inoue_matching"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "nagi1k8",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/ranbousto2",
+          "https://x.com/nagi1k8"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "rate-beauty",
@@ -68133,7 +69327,34 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:42+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "no-place123",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/rebirth_dogcat",
+          "https://x.com/no_place123"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "gogo-nishino",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/rebirth_dogcat",
+          "https://x.com/gogo_nishino"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "reborn-pua",
@@ -70284,6 +71505,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/riku_pua",
+          "https://x.com/riku_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1857020519494651905/F15I8N5m_400x400.jpg",
@@ -73395,7 +74629,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ryusei_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1559413225451446272/1b5U1JPx_400x400.jpg",
     "follower_count": 3049
   },
@@ -74790,6 +76037,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/sati_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/895860855392174081/F3ZMD0Th_400x400.jpg",
@@ -75854,7 +77113,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "banabanasan",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/selfcomestomine",
+          "https://x.com/banabanasan"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1855883886414446592/hT6atHZp_400x400.jpg",
     "follower_count": 42624
   },
@@ -76601,7 +77874,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/shelly4821"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1573542094421229568/bKccqsjg_400x400.jpg",
     "follower_count": 3453
   },
@@ -77002,6 +78288,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-suto",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @k_suto_.",
+        "source_urls": [
+          "https://x.com/shingen_pua",
+          "https://x.com/shingen_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ]
   },
@@ -80010,7 +81309,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/soku_worker2"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1899444574814097408/4qptDCXs_400x400.jpg",
     "follower_count": 4177
   },
@@ -83547,6 +84859,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "jimichas7",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/syahudearu",
+          "https://x.com/jimichas7"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "preciou91828145",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/syahudearu",
+          "https://x.com/Preciou91828145"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1839047669680943104/AniGINsp_400x400.jpg",
@@ -83835,7 +85173,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/t3vde"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "miso",
+        "type": "activity",
+        "description": "Public bio references 味噌 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/t3vde"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1716537671349358592/5yl4WblB_400x400.jpg",
     "follower_count": 1365
   },
@@ -85049,7 +86412,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:32:12+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "hustle-carrier",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/hustle_carrier"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ]
   },
   {
     "account_id": "tantan-pua",
@@ -85797,7 +87174,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/task_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2049320372588429312/_oMcQFCN_400x400.jpg",
     "follower_count": 1763
   },
@@ -87583,6 +88973,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/tinder109"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1897485154030874624/NeMZp1TT_400x400.jpg",
@@ -88268,6 +89670,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/tomu_riddle"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "urata-onna",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/tomu_riddle",
+          "https://x.com/urata_onna"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1835257195006713856/NFMm4Mqc_400x400.jpg",
@@ -90066,6 +91493,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/ura_aka_nanpa"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ]
   },
@@ -92993,6 +94432,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "elsta",
+        "type": "affiliation",
+        "description": "Public bio references えるスタ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/_xCandee"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2044447332809474048/bgOR-7S6_400x400.jpg",
@@ -94954,7 +96405,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "itsuki-pua",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/Yukishiro_yuki_",
+          "https://x.com/Itsuki_pua"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 2359,
     "icon_url": "https://pbs.twimg.com/profile_images/1642054847527817216/UFQZL5HF_400x400.jpg"
   },
@@ -96518,7 +97983,21 @@
       "source_url": "https://x.com/SHUN77222218",
       "collected_at": "2026-05-14T10:16:33+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "aizfr1",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/SHUN77222218",
+          "https://x.com/aizfr1"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 3307
   },
   {
@@ -97126,7 +98605,21 @@
       "source_url": "https://x.com/1046_essential",
       "collected_at": "2026-05-23T08:50:01+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "rita-fit03",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/1046_essential",
+          "https://x.com/rita_fit03"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 7587
   },
   {
@@ -97174,7 +98667,34 @@
       "source_url": "https://x.com/Preciou91828145",
       "collected_at": "2026-05-23T08:50:01+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kawae0021",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/Preciou91828145",
+          "https://x.com/kawae0021"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "syahudearu",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/Preciou91828145",
+          "https://x.com/syahudearu"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 4519
   },
   {
@@ -97198,7 +98718,20 @@
       "source_url": "https://x.com/around60g",
       "collected_at": "2026-05-23T08:50:01+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/around60g"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 1106
   },
   {
@@ -97404,6 +98937,31 @@
         "evidence_kind": "fact",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kansai",
+        "type": "activity",
+        "description": "Public bio references 関西 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/chamu_photo_"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "k-932654",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/chamu_photo_",
+          "https://x.com/K_932654"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "follower_count": 4668
@@ -97429,7 +98987,20 @@
       "source_url": "https://x.com/Humetu_pua",
       "collected_at": "2026-07-18T14:41:40+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Humetu_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 1394
   },
   {
@@ -97538,7 +99109,20 @@
       "source_url": "https://x.com/_nampa_program",
       "collected_at": "2026-07-18T14:45:31+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/_nampa_program"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 1085
   },
   {
@@ -97852,7 +99436,21 @@
       "source_url": "https://x.com/rita_fit03",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "1046-essential",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/rita_fit03",
+          "https://x.com/1046_essential"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 7230
   },
   {
@@ -97876,7 +99474,20 @@
       "source_url": "https://x.com/Kuro_pua",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Kuro_pua"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 6085
   },
   {
@@ -97900,7 +99511,21 @@
       "source_url": "https://x.com/hustle_carrier",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "takuya775551",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/hustle_carrier",
+          "https://x.com/takuya775551"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 5583
   },
   {
@@ -97924,7 +99549,60 @@
       "source_url": "https://x.com/no_place123",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "rebirth-dogcat",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/no_place123",
+          "https://x.com/rebirth_dogcat"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "gogo-nishino",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/no_place123",
+          "https://x.com/gogo_nishino"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "pua-rusu",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/no_place123",
+          "https://x.com/pua_rusu"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "nakayamasoku",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/no_place123",
+          "https://x.com/nakayamasoku"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 4462
   },
   {
@@ -97948,7 +99626,20 @@
       "source_url": "https://x.com/Nagi_Toukare",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 4437
   },
   {
@@ -97996,7 +99687,20 @@
       "source_url": "https://x.com/Rkun_tinder",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Rkun_tinder"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 2834
   },
   {
@@ -98162,6 +99866,19 @@
         "evidence_kind": "fact",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ranbousto2",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/inoue_matching",
+          "https://x.com/ranbousto2"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
       }
     ],
     "follower_count": 24755
@@ -98309,7 +100026,21 @@
       "source_url": "https://x.com/starman1919x",
       "collected_at": "2026-07-18T20:52:25+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "leo-god-messi",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/starman1919x",
+          "https://x.com/leo_god_messi"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 2554
   },
   {
@@ -98719,7 +100450,20 @@
       "source_url": "https://x.com/Syou2310",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/Syou2310"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 5715
   },
   {
@@ -98743,7 +100487,21 @@
       "source_url": "https://x.com/leo_god_messi",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "starman1919x",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/leo_god_messi",
+          "https://x.com/starman1919x"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 4653
   },
   {
@@ -98839,7 +100597,21 @@
       "source_url": "https://x.com/Itsuki_pua",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "yukishiro-yuki",
+        "type": "collaboration",
+        "description": "Shares 2 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/Itsuki_pua",
+          "https://x.com/Yukishiro_yuki_"
+        ],
+        "confidence": 0.49,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 1187
   },
   {
@@ -98863,7 +100635,21 @@
       "source_url": "https://x.com/urata_onna",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tomu-riddle",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/urata_onna",
+          "https://x.com/tomu_riddle"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 1112
   },
   {
@@ -99151,7 +100937,32 @@
       "source_url": "https://x.com/matchingphoto",
       "collected_at": "2026-07-18T21:17:53+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/matchingphoto"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/matchingphoto"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 4343
   },
   {
@@ -99927,7 +101738,20 @@
       "source_url": "https://x.com/tiger3722",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/tiger3722"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 7087
   },
   {
@@ -99988,7 +101812,34 @@
       "source_url": "https://x.com/tora_maru005",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "puainoki",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/tora_maru005",
+          "https://x.com/PUAINOKI"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "gintoki-street",
+        "type": "collaboration",
+        "description": "Shares 3 solid follow-neighbors with another high-follower low-degree account (public graph densify).",
+        "source_urls": [
+          "https://x.com/tora_maru005",
+          "https://x.com/gintoki_street"
+        ],
+        "confidence": 0.51,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      }
+    ],
     "follower_count": 2385
   },
   {
@@ -100012,7 +101863,20 @@
       "source_url": "https://x.com/spcooksan",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/spcooksan"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 2024
   },
   {
@@ -101052,7 +102916,20 @@
       "source_url": "https://x.com/superhentai_may",
       "collected_at": "2026-07-18T22:35:41+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/superhentai_may"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 1136
   },
   {
@@ -101533,13 +103410,13 @@
     "account_id": "prook-panty",
     "profile_url": "https://x.com/prook_panty",
     "pinned_post_url": "",
-    "icon_url": "https://pbs.twimg.com/profile_images/1887506672127778817/m9LwWie4.jpg",
-    "profile_text": "ナンパで即った女の子のハメ撮りが趣味ですw いい感じに撮れたハメ撮りはこっちに載せてます↓",
+    "icon_url": "https://pbs.twimg.com/profile_images/1887506672127778817/m9LwWie4_400x400.jpg",
+    "profile_text": "ナンパ王エロユキ (@prook_panty)\nナンパで即った女の子のハメ撮りが趣味ですw",
     "pinned_post_text": "",
     "links": [
       "https://x.com/prook_panty"
     ],
-    "summary": "ナンパで即った女の子のハメ撮りが趣味ですw いい感じに撮れたハメ撮りはこっちに載せてます↓",
+    "summary": "ナンパ王エロユキ / ナンパで即った女の子のハメ撮りが趣味",
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
@@ -101551,8 +103428,21 @@
       "collected_at": "2026-07-18T23:14:55+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
-    "follower_count": 10168
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Grok X bio field activity densify",
+        "source_urls": [
+          "https://x.com/prook-panty"
+        ],
+        "confidence": 0.65,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X densify: public profile/bio evidence for sparse high-follower hub."
+      }
+    ],
+    "follower_count": 10170
   },
   {
     "account_id": "yoshidaromance",
@@ -101710,13 +103600,13 @@
     "account_id": "t10201010",
     "profile_url": "https://x.com/t10201010",
     "pinned_post_url": "",
-    "icon_url": "https://pbs.twimg.com/profile_images/1017678574709428225/VKFHRcNP.jpg",
-    "profile_text": "【NOTE600部販売突破】お腹が出てきた30代男 ネット出会い系専門ナンパ師 一昨年の10月〜直ホ直家200超え★基本ご飯なしで直ホテル、直家を得意にしてます★ 即家即ホの仕方、魔法の質問はこちらのNOTEに全てまとめてあります",
+    "icon_url": "https://pbs.twimg.com/profile_images/1017678574709428225/VKFHRcNP_400x400.jpg",
+    "profile_text": "ZAKURO@非モテでもできるネトナン専門 (@t10201010)\n【NOTE600部販売突破】お腹が出てきた30代男 ネット出会い系専門ナンパ師",
     "pinned_post_text": "",
     "links": [
       "https://x.com/t10201010"
     ],
-    "summary": "【NOTE600部販売突破】お腹が出てきた30代男 ネット出会い系専門ナンパ師 一昨年の10月〜直ホ直家200超え★基本ご飯なしで直ホテル、直家を得意にしてます★ 即家即ホの仕方、魔法の質問はこちらのNOTEに全てまとめてあります",
+    "summary": "ZAKURO@非モテでもできるネトナン専門 / NOTE600部 / ネット出会い系専門ナンパ師",
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
@@ -101728,7 +103618,20 @@
       "collected_at": "2026-07-18T23:20:28+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X bio field activity densify",
+        "source_urls": [
+          "https://x.com/t10201010"
+        ],
+        "confidence": 0.65,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X densify: public profile/bio evidence for sparse high-follower hub."
+      }
+    ],
     "follower_count": 7946
   },
   {
@@ -101753,7 +103656,20 @@
       "collected_at": "2026-07-18T23:20:28+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/y_u_z_uki"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 5779
   },
   {
@@ -101828,20 +103744,45 @@
       "collected_at": "2026-07-18T23:20:43+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/shirodouga"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/shirodouga"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 14041
   },
   {
     "account_id": "shu-renaimaster",
     "profile_url": "https://x.com/Shu_renaimaster",
     "pinned_post_url": "",
-    "icon_url": "https://pbs.twimg.com/profile_images/1908901875841466368/ezmvp12S.jpg",
-    "profile_text": "＠彼女いない歴＝年齢を卒業！ホスト式恋愛コーチ 【元ホストが教える！貢がせるほど惚れさせる恋愛術】 ▶ 元・歌舞伎町ホスト｜1000人以上の女性を魅了 ▶ 300人以上の男性に恋愛アドバイスを提供",
+    "icon_url": "https://pbs.twimg.com/profile_images/1908901875841466368/ezmvp12S_400x400.jpg",
+    "profile_text": "シュウ@【元歌舞伎町ホスト】愛され依存養成・恋愛コンサルタント (@Shu_renaimaster)\n彼女いない歴＝年齢を卒業！ホスト式恋愛コーチ",
     "pinned_post_text": "",
     "links": [
       "https://x.com/Shu_renaimaster"
     ],
-    "summary": "＠彼女いない歴＝年齢を卒業！ホスト式恋愛コーチ 【元ホストが教える！貢がせるほど惚れさせる恋愛術】 ▶ 元・歌舞伎町ホスト｜1000人以上の女性を魅了 ▶ 300人以上の男性に恋愛アドバイスを提供",
+    "summary": "シュウ@元歌舞伎町ホスト / 愛され依存養成・恋愛コンサルタント",
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
@@ -101853,8 +103794,33 @@
       "collected_at": "2026-07-18T23:20:43+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
-    "follower_count": 9667
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Grok X bio field activity densify",
+        "source_urls": [
+          "https://x.com/shu-renaimaster"
+        ],
+        "confidence": 0.65,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X densify: public profile/bio evidence for sparse high-follower hub."
+      },
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Grok X bio references 歌舞伎町/ホスト field",
+        "source_urls": [
+          "https://x.com/shu-renaimaster"
+        ],
+        "confidence": 0.65,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X densify: public profile/bio evidence for sparse high-follower hub."
+      }
+    ],
+    "follower_count": 9665
   },
   {
     "account_id": "netonan-king",
@@ -101878,7 +103844,20 @@
       "collected_at": "2026-07-18T23:20:43+00:00",
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/netonan_king"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "follower_count": 4913
   },
   {
@@ -102066,6 +104045,18 @@
         "evidence_kind": "fact",
         "needs_review": false,
         "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      },
+      {
+        "target": "osaka",
+        "type": "activity",
+        "description": "Public bio references 大阪 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/MhGGEvazbtHW9tv"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "follower_count": 1562

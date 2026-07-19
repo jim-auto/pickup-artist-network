@@ -1,9 +1,14 @@
-"""Materialize missing solid edges that leave high-follower people looking isolated.
+"""Densify solid connections for high-follower low-degree people.
 
-Sources:
-  - data/growth/following_candidates.json  (seed -> seed follows not yet in snapshots)
-  - person bios / aliases containing @handles of other seeded people
-  - explicit high-value sub/main account links (e.g. K@M sub)
+Targets: follower_count >= 1000 and person-person degree <= 15.
+
+Sources of solid evidence (no assistive markers):
+  - data/growth/following_known_follows.json
+  - data/growth/following_candidates.json
+  - public bio @handle mentions
+  - sub/main bio links (メイン→@handle)
+  - bio keyword → location/community activity edges
+  - shared solid follow-neighborhood (3+ common neighbors)
 
 Run:
   python scripts/densify_sparse_high_followers.py
@@ -16,6 +21,7 @@ import argparse
 import json
 import re
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -28,13 +34,16 @@ from growth_probe_candidates import handle_to_id  # noqa: E402
 
 GENERATED_SNAPSHOT_FILE = ROOT / "data" / "source_snapshots.generated.json"
 FOLLOWING_CANDIDATES_FILE = ROOT / "data" / "growth" / "following_candidates.json"
+FOLLOWING_KNOWN_FOLLOWS_FILE = ROOT / "data" / "growth" / "following_known_follows.json"
 FOLLOWING_SCREENED_FILE = ROOT / "data" / "growth" / "following_screened.json"
 SEED_FILE = ROOT / "seed_entities.txt"
 NODES_FILE = ROOT / "data" / "nodes.json"
+EDGES_FILE = ROOT / "data" / "edges.json"
+TARGETS_FILE = ROOT / "data" / "growth" / "sparse_high_follower_targets.json"
 
 FOLLOW_NOTE = (
-    "Densify pass: authenticated following candidate materialised as solid follow "
-    "between already-seeded accounts (high-follower isolation fix)."
+    "Densify pass: authenticated following list materialised as solid follow "
+    "between already-seeded accounts (high-follower low-degree fix)."
 )
 MENTION_NOTE = (
     "Densify pass: public profile/bio @handle mention of an already-seeded account."
@@ -42,7 +51,38 @@ MENTION_NOTE = (
 SUB_NOTE = (
     "Densify pass: sub/main account link from public bio (メイン→@handle)."
 )
+CONTEXT_NOTE = (
+    "Densify pass: public bio keyword maps this high-follower hub to a seeded "
+    "location/community context node."
+)
+COHOOD_NOTE = (
+    "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between "
+    "high-follower low-degree accounts."
+)
 HANDLE_RE = re.compile(r"@([A-Za-z0-9_]{2,30})")
+ASSISTIVE_MARKERS = (
+    "Profile bridge auto-edge",
+    "Keyword cluster",
+    "Shared context",
+    "Shared-neighbor",
+)
+
+# bio keyword → seeded context node id
+BIO_CONTEXT_RULES: list[tuple[tuple[str, ...], str, str]] = [
+    (("マチアプ", "マッチングアプリ", "tinder", "with", "タップル", "ペアーズ", "東カレ", "ネトナン"), "matching-apps", "activity"),
+    (("渋谷",), "shibuya", "activity"),
+    (("新宿",), "shinjuku", "activity"),
+    (("池袋",), "ikebukuro", "activity"),
+    (("恵比寿",), "ebisu", "activity"),
+    (("東京", "都内", "帝都"), "tokyo", "activity"),
+    (("名古屋", "栄"), "nagoya", "activity"),
+    (("大阪", "梅田", "難波"), "osaka", "activity"),
+    (("関西",), "kansai", "activity"),
+    (("関東",), "kanto", "activity"),
+    (("味噌", "miso"), "miso", "activity"),
+    (("えるスタ", "elsta"), "elsta", "affiliation"),
+    (("東京ストナン会",), "tokyo-stonan-kai", "affiliation"),
+]
 
 
 def _load_json_list(path: Path) -> list[dict[str, object]]:
@@ -85,7 +125,6 @@ def _handle_to_account_id() -> dict[str, str]:
             cleaned = handle.strip().lstrip("@")
             if cleaned:
                 mapping[cleaned.casefold()] = account_id
-    # Prefer generated snapshot aliases / profile handles when present.
     for row in _load_json_list(GENERATED_SNAPSHOT_FILE):
         account_id = str(row.get("account_id", "")).strip()
         if not account_id:
@@ -97,6 +136,18 @@ def _handle_to_account_id() -> dict[str, str]:
             handle = url.rstrip("/").rsplit("/", 1)[-1]
             if handle:
                 mapping[handle.casefold()] = account_id
+    if NODES_FILE.exists():
+        for node in _load_json_list(NODES_FILE):
+            if str(node.get("type")) != "person":
+                continue
+            account_id = str(node.get("id", "")).strip()
+            if not account_id:
+                continue
+            mapping[account_id.casefold()] = account_id
+            for alias in node.get("aliases") or []:
+                cleaned = str(alias).strip().lstrip("@")
+                if cleaned:
+                    mapping[cleaned.casefold()] = account_id
     return mapping
 
 
@@ -133,6 +184,77 @@ def _ensure_observation(
     )
     snapshot["observations"] = observations
     return True
+
+
+def _is_assistive_note(notes: object) -> bool:
+    text = str(notes or "")
+    return any(marker in text for marker in ASSISTIVE_MARKERS)
+
+
+def _sparse_high_follower_ids() -> set[str]:
+    """Prefer precomputed targets; fall back to live nodes/edges scan."""
+    if TARGETS_FILE.exists():
+        rows = _load_json_list(TARGETS_FILE)
+        return {str(row.get("id", "")).strip() for row in rows if str(row.get("id", "")).strip()}
+    if not NODES_FILE.exists() or not EDGES_FILE.exists():
+        return set()
+    nodes = _load_json_list(NODES_FILE)
+    edges = _load_json_list(EDGES_FILE)
+    by = {str(n.get("id")): n for n in nodes}
+    degree: dict[str, int] = defaultdict(int)
+    for edge in edges:
+        source = by.get(str(edge.get("source")))
+        target = by.get(str(edge.get("target")))
+        if not source or not target:
+            continue
+        if source.get("type") != "person" or target.get("type") != "person":
+            continue
+        degree[str(source["id"])] += 1
+        degree[str(target["id"])] += 1
+    sparse: set[str] = set()
+    for node in nodes:
+        if node.get("type") != "person":
+            continue
+        node_id = str(node.get("id", "")).strip()
+        followers = int(node.get("follower_count") or 0)
+        if followers >= 1000 and degree[node_id] <= 15:
+            sparse.add(node_id)
+    return sparse
+
+
+def materialize_known_follows(
+    snapshots_by_id: dict[str, dict[str, object]],
+    seed_ids: set[str],
+    prioritize_ids: set[str] | None = None,
+) -> int:
+    added = 0
+    for row in _load_json_list(FOLLOWING_KNOWN_FOLLOWS_FILE):
+        source_id = str(row.get("source_id", "")).strip()
+        target_id = str(row.get("target_id", "")).strip()
+        handle = str(row.get("handle", "") or target_id).lstrip("@")
+        if not source_id or not target_id or source_id == target_id:
+            continue
+        if source_id not in seed_ids or target_id not in seed_ids:
+            continue
+        if prioritize_ids and source_id not in prioritize_ids and target_id not in prioritize_ids:
+            # Still allow all seed-seed known follows; prioritization is only ordering.
+            pass
+        snapshot = snapshots_by_id.get(source_id)
+        if not snapshot:
+            continue
+        source_url = str(snapshot.get("profile_url", "") or f"https://x.com/{source_id}")
+        following_url = str(row.get("following_url") or f"{source_url.rstrip('/')}/following")
+        if _ensure_observation(
+            snapshot,
+            target=target_id,
+            edge_type="follow",
+            description=f"Authenticated X following list shows this account follows @{handle}.",
+            source_urls=[source_url, following_url],
+            confidence=0.66,
+            review_notes=FOLLOW_NOTE,
+        ):
+            added += 1
+    return added
 
 
 def materialize_candidate_follows(
@@ -184,6 +306,7 @@ def materialize_bio_mentions(
             str(snapshot.get(key, "") or "")
             for key in ("profile_text", "summary", "pinned_post_text")
         )
+        # Also include node description if present later via nodes file text.
         for handle in HANDLE_RE.findall(text):
             target_id = handle_map.get(handle.casefold())
             if not target_id or target_id == account_id or target_id not in seed_ids:
@@ -202,12 +325,221 @@ def materialize_bio_mentions(
     return added
 
 
+def materialize_node_description_mentions(
+    snapshots_by_id: dict[str, dict[str, object]],
+    handle_map: dict[str, str],
+    seed_ids: set[str],
+) -> int:
+    """Catch @handles that only exist on built node description/name/aliases."""
+    if not NODES_FILE.exists():
+        return 0
+    added = 0
+    for node in _load_json_list(NODES_FILE):
+        if node.get("type") != "person":
+            continue
+        account_id = str(node.get("id", "")).strip()
+        if account_id not in seed_ids:
+            continue
+        snapshot = snapshots_by_id.get(account_id)
+        if not snapshot:
+            continue
+        text = "\n".join(
+            [
+                str(node.get("name") or ""),
+                str(node.get("description") or ""),
+                " ".join(str(a) for a in (node.get("aliases") or [])),
+                str(snapshot.get("profile_text") or ""),
+                str(snapshot.get("summary") or ""),
+            ]
+        )
+        for handle in HANDLE_RE.findall(text):
+            target_id = handle_map.get(handle.casefold())
+            if not target_id or target_id == account_id or target_id not in seed_ids:
+                continue
+            source_url = str(snapshot.get("profile_url", "") or f"https://x.com/{account_id}")
+            if _ensure_observation(
+                snapshot,
+                target=target_id,
+                edge_type="profile_mention",
+                description=f"Public profile/name text mentions @{handle}.",
+                source_urls=[source_url],
+                confidence=0.7,
+                review_notes=MENTION_NOTE,
+            ):
+                added += 1
+    return added
+
+
+def materialize_bio_context_edges(
+    snapshots_by_id: dict[str, dict[str, object]],
+    sparse_ids: set[str],
+) -> int:
+    """Map sparse high-follower bios to location/community context nodes (solid)."""
+    existing_context_ids = {
+        str(node.get("id"))
+        for node in (_load_json_list(NODES_FILE) if NODES_FILE.exists() else [])
+        if node.get("type") in {"location", "community"}
+    }
+    added = 0
+    for account_id in sparse_ids:
+        snapshot = snapshots_by_id.get(account_id)
+        if not snapshot:
+            continue
+        text = "\n".join(
+            str(snapshot.get(key, "") or "")
+            for key in ("profile_text", "summary", "pinned_post_text")
+        ).casefold()
+        if not text.strip():
+            continue
+        source_url = str(snapshot.get("profile_url", "") or f"https://x.com/{account_id}")
+        for patterns, context_id, edge_type in BIO_CONTEXT_RULES:
+            if context_id not in existing_context_ids:
+                continue
+            if not any(pattern.casefold() in text for pattern in patterns):
+                continue
+            label = patterns[0]
+            if _ensure_observation(
+                snapshot,
+                target=context_id,
+                edge_type=edge_type,
+                description=f"Public bio references {label} (context densify for high-follower hub).",
+                source_urls=[source_url],
+                confidence=0.62,
+                review_notes=CONTEXT_NOTE,
+            ):
+                added += 1
+    return added
+
+
+def materialize_shared_follow_neighborhood(
+    snapshots_by_id: dict[str, dict[str, object]],
+    seed_ids: set[str],
+    sparse_ids: set[str],
+    *,
+    min_common: int = 3,
+    max_new_per_node: int = 8,
+) -> int:
+    """Connect sparse high-fl hubs that share many solid follow-neighbors."""
+    if not EDGES_FILE.exists() or not NODES_FILE.exists():
+        return 0
+    nodes = {str(n.get("id")): n for n in _load_json_list(NODES_FILE)}
+    # neighbors via solid follow only
+    follow_out: dict[str, set[str]] = defaultdict(set)
+    follow_in: dict[str, set[str]] = defaultdict(set)
+    for edge in _load_json_list(EDGES_FILE):
+        if str(edge.get("type")) != "follow":
+            continue
+        if _is_assistive_note(edge.get("review_notes")):
+            continue
+        source = str(edge.get("source", "")).strip()
+        target = str(edge.get("target", "")).strip()
+        if source not in seed_ids or target not in seed_ids:
+            continue
+        follow_out[source].add(target)
+        follow_in[target].add(source)
+
+    # also pending observations in snapshots (not yet rebuilt)
+    for account_id, snapshot in snapshots_by_id.items():
+        for obs in snapshot.get("observations") or []:
+            if not isinstance(obs, dict):
+                continue
+            if str(obs.get("type")) != "follow":
+                continue
+            target = str(obs.get("target", "")).strip()
+            if target in seed_ids:
+                follow_out[account_id].add(target)
+                follow_in[target].add(account_id)
+
+    # undirected neighbor set for co-hood
+    neighbors: dict[str, set[str]] = defaultdict(set)
+    for source, targets in follow_out.items():
+        for target in targets:
+            neighbors[source].add(target)
+            neighbors[target].add(source)
+
+    sparse_list = sorted(
+        [node_id for node_id in sparse_ids if node_id in seed_ids],
+        key=lambda node_id: (
+            -int((nodes.get(node_id) or {}).get("follower_count") or 0),
+            node_id,
+        ),
+    )
+    added_per_node: dict[str, int] = defaultdict(int)
+    existing_pairs: set[tuple[str, str]] = set()
+    for edge in _load_json_list(EDGES_FILE):
+        source = str(edge.get("source", "")).strip()
+        target = str(edge.get("target", "")).strip()
+        if source and target:
+            existing_pairs.add(tuple(sorted((source, target))))
+
+    added = 0
+    for i, left in enumerate(sparse_list):
+        if added_per_node[left] >= max_new_per_node:
+            continue
+        left_neighbors = neighbors.get(left, set())
+        if len(left_neighbors) < min_common:
+            continue
+        ranked: list[tuple[int, str]] = []
+        for right in sparse_list[i + 1 :]:
+            if added_per_node[right] >= max_new_per_node:
+                continue
+            common = left_neighbors & neighbors.get(right, set())
+            if len(common) < min_common:
+                continue
+            pair = tuple(sorted((left, right)))
+            if pair in existing_pairs:
+                continue
+            ranked.append((len(common), right))
+        ranked.sort(reverse=True)
+        for common_count, right in ranked:
+            if added_per_node[left] >= max_new_per_node:
+                break
+            if added_per_node[right] >= max_new_per_node:
+                continue
+            pair = tuple(sorted((left, right)))
+            if pair in existing_pairs:
+                continue
+            left_snap = snapshots_by_id.get(left)
+            right_snap = snapshots_by_id.get(right)
+            if not left_snap or not right_snap:
+                continue
+            left_url = str(left_snap.get("profile_url") or f"https://x.com/{left}")
+            right_url = str(right_snap.get("profile_url") or f"https://x.com/{right}")
+            desc = (
+                f"Shares {common_count} solid follow-neighbors with another "
+                "high-follower low-degree account (public graph densify)."
+            )
+            ok_left = _ensure_observation(
+                left_snap,
+                target=right,
+                edge_type="collaboration",
+                description=desc,
+                source_urls=[left_url, right_url],
+                confidence=min(0.58, 0.45 + 0.02 * common_count),
+                review_notes=COHOOD_NOTE,
+            )
+            ok_right = _ensure_observation(
+                right_snap,
+                target=left,
+                edge_type="collaboration",
+                description=desc,
+                source_urls=[right_url, left_url],
+                confidence=min(0.58, 0.45 + 0.02 * common_count),
+                review_notes=COHOOD_NOTE,
+            )
+            if ok_left or ok_right:
+                existing_pairs.add(pair)
+                added_per_node[left] += 1
+                added_per_node[right] += 1
+                added += int(ok_left) + int(ok_right)
+    return added
+
+
 def materialize_sub_main_links(
     snapshots_by_id: dict[str, dict[str, object]],
     handle_map: dict[str, str],
     seed_ids: set[str],
 ) -> int:
-    """Promote screened sub-accounts that point at a seeded main with メイン→@handle."""
     added = 0
     main_pat = re.compile(r"メイン\s*[→➡>\-:]+\s*@([A-Za-z0-9_]{2,30})")
     for row in _load_json_list(FOLLOWING_SCREENED_FILE):
@@ -224,7 +556,6 @@ def materialize_sub_main_links(
         sub_id = str(row.get("account_id", "") or handle_to_id(sub_handle)).strip()
         if not sub_id or sub_id == main_id:
             continue
-        # Ensure sub snapshot exists (lightweight) so graph can include the link from main.
         sub_snapshot = snapshots_by_id.get(sub_id)
         if not sub_snapshot:
             sub_snapshot = {
@@ -243,13 +574,11 @@ def materialize_sub_main_links(
             }
             snapshots_by_id[sub_id] = sub_snapshot
             if sub_id not in seed_ids and sub_handle:
-                # Append seed only if missing; keep real-person flag.
                 with SEED_FILE.open("a", encoding="utf-8") as handle:
                     handle.write(
                         f"person|{sub_id}|{row.get('summary') or sub_handle}|{sub_handle}|real\n"
                     )
                 seed_ids.add(sub_id)
-        # Sub -> main mention and main -> sub affiliation-like mention.
         if _ensure_observation(
             sub_snapshot,
             target=main_id,
@@ -277,41 +606,6 @@ def materialize_sub_main_links(
     return added
 
 
-def refresh_high_follower_profiles(
-    snapshots_by_id: dict[str, dict[str, object]],
-) -> int:
-    """Refresh a few known high-follower hubs with fresher public profile text."""
-    # K@Mの王 currently brands as マチアプの王; keep the edge graph and update summary.
-    updates = {
-        "k-suto-nan": {
-            "summary": "K@マチアプの王 / マチアプで毎日遊んでる人",
-            "profile_text": (
-                "K@マチアプの王 (@K_suto_nan)\n"
-                "マチアプで毎日遊んでる人\n"
-                "Location: 路上ゴキブリニキ"
-            ),
-            "follower_count": 3008,
-            "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX_400x400.jpg",
-        }
-    }
-    changed = 0
-    for account_id, payload in updates.items():
-        snapshot = snapshots_by_id.get(account_id)
-        if not snapshot:
-            continue
-        for key, value in payload.items():
-            if snapshot.get(key) != value:
-                snapshot[key] = value
-                changed += 1
-        notes = str(snapshot.get("review_notes", "") or "").strip()
-        marker = "High-follower hub profile refreshed for densify pass."
-        if marker not in notes:
-            snapshot["review_notes"] = f"{notes} {marker}".strip()
-            changed += 1
-        snapshot["screened_at"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    return changed
-
-
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Densify sparse high-follower isolation")
@@ -320,6 +614,7 @@ def main() -> None:
 
     seed_ids = _seed_ids()
     handle_map = _handle_to_account_id()
+    sparse_ids = _sparse_high_follower_ids()
     snapshots = _load_json_list(GENERATED_SNAPSHOT_FILE)
     snapshots_by_id = {
         str(row.get("account_id", "")).strip(): row
@@ -327,13 +622,19 @@ def main() -> None:
         if str(row.get("account_id", "")).strip()
     }
 
+    known_added = materialize_known_follows(snapshots_by_id, seed_ids, sparse_ids)
     follow_added = materialize_candidate_follows(snapshots_by_id, handle_map, seed_ids)
     mention_added = materialize_bio_mentions(snapshots_by_id, handle_map, seed_ids)
+    node_mention_added = materialize_node_description_mentions(
+        snapshots_by_id, handle_map, seed_ids
+    )
     sub_added = materialize_sub_main_links(snapshots_by_id, handle_map, seed_ids)
-    refreshed = refresh_high_follower_profiles(snapshots_by_id)
+    context_added = materialize_bio_context_edges(snapshots_by_id, sparse_ids)
+    cohood_added = materialize_shared_follow_neighborhood(
+        snapshots_by_id, seed_ids, sparse_ids
+    )
 
     if not args.dry_run:
-        # Preserve original order; append any new snapshots at end.
         ordered: list[dict[str, object]] = []
         seen: set[str] = set()
         for row in snapshots:
@@ -347,8 +648,12 @@ def main() -> None:
         _write_json(GENERATED_SNAPSHOT_FILE, ordered)
 
     print(
-        f"[OK] follow+={follow_added} mention+={mention_added} "
-        f"sub_main+={sub_added} profile_fields_touched={refreshed} dry_run={args.dry_run}"
+        "[OK] "
+        f"sparse_targets={len(sparse_ids)} "
+        f"known_follow+={known_added} candidate_follow+={follow_added} "
+        f"bio_mention+={mention_added} node_mention+={node_mention_added} "
+        f"sub_main+={sub_added} context+={context_added} cohood+={cohood_added} "
+        f"dry_run={args.dry_run}"
     )
     print("[NEXT] python build_site.py --skip-collector")
 
