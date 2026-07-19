@@ -1977,8 +1977,10 @@ def render_html(
     }
     table {
       width: 100%;
+      max-width: 100%;
       border-collapse: collapse;
       font-size: 13px;
+      table-layout: fixed;
     }
     th, td {
       border-bottom: 1px solid var(--border);
@@ -1986,6 +1988,8 @@ def render_html(
       text-align: left;
       vertical-align: top;
       overflow-wrap: anywhere;
+      word-break: break-word;
+      min-width: 0;
     }
     th {
       color: var(--muted);
@@ -2004,6 +2008,10 @@ def render_html(
       overflow-y: auto;
       border: 1px solid var(--border);
       border-radius: 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-wrap table {
+      min-width: 0;
     }
     .table-footer {
       margin-top: 10px;
@@ -2226,14 +2234,23 @@ def render_html(
     }
     .command-actions {
       display: grid;
-      grid-template-columns: repeat(3, minmax(72px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 6px;
+      max-width: 100%;
+    }
+    .command-actions .inspect-button {
+      min-width: 0;
+      width: 100%;
+      padding: 6px 4px;
+      white-space: nowrap;
     }
     .command-hint {
       display: block;
       margin-top: 6px;
       font-size: 12px;
       line-height: 1.4;
+      max-width: 100%;
+      overflow-wrap: anywhere;
     }
     a {
       color: var(--accent);

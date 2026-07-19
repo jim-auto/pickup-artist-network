@@ -43,12 +43,28 @@ def serve_docs(docs_dir: Path, host: str, port: int) -> Iterator[str]:
 
 
 OVERFLOW_SCRIPT = """() => {
+  const viewportRight = document.documentElement.clientWidth + 1;
+  const isScrollableX = (el) => {
+    const style = getComputedStyle(el);
+    const ox = style.overflowX;
+    return (ox === "auto" || ox === "scroll") && el.scrollWidth > el.clientWidth + 1;
+  };
+  const insideScrollableX = (el) => {
+    let node = el;
+    while (node && node !== document.body) {
+      if (isScrollableX(node)) return true;
+      node = node.parentElement;
+    }
+    return false;
+  };
   const offenders = [];
   for (const el of document.querySelectorAll("body *")) {
     const style = getComputedStyle(el);
     if (style.display === "none" || style.visibility === "hidden") continue;
+    // Tables intentionally scroll inside .table-wrap on mobile; ignore those.
+    if (insideScrollableX(el)) continue;
     const rect = el.getBoundingClientRect();
-    if (rect.width > 0 && rect.right > document.documentElement.clientWidth + 1) {
+    if (rect.width > 0 && rect.right > viewportRight) {
       offenders.push({
         tag: el.tagName,
         id: el.id,
