@@ -209,14 +209,26 @@ def _backfill_icons_from_discoveries(rows: list[dict[str, object]]) -> int:
             if not target_id or target_id not in by_id:
                 continue
             snapshot = by_id[target_id]
-            if not _is_missing_or_default_icon(snapshot.get("icon_url")):
+            existing_icon = str(snapshot.get("icon_url", "") or "").strip()
+            # Update empty/default icons, and also replace outdated real icons when
+            # Grok returns a different pbs avatar (e.g. エース@体刺し一門).
+            if not _is_missing_or_default_icon(existing_icon) and existing_icon == icon:
+                continue
+            if (
+                not _is_missing_or_default_icon(existing_icon)
+                and existing_icon.replace("_normal", "").replace("_400x400", "")
+                == icon.replace("_normal", "").replace("_400x400", "")
+            ):
                 continue
             snapshot["icon_url"] = icon
             notes = str(snapshot.get("review_notes", "")).strip()
+            note = (
+                "Icon refreshed from Grok X integration discovery."
+                if not _is_missing_or_default_icon(existing_icon)
+                else "Icon backfilled from Grok X integration discovery."
+            )
             snapshot["review_notes"] = " ".join(
-                dict.fromkeys(
-                    [notes, "Icon backfilled from Grok X integration discovery."]
-                )
+                dict.fromkeys([notes, note])
             ).strip()
             updated += 1
     if updated:

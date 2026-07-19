@@ -1978,6 +1978,8 @@ def refresh_missing_x_web_profiles(
     pause_seconds: float = 0.25,
     skip_file_path: Path = X_WEB_PROFILE_SKIP_FILE,
     retry_skipped: bool = False,
+    force_refresh_icons: bool = False,
+    account_ids: set[str] | None = None,
 ) -> list[dict[str, object]]:
     def snapshot_has_x_web_profile(snapshot: dict[str, object]) -> bool:
         collector_meta = snapshot.get("collector", {})
@@ -1991,6 +1993,8 @@ def refresh_missing_x_web_profiles(
         return any(isinstance(source, dict) and source.get("type") == "x_web_profile" for source in sources)
 
     def snapshot_needs_icon_or_followers(snapshot: dict[str, object] | None) -> bool:
+        if force_refresh_icons:
+            return True
         if not snapshot:
             return True
         # Always re-fetch when avatar is empty/default, even if followers already exist.
@@ -2016,16 +2020,21 @@ def refresh_missing_x_web_profiles(
     }
     # Previously we skipped anyone with follower_count>0, which left many
     # default/empty icons unrefreshed. Select by missing icon OR followers.
+    # force_refresh_icons re-pulls real avatars so outdated icons (e.g. エース)
+    # are replaced with the current pbs image.
     skip_payload = load_x_web_profile_skip(skip_file_path)
     skipped_ids = set(skip_payload.get("profiles", {}).keys()) if not retry_skipped else set()
+    allowed_ids = {item.strip() for item in (account_ids or set()) if str(item).strip()}
     sources = [
         source
         for source in load_x_profile_sources(x_profile_config_path)
         if str(source.get("account_id")) not in skipped_ids
         and extract_x_handle_from_url(str(source.get("url", "")))
+        and (not allowed_ids or str(source.get("account_id")) in allowed_ids)
         and snapshot_needs_icon_or_followers(existing_by_id.get(str(source.get("account_id"))))
     ]
     # Prefer accounts that already have traffic but missing icons, then the rest.
+    # When force-refreshing, prefer higher-follower hubs first (visible wrong icons).
     sources.sort(
         key=lambda source: (
             0
@@ -2034,6 +2043,9 @@ def refresh_missing_x_web_profiles(
             )
             and int((existing_by_id.get(str(source.get("account_id"))) or {}).get("follower_count", 0) or 0) > 0
             else 1,
+            -int((existing_by_id.get(str(source.get("account_id"))) or {}).get("follower_count", 0) or 0)
+            if force_refresh_icons
+            else 0,
             str(source["account_id"]),
         )
     )
@@ -2337,6 +2349,20 @@ def main() -> None:
         action="store_true",
         help="Retry profiles previously recorded as unavailable in the X web skip file.",
     )
+    parser.add_argument(
+        "--refresh-stale-x-icons",
+        action="store_true",
+        help=(
+            "Re-fetch current X avatars even when an icon already exists "
+            "(fixes outdated icons like エース@体刺し一門)."
+        ),
+    )
+    parser.add_argument(
+        "--x-web-account-ids",
+        type=str,
+        default="",
+        help="Comma-separated account_ids to limit X web refresh (optional).",
+    )
     args = parser.parse_args()
     args.cookie_file = resolve_x_cookie_file(args.cookie_file)
 
@@ -2361,7 +2387,12 @@ def main() -> None:
         print(f"[OK] cookie names: {', '.join(names)}")
         print("[WARN] imported cookies contain authenticated secrets; do not commit or share them")
         return
-    if args.refresh_missing_x_web_profiles:
+    if args.refresh_missing_x_web_profiles or args.refresh_stale_x_icons:
+        account_ids = {
+            part.strip()
+            for part in str(args.x_web_account_ids or "").split(",")
+            if part.strip()
+        }
         refreshed = refresh_missing_x_web_profiles(
             x_profile_config_path=args.x_profile_config,
             output_path=args.output,
@@ -2371,8 +2402,11 @@ def main() -> None:
             pause_seconds=args.x_web_refresh_pause,
             skip_file_path=args.x_web_skip_file,
             retry_skipped=args.retry_x_web_skips,
+            force_refresh_icons=bool(args.refresh_stale_x_icons),
+            account_ids=account_ids or None,
         )
-        print(f"[OK] refreshed {len(refreshed)} missing X web profiles -> {args.output}")
+        mode = "stale icons" if args.refresh_stale_x_icons else "missing X web profiles"
+        print(f"[OK] refreshed {len(refreshed)} {mode} -> {args.output}")
         return
 
     snapshots = collect_to_file(
