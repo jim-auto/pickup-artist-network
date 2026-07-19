@@ -1090,8 +1090,17 @@ def apply_source_snapshots(
             snapshot.get("needs_review", False)
         )
         icon_url = str(snapshot.get("icon_url", "")).strip()
-        if icon_url:
+        if icon_url and not (
+            "/default_profile_" in icon_url.casefold()
+            or "abs.twimg.com/sticky/default_profile_images" in icon_url.casefold()
+        ):
             source_node.icon_url = icon_url
+        elif (
+            "/default_profile_" in str(source_node.icon_url).casefold()
+            or "abs.twimg.com/sticky/default_profile_images" in str(source_node.icon_url).casefold()
+        ):
+            # Drop placeholder avatars so the UI can fall back cleanly.
+            source_node.icon_url = ""
         follower_count = int(snapshot.get("follower_count", 0) or 0)
         if follower_count > 0:
             source_node.follower_count = follower_count
@@ -2511,8 +2520,15 @@ def node_has_network_relevance_keyword(node: object) -> bool:
 
 
 def has_real_profile_icon(node: object) -> bool:
-    icon_url = str(getattr(node, "icon_url", "") or "")
-    return bool(icon_url) and "/default_profile_" not in icon_url
+    icon_url = str(getattr(node, "icon_url", "") or "").strip()
+    if not icon_url:
+        return False
+    lowered = icon_url.casefold()
+    if "/default_profile_" in lowered:
+        return False
+    if "abs.twimg.com/sticky/default_profile_images" in lowered:
+        return False
+    return True
 
 
 def thin_candidate_decision_status(

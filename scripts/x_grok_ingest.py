@@ -165,6 +165,65 @@ def _seed_handle_to_id() -> dict[str, str]:
     return mapping
 
 
+def _is_missing_or_default_icon(icon_url: object) -> bool:
+    value = str(icon_url or "").strip()
+    if not value:
+        return True
+    lowered = value.casefold()
+    return (
+        "/default_profile_" in lowered
+        or "abs.twimg.com/sticky/default_profile_images" in lowered
+        or lowered.endswith("default_profile.png")
+    )
+
+
+def _backfill_icons_from_discoveries(rows: list[dict[str, object]]) -> int:
+    """Update icon_url on existing generated snapshots from Grok X discoveries."""
+    if not GENERATED_SNAPSHOT_FILE.exists():
+        return 0
+    snapshots = _load_json_list(GENERATED_SNAPSHOT_FILE)
+    by_id = {
+        str(snapshot.get("account_id", "")).strip(): snapshot
+        for snapshot in snapshots
+        if str(snapshot.get("account_id", "")).strip()
+    }
+    handle_map = _seed_handle_to_id()
+    updated = 0
+    for raw in rows:
+        handle = _normalize_handle(raw.get("handle") or raw.get("username"))
+        if not handle:
+            continue
+        icon = str(raw.get("icon_url") or raw.get("avatar") or raw.get("profile_image_url") or "").strip()
+        if _is_missing_or_default_icon(icon):
+            continue
+        # Normalize _normal -> _400x400 if present.
+        icon = re.sub(r"_normal(\.(?:jpg|jpeg|png|webp))$", r"_400x400\1", icon, flags=re.IGNORECASE)
+        account_id = str(raw.get("account_id") or handle_to_id(handle)).strip()
+        target_ids = {
+            account_id,
+            handle_map.get(handle.casefold(), ""),
+            handle_map.get(account_id.casefold(), ""),
+            handle_map.get(account_id.replace("-", "_").casefold(), ""),
+        }
+        for target_id in target_ids:
+            if not target_id or target_id not in by_id:
+                continue
+            snapshot = by_id[target_id]
+            if not _is_missing_or_default_icon(snapshot.get("icon_url")):
+                continue
+            snapshot["icon_url"] = icon
+            notes = str(snapshot.get("review_notes", "")).strip()
+            snapshot["review_notes"] = " ".join(
+                dict.fromkeys(
+                    [notes, "Icon backfilled from Grok X integration discovery."]
+                )
+            ).strip()
+            updated += 1
+    if updated:
+        _write_json(GENERATED_SNAPSHOT_FILE, snapshots)
+    return updated
+
+
 def _add_one_relation(
     *,
     by_id: dict[str, dict[str, object]],
@@ -361,11 +420,13 @@ def main() -> None:
             snapshot["snapshot_origin"] = "generated"
         _write_json(GENERATED_SNAPSHOT_FILE, snapshots)
 
+    # Backfill real icons onto existing generated snapshots / later graph rebuild.
+    icon_updated = _backfill_icons_from_discoveries(raw_rows)
     # Always apply solid relations from all discoveries (including already-seeded).
     relation_added = _add_relation_observations(raw_rows + eligible)
     print(
         f"[OK] applied {len(promo_rows)} Grok X discoveries; "
-        f"solid relations +{relation_added}"
+        f"icons updated={icon_updated}; solid relations +{relation_added}"
     )
 
 

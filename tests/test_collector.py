@@ -610,7 +610,10 @@ class CollectorTests(unittest.TestCase):
                     {
                         "__typename": "User",
                         "core": {"screen_name": "beta_user", "name": "Beta"},
-                        "legacy": {"followers_count": 1234},
+                        "legacy": {
+                            "followers_count": 1234,
+                            "profile_image_url_https": "https://pbs.twimg.com/profile_images/beta_normal.jpg",
+                        },
                     },
                 ],
             ) as fetch_mock:
@@ -624,6 +627,10 @@ class CollectorTests(unittest.TestCase):
             self.assertEqual([snapshot["account_id"] for snapshot in refreshed], ["beta"])
             self.assertEqual(fetch_mock.call_count, 2)
             self.assertIn("alpha", load_x_web_profile_skip(skip_path)["profiles"])
+            self.assertFalse(
+                # real avatar must stop icon-refresh loops
+                "default_profile" in str(refreshed[0].get("icon_url", ""))
+            )
 
             with patch("collector.load_seed_entities", return_value=seed_entities), patch(
                 "collector.resolve_x_cookie_file", return_value=base / "cookies.json"

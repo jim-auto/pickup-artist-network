@@ -202,8 +202,8 @@
       "natu__douga"
     ],
     "description": "流出厳禁です🤫",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
-    "follower_count": 372,
+    "icon_url": "",
+    "follower_count": 4761,
     "source_urls": [
       "manual://seed",
       "https://x.com/natu__douga"
@@ -211,7 +211,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "chubu",
@@ -1199,7 +1199,7 @@
       "7_workout"
     ],
     "description": "X profile for workout 24/7 (@7_workout).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -2573,8 +2573,8 @@
       "S050456236"
     ],
     "description": "@s01183496凍結。 現運用@S667270528s 2ヶ月に一度のスペースand講習募集用のみ 次回スペース6月初頭 👇固定ツイート、写真、リプをよく読んでから講習に応募ください。",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
-    "follower_count": 134,
+    "icon_url": "",
+    "follower_count": 176,
     "source_urls": [
       "manual://seed",
       "https://x.com/S050456236"
@@ -2582,7 +2582,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "s667270528s",
@@ -2592,8 +2592,8 @@
       "S667270528s"
     ],
     "description": "元メイン2019〜(@s01183496)2ヶ月に一度のスペースとマンツーマン講習内容(5月募集中講習生700名突破)は@s050456236へお願いします🙇スト歴30年超え完ソロ。50歳、不定休勤務、158cm、ブス(無整形)、酒アレルギーのハンデ尽くし。女子トラブルゼロ。主に関東。時間場所一切問わずやります。",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
-    "follower_count": 598,
+    "icon_url": "",
+    "follower_count": 822,
     "source_urls": [
       "manual://seed",
       "https://x.com/S667270528s"
@@ -2601,7 +2601,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "sfgzkahifdvjfvu",
@@ -2839,7 +2839,7 @@
       "TinderTips1000"
     ],
     "description": "X profile for @TinderTips1000.",
-    "icon_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1671379817927970818/o6xDDK8Y.jpg",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -2848,7 +2848,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery."
   },
   {
     "id": "tinder-mavi",
@@ -4959,7 +4959,7 @@
       "bukkake_taro"
     ],
     "description": "X profile for ぶっちゃー (@bukkake_taro).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 11,
     "source_urls": [
       "manual://seed",
@@ -4968,7 +4968,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "bunbunbunyaa",
@@ -5271,25 +5271,6 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/chinkawa_pua"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "id": "choro-tinder3",
-    "type": "person",
-    "name": "@choro_tinder3",
-    "aliases": [
-      "choro_tinder3"
-    ],
-    "description": "X profile for @choro_tinder3.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/choro_tinder3"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -5942,7 +5923,7 @@
       "dkZC1Rz0G1SrhDW"
     ],
     "description": "X profile for 正論 (@dkZC1Rz0G1SrhDW).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -6434,25 +6415,6 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
-    "id": "eren-pua",
-    "type": "person",
-    "name": "@eren_pua",
-    "aliases": [
-      "eren_pua"
-    ],
-    "description": "X profile for @eren_pua.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/eren_pua"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
     "id": "ern-xxer",
     "type": "person",
     "name": "@ern_xxer",
@@ -6517,7 +6479,7 @@
       "etokyojam"
     ],
     "description": "X profile for @etokyojam.",
-    "icon_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1564581210654789632/SPUduTb1.jpg",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -6526,7 +6488,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery."
   },
   {
     "id": "etoriasan",
@@ -7030,7 +6992,7 @@
       "hapuchantinder"
     ],
     "description": "X profile for @hapuchantinder.",
-    "icon_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1469761737830191108/SXs_AiRh.jpg",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -7039,7 +7001,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery."
   },
   {
     "id": "haputinder",
@@ -7949,7 +7911,7 @@
       "kanataevv"
     ],
     "description": "婚活に興味があります。 いずれは結婚したいので、その為の勉強ができればなと思っています。",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 10,
     "source_urls": [
       "manual://seed",
@@ -7958,7 +7920,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "kanato2004x",
@@ -8131,25 +8093,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: hanzo-prim, mote-ren-ai7, nano-pua, shinjukuashura."
-  },
-  {
-    "id": "katsuki-seike",
-    "type": "person",
-    "name": "@katsuki_seike",
-    "aliases": [
-      "katsuki_seike"
-    ],
-    "description": "X profile for @katsuki_seike.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/katsuki_seike"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "id": "katsuki-seikei",
@@ -8983,7 +8926,7 @@
       "lv554"
     ],
     "description": "X profile for Laura Silva (@lv554).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -9222,25 +9165,6 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: midori-nanpa, onizuka-pua, ryu-8585, tohokupua."
-  },
-  {
-    "id": "mero-tinder",
-    "type": "person",
-    "name": "@mero_tinder",
-    "aliases": [
-      "mero_tinder"
-    ],
-    "description": "X profile for @mero_tinder.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/mero_tinder"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
     "id": "mf",
@@ -9537,7 +9461,7 @@
       "monobothakuso"
     ],
     "description": "おㄘんㄘんぺろりん👅👅",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 266,
     "source_urls": [
       "manual://seed",
@@ -9546,7 +9470,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "mote-natsu",
@@ -10450,25 +10374,6 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
-    "id": "oskeeeer",
-    "type": "person",
-    "name": "@oskeeeer",
-    "aliases": [
-      "oskeeeer"
-    ],
-    "description": "X profile for @oskeeeer.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/oskeeeer"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
     "id": "osushi-mitsu",
     "type": "person",
     "name": "@osushi_mitsu",
@@ -10937,7 +10842,7 @@
       "putyun"
     ],
     "description": "X profile for putri yunita s. (@putyun).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -11052,7 +10957,7 @@
       "ring6565"
     ],
     "description": "X profile for りのこ (@ring6565). Location: ring6565.",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 2,
     "source_urls": [
       "manual://seed",
@@ -11061,7 +10966,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "rita-chu",
@@ -11281,7 +11186,7 @@
       "s01183496"
     ],
     "description": "スト歴30年。完ソロ。まもなく50歳158cm、ブス、酒アレルギーの4重ハンデ。関東在住。場所、曜日、時間問わず活動。30年女子トラブル0。受講者700名突破スト講習5月募集中@S050456236内で講習詳細⚠️確認必須⚠️2ヶ月一回配信。必ずお読み頂きDMお願いします🙇@S667270528s (現メイン垢)",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 5224,
     "source_urls": [
       "manual://seed",
@@ -11290,7 +11195,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "sala-chiki",
@@ -11324,25 +11229,6 @@
     "source_urls": [
       "manual://seed",
       "https://x.com/sanin__nanpa"
-    ],
-    "confidence": 0.5,
-    "evidence_kind": "fact",
-    "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
-  },
-  {
-    "id": "sasuke110110",
-    "type": "person",
-    "name": "@sasuke110110",
-    "aliases": [
-      "sasuke110110"
-    ],
-    "description": "X profile for @sasuke110110.",
-    "icon_url": "",
-    "follower_count": 0,
-    "source_urls": [
-      "manual://seed",
-      "https://x.com/sasuke110110"
     ],
     "confidence": 0.5,
     "evidence_kind": "fact",
@@ -13781,6 +13667,26 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
   },
   {
+    "id": "puro-nanpa",
+    "type": "person",
+    "name": "M氏@ナンパ講師",
+    "aliases": [
+      "puro_nanpa",
+      "emuchi_pua_main"
+    ],
+    "description": "経験人数1500人超/恋愛講師/スト・箱・ネト全てできます。単発/長期講習依頼はDM迄。 @emuchi_pua ←思考活動垢",
+    "icon_url": "https://pbs.twimg.com/profile_images/1957756915062312960/AUlMEdBx.jpg",
+    "follower_count": 2660,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/puro_nanpa"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Icon/profile filled via Grok x_user_search."
+  },
+  {
     "id": "oscal-pua",
     "type": "person",
     "name": "OS@アツスト/𝒄𝒉𝒆𝒆𝒔𝒆 𝒃𝒆𝒆𝒇 𝒃𝒐𝒚",
@@ -14403,7 +14309,7 @@
       "mickey_11"
     ],
     "description": "X profile for Mickey Adams (@mickey_11).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 2,
     "source_urls": [
       "manual://seed",
@@ -14412,7 +14318,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "minamiseikei",
@@ -14479,7 +14385,7 @@
       "mizunoex"
     ],
     "description": "X profile for みずいし (@mizunoex).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -14593,7 +14499,7 @@
       "peben"
     ],
     "description": "X profile for @peben.",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -14863,8 +14769,8 @@
       "yagi31"
     ],
     "description": "X profile for yagi (@yagi31).",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
-    "follower_count": 16,
+    "icon_url": "",
+    "follower_count": 17,
     "source_urls": [
       "manual://seed",
       "https://x.com/yagi31"
@@ -14872,7 +14778,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "ziyuunotsubasa1",
@@ -15411,6 +15317,27 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 32 handles and matched 10 tracked accounts."
   },
   {
+    "id": "eren-pua",
+    "type": "person",
+    "name": "えれん@迫害されし馬面色黒族",
+    "aliases": [
+      "eren_pua",
+      "eren_PUAthlete"
+    ],
+    "description": "アラツー｜100即｜外見コンプPUA｜地蔵王｜ノンバ最強 @fumiki_mka｜師匠 @vegeta_street_",
+    "icon_url": "https://pbs.twimg.com/profile_images/2065000187039559680/T0sjtGdn.jpg",
+    "follower_count": 502,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/eren_pua",
+      "https://x.com/eren_PUAthlete"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search."
+  },
+  {
     "id": "matchingmomonga",
     "type": "person",
     "name": "えろんが@東カレ弱者",
@@ -15660,6 +15587,27 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "katsuki-seike",
+    "type": "person",
+    "name": "かんこくん｜モテ特化整形論",
+    "aliases": [
+      "katsuki_seike",
+      "katsuki_seikei"
+    ],
+    "description": "整形を研究してます。単発コンサル150名以上。長期コンサル30名以上。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1775495386779750400/3W_PW3t_.jpg",
+    "follower_count": 2694,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/katsuki_seike",
+      "https://x.com/katsuki_seikei"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search."
   },
   {
     "id": "anus-asterisk",
@@ -15988,6 +15936,26 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "sasuke110110",
+    "type": "person",
+    "name": "さすまる@No.1スカウト",
+    "aliases": [
+      "sasuke110110",
+      "sasuke11011"
+    ],
+    "description": "X profile for @sasuke110110.",
+    "icon_url": "https://pbs.twimg.com/profile_images/1802608316562149376/2yBC55YG.jpg",
+    "follower_count": 221,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/sasuke110110"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Generated snapshot differs from manual fields: profile_url, summary."
   },
   {
     "id": "pua-poke",
@@ -16867,7 +16835,7 @@
       "nanpa_group"
     ],
     "description": "おふぱこ DMどうぞ",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "",
     "follower_count": 2292,
     "source_urls": [
       "manual://seed",
@@ -16876,7 +16844,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "gogo-nishino",
@@ -18850,7 +18818,7 @@
       "seiyoku_genkai"
     ],
     "description": "アラサー低身長 | 201(ネト82 スト80 裏垢28 インスタ1 リアコミュ3 その他7) | 108🍯 | 🛁で童貞卒業→🛁狂い/裏垢男子→◯星マインドのYouTubeをきっかけに界隈入り | 2026/4/8〜えるスタ",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+    "icon_url": "https://pbs.twimg.com/profile_images/2070344364795346944/WChC5bkL_400x400.jpg",
     "follower_count": 13,
     "source_urls": [
       "manual://seed",
@@ -18859,7 +18827,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "clark-pua",
@@ -19637,6 +19605,27 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "choro-tinder3",
+    "type": "person",
+    "name": "チョロくん@陰キャでも抱けるTinder講習",
+    "aliases": [
+      "choro_tinder3",
+      "choro_tinder"
+    ],
+    "description": "Tinder無双。大学でナンパやTinderで経験人数100人を達成。",
+    "icon_url": "https://pbs.twimg.com/profile_images/1590276612872077313/jj3ZvMZZ.jpg",
+    "follower_count": 2,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/choro_tinder3",
+      "https://x.com/choro_tinder"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search."
   },
   {
     "id": "chiroru-pua-main",
@@ -20943,6 +20932,27 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "mero-tinder",
+    "type": "person",
+    "name": "メロ",
+    "aliases": [
+      "mero_tinder",
+      "mero__tinder"
+    ],
+    "description": "メロ Tinder",
+    "icon_url": "https://pbs.twimg.com/profile_images/1812599541461340161/_oMiUD-S.jpg",
+    "follower_count": 3065,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/mero_tinder",
+      "https://x.com/mero__tinder"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search."
   },
   {
     "id": "shinjukuashura",
@@ -23358,8 +23368,8 @@
       "emuchi_pua"
     ],
     "description": "金×ナンパ/経験人数1400人/30代中年男性/思考垢/メイン@puro_nanpa",
-    "icon_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
-    "follower_count": 743,
+    "icon_url": "",
+    "follower_count": 869,
     "source_urls": [
       "manual://seed",
       "https://x.com/emuchi_pua"
@@ -23367,7 +23377,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 3 tracked accounts. Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 23 handles and matched 3 tracked accounts. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage."
   },
   {
     "id": "gatiikepua",
@@ -23618,6 +23628,26 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+  },
+  {
+    "id": "oskeeeer",
+    "type": "person",
+    "name": "雄華@雄華軍団団長",
+    "aliases": [
+      "oskeeeer",
+      "oskeeeer_pua"
+    ],
+    "description": "X profile for @oskeeeer.",
+    "icon_url": "https://pbs.twimg.com/profile_images/2075934650896408576/8L8s47rc.jpg",
+    "follower_count": 0,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/oskeeeer"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery."
   },
   {
     "id": "oskeeeer-pua",
@@ -24036,7 +24066,7 @@
       "kurosaka_pua_with_you"
     ],
     "description": "X profile for @kurosaka_pua_wi.",
-    "icon_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/2036300420931526656/bFEFPpty.jpg",
     "follower_count": 0,
     "source_urls": [
       "manual://seed",
@@ -24045,7 +24075,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery."
   },
   {
     "id": "kuroiwa-45",
