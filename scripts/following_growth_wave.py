@@ -31,10 +31,16 @@ from growth_probe_candidates import BIO_SCENE, HANDLE_SCENE, RESERVED, handle_to
 
 NODES_FILE = ROOT / "data" / "nodes.json"
 SEED_FILE = ROOT / "seed_entities.txt"
+GENERATED_SNAPSHOT_FILE = ROOT / "data" / "source_snapshots.generated.json"
 GROWTH_DIR = ROOT / "data" / "growth"
 FOLLOWING_CANDIDATES_FILE = GROWTH_DIR / "following_candidates.json"
 FOLLOWING_SCREENED_FILE = GROWTH_DIR / "following_screened.json"
 FOLLOWING_SOURCES_FILE = GROWTH_DIR / "following_wave_sources.json"
+FOLLOWING_KNOWN_FOLLOWS_FILE = GROWTH_DIR / "following_known_follows.json"
+KNOWN_FOLLOW_NOTE = (
+    "Wave-collected authenticated following edge to an already-seeded account "
+    "(solid density pass)."
+)
 
 
 def _load_json_list(path: Path) -> list[dict[str, object]]:
@@ -88,13 +94,20 @@ def _existing_handles_and_ids() -> set[str]:
     return existing
 
 
-def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
+def _source_rows(limit: int, min_followers: int, *, rescan: bool = False) -> list[dict[str, object]]:
     x_sources = {str(source["account_id"]): source for source in load_x_profile_sources()}
     following_source_ids = _explicit_following_source_ids()
+    source_log_rows = _load_json_list(FOLLOWING_SOURCES_FILE)
     scanned = {
         str(row.get("account_id", ""))
-        for row in _load_json_list(FOLLOWING_SOURCES_FILE)
+        for row in source_log_rows
         if not row.get("error")
+    }
+    # Prefer sources that have never completed a known-follow materialization pass.
+    known_follow_pass_ids = {
+        str(row.get("account_id", ""))
+        for row in source_log_rows
+        if not row.get("error") and "known_seed_follows" in row
     }
     nodes = json.loads(NODES_FILE.read_text(encoding="utf-8"))
     rows: list[dict[str, object]] = []
@@ -105,7 +118,9 @@ def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
         if account_id not in following_source_ids:
             continue
         source = x_sources.get(account_id)
-        if not source or account_id in scanned:
+        if not source:
+            continue
+        if not rescan and account_id in scanned:
             continue
         followers = int(node.get("follower_count", 0) or 0)
         if followers < min_followers:
@@ -115,10 +130,107 @@ def _source_rows(limit: int, min_followers: int) -> list[dict[str, object]]:
                 "account_id": account_id,
                 "url": source["url"],
                 "follower_count": followers,
+                "_needs_known_follow_pass": account_id not in known_follow_pass_ids,
             }
         )
-    rows.sort(key=lambda row: (-int(row["follower_count"]), str(row["account_id"])))
-    return rows[:limit]
+    rows.sort(
+        key=lambda row: (
+            # rescan: first unfinished known-follow sources, then higher followers
+            0 if row.get("_needs_known_follow_pass") else 1,
+            -int(row["follower_count"]),
+            str(row["account_id"]),
+        )
+    )
+    cleaned: list[dict[str, object]] = []
+    for row in rows[:limit]:
+        cleaned.append(
+            {
+                "account_id": row["account_id"],
+                "url": row["url"],
+                "follower_count": row["follower_count"],
+            }
+        )
+    return cleaned
+
+
+def _seed_handle_to_account_id() -> dict[str, str]:
+    """Map handle/alias/id (casefold) -> canonical person account_id from seed."""
+    mapping: dict[str, str] = {}
+    for line in SEED_FILE.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        parts = [part.strip() for part in line.split("|")]
+        if len(parts) < 2 or parts[0] != "person":
+            continue
+        account_id = parts[1]
+        mapping[account_id.casefold()] = account_id
+        if len(parts) >= 4 and parts[3]:
+            for alias in parts[3].split(","):
+                normalized = alias.strip().strip("@")
+                if normalized:
+                    mapping[normalized.casefold()] = account_id
+        # id with underscores restored as handle-ish form
+        mapping[account_id.replace("-", "_").casefold()] = account_id
+    return mapping
+
+
+def _merge_known_follow_observations(
+    known_follows: list[dict[str, object]],
+) -> int:
+    """Attach solid follow observations for already-seeded targets into generated snapshots."""
+    if not known_follows:
+        return 0
+    if not GENERATED_SNAPSHOT_FILE.exists():
+        return 0
+    snapshots = json.loads(GENERATED_SNAPSHOT_FILE.read_text(encoding="utf-8"))
+    if not isinstance(snapshots, list):
+        raise ValueError(f"{GENERATED_SNAPSHOT_FILE} must contain a list")
+    by_id = {
+        str(snapshot.get("account_id", "")).strip(): snapshot
+        for snapshot in snapshots
+        if isinstance(snapshot, dict) and str(snapshot.get("account_id", "")).strip()
+    }
+    added = 0
+    for row in known_follows:
+        source_id = str(row.get("source_id", "")).strip()
+        target_id = str(row.get("target_id", "")).strip()
+        handle = str(row.get("handle", "")).strip()
+        if not source_id or not target_id or source_id == target_id:
+            continue
+        snapshot = by_id.get(source_id)
+        if not snapshot:
+            continue
+        observations = list(snapshot.get("observations") or [])
+        already = any(
+            isinstance(observation, dict)
+            and str(observation.get("target", "")).strip() == target_id
+            and str(observation.get("type", "")).strip() == "follow"
+            for observation in observations
+        )
+        if already:
+            continue
+        source_url = str(snapshot.get("profile_url", "") or f"https://x.com/{source_id}")
+        following_url = str(row.get("following_url", "") or f"{source_url.rstrip('/')}/following")
+        observations.append(
+            {
+                "target": target_id,
+                "type": "follow",
+                "description": (
+                    f"Authenticated X following list shows this account follows @{handle or target_id}."
+                ),
+                "source_urls": [source_url, following_url],
+                "confidence": 0.64,
+                "evidence_kind": "mixed",
+                "needs_review": True,
+                "review_notes": KNOWN_FOLLOW_NOTE,
+            }
+        )
+        snapshot["observations"] = observations
+        added += 1
+    if added:
+        _write_json(GENERATED_SNAPSHOT_FILE, snapshots)
+    return added
 
 
 def _candidate_has_allowed_source(row: dict[str, object], allowed_source_ids: set[str]) -> bool:
@@ -244,6 +356,16 @@ def main() -> None:
     parser.add_argument("--min-source-followers", type=int, default=3000)
     parser.add_argument("--pause-seconds", type=float, default=0.25)
     parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
+    parser.add_argument(
+        "--rescan",
+        action="store_true",
+        help="Re-collect following for already-scanned sources (useful for solid known-follow edges).",
+    )
+    parser.add_argument(
+        "--skip-screen",
+        action="store_true",
+        help="Skip public profile screening (still collect following and known solid follows).",
+    )
     args = parser.parse_args()
 
     cookie_file = resolve_x_cookie_file(args.cookie_file)
@@ -252,12 +374,30 @@ def main() -> None:
 
     cookie_names = _cookie_names(cookie_file)
     existing = _existing_handles_and_ids()
+    handle_to_account_id = _seed_handle_to_account_id()
     grouped: dict[str, dict[str, object]] = {}
+    known_follows: list[dict[str, object]] = _load_json_list(FOLLOWING_KNOWN_FOLLOWS_FILE)
+    known_follow_keys = {
+        (str(row.get("source_id", "")), str(row.get("target_id", "")))
+        for row in known_follows
+    }
     allowed_source_ids = _explicit_following_source_ids()
     source_log = [
         row for row in _load_json_list(FOLLOWING_SOURCES_FILE)
         if str(row.get("account_id", "")) in allowed_source_ids
     ]
+    if args.rescan:
+        rescan_ids = {
+            str(row["account_id"])
+            for row in _source_rows(
+                args.source_limit,
+                args.min_source_followers,
+                rescan=True,
+            )
+        }
+        source_log = [
+            row for row in source_log if str(row.get("account_id", "")) not in rescan_ids
+        ]
     if not args.auth_state.exists() and "auth_token" not in cookie_names:
         print(
             f"[WARN] {cookie_file} has no auth_token and {args.auth_state} does not exist; "
@@ -265,7 +405,11 @@ def main() -> None:
         )
         sources: list[dict[str, object]] = []
     else:
-        sources = _source_rows(args.source_limit, args.min_source_followers)
+        sources = _source_rows(
+            args.source_limit,
+            args.min_source_followers,
+            rescan=args.rescan,
+        )
     for source in sources:
         source_id = str(source["account_id"])
         try:
@@ -286,9 +430,28 @@ def main() -> None:
             print(f"[WARN] following {source_id}: {exc}")
             continue
         added = 0
+        known_added = 0
         for handle in handles:
             account_id = handle_to_id(handle)
             if handle.casefold() in RESERVED or account_id.casefold() in RESERVED:
+                continue
+            seed_target = handle_to_account_id.get(handle.casefold()) or handle_to_account_id.get(
+                account_id.casefold()
+            )
+            if seed_target and seed_target != source_id:
+                key = (source_id, seed_target)
+                if key not in known_follow_keys:
+                    known_follows.append(
+                        {
+                            "source_id": source_id,
+                            "target_id": seed_target,
+                            "handle": handle,
+                            "following_url": following_url,
+                            "collected_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                        }
+                    )
+                    known_follow_keys.add(key)
+                    known_added += 1
                 continue
             if account_id.casefold() in existing or handle.casefold() in existing:
                 continue
@@ -305,19 +468,24 @@ def main() -> None:
                 "collected_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                 "handles_seen": len(handles),
                 "new_unseeded_handles": added,
+                "known_seed_follows": known_added,
             }
         )
-        print(f"[OK] following {source_id}: seen={len(handles)} new_unseeded={added}")
+        print(
+            f"[OK] following {source_id}: seen={len(handles)} "
+            f"new_unseeded={added} known_seed_follows={known_added}"
+        )
 
     candidates = _merge_candidates(list(grouped.values()), allowed_source_ids)
     candidate_ids = {str(row.get("account_id", "")) for row in candidates}
     _write_json(FOLLOWING_CANDIDATES_FILE, candidates)
     _write_json(FOLLOWING_SOURCES_FILE, source_log)
-    screened = [
-        row for row in _load_json_list(FOLLOWING_SCREENED_FILE)
-        if str(row.get("account_id", "")) in candidate_ids
-    ]
-    if args.screen_limit > 0 and candidates:
+    _write_json(FOLLOWING_KNOWN_FOLLOWS_FILE, known_follows)
+    solid_follow_obs = _merge_known_follow_observations(known_follows)
+    if solid_follow_obs:
+        print(f"[OK] solid known-follow observations added: +{solid_follow_obs}")
+    screened = _load_json_list(FOLLOWING_SCREENED_FILE)
+    if not args.skip_screen and args.screen_limit > 0 and candidates:
         if {"auth_token", "ct0"}.issubset(cookie_names):
             screened = _screen_candidates(
                 candidates,
@@ -326,12 +494,14 @@ def main() -> None:
                 timeout=args.timeout,
                 pause_seconds=args.pause_seconds,
             )
-            screened = [row for row in screened if str(row.get("account_id", "")) in candidate_ids]
             _write_json(FOLLOWING_SCREENED_FILE, screened)
         else:
             print(f"[WARN] {cookie_file} has no auth_token/ct0 pair; skipping X Web profile screening.")
     ok_count = sum(1 for row in screened if row.get("ok_bio_scene"))
-    print(f"[OK] candidates={len(candidates)} screened={len(screened)} ok_bio_scene={ok_count}")
+    print(
+        f"[OK] candidates={len(candidates)} screened={len(screened)} "
+        f"ok_bio_scene={ok_count} known_follows={len(known_follows)}"
+    )
 
 
 if __name__ == "__main__":

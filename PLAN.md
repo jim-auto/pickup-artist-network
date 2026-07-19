@@ -70,12 +70,33 @@
 - `utopua2`, `molmol-1919`, `nampa-girl`, `igaku-sato`, `kgori-0412`, `sen-xxv`, `nrtq5ihqepycy0n`, `25basabe`, `na-tu-sb` などの public-profile-backed node を追加
 - `palace-chilll` や `natu-douga` のような business / content side node も、関係が自然なものだけ増やしている
 
+## Current Focus (post-1000)
+
+人数目標は達成済み。いまの主眼は:
+
+1. **solid 関係の密度** — follow / 明示 mention / 手動承認など確定寄りの線を厚くする
+2. **外周ノイズ除去** — 自動補助線と孤立ノードを初期表示から外し、薄い候補の exclude を維持する
+
+### Metrics to watch
+
+- `python scraper.py --growth-progress` の `density:` ブロック
+  - `solid_ratio`
+  - `person-person solid`
+  - `relevant solid0` / `bridge_only`
+  - `periphery excluded`
+
+### UI defaults (solid-first)
+
+- 初期表示は **確定寄り**（自動補助線 OFF）
+- 関係線につながるアカウントだけ描画（孤立ノイズを抑制）
+- 「関連人物だけ表示」は ON のまま
+
 ## Current Problems
 
 ### 1. 1000 人到達後も主戦略は following expansion
 
 公開プロフィールだけでも増やせるが、増加速度はどうしても鈍い。  
-1000 人規模には到達済みだが、主要 cluster の密度を上げるには、**既存 seed account の following を辿って未登録 handle を大量発掘する流れ** が引き続き有効。
+1000 人規模には到達済みだが、主要 cluster の **solid 密度** を上げるには、**既存 seed account の following を辿って未登録 handle を大量発掘する流れ** が引き続き有効。
 
 ### 2. X authenticated following collection is partially recovered
 
@@ -164,9 +185,18 @@ collector 側には以下がすでにある:
 1. cookie fallback を使って `collect_authenticated_following_handles()` を seed batch に再実行
 2. unseen handles を `data/growth/` に候補一覧化
 3. public self-description があるものだけ seed / snapshot に昇格
-4. `python build_site.py --skip-collector` で再生成
-5. 実在人数と relation 増加量を記録
-6. 期限切れに備えて通常ブラウザ login による `data\\.x_auth_state.json` 保存導線も残す
+4. **known seed follows** を solid `follow` observation として generated snapshot に載せる（`--rescan --skip-screen`）
+5. `python build_site.py --skip-collector` で再生成
+6. `python scraper.py --growth-progress` で solid_ratio / person-person solid / mean_solid を記録
+7. 期限切れに備えて通常ブラウザ login による `data\\.x_auth_state.json` 保存導線も残す
+
+### Latest wave result (solid density pass)
+
+- +13 real person (public bio screening 済み)
+- known solid follow observations を複数 source から追加
+- person-person solid 799 → **1019**
+- mean relevant solid degree 2.24 → **2.79**
+- solid_ratio 61.2% → **63.2%**
 
 ## Known Blockers
 

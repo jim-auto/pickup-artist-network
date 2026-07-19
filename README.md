@@ -33,7 +33,20 @@
 
 ## 現在の数値目標
 
-現在は **real person 1000人** の段階目標を超え、次は収集済み候補の精査とノイズ除外を優先します。界隈全体を見渡せる地図に近づけるには人数だけでなく、公開プロフィール・出典・関係線の密度を揃える必要があります。運用上は 20 / 50 / 100 / 200 / 500 / 1000 の段階で増やし、1000 人到達後は「関連人物中心の表示」と「薄い候補のレビュー」で品質を上げます。
+現在は **real person 1000人** の段階目標を超え、次は **solid 関係の密度** と **外周ノイズ除去** を優先します。界隈全体を見渡せる地図に近づけるには人数だけでなく、follow / 明示 mention / 手動承認などの確定寄りの線と、公開プロフィール・出典の品質を揃える必要があります。公開 UI の初期表示は **確定寄り**（自動補助線オフ、関係線につながるアカウントのみ）です。進捗は `python scraper.py --growth-progress` の `density:` も見てください。
+
+### Grok X 連携での候補追加
+
+Playwright cookie 収集に加え、Grok Build の X 連携（`x_user_search` / `x_keyword_search` / `x_semantic_search`）で見つけた公開プロフィールを取り込めます。
+
+1. 発見結果を `data/growth/x_grok_discoveries.json` に追記（handle / bio / followers / post_url / mentioned_by）
+2. 取り込み:
+
+```bash
+python scripts/x_grok_ingest.py --dry-run
+python scripts/x_grok_ingest.py
+python build_site.py --skip-collector
+```
 
 | type | target |
 | --- | --- |

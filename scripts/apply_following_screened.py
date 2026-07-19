@@ -25,7 +25,9 @@ X_PROFILE_LABEL = "following由来候補（screened）"
 NOTE = "Following-guided public profile screening from data/growth/following_screened.json."
 PROMOTION_BIO_SCENE = re.compile(
     r"(ナンパ|ナンパ師|恋愛コンサル|恋愛工学|関係構築|女性攻略|美女|TAV|"
-    r"ストリート|🍑スト|講師|講習|講習生|経験人数|女修行|抱き|ネト即|即数|連続即|直🏩|ハメ)",
+    r"ストリート|🍑スト|講師|講習|講習生|経験人数|女修行|抱き|ネト即|即数|連続即|直🏩|ハメ|"
+    r"即報|タプ|タップル|攻略中|全ジャンル攻略|\d+\s*即|スト低|スト高|スト値|"
+    r"マチアプ|アプリ即|マッチングアプリ|ストナン|スト即)",
     re.IGNORECASE,
 )
 

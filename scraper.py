@@ -122,7 +122,7 @@ PROFILE_BRIDGE_PATTERNS = (
     ("即報", ("即報",)),
     ("合流", ("合流",)),
     ("講習", ("講習", "コンサル")),
-    ("恋愛", ("恋愛",)),
+    ("恋愛", ("恋愛", "婚活", "恋活", "出会い", "出逢い")),
     ("モテ", ("モテ", "彼女")),
     ("美女", ("美女",)),
     ("男磨き", ("男磨き",)),
@@ -130,11 +130,14 @@ PROFILE_BRIDGE_PATTERNS = (
     ("PUA", ("pua", "PUA")),
     ("プレイヤー", ("プレイヤー",)),
     ("女遊び", ("女遊び", "女の子")),
+    ("ヒモ", ("ヒモ", "himo", "貢がせ", "奢られ")),
+    ("港区", ("港区女子", "ギャラ飲み", "パパ活", "港区おじ")),
+    ("セフレ", ("セフレ", "セックスフレンド", "都合のいい")),
     ("デート", ("デート", "王道彼氏", "彼氏感")),
     ("攻略", ("攻略", "人斬り", "斬り")),
-    ("ストリート", ("ストナン", "stonan", "street", "スト値", "スト高", "スト師", "路上", "街", "ストリート")),
-    ("アプリ/オンライン", ("アプリ", "Tinder", "tinder", "ネトナン", "ネト", "オンライン", "チャットアプリ")),
-    ("クラブ/箱", ("クラブ", "クラナン", "箱", "相席", "バー", "ハプバー", "夜遊び")),
+    ("ストリート", ("ストナン", "stonan", "sutonan", "sutonanpa", "street", "スト値", "スト高", "スト師", "路上", "街", "ストリート")),
+    ("アプリ/オンライン", ("アプリ", "Tinder", "tinder", "ネトナン", "netonan", "netonanpa", "ネト", "オンライン", "チャットアプリ")),
+    ("クラブ/箱", ("クラブ", "クラナン", "kuranan", "kurananpa", "箱", "相席", "バー", "ハプバー", "夜遊び")),
     ("関係構築", ("関係構築",)),
     ("美容/整形", ("美容", "整形", "外見", "メンズメイク", "メイク", "垢抜け", "ブサイク", "イケメン")),
     ("ファッション", ("ファッション", "服", "垢抜け")),
@@ -409,7 +412,11 @@ def load_seed_entities(path: Path = SEED_FILE) -> list[dict[str, object]]:
     return entities
 
 
-def build_growth_targets_payload(seed_entities: list[dict[str, object]]) -> dict[str, object]:
+def build_growth_targets_payload(
+    seed_entities: list[dict[str, object]],
+    graph: GraphData | None = None,
+    thin_decisions_payload: dict[str, object] | None = None,
+) -> dict[str, object]:
     current_real_counts = {node_type: 0 for node_type in NODE_TYPES}
     for entity in seed_entities:
         if str(entity.get("scope", "unspecified")).strip() != "real":
@@ -418,7 +425,7 @@ def build_growth_targets_payload(seed_entities: list[dict[str, object]]) -> dict
         if entity_type in current_real_counts:
             current_real_counts[entity_type] += 1
 
-    return {
+    payload: dict[str, object] = {
         "headline": {
             "label": "Real person target",
             "current": current_real_counts["person"],
@@ -434,6 +441,165 @@ def build_growth_targets_payload(seed_entities: list[dict[str, object]]) -> dict
             }
             for node_type in ("person", "community", "content", "location", "platform")
         ],
+    }
+    if graph is not None:
+        payload["density"] = build_graph_density_payload(
+            graph,
+            thin_decisions_payload=thin_decisions_payload,
+        )
+        payload["clusters"] = build_cluster_density_payload(
+            graph,
+            thin_decisions_payload=thin_decisions_payload,
+        )
+    return payload
+
+
+def build_cluster_density_payload(
+    graph: GraphData,
+    thin_decisions_payload: dict[str, object] | None = None,
+    *,
+    top_n: int = 12,
+) -> dict[str, object]:
+    """キーワードクラスタごとの solid 密度を集計する。"""
+
+    from graph_model import KEYWORD_CLUSTER_RULES, build_relation_cluster_payload
+
+    _, _, solid_degree_by_id, _ = graph_account_degree_stats(graph)
+    relevant_ids = network_relevant_person_ids(graph, thin_decisions_payload)
+    node_by_id = {node.id: node for node in graph.nodes}
+    cluster_payload = build_relation_cluster_payload(graph)
+    keyword_mode = (cluster_payload.get("modes") or {}).get("keyword_group") or {}
+    assignments = keyword_mode.get("assignments") or {}
+    clusters_meta = keyword_mode.get("clusters") or {}
+
+    # solid person-person edges inside each cluster
+    solid_edges_by_cluster: dict[str, int] = defaultdict(int)
+    for edge in graph.edges:
+        if is_assistive_edge(edge):
+            continue
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type != "person" or target.type != "person":
+            continue
+        left = assignments.get(edge.source)
+        right = assignments.get(edge.target)
+        if left and left == right:
+            solid_edges_by_cluster[str(left)] += 1
+
+    rows: list[dict[str, object]] = []
+    for cluster_id, meta in clusters_meta.items():
+        members = [
+            node_id
+            for node_id, assigned in assignments.items()
+            if assigned == cluster_id and node_id in node_by_id and node_by_id[node_id].type == "person"
+        ]
+        if not members:
+            continue
+        relevant_members = [node_id for node_id in members if node_id in relevant_ids]
+        solid_degrees = [int(solid_degree_by_id[node_id]) for node_id in members]
+        mean_solid = sum(solid_degrees) / len(solid_degrees) if solid_degrees else 0.0
+        rows.append(
+            {
+                "id": cluster_id,
+                "label": str((meta or {}).get("label", cluster_id)),
+                "size": len(members),
+                "relevant_size": len(relevant_members),
+                "solid_internal_edges": int(solid_edges_by_cluster.get(str(cluster_id), 0)),
+                "mean_solid_degree": round(mean_solid, 2),
+                "solid0": sum(1 for value in solid_degrees if value == 0),
+            }
+        )
+    rows.sort(
+        key=lambda item: (
+            -int(item.get("solid_internal_edges", 0)),
+            -int(item.get("size", 0)),
+            str(item.get("label", "")),
+        )
+    )
+    assigned_persons = sum(1 for node_id, cluster_id in assignments.items() if node_by_id.get(node_id) and node_by_id[node_id].type == "person")
+    return {
+        "mode": "keyword_group",
+        "cluster_count": len(rows),
+        "assigned_persons": assigned_persons,
+        "rule_count": len(KEYWORD_CLUSTER_RULES),
+        "top": rows[: max(1, top_n)],
+    }
+
+
+def build_graph_density_payload(
+    graph: GraphData,
+    thin_decisions_payload: dict[str, object] | None = None,
+) -> dict[str, object]:
+    """solid 関係の密度と外周ノイズ指標を集計する。"""
+
+    _degree_by_id, follow_degree_by_id, solid_degree_by_id, assistive_degree_by_id = (
+        graph_account_degree_stats(graph)
+    )
+    node_by_id = {node.id: node for node in graph.nodes}
+    persons = [node for node in graph.nodes if node.type == "person"]
+    relevant_ids = network_relevant_person_ids(graph, thin_decisions_payload)
+
+    solid_edge_count = 0
+    assistive_edge_count = 0
+    person_person_solid = 0
+    person_person_assistive = 0
+    for edge in graph.edges:
+        assistive = is_assistive_edge(edge)
+        if assistive:
+            assistive_edge_count += 1
+        else:
+            solid_edge_count += 1
+        source = node_by_id.get(edge.source)
+        target = node_by_id.get(edge.target)
+        if not source or not target:
+            continue
+        if source.type == "person" and target.type == "person":
+            if assistive:
+                person_person_assistive += 1
+            else:
+                person_person_solid += 1
+
+    total_edges = solid_edge_count + assistive_edge_count
+    relevant_persons = [node for node in persons if node.id in relevant_ids]
+    relevant_solid_degrees = [int(solid_degree_by_id[node.id]) for node in relevant_persons]
+    relevant_solid0 = sum(1 for value in relevant_solid_degrees if value == 0)
+    relevant_solid_ge3 = sum(1 for value in relevant_solid_degrees if value >= 3)
+    mean_relevant_solid = (
+        sum(relevant_solid_degrees) / len(relevant_solid_degrees)
+        if relevant_solid_degrees
+        else 0.0
+    )
+    excluded_count = 0
+    decisions = (thin_decisions_payload or {}).get("decisions", {})
+    if isinstance(decisions, dict):
+        excluded_count = sum(
+            1
+            for decision in decisions.values()
+            if isinstance(decision, dict) and str(decision.get("status", "")).strip() == "exclude"
+        )
+
+    return {
+        "solid_edge_count": solid_edge_count,
+        "assistive_edge_count": assistive_edge_count,
+        "solid_edge_ratio": round(solid_edge_count / total_edges, 4) if total_edges else 0.0,
+        "person_person_solid_edges": person_person_solid,
+        "person_person_assistive_edges": person_person_assistive,
+        "person_count": len(persons),
+        "network_relevant_persons": len(relevant_ids),
+        "excluded_thin_persons": excluded_count,
+        "relevant_solid_degree_0": relevant_solid0,
+        "relevant_solid_degree_ge_3": relevant_solid_ge3,
+        "mean_relevant_solid_degree": round(mean_relevant_solid, 3),
+        "relevant_with_follow_degree_ge_2": sum(
+            1 for node in relevant_persons if int(follow_degree_by_id[node.id]) >= 2
+        ),
+        "relevant_bridge_only": sum(
+            1
+            for node in relevant_persons
+            if int(solid_degree_by_id[node.id]) == 0 and int(assistive_degree_by_id[node.id]) > 0
+        ),
     }
 
 
@@ -1623,7 +1789,10 @@ def infer_keyword_cluster_edges(graph: GraphData) -> int:
 
 
 def infer_shared_context_edges(graph: GraphData) -> int:
-    """同じ中規模コンテキストを共有する人物同士に補助 affiliation edge を追加する。"""
+    """同じ中規模コンテキストを共有する人物同士に補助 affiliation edge を追加する。
+
+    solid 関係の可読性を優先し、広い文脈・過多な補助線は抑える。
+    """
 
     node_by_id = {node.id: node for node in graph.nodes}
     context_members: defaultdict[str, set[str]] = defaultdict(set)
@@ -1670,11 +1839,11 @@ def infer_shared_context_edges(graph: GraphData) -> int:
             member_set,
             key=lambda node_id: (-len(adjacency[node_id]), node_by_id[node_id].name, node_id),
         )
-        if len(members) < 3 or len(members) > 50:
+        if len(members) < 3 or len(members) > 36:
             continue
-        anchor_ids = members[: min(8, max(2, len(members) // 4))]
+        anchor_ids = members[: min(5, max(2, len(members) // 5))]
         bridge_count_by_node: defaultdict[str, int] = defaultdict(int)
-        context_limit = min(80, max(4, len(members) * 4))
+        context_limit = min(36, max(3, len(members) * 2))
         context_added = 0
         for source_id in members:
             if context_added >= context_limit:
@@ -1693,7 +1862,7 @@ def infer_shared_context_edges(graph: GraphData) -> int:
                 ),
             )
             for target_id in candidates:
-                if bridge_count_by_node[source_id] >= 3 or bridge_count_by_node[target_id] >= 10:
+                if bridge_count_by_node[source_id] >= 2 or bridge_count_by_node[target_id] >= 6:
                     continue
                 try:
                     add_edge(
@@ -1723,7 +1892,7 @@ def infer_shared_context_edges(graph: GraphData) -> int:
                     existing_pairs.add((target_id, source_id))
                     adjacency[source_id].add(target_id)
                     adjacency[target_id].add(source_id)
-                    if bridge_count_by_node[source_id] >= 3 or context_added >= context_limit:
+                    if bridge_count_by_node[source_id] >= 2 or context_added >= context_limit:
                         break
                 except ValueError:
                     continue
@@ -1788,7 +1957,7 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
         (
             (pair, contexts)
             for pair, contexts in pair_contexts.items()
-            if len(contexts) >= 2
+            if len(contexts) >= 3
         ),
         key=lambda item: (
             -len(item[1]),
@@ -1797,9 +1966,9 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
         ),
     )
     for (source_id, target_id), contexts in ranked_pairs:
-        if added >= 1600:
+        if added >= 400:
             break
-        if added_by_node[source_id] >= 16 or added_by_node[target_id] >= 16:
+        if added_by_node[source_id] >= 6 or added_by_node[target_id] >= 6:
             continue
         context_names = [
             node_by_id[context_id].name
@@ -1835,7 +2004,11 @@ def infer_shared_neighbor_edges(graph: GraphData) -> int:
 
 
 def infer_profile_bridge_edges(graph: GraphData) -> int:
-    """プロフィール特徴語が近い低次数人物へ、最低限の人物間エッジを補う。"""
+    """プロフィール特徴語が近い低 solid 次数の人物へ、最低限の補助エッジを補う。
+
+    solid 関係の密度を優先するため、スコア閾値・本数上限を抑え、
+    既に solid 接続が十分なノードには補助線を増やさない。
+    """
 
     from graph_model import KEYWORD_CLUSTER_RULES
 
@@ -1843,6 +2016,7 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
     person_nodes = [node for node in graph.nodes if node.type == "person"]
     existing_pairs: set[tuple[str, str]] = set()
     person_degree: defaultdict[str, int] = defaultdict(int)
+    solid_person_degree: defaultdict[str, int] = defaultdict(int)
     for edge in graph.edges:
         source = node_by_id.get(edge.source)
         target = node_by_id.get(edge.target)
@@ -1853,24 +2027,38 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
             existing_pairs.add(pair)
             person_degree[source.id] += 1
             person_degree[target.id] += 1
+            if not is_assistive_edge(edge):
+                solid_person_degree[source.id] += 1
+                solid_person_degree[target.id] += 1
 
     node_tags: dict[str, set[str]] = {}
     tag_members: defaultdict[str, set[str]] = defaultdict(set)
     for node in person_nodes:
         text = " ".join([node.id, node.name, node.description, *node.aliases])
         lowered_text = text.casefold()
+        # 区切り文字を除いたハンドル正規化テキスト。ローマ字ハンドルの
+        # "suto_nan" / "suto-nan" などを "sutonan" 系パターンで拾えるようにする。
+        compact_text = lowered_text.replace("_", "").replace("-", "").replace(" ", "")
+
+        def _text_has(pattern: str) -> bool:
+            folded = str(pattern).casefold()
+            if folded in lowered_text:
+                return True
+            compact_pattern = folded.replace("_", "").replace("-", "").replace(" ", "")
+            return len(compact_pattern) >= 5 and compact_pattern in compact_text
+
         tags: set[str] = set()
         for rule in KEYWORD_CLUSTER_RULES:
             label = str(rule.get("label", rule.get("id", ""))).strip()
             if not label:
                 continue
             for pattern in rule.get("patterns", ()):
-                if str(pattern).casefold() in lowered_text:
+                if _text_has(pattern):
                     tags.add(label)
                     break
         for label, patterns in PROFILE_BRIDGE_PATTERNS:
             for pattern in patterns:
-                if str(pattern).casefold() in lowered_text:
+                if _text_has(pattern):
                     tags.add(label)
                     break
         if tags:
@@ -1910,7 +2098,11 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         left_followers = int(node_by_id[left].follower_count or 0)
         right_followers = int(node_by_id[right].follower_count or 0)
         high_follower_pair = max(left_followers, right_followers) >= 1000
-        if score < (0.35 if high_follower_pair else 1.6):
+        # 単一の弱い汎用タグだけで大量の bridge が生えないよう閾値を上げる。
+        min_score = 1.6 if high_follower_pair else 2.8
+        if len(shared_tags) < 2 and score < (3.2 if high_follower_pair else 3.6):
+            continue
+        if score < min_score:
             continue
         candidates_by_node[left].append((score, right, shared_tags))
         candidates_by_node[right].append((score, left, shared_tags))
@@ -1918,25 +2110,33 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
     added = 0
     for source in sorted(
         person_nodes,
-        key=lambda node: (person_degree[node.id], -(node.follower_count or 0), node.name, node.id),
+        key=lambda node: (
+            solid_person_degree[node.id],
+            person_degree[node.id],
+            -(node.follower_count or 0),
+            node.name,
+            node.id,
+        ),
     ):
         source_id = source.id
         follower_count = int(source.follower_count or 0)
+        # solid 次数を基準に「最低限の可視性」だけ補う。既に solid で繋がる人は増やさない。
         if follower_count >= 10000:
-            target_degree = 14
+            target_solid_degree = 4
         elif follower_count >= 5000:
-            target_degree = 12
+            target_solid_degree = 3
         elif follower_count >= 1000:
-            target_degree = 10
+            target_solid_degree = 3
         else:
-            target_degree = 8 if node_tags.get(source_id) else 3
-        remaining = max(0, target_degree - person_degree[source_id])
+            target_solid_degree = 2 if node_tags.get(source_id) else 1
+        remaining = max(0, target_solid_degree - solid_person_degree[source_id])
         if remaining <= 0:
             continue
         ranked_candidates = sorted(
             candidates_by_node.get(source_id, []),
             key=lambda item: (
                 -item[0],
+                solid_person_degree[item[1]],
                 person_degree[item[1]],
                 -int(node_by_id[item[1]].follower_count or 0),
                 node_by_id[item[1]].name,
@@ -1944,12 +2144,14 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         )
         per_node_added = 0
         for score, target_id, shared_tags in ranked_candidates:
-            if added >= 4200 or per_node_added >= min(remaining, 8):
+            if added >= 900 or per_node_added >= min(remaining, 2):
                 break
             pair = tuple(sorted((source_id, target_id)))
             if pair in existing_pairs:
                 continue
-            if person_degree[target_id] >= 24 and score < 4.0:
+            if person_degree[target_id] >= 16 and score < 4.5:
+                continue
+            if solid_person_degree[target_id] >= 8 and score < 4.0:
                 continue
             tag_label = "、".join(shared_tags[:5])
             try:
@@ -2245,7 +2447,14 @@ def is_assistive_edge(edge: object) -> bool:
 def graph_account_degree_stats(
     graph: GraphData,
 ) -> tuple[defaultdict[str, int], defaultdict[str, int], defaultdict[str, int], defaultdict[str, int]]:
+    """アカウント次数を集計する。
+
+    person 同士に加え、person↔community / person↔location の solid 関係も
+    地図上の実接続として solid degree に含める（味噌 activity などが solid0 に落ちないようにする）。
+    platform への affiliation はノイズになりやすいので除外する。
+    """
     node_by_id = {node.id: node for node in graph.nodes}
+    context_types = frozenset({"person", "community", "location"})
     degree_by_id: defaultdict[str, int] = defaultdict(int)
     follow_degree_by_id: defaultdict[str, int] = defaultdict(int)
     solid_degree_by_id: defaultdict[str, int] = defaultdict(int)
@@ -2255,17 +2464,23 @@ def graph_account_degree_stats(
         target = node_by_id.get(edge.target)
         if not source or not target:
             continue
-        if source.type not in {"person", "community"} or target.type not in {"person", "community"}:
+        person_ids: list[str] = []
+        if source.type == "person" and target.type in context_types:
+            person_ids.append(source.id)
+        if target.type == "person" and source.type in context_types:
+            person_ids.append(target.id)
+        if not person_ids:
             continue
-        degree_by_id[edge.source] += 1
-        degree_by_id[edge.target] += 1
-        if is_assistive_edge(edge):
-            assistive_degree_by_id[edge.source] += 1
-            assistive_degree_by_id[edge.target] += 1
-        else:
-            solid_degree_by_id[edge.source] += 1
-            solid_degree_by_id[edge.target] += 1
-        if edge.type == "follow":
+        # person-person は両端を数える。person-context は person 側のみ。
+        counted_ids = {source.id, target.id} if source.type == "person" and target.type == "person" else set(person_ids)
+        assistive = is_assistive_edge(edge)
+        for node_id in counted_ids:
+            degree_by_id[node_id] += 1
+            if assistive:
+                assistive_degree_by_id[node_id] += 1
+            else:
+                solid_degree_by_id[node_id] += 1
+        if edge.type == "follow" and source.type == "person" and target.type == "person":
             follow_degree_by_id[edge.source] += 1
             follow_degree_by_id[edge.target] += 1
     return degree_by_id, follow_degree_by_id, solid_degree_by_id, assistive_degree_by_id
@@ -2940,6 +3155,48 @@ def format_growth_targets_output(payload: dict[str, object]) -> str:
             lines.append(
                 f"- {item.get('type', '-')}: {int(item.get('current', 0))} / {target_label}"
             )
+
+    density = payload.get("density")
+    if isinstance(density, dict) and density:
+        solid_edges = int(density.get("solid_edge_count", 0))
+        assistive_edges = int(density.get("assistive_edge_count", 0))
+        solid_ratio = float(density.get("solid_edge_ratio", 0.0))
+        lines.append("density:")
+        lines.append(
+            f"- edges: solid={solid_edges} assistive={assistive_edges} "
+            f"solid_ratio={solid_ratio:.1%}"
+        )
+        lines.append(
+            f"- person-person: solid={int(density.get('person_person_solid_edges', 0))} "
+            f"assistive={int(density.get('person_person_assistive_edges', 0))}"
+        )
+        lines.append(
+            f"- relevant persons: {int(density.get('network_relevant_persons', 0))} "
+            f"(solid0={int(density.get('relevant_solid_degree_0', 0))}, "
+            f"solid>=3={int(density.get('relevant_solid_degree_ge_3', 0))}, "
+            f"bridge_only={int(density.get('relevant_bridge_only', 0))}, "
+            f"mean_solid={float(density.get('mean_relevant_solid_degree', 0.0)):.2f})"
+        )
+        lines.append(
+            f"- periphery excluded: {int(density.get('excluded_thin_persons', 0))}"
+        )
+
+    clusters = payload.get("clusters")
+    if isinstance(clusters, dict) and clusters:
+        lines.append("clusters:")
+        lines.append(
+            f"- keyword_group: {int(clusters.get('cluster_count', 0))} groups / "
+            f"assigned_persons={int(clusters.get('assigned_persons', 0))}"
+        )
+        for item in clusters.get("top", [])[:8]:
+            if not isinstance(item, dict):
+                continue
+            lines.append(
+                f"- {item.get('label', '-')}: size={int(item.get('size', 0))} "
+                f"solid_in={int(item.get('solid_internal_edges', 0))} "
+                f"mean_solid={float(item.get('mean_solid_degree', 0.0)):.2f} "
+                f"solid0={int(item.get('solid0', 0))}"
+            )
     return "\n".join(lines)
 
 
@@ -3339,6 +3596,15 @@ def main() -> None:
         return
 
     if growth_progress_mode:
+        try:
+            density_graph = load_graph(NODES_JSON, EDGES_JSON)
+        except (OSError, ValueError, json.JSONDecodeError, KeyError, TypeError):
+            density_graph = build_graph_from_sources(seed_entities, snapshots)
+        growth_targets_payload = build_growth_targets_payload(
+            seed_entities,
+            graph=density_graph,
+            thin_decisions_payload=load_thin_candidate_decisions(THIN_CANDIDATE_DECISIONS_JSON),
+        )
         if args.review_json:
             print(json.dumps(growth_targets_payload, ensure_ascii=False, indent=2))
         else:

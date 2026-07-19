@@ -131,7 +131,27 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "elsta", "label": "えるスタ", "patterns": ("えるスタ", "elsta"), "priority": 93},
     {"id": "hancho", "label": "はんちょう", "patterns": ("はんちょう", "hancho"), "priority": 92},
     {"id": "juru_family", "label": "ジュルマ一門", "patterns": ("ジュルマ一門", "juru"), "priority": 91},
-    {"id": "yutty", "label": "ゆってぃ", "patterns": ("ゆってぃ", "yutty"), "priority": 90},
+    {
+        "id": "yutty",
+        "label": "ゆってぃ",
+        "patterns": ("ゆってぃ", "yutty", "ゆってぃ長期", "yutty_pua"),
+        "priority": 90,
+    },
+    {
+        "id": "ochimpo",
+        "label": "おちんぽ侍",
+        "patterns": (
+            "おちんぽ侍",
+            "ochimpo",
+            "ochimpo_samurai",
+            "ochimpo-samurai",
+            "道玄坂おちんぽ",
+            "道玄坂さん",
+            "侍長期",
+            "samurai_ochimpo",
+        ),
+        "priority": 95,
+    },
     {"id": "wing", "label": "wing", "patterns": ("wing",), "priority": 89},
     {"id": "kurita", "label": "栗田", "patterns": ("栗田", "kurita"), "priority": 88},
     {
@@ -164,8 +184,36 @@ KEYWORD_CLUSTER_RULES = (
     {"id": "nst", "label": "NST", "patterns": ("NST",), "priority": 64},
     {"id": "okosama_ichimon", "label": "鬼ころし一門", "patterns": ("鬼ころし一門",), "priority": 63},
 )
-AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset({"mbh", "atsust", "wing_longterm", "wing", "atsu_chill"})
-AFFINITY_KEYWORD_CLUSTER_RULE_ORDER = ("mbh", "atsu_chill", "atsust", "wing_longterm", "wing")
+AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset(
+    {
+        "mbh",
+        "atsust",
+        "wing_longterm",
+        "wing",
+        "atsu_chill",
+        "tokyo_stonan_kai",
+        "tokyo_stonan",
+        "miso",
+        "yutty",
+        "ochimpo",
+        "mentaiko",
+        "elsta",
+    }
+)
+AFFINITY_KEYWORD_CLUSTER_RULE_ORDER = (
+    "mbh",
+    "atsu_chill",
+    "ochimpo",  # 侍長期/おちんぽ侍はアツスト絵文字より優先
+    "atsust",
+    "tokyo_stonan_kai",
+    "tokyo_stonan",
+    "yutty",
+    "miso",
+    "mentaiko",
+    "elsta",
+    "wing_longterm",
+    "wing",
+)
 SEMANTIC_FALLBACK_CLUSTER_RULES = (
     {
         "id": "app_online",
@@ -933,13 +981,22 @@ def _best_keyword_cluster_rule_for_node(node: Node) -> dict[str, Any] | None:
 
 
 def _affinity_keyword_cluster_rule_for_node(node: Node) -> dict[str, Any] | None:
+    """複数 affinity が当たるときは priority が高いルールを優先する。"""
     text = _keyword_text(node)
     rules_by_id = {str(rule["id"]): rule for rule in KEYWORD_CLUSTER_RULES}
+    best: dict[str, Any] | None = None
+    best_priority = -1
     for rule_id in AFFINITY_KEYWORD_CLUSTER_RULE_ORDER:
         rule = rules_by_id.get(rule_id)
-        if rule and any(str(pattern).casefold() in text for pattern in rule["patterns"]):
-            return rule
-    return None
+        if not rule:
+            continue
+        if not any(str(pattern).casefold() in text for pattern in rule["patterns"]):
+            continue
+        priority = int(rule.get("priority", 0))
+        if priority > best_priority:
+            best = rule
+            best_priority = priority
+    return best
 
 
 def _build_keyword_cluster_mode_payload(
@@ -1245,7 +1302,8 @@ def _backfill_neighbor_clusters(
 
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
-    payload = {"default_mode": "off", "modes": {}}
+    # 公開地図はキーワード群を初期表示にして、派閥・一門を先に読めるようにする。
+    payload = {"default_mode": "keyword_group", "modes": {}}
 
     for mode_key, definition in CLUSTER_MODE_DEFINITIONS.items():
         if mode_key == "keyword_group":
@@ -1509,7 +1567,8 @@ def render_html(
         else "-"
     )
     growth_description = (
-        "公開プロフィールと公式ページを手動優先で整理しながら、実在人物の関係グラフを段階的に広げています。"
+        "1000人目標達成後は solid 関係の密度と外周ノイズ除去を優先。初期表示は確定寄りで、"
+        "自動補助線と孤立ノードを抑え、公開プロフィール由来の明示関係を見やすくしています。"
     )
     growth_phase_cards = "".join(
         (
@@ -2291,6 +2350,7 @@ def render_html(
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="community">界隈キーワード</button>
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="all">全補助</button>
         </div>
+        <p class="muted">初期表示は確定寄り（自動補助線オフ）。関係線につながるアカウントだけを描画し、外周の孤立ノイズを抑えます。</p>
         <div class="filter-group relevance-control">
           <label class="chip">
             <input type="checkbox" id="relevance-filter-toggle" checked>
@@ -2335,11 +2395,12 @@ def render_html(
             <strong>補助線</strong>
             <div class="filter-group">
               <label class="chip">
-                <input type="checkbox" id="profile-bridge-toggle" checked>
+                <input type="checkbox" id="profile-bridge-toggle">
                 <span>自動補助線</span>
               </label>
             </div>
             <div id="bridge-category-filters" class="filter-group"></div>
+            <p class="muted">初期はオフ。確定寄り関係の密度を見るときはオフのまま、探索時だけオンにします。</p>
           </div>
         </div>
       </details>
@@ -2669,6 +2730,7 @@ def render_html(
       review: "要確認"
     };
     const accountNodeTypes = new Set(["person", "community"]);
+    const solidContextNodeTypes = new Set(["person", "community", "location"]);
     const clusterModeDefinitions = {
       off: {
         label: "まとめない",
@@ -2702,19 +2764,33 @@ def render_html(
     rawGraph.edges.forEach((edge) => {
       const sourceNode = rawNodeById.get(edge.source);
       const targetNode = rawNodeById.get(edge.target);
-      if (!sourceNode || !targetNode || !accountNodeTypes.has(sourceNode.type) || !accountNodeTypes.has(targetNode.type)) {
+      if (!sourceNode || !targetNode) {
         return;
       }
-      nodeDegreeById.set(edge.source, (nodeDegreeById.get(edge.source) || 0) + 1);
-      nodeDegreeById.set(edge.target, (nodeDegreeById.get(edge.target) || 0) + 1);
-      if (isAssistiveEdge(edge)) {
-        assistiveDegreeById.set(edge.source, (assistiveDegreeById.get(edge.source) || 0) + 1);
-        assistiveDegreeById.set(edge.target, (assistiveDegreeById.get(edge.target) || 0) + 1);
-      } else {
-        solidDegreeById.set(edge.source, (solidDegreeById.get(edge.source) || 0) + 1);
-        solidDegreeById.set(edge.target, (solidDegreeById.get(edge.target) || 0) + 1);
+      const personIds = [];
+      if (sourceNode.type === "person" && solidContextNodeTypes.has(targetNode.type)) {
+        personIds.push(edge.source);
       }
-      if (edge.type === "follow") {
+      if (targetNode.type === "person" && solidContextNodeTypes.has(sourceNode.type)) {
+        personIds.push(edge.target);
+      }
+      if (!personIds.length) {
+        return;
+      }
+      const countedIds =
+        sourceNode.type === "person" && targetNode.type === "person"
+          ? [edge.source, edge.target]
+          : personIds;
+      const assistive = isAssistiveEdge(edge);
+      countedIds.forEach((nodeId) => {
+        nodeDegreeById.set(nodeId, (nodeDegreeById.get(nodeId) || 0) + 1);
+        if (assistive) {
+          assistiveDegreeById.set(nodeId, (assistiveDegreeById.get(nodeId) || 0) + 1);
+        } else {
+          solidDegreeById.set(nodeId, (solidDegreeById.get(nodeId) || 0) + 1);
+        }
+      });
+      if (edge.type === "follow" && sourceNode.type === "person" && targetNode.type === "person") {
         followDegreeById.set(edge.source, (followDegreeById.get(edge.source) || 0) + 1);
         followDegreeById.set(edge.target, (followDegreeById.get(edge.target) || 0) + 1);
       }
@@ -2930,7 +3006,12 @@ def render_html(
     const keywordClusterPicker = document.getElementById("keyword-cluster-picker");
     const keywordClusterInput = document.getElementById("keyword-cluster-select");
     if (clusterModeInput) {
-      clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : (rawClusters.default_mode || "off");
+      // solid-first + cluster-first: キーワード群があれば初期で派閥を見せる。
+      const preferredCluster =
+        rawClusters.default_mode ||
+        (rawClusters.modes?.keyword_group ? "keyword_group" : "") ||
+        (rawClusters.modes?.connectivity ? "connectivity" : "off");
+      clusterModeInput.value = preferredCluster;
     }
 
     const nodesDataSet = new vis.DataSet([]);
@@ -3186,12 +3267,15 @@ def render_html(
       const allPeople = rawGraph.nodes.filter((node) => node.type === "person").length;
       const relevantPeople = rawGraph.nodes.filter((node) => node.type === "person" && isNetworkRelevantPerson(node)).length;
       const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
+      const profileBridgeEnabled = document.getElementById("profile-bridge-toggle")?.checked === true;
       const profileBridgeEdges = visibleEdges.filter((edge) => isAssistiveEdge(edge)).length;
+      const solidEdges = visibleEdges.filter((edge) => !isAssistiveEdge(edge)).length;
       container.innerHTML = `
         <span class="tag">${escapeHtml(people)} 人物</span>
         <span class="tag">${escapeHtml(communities)} コミュニティ</span>
         <span class="tag">${escapeHtml(visibleEdges.length)} 関係</span>
-        <span class="tag">補助線 ${escapeHtml(profileBridgeEdges)} 本</span>
+        <span class="tag">確定 ${escapeHtml(solidEdges)} / 補助 ${escapeHtml(profileBridgeEdges)}</span>
+        <span class="tag">${profileBridgeEnabled ? "補助線 ON" : "確定寄り"}</span>
         ${onlyRelevantAccounts
           ? `<span class="tag">薄い候補 ${escapeHtml(allPeople - relevantPeople)} 件非表示</span>`
           : `<span class="tag">全人物 ${escapeHtml(allPeople)} 人</span>`}
@@ -4382,7 +4466,7 @@ def render_html(
       const allowedNodeTypes = selectedValues("[data-node-type]", "data-node-type");
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const allowedBridgeCategories = selectedValues("[data-bridge-category]", "data-bridge-category");
-      const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked !== false;
+      const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked === true;
       const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
       const term = document.getElementById("search").value.trim().toLowerCase();
       const clusterMode = getClusterMode();
@@ -4449,13 +4533,21 @@ def render_html(
       const visibleNodeIds = new Set();
       if (term) {
         matchedIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+        // 検索ヒットは孤立でも残し、つながる相手も足す。
+        visibleEdges.forEach((edge) => {
+          visibleNodeIds.add(edge.source);
+          visibleNodeIds.add(edge.target);
+        });
       } else {
-        eligibleIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
+        // 外周ノイズ抑制: 表示中の関係線につながるアカウントだけ描画する。
+        visibleEdges.forEach((edge) => {
+          visibleNodeIds.add(edge.source);
+          visibleNodeIds.add(edge.target);
+        });
+        if (selectedNodeId && eligibleIds.has(selectedNodeId)) {
+          visibleNodeIds.add(selectedNodeId);
+        }
       }
-      visibleEdges.forEach((edge) => {
-        visibleNodeIds.add(edge.source);
-        visibleNodeIds.add(edge.target);
-      });
 
       const visibleNodes = eligibleNodes.filter((node) => visibleNodeIds.has(node.id));
       const nodeNameById = new Map(rawGraph.nodes.map((node) => [node.id, node.name]));
@@ -4585,17 +4677,10 @@ def render_html(
       document.querySelectorAll("[data-node-type], [data-edge-type]").forEach((input) => {
         input.checked = true;
       });
-      const profileBridgeToggle = document.getElementById("profile-bridge-toggle");
-      if (profileBridgeToggle) {
-        profileBridgeToggle.checked = true;
-      }
       const relevanceFilterToggle = document.getElementById("relevance-filter-toggle");
       if (relevanceFilterToggle) {
         relevanceFilterToggle.checked = true;
       }
-      document.querySelectorAll("[data-bridge-category]").forEach((input) => {
-        input.checked = true;
-      });
       if (clusterModeInput) {
         clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : "off";
       }
@@ -4605,8 +4690,8 @@ def render_html(
       selectedNodeId = null;
       updateClusterModeHelp();
       updateKeywordClusterControl();
-      applyFilters();
-      fitVisibleGraph();
+      // 全体に戻すときも solid-first（自動補助線オフ）を維持する。
+      setBridgePreset("solid");
     }
 
     const debouncedApplyFilters = debounce(applyFilters, 120);
@@ -4764,7 +4849,8 @@ def render_html(
 
     updateClusterModeHelp();
     updateKeywordClusterControl();
-    applyFilters();
+    // solid-first: 自動補助線オフ + 関係線につながるノードのみ表示。
+    setBridgePreset("solid");
     })().catch((error) => {
       console.error(error);
       const networkElement = document.getElementById("network");

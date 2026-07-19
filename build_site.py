@@ -15,6 +15,7 @@ from scraper import (
     SEED_FILE,
     build_graph_from_sources,
     build_growth_targets_payload,
+    format_growth_targets_output,
     infer_keyword_cluster_edges,
     infer_profile_bridge_edges,
     infer_shared_context_edges,
@@ -79,7 +80,6 @@ def main() -> None:
         print(f"[OK] collector refreshed {len(collected)} snapshots")
 
     seed_entities = load_seed_entities(SEED_FILE)
-    growth_targets_payload = build_growth_targets_payload(seed_entities)
     snapshots = load_all_source_snapshots()
     decisions_payload = load_review_candidate_decisions()
     thin_decisions_payload = load_thin_candidate_decisions()
@@ -102,6 +102,11 @@ def main() -> None:
     profile_edges_added = infer_profile_bridge_edges(graph)
     if profile_edges_added:
         print(f"[OK] profile bridge edges: +{profile_edges_added}")
+    growth_targets_payload = build_growth_targets_payload(
+        seed_entities,
+        graph=graph,
+        thin_decisions_payload=thin_decisions_payload,
+    )
     refresh_outputs(graph)
     save_review_candidate_decisions(decisions_payload)
     review_candidates = refresh_review_candidates(
@@ -119,15 +124,11 @@ def main() -> None:
         thin_candidate_decisions_payload=thin_decisions_payload,
         growth_targets_payload=growth_targets_payload,
     )
-    headline = growth_targets_payload.get("headline", {})
     print(
         f"[OK] site build complete: {len(graph.nodes)} nodes / {len(graph.edges)} edges / "
         f"{len(review_candidates.get('candidates', []))} review candidates"
     )
-    print(
-        f"[OK] {headline.get('label', 'Real person target')}: "
-        f"{headline.get('current', 0)} / {headline.get('target', 0)}"
-    )
+    print(format_growth_targets_output(growth_targets_payload))
 
 
 if __name__ == "__main__":

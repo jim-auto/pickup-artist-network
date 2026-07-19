@@ -9,6 +9,7 @@ from graph_model import add_edge, query_relations
 from scraper import (
     approve_review_candidate,
     build_connection_audit_payload,
+    build_graph_density_payload,
     build_graph_from_sources,
     build_thin_candidates_payload,
     build_growth_targets_payload,
@@ -22,6 +23,7 @@ from scraper import (
     format_query_output,
     generate_review_candidates,
     infer_keyword_cluster_edges,
+    infer_profile_bridge_edges,
     load_generated_snapshots,
     load_seed_entities,
     materialize_inferred_social_edges,
@@ -1039,6 +1041,113 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertIn("[OK] thin candidate decisions: 1", decisions_output)
         self.assertIn("exclude: @idol (idol) score=98", decisions_output)
         self.assertIn("note: Off-topic.", decisions_output)
+
+    def test_graph_density_payload_counts_solid_and_assistive_edges(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "main", "name": "Main", "aliases": [], "scope": "real"},
+            {"type": "person", "id": "side", "name": "Side", "aliases": [], "scope": "real"},
+            {"type": "person", "id": "lonely", "name": "Lonely", "aliases": [], "scope": "real"},
+        ]
+        snapshots = [
+            {
+                "account_id": "main",
+                "profile_url": "https://x.com/main",
+                "summary": "ストナン講習をしています。",
+                "observations": [
+                    {
+                        "target": "side",
+                        "type": "follow",
+                        "description": "Manual follow relation.",
+                        "confidence": 0.9,
+                        "evidence_kind": "fact",
+                    }
+                ],
+            },
+            {
+                "account_id": "side",
+                "profile_url": "https://x.com/side",
+                "summary": "Side account.",
+            },
+            {
+                "account_id": "lonely",
+                "profile_url": "https://x.com/lonely",
+                "summary": "X profile for lonely.",
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        add_edge(
+            graph,
+            {
+                "source": "lonely",
+                "target": "main",
+                "type": "affiliation",
+                "description": "Auto bridge.",
+                "confidence": 0.23,
+                "evidence_kind": "interpretation",
+                "needs_review": True,
+                "review_notes": "Profile bridge auto-edge for low-degree node coverage.",
+            },
+        )
+
+        density = build_graph_density_payload(graph)
+        growth = build_growth_targets_payload(seed_entities, graph=graph)
+        output = format_growth_targets_output(growth)
+
+        self.assertEqual(density["solid_edge_count"], 1)
+        self.assertEqual(density["assistive_edge_count"], 1)
+        self.assertEqual(density["person_person_solid_edges"], 1)
+        self.assertEqual(density["person_person_assistive_edges"], 1)
+        self.assertEqual(density["relevant_bridge_only"], 0)
+        self.assertIn("density", growth)
+        self.assertIn("solid_ratio=", output)
+        self.assertIn("relevant persons:", output)
+
+    def test_profile_bridge_skips_nodes_that_already_have_solid_degree(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "hub", "name": "Hub", "aliases": []},
+            {"type": "person", "id": "peer", "name": "Peer", "aliases": []},
+            {"type": "person", "id": "spare", "name": "Spare", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "hub",
+                "profile_url": "https://x.com/hub",
+                "summary": "ストナンと講習とナンパの記録。",
+                "follower_count": 5000,
+                "observations": [
+                    {
+                        "target": "peer",
+                        "type": "follow",
+                        "description": "Solid follow.",
+                        "confidence": 0.9,
+                    },
+                    {
+                        "target": "spare",
+                        "type": "follow",
+                        "description": "Solid follow 2.",
+                        "confidence": 0.9,
+                    },
+                ],
+            },
+            {
+                "account_id": "peer",
+                "profile_url": "https://x.com/peer",
+                "summary": "ストナン講習アカウント。",
+                "follower_count": 100,
+            },
+            {
+                "account_id": "spare",
+                "profile_url": "https://x.com/spare",
+                "summary": "ナンパと講習メモ。",
+                "follower_count": 100,
+            },
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        before = len(graph.edges)
+        added = infer_profile_bridge_edges(graph)
+        # hub already has solid_degree >= target, so no bridge edges are required.
+        self.assertEqual(added, 0)
+        self.assertEqual(len(graph.edges), before)
 
     def test_connection_audit_payload_splits_solid_assistive_and_review_edges(self) -> None:
         seed_entities = [

@@ -1,182 +1,3694 @@
 [
   {
-    "account_id": "na-tu-sb",
-    "url": "https://x.com/na__tu__sb",
-    "follower_count": 194898,
-    "following_url": "https://x.com/na__tu__sb/following",
-    "collected_at": "2026-05-19T09:40:32+00:00",
-    "handles_seen": 2,
-    "new_unseeded_handles": 1
-  },
-  {
-    "account_id": "real-nampa",
-    "url": "https://x.com/real_nampa",
-    "follower_count": 129513,
-    "following_url": "https://x.com/real_nampa/following",
-    "collected_at": "2026-05-19T09:41:13+00:00",
-    "handles_seen": 4,
-    "new_unseeded_handles": 3
-  },
-  {
-    "account_id": "beat-pro",
-    "url": "https://x.com/982thebeat",
-    "follower_count": 111210,
-    "following_url": "https://x.com/982thebeat/following",
-    "collected_at": "2026-05-21T00:35:59+00:00",
-    "handles_seen": 32,
-    "new_unseeded_handles": 32
-  },
-  {
-    "account_id": "chiba-gqn",
-    "url": "https://x.com/chiba_gqn",
-    "follower_count": 45630,
-    "following_url": "https://x.com/chiba_gqn/following",
-    "collected_at": "2026-05-21T00:36:10+00:00",
-    "handles_seen": 38,
-    "new_unseeded_handles": 18
-  },
-  {
-    "account_id": "shinjukuashura",
-    "url": "https://x.com/ShinjukuAshura",
-    "follower_count": 42276,
-    "following_url": "https://x.com/ShinjukuAshura/following",
-    "collected_at": "2026-05-21T00:36:20+00:00",
-    "handles_seen": 27,
-    "new_unseeded_handles": 25
-  },
-  {
-    "account_id": "nanpasireiji",
-    "url": "https://x.com/nanpasireiji",
-    "follower_count": 41583,
-    "following_url": "https://x.com/nanpasireiji/following",
-    "collected_at": "2026-05-21T00:36:30+00:00",
-    "handles_seen": 27,
-    "new_unseeded_handles": 25
-  },
-  {
-    "account_id": "osugi-pua",
-    "url": "https://x.com/osugi_pua",
-    "follower_count": 38777,
-    "following_url": "https://x.com/osugi_pua/following",
-    "collected_at": "2026-05-21T00:36:43+00:00",
-    "handles_seen": 31,
-    "new_unseeded_handles": 16
-  },
-  {
-    "account_id": "nampa-girl",
-    "url": "https://x.com/nampa_girl",
-    "follower_count": 34657,
-    "following_url": "https://x.com/nampa_girl/following",
-    "collected_at": "2026-05-21T00:36:52+00:00",
-    "handles_seen": 3,
-    "new_unseeded_handles": 1
-  },
-  {
-    "account_id": "genki-japan",
-    "url": "https://x.com/genkiforfun",
-    "follower_count": 31861,
-    "following_url": "https://x.com/genkiforfun/following",
-    "collected_at": "2026-05-21T00:37:03+00:00",
-    "handles_seen": 40,
-    "new_unseeded_handles": 39
-  },
-  {
-    "account_id": "chai-mote",
-    "url": "https://x.com/chai_mote",
-    "follower_count": 31411,
-    "following_url": "https://x.com/chai_mote/following",
-    "collected_at": "2026-05-21T00:37:14+00:00",
-    "handles_seen": 12,
-    "new_unseeded_handles": 6
-  },
-  {
     "account_id": "dogma-pua666",
     "url": "https://x.com/dogmapua666",
     "follower_count": 31411,
     "following_url": "https://x.com/dogmapua666/following",
-    "collected_at": "2026-05-23T08:44:40+00:00",
-    "handles_seen": 34,
-    "new_unseeded_handles": 22
+    "collected_at": "2026-07-18T14:49:11+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 15
   },
   {
     "account_id": "tinder-ban",
     "url": "https://x.com/tinder_ban",
     "follower_count": 30369,
     "following_url": "https://x.com/tinder_ban/following",
-    "collected_at": "2026-05-23T08:44:55+00:00",
-    "handles_seen": 34,
-    "new_unseeded_handles": 14
+    "collected_at": "2026-07-18T14:49:26+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "nanpasireiji",
+    "url": "https://x.com/nanpasireiji",
+    "follower_count": 41583,
+    "following_url": "https://x.com/nanpasireiji/following",
+    "collected_at": "2026-07-18T14:51:04+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "osugi-pua",
+    "url": "https://x.com/osugi_pua",
+    "follower_count": 38777,
+    "following_url": "https://x.com/osugi_pua/following",
+    "collected_at": "2026-07-18T14:51:16+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nampa-girl",
+    "url": "https://x.com/nampa_girl",
+    "follower_count": 34657,
+    "following_url": "https://x.com/nampa_girl/following",
+    "collected_at": "2026-07-18T14:51:26+00:00",
+    "handles_seen": 1,
+    "new_unseeded_handles": 1,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "genki-japan",
+    "url": "https://x.com/genkiforfun",
+    "follower_count": 31861,
+    "following_url": "https://x.com/genkiforfun/following",
+    "collected_at": "2026-07-18T14:51:38+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "chai-mote",
+    "url": "https://x.com/chai_mote",
+    "follower_count": 31411,
+    "following_url": "https://x.com/chai_mote/following",
+    "collected_at": "2026-07-18T14:51:52+00:00",
+    "handles_seen": 12,
+    "new_unseeded_handles": 6,
+    "known_seed_follows": 0
   },
   {
     "account_id": "tapdepoipoi",
     "url": "https://x.com/tapdepoipoi",
     "follower_count": 27901,
     "following_url": "https://x.com/tapdepoipoi/following",
-    "collected_at": "2026-05-23T08:45:10+00:00",
-    "handles_seen": 33,
-    "new_unseeded_handles": 23
+    "collected_at": "2026-07-18T14:53:54+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 8
   },
   {
     "account_id": "kei-male-apex",
     "url": "https://x.com/kei_male_apex",
     "follower_count": 24420,
     "following_url": "https://x.com/kei_male_apex/following",
-    "collected_at": "2026-05-23T08:45:24+00:00",
-    "handles_seen": 34,
-    "new_unseeded_handles": 26
+    "collected_at": "2026-07-18T14:54:05+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 12
   },
   {
     "account_id": "mamemame-nanpa",
     "url": "https://x.com/mamemame_nanpa",
     "follower_count": 24113,
     "following_url": "https://x.com/mamemame_nanpa/following",
-    "collected_at": "2026-05-23T08:45:40+00:00",
-    "handles_seen": 37,
-    "new_unseeded_handles": 22
+    "collected_at": "2026-07-18T14:54:19+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 12
   },
   {
     "account_id": "karasu-pua",
     "url": "https://x.com/karasu_pua",
     "follower_count": 22521,
     "following_url": "https://x.com/karasu_pua/following",
-    "collected_at": "2026-05-23T08:45:56+00:00",
-    "handles_seen": 38,
-    "new_unseeded_handles": 18
+    "collected_at": "2026-07-18T14:54:31+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 12
   },
   {
     "account_id": "nbmmind",
     "url": "https://x.com/nbmmind",
     "follower_count": 21596,
     "following_url": "https://x.com/nbmmind/following",
-    "collected_at": "2026-05-23T08:46:11+00:00",
-    "handles_seen": 31,
-    "new_unseeded_handles": 15
+    "collected_at": "2026-07-18T14:54:45+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 13
   },
   {
     "account_id": "hapuchan",
     "url": "https://x.com/hapuchan___",
     "follower_count": 21265,
     "following_url": "https://x.com/hapuchan___/following",
-    "collected_at": "2026-05-23T08:46:25+00:00",
-    "handles_seen": 33,
-    "new_unseeded_handles": 15
+    "collected_at": "2026-07-18T14:55:00+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 16
   },
   {
     "account_id": "kurosakikun",
     "url": "https://x.com/kurosakikun___",
     "follower_count": 21115,
     "following_url": "https://x.com/kurosakikun___/following",
-    "collected_at": "2026-05-23T08:46:38+00:00",
-    "handles_seen": 33,
-    "new_unseeded_handles": 22
+    "collected_at": "2026-07-18T14:55:14+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 12
   },
   {
     "account_id": "nanpawars",
     "url": "https://x.com/nanpawars",
     "follower_count": 21106,
     "following_url": "https://x.com/nanpawars/following",
-    "collected_at": "2026-05-23T08:46:54+00:00",
+    "collected_at": "2026-07-18T14:55:26+00:00",
     "handles_seen": 1,
-    "new_unseeded_handles": 0
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "rate-beauty",
+    "url": "https://x.com/rate_beauty",
+    "follower_count": 20608,
+    "following_url": "https://x.com/rate_beauty/following",
+    "collected_at": "2026-07-18T14:55:39+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "nanpa-pegasasu",
+    "url": "https://x.com/nanpa_pegasasu",
+    "follower_count": 20295,
+    "following_url": "https://x.com/nanpa_pegasasu/following",
+    "collected_at": "2026-07-18T14:55:52+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 6,
+    "known_seed_follows": 24
+  },
+  {
+    "account_id": "fuku-second",
+    "url": "https://x.com/fuku_second",
+    "follower_count": 17155,
+    "following_url": "https://x.com/fuku_second/following",
+    "collected_at": "2026-07-18T14:56:07+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "yutty-pua",
+    "url": "https://x.com/yutty_pua",
+    "follower_count": 15912,
+    "following_url": "https://x.com/yutty_pua/following",
+    "collected_at": "2026-07-18T14:56:30+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kazama-0425",
+    "url": "https://x.com/kazama_0425",
+    "follower_count": 15791,
+    "following_url": "https://x.com/kazama_0425/following",
+    "collected_at": "2026-07-18T16:02:20+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "kawae0021",
+    "url": "https://x.com/kawae0021",
+    "follower_count": 15629,
+    "following_url": "https://x.com/kawae0021/following",
+    "collected_at": "2026-07-18T16:02:34+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "saikyo-sutoti",
+    "url": "https://x.com/Saikyo_sutoti",
+    "follower_count": 15453,
+    "following_url": "https://x.com/Saikyo_sutoti/following",
+    "collected_at": "2026-07-18T16:02:47+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "kgori-0412",
+    "url": "https://x.com/kgori_0412",
+    "follower_count": 14900,
+    "following_url": "https://x.com/kgori_0412/following",
+    "collected_at": "2026-07-18T16:02:59+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "bantan-pua",
+    "url": "https://x.com/bantan_pua",
+    "follower_count": 12158,
+    "following_url": "https://x.com/bantan_pua/following",
+    "collected_at": "2026-07-18T16:03:11+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "suisei-nanpa",
+    "url": "https://x.com/suiseinanpa",
+    "follower_count": 12045,
+    "following_url": "https://x.com/suiseinanpa/following",
+    "collected_at": "2026-07-18T16:03:23+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 11,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "okashinaataoka",
+    "url": "https://x.com/okashinaataoka",
+    "follower_count": 11895,
+    "following_url": "https://x.com/okashinaataoka/following",
+    "collected_at": "2026-07-18T16:03:35+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 26
+  },
+  {
+    "account_id": "pachi-summer",
+    "url": "https://x.com/pachi_summer",
+    "follower_count": 11237,
+    "following_url": "https://x.com/pachi_summer/following",
+    "collected_at": "2026-07-18T16:03:47+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 30,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "tenpanonanpa",
+    "url": "https://x.com/tenpanonanpa",
+    "follower_count": 11228,
+    "following_url": "https://x.com/tenpanonanpa/following",
+    "collected_at": "2026-07-18T16:03:58+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "hancho-pua",
+    "url": "https://x.com/hancho_pua",
+    "follower_count": 11157,
+    "following_url": "https://x.com/hancho_pua/following",
+    "collected_at": "2026-07-18T16:04:10+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "harper-0512",
+    "url": "https://x.com/harper0512",
+    "follower_count": 10896,
+    "following_url": "https://x.com/harper0512/following",
+    "collected_at": "2026-07-18T16:04:21+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "toushirou-app",
+    "url": "https://x.com/toushirou_app",
+    "follower_count": 10403,
+    "following_url": "https://x.com/toushirou_app/following",
+    "collected_at": "2026-07-18T16:04:33+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "senju-insta",
+    "url": "https://x.com/Senju_Insta",
+    "follower_count": 10303,
+    "following_url": "https://x.com/Senju_Insta/following",
+    "collected_at": "2026-07-18T16:04:44+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "shuri-pua",
+    "url": "https://x.com/shuri_pua",
+    "follower_count": 9626,
+    "following_url": "https://x.com/shuri_pua/following",
+    "collected_at": "2026-07-18T16:04:56+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 27
+  },
+  {
+    "account_id": "lonely-stonan",
+    "url": "https://x.com/lonely_stonan",
+    "follower_count": 9602,
+    "following_url": "https://x.com/lonely_stonan/following",
+    "collected_at": "2026-07-18T16:05:07+00:00",
+    "handles_seen": 12,
+    "new_unseeded_handles": 11,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "mikeymikey0601",
+    "url": "https://x.com/mikeymikey0601",
+    "follower_count": 9225,
+    "following_url": "https://x.com/mikeymikey0601/following",
+    "collected_at": "2026-07-18T16:05:22+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "wing-nampa",
+    "url": "https://x.com/wing__nampa",
+    "follower_count": 9192,
+    "following_url": "https://x.com/wing__nampa/following",
+    "collected_at": "2026-07-18T16:05:34+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "zenitsu-tinder",
+    "url": "https://x.com/zenitsu_tinder",
+    "follower_count": 8730,
+    "following_url": "https://x.com/zenitsu_tinder/following",
+    "collected_at": "2026-07-18T16:05:46+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "onaken-pua",
+    "url": "https://x.com/onaken_pua",
+    "follower_count": 8725,
+    "following_url": "https://x.com/onaken_pua/following",
+    "collected_at": "2026-07-18T16:05:58+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "korilla-pua",
+    "url": "https://x.com/korilla_pua",
+    "follower_count": 8244,
+    "following_url": "https://x.com/korilla_pua/following",
+    "collected_at": "2026-07-18T16:06:10+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "hayato-pua",
+    "url": "https://x.com/Hayato_pua",
+    "follower_count": 7782,
+    "following_url": "https://x.com/Hayato_pua/following",
+    "collected_at": "2026-07-18T16:06:22+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "doc-mote",
+    "url": "https://x.com/doc_mote",
+    "follower_count": 7316,
+    "following_url": "https://x.com/doc_mote/following",
+    "collected_at": "2026-07-18T16:06:34+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "vegeta-street",
+    "url": "https://x.com/vegeta_street_",
+    "follower_count": 7042,
+    "following_url": "https://x.com/vegeta_street_/following",
+    "collected_at": "2026-07-18T16:06:46+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 24
+  },
+  {
+    "account_id": "ura-aka-nanpa",
+    "url": "https://x.com/ura_aka_nanpa",
+    "follower_count": 7012,
+    "following_url": "https://x.com/ura_aka_nanpa/following",
+    "collected_at": "2026-07-18T16:07:01+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 35,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "mizuno-qreep",
+    "url": "https://x.com/mizuno_qreep",
+    "follower_count": 6619,
+    "following_url": "https://x.com/mizuno_qreep/following",
+    "collected_at": "2026-07-18T16:07:18+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "miraitinder6969",
+    "url": "https://x.com/miraitinder6969",
+    "follower_count": 6302,
+    "following_url": "https://x.com/miraitinder6969/following",
+    "collected_at": "2026-07-18T16:07:55+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "inaka-stanan",
+    "url": "https://x.com/inaka_stanan",
+    "follower_count": 5799,
+    "following_url": "https://x.com/inaka_stanan/following",
+    "collected_at": "2026-07-18T16:08:28+00:00",
+    "handles_seen": 45,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "nanpaoh-yuya",
+    "url": "https://x.com/nanpaoh_yuya",
+    "follower_count": 5613,
+    "following_url": "https://x.com/nanpaoh_yuya/following",
+    "collected_at": "2026-07-18T16:08:51+00:00",
+    "handles_seen": 25,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "nanpasd",
+    "url": "https://x.com/nanpasd",
+    "follower_count": 6481,
+    "following_url": "https://x.com/nanpasd/following",
+    "collected_at": "2026-07-18T16:09:08+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "untracemind",
+    "url": "https://x.com/untracemind",
+    "follower_count": 5934,
+    "following_url": "https://x.com/untracemind/following",
+    "collected_at": "2026-07-18T16:09:23+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "oguri-mote",
+    "url": "https://x.com/oguri_mote",
+    "follower_count": 5523,
+    "following_url": "https://x.com/oguri_mote/following",
+    "collected_at": "2026-07-18T16:09:42+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "tinder-god",
+    "url": "https://x.com/Tinder_god_2",
+    "follower_count": 5483,
+    "following_url": "https://x.com/Tinder_god_2/following",
+    "collected_at": "2026-07-18T16:09:54+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 34,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "pochama-tuwaou",
+    "url": "https://x.com/pochama_tuwaou",
+    "follower_count": 5319,
+    "following_url": "https://x.com/pochama_tuwaou/following",
+    "collected_at": "2026-07-18T16:10:13+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "yato-mote",
+    "url": "https://x.com/yato_mote",
+    "follower_count": 5014,
+    "following_url": "https://x.com/yato_mote/following",
+    "collected_at": "2026-07-18T16:10:25+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "pika-pua",
+    "url": "https://x.com/pika_pua",
+    "follower_count": 4875,
+    "following_url": "https://x.com/pika_pua/following",
+    "collected_at": "2026-07-18T16:10:37+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "karasu-sr1",
+    "url": "https://x.com/karasu_sr1",
+    "follower_count": 4632,
+    "following_url": "https://x.com/karasu_sr1/following",
+    "collected_at": "2026-07-18T16:10:49+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "hanzo-prim",
+    "url": "https://x.com/hanzo_prim",
+    "follower_count": 4588,
+    "following_url": "https://x.com/hanzo_prim/following",
+    "collected_at": "2026-07-18T16:11:01+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "pua-miura",
+    "url": "https://x.com/pua_miura",
+    "follower_count": 4489,
+    "following_url": "https://x.com/pua_miura/following",
+    "collected_at": "2026-07-18T16:11:13+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "roco-neko",
+    "url": "https://x.com/roco_neko_",
+    "follower_count": 4386,
+    "following_url": "https://x.com/roco_neko_/following",
+    "collected_at": "2026-07-18T16:11:26+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "motemoteyagi",
+    "url": "https://x.com/motemoteyagi",
+    "follower_count": 4303,
+    "following_url": "https://x.com/motemoteyagi/following",
+    "collected_at": "2026-07-18T16:11:38+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "tinder109",
+    "url": "https://x.com/tinder109",
+    "follower_count": 4234,
+    "following_url": "https://x.com/tinder109/following",
+    "collected_at": "2026-07-18T16:11:50+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "renren-pua",
+    "url": "https://x.com/Renren_pua",
+    "follower_count": 4011,
+    "following_url": "https://x.com/Renren_pua/following",
+    "collected_at": "2026-07-18T16:12:02+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 21
+  },
+  {
+    "account_id": "rice-bread-1",
+    "url": "https://x.com/rice_bread_1",
+    "follower_count": 3754,
+    "following_url": "https://x.com/rice_bread_1/following",
+    "collected_at": "2026-07-18T16:12:16+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "magic-kaito7",
+    "url": "https://x.com/magic_kaito7",
+    "follower_count": 3745,
+    "following_url": "https://x.com/magic_kaito7/following",
+    "collected_at": "2026-07-18T16:13:07+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "kageki-ashura",
+    "url": "https://x.com/kageki_ashura",
+    "follower_count": 3674,
+    "following_url": "https://x.com/kageki_ashura/following",
+    "collected_at": "2026-07-18T16:13:29+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "fukunaga-pua",
+    "url": "https://x.com/fukunaga_pua",
+    "follower_count": 3656,
+    "following_url": "https://x.com/fukunaga_pua/following",
+    "collected_at": "2026-07-18T16:13:43+00:00",
+    "handles_seen": 43,
+    "new_unseeded_handles": 30,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "anshin-pua",
+    "url": "https://x.com/anshin__pua",
+    "follower_count": 3644,
+    "following_url": "https://x.com/anshin__pua/following",
+    "collected_at": "2026-07-18T16:14:21+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "bokupaipan",
+    "url": "https://x.com/bokupaipan",
+    "follower_count": 3644,
+    "following_url": "https://x.com/bokupaipan/following",
+    "collected_at": "2026-07-18T16:14:35+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "ststst-pua",
+    "url": "https://x.com/ststst_pua",
+    "follower_count": 3589,
+    "following_url": "https://x.com/ststst_pua/following",
+    "collected_at": "2026-07-18T16:14:47+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "himotenohoshi",
+    "url": "https://x.com/himotenohoshi",
+    "follower_count": 3566,
+    "following_url": "https://x.com/himotenohoshi/following",
+    "collected_at": "2026-07-18T16:15:07+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "chori-pua",
+    "url": "https://x.com/chori_pua",
+    "follower_count": 3515,
+    "following_url": "https://x.com/chori_pua/following",
+    "collected_at": "2026-07-18T16:15:20+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 24,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "xcandee",
+    "url": "https://x.com/_xCandee",
+    "follower_count": 3512,
+    "following_url": "https://x.com/_xCandee/following",
+    "collected_at": "2026-07-18T16:15:43+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "riokun-pua",
+    "url": "https://x.com/riokun_pua",
+    "follower_count": 3476,
+    "following_url": "https://x.com/riokun_pua/following",
+    "collected_at": "2026-07-18T16:16:05+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "minamu-nanpa",
+    "url": "https://x.com/minamu_nanpa",
+    "follower_count": 3422,
+    "following_url": "https://x.com/minamu_nanpa/following",
+    "collected_at": "2026-07-18T16:16:28+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "outlook-sabo4",
+    "url": "https://x.com/outlook_sabo_4",
+    "follower_count": 3279,
+    "following_url": "https://x.com/outlook_sabo_4/following",
+    "collected_at": "2026-07-18T16:16:50+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "garp-pua",
+    "url": "https://x.com/garp_pua",
+    "follower_count": 3208,
+    "following_url": "https://x.com/garp_pua/following",
+    "collected_at": "2026-07-18T16:17:13+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kurita-pua",
+    "url": "https://x.com/kurita_pua",
+    "follower_count": 3204,
+    "following_url": "https://x.com/kurita_pua/following",
+    "collected_at": "2026-07-18T16:17:26+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "futaro-pua",
+    "url": "https://x.com/futaro_pua",
+    "follower_count": 3173,
+    "following_url": "https://x.com/futaro_pua/following",
+    "collected_at": "2026-07-18T16:17:39+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pino-pick-up",
+    "url": "https://x.com/Pino_pick_up_",
+    "follower_count": 3151,
+    "following_url": "https://x.com/Pino_pick_up_/following",
+    "collected_at": "2026-07-18T16:18:32+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "bird-pua",
+    "url": "https://x.com/bird_pua",
+    "follower_count": 3124,
+    "following_url": "https://x.com/bird_pua/following",
+    "collected_at": "2026-07-18T16:18:45+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "hameyuuuu",
+    "url": "https://x.com/hameyuuuu",
+    "follower_count": 2965,
+    "following_url": "https://x.com/hameyuuuu/following",
+    "collected_at": "2026-07-18T16:18:57+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "feitan-sub",
+    "url": "https://x.com/Feitan_sub",
+    "follower_count": 2944,
+    "following_url": "https://x.com/Feitan_sub/following",
+    "collected_at": "2026-07-18T16:19:10+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "11goacemenc",
+    "url": "https://x.com/11goacemenc",
+    "follower_count": 2922,
+    "following_url": "https://x.com/11goacemenc/following",
+    "collected_at": "2026-07-18T16:19:22+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "kayakkupua",
+    "url": "https://x.com/kayakkupua",
+    "follower_count": 2889,
+    "following_url": "https://x.com/kayakkupua/following",
+    "collected_at": "2026-07-18T16:19:35+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "sei-pua1",
+    "url": "https://x.com/sei_pua1",
+    "follower_count": 2871,
+    "following_url": "https://x.com/sei_pua1/following",
+    "collected_at": "2026-07-18T16:19:47+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "chomechome-pua",
+    "url": "https://x.com/chomechome_pua",
+    "follower_count": 2848,
+    "following_url": "https://x.com/chomechome_pua/following",
+    "collected_at": "2026-07-18T16:20:00+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "motebody-pua",
+    "url": "https://x.com/motebody_pua",
+    "follower_count": 2846,
+    "following_url": "https://x.com/motebody_pua/following",
+    "collected_at": "2026-07-18T16:20:13+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "oyajii-nanpa",
+    "url": "https://x.com/oyajii_nanpa",
+    "follower_count": 2791,
+    "following_url": "https://x.com/oyajii_nanpa/following",
+    "collected_at": "2026-07-18T16:20:25+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "nano-pua",
+    "url": "https://x.com/nano_pua",
+    "follower_count": 2766,
+    "following_url": "https://x.com/nano_pua/following",
+    "collected_at": "2026-07-18T16:20:37+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 2
+  },
+  {
+    "account_id": "kuroiwa-45",
+    "url": "https://x.com/kuroiwa_45",
+    "follower_count": 2754,
+    "following_url": "https://x.com/kuroiwa_45/following",
+    "collected_at": "2026-07-18T16:20:45+00:00",
+    "handles_seen": 50,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 28
+  },
+  {
+    "account_id": "namuskun",
+    "url": "https://x.com/namuskun",
+    "follower_count": 2667,
+    "following_url": "https://x.com/namuskun/following",
+    "collected_at": "2026-07-18T16:20:58+00:00",
+    "handles_seen": 47,
+    "new_unseeded_handles": 47,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "isagi-pua",
+    "url": "https://x.com/isagi_pua",
+    "follower_count": 2588,
+    "following_url": "https://x.com/isagi_pua/following",
+    "collected_at": "2026-07-18T16:21:10+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 23
+  },
+  {
+    "account_id": "weekly-nanpa",
+    "url": "https://x.com/weekly_nanpa",
+    "follower_count": 2561,
+    "following_url": "https://x.com/weekly_nanpa/following",
+    "collected_at": "2026-07-18T16:21:22+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "ryo-mindup",
+    "url": "https://x.com/ryo_mindup",
+    "follower_count": 2547,
+    "following_url": "https://x.com/ryo_mindup/following",
+    "collected_at": "2026-07-18T16:22:03+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "tantan-pua",
+    "url": "https://x.com/tantan_pua_",
+    "follower_count": 2505,
+    "following_url": "https://x.com/tantan_pua_/following",
+    "collected_at": "2026-07-18T16:22:15+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "konamon-nampa",
+    "url": "https://x.com/konamon_nampa",
+    "follower_count": 2475,
+    "following_url": "https://x.com/konamon_nampa/following",
+    "collected_at": "2026-07-18T16:22:27+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "kill-pua",
+    "url": "https://x.com/kill_pua",
+    "follower_count": 2441,
+    "following_url": "https://x.com/kill_pua/following",
+    "collected_at": "2026-07-18T16:22:40+00:00",
+    "handles_seen": 35,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "k-suto-nan",
+    "url": "https://x.com/K_suto_nan",
+    "follower_count": 2425,
+    "following_url": "https://x.com/K_suto_nan/following",
+    "collected_at": "2026-07-18T16:22:52+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "ak1-pua",
+    "url": "https://x.com/ak1_pua",
+    "follower_count": 2262,
+    "following_url": "https://x.com/ak1_pua/following",
+    "collected_at": "2026-07-18T16:23:04+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 10,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "nagasanpua",
+    "url": "https://x.com/nagasanpua",
+    "follower_count": 2191,
+    "following_url": "https://x.com/nagasanpua/following",
+    "collected_at": "2026-07-18T16:23:16+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "nekominto-pua",
+    "url": "https://x.com/nekominto_pua",
+    "follower_count": 2174,
+    "following_url": "https://x.com/nekominto_pua/following",
+    "collected_at": "2026-07-18T16:23:39+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 30,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "matchingmomonga",
+    "url": "https://x.com/matchingmomonga",
+    "follower_count": 2129,
+    "following_url": "https://x.com/matchingmomonga/following",
+    "collected_at": "2026-07-18T16:23:51+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 21
+  },
+  {
+    "account_id": "pua-core",
+    "url": "https://x.com/pua_core",
+    "follower_count": 2081,
+    "following_url": "https://x.com/pua_core/following",
+    "collected_at": "2026-07-18T16:24:24+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pua-vinsmoke",
+    "url": "https://x.com/pua_vinsmoke",
+    "follower_count": 2067,
+    "following_url": "https://x.com/pua_vinsmoke/following",
+    "collected_at": "2026-07-18T16:24:37+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 37,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "mafty-nanpa",
+    "url": "https://x.com/mafty_nanpa",
+    "follower_count": 2012,
+    "following_url": "https://x.com/mafty_nanpa/following",
+    "collected_at": "2026-07-18T16:24:57+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "street-fami",
+    "url": "https://x.com/street_Fami",
+    "follower_count": 2003,
+    "following_url": "https://x.com/street_Fami/following",
+    "collected_at": "2026-07-18T16:25:09+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "enukun-pua",
+    "url": "https://x.com/enukun_pua",
+    "follower_count": 1854,
+    "following_url": "https://x.com/enukun_pua/following",
+    "collected_at": "2026-07-18T16:25:21+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "scream-pua",
+    "url": "https://x.com/scream_pua",
+    "follower_count": 1785,
+    "following_url": "https://x.com/scream_pua/following",
+    "collected_at": "2026-07-18T16:25:33+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "korasyo-renai",
+    "url": "https://x.com/korasyo_renai",
+    "follower_count": 1667,
+    "following_url": "https://x.com/korasyo_renai/following",
+    "collected_at": "2026-07-18T16:25:47+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "efu-pua",
+    "url": "https://x.com/efu_pua",
+    "follower_count": 1604,
+    "following_url": "https://x.com/efu_pua/following",
+    "collected_at": "2026-07-18T16:25:59+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "foy-jibunmigaki",
+    "url": "https://x.com/foy_jibunmigaki",
+    "follower_count": 1486,
+    "following_url": "https://x.com/foy_jibunmigaki/following",
+    "collected_at": "2026-07-18T16:26:12+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "korea-pua",
+    "url": "https://x.com/korea_pua",
+    "follower_count": 1399,
+    "following_url": "https://x.com/korea_pua/following",
+    "collected_at": "2026-07-18T16:26:24+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "nanpahamehame",
+    "url": "https://x.com/Nanpahamehame",
+    "follower_count": 1377,
+    "following_url": "https://x.com/Nanpahamehame/following",
+    "collected_at": "2026-07-18T16:26:37+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 2
+  },
+  {
+    "account_id": "mote-ren-ai7",
+    "url": "https://x.com/mote_ren_ai7",
+    "follower_count": 1297,
+    "following_url": "https://x.com/mote_ren_ai7/following",
+    "collected_at": "2026-07-18T16:26:49+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "fake-nagase",
+    "url": "https://x.com/fake_nagase",
+    "follower_count": 1293,
+    "following_url": "https://x.com/fake_nagase/following",
+    "collected_at": "2026-07-18T16:27:02+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "juru-pua",
+    "url": "https://x.com/juru_pua",
+    "follower_count": 1291,
+    "following_url": "https://x.com/juru_pua/following",
+    "collected_at": "2026-07-18T16:27:25+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "1tensaipua1",
+    "url": "https://x.com/1tensaipua1",
+    "follower_count": 1278,
+    "following_url": "https://x.com/1tensaipua1/following",
+    "collected_at": "2026-07-18T16:27:36+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 24,
+    "known_seed_follows": 2
+  },
+  {
+    "account_id": "dawson-nst",
+    "url": "https://x.com/Dawson_nst",
+    "follower_count": 1263,
+    "following_url": "https://x.com/Dawson_nst/following",
+    "collected_at": "2026-07-18T16:27:49+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "right-pua",
+    "url": "https://x.com/right_pua_",
+    "follower_count": 1262,
+    "following_url": "https://x.com/right_pua_/following",
+    "collected_at": "2026-07-18T16:28:01+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "pua-rusu",
+    "url": "https://x.com/pua_rusu",
+    "follower_count": 1256,
+    "following_url": "https://x.com/pua_rusu/following",
+    "collected_at": "2026-07-18T16:28:14+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "wlkrndstrt",
+    "url": "https://x.com/wlkrndstrt",
+    "follower_count": 1192,
+    "following_url": "https://x.com/wlkrndstrt/following",
+    "collected_at": "2026-07-18T16:28:36+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nn-nn-nn1001",
+    "url": "https://x.com/nn_nn_nn1001",
+    "follower_count": 1169,
+    "following_url": "https://x.com/nn_nn_nn1001/following",
+    "collected_at": "2026-07-18T16:28:47+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "sen-xxv",
+    "url": "https://x.com/sen_xxv",
+    "follower_count": 1112,
+    "following_url": "https://x.com/sen_xxv/following",
+    "collected_at": "2026-07-18T16:28:59+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "mine-chan-pua",
+    "url": "https://x.com/MINE_chan_pua",
+    "follower_count": 1086,
+    "following_url": "https://x.com/MINE_chan_pua/following",
+    "collected_at": "2026-07-18T20:45:29+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "shingen-pua",
+    "url": "https://x.com/shingen_pua",
+    "follower_count": 1072,
+    "following_url": "https://x.com/shingen_pua/following",
+    "collected_at": "2026-07-18T20:45:42+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "knk-stnn",
+    "url": "https://x.com/knk_stnn",
+    "follower_count": 1060,
+    "following_url": "https://x.com/knk_stnn/following",
+    "collected_at": "2026-07-18T20:45:56+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 24,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "vo-nampa",
+    "url": "https://x.com/vo_nampa",
+    "follower_count": 1060,
+    "following_url": "https://x.com/vo_nampa/following",
+    "collected_at": "2026-07-18T20:46:08+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "nanpa-doraemon",
+    "url": "https://x.com/nanpa_doraemon",
+    "follower_count": 1028,
+    "following_url": "https://x.com/nanpa_doraemon/following",
+    "collected_at": "2026-07-18T20:46:19+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 24,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "nami-pua",
+    "url": "https://x.com/nami__pua",
+    "follower_count": 1021,
+    "following_url": "https://x.com/nami__pua/following",
+    "collected_at": "2026-07-18T20:46:32+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "deisui-pua",
+    "url": "https://x.com/deisui_pua",
+    "follower_count": 997,
+    "following_url": "https://x.com/deisui_pua/following",
+    "collected_at": "2026-07-18T20:46:43+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "pua-co",
+    "url": "https://x.com/pua_co",
+    "follower_count": 993,
+    "following_url": "https://x.com/pua_co/following",
+    "collected_at": "2026-07-18T20:46:55+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "rockpua-sub",
+    "url": "https://x.com/rockpua_sub",
+    "follower_count": 979,
+    "following_url": "https://x.com/rockpua_sub/following",
+    "collected_at": "2026-07-18T20:47:07+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "yomaru-street",
+    "url": "https://x.com/yomaru_street",
+    "follower_count": 958,
+    "following_url": "https://x.com/yomaru_street/following",
+    "collected_at": "2026-07-18T20:47:19+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "oskeeeer-pua",
+    "url": "https://x.com/oskeeeer_pua",
+    "follower_count": 947,
+    "following_url": "https://x.com/oskeeeer_pua/following",
+    "collected_at": "2026-07-18T20:47:30+00:00",
+    "handles_seen": 43,
+    "new_unseeded_handles": 35,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "happy-0721-nan",
+    "url": "https://x.com/happy_0721_nan",
+    "follower_count": 937,
+    "following_url": "https://x.com/happy_0721_nan/following",
+    "collected_at": "2026-07-18T20:47:52+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pua-kaikun",
+    "url": "https://x.com/pua_kaikun",
+    "follower_count": 931,
+    "following_url": "https://x.com/pua_kaikun/following",
+    "collected_at": "2026-07-18T20:48:04+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "mentai-nanpa",
+    "url": "https://x.com/mentai_nanpa",
+    "follower_count": 917,
+    "following_url": "https://x.com/mentai_nanpa/following",
+    "collected_at": "2026-07-18T20:48:15+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "dogenzaka-pua",
+    "url": "https://x.com/dogenzaka_pua",
+    "follower_count": 916,
+    "following_url": "https://x.com/dogenzaka_pua/following",
+    "collected_at": "2026-07-18T20:48:26+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "mina-pua",
+    "url": "https://x.com/mina__pua",
+    "follower_count": 906,
+    "following_url": "https://x.com/mina__pua/following",
+    "collected_at": "2026-07-18T20:48:49+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "choppy-nanpa",
+    "url": "https://x.com/choppy_nanpa",
+    "follower_count": 902,
+    "following_url": "https://x.com/choppy_nanpa/following",
+    "collected_at": "2026-07-18T20:49:00+00:00",
+    "handles_seen": 24,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "molmol-1919",
+    "url": "https://x.com/molmol1919",
+    "follower_count": 897,
+    "following_url": "https://x.com/molmol1919/following",
+    "collected_at": "2026-07-18T20:49:22+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "ao-pua",
+    "url": "https://x.com/ao_pua",
+    "follower_count": 890,
+    "following_url": "https://x.com/ao_pua/following",
+    "collected_at": "2026-07-18T20:49:32+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "madayaluyo",
+    "url": "https://x.com/madayaluyo",
+    "follower_count": 890,
+    "following_url": "https://x.com/madayaluyo/following",
+    "collected_at": "2026-07-18T20:49:44+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "boc-125",
+    "url": "https://x.com/boc_125",
+    "follower_count": 888,
+    "following_url": "https://x.com/boc_125/following",
+    "collected_at": "2026-07-18T20:49:55+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 39,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "street-ryouta",
+    "url": "https://x.com/street_ryouta",
+    "follower_count": 867,
+    "following_url": "https://x.com/street_ryouta/following",
+    "collected_at": "2026-07-18T20:50:17+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "suzuniki-pua",
+    "url": "https://x.com/suzuniki_pua",
+    "follower_count": 860,
+    "following_url": "https://x.com/suzuniki_pua/following",
+    "collected_at": "2026-07-18T20:50:28+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "bale-pua",
+    "url": "https://x.com/bale_pua",
+    "follower_count": 855,
+    "following_url": "https://x.com/bale_pua/following",
+    "collected_at": "2026-07-18T20:50:39+00:00",
+    "handles_seen": 43,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "salmon-nnp",
+    "url": "https://x.com/salmon_nnp",
+    "follower_count": 851,
+    "following_url": "https://x.com/salmon_nnp/following",
+    "collected_at": "2026-07-18T20:50:50+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 35,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "nandeyanen-pua",
+    "url": "https://x.com/nandeyanen_pua",
+    "follower_count": 850,
+    "following_url": "https://x.com/nandeyanen_pua/following",
+    "collected_at": "2026-07-18T20:51:01+00:00",
+    "handles_seen": 45,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 27
+  },
+  {
+    "account_id": "ururunpua",
+    "url": "https://x.com/ururunpua",
+    "follower_count": 842,
+    "following_url": "https://x.com/ururunpua/following",
+    "collected_at": "2026-07-18T20:51:13+00:00",
+    "handles_seen": 36,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "pua-ishikawa",
+    "url": "https://x.com/pua_ishikawa",
+    "follower_count": 833,
+    "following_url": "https://x.com/pua_ishikawa/following",
+    "collected_at": "2026-07-18T20:51:24+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "chikyukun-pua",
+    "url": "https://x.com/chikyukun_pua",
+    "follower_count": 828,
+    "following_url": "https://x.com/chikyukun_pua/following",
+    "collected_at": "2026-07-18T20:51:35+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 21
+  },
+  {
+    "account_id": "gupy-pua",
+    "url": "https://x.com/gupy_pua",
+    "follower_count": 801,
+    "following_url": "https://x.com/gupy_pua/following",
+    "collected_at": "2026-07-18T20:51:46+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "nampa-poke",
+    "url": "https://x.com/nampa_poke",
+    "follower_count": 796,
+    "following_url": "https://x.com/nampa_poke/following",
+    "collected_at": "2026-07-18T21:09:18+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "shouri-ikb",
+    "url": "https://x.com/shouri_ikb",
+    "follower_count": 783,
+    "following_url": "https://x.com/shouri_ikb/following",
+    "collected_at": "2026-07-18T21:09:34+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "mange-pua",
+    "url": "https://x.com/Mange_pua",
+    "follower_count": 775,
+    "following_url": "https://x.com/Mange_pua/following",
+    "collected_at": "2026-07-18T21:09:47+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 24
+  },
+  {
+    "account_id": "niko-pua",
+    "url": "https://x.com/Niko_PUA",
+    "follower_count": 768,
+    "following_url": "https://x.com/Niko_PUA/following",
+    "collected_at": "2026-07-18T21:09:59+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "hiroyukinanpa",
+    "url": "https://x.com/hiroyukinanpa",
+    "follower_count": 765,
+    "following_url": "https://x.com/hiroyukinanpa/following",
+    "collected_at": "2026-07-18T21:10:11+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "cx-lm5",
+    "url": "https://x.com/cx_lm5",
+    "follower_count": 756,
+    "following_url": "https://x.com/cx_lm5/following",
+    "collected_at": "2026-07-18T21:10:25+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "emuchi-pua",
+    "url": "https://x.com/emuchi_pua",
+    "follower_count": 743,
+    "following_url": "https://x.com/emuchi_pua/following",
+    "collected_at": "2026-07-18T21:10:43+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "negitoro-nannpa",
+    "url": "https://x.com/negitoro_nannpa",
+    "follower_count": 739,
+    "following_url": "https://x.com/negitoro_nannpa/following",
+    "collected_at": "2026-07-18T21:10:55+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "kamiyoshi-nanpa",
+    "url": "https://x.com/kamiyoshi_nanpa",
+    "follower_count": 738,
+    "following_url": "https://x.com/kamiyoshi_nanpa/following",
+    "collected_at": "2026-07-18T21:11:08+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "bonnoupua2",
+    "url": "https://x.com/bonnoupua2",
+    "follower_count": 718,
+    "following_url": "https://x.com/bonnoupua2/following",
+    "collected_at": "2026-07-18T21:11:31+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nmpst913",
+    "url": "https://x.com/nmpst913",
+    "follower_count": 693,
+    "following_url": "https://x.com/nmpst913/following",
+    "collected_at": "2026-07-18T21:11:43+00:00",
+    "handles_seen": 43,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "ponponpon142",
+    "url": "https://x.com/ponponpon142",
+    "follower_count": 681,
+    "following_url": "https://x.com/ponponpon142/following",
+    "collected_at": "2026-07-18T21:11:55+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "siofkn-pua",
+    "url": "https://x.com/siofkn_pua",
+    "follower_count": 678,
+    "following_url": "https://x.com/siofkn_pua/following",
+    "collected_at": "2026-07-18T21:12:08+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "okasidaisuki-pua",
+    "url": "https://x.com/okasidaisukipua",
+    "follower_count": 660,
+    "following_url": "https://x.com/okasidaisukipua/following",
+    "collected_at": "2026-07-18T21:12:30+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "liberty-pai",
+    "url": "https://x.com/liberty_pai",
+    "follower_count": 657,
+    "following_url": "https://x.com/liberty_pai/following",
+    "collected_at": "2026-07-18T21:12:44+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "matagi-pua",
+    "url": "https://x.com/matagi_pua",
+    "follower_count": 654,
+    "following_url": "https://x.com/matagi_pua/following",
+    "collected_at": "2026-07-18T21:12:57+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "utopua2",
+    "url": "https://x.com/utopua2",
+    "follower_count": 649,
+    "following_url": "https://x.com/utopua2/following",
+    "collected_at": "2026-07-18T21:13:09+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "okarun-pua",
+    "url": "https://x.com/okarun_pua",
+    "follower_count": 632,
+    "following_url": "https://x.com/okarun_pua/following",
+    "collected_at": "2026-07-18T21:13:35+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "sexercisepua",
+    "url": "https://x.com/SEXercisePUA",
+    "follower_count": 628,
+    "following_url": "https://x.com/SEXercisePUA/following",
+    "collected_at": "2026-07-18T21:13:58+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "srs-pua-main",
+    "url": "https://x.com/srs_pua_",
+    "follower_count": 610,
+    "following_url": "https://x.com/srs_pua_/following",
+    "collected_at": "2026-07-18T21:14:21+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "riku-pua",
+    "url": "https://x.com/riku_pua",
+    "follower_count": 603,
+    "following_url": "https://x.com/riku_pua/following",
+    "collected_at": "2026-07-18T21:14:33+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "taru-pua",
+    "url": "https://x.com/taru_pua",
+    "follower_count": 599,
+    "following_url": "https://x.com/taru_pua/following",
+    "collected_at": "2026-07-18T21:14:46+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "tyopa-pua",
+    "url": "https://x.com/tyopa_pua",
+    "follower_count": 591,
+    "following_url": "https://x.com/tyopa_pua/following",
+    "collected_at": "2026-07-18T21:14:58+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "syou-nanpa",
+    "url": "https://x.com/SYOUnanpa",
+    "follower_count": 586,
+    "following_url": "https://x.com/SYOUnanpa/following",
+    "collected_at": "2026-07-18T21:15:10+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "dd-mote",
+    "url": "https://x.com/dd_mote",
+    "follower_count": 579,
+    "following_url": "https://x.com/dd_mote/following",
+    "collected_at": "2026-07-18T21:15:21+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "mote-hair00",
+    "url": "https://x.com/mote_hair00",
+    "follower_count": 569,
+    "following_url": "https://x.com/mote_hair00/following",
+    "collected_at": "2026-07-18T21:15:33+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "pua-entertainer",
+    "url": "https://x.com/PUA_entertainer",
+    "follower_count": 557,
+    "following_url": "https://x.com/PUA_entertainer/following",
+    "collected_at": "2026-07-18T21:15:45+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "kent-o-o",
+    "url": "https://x.com/kent_o_o",
+    "follower_count": 532,
+    "following_url": "https://x.com/kent_o_o/following",
+    "collected_at": "2026-07-18T21:15:57+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "pua-kei-mh",
+    "url": "https://x.com/PUA_KEI_MH",
+    "follower_count": 525,
+    "following_url": "https://x.com/PUA_KEI_MH/following",
+    "collected_at": "2026-07-18T21:16:35+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "lcup-pua",
+    "url": "https://x.com/lcup_pua",
+    "follower_count": 520,
+    "following_url": "https://x.com/lcup_pua/following",
+    "collected_at": "2026-07-18T21:17:06+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "kazunanpa",
+    "url": "https://x.com/kazunanpa",
+    "follower_count": 502,
+    "following_url": "https://x.com/kazunanpa/following",
+    "collected_at": "2026-07-18T22:01:21+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "netonan99",
+    "url": "https://x.com/netonan99",
+    "follower_count": 502,
+    "following_url": "https://x.com/netonan99/following",
+    "collected_at": "2026-07-18T22:01:33+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "omamco-pua2",
+    "url": "https://x.com/omamco_pua2",
+    "follower_count": 488,
+    "following_url": "https://x.com/omamco_pua2/following",
+    "collected_at": "2026-07-18T22:01:45+00:00",
+    "handles_seen": 46,
+    "new_unseeded_handles": 31,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "tensai-nanpa4",
+    "url": "https://x.com/tensai_nanpa4",
+    "follower_count": 481,
+    "following_url": "https://x.com/tensai_nanpa4/following",
+    "collected_at": "2026-07-18T22:01:57+00:00",
+    "handles_seen": 45,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "slinky-pua",
+    "url": "https://x.com/slinky_pua",
+    "follower_count": 468,
+    "following_url": "https://x.com/slinky_pua/following",
+    "collected_at": "2026-07-18T22:02:09+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "streets-bach",
+    "url": "https://x.com/streets_bach",
+    "follower_count": 468,
+    "following_url": "https://x.com/streets_bach/following",
+    "collected_at": "2026-07-18T22:02:21+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "anus-pua",
+    "url": "https://x.com/anus_pua",
+    "follower_count": 467,
+    "following_url": "https://x.com/anus_pua/following",
+    "collected_at": "2026-07-18T22:02:44+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "midori-nanpa",
+    "url": "https://x.com/midori_nanpa",
+    "follower_count": 465,
+    "following_url": "https://x.com/midori_nanpa/following",
+    "collected_at": "2026-07-18T22:02:56+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "kanbee-pua",
+    "url": "https://x.com/kanbee_pua",
+    "follower_count": 464,
+    "following_url": "https://x.com/kanbee_pua/following",
+    "collected_at": "2026-07-18T22:03:08+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "chiroru-pua-main",
+    "url": "https://x.com/chiroru_pua",
+    "follower_count": 458,
+    "following_url": "https://x.com/chiroru_pua/following",
+    "collected_at": "2026-07-18T22:03:21+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "rizin-pua",
+    "url": "https://x.com/rizin_pua",
+    "follower_count": 458,
+    "following_url": "https://x.com/rizin_pua/following",
+    "collected_at": "2026-07-18T22:03:33+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "masao-renai",
+    "url": "https://x.com/masao_renai",
+    "follower_count": 456,
+    "following_url": "https://x.com/masao_renai/following",
+    "collected_at": "2026-07-18T22:03:56+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "doraemon-pua",
+    "url": "https://x.com/doraemon_pua",
+    "follower_count": 446,
+    "following_url": "https://x.com/doraemon_pua/following",
+    "collected_at": "2026-07-18T22:04:18+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "ryu-8585",
+    "url": "https://x.com/ryu_8585_",
+    "follower_count": 446,
+    "following_url": "https://x.com/ryu_8585_/following",
+    "collected_at": "2026-07-18T22:04:30+00:00",
+    "handles_seen": 24,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "otaku-pua",
+    "url": "https://x.com/otaku_pua",
+    "follower_count": 437,
+    "following_url": "https://x.com/otaku_pua/following",
+    "collected_at": "2026-07-18T22:04:41+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "vegetst",
+    "url": "https://x.com/vegetst",
+    "follower_count": 435,
+    "following_url": "https://x.com/vegetst/following",
+    "collected_at": "2026-07-18T22:04:54+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "be-street-pua",
+    "url": "https://x.com/Be_Street_pua",
+    "follower_count": 429,
+    "following_url": "https://x.com/Be_Street_pua/following",
+    "collected_at": "2026-07-18T22:05:06+00:00",
+    "handles_seen": 43,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "daruma-nnp",
+    "url": "https://x.com/daruma_nnp",
+    "follower_count": 421,
+    "following_url": "https://x.com/daruma_nnp/following",
+    "collected_at": "2026-07-18T22:05:18+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "igaku-sato",
+    "url": "https://x.com/igaku_sato",
+    "follower_count": 418,
+    "following_url": "https://x.com/igaku_sato/following",
+    "collected_at": "2026-07-18T22:05:30+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 36,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "maruoooon-pua",
+    "url": "https://x.com/maruoooon_pua",
+    "follower_count": 415,
+    "following_url": "https://x.com/maruoooon_pua/following",
+    "collected_at": "2026-07-18T22:05:42+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "pua-sakaki-40",
+    "url": "https://x.com/pua_sakaki_40",
+    "follower_count": 414,
+    "following_url": "https://x.com/pua_sakaki_40/following",
+    "collected_at": "2026-07-18T22:06:05+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "tenma-pua",
+    "url": "https://x.com/tenma_pua",
+    "follower_count": 413,
+    "following_url": "https://x.com/tenma_pua/following",
+    "collected_at": "2026-07-18T22:06:17+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "r-pua-pua",
+    "url": "https://x.com/R_pua_pua",
+    "follower_count": 406,
+    "following_url": "https://x.com/R_pua_pua/following",
+    "collected_at": "2026-07-18T22:06:29+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "komanyan28",
+    "url": "https://x.com/komanyan28",
+    "follower_count": 404,
+    "following_url": "https://x.com/komanyan28/following",
+    "collected_at": "2026-07-18T22:06:42+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "rui0808-pua",
+    "url": "https://x.com/rui0808_pua",
+    "follower_count": 403,
+    "following_url": "https://x.com/rui0808_pua/following",
+    "collected_at": "2026-07-18T22:06:55+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "oscal-pua",
+    "url": "https://x.com/oscal_pua",
+    "follower_count": 398,
+    "following_url": "https://x.com/oscal_pua/following",
+    "collected_at": "2026-07-18T22:07:08+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 34,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "ryuuk-pua",
+    "url": "https://x.com/ryuuk_pua",
+    "follower_count": 395,
+    "following_url": "https://x.com/ryuuk_pua/following",
+    "collected_at": "2026-07-18T22:07:20+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "nrtq5ihqepycy0n",
+    "url": "https://x.com/NRTq5ihqEpYCy0N",
+    "follower_count": 387,
+    "following_url": "https://x.com/NRTq5ihqEpYCy0N/following",
+    "collected_at": "2026-07-18T22:07:32+00:00",
+    "handles_seen": 34,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "atari100pua",
+    "url": "https://x.com/atari100pua",
+    "follower_count": 384,
+    "following_url": "https://x.com/atari100pua/following",
+    "collected_at": "2026-07-18T22:07:55+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "jiro-suto",
+    "url": "https://x.com/jiro_suto",
+    "follower_count": 376,
+    "following_url": "https://x.com/jiro_suto/following",
+    "collected_at": "2026-07-18T22:08:07+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "mayuge-mbh",
+    "url": "https://x.com/mayuge_mbh",
+    "follower_count": 374,
+    "following_url": "https://x.com/mayuge_mbh/following",
+    "collected_at": "2026-07-18T22:27:13+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "yutayuta-pua",
+    "url": "https://x.com/yutayuta_pua",
+    "follower_count": 372,
+    "following_url": "https://x.com/yutayuta_pua/following",
+    "collected_at": "2026-07-18T22:27:25+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 33,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "konkatsu-nanpa",
+    "url": "https://x.com/konkatsu_nanpa",
+    "follower_count": 371,
+    "following_url": "https://x.com/konkatsu_nanpa/following",
+    "collected_at": "2026-07-18T22:27:37+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 30,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "nampakago",
+    "url": "https://x.com/nampakago",
+    "follower_count": 369,
+    "following_url": "https://x.com/nampakago/following",
+    "collected_at": "2026-07-18T22:28:00+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "reiy-brushup",
+    "url": "https://x.com/reiy_brushup",
+    "follower_count": 365,
+    "following_url": "https://x.com/reiy_brushup/following",
+    "collected_at": "2026-07-18T22:28:13+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 2
+  },
+  {
+    "account_id": "osathi-nanpa",
+    "url": "https://x.com/osathi_nanpa",
+    "follower_count": 359,
+    "following_url": "https://x.com/osathi_nanpa/following",
+    "collected_at": "2026-07-18T22:28:28+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "isaac-pua",
+    "url": "https://x.com/ISAAC_PUA",
+    "follower_count": 358,
+    "following_url": "https://x.com/ISAAC_PUA/following",
+    "collected_at": "2026-07-18T22:28:50+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pua-kk",
+    "url": "https://x.com/pua_kk_",
+    "follower_count": 349,
+    "following_url": "https://x.com/pua_kk_/following",
+    "collected_at": "2026-07-18T22:29:04+00:00",
+    "handles_seen": 19,
+    "new_unseeded_handles": 5,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "goda-pua",
+    "url": "https://x.com/goda_pua",
+    "follower_count": 346,
+    "following_url": "https://x.com/goda_pua/following",
+    "collected_at": "2026-07-18T22:29:19+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "ruto10-pua",
+    "url": "https://x.com/ruto10_pua",
+    "follower_count": 339,
+    "following_url": "https://x.com/ruto10_pua/following",
+    "collected_at": "2026-07-18T22:29:35+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "kiri-stomach",
+    "url": "https://x.com/KiriStomach",
+    "follower_count": 335,
+    "following_url": "https://x.com/KiriStomach/following",
+    "collected_at": "2026-07-18T22:29:50+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 23
+  },
+  {
+    "account_id": "yuta-pua",
+    "url": "https://x.com/yuta__pua",
+    "follower_count": 330,
+    "following_url": "https://x.com/yuta__pua/following",
+    "collected_at": "2026-07-18T22:30:12+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "roa-pua",
+    "url": "https://x.com/roa_pua",
+    "follower_count": 328,
+    "following_url": "https://x.com/roa_pua/following",
+    "collected_at": "2026-07-18T22:30:25+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "reborn-pua",
+    "url": "https://x.com/reborn_pua",
+    "follower_count": 327,
+    "following_url": "https://x.com/reborn_pua/following",
+    "collected_at": "2026-07-18T22:30:36+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "aizen-pua",
+    "url": "https://x.com/aizen_pua",
+    "follower_count": 325,
+    "following_url": "https://x.com/aizen_pua/following",
+    "collected_at": "2026-07-18T22:30:59+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pen-pen-st",
+    "url": "https://x.com/pen_pen_st",
+    "follower_count": 324,
+    "following_url": "https://x.com/pen_pen_st/following",
+    "collected_at": "2026-07-18T22:31:11+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "betty-boopua",
+    "url": "https://x.com/Betty_boopua",
+    "follower_count": 321,
+    "following_url": "https://x.com/Betty_boopua/following",
+    "collected_at": "2026-07-18T22:31:23+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "pua-marcelo",
+    "url": "https://x.com/Pua_Marcelo",
+    "follower_count": 320,
+    "following_url": "https://x.com/Pua_Marcelo/following",
+    "collected_at": "2026-07-18T22:31:35+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 31,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "shuta-pua",
+    "url": "https://x.com/shuta_pua",
+    "follower_count": 314,
+    "following_url": "https://x.com/shuta_pua/following",
+    "collected_at": "2026-07-18T22:31:57+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kaoguda-sugoi",
+    "url": "https://x.com/kaoguda_sugoi",
+    "follower_count": 313,
+    "following_url": "https://x.com/kaoguda_sugoi/following",
+    "collected_at": "2026-07-18T22:32:11+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 26,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "kamiya-pua",
+    "url": "https://x.com/kamiya_pua",
+    "follower_count": 312,
+    "following_url": "https://x.com/kamiya_pua/following",
+    "collected_at": "2026-07-18T22:32:23+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 23
+  },
+  {
+    "account_id": "mikeynosub",
+    "url": "https://x.com/mikeynosub",
+    "follower_count": 312,
+    "following_url": "https://x.com/mikeynosub/following",
+    "collected_at": "2026-07-18T22:32:36+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "chami-pua",
+    "url": "https://x.com/chami_pua",
+    "follower_count": 309,
+    "following_url": "https://x.com/chami_pua/following",
+    "collected_at": "2026-07-18T22:32:50+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "streetbucha",
+    "url": "https://x.com/streetbucha",
+    "follower_count": 303,
+    "following_url": "https://x.com/streetbucha/following",
+    "collected_at": "2026-07-18T22:33:14+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "ike-pua",
+    "url": "https://x.com/ike_pua",
+    "follower_count": 295,
+    "following_url": "https://x.com/ike_pua/following",
+    "collected_at": "2026-07-18T22:33:27+00:00",
+    "handles_seen": 39,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "nikepuamiso",
+    "url": "https://x.com/nikepuamiso",
+    "follower_count": 295,
+    "following_url": "https://x.com/nikepuamiso/following",
+    "collected_at": "2026-07-18T22:33:39+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 29,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "paaman-pua",
+    "url": "https://x.com/paaman_pua",
+    "follower_count": 291,
+    "following_url": "https://x.com/paaman_pua/following",
+    "collected_at": "2026-07-18T22:34:02+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "tohokupua",
+    "url": "https://x.com/tohokupua",
+    "follower_count": 284,
+    "following_url": "https://x.com/tohokupua/following",
+    "collected_at": "2026-07-18T22:34:15+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "asahi-sao-pua",
+    "url": "https://x.com/asahi_sao_pua",
+    "follower_count": 281,
+    "following_url": "https://x.com/asahi_sao_pua/following",
+    "collected_at": "2026-07-18T22:34:37+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "onizuka-pua",
+    "url": "https://x.com/onizuka_pua",
+    "follower_count": 275,
+    "following_url": "https://x.com/onizuka_pua/following",
+    "collected_at": "2026-07-18T22:34:50+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "street-win-pua",
+    "url": "https://x.com/street_win_pua",
+    "follower_count": 275,
+    "following_url": "https://x.com/street_win_pua/following",
+    "collected_at": "2026-07-18T22:38:19+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "riku-pua0801",
+    "url": "https://x.com/riku_pua0801",
+    "follower_count": 272,
+    "following_url": "https://x.com/riku_pua0801/following",
+    "collected_at": "2026-07-18T22:38:33+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "sorakaze12",
+    "url": "https://x.com/sorakaze12",
+    "follower_count": 272,
+    "following_url": "https://x.com/sorakaze12/following",
+    "collected_at": "2026-07-18T22:38:46+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "mirinn-pua",
+    "url": "https://x.com/Mirinn_pua",
+    "follower_count": 271,
+    "following_url": "https://x.com/Mirinn_pua/following",
+    "collected_at": "2026-07-18T22:39:00+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "shu-pua",
+    "url": "https://x.com/shu_pua",
+    "follower_count": 268,
+    "following_url": "https://x.com/shu_pua/following",
+    "collected_at": "2026-07-18T22:39:23+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nanpa-obiwan",
+    "url": "https://x.com/nanpa_ObiWan",
+    "follower_count": 265,
+    "following_url": "https://x.com/nanpa_ObiWan/following",
+    "collected_at": "2026-07-18T22:39:36+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "juju-pua",
+    "url": "https://x.com/juju_pua",
+    "follower_count": 263,
+    "following_url": "https://x.com/juju_pua/following",
+    "collected_at": "2026-07-18T22:39:50+00:00",
+    "handles_seen": 48,
+    "new_unseeded_handles": 43,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "ura-kaneki-pua",
+    "url": "https://x.com/ura_kaneki_pua",
+    "follower_count": 262,
+    "following_url": "https://x.com/ura_kaneki_pua/following",
+    "collected_at": "2026-07-18T22:40:00+00:00",
+    "handles_seen": 3,
+    "new_unseeded_handles": 3,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "moviefoodfc2",
+    "url": "https://x.com/moviefoodfc2",
+    "follower_count": 260,
+    "following_url": "https://x.com/moviefoodfc2/following",
+    "collected_at": "2026-07-18T22:40:13+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "one-sith-pua",
+    "url": "https://x.com/one_sith_pua",
+    "follower_count": 260,
+    "following_url": "https://x.com/one_sith_pua/following",
+    "collected_at": "2026-07-18T22:40:36+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "speedstarsora",
+    "url": "https://x.com/speedstarsora",
+    "follower_count": 260,
+    "following_url": "https://x.com/speedstarsora/following",
+    "collected_at": "2026-07-18T22:40:53+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "motegasubete",
+    "url": "https://x.com/motegasubete",
+    "follower_count": 259,
+    "following_url": "https://x.com/motegasubete/following",
+    "collected_at": "2026-07-18T22:41:11+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 37,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "uraca-pua",
+    "url": "https://x.com/uraca_pua",
+    "follower_count": 257,
+    "following_url": "https://x.com/uraca_pua/following",
+    "collected_at": "2026-07-18T22:41:26+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "minato-pua",
+    "url": "https://x.com/minato_pua",
+    "follower_count": 254,
+    "following_url": "https://x.com/minato_pua/following",
+    "collected_at": "2026-07-18T22:41:50+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "asai-pua",
+    "url": "https://x.com/asai_pua",
+    "follower_count": 245,
+    "following_url": "https://x.com/asai_pua/following",
+    "collected_at": "2026-07-18T22:42:03+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "ugly-pua",
+    "url": "https://x.com/ugly_pua",
+    "follower_count": 245,
+    "following_url": "https://x.com/ugly_pua/following",
+    "collected_at": "2026-07-18T22:42:15+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "hamada-suto",
+    "url": "https://x.com/hamada_suto",
+    "follower_count": 241,
+    "following_url": "https://x.com/hamada_suto/following",
+    "collected_at": "2026-07-18T22:42:30+00:00",
+    "handles_seen": 47,
+    "new_unseeded_handles": 38,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "puapenguin",
+    "url": "https://x.com/puapenguin",
+    "follower_count": 232,
+    "following_url": "https://x.com/puapenguin/following",
+    "collected_at": "2026-07-18T22:42:43+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "shinkawa-pua",
+    "url": "https://x.com/shinkawa_pua",
+    "follower_count": 232,
+    "following_url": "https://x.com/shinkawa_pua/following",
+    "collected_at": "2026-07-18T22:42:55+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "yuki100-pua",
+    "url": "https://x.com/yuki100_pua",
+    "follower_count": 232,
+    "following_url": "https://x.com/yuki100_pua/following",
+    "collected_at": "2026-07-18T22:43:06+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "doronpa-pua",
+    "url": "https://x.com/doronpa_pua",
+    "follower_count": 231,
+    "following_url": "https://x.com/doronpa_pua/following",
+    "collected_at": "2026-07-18T22:43:18+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 5,
+    "known_seed_follows": 23
+  },
+  {
+    "account_id": "hpns-pua",
+    "url": "https://x.com/hpns_pua",
+    "follower_count": 230,
+    "following_url": "https://x.com/hpns_pua/following",
+    "collected_at": "2026-07-18T22:43:42+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "krazypua",
+    "url": "https://x.com/krazypua",
+    "follower_count": 230,
+    "following_url": "https://x.com/krazypua/following",
+    "collected_at": "2026-07-18T22:44:04+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "chamuranaoto",
+    "url": "https://x.com/chamuranaoto",
+    "follower_count": 225,
+    "following_url": "https://x.com/chamuranaoto/following",
+    "collected_at": "2026-07-18T22:44:18+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 8,
+    "known_seed_follows": 21
+  },
+  {
+    "account_id": "leopard-nanpa",
+    "url": "https://x.com/Leopard_nanpa",
+    "follower_count": 221,
+    "following_url": "https://x.com/Leopard_nanpa/following",
+    "collected_at": "2026-07-18T22:44:41+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "bluexxxpua",
+    "url": "https://x.com/bluexxxpua",
+    "follower_count": 214,
+    "following_url": "https://x.com/bluexxxpua/following",
+    "collected_at": "2026-07-18T22:45:04+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kira-pua7",
+    "url": "https://x.com/kira_pua7",
+    "follower_count": 210,
+    "following_url": "https://x.com/kira_pua7/following",
+    "collected_at": "2026-07-18T22:45:20+00:00",
+    "handles_seen": 45,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "kazu-pua",
+    "url": "https://x.com/kazu_pua",
+    "follower_count": 208,
+    "following_url": "https://x.com/kazu_pua/following",
+    "collected_at": "2026-07-18T22:45:37+00:00",
+    "handles_seen": 44,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "makoto-pua",
+    "url": "https://x.com/makoto__pua",
+    "follower_count": 208,
+    "following_url": "https://x.com/makoto__pua/following",
+    "collected_at": "2026-07-18T22:45:55+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 24,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "taku-pua",
+    "url": "https://x.com/taku__pua",
+    "follower_count": 205,
+    "following_url": "https://x.com/taku__pua/following",
+    "collected_at": "2026-07-18T22:46:11+00:00",
+    "handles_seen": 42,
+    "new_unseeded_handles": 32,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "qh0kum",
+    "url": "https://x.com/qh0kum",
+    "follower_count": 204,
+    "following_url": "https://x.com/qh0kum/following",
+    "collected_at": "2026-07-18T22:46:27+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "senga-pua",
+    "url": "https://x.com/senga_pua",
+    "follower_count": 200,
+    "following_url": "https://x.com/senga_pua/following",
+    "collected_at": "2026-07-18T22:46:47+00:00",
+    "handles_seen": 38,
+    "new_unseeded_handles": 28,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "saku-pua",
+    "url": "https://x.com/saku_pua",
+    "follower_count": 196,
+    "following_url": "https://x.com/saku_pua/following",
+    "collected_at": "2026-07-18T22:47:05+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 11,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "nanpashi-miffy",
+    "url": "https://x.com/nanpashi_miffy",
+    "follower_count": 187,
+    "following_url": "https://x.com/nanpashi_miffy/following",
+    "collected_at": "2026-07-18T22:47:19+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 3
+  },
+  {
+    "account_id": "lillard-motetai",
+    "url": "https://x.com/lillard_motetai",
+    "follower_count": 184,
+    "following_url": "https://x.com/lillard_motetai/following",
+    "collected_at": "2026-07-18T22:47:51+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "suto-taro",
+    "url": "https://x.com/suto_taro",
+    "follower_count": 178,
+    "following_url": "https://x.com/suto_taro/following",
+    "collected_at": "2026-07-18T22:48:06+00:00",
+    "handles_seen": 33,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "tomo-pua11",
+    "url": "https://x.com/tomo_pua11",
+    "follower_count": 175,
+    "following_url": "https://x.com/tomo_pua11/following",
+    "collected_at": "2026-07-18T22:48:30+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kickpua",
+    "url": "https://x.com/kickpua",
+    "follower_count": 170,
+    "following_url": "https://x.com/kickpua/following",
+    "collected_at": "2026-07-18T22:48:47+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 15,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "murakami-pua",
+    "url": "https://x.com/murakami_pua",
+    "follower_count": 163,
+    "following_url": "https://x.com/murakami_pua/following",
+    "collected_at": "2026-07-18T22:49:00+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "slice-pua",
+    "url": "https://x.com/slice_pua",
+    "follower_count": 161,
+    "following_url": "https://x.com/slice_pua/following",
+    "collected_at": "2026-07-18T22:49:22+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "carbii-pua",
+    "url": "https://x.com/carbii_pua",
+    "follower_count": 157,
+    "following_url": "https://x.com/carbii_pua/following",
+    "collected_at": "2026-07-18T22:49:37+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "try-pua",
+    "url": "https://x.com/try_pua",
+    "follower_count": 153,
+    "following_url": "https://x.com/try_pua/following",
+    "collected_at": "2026-07-18T22:49:49+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "s-pua0213",
+    "url": "https://x.com/s_pua0213",
+    "follower_count": 151,
+    "following_url": "https://x.com/s_pua0213/following",
+    "collected_at": "2026-07-18T22:50:02+00:00",
+    "handles_seen": 35,
+    "new_unseeded_handles": 35,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nannpashitai",
+    "url": "https://x.com/nannpashitai",
+    "follower_count": 146,
+    "following_url": "https://x.com/nannpashitai/following",
+    "collected_at": "2026-07-18T22:50:14+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "yayaya-zyakudan",
+    "url": "https://x.com/yayaya_zyakudan",
+    "follower_count": 143,
+    "following_url": "https://x.com/yayaya_zyakudan/following",
+    "collected_at": "2026-07-18T22:50:26+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "souyonesou",
+    "url": "https://x.com/souyonesou",
+    "follower_count": 142,
+    "following_url": "https://x.com/souyonesou/following",
+    "collected_at": "2026-07-18T22:50:38+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "utaa-pua",
+    "url": "https://x.com/utaa_pua",
+    "follower_count": 136,
+    "following_url": "https://x.com/utaa_pua/following",
+    "collected_at": "2026-07-18T22:50:51+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "gaijiasupeman",
+    "url": "https://x.com/gaijiasupeman",
+    "follower_count": 135,
+    "following_url": "https://x.com/gaijiasupeman/following",
+    "collected_at": "2026-07-18T22:51:16+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kamekame-pua",
+    "url": "https://x.com/kamekame_pua",
+    "follower_count": 133,
+    "following_url": "https://x.com/kamekame_pua/following",
+    "collected_at": "2026-07-18T22:51:39+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "hikosan-nn",
+    "url": "https://x.com/hikosan_nn",
+    "follower_count": 132,
+    "following_url": "https://x.com/hikosan_nn/following",
+    "collected_at": "2026-07-18T22:51:52+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "tonpamiso",
+    "url": "https://x.com/tonpamiso",
+    "follower_count": 130,
+    "following_url": "https://x.com/tonpamiso/following",
+    "collected_at": "2026-07-18T22:52:04+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "kurosaka-pua",
+    "url": "https://x.com/kurosaka_pua",
+    "follower_count": 129,
+    "following_url": "https://x.com/kurosaka_pua/following",
+    "collected_at": "2026-07-18T22:52:17+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 8,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "youkun-pua",
+    "url": "https://x.com/youkun_pua",
+    "follower_count": 127,
+    "following_url": "https://x.com/youkun_pua/following",
+    "collected_at": "2026-07-18T22:52:40+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "naruto-nanpa",
+    "url": "https://x.com/naruto_nanpa",
+    "follower_count": 126,
+    "following_url": "https://x.com/naruto_nanpa/following",
+    "collected_at": "2026-07-18T22:52:53+00:00",
+    "handles_seen": 13,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 1
+  },
+  {
+    "account_id": "instapua",
+    "url": "https://x.com/instapua",
+    "follower_count": 125,
+    "following_url": "https://x.com/instapua/following",
+    "collected_at": "2026-07-18T22:53:05+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "tatsuyoshibokki",
+    "url": "https://x.com/tatsuyoshibokki",
+    "follower_count": 120,
+    "following_url": "https://x.com/tatsuyoshibokki/following",
+    "collected_at": "2026-07-18T22:53:18+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "nanpanyan4545",
+    "url": "https://x.com/nanpanyan4545",
+    "follower_count": 114,
+    "following_url": "https://x.com/nanpanyan4545/following",
+    "collected_at": "2026-07-18T22:53:41+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "tsunada-pua",
+    "url": "https://x.com/tsunada_pua",
+    "follower_count": 113,
+    "following_url": "https://x.com/tsunada_pua/following",
+    "collected_at": "2026-07-18T22:53:53+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "gamupua",
+    "url": "https://x.com/gamupua",
+    "follower_count": 110,
+    "following_url": "https://x.com/gamupua/following",
+    "collected_at": "2026-07-18T22:54:05+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 19
+  },
+  {
+    "account_id": "kanipe-pua",
+    "url": "https://x.com/kanipe_pua",
+    "follower_count": 108,
+    "following_url": "https://x.com/kanipe_pua/following",
+    "collected_at": "2026-07-18T22:54:28+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "kaji-kaji-3",
+    "url": "https://x.com/kaji_kaji_3",
+    "follower_count": 102,
+    "following_url": "https://x.com/kaji_kaji_3/following",
+    "collected_at": "2026-07-18T22:54:50+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nampa1998",
+    "url": "https://x.com/nampa1998",
+    "follower_count": 102,
+    "following_url": "https://x.com/nampa1998/following",
+    "collected_at": "2026-07-18T22:55:13+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "pineapple-pua",
+    "url": "https://x.com/pineapple_pua",
+    "follower_count": 100,
+    "following_url": "https://x.com/pineapple_pua/following",
+    "collected_at": "2026-07-18T22:55:35+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "jackie-pua",
+    "url": "https://x.com/jackie_pua",
+    "follower_count": 99,
+    "following_url": "https://x.com/jackie_pua/following",
+    "collected_at": "2026-07-18T22:55:58+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "naepua",
+    "url": "https://x.com/naepua",
+    "follower_count": 99,
+    "following_url": "https://x.com/naepua/following",
+    "collected_at": "2026-07-18T22:56:24+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "jaws-girlhunter",
+    "url": "https://x.com/jaws_girlhunter",
+    "follower_count": 98,
+    "following_url": "https://x.com/jaws_girlhunter/following",
+    "collected_at": "2026-07-18T22:56:47+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "dobukasu123",
+    "url": "https://x.com/dobukasu123",
+    "follower_count": 95,
+    "following_url": "https://x.com/dobukasu123/following",
+    "collected_at": "2026-07-18T22:57:10+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "paxnpa123",
+    "url": "https://x.com/paxnpa123",
+    "follower_count": 95,
+    "following_url": "https://x.com/paxnpa123/following",
+    "collected_at": "2026-07-18T22:57:23+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "puriketsu-nnp",
+    "url": "https://x.com/puriketsu_nnp",
+    "follower_count": 95,
+    "following_url": "https://x.com/puriketsu_nnp/following",
+    "collected_at": "2026-07-18T22:57:37+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "25basabe",
+    "url": "https://x.com/25basabe",
+    "follower_count": 92,
+    "following_url": "https://x.com/25basabe/following",
+    "collected_at": "2026-07-18T22:57:51+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "choumi-pua",
+    "url": "https://x.com/choumi_pua",
+    "follower_count": 88,
+    "following_url": "https://x.com/choumi_pua/following",
+    "collected_at": "2026-07-18T22:58:08+00:00",
+    "handles_seen": 41,
+    "new_unseeded_handles": 34,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "girl-pua",
+    "url": "https://x.com/girl_pua",
+    "follower_count": 87,
+    "following_url": "https://x.com/girl_pua/following",
+    "collected_at": "2026-07-18T22:58:32+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nanpa-zin",
+    "url": "https://x.com/nanpa_zin",
+    "follower_count": 87,
+    "following_url": "https://x.com/nanpa_zin/following",
+    "collected_at": "2026-07-18T22:58:46+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "gokun-pua",
+    "url": "https://x.com/GOKUN_pua",
+    "follower_count": 86,
+    "following_url": "https://x.com/GOKUN_pua/following",
+    "collected_at": "2026-07-18T22:59:00+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "asumi-pua",
+    "url": "https://x.com/asumi_pua",
+    "follower_count": 85,
+    "following_url": "https://x.com/asumi_pua/following",
+    "collected_at": "2026-07-18T22:59:15+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 10,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "mbh-hal",
+    "url": "https://x.com/mbh_hal",
+    "follower_count": 85,
+    "following_url": "https://x.com/mbh_hal/following",
+    "collected_at": "2026-07-18T22:59:28+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "nasubi-nnp",
+    "url": "https://x.com/nasubi_nnp",
+    "follower_count": 85,
+    "following_url": "https://x.com/nasubi_nnp/following",
+    "collected_at": "2026-07-18T22:59:51+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "idiot-pua",
+    "url": "https://x.com/idiot_pua",
+    "follower_count": 84,
+    "following_url": "https://x.com/idiot_pua/following",
+    "collected_at": "2026-07-18T23:00:03+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 27,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "sendainanpa1234",
+    "url": "https://x.com/sendainanpa1234",
+    "follower_count": 83,
+    "following_url": "https://x.com/sendainanpa1234/following",
+    "collected_at": "2026-07-18T23:00:26+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "akagi-subpua",
+    "url": "https://x.com/akagi_subpua",
+    "follower_count": 79,
+    "following_url": "https://x.com/akagi_subpua/following",
+    "collected_at": "2026-07-18T23:00:41+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "yuu5-pua",
+    "url": "https://x.com/yuu5_pua",
+    "follower_count": 78,
+    "following_url": "https://x.com/yuu5_pua/following",
+    "collected_at": "2026-07-18T23:00:58+00:00",
+    "handles_seen": 25,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "asahilove77",
+    "url": "https://x.com/asahilove77",
+    "follower_count": 77,
+    "following_url": "https://x.com/asahilove77/following",
+    "collected_at": "2026-07-18T23:01:11+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 13
+  },
+  {
+    "account_id": "kukuru-nanpa",
+    "url": "https://x.com/kukuru_nanpa",
+    "follower_count": 68,
+    "following_url": "https://x.com/kukuru_nanpa/following",
+    "collected_at": "2026-07-18T23:01:25+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 23,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "neru-pua",
+    "url": "https://x.com/neru_pua",
+    "follower_count": 68,
+    "following_url": "https://x.com/neru_pua/following",
+    "collected_at": "2026-07-18T23:01:48+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "emu-pua",
+    "url": "https://x.com/emu_pua",
+    "follower_count": 66,
+    "following_url": "https://x.com/emu_pua/following",
+    "collected_at": "2026-07-18T23:02:10+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nampa-mimato",
+    "url": "https://x.com/nampa_mimato",
+    "follower_count": 66,
+    "following_url": "https://x.com/nampa_mimato/following",
+    "collected_at": "2026-07-18T23:02:25+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 17,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "bossnn-pua",
+    "url": "https://x.com/bossnn_pua",
+    "follower_count": 65,
+    "following_url": "https://x.com/bossnn_pua/following",
+    "collected_at": "2026-07-18T23:02:49+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "anus-asterisk",
+    "url": "https://x.com/anus_asterisk",
+    "follower_count": 64,
+    "following_url": "https://x.com/anus_asterisk/following",
+    "collected_at": "2026-07-18T23:03:01+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 11,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "taichi-pua",
+    "url": "https://x.com/taichi_pua",
+    "follower_count": 64,
+    "following_url": "https://x.com/taichi_pua/following",
+    "collected_at": "2026-07-18T23:03:14+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 12
+  },
+  {
+    "account_id": "chiroru-pua",
+    "url": "https://x.com/chiroru_pua_",
+    "follower_count": 63,
+    "following_url": "https://x.com/chiroru_pua_/following",
+    "collected_at": "2026-07-18T23:03:37+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "mantis-pua",
+    "url": "https://x.com/mantis_pua",
+    "follower_count": 59,
+    "following_url": "https://x.com/mantis_pua/following",
+    "collected_at": "2026-07-18T23:03:49+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 19,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "okinawa-nampa",
+    "url": "https://x.com/okinawa_nampa",
+    "follower_count": 59,
+    "following_url": "https://x.com/okinawa_nampa/following",
+    "collected_at": "2026-07-18T23:04:05+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 22,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "mabonasu-pua",
+    "url": "https://x.com/mabonasu_pua",
+    "follower_count": 57,
+    "following_url": "https://x.com/mabonasu_pua/following",
+    "collected_at": "2026-07-18T23:04:19+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "suihanki-pua",
+    "url": "https://x.com/suihanki_pua",
+    "follower_count": 56,
+    "following_url": "https://x.com/suihanki_pua/following",
+    "collected_at": "2026-07-18T23:04:42+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "zushi-tokyo",
+    "url": "https://x.com/zushi_tokyo",
+    "follower_count": 55,
+    "following_url": "https://x.com/zushi_tokyo/following",
+    "collected_at": "2026-07-18T23:05:04+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "long-island-pua",
+    "url": "https://x.com/Long_Island_pua",
+    "follower_count": 49,
+    "following_url": "https://x.com/Long_Island_pua/following",
+    "collected_at": "2026-07-18T23:05:27+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "so-pua",
+    "url": "https://x.com/so_pua",
+    "follower_count": 47,
+    "following_url": "https://x.com/so_pua/following",
+    "collected_at": "2026-07-18T23:05:41+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 8,
+    "known_seed_follows": 22
+  },
+  {
+    "account_id": "fake-pua",
+    "url": "https://x.com/fake_pua",
+    "follower_count": 45,
+    "following_url": "https://x.com/fake_pua/following",
+    "collected_at": "2026-07-18T23:06:03+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "shunon-street",
+    "url": "https://x.com/shunon_street",
+    "follower_count": 44,
+    "following_url": "https://x.com/shunon_street/following",
+    "collected_at": "2026-07-18T23:06:16+00:00",
+    "handles_seen": 37,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 16
+  },
+  {
+    "account_id": "a6lpij",
+    "url": "https://x.com/A6lpij",
+    "follower_count": 43,
+    "following_url": "https://x.com/A6lpij/following",
+    "collected_at": "2026-07-18T23:06:29+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 7
+  },
+  {
+    "account_id": "resunnme",
+    "url": "https://x.com/resunnme",
+    "follower_count": 42,
+    "following_url": "https://x.com/resunnme/following",
+    "collected_at": "2026-07-18T23:06:42+00:00",
+    "handles_seen": 46,
+    "new_unseeded_handles": 31,
+    "known_seed_follows": 15
+  },
+  {
+    "account_id": "marifax-pua",
+    "url": "https://x.com/marifax_pua",
+    "follower_count": 39,
+    "following_url": "https://x.com/marifax_pua/following",
+    "collected_at": "2026-07-18T23:06:57+00:00",
+    "handles_seen": 31,
+    "new_unseeded_handles": 21,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "whity-dogging-pua",
+    "url": "https://x.com/WhityDoggingPUA",
+    "follower_count": 38,
+    "following_url": "https://x.com/WhityDoggingPUA/following",
+    "collected_at": "2026-07-18T23:07:10+00:00",
+    "handles_seen": 28,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 10
+  },
+  {
+    "account_id": "karon-pua",
+    "url": "https://x.com/karon121_pua",
+    "follower_count": 37,
+    "following_url": "https://x.com/karon121_pua/following",
+    "collected_at": "2026-07-18T23:07:23+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 9,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "west-pua",
+    "url": "https://x.com/west_pua",
+    "follower_count": 36,
+    "following_url": "https://x.com/west_pua/following",
+    "collected_at": "2026-07-18T23:07:36+00:00",
+    "handles_seen": 26,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 8
+  },
+  {
+    "account_id": "kkk-pua",
+    "url": "https://x.com/kkk_pua",
+    "follower_count": 34,
+    "following_url": "https://x.com/kkk_pua/following",
+    "collected_at": "2026-07-18T23:07:59+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "ale-puapua",
+    "url": "https://x.com/ale_puapua",
+    "follower_count": 32,
+    "following_url": "https://x.com/ale_puapua/following",
+    "collected_at": "2026-07-18T23:08:10+00:00",
+    "handles_seen": 32,
+    "new_unseeded_handles": 14,
+    "known_seed_follows": 18
+  },
+  {
+    "account_id": "rojupua",
+    "url": "https://x.com/rojupua",
+    "follower_count": 32,
+    "following_url": "https://x.com/rojupua/following",
+    "collected_at": "2026-07-18T23:08:23+00:00",
+    "handles_seen": 29,
+    "new_unseeded_handles": 20,
+    "known_seed_follows": 9
+  },
+  {
+    "account_id": "clark-pua",
+    "url": "https://x.com/clark_pua",
+    "follower_count": 31,
+    "following_url": "https://x.com/clark_pua/following",
+    "collected_at": "2026-07-18T23:08:46+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "yokono-pua",
+    "url": "https://x.com/yokono_pua",
+    "follower_count": 31,
+    "following_url": "https://x.com/yokono_pua/following",
+    "collected_at": "2026-07-18T23:09:08+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "nagi-nanpa0922",
+    "url": "https://x.com/nagi_nanpa0922",
+    "follower_count": 30,
+    "following_url": "https://x.com/nagi_nanpa0922/following",
+    "collected_at": "2026-07-18T23:09:31+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "mechinanpa",
+    "url": "https://x.com/mechinanpa",
+    "follower_count": 24,
+    "following_url": "https://x.com/mechinanpa/following",
+    "collected_at": "2026-07-18T23:09:46+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 13,
+    "known_seed_follows": 17
+  },
+  {
+    "account_id": "to-suto-tore",
+    "url": "https://x.com/to_suto_tore",
+    "follower_count": 23,
+    "following_url": "https://x.com/to_suto_tore/following",
+    "collected_at": "2026-07-18T23:13:35+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 18,
+    "known_seed_follows": 11
+  },
+  {
+    "account_id": "ryuse-pua",
+    "url": "https://x.com/ryuse_pua",
+    "follower_count": 22,
+    "following_url": "https://x.com/ryuse_pua/following",
+    "collected_at": "2026-07-18T23:13:51+00:00",
+    "handles_seen": 40,
+    "new_unseeded_handles": 16,
+    "known_seed_follows": 24
+  },
+  {
+    "account_id": "seizitunanpa",
+    "url": "https://x.com/seizitunanpa",
+    "follower_count": 19,
+    "following_url": "https://x.com/seizitunanpa/following",
+    "collected_at": "2026-07-18T23:14:11+00:00",
+    "handles_seen": 18,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 6
+  },
+  {
+    "account_id": "takenaka-pua",
+    "url": "https://x.com/takenaka__pua",
+    "follower_count": 18,
+    "following_url": "https://x.com/takenaka__pua/following",
+    "collected_at": "2026-07-18T23:14:25+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 10,
+    "known_seed_follows": 20
+  },
+  {
+    "account_id": "seiyoku-genkai",
+    "url": "https://x.com/seiyoku_genkai",
+    "follower_count": 13,
+    "following_url": "https://x.com/seiyoku_genkai/following",
+    "collected_at": "2026-07-18T23:14:38+00:00",
+    "handles_seen": 23,
+    "new_unseeded_handles": 8,
+    "known_seed_follows": 14
+  },
+  {
+    "account_id": "rojou-ski",
+    "url": "https://x.com/rojou_ski",
+    "follower_count": 10,
+    "following_url": "https://x.com/rojou_ski/following",
+    "collected_at": "2026-07-18T23:14:48+00:00",
+    "handles_seen": 5,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 5
+  },
+  {
+    "account_id": "4meakg",
+    "url": "https://x.com/4meakg",
+    "follower_count": 0,
+    "following_url": "https://x.com/4meakg/following",
+    "collected_at": "2026-07-18T23:15:11+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "sandarupua",
+    "url": "https://x.com/sandarupua",
+    "follower_count": 0,
+    "following_url": "https://x.com/sandarupua/following",
+    "collected_at": "2026-07-18T23:15:34+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "na-tu-sb",
+    "url": "https://x.com/na__tu__sb",
+    "follower_count": 194898,
+    "following_url": "https://x.com/na__tu__sb/following",
+    "collected_at": "2026-07-18T23:16:54+00:00",
+    "handles_seen": 1,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "real-nampa",
+    "url": "https://x.com/real_nampa",
+    "follower_count": 129513,
+    "following_url": "https://x.com/real_nampa/following",
+    "collected_at": "2026-07-18T23:17:04+00:00",
+    "handles_seen": 14,
+    "new_unseeded_handles": 12,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "beat-pro",
+    "url": "https://x.com/982thebeat",
+    "follower_count": 111210,
+    "following_url": "https://x.com/982thebeat/following",
+    "collected_at": "2026-07-18T23:17:12+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 30,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "chiba-gqn",
+    "url": "https://x.com/chiba_gqn",
+    "follower_count": 45630,
+    "following_url": "https://x.com/chiba_gqn/following",
+    "collected_at": "2026-07-18T23:17:24+00:00",
+    "handles_seen": 27,
+    "new_unseeded_handles": 10,
+    "known_seed_follows": 0
+  },
+  {
+    "account_id": "shinjukuashura",
+    "url": "https://x.com/ShinjukuAshura",
+    "follower_count": 42276,
+    "following_url": "https://x.com/ShinjukuAshura/following",
+    "collected_at": "2026-07-18T23:17:32+00:00",
+    "handles_seen": 30,
+    "new_unseeded_handles": 25,
+    "known_seed_follows": 4
+  },
+  {
+    "account_id": "palace-chilll",
+    "url": "https://x.com/palace_chilll",
+    "follower_count": 0,
+    "following_url": "https://x.com/palace_chilll/following",
+    "collected_at": "2026-07-18T23:18:32+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0,
+    "note": "Business/content account; no authenticated following expansion needed."
+  },
+  {
+    "account_id": "natu-douga",
+    "url": "https://x.com/natu__douga",
+    "follower_count": 0,
+    "following_url": "https://x.com/natu__douga/following",
+    "collected_at": "2026-07-18T23:18:32+00:00",
+    "handles_seen": 0,
+    "new_unseeded_handles": 0,
+    "known_seed_follows": 0,
+    "note": "Business/content account; no authenticated following expansion needed."
   }
 ]
