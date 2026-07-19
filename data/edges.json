@@ -1549,14 +1549,14 @@
     "source": "k-suto-nan",
     "target": "matching-apps",
     "type": "activity",
-    "description": "公開プロフィール等の文本に活動地域・フィールドとして「マチアプ」の言及があるとして推定（自動）。",
+    "description": "Public bio centers on マチアプ (matching apps) activity (Grok X profile).",
     "source_urls": [
       "https://x.com/K_suto_nan"
     ],
-    "confidence": 0.4,
-    "evidence_kind": "interpretation",
+    "confidence": 0.75,
+    "evidence_kind": "mixed",
     "needs_review": true,
-    "review_notes": "Materialized generated candidate from summary, profile_text via mention match 'マチアプ'. Needs manual confirmation before treating as fact."
+    "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
   },
   {
     "source": "kabigon-match",
@@ -110939,6 +110939,20 @@
     "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
   },
   {
+    "source": "madayaluyo",
+    "target": "k-suto-nan",
+    "type": "profile_mention",
+    "description": "Public reply engagement on @K_suto_nan posts (Grok X keyword search).",
+    "source_urls": [
+      "https://x.com/madayaluyo",
+      "https://x.com/K_suto_nan/status/2063269661882621980"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
+  },
+  {
     "source": "mak0chipdf",
     "target": "omamco-pua2",
     "type": "profile_mention",
@@ -111108,6 +111122,20 @@
     "evidence_kind": "fact",
     "needs_review": false,
     "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+  },
+  {
+    "source": "mic-pua",
+    "target": "k-suto-nan",
+    "type": "profile_mention",
+    "description": "Public reply engagement on @K_suto_nan posts (Grok X keyword search).",
+    "source_urls": [
+      "https://x.com/mic_pua",
+      "https://x.com/K_suto_nan/status/2063269661882621980"
+    ],
+    "confidence": 0.68,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
   },
   {
     "source": "mikeymikey0601",

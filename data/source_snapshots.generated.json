@@ -30443,7 +30443,7 @@
     "pinned_post_url": "",
     "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX_400x400.jpg",
     "follower_count": 3008,
-    "profile_text": "K@マチアプの王 (@K_suto_nan)\nマチアプで毎日遊んでる人\nLocation: 路上ゴキブリニキ",
+    "profile_text": "K@マチアプの王 (@K_suto_nan)\nマチアプで毎日遊んでる人",
     "pinned_post_text": "",
     "links": [
       "https://x.com/K_suto_nan"
@@ -30732,6 +30732,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio centers on マチアプ (matching apps) activity (Grok X profile).",
+        "source_urls": [
+          "https://x.com/K_suto_nan"
+        ],
+        "confidence": 0.75,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
       }
     ],
     "screened_at": "2026-07-19T01:05:56+00:00"
@@ -43031,6 +43043,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-suto-nan",
+        "type": "profile_mention",
+        "description": "Public reply engagement on @K_suto_nan posts (Grok X keyword search).",
+        "source_urls": [
+          "https://x.com/madayaluyo",
+          "https://x.com/K_suto_nan/status/2063269661882621980"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1896509820754149376/LLDc2w8y_400x400.jpg",
@@ -46744,7 +46769,21 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:31:10+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "k-suto-nan",
+        "type": "profile_mention",
+        "description": "Public reply engagement on @K_suto_nan posts (Grok X keyword search).",
+        "source_urls": [
+          "https://x.com/mic_pua",
+          "https://x.com/K_suto_nan/status/2063269661882621980"
+        ],
+        "confidence": 0.68,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Grok X integration: public reply/mention thread evidence (x_keyword_search / x_thread context)."
+      }
+    ]
   },
   {
     "account_id": "michimichi-mbh",

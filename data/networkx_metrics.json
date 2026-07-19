@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T01:12:46+00:00",
+  "generated_at": "2026-07-19T01:50:53+00:00",
   "nodes": [
     {
       "id": "5sato-pua",
@@ -279,7 +279,7 @@
       "type": "person",
       "degree_centrality": 0.0165,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.0009
+      "pagerank": 0.001
     },
     {
       "id": "777www7777",
@@ -5517,9 +5517,9 @@
       "id": "k-suto-nan",
       "name": "K@マチアプの王",
       "type": "person",
-      "degree_centrality": 0.0228,
-      "betweenness_centrality": 0.0021,
-      "pagerank": 0.0009
+      "degree_centrality": 0.0244,
+      "betweenness_centrality": 0.0029,
+      "pagerank": 0.0012
     },
     {
       "id": "kaiser-pua",
@@ -5815,7 +5815,7 @@
       "type": "platform",
       "degree_centrality": 0.9843,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.2421
+      "pagerank": 0.2419
     },
     {
       "id": "25basabe",
@@ -6182,7 +6182,7 @@
       "name": "wing師範｜アツストサロン代表",
       "type": "person",
       "degree_centrality": 0.0597,
-      "betweenness_centrality": 0.0189,
+      "betweenness_centrality": 0.019,
       "pagerank": 0.0019
     },
     {
@@ -6229,8 +6229,8 @@
       "id": "mic-pua",
       "name": "『トーク刺しのまいく🎤』",
       "type": "person",
-      "degree_centrality": 0.0047,
-      "betweenness_centrality": 0.0,
+      "degree_centrality": 0.0055,
+      "betweenness_centrality": 0.0001,
       "pagerank": 0.0004
     },
     {
@@ -6454,7 +6454,7 @@
       "name": "おかるん@りお講習",
       "type": "person",
       "degree_centrality": 0.0322,
-      "betweenness_centrality": 0.0034,
+      "betweenness_centrality": 0.0035,
       "pagerank": 0.001
     },
     {
@@ -6526,7 +6526,7 @@
       "name": "からすまる",
       "type": "person",
       "degree_centrality": 0.0244,
-      "betweenness_centrality": 0.0023,
+      "betweenness_centrality": 0.0024,
       "pagerank": 0.001
     },
     {
@@ -6790,7 +6790,7 @@
       "name": "すりんきー",
       "type": "person",
       "degree_centrality": 0.0134,
-      "betweenness_centrality": 0.0009,
+      "betweenness_centrality": 0.001,
       "pagerank": 0.0004
     },
     {
@@ -7142,7 +7142,7 @@
       "name": "はんちょう",
       "type": "person",
       "degree_centrality": 0.0518,
-      "betweenness_centrality": 0.0078,
+      "betweenness_centrality": 0.0079,
       "pagerank": 0.0019
     },
     {
@@ -7222,7 +7222,7 @@
       "name": "まり@ポチャマ留年講習",
       "type": "person",
       "degree_centrality": 0.0291,
-      "betweenness_centrality": 0.0026,
+      "betweenness_centrality": 0.0027,
       "pagerank": 0.0011
     },
     {
@@ -7438,7 +7438,7 @@
       "name": "ゆき",
       "type": "person",
       "degree_centrality": 0.0196,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0017,
       "pagerank": 0.0007
     },
     {
@@ -7558,7 +7558,7 @@
       "name": "るいるい",
       "type": "person",
       "degree_centrality": 0.0369,
-      "betweenness_centrality": 0.0042,
+      "betweenness_centrality": 0.0041,
       "pagerank": 0.0007
     },
     {
@@ -7582,7 +7582,7 @@
       "name": "ろあ",
       "type": "person",
       "degree_centrality": 0.0165,
-      "betweenness_centrality": 0.0016,
+      "betweenness_centrality": 0.0017,
       "pagerank": 0.0006
     },
     {
@@ -7614,7 +7614,7 @@
       "name": "アキラ＠東京ストナン会",
       "type": "person",
       "degree_centrality": 0.0141,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0004
     },
     {
@@ -8086,7 +8086,7 @@
       "name": "ジロー@清湯醤油ラーメン",
       "type": "person",
       "degree_centrality": 0.0566,
-      "betweenness_centrality": 0.0063,
+      "betweenness_centrality": 0.0062,
       "pagerank": 0.001
     },
     {
@@ -8301,8 +8301,8 @@
       "id": "madayaluyo",
       "name": "ドラサム",
       "type": "person",
-      "degree_centrality": 0.0416,
-      "betweenness_centrality": 0.0062,
+      "degree_centrality": 0.0424,
+      "betweenness_centrality": 0.0064,
       "pagerank": 0.001
     },
     {
@@ -8342,7 +8342,7 @@
       "name": "ナンパのボーさん",
       "type": "person",
       "degree_centrality": 0.0322,
-      "betweenness_centrality": 0.0062,
+      "betweenness_centrality": 0.0061,
       "pagerank": 0.0016
     },
     {
@@ -8654,7 +8654,7 @@
       "name": "ペガサス@マッチングアプリ攻略🦄",
       "type": "person",
       "degree_centrality": 0.0518,
-      "betweenness_centrality": 0.01,
+      "betweenness_centrality": 0.0101,
       "pagerank": 0.002
     },
     {
@@ -8694,7 +8694,7 @@
       "name": "ポン@🦁路上の王",
       "type": "person",
       "degree_centrality": 0.0189,
-      "betweenness_centrality": 0.0006,
+      "betweenness_centrality": 0.0005,
       "pagerank": 0.0004
     },
     {
@@ -9086,7 +9086,7 @@
       "name": "伊藤誠@100即達成した男",
       "type": "person",
       "degree_centrality": 0.0511,
-      "betweenness_centrality": 0.0035,
+      "betweenness_centrality": 0.0036,
       "pagerank": 0.0014
     },
     {
@@ -9382,7 +9382,7 @@
       "name": "怒りのシラス💢@ピカ講習@淘汰男FC",
       "type": "person",
       "degree_centrality": 0.0275,
-      "betweenness_centrality": 0.0033,
+      "betweenness_centrality": 0.0035,
       "pagerank": 0.001
     },
     {
@@ -9694,7 +9694,7 @@
       "name": "福",
       "type": "person",
       "degree_centrality": 0.033,
-      "betweenness_centrality": 0.0048,
+      "betweenness_centrality": 0.0047,
       "pagerank": 0.0009
     },
     {
@@ -9718,7 +9718,7 @@
       "name": "米流",
       "type": "person",
       "degree_centrality": 0.0707,
-      "betweenness_centrality": 0.01,
+      "betweenness_centrality": 0.0101,
       "pagerank": 0.0022
     },
     {
@@ -9878,7 +9878,7 @@
       "name": "道玄坂",
       "type": "person",
       "degree_centrality": 0.0471,
-      "betweenness_centrality": 0.0109,
+      "betweenness_centrality": 0.011,
       "pagerank": 0.0019
     },
     {
@@ -9918,7 +9918,7 @@
       "name": "雄華@雄華軍団団長",
       "type": "person",
       "degree_centrality": 0.0244,
-      "betweenness_centrality": 0.0042,
+      "betweenness_centrality": 0.0043,
       "pagerank": 0.0007
     },
     {
@@ -10118,7 +10118,7 @@
       "name": "黒豆",
       "type": "person",
       "degree_centrality": 0.0259,
-      "betweenness_centrality": 0.0064,
+      "betweenness_centrality": 0.0065,
       "pagerank": 0.0012
     },
     {
@@ -10166,7 +10166,7 @@
       "name": "🎩まじっく快斗⭕️味噌の天才",
       "type": "person",
       "degree_centrality": 0.0432,
-      "betweenness_centrality": 0.0021,
+      "betweenness_centrality": 0.002,
       "pagerank": 0.0011
     },
     {
@@ -10183,7 +10183,7 @@
       "type": "person",
       "degree_centrality": 0.0079,
       "betweenness_centrality": 0.0,
-      "pagerank": 0.001
+      "pagerank": 0.0009
     },
     {
       "id": "chiroru-pua",

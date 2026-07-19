@@ -3863,27 +3863,44 @@ def render_html(
     }
 
     function selectedNodeRelationEdges(nodeId) {
-      // Detail / ego view: use full graph edges for the focus node so high-follower
-      // accounts with many follow links are never shown as "no connections".
+      // Detail / ego view: always surface solid relations for the focus node so
+      // hubs like K@マチアプの王 never show "つながっているノード (0)" while
+      // solidDegreeById is high. Assistive edges still respect the bridge toggle.
       const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
       const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked === true;
       const allowedBridgeCategories = selectedValues("[data-bridge-category]", "data-bridge-category");
       const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
+      const solidEdgeTypes = new Set([
+        "follow",
+        "profile_mention",
+        "influence",
+        "collaboration",
+        "activity",
+        "affiliation",
+        "criticism",
+        "monetization"
+      ]);
       const outgoing = [];
       const incoming = [];
       rawGraph.edges.forEach((edge) => {
         if (edge.source !== nodeId && edge.target !== nodeId) {
           return;
         }
-        if (!allowedEdgeTypes.has(edge.type)) {
-          return;
-        }
-        if (isAssistiveEdge(edge)) {
+        const assistive = isAssistiveEdge(edge);
+        if (assistive) {
           if (!includeProfileBridgeEdges) {
+            return;
+          }
+          if (allowedEdgeTypes.size && !allowedEdgeTypes.has(edge.type)) {
             return;
           }
           const categories = bridgeCategoryIds(edge);
           if (!categories.some((categoryId) => allowedBridgeCategories.has(categoryId))) {
+            return;
+          }
+        } else {
+          // Solid person hub edges always show in the detail panel.
+          if (!solidEdgeTypes.has(edge.type) && allowedEdgeTypes.size && !allowedEdgeTypes.has(edge.type)) {
             return;
           }
         }
@@ -3892,7 +3909,14 @@ def render_html(
         if (!other) {
           return;
         }
-        if (onlyRelevantAccounts && other.type === "person" && !isNetworkRelevantPerson(other)) {
+        // Keep solid person neighbors even if periphery filter is on; the user
+        // explicitly opened this hub and should see who it follows.
+        if (
+          onlyRelevantAccounts &&
+          assistive &&
+          other.type === "person" &&
+          !isNetworkRelevantPerson(other)
+        ) {
           return;
         }
         if (edge.source === nodeId) {
@@ -4595,25 +4619,51 @@ def render_html(
       }
       if (focusIds.size) {
         focusedEdgeExtras = rawGraph.edges.filter((edge) => {
-          if (!allowedEdgeTypes.has(edge.type)) {
-            return false;
-          }
-          if (isAssistiveEdge(edge) && !includeProfileBridgeEdges) {
-            return false;
-          }
           if (!(focusIds.has(edge.source) || focusIds.has(edge.target))) {
             return false;
+          }
+          const assistive = isAssistiveEdge(edge);
+          if (assistive) {
+            if (!includeProfileBridgeEdges) {
+              return false;
+            }
+            if (allowedEdgeTypes.size && !allowedEdgeTypes.has(edge.type)) {
+              return false;
+            }
+          } else {
+            // Always pull solid follow/mention/activity edges for the focus node.
+            const solidTypes = new Set([
+              "follow",
+              "profile_mention",
+              "influence",
+              "collaboration",
+              "activity",
+              "affiliation",
+              "criticism",
+              "monetization"
+            ]);
+            if (!solidTypes.has(edge.type) && allowedEdgeTypes.size && !allowedEdgeTypes.has(edge.type)) {
+              return false;
+            }
           }
           const otherId = focusIds.has(edge.source) ? edge.target : edge.source;
           const other = rawNodeById.get(otherId);
           if (!other || !accountNodeTypes.has(other.type)) {
+            // Keep location/context endpoints of solid activity edges (e.g. Matching Apps).
+            if (!assistive && other && (other.type === "location" || other.type === "community")) {
+              return true;
+            }
             return false;
           }
-          if (onlyRelevantAccounts && other.type === "person" && !isNetworkRelevantPerson(other)) {
+          // Solid neighbors of a focused hub always show; assistive still respects relevance.
+          if (
+            onlyRelevantAccounts &&
+            assistive &&
+            other.type === "person" &&
+            !isNetworkRelevantPerson(other)
+          ) {
             return false;
           }
-          // While focused/searched, allow neighbors outside the active keyword
-          // cluster so high-follower hubs still show their solid follow graph.
           return true;
         });
       }

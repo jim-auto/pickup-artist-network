@@ -672,5 +672,36 @@
     "icon_url": "https://pbs.twimg.com/profile_images/1097749248806858753/dyA382Vx.jpg",
     "source_tool": "x_user_search",
     "note": "stale icon refresh"
+  },
+  {
+    "handle": "K_suto_nan",
+    "account_id": "k-suto-nan",
+    "name": "K@マチアプの王",
+    "bio": "マチアプで毎日遊んでる人",
+    "followers": 3008,
+    "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX.jpg",
+    "source_tool": "x_user_search",
+    "post_url": "https://x.com/K_suto_nan/status/2061843393156964818",
+    "mentioned_by": [
+      "madayaluyo",
+      "mic_pua"
+    ],
+    "mentions": [
+      "k_suto_"
+    ],
+    "note": "Grok X densify for K@M isolation UI fix"
+  },
+  {
+    "handle": "k_suto_",
+    "account_id": "k-suto",
+    "name": "Kのサブ",
+    "bio": "全て見せます。｜メイン→@K_suto_nan",
+    "followers": 153,
+    "icon_url": "https://pbs.twimg.com/profile_images/2061838787114860544/ee8N-Mif.jpg",
+    "source_tool": "x_user_search",
+    "mentioned_by": [
+      "K_suto_nan"
+    ],
+    "note": "sub of K@M"
   }
 ]
