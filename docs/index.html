@@ -728,7 +728,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-07-19 00:55 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-07-19 01:07 UTC。</p>
       </div>
     </div>
   </header>
@@ -2269,9 +2269,51 @@
       `;
     }
 
+    function selectedNodeRelationEdges(nodeId) {
+      // Detail / ego view: use full graph edges for the focus node so high-follower
+      // accounts with many follow links are never shown as "no connections".
+      const allowedEdgeTypes = selectedValues("[data-edge-type]", "data-edge-type");
+      const includeProfileBridgeEdges = document.getElementById("profile-bridge-toggle")?.checked === true;
+      const allowedBridgeCategories = selectedValues("[data-bridge-category]", "data-bridge-category");
+      const onlyRelevantAccounts = document.getElementById("relevance-filter-toggle")?.checked !== false;
+      const outgoing = [];
+      const incoming = [];
+      rawGraph.edges.forEach((edge) => {
+        if (edge.source !== nodeId && edge.target !== nodeId) {
+          return;
+        }
+        if (!allowedEdgeTypes.has(edge.type)) {
+          return;
+        }
+        if (isAssistiveEdge(edge)) {
+          if (!includeProfileBridgeEdges) {
+            return;
+          }
+          const categories = bridgeCategoryIds(edge);
+          if (!categories.some((categoryId) => allowedBridgeCategories.has(categoryId))) {
+            return;
+          }
+        }
+        const otherId = edge.source === nodeId ? edge.target : edge.source;
+        const other = rawNodeById.get(otherId);
+        if (!other) {
+          return;
+        }
+        if (onlyRelevantAccounts && other.type === "person" && !isNetworkRelevantPerson(other)) {
+          return;
+        }
+        if (edge.source === nodeId) {
+          outgoing.push(edge);
+        } else {
+          incoming.push(edge);
+        }
+      });
+      return { outgoing, incoming };
+    }
+
     function renderDetailPanel(nodeId) {
       const panel = document.getElementById("detail-panel");
-      const node = currentVisibleNodes.find((candidate) => candidate.id === nodeId);
+      const node = rawNodeById.get(nodeId) || currentVisibleNodes.find((candidate) => candidate.id === nodeId);
       if (!node) {
         selectedNodeId = null;
         panel.innerHTML = `
@@ -2284,8 +2326,11 @@
       }
 
       selectedNodeId = nodeId;
-      const outgoingEdges = currentVisibleEdges.filter((edge) => edge.source === nodeId);
-      const incomingEdges = currentVisibleEdges.filter((edge) => edge.target === nodeId);
+      const { outgoing: outgoingEdges, incoming: incomingEdges } = selectedNodeRelationEdges(nodeId);
+      const connectedCount = new Set([
+        ...outgoingEdges.map((edge) => edge.target),
+        ...incomingEdges.map((edge) => edge.source)
+      ]).size;
       panel.innerHTML = `
         <div class="detail-card">
           <div class="detail-heading">
@@ -2296,12 +2341,13 @@
             ${renderNodeTypeTag(node.type)}
             <span class="muted">${escapeHtml(node.id)}</span><br>
             ${node.follower_count ? `<span class="muted">X followers: ${escapeHtml(formatNumber(node.follower_count))}</span><br>` : ""}
+            <span class="muted">確定寄り次数: ${escapeHtml(solidDegreeById.get(node.id) || 0)} / follow ${escapeHtml(followDegreeById.get(node.id) || 0)}</span><br>
             <span class="muted">確信度: ${escapeHtml(node.confidence)}</span>
             ${node.review_notes ? `<br><span class="muted">確認メモ: ${escapeHtml(node.review_notes)}</span>` : ""}
           </div>
 
           <div class="detail-section">
-            <h4>つながっているノード (${new Set([...outgoingEdges.map((edge) => edge.target), ...incomingEdges.map((edge) => edge.source)]).size})</h4>
+            <h4>つながっているノード (${connectedCount})</h4>
             ${renderConnectedNodes(outgoingEdges, incomingEdges)}
           </div>
 
@@ -2334,41 +2380,51 @@
     }
 
     function focusNode(nodeId) {
-      if (!currentVisibleNodes.some((node) => node.id === nodeId)) {
+      if (!rawNodeById.has(nodeId)) {
         return;
       }
+      selectedNodeId = nodeId;
+      // Expand ego neighborhood into the canvas before focusing.
+      applyFilters();
       const clusterMode = getClusterMode();
       const clusterAssignment = rawClusters.modes?.[clusterMode]?.assignments?.[nodeId];
       const clusterId = clusterAssignment ? getClusterNodeId(clusterAssignment) : null;
       if (clusterId && network.isCluster(clusterId)) {
         network.openCluster(clusterId);
       }
-      network.selectNodes([nodeId]);
-      network.focus(nodeId, {
-        scale: 1.05,
-        animation: {
-          duration: 300,
-          easingFunction: "easeInOutQuad"
-        }
-      });
+      if (currentVisibleNodes.some((node) => node.id === nodeId)) {
+        network.selectNodes([nodeId]);
+        network.focus(nodeId, {
+          scale: 1.05,
+          animation: {
+            duration: 300,
+            easingFunction: "easeInOutQuad"
+          }
+        });
+      }
       renderDetailPanel(nodeId);
+      updateNetworkEmphasis(nodeId);
     }
 
     function revealAndFocusNode(nodeId) {
       const relevanceFilterToggle = document.getElementById("relevance-filter-toggle");
       if (relevanceFilterToggle) {
-        relevanceFilterToggle.checked = false;
+        relevanceFilterToggle.checked = true;
       }
       document.querySelectorAll("[data-node-type]").forEach((input) => {
         if (input.getAttribute("data-node-type") === "person") {
           input.checked = true;
         }
       });
+      document.querySelectorAll("[data-edge-type]").forEach((input) => {
+        input.checked = true;
+      });
       document.getElementById("search").value = "";
       if (keywordClusterInput) {
         keywordClusterInput.value = "";
       }
       updateKeywordClusterControl();
+      selectedNodeId = nodeId;
       applyFilters();
       window.setTimeout(() => focusNode(nodeId), 120);
     }
@@ -2915,7 +2971,7 @@
         eligibleNodes.filter((node) => matchesSearch(node, term)).map((node) => node.id)
       );
 
-      const visibleEdges = rawGraph.edges.filter((edge) => {
+      let visibleEdges = rawGraph.edges.filter((edge) => {
         if (!allowedEdgeTypes.has(edge.type)) {
           return false;
         }
@@ -2937,6 +2993,47 @@
         return matchedIds.has(edge.source) || matchedIds.has(edge.target);
       });
 
+      // Ego expansion: when a node is selected/searched, always include its solid
+      // person-person edges even if the global periphery filter would drop them.
+      let focusedEdgeExtras = [];
+      const focusIds = new Set(matchedIds);
+      if (selectedNodeId) {
+        focusIds.add(selectedNodeId);
+      }
+      if (focusIds.size) {
+        focusedEdgeExtras = rawGraph.edges.filter((edge) => {
+          if (!allowedEdgeTypes.has(edge.type)) {
+            return false;
+          }
+          if (isAssistiveEdge(edge) && !includeProfileBridgeEdges) {
+            return false;
+          }
+          if (!(focusIds.has(edge.source) || focusIds.has(edge.target))) {
+            return false;
+          }
+          const otherId = focusIds.has(edge.source) ? edge.target : edge.source;
+          const other = rawNodeById.get(otherId);
+          if (!other || !accountNodeTypes.has(other.type)) {
+            return false;
+          }
+          if (onlyRelevantAccounts && other.type === "person" && !isNetworkRelevantPerson(other)) {
+            return false;
+          }
+          // While focused/searched, allow neighbors outside the active keyword
+          // cluster so high-follower hubs still show their solid follow graph.
+          return true;
+        });
+      }
+      const edgeKey = (edge) => `${edge.source}|${edge.target}|${edge.type}|${edge.review_notes || ""}`;
+      const seenEdgeKeys = new Set(visibleEdges.map(edgeKey));
+      focusedEdgeExtras.forEach((edge) => {
+        const key = edgeKey(edge);
+        if (!seenEdgeKeys.has(key)) {
+          seenEdgeKeys.add(key);
+          visibleEdges.push(edge);
+        }
+      });
+
       const visibleNodeIds = new Set();
       if (term) {
         matchedIds.forEach((nodeId) => visibleNodeIds.add(nodeId));
@@ -2951,12 +3048,34 @@
           visibleNodeIds.add(edge.source);
           visibleNodeIds.add(edge.target);
         });
-        if (selectedNodeId && eligibleIds.has(selectedNodeId)) {
+        if (selectedNodeId) {
           visibleNodeIds.add(selectedNodeId);
         }
       }
 
-      const visibleNodes = eligibleNodes.filter((node) => visibleNodeIds.has(node.id));
+      // Ego neighbors may sit outside the current keyword cluster / eligible set;
+      // still draw them while focused so high-follower hubs don't look isolated.
+      const extraNodes = [];
+      visibleNodeIds.forEach((nodeId) => {
+        if (eligibleIds.has(nodeId)) {
+          return;
+        }
+        const node = rawNodeById.get(nodeId);
+        if (!node || !accountNodeTypes.has(node.type)) {
+          return;
+        }
+        if (!allowedNodeTypes.has(node.type)) {
+          return;
+        }
+        if (onlyRelevantAccounts && node.type === "person" && !isNetworkRelevantPerson(node)) {
+          return;
+        }
+        extraNodes.push(node);
+      });
+      const visibleNodes = [
+        ...eligibleNodes.filter((node) => visibleNodeIds.has(node.id)),
+        ...extraNodes
+      ];
       const nodeNameById = new Map(rawGraph.nodes.map((node) => [node.id, node.name]));
       const visibleReviewCandidates = (rawReviewCandidates.candidates || []).filter((candidate) =>
         visibleNodeIds.has(candidate.source) && visibleNodeIds.has(candidate.target)
@@ -3030,8 +3149,11 @@
       if (shouldCluster) {
         applyRelationClusters(visibleNodes, clusterMode);
       }
-      updateNetworkEmphasis(null);
-      fitVisibleGraph();
+      updateNetworkEmphasis(selectedNodeId);
+      // Avoid auto-fit when focusing a node so the ego neighborhood stays readable.
+      if (!selectedNodeId && !term) {
+        fitVisibleGraph();
+      }
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
       document.getElementById("visible-edges").textContent = visibleEdges.length;

@@ -632,6 +632,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ura1ten",
+        "type": "profile_mention",
+        "description": "Has public sub-account @ura1ten.",
+        "source_urls": [
+          "https://x.com/1tensaipua1",
+          "https://x.com/ura1ten"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
       }
     ]
   },
@@ -1650,7 +1663,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "sato-legend",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sato_legend.",
+        "source_urls": [
+          "https://x.com/5sato_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1846958922265251842/G3lCr-_R_400x400.jpg",
     "follower_count": 1405
   },
@@ -2424,7 +2450,44 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "aizen-puasub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @aizen_puasub.",
+        "source_urls": [
+          "https://x.com/aizen_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "nami-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nami__pua.",
+        "source_urls": [
+          "https://x.com/aizen_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "bossnn-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @bossnn_pua.",
+        "source_urls": [
+          "https://x.com/aizen_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1765655694601252864/11_yQd4r_400x400.jpg",
     "follower_count": 325
   },
@@ -2464,7 +2527,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "aizen-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @aizen_pua.",
+        "source_urls": [
+          "https://x.com/aizen_puasub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1774331369159831552/ZFprEseK_400x400.jpg",
     "follower_count": 43
   },
@@ -4684,6 +4760,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "springfox",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @_springfox_.",
+        "source_urls": [
+          "https://x.com/anus_asterisk",
+          "https://x.com/anus_asterisk/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "pua-keikun",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @pua_keikun.",
+        "source_urls": [
+          "https://x.com/anus_asterisk",
+          "https://x.com/anus_asterisk/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2010034716377071616/CyCZv-4t_400x400.jpg",
@@ -6319,6 +6421,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/asumi_pua",
+          "https://x.com/asumi_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1962481628711895040/S6WyGbA1_400x400.jpg",
@@ -6598,7 +6713,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "sati-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sati_pua.",
+        "source_urls": [
+          "https://x.com/aup_itas"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1891005306056101888/EbQ2ut0d_400x400.jpg",
     "follower_count": 72
   },
@@ -7037,7 +7165,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tindertips1000",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @TinderTips1000.",
+        "source_urls": [
+          "https://x.com/bakunakioji"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1671379817927970818/o6xDDK8Y_400x400.jpg",
     "follower_count": 18543
   },
@@ -8275,7 +8416,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nampa-girl",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nampa_girl.",
+        "source_urls": [
+          "https://x.com/982thebeat"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1937213216440090624/y_DP0oeK_400x400.jpg",
     "follower_count": 111210
   },
@@ -9554,7 +9708,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "aizen-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @aizen_pua.",
+        "source_urls": [
+          "https://x.com/bossnn_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1710417497802133505/bvzYS3pM_400x400.jpg",
     "follower_count": 65
   },
@@ -10795,6 +10962,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "dk-iur",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @dk_iur.",
+        "source_urls": [
+          "https://x.com/chamuranaoto",
+          "https://x.com/chamuranaoto/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "pua-co",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pua_co.",
+        "source_urls": [
+          "https://x.com/chamuranaoto"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2007291033219133440/Hp_2pPb4_400x400.jpg",
@@ -11427,6 +11619,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "springfox",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @_springfox_.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://x.com/chiba_gqn/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "nanpawars",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nanpawars.",
+        "source_urls": [
+          "https://x.com/chiba_gqn"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1812058941041364992/DEv82jk0_400x400.jpg",
@@ -12345,6 +12562,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "yutty-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @yutty_pua.",
+        "source_urls": [
+          "https://x.com/chiroru_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1821683490108358656/Ijc-HDMW_400x400.jpg",
@@ -12831,6 +13060,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "kgori-0412",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kgori_0412.",
+        "source_urls": [
+          "https://x.com/choppy_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1998691114673647616/Th-2ZaJJ_400x400.jpg",
@@ -13991,6 +14232,97 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "akari-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @akari_pua.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "a6lpij",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @A6lpij.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "aio5e7q1jl89900",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @AIO5e7q1jL89900.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "around2neraioji",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @around2neraioji.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "kankeiiiii",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kankeiiiii.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "kobarion15",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kobarion15.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "nekos-jf",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @nekos_jf.",
+        "source_urls": [
+          "https://x.com/cx_lm5",
+          "https://x.com/cx_lm5/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1914536970518454274/gYLcdwka_400x400.jpg",
@@ -14179,7 +14511,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "hantenkinoyama",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @hantenkinoyama.",
+        "source_urls": [
+          "https://x.com/daigakusei_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1962445840645242880/2immPLc3_400x400.jpg",
     "follower_count": 948
   },
@@ -14603,6 +14948,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "gash01nx",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Gash01NX.",
+        "source_urls": [
+          "https://x.com/daruma_nnp"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2005143544458346501/qZoE9Drp_400x400.jpg",
@@ -16699,6 +17056,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "shirouzu-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @shirouzu_pua.",
+        "source_urls": [
+          "https://x.com/dogmapua666",
+          "https://x.com/dogmapua666/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ]
   },
@@ -16779,7 +17149,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @gureran_m.",
+        "source_urls": [
+          "https://x.com/dokuzetu819"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1830092492873580544/ooJwdYUl_400x400.jpg",
     "follower_count": 984
   },
@@ -18532,6 +18915,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "dude123epic",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Dude123Epic.",
+        "source_urls": [
+          "https://x.com/emuchi_pua",
+          "https://x.com/emuchi_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "puro-nanpa",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @puro_nanpa.",
+        "source_urls": [
+          "https://x.com/emuchi_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "",
@@ -19437,7 +19845,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kyo",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kyo.",
+        "source_urls": [
+          "https://x.com/fami_ver2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "street-fami",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @street_Fami.",
+        "source_urls": [
+          "https://x.com/fami_ver2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1637907021348630528/mOFvs7vv_400x400.jpg",
     "follower_count": 145
   },
@@ -19556,6 +19989,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "tinder-god",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Tinder_god_2.",
+        "source_urls": [
+          "https://x.com/Feitan_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1762819331321372672/5B2-V1e1_400x400.jpg",
@@ -19892,7 +20337,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "foy-jibunmigaki",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @foy_jibunmigaki.",
+        "source_urls": [
+          "https://x.com/foy_jikokensan"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1724437675619258368/Rwq0srrh_400x400.jpg",
     "follower_count": 1385
   },
@@ -20363,7 +20821,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "fuku-second",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @fuku_second.",
+        "source_urls": [
+          "https://x.com/fuku_third"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1797540941802475520/8c9i00Sy_400x400.jpg",
     "follower_count": 2770
   },
@@ -21239,7 +21710,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "simba-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Simba_pua.",
+        "source_urls": [
+          "https://x.com/gatiikepua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1943016008517611521/dYMEbdJP_400x400.jpg",
     "follower_count": 186
   },
@@ -22036,6 +22520,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "krt",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @KRT.",
+        "source_urls": [
+          "https://x.com/GOKUN_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1607044150658207745/v4tmyyUy_400x400.jpg",
@@ -22271,7 +22767,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "greed-pua-sub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @greed_pua_sub.",
+        "source_urls": [
+          "https://x.com/greed_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1826573501752389632/TOPo7EwU_400x400.jpg",
     "follower_count": 625
   },
@@ -22311,7 +22820,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "greed-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @greed_pua.",
+        "source_urls": [
+          "https://x.com/greed_pua_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2045426894980669441/nN0ZiOVr_400x400.jpg",
     "follower_count": 27
   },
@@ -23731,7 +24253,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "daigakusei-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @daigakusei_pua.",
+        "source_urls": [
+          "https://x.com/hantenkinoyama"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1962533236657332224/uhYa_y6t_400x400.jpg",
     "follower_count": 62
   },
@@ -24019,6 +24554,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "hanzo-prim-sub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @hanzo_prim_sub.",
+        "source_urls": [
+          "https://x.com/hanzo_prim"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1279254608905297920/JtvmJQ3j_400x400.jpg",
@@ -24060,7 +24607,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "hanzo-prim",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @hanzo_prim.",
+        "source_urls": [
+          "https://x.com/hanzo_prim_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1640927219437703170/LTDn9pqy_400x400.jpg",
     "follower_count": 487
   },
@@ -29399,7 +29959,20 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:55+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "jokernanpa",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @JokerNanpa.",
+        "source_urls": [
+          "https://x.com/joker_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ]
   },
   {
     "account_id": "juju-pua",
@@ -29621,16 +30194,16 @@
     "profile_url": "https://x.com/K_suto_nan",
     "pinned_post_url": "",
     "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX_400x400.jpg",
-    "follower_count": 2425,
-    "profile_text": "K@Mの王 (@K_suto_nan)\n将来の夢はきらきらインフェラエンサー✨\nLocation: 路上ゴキブリニキ",
+    "follower_count": 3008,
+    "profile_text": "K@マチアプの王 (@K_suto_nan)\nマチアプで毎日遊んでる人\nLocation: 路上ゴキブリニキ",
     "pinned_post_text": "",
     "links": [
       "https://x.com/K_suto_nan"
     ],
-    "summary": "将来の夢はきらきらインフェラエンサー✨",
+    "summary": "K@マチアプの王 / マチアプで毎日遊んでる人",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. High-follower hub profile refreshed for densify pass.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -29889,8 +30462,22 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-suto",
+        "type": "profile_mention",
+        "description": "Has public sub-account @k_suto_.",
+        "source_urls": [
+          "https://x.com/K_suto_nan",
+          "https://x.com/k_suto_"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
       }
-    ]
+    ],
+    "screened_at": "2026-07-19T01:05:56+00:00"
   },
   {
     "account_id": "kageki-ashura",
@@ -29929,7 +30516,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "shinjukuashura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ShinjukuAshura.",
+        "source_urls": [
+          "https://x.com/kageki_ashura"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mote_ren_ai7.",
+        "source_urls": [
+          "https://x.com/kageki_ashura"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1959823903490277376/LDaRW19J_400x400.jpg",
     "follower_count": 3674
   },
@@ -30026,7 +30638,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "mendako-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mendako_pua.",
+        "source_urls": [
+          "https://x.com/kaiser_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1792646644300754944/yY2to0x3_400x400.jpg",
     "follower_count": 827
   },
@@ -31934,6 +32559,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/karon121_pua",
+          "https://x.com/karon121_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2012449551148539904/z39EDFHh_400x400.jpg",
@@ -32439,6 +33077,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kayakkupuasub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kayakkupuasub.",
+        "source_urls": [
+          "https://x.com/kayakkupua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1692889480112574464/1YMCWeAP_400x400.jpg",
@@ -32480,7 +33130,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kayakkupua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kayakkupua.",
+        "source_urls": [
+          "https://x.com/kayakkupuasub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1803043882080649216/nVfFr45Y_400x400.jpg",
     "follower_count": 87
   },
@@ -32782,7 +33445,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kazama-0425",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kazama_0425.",
+        "source_urls": [
+          "https://x.com/kazama_player"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2037431430821879809/YIMIhEJT_400x400.jpg",
     "follower_count": 2048
   },
@@ -32822,7 +33498,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "one",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ONE.",
+        "source_urls": [
+          "https://x.com/Kazu_Consult"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1560804779068387328/7qA3SKc4_400x400.jpg",
     "follower_count": 44692
   },
@@ -33555,6 +34244,43 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "sitomarukunn",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sitomarukunn.",
+        "source_urls": [
+          "https://x.com/kazunanpa",
+          "https://x.com/kazunanpa/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "yutty-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @yutty_pua.",
+        "source_urls": [
+          "https://x.com/kazunanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "kazunanpa2",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kazunanpa2.",
+        "source_urls": [
+          "https://x.com/kazunanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1635610092484845570/f0OrQ7wZ_400x400.jpg",
@@ -33596,7 +34322,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kazunanpa",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kazunanpa.",
+        "source_urls": [
+          "https://x.com/kazunanpa2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1650629674308108289/uacE5lvc_400x400.jpg",
     "follower_count": 28
   },
@@ -33966,6 +34705,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "mhggevazbthw9tv",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @MhGGEvazbtHW9tv.",
+        "source_urls": [
+          "https://x.com/kei_male_apex",
+          "https://x.com/kei_male_apex/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1924399957848489984/5LCuo_ci_400x400.jpg",
@@ -34047,7 +34799,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "eb6lx",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @eb6lx.",
+        "source_urls": [
+          "https://x.com/kei__pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2026325008931573760/pfWdfmR1_400x400.jpg",
     "follower_count": 43
   },
@@ -34621,6 +35386,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "koepen-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Koepen_pua.",
+        "source_urls": [
+          "https://x.com/kickpua",
+          "https://x.com/kickpua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ]
   },
@@ -34883,7 +35661,44 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "ziyuunotsubasa1",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ziyuunotsubasa1.",
+        "source_urls": [
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "like-himitsu",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @like_himitsu.",
+        "source_urls": [
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "4meakg",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @4meakg.",
+        "source_urls": [
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2024501536567730176/2RSAKak3_400x400.jpg",
     "follower_count": 354
   },
@@ -35614,6 +36429,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "nrtq5ihqepycy0n",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @NRTq5ihqEpYCy0N.",
+        "source_urls": [
+          "https://x.com/KiriStomach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1814981011975151616/KfSMnUzQ_400x400.jpg",
@@ -38525,6 +39352,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "sub-kurita",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sub_kurita.",
+        "source_urls": [
+          "https://x.com/kurita_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1588886394961039360/r8_l6NAO_400x400.jpg",
@@ -39097,6 +39936,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kw1ew",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kw1ew.",
+        "source_urls": [
+          "https://x.com/kuroiwa_45",
+          "https://x.com/kuroiwa_45/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1949801207817781248/lnHmbSJm_400x400.jpg",
@@ -39139,7 +39991,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kuroiwa-45",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kuroiwa_45.",
+        "source_urls": [
+          "https://x.com/kuroiwa_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1942583121003630592/ubtbYfKm_400x400.jpg",
     "follower_count": 528
   },
@@ -39609,6 +40474,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "kurosaka-pua-wi",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kurosaka_pua_with_you.",
+        "source_urls": [
+          "https://x.com/kurosaka_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2036300420931526656/bFEFPpty_400x400.jpg",
@@ -39872,6 +40749,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "k-932654",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @K_932654.",
+        "source_urls": [
+          "https://x.com/kurosakikun___"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1879667672440578048/ou08GdHr_400x400.jpg",
@@ -41331,6 +42220,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "springfox",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @_springfox_.",
+        "source_urls": [
+          "https://x.com/mabonasu_pua",
+          "https://x.com/mabonasu_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "pua-keikun",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @pua_keikun.",
+        "source_urls": [
+          "https://x.com/mabonasu_pua",
+          "https://x.com/mabonasu_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2041452779412336640/1NHlwmSr_400x400.jpg",
@@ -41373,7 +42288,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "xcandee",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @_xCandee.",
+        "source_urls": [
+          "https://x.com/machapua3"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2032122323625766913/CqU7aTjH_400x400.jpg",
     "follower_count": 113
   },
@@ -42626,6 +43554,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "motemaga-japan",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @motemagaJAPAN.",
+        "source_urls": [
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1145574509778391041/3CQ987cJ_400x400.jpg",
@@ -43613,6 +44553,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "gureran-m",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @gureran_m.",
+        "source_urls": [
+          "https://x.com/maruoooon_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1515136154957643777/FgspEETC_400x400.png",
@@ -44460,6 +45412,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "mbh-5",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @MBH_5.",
+        "source_urls": [
+          "https://x.com/mayuge_mbh"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2027301882729996291/pp3GDXr6_400x400.jpg",
@@ -46145,6 +47109,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "mikeynosub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mikeynosub.",
+        "source_urls": [
+          "https://x.com/mikeymikey0601"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1522769510667022336/wOkGckQh_400x400.jpg",
@@ -46446,6 +47422,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "kai0zero",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @kai0zero.",
+        "source_urls": [
+          "https://x.com/mikeynosub",
+          "https://x.com/mikeynosub/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "mikeymikey0601",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mikeymikey0601.",
+        "source_urls": [
+          "https://x.com/mikeynosub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1688180453889769472/7UGKGT63_400x400.jpg",
@@ -46527,7 +47528,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "mky-match",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mky_match.",
+        "source_urls": [
+          "https://x.com/mikky_motecoach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1938100603324178432/ofLR5f43_400x400.jpg",
     "follower_count": 13697
   },
@@ -46925,7 +47939,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "syahudearu",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @syahudearu.",
+        "source_urls": [
+          "https://x.com/minorun_ceo"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2014652597572141060/b6BjvY9v_400x400.jpg",
     "follower_count": 27203
   },
@@ -46965,7 +47992,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "miraitinder6969",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @miraitinder6969.",
+        "source_urls": [
+          "https://x.com/miraitinder4545"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1949029261370949635/j4nW1s3X_400x400.jpg",
     "follower_count": 1911
   },
@@ -47227,6 +48267,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "miraitinder4545",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @miraitinder4545.",
+        "source_urls": [
+          "https://x.com/miraitinder6969"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2008567790329098244/C-X7lTU5_400x400.jpg",
@@ -47656,7 +48708,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "mikky-motecoach",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mikky_motecoach.",
+        "source_urls": [
+          "https://x.com/mky_match"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1973923412637777920/WUHiINqH_400x400.jpg",
     "follower_count": 463
   },
@@ -48174,6 +49239,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "mikky-motecoach",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mikky_motecoach.",
+        "source_urls": [
+          "https://x.com/mote_hair00"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1913122797716725761/BZZOt7CB_400x400.jpg",
@@ -48342,6 +49419,69 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "1388-pqq",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @1388_pqq.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7",
+          "https://x.com/mote_ren_ai7/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "hkun-theworld",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @hkun_theworld.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7",
+          "https://x.com/mote_ren_ai7/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "ibu-photostyle",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ibu_photostyle.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7",
+          "https://x.com/mote_ren_ai7/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "shinjukuashura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ShinjukuAshura.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "kageki-ashura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kageki_ashura.",
+        "source_urls": [
+          "https://x.com/mote_ren_ai7"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2010934264079220736/RO959CjW_400x400.jpg",
@@ -49149,7 +50289,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "chikio-nmp",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @chikio_NMP.",
+        "source_urls": [
+          "https://x.com/motezoh_biz"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1924562690468675586/pBYOHW5w_400x400.jpg",
     "follower_count": 449
   },
@@ -50524,7 +51677,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "na-tu-sb",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @na__tu__sb.",
+        "source_urls": [
+          "https://x.com/nampa_girl"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2014274620384530432/yvmpBD8W_400x400.jpg",
     "follower_count": 34657
   },
@@ -50917,6 +52083,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "pua-poke",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pua_poke.",
+        "source_urls": [
+          "https://x.com/nampa_poke"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1882445183507447808/veZRK47X_400x400.jpg",
@@ -51038,7 +52216,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "ryosuke-street2",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ryosuke_street2.",
+        "source_urls": [
+          "https://x.com/nampakago"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1588983659985391616/Tpsz4Geb_400x400.jpg",
     "follower_count": 369
   },
@@ -51105,6 +52296,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "namusubkun",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @namusubkun.",
+        "source_urls": [
+          "https://x.com/namuskun"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1956043697847721987/NM5o71HN_400x400.jpg",
@@ -51146,7 +52349,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "namuskun",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @namuskun.",
+        "source_urls": [
+          "https://x.com/namusubkun"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2037469994821574656/Wcm9D4-E_400x400.jpg",
     "follower_count": 23
   },
@@ -51589,6 +52805,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "krt",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @KRT.",
+        "source_urls": [
+          "https://x.com/nandeyanen_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1638790131246301187/KloeV3_h_400x400.jpg",
@@ -55825,7 +57053,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "mendako-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mendako_pua.",
+        "source_urls": [
+          "https://x.com/nsan_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "kaiser-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kaiser_pua.",
+        "source_urls": [
+          "https://x.com/nsan_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1999627792292675585/ySQDDKlC_400x400.jpg",
     "follower_count": 609
   },
@@ -59529,6 +60782,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "eren-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @eren_PUAthlete.",
+        "source_urls": [
+          "https://x.com/otaku_pua",
+          "https://x.com/otaku_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "qh0kum",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @qh0kum.",
+        "source_urls": [
+          "https://x.com/otaku_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2052938746115616768/lLu2PZaR_400x400.jpg",
@@ -59571,7 +60849,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "outlook-sub4",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @outlook_sub_4.",
+        "source_urls": [
+          "https://x.com/outlook_sabo_4"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1942997962818514944/IaLSrlMn_400x400.jpg",
     "follower_count": 3279
   },
@@ -59611,7 +60902,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "outlook-sabo4",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @outlook_sabo_4.",
+        "source_urls": [
+          "https://x.com/outlook_sub_4"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1504333585863831553/fRuIOLJq_400x400.jpg",
     "follower_count": 704
   },
@@ -60690,7 +61994,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nanpa-pegasasu",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nanpa_pegasasu.",
+        "source_urls": [
+          "https://x.com/pg_yoasobi"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1978216259595726848/IBf_DFNp_400x400.jpg",
     "follower_count": 831
   },
@@ -61032,6 +62349,30 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "pika-sublol",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pika_sublol.",
+        "source_urls": [
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "pika-stochi",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pika_stochi.",
+        "source_urls": [
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1578815020250505216/Oj3wjq3E_400x400.jpg",
@@ -61115,7 +62456,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pika-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pika_pua.",
+        "source_urls": [
+          "https://x.com/pika_sublol"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2004214171454607360/jTC7TSiZ_400x400.jpg",
     "follower_count": 1480
   },
@@ -61405,7 +62759,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pochama-tuwaou",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pochama_tuwaou.",
+        "source_urls": [
+          "https://x.com/pochama_izon"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1861768558856093696/77NomA_3_400x400.jpg",
     "follower_count": 651
   },
@@ -61641,6 +63008,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "pochama-izon",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pochama_izon.",
+        "source_urls": [
+          "https://x.com/pochama_tuwaou"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1533716391051677696/rdCrTpjT_400x400.jpg",
@@ -62181,7 +63560,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "eroeromancotin",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @eroeromancotin.",
+        "source_urls": [
+          "https://x.com/pua_chilll"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "sub-chilll",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sub_chilll.",
+        "source_urls": [
+          "https://x.com/pua_chilll"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2042489959358349312/sfh_RQlR_400x400.jpg",
     "follower_count": 25789
   },
@@ -62456,6 +63860,57 @@
         "evidence_kind": "fact",
         "needs_review": false,
         "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/pua_co",
+          "https://x.com/pua_co/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "tokyousuto-yu",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Tokyousuto_yu.",
+        "source_urls": [
+          "https://x.com/pua_co",
+          "https://x.com/pua_co/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "dk-iur",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @dk_iur.",
+        "source_urls": [
+          "https://x.com/pua_co",
+          "https://x.com/pua_co/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "yk-yamate",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @yk_yamate.",
+        "source_urls": [
+          "https://x.com/pua_co"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1970399302989291525/Bn4LQBGG_400x400.jpg",
@@ -63226,7 +64681,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pua-kei-sg",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @PUA_KEI_SG.",
+        "source_urls": [
+          "https://x.com/PUA_KEI_MH"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2040698478838632448/U96RNuUG_400x400.jpg",
     "follower_count": 525
   },
@@ -63489,6 +64957,44 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "tokyousuto-yu",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Tokyousuto_yu.",
+        "source_urls": [
+          "https://x.com/pua_kk_",
+          "https://x.com/pua_kk_/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "dk-iur",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @dk_iur.",
+        "source_urls": [
+          "https://x.com/pua_kk_",
+          "https://x.com/pua_kk_/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "pua-co",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pua_co.",
+        "source_urls": [
+          "https://x.com/pua_kk_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2024760492015890432/EbzCoVcr_400x400.jpg",
@@ -63999,7 +65505,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nampa-poke",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nampa_poke.",
+        "source_urls": [
+          "https://x.com/pua_poke"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1968650691280519169/pdDLnQhv_400x400.jpg",
     "follower_count": 87
   },
@@ -64660,6 +66179,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "sasuke110110",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sasuke11011.",
+        "source_urls": [
+          "https://x.com/puapenguin",
+          "https://x.com/puapenguin/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1999128655818280960/rd9DyO1e_400x400.jpg",
@@ -64831,6 +66363,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "tokyousuto-yu",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Tokyousuto_yu.",
+        "source_urls": [
+          "https://x.com/puriketsu_nnp",
+          "https://x.com/puriketsu_nnp/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "dk-iur",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @dk_iur.",
+        "source_urls": [
+          "https://x.com/puriketsu_nnp",
+          "https://x.com/puriketsu_nnp/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1735281977329364992/DAYHw59l_400x400.jpg",
@@ -64873,7 +66431,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "puro-nanpa",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @puro_nanpa.",
+        "source_urls": [
+          "https://x.com/puro_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "emuchi-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @emuchi_pua.",
+        "source_urls": [
+          "https://x.com/puro_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1957756915062312960/AUlMEdBx_400x400.jpg",
     "follower_count": 2606
   },
@@ -65826,6 +67409,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "nampa-urajirou",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @nampa_urajirou.",
+        "source_urls": [
+          "https://x.com/real_nampa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1911320637303341057/0Y0A7On9_400x400.jpg",
@@ -66197,7 +67792,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @gureran_m.",
+        "source_urls": [
+          "https://x.com/recoa_nanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2024879187077820416/e6hy5b8E_400x400.jpg",
     "follower_count": 532
   },
@@ -68165,6 +69773,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/riku_pua0801",
+          "https://x.com/riku_pua0801/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2007489649183490048/1q87lU-P_400x400.jpg",
@@ -68248,7 +69869,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "riokun-pua-sub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @riokun_pua_sub.",
+        "source_urls": [
+          "https://x.com/riokun_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1679561958809563136/DHNLY7qa_400x400.jpg",
     "follower_count": 3476
   },
@@ -68288,7 +69922,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "riokun-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @riokun_pua.",
+        "source_urls": [
+          "https://x.com/riokun_pua_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1754892513444610048/H38DC6y0_400x400.jpg",
     "follower_count": 116
   },
@@ -69183,6 +70830,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "roco-neko-ura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @roco_neko_ura.",
+        "source_urls": [
+          "https://x.com/roco_neko_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1895027742586089472/TNBhM6bV_400x400.jpg",
@@ -69224,7 +70883,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "roco-neko",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @roco_neko_.",
+        "source_urls": [
+          "https://x.com/roco_neko_ura"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2012449434819592192/_YKndX3V_400x400.jpg",
     "follower_count": 388
   },
@@ -70959,6 +72631,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "tokyousuto-yu",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Tokyousuto_yu.",
+        "source_urls": [
+          "https://x.com/ryuse_pua",
+          "https://x.com/ryuse_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2050939694805106688/qRf9HZfw_400x400.jpg",
@@ -71318,7 +73003,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "s050456236",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @S050456236.",
+        "source_urls": [
+          "https://x.com/s01183496"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "s667270528s",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @S667270528s.",
+        "source_urls": [
+          "https://x.com/s01183496"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "",
     "follower_count": 5224
   },
@@ -71362,7 +73072,32 @@
         }
       ]
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "s01183496",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @s01183496.",
+        "source_urls": [
+          "https://x.com/S050456236"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "s667270528s",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @S667270528s.",
+        "source_urls": [
+          "https://x.com/S050456236"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ]
   },
   {
     "account_id": "s667270528s",
@@ -71404,7 +73139,32 @@
         }
       ]
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "s01183496",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @s01183496.",
+        "source_urls": [
+          "https://x.com/S667270528s"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "s050456236",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @s050456236.",
+        "source_urls": [
+          "https://x.com/S667270528s"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ]
   },
   {
     "account_id": "saikyo-sutoti",
@@ -71848,6 +73608,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/saku_pua",
+          "https://x.com/saku_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "tokyousuto-yu",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Tokyousuto_yu.",
+        "source_urls": [
+          "https://x.com/saku_pua",
+          "https://x.com/saku_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1941005059451494400/962Ejlsw_400x400.jpg",
@@ -72262,7 +74048,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "aup-itas",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @aup_itas.",
+        "source_urls": [
+          "https://x.com/sati_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/895860855392174081/F3ZMD0Th_400x400.jpg",
     "follower_count": 1789
   },
@@ -72302,7 +74101,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "5sato-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @5sato_pua.",
+        "source_urls": [
+          "https://x.com/sato_legend"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1989708406345920512/YOvVwcgx_400x400.jpg",
     "follower_count": 735
   },
@@ -73671,6 +75483,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "mizuno-qreep",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mizuno_qreep.",
+        "source_urls": [
+          "https://x.com/senga_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1693633565055959040/EMn7dDpN_400x400.jpg",
@@ -73882,6 +75706,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "sen-xxv",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sen_xxv.",
+        "source_urls": [
+          "https://x.com/Senju_Insta"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2007015801333968896/L0djjAv8_400x400.jpg",
@@ -74060,7 +75896,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "gureran-m",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @gureran_m.",
+        "source_urls": [
+          "https://x.com/shi_shimaru1983"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1653042167718514689/noLGNkFT_400x400.jpg",
     "follower_count": 232
   },
@@ -74577,6 +76426,30 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mote_ren_ai7.",
+        "source_urls": [
+          "https://x.com/ShinjukuAshura"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "kageki-ashura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kageki_ashura.",
+        "source_urls": [
+          "https://x.com/ShinjukuAshura"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1835748646425653248/QlYRZAB1_400x400.jpg",
@@ -74839,6 +76712,45 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "springfox",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @_springfox_.",
+        "source_urls": [
+          "https://x.com/shinkawa_pua",
+          "https://x.com/shinkawa_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "koepen-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Koepen_pua.",
+        "source_urls": [
+          "https://x.com/shinkawa_pua",
+          "https://x.com/shinkawa_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "shirouzu-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @shirouzu_pua.",
+        "source_urls": [
+          "https://x.com/shinkawa_pua",
+          "https://x.com/shinkawa_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2037519960453623808/h7PqWpGy_400x400.jpg",
@@ -76011,7 +77923,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "gatiikepua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @gatiikepua.",
+        "source_urls": [
+          "https://x.com/Simba_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2005650951034834944/HsZ2oqUE_400x400.jpg",
     "follower_count": 1110
   },
@@ -76298,6 +78223,30 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ssb",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @SSB.",
+        "source_urls": [
+          "https://x.com/siofkn_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "outlook-sabo4",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @outlook_sabo_4.",
+        "source_urls": [
+          "https://x.com/siofkn_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1323063093232951296/O-6YLYtF_400x400.jpg",
@@ -76731,6 +78680,42 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "bantan-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @bantan_pua.",
+        "source_urls": [
+          "https://x.com/slinky_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "yukishiro-yuki",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Yukishiro_yuki_.",
+        "source_urls": [
+          "https://x.com/slinky_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "molmol-1919",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @molmol1919.",
+        "source_urls": [
+          "https://x.com/slinky_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1707226700092981248/zgtM9DdI_400x400.jpg",
@@ -77786,6 +79771,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "mtech",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mTech.",
+        "source_urls": [
+          "https://x.com/souyonesou"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1523687285501218816/lwTHq_gE_400x400.jpg",
@@ -78118,7 +80115,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "srs-pua-sub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @srs_pua.",
+        "source_urls": [
+          "https://x.com/srs_pua_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1963631851928764416/dBHhEnmA_400x400.jpg",
     "follower_count": 610
   },
@@ -78555,6 +80565,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "fami-ver2",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @fami_ver2.",
+        "source_urls": [
+          "https://x.com/street_Fami"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1489362398297595904/1bKddnNH_400x400.jpg",
@@ -78865,6 +80887,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "pua-keikun",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @pua_keikun.",
+        "source_urls": [
+          "https://x.com/streets_bach",
+          "https://x.com/streets_bach/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "bach-sokuhou",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @bach_sokuhou.",
+        "source_urls": [
+          "https://x.com/streets_bach"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2006657693394886656/M32pDvUb_400x400.jpg",
@@ -79442,6 +81489,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Collected from an authenticated X following page because logged-out following pages redirect to login."
+      },
+      {
+        "target": "chintaifudou3",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @chintaifudou3.",
+        "source_urls": [
+          "https://x.com/sub_chilll"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1571353696805736448/JCEYEbev_400x400.jpg",
@@ -79524,7 +81583,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tomu-riddle",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tomu_riddle.",
+        "source_urls": [
+          "https://x.com/sub_riddle"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1943136355711942656/G_KV09nY_400x400.jpg",
     "follower_count": 500
   },
@@ -80592,6 +82664,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "s-mote-money",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @s_mote_money.",
+        "source_urls": [
+          "https://x.com/suzuniki_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1605709122296389632/2PsL0YvP_400x400.jpg",
@@ -80634,7 +82718,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "minorun-ceo",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @minorun_ceo.",
+        "source_urls": [
+          "https://x.com/syahudearu"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1839047669680943104/AniGINsp_400x400.jpg",
     "follower_count": 4680
   },
@@ -81156,6 +83253,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "sitomarukunn",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sitomarukunn.",
+        "source_urls": [
+          "https://x.com/taichi_pua",
+          "https://x.com/taichi_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1972341440606044160/AdP0_5sp_400x400.jpg",
@@ -82078,6 +84188,19 @@
         "evidence_kind": "fact",
         "needs_review": false,
         "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      },
+      {
+        "target": "nairinji33474",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @NaiRinji33474.",
+        "source_urls": [
+          "https://x.com/taku__pua",
+          "https://x.com/taku__pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/860083651991621638/N7pl0xS7_400x400.jpg",
@@ -82265,6 +84388,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "tantan-ura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tantan_ura__.",
+        "source_urls": [
+          "https://x.com/tantan_pua_"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1918704088541458432/vgCJ1i5i_400x400.jpg",
@@ -82306,7 +84441,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tantan-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tantan_pua_.",
+        "source_urls": [
+          "https://x.com/tantan_ura__"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 175,
     "icon_url": "https://pbs.twimg.com/profile_images/2027965728759140352/1ff_QvHb_400x400.jpg"
   },
@@ -82688,6 +84836,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "koepen-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @Koepen_pua.",
+        "source_urls": [
+          "https://x.com/taru_pua",
+          "https://x.com/taru_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "taruchan100",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @taruchan100.",
+        "source_urls": [
+          "https://x.com/taru_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2044062609784352772/8VW6NJz5_400x400.jpg",
@@ -82729,7 +84902,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "taru-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @taru_pua.",
+        "source_urls": [
+          "https://x.com/taruchan100"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2029802891847024640/e_cQBAwh_400x400.jpg",
     "follower_count": 2202
   },
@@ -83059,6 +85245,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "igaku-sato",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @igaku_sato.",
+        "source_urls": [
+          "https://x.com/tatsuyoshibokki"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2051671518086942720/hYu6aECA_400x400.jpg",
@@ -83328,6 +85526,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "kyuridayooooo",
+        "type": "profile_mention",
+        "description": "Has public sub-account @kyuridayooooo.",
+        "source_urls": [
+          "https://x.com/tenma_pua",
+          "https://x.com/kyuridayooooo"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1975404259618545664/IFzKo2Hy_400x400.jpg",
@@ -84478,6 +86689,31 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "shirouzu-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @shirouzu_pua.",
+        "source_urls": [
+          "https://x.com/tinder109",
+          "https://x.com/tinder109/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "hachi-tinder02",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @hachi_tinder02.",
+        "source_urls": [
+          "https://x.com/tinder109"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1897485154030874624/NeMZp1TT_400x400.jpg",
@@ -85151,7 +87387,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "sub-riddle",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sub_riddle.",
+        "source_urls": [
+          "https://x.com/tomu_riddle"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1835257195006713856/NFMm4Mqc_400x400.jpg",
     "follower_count": 3058
   },
@@ -86335,6 +88584,43 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "sitomarukunn",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @sitomarukunn.",
+        "source_urls": [
+          "https://x.com/tyopa_pua",
+          "https://x.com/tyopa_pua/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
+      },
+      {
+        "target": "streetkyo",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @streetkyo.",
+        "source_urls": [
+          "https://x.com/tyopa_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "tyopa-sub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tyopa_sub.",
+        "source_urls": [
+          "https://x.com/tyopa_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1716688627710017536/RloGOZbr_400x400.jpg",
@@ -86376,7 +88662,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tyopa-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tyopa_pua.",
+        "source_urls": [
+          "https://x.com/tyopa_sub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1854831108149723139/_hCHmTI4_400x400.jpg",
     "follower_count": 19
   },
@@ -89221,6 +91520,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "ssb",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @SSB.",
+        "source_urls": [
+          "https://x.com/WhityDoggingPUA"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1854427626510934016/h2qMXBRO_400x400.jpg",
@@ -89777,7 +92088,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "machapua3",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @machapua3.",
+        "source_urls": [
+          "https://x.com/_xCandee"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/2044447332809474048/bgOR-7S6_400x400.jpg",
     "follower_count": 3512
   },
@@ -90621,7 +92945,32 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "bangedaisuki",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @bangedaisuki.",
+        "source_urls": [
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "pua-co",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pua_co.",
+        "source_urls": [
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1948465040895737856/zX4nicDs_400x400.jpg",
     "follower_count": 1275
   },
@@ -90729,7 +93078,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "yolusub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @yolusub.",
+        "source_urls": [
+          "https://x.com/yolu_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1979078255224266752/rE12EdIK_400x400.jpg",
     "follower_count": 642
   },
@@ -93194,6 +95556,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Wave-collected authenticated following edge to an already-seeded account (solid density pass)."
+      },
+      {
+        "target": "mhggevazbthw9tv",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @MhGGEvazbtHW9tv.",
+        "source_urls": [
+          "https://x.com/A6lpij",
+          "https://x.com/A6lpij/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following candidate materialised as solid follow between already-seeded accounts (high-follower isolation fix)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2049430946806706176/uBrs-Tc__400x400.jpg",
@@ -93342,7 +95717,20 @@
       "source_url": "https://x.com/pa_nanX",
       "collected_at": "2026-05-14T10:16:33+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pananxyz",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pananXYZ.",
+        "source_urls": [
+          "https://x.com/pa_nanX"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 371
   },
   {
@@ -93403,7 +95791,20 @@
       "source_url": "https://x.com/oyasugaoo",
       "collected_at": "2026-05-14T10:16:33+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "emuchi-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @emuchi_pua.",
+        "source_urls": [
+          "https://x.com/oyasugaoo"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 83
   },
   {
@@ -93464,7 +95865,20 @@
       "source_url": "https://x.com/pananXYZ",
       "collected_at": "2026-05-14T10:16:33+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pa-nanx",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @pa_nanX.",
+        "source_urls": [
+          "https://x.com/pananXYZ"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 51
   },
   {
@@ -93535,7 +95949,20 @@
       "source_url": "https://x.com/JokerNanpa",
       "collected_at": "2026-05-14T10:33:31+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "joker-nanpa",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @joker_nanpa.",
+        "source_urls": [
+          "https://x.com/JokerNanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1588152704404029441/CuPA_gIU_400x400.jpg",
     "follower_count": 439
   },
@@ -94321,7 +96748,20 @@
       "source_url": "https://x.com/ryeppua",
       "collected_at": "2026-07-18T14:46:52+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "inpysub",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @inpysub.",
+        "source_urls": [
+          "https://x.com/ryeppua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 620
   },
   {
@@ -94345,7 +96785,20 @@
       "source_url": "https://x.com/iskeeeer_pua",
       "collected_at": "2026-07-18T14:46:52+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "oskeeeer-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @oskeeeer_pua.",
+        "source_urls": [
+          "https://x.com/iskeeeer_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 154
   },
   {
@@ -94635,7 +97088,32 @@
       "source_url": "https://x.com/luxqczvr8",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "shinjukuashura",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ShinjukuAshura.",
+        "source_urls": [
+          "https://x.com/luxqczvr8"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @mote_ren_ai7.",
+        "source_urls": [
+          "https://x.com/luxqczvr8"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 2158
   },
   {
@@ -94914,7 +97392,20 @@
       "source_url": "https://x.com/inpysub",
       "collected_at": "2026-07-18T20:52:25+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "ryeppua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @ryeppua.",
+        "source_urls": [
+          "https://x.com/inpysub"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 1696
   },
   {
@@ -95817,6 +98308,18 @@
         "evidence_kind": "fact",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "utachanple",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Utachanple.",
+        "source_urls": [
+          "https://x.com/UtadaXD"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
       }
     ],
     "follower_count": 619
@@ -95866,7 +98369,20 @@
       "source_url": "https://x.com/tamaon_zone",
       "collected_at": "2026-07-18T21:17:53+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "vegeta-street",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @vegeta_street_.",
+        "source_urls": [
+          "https://x.com/tamaon_zone"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 412
   },
   {
@@ -95938,7 +98454,20 @@
       "source_url": "https://x.com/kinoyamaindo",
       "collected_at": "2026-07-18T21:17:53+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "daigakusei-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @daigakusei_pua.",
+        "source_urls": [
+          "https://x.com/kinoyamaindo"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 194
   },
   {
@@ -96324,7 +98853,20 @@
       "source_url": "https://x.com/gyro_baller",
       "collected_at": "2026-07-18T22:01:07+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tantan-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @tantan_pua_.",
+        "source_urls": [
+          "https://x.com/gyro_baller"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 285
   },
   {
@@ -96468,7 +99010,20 @@
       "source_url": "https://x.com/iiiiix_xjjjjj",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "jjjjx-xiii",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @jjjjx_xiii.",
+        "source_urls": [
+          "https://x.com/iiiiix_xjjjjj"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 2638
   },
   {
@@ -96588,7 +99143,20 @@
       "source_url": "https://x.com/Heart_is_White",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "oregaorejyajya",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @oregaorejyajya.",
+        "source_urls": [
+          "https://x.com/Heart_is_White"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 965
   },
   {
@@ -96708,7 +99276,20 @@
       "source_url": "https://x.com/oregaorejyajya",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "heart-is-white",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @Heart_is_White.",
+        "source_urls": [
+          "https://x.com/oregaorejyajya"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 403
   },
   {
@@ -96865,7 +99446,20 @@
       "source_url": "https://x.com/jjjjx_xiii",
       "collected_at": "2026-07-18T22:08:47+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "iiiiix-xjjjjj",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @iiiiix_xjjjjj.",
+        "source_urls": [
+          "https://x.com/jjjjx_xiii"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 250
   },
   {
@@ -97443,7 +100037,20 @@
       "source_url": "https://x.com/yamane_ou",
       "collected_at": "2026-07-18T22:35:41+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "b61111746",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @b61111746.",
+        "source_urls": [
+          "https://x.com/yamane_ou"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 2871
   },
   {
@@ -97710,7 +100317,20 @@
       "source_url": "https://x.com/b61111746",
       "collected_at": "2026-07-18T22:35:41+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "yamane-ou",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @yamane_ou.",
+        "source_urls": [
+          "https://x.com/b61111746"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 330
   },
   {
@@ -97867,7 +100487,20 @@
       "source_url": "https://x.com/sutosaijaku",
       "collected_at": "2026-07-18T22:35:41+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "sutokiroku",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sutokiroku.",
+        "source_urls": [
+          "https://x.com/sutosaijaku"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 160
   },
   {
@@ -97891,7 +100524,20 @@
       "source_url": "https://x.com/sutokiroku",
       "collected_at": "2026-07-18T22:35:41+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "sutosaijaku",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @sutosaijaku.",
+        "source_urls": [
+          "https://x.com/sutokiroku"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
     "follower_count": 114
   },
   {
@@ -98608,5 +101254,92 @@
       }
     ],
     "follower_count": 2660
+  },
+  {
+    "account_id": "k-suto",
+    "profile_url": "https://x.com/k_suto_",
+    "icon_url": "https://pbs.twimg.com/profile_images/2061838787114860544/ee8N-Mif_400x400.jpg",
+    "follower_count": 153,
+    "profile_text": "Kのサブ (@k_suto_)\n全て見せます。｜メイン→@K_suto_nan",
+    "summary": "全て見せます。｜メイン→@K_suto_nan",
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "k-suto-nan",
+        "type": "profile_mention",
+        "description": "Sub-account bio points to main @K_suto_nan.",
+        "source_urls": [
+          "https://x.com/k_suto_"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+      }
+    ],
+    "sources": [
+      "following-screened-sub-main"
+    ]
+  },
+  {
+    "account_id": "kyuridayooooo",
+    "profile_url": "https://x.com/kyuridayooooo",
+    "icon_url": "https://pbs.twimg.com/profile_images/2073171429210902528/_ke2yQJ-_400x400.jpg",
+    "follower_count": 26,
+    "profile_text": "てんま (@kyuridayooooo)\nサブ/ネタツイ多め/フォロバします メイン→@tenma_pua",
+    "summary": "サブ/ネタツイ多め/フォロバします メイン→@tenma_pua",
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "tenma-pua",
+        "type": "profile_mention",
+        "description": "Sub-account bio points to main @tenma_pua.",
+        "source_urls": [
+          "https://x.com/kyuridayooooo"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+      }
+    ],
+    "sources": [
+      "following-screened-sub-main"
+    ]
+  },
+  {
+    "account_id": "ura1ten",
+    "profile_url": "https://x.com/ura1ten",
+    "icon_url": "https://pbs.twimg.com/profile_images/2076372680773943296/n2UeLRnZ_400x400.jpg",
+    "follower_count": 833,
+    "profile_text": "天 (@ura1ten)\nREGAL+α/マネーゲーム/副業/投資 /ナイトワーク全般/不動産/日本1送客記録あり🥇/メイン→ @1tensaipua1/実績ハイライト\nLocation: 東京/即金案件はDM",
+    "summary": "REGAL+α/マネーゲーム/副業/投資 /ナイトワーク全般/不動産/日本1送客記録あり🥇/メイン→ @1tensaipua1/実績ハイライト",
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "1tensaipua1",
+        "type": "profile_mention",
+        "description": "Sub-account bio points to main @1tensaipua1.",
+        "source_urls": [
+          "https://x.com/ura1ten"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+      }
+    ],
+    "sources": [
+      "following-screened-sub-main"
+    ]
   }
 ]

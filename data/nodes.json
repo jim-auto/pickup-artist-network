@@ -13513,13 +13513,14 @@
   {
     "id": "k-suto-nan",
     "type": "person",
-    "name": "K@Mの王",
+    "name": "K@マチアプの王",
     "aliases": [
-      "K_suto_nan"
+      "K_suto_nan",
+      "K@Mの王"
     ],
-    "description": "将来の夢はきらきらインフェラエンサー✨",
+    "description": "K@マチアプの王 / マチアプで毎日遊んでる人",
     "icon_url": "https://pbs.twimg.com/profile_images/1559207028425629696/-4K4mxsX_400x400.jpg",
-    "follower_count": 2425,
+    "follower_count": 3008,
     "source_urls": [
       "manual://seed",
       "https://x.com/K_suto_nan"
@@ -13527,7 +13528,7 @@
     "confidence": 0.5,
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. High-follower hub profile refreshed for densify pass."
   },
   {
     "id": "kaiser-pua",
@@ -13763,6 +13764,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "ura1ten",
+    "type": "person",
+    "name": "REGAL+α/マネーゲーム/副業/投資 /ナイトワーク全般/不動産/日本1送客記録あり🥇/メイン→ @1tensaipua1/実績ハイライト",
+    "aliases": [
+      "ura1ten"
+    ],
+    "description": "REGAL+α/マネーゲーム/副業/投資 /ナイトワーク全般/不動産/日本1送客記録あり🥇/メイン→ @1tensaipua1/実績ハイライト",
+    "icon_url": "https://pbs.twimg.com/profile_images/2076372680773943296/n2UeLRnZ_400x400.jpg",
+    "follower_count": 833,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/ura1ten"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
   },
   {
     "id": "rizin-pua",
@@ -19007,6 +19027,25 @@
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
   },
   {
+    "id": "kyuridayooooo",
+    "type": "person",
+    "name": "サブ/ネタツイ多め/フォロバします メイン→@tenma_pua",
+    "aliases": [
+      "kyuridayooooo"
+    ],
+    "description": "サブ/ネタツイ多め/フォロバします メイン→@tenma_pua",
+    "icon_url": "https://pbs.twimg.com/profile_images/2073171429210902528/_ke2yQJ-_400x400.jpg",
+    "follower_count": 26,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/kyuridayooooo"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
+  },
+  {
     "id": "pua-sanji",
     "type": "person",
     "name": "サンジ@ネトナン無双・黒足の一味",
@@ -21810,6 +21849,25 @@
     "evidence_kind": "fact",
     "needs_review": true,
     "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint."
+  },
+  {
+    "id": "k-suto",
+    "type": "person",
+    "name": "全て見せます。｜メイン→@K_suto_nan",
+    "aliases": [
+      "k_suto_"
+    ],
+    "description": "全て見せます。｜メイン→@K_suto_nan",
+    "icon_url": "https://pbs.twimg.com/profile_images/2061838787114860544/ee8N-Mif_400x400.jpg",
+    "follower_count": 153,
+    "source_urls": [
+      "manual://seed",
+      "https://x.com/k_suto_"
+    ],
+    "confidence": 0.5,
+    "evidence_kind": "mixed",
+    "needs_review": true,
+    "review_notes": "Densify pass: sub/main account link from public bio (メイン→@handle)."
   },
   {
     "id": "endou-dark",

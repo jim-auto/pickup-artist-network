@@ -2107,9 +2107,15 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         left_followers = int(node_by_id[left].follower_count or 0)
         right_followers = int(node_by_id[right].follower_count or 0)
         high_follower_pair = max(left_followers, right_followers) >= 1000
+        sparse_high_follower = (
+            (left_followers >= 1000 and solid_person_degree[left] <= 1)
+            or (right_followers >= 1000 and solid_person_degree[right] <= 1)
+        )
         # 単一の弱い汎用タグだけで大量の bridge が生えないよう閾値を上げる。
-        min_score = 1.6 if high_follower_pair else 2.8
-        if len(shared_tags) < 2 and score < (3.2 if high_follower_pair else 3.6):
+        # 高フォロワー孤立側は少しだけ緩め、最低限の可視接続を確保する。
+        min_score = 1.35 if sparse_high_follower else (1.6 if high_follower_pair else 2.8)
+        single_tag_floor = 2.8 if sparse_high_follower else (3.2 if high_follower_pair else 3.6)
+        if len(shared_tags) < 2 and score < single_tag_floor:
             continue
         if score < min_score:
             continue
@@ -2130,15 +2136,18 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
         source_id = source.id
         follower_count = int(source.follower_count or 0)
         # solid 次数を基準に「最低限の可視性」だけ補う。既に solid で繋がる人は増やさない。
+        # 高フォロワー孤立は solid が薄くても補助線を多めに引き、地図上の孤立を防ぐ。
         if follower_count >= 10000:
-            target_solid_degree = 4
+            target_solid_degree = 5
         elif follower_count >= 5000:
-            target_solid_degree = 3
+            target_solid_degree = 4
         elif follower_count >= 1000:
-            target_solid_degree = 3
+            target_solid_degree = 4
         else:
             target_solid_degree = 2 if node_tags.get(source_id) else 1
         remaining = max(0, target_solid_degree - solid_person_degree[source_id])
+        if follower_count >= 1000 and solid_person_degree[source_id] <= 1:
+            remaining = max(remaining, 3)
         if remaining <= 0:
             continue
         ranked_candidates = sorted(
@@ -2152,8 +2161,9 @@ def infer_profile_bridge_edges(graph: GraphData) -> int:
             ),
         )
         per_node_added = 0
+        max_per_node = 3 if follower_count >= 1000 and solid_person_degree[source_id] <= 1 else 2
         for score, target_id, shared_tags in ranked_candidates:
-            if added >= 900 or per_node_added >= min(remaining, 2):
+            if added >= 1100 or per_node_added >= min(remaining, max_per_node):
                 break
             pair = tuple(sorted((source_id, target_id)))
             if pair in existing_pairs:
