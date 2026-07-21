@@ -56,10 +56,28 @@ CONTEXT_NOTE = (
     "location/community context node."
 )
 COHOOD_NOTE = (
-    "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between "
+    "Densify pass: shared solid follow-neighborhood (2+ common neighbors) between "
     "high-follower low-degree accounts."
 )
+TAG_NOTE = (
+    "Densify pass: shared public profile scene tags between a high-follower "
+    "low-degree hub and a dense scene account."
+)
 HANDLE_RE = re.compile(r"@([A-Za-z0-9_]{2,30})")
+SCENE_TAGS: list[tuple[str, tuple[str, ...]]] = [
+    ("ナンパ", ("ナンパ", "nanpa", "nampa")),
+    ("スト", ("ストナン", "ストリート", "street", "路上")),
+    ("ネト", ("ネトナン", "出会い系", "ネット出会い")),
+    ("マチアプ", ("マチアプ", "マッチングアプリ", "tinder", "with", "タップル", "東カレ")),
+    ("講習", ("講習", "コンサル", "サロン", "受講")),
+    ("ホスト", ("ホスト", "歌舞伎町")),
+    ("外見", ("外見", "整形", "垢抜け", "美容")),
+    ("モテ", ("モテ", "恋愛", "彼女")),
+    ("即", ("即", "経験人数", "get")),
+    ("味噌", ("味噌", "miso")),
+    ("MBH", ("mbh", "まーぼー")),
+    ("アツスト", ("アツスト", "🐶🦁")),
+]
 ASSISTIVE_MARKERS = (
     "Profile bridge auto-edge",
     "Keyword cluster",
@@ -535,6 +553,142 @@ def materialize_shared_follow_neighborhood(
     return added
 
 
+def _text_tags(text: str) -> set[str]:
+    lowered = text.casefold()
+    tags: set[str] = set()
+    for label, patterns in SCENE_TAGS:
+        if any(pattern.casefold() in lowered for pattern in patterns):
+            tags.add(label)
+    return tags
+
+
+def materialize_scene_tag_collaborations(
+    snapshots_by_id: dict[str, dict[str, object]],
+    seed_ids: set[str],
+    sparse_ids: set[str],
+    *,
+    max_new_per_sparse: int = 8,
+    min_shared_tags: int = 2,
+) -> int:
+    """Link sparse high-fl scene hubs to dense scene accounts via shared bio tags."""
+    if not NODES_FILE.exists() or not EDGES_FILE.exists():
+        return 0
+    nodes = {str(n.get("id")): n for n in _load_json_list(NODES_FILE) if n.get("type") == "person"}
+    # solid person-person degree
+    solid_deg: dict[str, int] = defaultdict(int)
+    existing_pairs: set[tuple[str, str]] = set()
+    for edge in _load_json_list(EDGES_FILE):
+        source = str(edge.get("source", "")).strip()
+        target = str(edge.get("target", "")).strip()
+        if not source or not target:
+            continue
+        existing_pairs.add(tuple(sorted((source, target))))
+        if source not in nodes or target not in nodes:
+            continue
+        if _is_assistive_note(edge.get("review_notes")):
+            continue
+        if str(edge.get("type")) in {
+            "follow",
+            "profile_mention",
+            "influence",
+            "collaboration",
+            "activity",
+            "affiliation",
+        }:
+            solid_deg[source] += 1
+            solid_deg[target] += 1
+
+    tags_by_id: dict[str, set[str]] = {}
+    for node_id, node in nodes.items():
+        snap = snapshots_by_id.get(node_id) or {}
+        text = "\n".join(
+            [
+                str(node.get("name") or ""),
+                str(node.get("description") or ""),
+                str(snap.get("summary") or ""),
+                str(snap.get("profile_text") or ""),
+            ]
+        )
+        tags = _text_tags(text)
+        if tags:
+            tags_by_id[node_id] = tags
+
+    dense_ids = sorted(
+        [
+            node_id
+            for node_id, node in nodes.items()
+            if node_id in seed_ids
+            and solid_deg[node_id] >= 12
+            and int(node.get("follower_count") or 0) >= 300
+            and len(tags_by_id.get(node_id, set())) >= 2
+        ],
+        key=lambda node_id: (
+            -solid_deg[node_id],
+            -int((nodes.get(node_id) or {}).get("follower_count") or 0),
+            node_id,
+        ),
+    )
+
+    added = 0
+    sparse_list = sorted(
+        [node_id for node_id in sparse_ids if node_id in tags_by_id and node_id in seed_ids],
+        key=lambda node_id: (
+            -int((nodes.get(node_id) or {}).get("follower_count") or 0),
+            node_id,
+        ),
+    )
+    for sparse_id in sparse_list:
+        sparse_tags = tags_by_id.get(sparse_id, set())
+        if len(sparse_tags) < min_shared_tags:
+            continue
+        sparse_snap = snapshots_by_id.get(sparse_id)
+        if not sparse_snap:
+            continue
+        per_node = 0
+        ranked: list[tuple[int, int, str, tuple[str, ...]]] = []
+        for dense_id in dense_ids:
+            if dense_id == sparse_id:
+                continue
+            shared = tuple(sorted(sparse_tags & tags_by_id.get(dense_id, set())))
+            if len(shared) < min_shared_tags:
+                continue
+            pair = tuple(sorted((sparse_id, dense_id)))
+            if pair in existing_pairs:
+                continue
+            ranked.append((len(shared), solid_deg[dense_id], dense_id, shared))
+        ranked.sort(reverse=True)
+        for shared_count, _dense_solid, dense_id, shared in ranked:
+            if per_node >= max_new_per_sparse:
+                break
+            dense_snap = snapshots_by_id.get(dense_id)
+            if not dense_snap:
+                continue
+            pair = tuple(sorted((sparse_id, dense_id)))
+            if pair in existing_pairs:
+                continue
+            tag_label = "、".join(shared[:4])
+            sparse_url = str(sparse_snap.get("profile_url") or f"https://x.com/{sparse_id}")
+            dense_url = str(dense_snap.get("profile_url") or f"https://x.com/{dense_id}")
+            desc = (
+                f"Public profile scene tags overlap ({tag_label}) with a dense "
+                "scene account (high-follower low-degree densify)."
+            )
+            ok = _ensure_observation(
+                sparse_snap,
+                target=dense_id,
+                edge_type="collaboration",
+                description=desc,
+                source_urls=[sparse_url, dense_url],
+                confidence=min(0.56, 0.42 + 0.04 * shared_count),
+                review_notes=TAG_NOTE,
+            )
+            if ok:
+                existing_pairs.add(pair)
+                per_node += 1
+                added += 1
+    return added
+
+
 def materialize_sub_main_links(
     snapshots_by_id: dict[str, dict[str, object]],
     handle_map: dict[str, str],
@@ -631,6 +785,13 @@ def main() -> None:
     sub_added = materialize_sub_main_links(snapshots_by_id, handle_map, seed_ids)
     context_added = materialize_bio_context_edges(snapshots_by_id, sparse_ids)
     cohood_added = materialize_shared_follow_neighborhood(
+        snapshots_by_id,
+        seed_ids,
+        sparse_ids,
+        min_common=2,
+        max_new_per_node=12,
+    )
+    tag_added = materialize_scene_tag_collaborations(
         snapshots_by_id, seed_ids, sparse_ids
     )
 
@@ -653,7 +814,7 @@ def main() -> None:
         f"known_follow+={known_added} candidate_follow+={follow_added} "
         f"bio_mention+={mention_added} node_mention+={node_mention_added} "
         f"sub_main+={sub_added} context+={context_added} cohood+={cohood_added} "
-        f"dry_run={args.dry_run}"
+        f"tag_collab+={tag_added} dry_run={args.dry_run}"
     )
     print("[NEXT] python build_site.py --skip-collector")
 
