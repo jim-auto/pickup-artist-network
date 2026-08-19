@@ -70,6 +70,43 @@ class ScraperSourceSnapshotTests(unittest.TestCase):
         self.assertIn("https://example.com/alpha/profile", alpha.source_urls)
         self.assertIn("https://note.com/alpha", alpha.source_urls)
 
+    def test_short_latin_alias_does_not_match_inside_tokyo(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "aki", "name": "Aki", "aliases": ["pua_aki_"]},
+            {"type": "person", "id": "kyo", "name": "kyo", "aliases": ["kyo"]},
+            {"type": "person", "id": "streetkyo", "name": "streetkyo", "aliases": ["streetkyo"]},
+        ]
+        snapshots = [
+            {
+                "account_id": "aki",
+                "profile_url": "https://x.com/pua_aki_",
+                "summary": "Pickup Artist PUA aki @ tokyo pickup life",
+                "profile_text": "Pickup Artist PUA aki @ tokyo pickup life",
+                "observations": [],
+            }
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        materialize_inferred_social_edges(graph, seed_entities, snapshots)
+        pairs = {(edge.source, edge.target, edge.type) for edge in graph.edges}
+        self.assertNotIn(("aki", "kyo", "profile_mention"), pairs)
+        self.assertNotIn(("aki", "streetkyo", "profile_mention"), pairs)
+
+    def test_thin_x_profile_description_is_replaced_by_snapshot_summary(self) -> None:
+        seed_entities = [
+            {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},
+        ]
+        snapshots = [
+            {
+                "account_id": "alpha",
+                "profile_url": "https://x.com/alpha",
+                "summary": "ストリートナンパの記録。",
+                "observations": [],
+            }
+        ]
+        graph = build_graph_from_sources(seed_entities, snapshots)
+        alpha = next(node for node in graph.nodes if node.id == "alpha")
+        self.assertEqual(alpha.description, "ストリートナンパの記録。")
+
     def test_detected_platform_node_is_created_when_missing(self) -> None:
         seed_entities = [
             {"type": "person", "id": "alpha", "name": "Alpha", "aliases": []},

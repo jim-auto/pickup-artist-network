@@ -49,6 +49,10 @@ SCENE_BIO = re.compile(
     r"強オス|口説き|PUA|pua|nampa|nanpa|netonan|tinder)",
     re.IGNORECASE,
 )
+MAIN_POINTER = re.compile(
+    r"(?:本垢|メイン|本アカ)\s*[→➡>\-:]+\s*@([A-Za-z0-9_]{2,30})",
+    re.IGNORECASE,
+)
 
 
 def _load_json_list(path: Path) -> list[dict[str, object]]:
@@ -112,7 +116,9 @@ def _normalize_discovery(row: dict[str, object]) -> dict[str, object] | None:
         "mentions": mentions,
         "sources": ["grok-x-integration"],
         "screened_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "review_notes": INGEST_NOTE,
+        "review_notes": str(row.get("review_notes") or INGEST_NOTE),
+        "relation_type": str(row.get("relation_type") or "profile_mention").strip()
+        or "profile_mention",
     }
 
 
@@ -135,7 +141,12 @@ def _eligible_profiles(rows: list[dict[str, object]], limit: int | None) -> list
             f"{row.get('name', '')}\n{row.get('summary', '')}\n"
             f"{row.get('profile_text', '')}\n{row.get('handle', '')}"
         )
-        if not (BIO_SCENE.search(text) or PROMOTION_BIO_SCENE.search(text) or SCENE_BIO.search(text)):
+        has_scene = bool(
+            BIO_SCENE.search(text) or PROMOTION_BIO_SCENE.search(text) or SCENE_BIO.search(text)
+        )
+        pointer = MAIN_POINTER.search(text)
+        points_to_seed = bool(pointer and pointer.group(1).casefold() in existing)
+        if not has_scene and not points_to_seed:
             continue
         seen.add(account_id.casefold())
         out.append(row)
@@ -152,7 +163,7 @@ def _seed_handle_to_id() -> dict[str, str]:
         if not line or line.startswith("#"):
             continue
         parts = [part.strip() for part in line.split("|")]
-        if len(parts) < 2 or parts[0] != "person":
+        if len(parts) < 2:
             continue
         account_id = parts[1]
         mapping[account_id.casefold()] = account_id
@@ -175,6 +186,70 @@ def _is_missing_or_default_icon(icon_url: object) -> bool:
         or "abs.twimg.com/sticky/default_profile_images" in lowered
         or lowered.endswith("default_profile.png")
     )
+
+
+def _is_thin_profile_text(value: object) -> bool:
+    text = str(value or "").strip()
+    if not text:
+        return True
+    if re.match(r"^X profile for\s", text, re.IGNORECASE):
+        return True
+    if text.startswith("@") and "\n" not in text and len(text) < 40:
+        return True
+    return False
+
+
+def _backfill_profiles_from_discoveries(rows: list[dict[str, object]]) -> int:
+    """Fill thin generated snapshot bios/names from Grok X discoveries."""
+    if not GENERATED_SNAPSHOT_FILE.exists():
+        return 0
+    snapshots = _load_json_list(GENERATED_SNAPSHOT_FILE)
+    by_id = {
+        str(snapshot.get("account_id", "")).strip(): snapshot
+        for snapshot in snapshots
+        if str(snapshot.get("account_id", "")).strip()
+    }
+    handle_map = _seed_handle_to_id()
+    updated = 0
+    for raw in rows:
+        handle = _normalize_handle(raw.get("handle") or raw.get("username"))
+        if not handle:
+            continue
+        bio = str(raw.get("bio") or raw.get("summary") or raw.get("description") or "").strip()
+        name = str(raw.get("name") or "").strip()
+        followers = int(raw.get("followers") or raw.get("follower_count") or 0)
+        if not bio and not name and followers <= 0:
+            continue
+        account_id = str(raw.get("account_id") or handle_to_id(handle)).strip()
+        target_ids = {
+            account_id,
+            handle_map.get(handle.casefold(), ""),
+            handle_map.get(account_id.casefold(), ""),
+            handle_map.get(account_id.replace("-", "_").casefold(), ""),
+        }
+        for target_id in target_ids:
+            if not target_id or target_id not in by_id:
+                continue
+            snapshot = by_id[target_id]
+            changed = False
+            if bio and _is_thin_profile_text(snapshot.get("summary")):
+                snapshot["summary"] = bio
+                changed = True
+            if bio and _is_thin_profile_text(snapshot.get("profile_text")):
+                label = name or f"@{handle}"
+                snapshot["profile_text"] = f"{label} (@{handle})\n{bio}"
+                changed = True
+            if followers > 0 and int(snapshot.get("follower_count") or 0) < followers:
+                snapshot["follower_count"] = followers
+                changed = True
+            if changed:
+                notes = str(snapshot.get("review_notes", "")).strip()
+                note = "Profile text backfilled from Grok X integration discovery."
+                snapshot["review_notes"] = " ".join(dict.fromkeys([notes, note])).strip()
+                updated += 1
+    if updated:
+        _write_json(GENERATED_SNAPSHOT_FILE, snapshots)
+    return updated
 
 
 def _backfill_icons_from_discoveries(rows: list[dict[str, object]]) -> int:
@@ -256,7 +331,7 @@ def _add_one_relation(
     already = any(
         isinstance(obs, dict)
         and str(obs.get("target", "")) == target_id
-        and str(obs.get("type", "")) in {"profile_mention", "influence", "follow", "collaboration"}
+        and str(obs.get("type", "")) == edge_type
         for obs in observations
     )
     if already:
@@ -312,10 +387,19 @@ def _add_relation_observations(rows: list[dict[str, object]]) -> int:
         handle = _normalize_handle(row.get("handle"))
         account_id = str(row.get("account_id") or handle_to_id(handle)).strip()
         post_url = str(row.get("post_url") or f"https://x.com/{handle}")
-        edge_type = str(row.get("relation_type") or "profile_mention").strip() or "profile_mention"
-        if edge_type not in {"profile_mention", "influence", "collaboration", "follow"}:
+        edge_type = str(
+            raw.get("relation_type") or row.get("relation_type") or "profile_mention"
+        ).strip() or "profile_mention"
+        if edge_type not in {
+            "profile_mention",
+            "influence",
+            "collaboration",
+            "follow",
+            "activity",
+            "affiliation",
+        }:
             edge_type = "profile_mention"
-        note = str(row.get("review_notes") or INGEST_NOTE)
+        note = str(raw.get("review_notes") or row.get("review_notes") or INGEST_NOTE)
 
         # A) others mention this account
         for source_handle in row.get("mentioned_by") or []:
@@ -434,11 +518,13 @@ def main() -> None:
 
     # Backfill real icons onto existing generated snapshots / later graph rebuild.
     icon_updated = _backfill_icons_from_discoveries(raw_rows)
+    profile_updated = _backfill_profiles_from_discoveries(raw_rows)
     # Always apply solid relations from all discoveries (including already-seeded).
     relation_added = _add_relation_observations(raw_rows + eligible)
     print(
         f"[OK] applied {len(promo_rows)} Grok X discoveries; "
-        f"icons updated={icon_updated}; solid relations +{relation_added}"
+        f"icons updated={icon_updated}; profiles updated={profile_updated}; "
+        f"solid relations +{relation_added}"
     )
 
 

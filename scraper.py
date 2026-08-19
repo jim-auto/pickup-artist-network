@@ -110,6 +110,7 @@ REAL_GROWTH_PHASES = (
     {"label": "Phase 6", "real_person_target": 1000},
 )
 CJK_TOKEN_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]")
+LATIN_TOKEN_RE = re.compile(r"^[A-Za-z0-9_]+$")
 X_STYLE_HANDLE_RE = re.compile(r"^[A-Za-z0-9_]{3,15}$")
 AMBIGUOUS_PERSON_ALIAS_RE = re.compile(r"^[A-Za-zＡ-Ｚａ-ｚ][氏さん様くんちゃん]$")
 DEFAULT_MATERIALIZED_REVIEW_EDGE_TYPES = frozenset(
@@ -1115,6 +1116,7 @@ def apply_source_snapshots(
         if summary and (
             not source_node.description
             or source_node.description.startswith("Seed entity placeholder")
+            or re.match(r"^X profile for\s", source_node.description, re.IGNORECASE)
         ):
             source_node.description = summary
 
@@ -1286,6 +1288,21 @@ def is_ambiguous_review_match_token(token: str) -> bool:
     return bool(AMBIGUOUS_PERSON_ALIAS_RE.fullmatch(normalized))
 
 
+def mention_token_in_text(token: str, text: str) -> bool:
+    """Require a bounded match for short Latin aliases so 'kyo' does not hit 'tokyo'."""
+    needle = str(token or "").strip().casefold()
+    haystack = str(text or "").casefold()
+    if not needle or needle not in haystack:
+        return False
+    if token.startswith("@") or CJK_TOKEN_RE.search(token):
+        return True
+    if LATIN_TOKEN_RE.fullmatch(token):
+        return bool(
+            re.search(rf"(?<![A-Za-z0-9_]){re.escape(needle)}(?![A-Za-z0-9_])", haystack)
+        )
+    return True
+
+
 def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> list[dict[str, str]]:
     matchers: list[dict[str, str]] = []
     for entity in seed_entities:
@@ -1296,6 +1313,8 @@ def build_review_candidate_matchers(seed_entities: list[dict[str, object]]) -> l
         for raw_token in [entity.get("name", ""), *entity.get("aliases", [])]:
             token = str(raw_token).strip()
             if len(token) < 3 and not (len(token) >= 2 and CJK_TOKEN_RE.search(token)):
+                continue
+            if LATIN_TOKEN_RE.fullmatch(token) and len(token) < 4:
                 continue
             if is_ambiguous_review_match_token(token):
                 continue
@@ -1479,7 +1498,7 @@ def generate_review_candidates(
                 target_id = matcher["target"]
                 if target_id == source_id:
                     continue
-                if matcher["matched_text_lower"] not in lowered_text:
+                if not mention_token_in_text(str(matcher["matched_text"]), raw_text):
                     continue
 
                 source_type = str(entity_lookup[source_id].get("type", "")).strip()

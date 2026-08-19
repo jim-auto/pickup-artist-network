@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T02:13:20+00:00",
+  "updated_at": "2026-08-19T15:06:33+00:00",
   "decisions": {
     "enhypen": {
       "node_id": "enhypen",
@@ -5567,12 +5567,12 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "ナムス👼🏻",
       "score": 44,
-      "reasons": [
-        "missing relevance keyword"
-      ],
       "degree": 3,
       "solid_degree": 3,
       "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword"
+      ],
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "bbseac": {
@@ -5581,13 +5581,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@bbseac",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "happy-0721-nan": {
@@ -5596,13 +5596,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "奈落の花",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "bakker7": {
@@ -5611,13 +5611,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@bakker7",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "science11tech": {
@@ -5626,14 +5626,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@science11tech",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "sougo-zido-01": {
@@ -5642,13 +5642,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@sougo_zido_01",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "pi-uou": {
@@ -5657,14 +5657,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@pi_uou",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "heefoomee2": {
@@ -5673,14 +5673,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@heefoomee2",
       "score": 44,
+      "degree": 10,
+      "solid_degree": 0,
+      "assistive_degree": 10,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "10 auto bridge edges"
       ],
-      "degree": 10,
-      "solid_degree": 0,
-      "assistive_degree": 10,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "bed-gekitsuiou": {
@@ -5689,13 +5689,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@bed_gekitsuiou",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "takigare3": {
@@ -5704,13 +5704,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@takigare3",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "ankoromochi2017": {
@@ -5719,13 +5719,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@ankoromochi2017",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "seikoupenguin": {
@@ -5734,14 +5734,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@seikoupenguin",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "sp6hf": {
@@ -5750,13 +5750,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@Sp6hF",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "tateshiiiiiiiii": {
@@ -5765,13 +5765,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@tateshiiiiiiiii",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "danqdao": {
@@ -5780,13 +5780,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@danqdao",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "lr0tvq4eaehngq9": {
@@ -5795,14 +5795,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@Lr0tvQ4eAehngQ9",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "all-seiron2": {
@@ -5811,13 +5811,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@ALL_SEIRON2",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "kk-ganbaru": {
@@ -5826,14 +5826,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@kk_ganbaru",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "0530riri": {
@@ -5842,13 +5842,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@0530riri",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "t-a-i-y-a-n": {
@@ -5857,13 +5857,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@t_a_i_y_a_n",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "vo-gnj": {
@@ -5872,14 +5872,14 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@vo_gnj",
       "score": 44,
+      "degree": 8,
+      "solid_degree": 0,
+      "assistive_degree": 8,
       "reasons": [
         "missing relevance keyword",
         "no solid account edges",
         "8 auto bridge edges"
       ],
-      "degree": 8,
-      "solid_degree": 0,
-      "assistive_degree": 8,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "1time2time2time": {
@@ -5888,13 +5888,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@1time2time2time",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "dontwannawork": {
@@ -5903,13 +5903,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@dontwannawork",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "hgdbsc": {
@@ -5918,13 +5918,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@hgdbsc",
       "score": 44,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "no account edges"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "238383": {
@@ -5933,15 +5933,15 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@238383",
       "score": 42,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
         "no account edges",
         "thin profile text"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "a0i-7": {
@@ -5950,15 +5950,15 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@a0i_7",
       "score": 42,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
         "no account edges",
         "thin profile text"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "ruisboss": {
@@ -5967,15 +5967,15 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "ruisboss",
       "score": 42,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
         "no account edges",
         "thin profile text"
       ],
-      "degree": 0,
-      "solid_degree": 0,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "aizfr": {
@@ -5984,6 +5984,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@aizfr",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -5991,9 +5994,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "amekundayo": {
@@ -6002,6 +6002,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@amekundayo_",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6009,9 +6012,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "charai-nezumi": {
@@ -6020,6 +6020,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@charai_nezumi",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6027,9 +6030,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "charai-nezumi2": {
@@ -6038,6 +6038,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@charai_nezumi2",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6045,9 +6048,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "meimei-money": {
@@ -6056,6 +6056,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@meimei_money",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6063,9 +6066,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "neoneet-ai2": {
@@ -6074,6 +6074,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@neoneet_ai2",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6081,9 +6084,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "newamekundayo": {
@@ -6092,6 +6092,9 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@newamekundayo",
       "score": 40,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "missing follower count",
@@ -6099,9 +6102,6 @@
         "missing real icon",
         "thin profile text"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "moneygirl-first": {
@@ -6110,13 +6110,13 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "@moneygirl_first",
       "score": 32,
+      "degree": 1,
+      "solid_degree": 1,
+      "assistive_degree": 0,
       "reasons": [
         "missing relevance keyword",
         "only 1 solid account edges"
       ],
-      "degree": 1,
-      "solid_degree": 1,
-      "assistive_degree": 0,
       "updated_at": "2026-05-25T02:13:20+00:00"
     },
     "namusubkun": {
@@ -6125,13 +6125,78 @@
       "note": "bulk dogfood: remaining low-priority thin profile without public nanpa/PUA relevance evidence",
       "name": "namusub",
       "score": 24,
-      "reasons": [
-        "missing relevance keyword"
-      ],
       "degree": 3,
       "solid_degree": 3,
       "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword"
+      ],
       "updated_at": "2026-05-25T02:13:20+00:00"
+    },
+    "dtnanpa-kazu1": {
+      "node_id": "dtnanpa-kazu1",
+      "status": "exclude",
+      "note": "off-topic or handle-only: empty public bio / no self-described pickup evidence",
+      "name": "数一",
+      "score": 72,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-08-19T15:06:33+00:00"
+    },
+    "shirodouga": {
+      "node_id": "shirodouga",
+      "status": "exclude",
+      "note": "off-topic or handle-only: empty public bio / no self-described pickup evidence",
+      "name": "@shirodouga",
+      "score": 70,
+      "degree": 12,
+      "solid_degree": 2,
+      "assistive_degree": 10,
+      "reasons": [
+        "missing relevance keyword",
+        "high-follower outlier",
+        "only 2 solid account edges",
+        "10 auto bridge edges"
+      ],
+      "updated_at": "2026-08-19T15:06:33+00:00"
+    },
+    "mange-daisuke": {
+      "node_id": "mange-daisuke",
+      "status": "exclude",
+      "note": "off-topic or handle-only: empty public bio / no self-described pickup evidence",
+      "name": "ら＠ストロング勢",
+      "score": 52,
+      "degree": 0,
+      "solid_degree": 0,
+      "assistive_degree": 0,
+      "reasons": [
+        "missing relevance keyword",
+        "no account edges",
+        "thin profile text"
+      ],
+      "updated_at": "2026-08-19T15:06:33+00:00"
+    },
+    "starcabyyy": {
+      "node_id": "starcabyyy",
+      "status": "keep",
+      "note": "self-described 完ソロスト / ストのみ on public profile",
+      "name": "@starcabyyy",
+      "score": 44,
+      "reasons": [
+        "missing relevance keyword",
+        "no solid account edges",
+        "2 auto bridge edges"
+      ],
+      "degree": 2,
+      "solid_degree": 0,
+      "assistive_degree": 2,
+      "updated_at": "2026-08-19T15:06:33+00:00"
     }
   }
 }

@@ -2538,6 +2538,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "hancho-pua",
+        "type": "profile_mention",
+        "description": "Public bio identifies this account in relation to はんちょう.",
+        "source_urls": [
+          "https://x.com/aizen_pua"
+        ],
+        "confidence": 0.8,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio identifies this account as a sub/video/male-limited account of an already-seeded person by name."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1765655694601252864/11_yQd4r_400x400.jpg",
@@ -4576,7 +4588,7 @@
     "account_id": "anshin-pua",
     "profile_url": "https://x.com/anshin__pua",
     "pinned_post_url": "",
-    "icon_url": "https://pbs.twimg.com/profile_images/2046485570587938816/RKvUi2Jz_400x400.jpg",
+    "icon_url": "https://pbs.twimg.com/profile_images/2063296560876945408/6lteq8Et.jpg",
     "follower_count": 3644,
     "profile_text": "あんしん (@anshin__pua)\n真っ当に生きる必要はない🎀この舞台で足掻くことをやめない😌679人斬りナンパ師\nLocation: 関西",
     "pinned_post_text": "",
@@ -4586,7 +4598,7 @@
     "summary": "真っ当に生きる必要はない🎀この舞台で足掻くことをやめない😌679人斬りナンパ師",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Icon refreshed from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -4610,6 +4622,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "gureran-m",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @anshin__pua to @gureran_m.",
+        "source_urls": [
+          "https://x.com/anshin__pua/status/2053085461606998344",
+          "https://x.com/gureran_m"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) names まーぼーさん as a lecturer whose paid lesson this account wants."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @anshin__pua to @matching-apps.",
+        "source_urls": [
+          "https://x.com/anshin__pua/status/2090031186089517118",
+          "https://x.com/matching-apps"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) reports ネトアポ即."
       }
     ]
   },
@@ -7093,6 +7131,32 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "ikemenmaker-pua",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @azukikouhai to @ikemenmaker_pua.",
+        "source_urls": [
+          "https://x.com/azukikouhai/status/1773616092348321842",
+          "https://x.com/ikemenmaker_pua"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original quote (not a reply): @azukikouhai quoted this public スト高 profile."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @azukikouhai to @matching-apps.",
+        "source_urls": [
+          "https://x.com/azukikouhai/status/1873926258322723185",
+          "https://x.com/matching-apps"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) describes マチアプ in Turkey."
       }
     ]
   },
@@ -8008,6 +8072,18 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/banabanasan"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1639206397480148992/yR9omhWw_400x400.jpg",
@@ -9028,6 +9104,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "instagram",
+        "type": "affiliation",
+        "description": "Grok X integration found a public post/mention connecting @982thebeat to @instagram.",
+        "source_urls": [
+          "https://x.com/982thebeat/status/2021806226561282407",
+          "https://x.com/instagram"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) announces Instagram @nanpatarou_ / @nasopa.tarou."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1937213216440090624/y_DP0oeK_400x400.jpg",
@@ -12325,6 +12414,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "chiba-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/chiba_gqn",
+          "https://note.com/sn_wars245"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1812058941041364992/DEv82jk0_400x400.jpg",
@@ -14076,7 +14178,7 @@
     "account_id": "choro-tinder3",
     "profile_url": "https://x.com/choro_tinder",
     "pinned_post_url": "",
-    "profile_text": "@choro_tinder3",
+    "profile_text": "チョロくん@陰キャでも抱けるTinder講習 (@choro_tinder)\nTinder無双。大学でナンパやTinderで経験人数100人を達成。",
     "pinned_post_text": "",
     "links": [
       "https://x.com/choro_tinder3"
@@ -14084,7 +14186,7 @@
     "summary": "Tinder無双。大学でナンパやTinderで経験人数100人を達成。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -14457,7 +14559,60 @@
       "pinned_post_fetched_url": "",
       "collected_at": "2026-05-11T03:30:33+00:00"
     },
-    "observations": []
+    "observations": [
+      {
+        "target": "suisei-nanpa",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @clubtropixxx1 to @suiseinanpa.",
+        "source_urls": [
+          "https://x.com/clubtropixxx1/status/2089747755426365559",
+          "https://x.com/suiseinanpa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @clubtropixxx1 to @matching-apps.",
+        "source_urls": [
+          "https://x.com/clubtropixxx1/status/1460969809563119617",
+          "https://x.com/matching-apps"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) says ストもTinderも修行には最高."
+      },
+      {
+        "target": "shibuya",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @clubtropixxx1 to @shibuya.",
+        "source_urls": [
+          "https://x.com/clubtropixxx1/status/1518250242797600768",
+          "https://x.com/shibuya"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) describes 渋谷 as a field."
+      },
+      {
+        "target": "clubtropixxx-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/clubtropixxx1",
+          "https://note.com/clubtropixxx1"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
   },
   {
     "account_id": "colabo-yumeno",
@@ -14616,7 +14771,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/cornwallcapital"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1063043931653324800/NQXJn8p7_400x400.jpg",
     "follower_count": 64954
   },
@@ -14738,7 +14906,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/cry_curr_ar"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1910618340453998592/WO9rBHuk_400x400.jpg",
     "follower_count": 32410
   },
@@ -15381,7 +15562,7 @@
     "summary": "お金を持たずに楽器１つで世界一周して帰国して起業。34歳。沖縄出身。去年まで議員。BARとエステサロンの経営とか営業コーチングとかやってます。押し売りチャンネル頑張りたい(概要欄)ここよくいます→ ＠layovershinjuku",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -15429,10 +15610,36 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "layover-shinjuku",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @daioki0430 to @layovershinjuku.",
+        "source_urls": [
+          "https://x.com/daioki0430",
+          "https://x.com/layovershinjuku"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public bio @mention of Layover BAR."
+      },
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @daioki0430 to @shinjuku.",
+        "source_urls": [
+          "https://x.com/daioki0430",
+          "https://x.com/shinjuku"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public bio points to a Shinjuku BAR."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1920415081113825280/Xg5qw6Rf_400x400.jpg",
-    "follower_count": 6964
+    "follower_count": 7507
   },
   {
     "account_id": "dakochitex",
@@ -20421,7 +20628,7 @@
     "account_id": "eren-pua",
     "profile_url": "https://x.com/eren_PUAthlete",
     "pinned_post_url": "",
-    "profile_text": "@eren_pua",
+    "profile_text": "えれん@迫害されし馬面色黒族 (@eren_PUAthlete)\nアラツー｜100即｜外見コンプPUA｜地蔵王｜ノンバ最強 @fumiki_mka｜師匠 @vegeta_street_",
     "pinned_post_text": "",
     "links": [
       "https://x.com/eren_pua"
@@ -20429,7 +20636,7 @@
     "summary": "アラツー｜100即｜外見コンプPUA｜地蔵王｜ノンバ最強 @fumiki_mka｜師匠 @vegeta_street_",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -20635,15 +20842,15 @@
     "account_id": "etokyojam",
     "profile_url": "https://x.com/etokyojam",
     "pinned_post_url": "",
-    "profile_text": "@etokyojam",
+    "profile_text": "Dくん｜恋愛・モテ・マッチングアプリ・インスタ (@etokyojjam)\n【恋愛･美女モテ･アプリ･インスタ｜情報発信垢】note43,000部&売上億突破📕コンサル850人｜元非モテの不細工がネット出会いで美女無双",
     "pinned_post_text": "",
     "links": [
       "https://x.com/etokyojam"
     ],
-    "summary": "X profile for @etokyojam.",
+    "summary": "【恋愛･美女モテ･アプリ･インスタ｜情報発信垢】note43,000部&売上億突破📕コンサル850人｜元非モテの不細工がネット出会いで美女無双",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -20668,7 +20875,8 @@
       ]
     },
     "observations": [],
-    "icon_url": "https://pbs.twimg.com/profile_images/1564581210654789632/SPUduTb1.jpg"
+    "icon_url": "https://pbs.twimg.com/profile_images/1564581210654789632/SPUduTb1.jpg",
+    "follower_count": 8
   },
   {
     "account_id": "etoriasan",
@@ -21184,6 +21392,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "tindergod-tips",
+        "type": "monetization",
+        "description": "Public sub-account profile links the same フェイタン Tips catalog.",
+        "source_urls": [
+          "https://x.com/Feitan_sub",
+          "https://tips.jp/u/Tinder_god"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1762819331321372672/5B2-V1e1_400x400.jpg",
@@ -22393,6 +22614,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "futaro-youtube",
+        "type": "affiliation",
+        "description": "Public X profile links this account's youtube catalog.",
+        "source_urls": [
+          "https://x.com/futaro_pua",
+          "https://www.youtube.com/@user-futaro_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2037104066095177729/zYXz-SnR_400x400.jpg",
@@ -24935,7 +25169,7 @@
     "profile_url": "https://x.com/haisupe_bijo",
     "pinned_post_url": "",
     "icon_url": "https://pbs.twimg.com/profile_images/1561380509967843329/fV7-gzxY_400x400.jpg",
-    "follower_count": 1015,
+    "follower_count": 1062,
     "profile_text": "メタトロンA子 (@haisupe_bijo)\n🇰🇷🇯🇵美容/転職失敗無職契約切りの屈辱を忘れるな\nLocation: ⚠️整形美容以外＆閲覧＆リア垢&鍵はブロ解🚨",
     "pinned_post_text": "",
     "links": [
@@ -24944,7 +25178,7 @@
     "summary": "🇰🇷🇯🇵美容/転職失敗無職契約切りの屈辱を忘れるな",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -26077,6 +26311,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "hanzo-tips",
+        "type": "monetization",
+        "description": "Public X profile links this account's tips catalog.",
+        "source_urls": [
+          "https://x.com/hanzo_prim",
+          "https://tips.jp/u/hanzo_tips"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1279254608905297920/JtvmJQ3j_400x400.jpg",
@@ -26212,15 +26459,15 @@
     "account_id": "happynampa",
     "profile_url": "https://x.com/happynampa",
     "pinned_post_url": "",
-    "profile_text": "@happynampa",
+    "profile_text": "HappyNampa (@HappyNampa)\nメイン@uptesto7",
     "pinned_post_text": "",
     "links": [
       "https://x.com/happynampa"
     ],
-    "summary": "X profile for @happynampa.",
+    "summary": "メイン@uptesto7",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -26244,7 +26491,34 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nakaboshisama",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @HappyNampa to @nakaboshisama.",
+        "source_urls": [
+          "https://x.com/HappyNampa/status/1892799557227934190",
+          "https://x.com/nakaboshisama"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) discusses 中星."
+      },
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @HappyNampa to @tokyo.",
+        "source_urls": [
+          "https://x.com/HappyNampa/status/1890763737612636335",
+          "https://x.com/tokyo"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) describes 東京駅〜大手町 as a field."
+      }
+    ],
     "follower_count": 5481,
     "icon_url": "https://pbs.twimg.com/profile_images/1890922781329760256/teG_BLue_400x400.png"
   },
@@ -26520,15 +26794,15 @@
     "account_id": "hapuchantinder",
     "profile_url": "https://x.com/hapuchantinder",
     "pinned_post_url": "",
-    "profile_text": "@hapuchantinder",
+    "profile_text": "ハプちゃん@直ハプバー|直家Tinder即師|マッチングアプリのプロ (@hapuchantinder3)\n🔥今世紀最大のブサイク🔥が顔見せ無しで▲年間100即以上▲世界1コスパいいSEX▲Tinder直家or直ハプバーのみ　|時間と金削減　|日本一教えるの得意|Tinder⇒年間100即With⇒1日で1000いいね|フォローすると“必ずモテます”　講習依頼はDMまで☺️",
     "pinned_post_text": "",
     "links": [
       "https://x.com/hapuchantinder"
     ],
-    "summary": "X profile for @hapuchantinder.",
+    "summary": "🔥今世紀最大のブサイク🔥が顔見せ無しで▲年間100即以上▲世界1コスパいいSEX▲Tinder直家or直ハプバーのみ　|時間と金削減　|日本一教えるの得意|Tinder⇒年間100即With⇒1日で1000いいね|フォローすると“必ずモテます”　講習依頼はDMまで☺️",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -26553,7 +26827,8 @@
       ]
     },
     "observations": [],
-    "icon_url": "https://pbs.twimg.com/profile_images/1469761737830191108/SXs_AiRh.jpg"
+    "icon_url": "https://pbs.twimg.com/profile_images/1469761737830191108/SXs_AiRh.jpg",
+    "follower_count": 32
   },
   {
     "account_id": "haputinder",
@@ -28017,7 +28292,7 @@
     "profile_url": "https://x.com/hiroyukinanpa",
     "pinned_post_url": "",
     "icon_url": "https://pbs.twimg.com/profile_images/1963966614740905984/4IlD63AQ_400x400.jpg",
-    "follower_count": 765,
+    "follower_count": 865,
     "profile_text": "ヒロユキ@46歳現役ナンパ師 (@hiroyukinanpa)\n街とアプリを主戦場にする現役プレイヤー。 ナンパとは女という他者を通して自分の生き方を問い直す、実践的な哲学だと思っています。 ナンパ・恋愛初心者が一歩踏み出すための心構えとスキルを言語化。 失敗談をベースに「やってはいけないこと」から伝えます。 ※スト合流・ナンパ相談はお気軽にDMへ",
     "pinned_post_text": "",
     "links": [
@@ -28026,7 +28301,7 @@
     "summary": "街とアプリを主戦場にする現役プレイヤー。 ナンパとは女という他者を通して自分の生き方を問い直す、実践的な哲学だと思っています。 ナンパ・恋愛初心者が一歩踏み出すための心構えとスキルを言語化。 失敗談をベースに「やってはいけないこと」から伝えます。 ※スト合流・ナンパ相談はお気軽にDMへ",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -31592,7 +31867,7 @@
     "profile_url": "https://x.com/joker_nanpa",
     "pinned_post_url": "",
     "icon_url": "https://pbs.twimg.com/profile_images/1825797210640101376/IbJutpT4_400x400.jpg",
-    "follower_count": 3431,
+    "follower_count": 3439,
     "profile_text": "ジョーカー@美女縛りで200GET｜講師歴5年｜トップナンパ講師が15名受講するコンサル (@joker_nanpa)\n日本一成果を出すモテコンサル/初心者含め美女GET達成率82％/トップナンパ講師が15名受講/講習生は計100名以上/ 非モテ、陰キャ、コミュ症で経験人数1桁→100人切り達成→六本木NO1嬢、有名雑誌表紙美女、朝ドラ女優、世界的モデルGET/イケてる男と美女が沼るコミュ力/表では出せない裏話→@JokerNanpa\nLocation: ▼ため息が出るほど学びになるアポ実例ブログ",
     "pinned_post_text": "",
     "links": [
@@ -31602,7 +31877,7 @@
     "summary": "日本一成果を出すモテコンサル/初心者含め美女GET達成率82％/トップナンパ講師が15名受講/講習生は計100名以上/ 非モテ、陰キャ、コミュ症で経験人数1桁→100人切り達成→六本木NO1嬢、有名雑誌表紙美女、朝ドラ女優、世界的モデルGET/イケてる男と美女が沼るコミュ力/表では出せない裏話→@JokerNanpa",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -34676,7 +34951,7 @@
     "account_id": "katsuki-seike",
     "profile_url": "https://x.com/katsuki_seikei",
     "pinned_post_url": "",
-    "profile_text": "@katsuki_seike",
+    "profile_text": "かんこくん｜モテ特化整形論 (@katsuki_seikei)\n整形を研究してます。単発コンサル150名以上。長期コンサル30名以上。",
     "pinned_post_text": "",
     "links": [
       "https://x.com/katsuki_seike"
@@ -34684,7 +34959,7 @@
     "summary": "整形を研究してます。単発コンサル150名以上。長期コンサル30名以上。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -35894,7 +36169,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/kazu_fujisawa"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/669366272/KinyuuNikkiWadokaichin_400x400.jpg",
     "follower_count": 206190
   },
@@ -41696,6 +41984,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "kuma-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/kuma661",
+          "https://note.com/iwkm"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ]
   },
@@ -43119,6 +43420,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "kurosaka-youtube",
+        "type": "affiliation",
+        "description": "Public X profile links this account's youtube catalog.",
+        "source_urls": [
+          "https://x.com/kurosaka_pua",
+          "https://www.youtube.com/@kurosaka_pua_with_you"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2036300420931526656/bFEFPpty_400x400.jpg",
@@ -43128,15 +43442,15 @@
     "account_id": "kurosaka-pua-wi",
     "profile_url": "https://x.com/kurosaka_pua_wi",
     "pinned_post_url": "",
-    "profile_text": "@kurosaka_pua_wi",
+    "profile_text": "黒坂PUA (@kurosaka_pua)\n🐶🦁🦉🦐🏖️メイン。 ナンパの成功も失敗も発信します。美容に興味あり。楽しんでいってください。youtubeやってます。",
     "pinned_post_text": "",
     "links": [
       "https://x.com/kurosaka_pua_wi"
     ],
-    "summary": "X profile for @kurosaka_pua_wi.",
+    "summary": "🐶🦁🦉🦐🏖️メイン。 ナンパの成功も失敗も発信します。美容に興味あり。楽しんでいってください。youtubeやってます。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -43160,8 +43474,22 @@
         }
       ]
     },
-    "observations": [],
-    "icon_url": "https://pbs.twimg.com/profile_images/2036300420931526656/bFEFPpty.jpg"
+    "observations": [
+      {
+        "target": "kurosaka-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @kurosaka_pua.",
+        "source_urls": [
+          "https://x.com/kurosaka_pua_wi"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
+    "icon_url": "https://pbs.twimg.com/profile_images/2036300420931526656/bFEFPpty.jpg",
+    "follower_count": 314
   },
   {
     "account_id": "kurosakikun",
@@ -44721,6 +45049,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "luckysub01",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @luckypua017 to @luckysub01.",
+        "source_urls": [
+          "https://x.com/luckypua017",
+          "https://x.com/luckysub01"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
       }
     ]
   },
@@ -46138,7 +46479,7 @@
     "summary": "大学生/スト＆ネト＆📦/🦁メイン/2025.3.14～/107即（📦6/ネト24 /スト65/その他12）/🎩×5/味噌、帝都、🐙で🎩達成/📦逆即達成/現カノ1/キープ2/2026.4.28累計100即達成 /5ヶ月連続10即達成/月間最高16即/3ヶ月連続月間最高即数更新/10出撃連続勝利",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -46217,7 +46558,7 @@
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/2005445796607733761/-38iJMCx_400x400.jpg",
-    "follower_count": 208
+    "follower_count": 380
   },
   {
     "account_id": "mamemame-nanpa",
@@ -48599,7 +48940,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/MCV0Sm0pdu9esBT"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1885716159225589760/CHdC9Iwy_400x400.jpg",
     "follower_count": 4162
   },
@@ -49166,7 +49520,7 @@
     "account_id": "mero-tinder",
     "profile_url": "https://x.com/mero__tinder",
     "pinned_post_url": "",
-    "profile_text": "@mero_tinder",
+    "profile_text": "メロ (@mero__tinder)\nメロ Tinder",
     "pinned_post_text": "",
     "links": [
       "https://x.com/mero_tinder"
@@ -49174,7 +49528,7 @@
     "summary": "メロ Tinder",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -49210,6 +49564,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @mero__tinder to @matching-apps.",
+        "source_urls": [
+          "https://x.com/mero__tinder",
+          "https://x.com/matching-apps"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X handle/profile is Tinder-specialized; original posts were empty."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1812599541461340161/_oMiUD-S.jpg",
@@ -50552,6 +50919,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "mikky-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/mikky_motecoach",
+          "https://note.com/mickey_11"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1938100603324178432/ofLR5f43_400x400.jpg",
@@ -51754,6 +52134,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "mikky-note",
+        "type": "monetization",
+        "description": "Public X profile links the same みっきー note catalog.",
+        "source_urls": [
+          "https://x.com/mky_match",
+          "https://note.com/mickey_11"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1973923412637777920/WUHiINqH_400x400.jpg",
@@ -60495,7 +60888,7 @@
     "summary": "ストリートナンパのプロ｜ナンパ界隈で最もnoteのフォロワーが多い人（累計4,643人）｜note累計20,000部販売｜週刊SPA！2022年8月掲載",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -60526,7 +60919,7 @@
     },
     "observations": [],
     "icon_url": "https://pbs.twimg.com/profile_images/1097749248806858753/dyA382Vx_400x400.jpg",
-    "follower_count": 33108
+    "follower_count": 33110
   },
   {
     "account_id": "norinori-10goku",
@@ -62181,6 +62574,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "rui-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/okashinaataoka",
+          "https://note.com/ruisboss"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ]
   },
@@ -63229,7 +63635,112 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "vegeta-street",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/vegeta_street_"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "foy-jibunmigaki",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/foy_jibunmigaki"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "nanpa-pegasasu",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/nanpa_pegasasu"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "sub-chilll",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/sub_chilll"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pika-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "mikeymikey0601",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/mikeymikey0601"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "mamemame-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/onesan_doumo",
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1650573999196499969/nAQEOFLh_400x400.jpg",
     "follower_count": 5654
   },
@@ -64044,15 +64555,15 @@
     "account_id": "oskeeeer",
     "profile_url": "https://x.com/oskeeeer",
     "pinned_post_url": "",
-    "profile_text": "@oskeeeer",
+    "profile_text": "雄華@雄華軍団団長 (@oskeeeer_pua)\n只今絶賛ワールドカップクラスタ。",
     "pinned_post_text": "",
     "links": [
       "https://x.com/oskeeeer"
     ],
-    "summary": "X profile for @oskeeeer.",
+    "summary": "只今絶賛ワールドカップクラスタ。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -64076,8 +64587,22 @@
         }
       ]
     },
-    "observations": [],
-    "icon_url": "https://pbs.twimg.com/profile_images/2075934650896408576/8L8s47rc.jpg"
+    "observations": [
+      {
+        "target": "oskeeeer-pua",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @oskeeeer_pua.",
+        "source_urls": [
+          "https://x.com/oskeeeer"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      }
+    ],
+    "icon_url": "https://pbs.twimg.com/profile_images/2075934650896408576/8L8s47rc.jpg",
+    "follower_count": 973
   },
   {
     "account_id": "oskeeeer-pua",
@@ -64092,7 +64617,7 @@
     "summary": "ゴリラフィー。熱血セックスモンスター。 ネト100即チャレンジ敢行中残り94即。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon refreshed from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -64300,8 +64825,8 @@
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
       }
     ],
-    "icon_url": "https://pbs.twimg.com/profile_images/2043634441680232448/_zxGJMSX_400x400.jpg",
-    "follower_count": 947
+    "icon_url": "https://pbs.twimg.com/profile_images/2075934650896408576/8L8s47rc.jpg",
+    "follower_count": 973
   },
   {
     "account_id": "osugi-pua",
@@ -66043,6 +66568,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "ikemenmaker-pua",
+        "type": "follow",
+        "description": "Authenticated X following list shows this account follows @ikemenmaker_pua.",
+        "source_urls": [
+          "https://x.com/pen_pen_st",
+          "https://x.com/pen_pen_st/following"
+        ],
+        "confidence": 0.64,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: authenticated following list materialised as solid follow between already-seeded accounts (high-follower low-degree fix)."
       }
     ]
   },
@@ -67690,6 +68228,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @pro_tinder to @matching-apps.",
+        "source_urls": [
+          "https://x.com/pro_tinder/status/1730427297172492375",
+          "https://x.com/matching-apps"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X original post (not a reply) discusses Tinder/タップル/東カレ."
       }
     ]
   },
@@ -67736,16 +68287,16 @@
     "account_id": "pua-aki",
     "profile_url": "https://x.com/pua_aki_",
     "pinned_post_url": "",
-    "profile_text": "@pua_aki_",
+    "profile_text": "秋aki (@PUA_aki_)\nPickup Artist　PUA aki 秋 @ tokyo pickup life　出会いをつくり出し、関係を深めていく。　魔法のような何か。　書籍『口説きの教典』翻訳版監修に参加。",
     "pinned_post_text": "",
     "links": [
       "https://x.com/pua_aki_",
       "https://x.com/PUA_aki_"
     ],
-    "summary": "X profile for @pua_aki_.",
+    "summary": "Pickup Artist　PUA aki 秋 @ tokyo pickup life　出会いをつくり出し、関係を深めていく。　魔法のような何か。　書籍『口説きの教典』翻訳版監修に参加。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -67774,7 +68325,20 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Public bio references 東京 (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/pua_aki_"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1688900972532363266/DYRpnQ3C_400x400.jpg",
     "follower_count": 1820
   },
@@ -69669,16 +70233,16 @@
     "account_id": "pua-nico",
     "profile_url": "https://x.com/pua_nico",
     "pinned_post_url": "",
-    "profile_text": "@pua_nico",
+    "profile_text": "nico ☻ (@PUA_nico)\n最後のPUA、ナンパ、恋愛工学。 2012年、理想の女性と出逢うため活動を始めました。 この人になら抱かれたいと思われる男へ☻即画即キャス等は定期的に消しています 。 無料note→ https://t.co/XUFiK0TyKk 講習→https://t.co/MBwtZR5cCg pr",
     "pinned_post_text": "",
     "links": [
       "https://x.com/pua_nico",
       "https://x.com/PUA_nico"
     ],
-    "summary": "X profile for @pua_nico.",
+    "summary": "最後のPUA、ナンパ、恋愛工学。 2012年、理想の女性と出逢うため活動を始めました。 この人になら抱かれたいと思われる男へ☻即画即キャス等は定期的に消しています 。 無料note→ https://t.co/XUFiK0TyKk 講習→https://t.co/MBwtZR5cCg pr",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. X API public profile fields were used to refresh icon and follower coverage. Authenticated X web UserByScreenName public fields were used to refresh icon and follower coverage. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -69707,9 +70271,114 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "mamemame-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "suisei-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/suiseinanpa"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "puro-nampa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/puro_nanpa"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "rockpua-sub",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/rockpua_sub"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "nanpa-pegasasu",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、即) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/nanpa_pegasasu"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pika-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "wing-nampa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/pua_nico",
+          "https://x.com/wing__nampa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1497724739787264001/iXz9qOeN_400x400.jpg",
-    "follower_count": 7490
+    "follower_count": 7731
   },
   {
     "account_id": "pua-ofline",
@@ -78769,7 +79438,7 @@
     "account_id": "sasuke110110",
     "profile_url": "https://x.com/sasuke11011",
     "pinned_post_url": "",
-    "profile_text": "@sasuke110110",
+    "profile_text": "さすまる@No.1スカウト (@sasuke11011)\n蜜の発信 蜜も即も100以上 ホスト1年以上",
     "pinned_post_text": "",
     "links": [
       "https://x.com/sasuke110110"
@@ -78777,7 +79446,7 @@
     "summary": "蜜の発信 蜜も即も100以上 ホスト1年以上",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon filled via Grok x_user_search. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -85634,6 +86303,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "fami-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/street_Fami",
+          "https://note.com/faminanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1489362398297595904/1bKddnNH_400x400.jpg",
@@ -88587,7 +89269,7 @@
     "summary": "東京 | 20代 | 社会人 | 🐶🦁🦉| 週末フル出撃| ナノ講習長期 5/5〜",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 40 handles and matched 23 tracked accounts.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection saw 40 handles and matched 23 tracked accounts. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -89173,7 +89855,7 @@
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1992919345056620545/A4wNN-aj_400x400.jpg",
-    "follower_count": 18
+    "follower_count": 50
   },
   {
     "account_id": "takigare3",
@@ -89254,7 +89936,7 @@
     "summary": "2024/6/16〜 #東京ストナン会/2025/10/30〜ストにフルコミットする為、無職になり上京/現在16即（弾丸13準即2乱1（正4）/女への執着の緩和、ノンバの改善の為にストのみ100即目指す",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -89450,23 +90132,23 @@
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/860083651991621638/N7pl0xS7_400x400.jpg",
-    "follower_count": 205
+    "follower_count": 323
   },
   {
     "account_id": "takuya775551",
     "profile_url": "https://x.com/takuya775551",
     "pinned_post_url": "",
-    "icon_url": "https://pbs.twimg.com/profile_images/1943655867762491392/DKKWMdCb_400x400.jpg",
-    "follower_count": 3431,
+    "icon_url": "https://pbs.twimg.com/profile_images/2060581237773996032/_vNZKoQ0.jpg",
+    "follower_count": 4205,
     "profile_text": "復活のTAKUYA (@takuya775551)",
     "pinned_post_text": "",
     "links": [
       "https://x.com/takuya775551"
     ],
-    "summary": "X profile for 復活のTAKUYA (@takuya775551).",
+    "summary": "【男の生存戦略】モテ＆金稼ぎに関する有益情報を発信/ナンパ界隈出身/パーソナルトレーナー/MARCH卒/個人事業主4年目/元女風no.1/外見投資500万over/男磨きサロン運営/詳細は固ツイより",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Icon refreshed from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -89491,6 +90173,110 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: shared solid follow-neighborhood (3+ common neighbors) between high-follower low-degree accounts."
+      },
+      {
+        "target": "riokun-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、外見、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/riokun_pua"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "nanpa-pegasasu",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/nanpa_pegasasu"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pika-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "mamemame-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "zenitsu-tinder",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、外見、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/zenitsu_tinder"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "bantan-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、外見、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/bantan_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "suisei-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/suiseinanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "rate-beauty",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、外見、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/takuya775551",
+          "https://x.com/rate_beauty"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
       }
     ]
   },
@@ -91894,6 +92680,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "tindergod-tips",
+        "type": "monetization",
+        "description": "Public X profile links this account's tips catalog.",
+        "source_urls": [
+          "https://x.com/Tinder_god_2",
+          "https://tips.jp/u/Tinder_god"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1854418977587646464/hYBf19Pp_400x400.jpg",
@@ -92060,15 +92859,15 @@
     "account_id": "tindertips1000",
     "profile_url": "https://x.com/TinderTips1000",
     "pinned_post_url": "",
-    "profile_text": "@TinderTips1000",
+    "profile_text": "バンギ@TinderTips1000部突破 (@bakunakioji)\nブルバ100",
     "pinned_post_text": "",
     "links": [
       "https://x.com/TinderTips1000"
     ],
-    "summary": "X profile for @TinderTips1000.",
+    "summary": "ブルバ100",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Icon backfilled from Grok X integration discovery. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -92092,8 +92891,34 @@
         }
       ]
     },
-    "observations": [],
-    "icon_url": "https://pbs.twimg.com/profile_images/1671379817927970818/o6xDDK8Y.jpg"
+    "observations": [
+      {
+        "target": "bakunakioji",
+        "type": "profile_mention",
+        "description": "Public profile text mentions @bakunakioji.",
+        "source_urls": [
+          "https://x.com/TinderTips1000"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "matching-apps",
+        "type": "activity",
+        "description": "Public bio references マチアプ (context densify for high-follower hub).",
+        "source_urls": [
+          "https://x.com/TinderTips1000"
+        ],
+        "confidence": 0.62,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      }
+    ],
+    "icon_url": "https://pbs.twimg.com/profile_images/1671379817927970818/o6xDDK8Y.jpg",
+    "follower_count": 18455
   },
   {
     "account_id": "tips",
@@ -95890,6 +96715,19 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Following-guided public profile screening from data/growth/following_screened.json."
+      },
+      {
+        "target": "vegeta-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/vegeta_street_",
+          "https://note.com/vpua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
       }
     ],
     "icon_url": "https://pbs.twimg.com/profile_images/1915388509172752384/IbaiO1wZ_400x400.jpg",
@@ -100113,7 +100951,21 @@
         }
       ]
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "yutty-note",
+        "type": "monetization",
+        "description": "Public X profile links this account's note catalog.",
+        "source_urls": [
+          "https://x.com/yutty_pua",
+          "https://note.com/yutty_nanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ],
     "icon_url": "https://pbs.twimg.com/profile_images/1962513134843047936/mb4aSyHK_400x400.jpg",
     "follower_count": 15912
   },
@@ -100130,7 +100982,7 @@
     "summary": "誠実なナンパで社会貢献を実現｜誠実系ナンパと女子ウケファッションについて発信｜通算1000番ゲOver｜モデル級美女と交際｜路上でホストにスカウト｜非モテ・ブサイク→誠実系ナンパを開始→最愛の女性と交際→ファッション改善→誠実系ナンパ＆ファッションコンサルタント｜フォローすると彼女作りと外見改善のヒントが得られます。",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login.",
+    "review_notes": "Auto-collected from a public X profile. Review generated bio and pinned-post hints. Profile HTML did not expose a pinned-post URL; configure pinned_post_url in data/x_profile_sources.json to attach a generated pinned-post hint. Authenticated X following collection was requested but skipped: Authenticated following page redirected to X login. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -100156,7 +101008,7 @@
     },
     "observations": [],
     "icon_url": "https://pbs.twimg.com/profile_images/1852901157393530880/Op3nvogL_400x400.jpg",
-    "follower_count": 1710
+    "follower_count": 1748
   },
   {
     "account_id": "yuu5-pua",
@@ -101447,7 +102299,7 @@
     "summary": "「上位美女に刺さる魅力」を設計。心理×非言語×会話を構造化し、再現性のある関係構築を実現。選ばれる側から選ぶ側へ。｜講師6年目。コンサル実績：有名アイドル、モデル、女優、50万人インフルエンサーなど美女との長期事例",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn.",
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: chiba-gqn. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -101561,7 +102413,7 @@
         "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
       }
     ],
-    "follower_count": 3071
+    "follower_count": 3074
   },
   {
     "account_id": "nampa-douga",
@@ -101584,7 +102436,21 @@
       "source_url": "https://x.com/nampa_douga",
       "collected_at": "2026-05-21T00:38:36+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "real-nampa",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @nampa_douga to @real_nampa.",
+        "source_urls": [
+          "https://x.com/nampa_douga",
+          "https://x.com/real_nampa"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      }
+    ],
     "follower_count": 1989
   },
   {
@@ -101849,7 +102715,7 @@
     "summary": "理想の彼女を作り、自然体の関係を築く『関係構築キャンプ』 ＆ 男の自己肯定感を高める『メンタル道場』運営 | フェスでナンパした彼女と結婚 | 2児の父 | サービス受講300名超 | 面談→https://t.co/5WXTx1obTj",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666, mamemame-nanpa, osugi-pua.",
+    "review_notes": "Following-guided public profile screening from data/growth/following_screened.json. Sources following this account: dogma-pua666, mamemame-nanpa, osugi-pua. Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -101858,7 +102724,7 @@
       "collected_at": "2026-05-23T08:50:01+00:00"
     },
     "observations": [],
-    "follower_count": 11026
+    "follower_count": 11054
   },
   {
     "account_id": "1046-essential",
@@ -103774,6 +104640,110 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public bio keyword maps this high-follower hub to a seeded location/community context node."
+      },
+      {
+        "target": "zenitsu-tinder",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/zenitsu_tinder"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "kurosakikun",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/kurosakikun___"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "harper-0512",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/harper0512"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "korilla-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/korilla_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "nami-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/nami__pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "fukunaga-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/fukunaga_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "dogma-pua666",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/dogmapua666"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "kawae0021",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (マチアプ、モテ、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/Nagi_Toukare",
+          "https://x.com/kawae0021"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
       }
     ],
     "follower_count": 4437
@@ -103799,7 +104769,112 @@
       "source_url": "https://x.com/kocha_20205",
       "collected_at": "2026-07-18T20:44:43+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "pika-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pua-yossy",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/pua_yossy"
+        ],
+        "confidence": 0.56,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "wing-nampa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/wing__nampa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "mamemame-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "fuku-second",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/fuku_second"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "suisei-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/suiseinanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "puro-nampa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/kocha_20205",
+          "https://x.com/puro_nanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      }
+    ],
     "follower_count": 3247
   },
   {
@@ -104766,7 +105841,112 @@
       "source_url": "https://x.com/moteken_RD",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "nanpa-pegasasu",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/nanpa_pegasasu"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pika-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/pika_pua"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "kurosaka-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/kurosaka_pua"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "jim-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/jim_nanpa"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "gogo-nishino",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/gogo_nishino"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "liberty-pai",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/liberty_pai"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "takuya775551",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/takuya775551"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "riokun-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (ナンパ、外見) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/moteken_RD",
+          "https://x.com/riokun_pua"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      }
+    ],
     "follower_count": 3019
   },
   {
@@ -105123,7 +106303,21 @@
       "source_url": "https://x.com/1919seijixxx",
       "collected_at": "2026-07-18T21:09:05+00:00"
     },
-    "observations": [],
+    "observations": [
+      {
+        "target": "kai-1919",
+        "type": "affiliation",
+        "description": "Grok X integration found a public post/mention connecting @1919seijixxx to @kai-1919.",
+        "source_urls": [
+          "https://x.com/1919seijixxx",
+          "https://x.com/kai-1919"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public display name identifies as 459-1919会."
+      }
+    ],
     "follower_count": 1010
   },
   {
@@ -105968,6 +107162,110 @@
         "source_urls": [
           "https://x.com/YLkila",
           "https://x.com/nmpst913"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "yk-yamate",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/yk_yamate"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "sei-pua1",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/sei_pua1"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "kimu-himitsu2",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/kimu__himitsu2"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/futaro_pua"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "tora-maru005",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/tora_maru005"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "pua-yossy",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/pua_yossy"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "oyajii-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/oyajii_nanpa"
+        ],
+        "confidence": 0.5,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "matagi-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (スト、ナンパ) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/YLkila",
+          "https://x.com/matagi_pua"
         ],
         "confidence": 0.5,
         "evidence_kind": "mixed",
@@ -107827,6 +109125,110 @@
         "evidence_kind": "mixed",
         "needs_review": true,
         "review_notes": "Densify pass: public profile/bio @handle mention of an already-seeded account."
+      },
+      {
+        "target": "mamemame-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/mamemame_nanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "mote-ren-ai7",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/mote_ren_ai7"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "kurosakikun",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/kurosakikun___"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "suisei-nanpa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/suiseinanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "harper-0512",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/harper0512"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "korilla-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/korilla_pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "puro-nampa",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/puro_nanpa"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
+      },
+      {
+        "target": "nami-pua",
+        "type": "collaboration",
+        "description": "Public profile scene tags overlap (モテ、即、講習) with a dense scene account (high-follower low-degree densify).",
+        "source_urls": [
+          "https://x.com/yamane_ou",
+          "https://x.com/nami__pua"
+        ],
+        "confidence": 0.54,
+        "evidence_kind": "mixed",
+        "needs_review": true,
+        "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
       }
     ],
     "follower_count": 2871
@@ -109100,7 +110502,7 @@
     "summary": "350即over/アラサーフツメン（無整形）低身長/元配信者/ストナン独学/ごにょごにょ、あまりにも/完ソロ1日6即/100kk以内10即/5kk🎩/月間6出撃25即/姉妹即/路上に魂を売った男/2025元明太子ストナン代表者/即画は気分",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
+    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search). Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -109110,7 +110512,7 @@
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
     "observations": [],
-    "follower_count": 0
+    "follower_count": 2358
   },
   {
     "account_id": "shirodouga",
@@ -109175,7 +110577,7 @@
     "summary": "シュウ@元歌舞伎町ホスト / 愛され依存養成・恋愛コンサルタント",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
+    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search). Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -109314,7 +110716,7 @@
         "review_notes": "Densify pass: shared public profile scene tags between a high-follower low-degree hub and a dense scene account."
       }
     ],
-    "follower_count": 9665
+    "follower_count": 9667
   },
   {
     "account_id": "netonan-king",
@@ -109417,7 +110819,7 @@
     "summary": "「童貞→半年で50人超え｜非モテを強オスに魔改造｜女を沼らせる口説き術を暴露する」",
     "evidence_kind": "fact",
     "needs_review": true,
-    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
+    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search). Profile text backfilled from Grok X integration discovery.",
     "summary_evidence_kind": "fact",
     "snapshot_origin": "generated",
     "collector": {
@@ -109427,7 +110829,7 @@
       "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
     },
     "observations": [],
-    "follower_count": 4649
+    "follower_count": 4655
   },
   {
     "account_id": "dk-iur",
@@ -109766,6 +111168,607 @@
     ],
     "sources": [
       "following-screened-sub-main"
+    ]
+  },
+  {
+    "account_id": "luckysub01",
+    "profile_url": "https://x.com/luckysub01",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1643749220938317824/olR66gEI.jpg",
+    "profile_text": "サブ垢 本垢→@luckypua017",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/luckysub01"
+    ],
+    "summary": "サブ垢 本垢→@luckypua017",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "grok_x_integration",
+      "source_url": "https://x.com/luckysub01",
+      "collected_at": "2026-08-19T13:14:13+00:00",
+      "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+    },
+    "observations": [
+      {
+        "target": "luckypua017",
+        "type": "profile_mention",
+        "description": "Grok X integration found a public post/mention connecting @luckysub01 to @luckypua017.",
+        "source_urls": [
+          "https://x.com/luckysub01",
+          "https://x.com/luckypua017"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+      }
+    ],
+    "follower_count": 4
+  },
+  {
+    "account_id": "ikemenmaker-pua",
+    "profile_url": "https://x.com/ikemenmaker_pua",
+    "pinned_post_url": "",
+    "icon_url": "https://pbs.twimg.com/profile_images/1995180283185029120/fmG2lh5c.jpg",
+    "profile_text": "都内のスト高が主食です/メンズの整形、美肌相談のります（無料）",
+    "pinned_post_text": "",
+    "links": [
+      "https://x.com/ikemenmaker_pua"
+    ],
+    "summary": "都内のスト高が主食です/メンズの整形、美肌相談のります（無料）",
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search).",
+    "summary_evidence_kind": "fact",
+    "snapshot_origin": "generated",
+    "collector": {
+      "type": "grok_x_integration",
+      "source_url": "https://x.com/ikemenmaker_pua",
+      "collected_at": "2026-08-19T13:37:55+00:00",
+      "note": "Ingested via Grok X integration tools (x_user_search / x_keyword_search / x_semantic_search)."
+    },
+    "observations": [
+      {
+        "target": "tokyo",
+        "type": "activity",
+        "description": "Grok X integration found a public post/mention connecting @ikemenmaker_pua to @tokyo.",
+        "source_urls": [
+          "https://x.com/ikemenmaker_pua",
+          "https://x.com/tokyo"
+        ],
+        "confidence": 0.72,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public bio lists 都内のスト高."
+      }
+    ],
+    "follower_count": 1508
+  },
+  {
+    "account_id": "layover-shinjuku",
+    "profile_url": "https://x.com/layovershinjuku",
+    "icon_url": "https://pbs.twimg.com/profile_images/1885186593901993985/ULdhRI2H.jpg",
+    "follower_count": 3214,
+    "profile_text": "Layover BAR (@layovershinjuku)\n日替わりで毎日違う人が1日店長やってるBAR。オーナー@daioki0430",
+    "summary": "日替わりで毎日違う人が1日店長やってるBAR。オーナー@daioki0430",
+    "links": [
+      "https://x.com/layovershinjuku"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Grok X public profile for Shinjuku BAR community node.",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "daioki0430",
+        "type": "profile_mention",
+        "description": "Public bio identifies @daioki0430 as owner.",
+        "source_urls": [
+          "https://x.com/layovershinjuku"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public bio identifies @daioki0430 as owner."
+      },
+      {
+        "target": "shinjuku",
+        "type": "activity",
+        "description": "Public BAR profile is located in Shinjuku.",
+        "source_urls": [
+          "https://x.com/layovershinjuku"
+        ],
+        "confidence": 0.7,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Grok X public BAR profile in Shinjuku."
+      }
+    ]
+  },
+  {
+    "account_id": "kai-1919",
+    "profile_url": "https://x.com/1919seijixxx",
+    "summary": "459-1919会. Public display names such as 1919誠二@459-1919会 identify this group.",
+    "profile_text": "459-1919会",
+    "links": [
+      "https://x.com/1919seijixxx"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": true,
+    "review_notes": "Grok X public display-name evidence for 459-1919会 community.",
+    "snapshot_origin": "generated",
+    "observations": []
+  },
+  {
+    "account_id": "yutty-note",
+    "profile_url": "https://note.com/yutty_nanpa",
+    "summary": "低身長ナンパ師ゆってぃ. 生涯男の味方 ナンパを通して女性に困らない強い男を量産する。",
+    "profile_text": "ゆってぃ note\n低身長ナンパ師ゆってぃ. 生涯男の味方 ナンパを通して女性に困らない強い男を量産する。",
+    "links": [
+      "https://note.com/yutty_nanpa"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/yutty_nanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "yutty-pua",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account yutty-pua.",
+        "source_urls": [
+          "https://note.com/yutty_nanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "vegeta-note",
+    "profile_url": "https://note.com/vpua",
+    "summary": "V. 元丸の内の会社員｜恋愛、キャリア等. 公開マガジンにベジ式口説き＆ボディタッチ術、ストリートナンパテクニック集。",
+    "profile_text": "V note\nV. 元丸の内の会社員｜恋愛、キャリア等. 公開マガジンにベジ式口説き＆ボディタッチ術、ストリートナンパテクニック集。",
+    "links": [
+      "https://note.com/vpua"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/vpua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "vegeta-street",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account vegeta-street.",
+        "source_urls": [
+          "https://note.com/vpua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "mikky-note",
+    "profile_url": "https://note.com/mickey_11",
+    "summary": "みっきー＠マッチングアプリの専門家/カメラマン. マッチングアプリについての情報をまとめています。",
+    "profile_text": "みっきー note\nみっきー＠マッチングアプリの専門家/カメラマン. マッチングアプリについての情報をまとめています。",
+    "links": [
+      "https://note.com/mickey_11"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/mickey_11"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "mikky-motecoach",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account mikky-motecoach.",
+        "source_urls": [
+          "https://note.com/mickey_11"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "kuma-note",
+    "profile_url": "https://note.com/iwkm",
+    "summary": "日本全国でナンパして全47都道府県でおセックスしました。全国各地のナンパ情報を中心に書いていきます。",
+    "profile_text": "旅ナンパの岩クマー note\n日本全国でナンパして全47都道府県でおセックスしました。全国各地のナンパ情報を中心に書いていきます。",
+    "links": [
+      "https://note.com/iwkm"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/iwkm"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "kuma-661",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account kuma-661.",
+        "source_urls": [
+          "https://note.com/iwkm"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "clubtropixxx-note",
+    "profile_url": "https://note.com/clubtropixxx1",
+    "summary": "豪商クラトロ. インドネシアTinder留学・台北/高雄ナンパスポットなど海外ナンパ向け公開マガジン。",
+    "profile_text": "豪商クラトロ note\n豪商クラトロ. インドネシアTinder留学・台北/高雄ナンパスポットなど海外ナンパ向け公開マガジン。",
+    "links": [
+      "https://note.com/clubtropixxx1"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/clubtropixxx1"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "clubtropixxx1",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account clubtropixxx1.",
+        "source_urls": [
+          "https://note.com/clubtropixxx1"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "fami-note",
+    "profile_url": "https://note.com/faminanpa",
+    "summary": "ファミチキ. 雑魚腕ナンパ師の思ったことを書き殴ってます。",
+    "profile_text": "ファミチキ note\nファミチキ. 雑魚腕ナンパ師の思ったことを書き殴ってます。",
+    "links": [
+      "https://note.com/faminanpa"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/faminanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "street-fami",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account street-fami.",
+        "source_urls": [
+          "https://note.com/faminanpa"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "chiba-note",
+    "profile_url": "https://note.com/sn_wars245",
+    "summary": "チバ. ストリート. 公開Xプロフィールは @chiba_gqn。",
+    "profile_text": "チバ note\nチバ. ストリート. 公開Xプロフィールは @chiba_gqn。",
+    "links": [
+      "https://note.com/sn_wars245"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/sn_wars245"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "chiba-gqn",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account chiba-gqn.",
+        "source_urls": [
+          "https://note.com/sn_wars245"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "rui-note",
+    "profile_url": "https://note.com/ruisboss",
+    "summary": "るいるい. 読むだけでモテるnote。",
+    "profile_text": "るいるい note\nるいるい. 読むだけでモテるnote。",
+    "links": [
+      "https://note.com/ruisboss"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "note",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on note.",
+        "source_urls": [
+          "https://note.com/ruisboss"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "okashinaataoka",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account okashinaataoka.",
+        "source_urls": [
+          "https://note.com/ruisboss"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "kurosaka-youtube",
+    "profile_url": "https://www.youtube.com/@kurosaka_pua_with_you",
+    "summary": "黒坂_PUA の公開 YouTube チャンネル。本人Xプロフィールからリンク。",
+    "profile_text": "黒坂_PUA YouTube\n黒坂_PUA の公開 YouTube チャンネル。本人Xプロフィールからリンク。",
+    "links": [
+      "https://www.youtube.com/@kurosaka_pua_with_you"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "youtube",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on youtube.",
+        "source_urls": [
+          "https://www.youtube.com/@kurosaka_pua_with_you"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "kurosaka-pua",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account kurosaka-pua.",
+        "source_urls": [
+          "https://www.youtube.com/@kurosaka_pua_with_you"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "hanzo-tips",
+    "profile_url": "https://tips.jp/u/hanzo_tips",
+    "summary": "半蔵@マッチングアプリ用カメラマン. マッチングアプリ用写真撮影ノウハウの公開 Tips カタログ。",
+    "profile_text": "半蔵 Tips\n半蔵@マッチングアプリ用カメラマン. マッチングアプリ用写真撮影ノウハウの公開 Tips カタログ。",
+    "links": [
+      "https://tips.jp/u/hanzo_tips"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "tips",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on tips.",
+        "source_urls": [
+          "https://tips.jp/u/hanzo_tips"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "hanzo-prim",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account hanzo-prim.",
+        "source_urls": [
+          "https://tips.jp/u/hanzo_tips"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "tindergod-tips",
+    "profile_url": "https://tips.jp/u/Tinder_god",
+    "summary": "フェイタン@ペアーズ完全攻略tips. 本人Xプロフィールからリンクされた Tips カタログ。",
+    "profile_text": "フェイタン Tips\nフェイタン@ペアーズ完全攻略tips. 本人Xプロフィールからリンクされた Tips カタログ。",
+    "links": [
+      "https://tips.jp/u/Tinder_god"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "tips",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on tips.",
+        "source_urls": [
+          "https://tips.jp/u/Tinder_god"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "tinder-god",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account tinder-god.",
+        "source_urls": [
+          "https://tips.jp/u/Tinder_god"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
+    ]
+  },
+  {
+    "account_id": "futaro-youtube",
+    "profile_url": "https://www.youtube.com/@user-futaro_pua",
+    "summary": "風太郎@ナンパしてる の公開 YouTube チャンネル。本人Xプロフィールからリンク。",
+    "profile_text": "風太郎@ナンパしてる YouTube\n風太郎@ナンパしてる の公開 YouTube チャンネル。本人Xプロフィールからリンク。",
+    "links": [
+      "https://www.youtube.com/@user-futaro_pua"
+    ],
+    "evidence_kind": "fact",
+    "needs_review": false,
+    "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips).",
+    "snapshot_origin": "generated",
+    "observations": [
+      {
+        "target": "youtube",
+        "type": "affiliation",
+        "description": "Public catalog is hosted on youtube.",
+        "source_urls": [
+          "https://www.youtube.com/@user-futaro_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      },
+      {
+        "target": "futaro-pua",
+        "type": "affiliation",
+        "description": "Self-published catalog of seeded account futaro-pua.",
+        "source_urls": [
+          "https://www.youtube.com/@user-futaro_pua"
+        ],
+        "confidence": 0.78,
+        "evidence_kind": "fact",
+        "needs_review": false,
+        "review_notes": "Public self-published catalog linked from an already-seeded profile (Grok/web fetch of note/YouTube/Tips)."
+      }
     ]
   }
 ]

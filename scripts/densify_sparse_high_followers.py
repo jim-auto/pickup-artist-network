@@ -63,7 +63,19 @@ TAG_NOTE = (
     "Densify pass: shared public profile scene tags between a high-follower "
     "low-degree hub and a dense scene account."
 )
+IDENTITY_NOTE = (
+    "Densify pass: public bio identifies this account as a sub/video/male-limited "
+    "account of an already-seeded person by name."
+)
 HANDLE_RE = re.compile(r"@([A-Za-z0-9_]{2,30})")
+IDENTITY_CUES = (
+    "動画垢",
+    "男性限定アカウント",
+    "男性限定垢",
+    "サブ垢",
+    "サブアカウント",
+    "本垢",
+)
 SCENE_TAGS: list[tuple[str, tuple[str, ...]]] = [
     ("ナンパ", ("ナンパ", "nanpa", "nampa")),
     ("スト", ("ストナン", "ストリート", "street", "路上")),
@@ -92,7 +104,7 @@ BIO_CONTEXT_RULES: list[tuple[tuple[str, ...], str, str]] = [
     (("新宿",), "shinjuku", "activity"),
     (("池袋",), "ikebukuro", "activity"),
     (("恵比寿",), "ebisu", "activity"),
-    (("東京", "都内", "帝都"), "tokyo", "activity"),
+    (("東京", "都内", "帝都", "tokyo"), "tokyo", "activity"),
     (("名古屋", "栄"), "nagoya", "activity"),
     (("大阪", "梅田", "難波"), "osaka", "activity"),
     (("関西",), "kansai", "activity"),
@@ -209,17 +221,15 @@ def _is_assistive_note(notes: object) -> bool:
     return any(marker in text for marker in ASSISTIVE_MARKERS)
 
 
-def _sparse_high_follower_ids() -> set[str]:
-    """Prefer precomputed targets; fall back to live nodes/edges scan."""
-    if TARGETS_FILE.exists():
-        rows = _load_json_list(TARGETS_FILE)
-        return {str(row.get("id", "")).strip() for row in rows if str(row.get("id", "")).strip()}
+def _live_sparse_rows() -> list[dict[str, object]]:
+    """High-follower people whose current person-person degree is still low."""
     if not NODES_FILE.exists() or not EDGES_FILE.exists():
-        return set()
+        return []
     nodes = _load_json_list(NODES_FILE)
     edges = _load_json_list(EDGES_FILE)
     by = {str(n.get("id")): n for n in nodes}
     degree: dict[str, int] = defaultdict(int)
+    solid: dict[str, int] = defaultdict(int)
     for edge in edges:
         source = by.get(str(edge.get("source")))
         target = by.get(str(edge.get("target")))
@@ -227,17 +237,54 @@ def _sparse_high_follower_ids() -> set[str]:
             continue
         if source.get("type") != "person" or target.get("type") != "person":
             continue
-        degree[str(source["id"])] += 1
-        degree[str(target["id"])] += 1
-    sparse: set[str] = set()
+        source_id = str(source["id"])
+        target_id = str(target["id"])
+        degree[source_id] += 1
+        degree[target_id] += 1
+        if not _is_assistive_note(edge.get("review_notes")):
+            solid[source_id] += 1
+            solid[target_id] += 1
+    rows: list[dict[str, object]] = []
     for node in nodes:
         if node.get("type") != "person":
             continue
         node_id = str(node.get("id", "")).strip()
         followers = int(node.get("follower_count") or 0)
-        if followers >= 1000 and degree[node_id] <= 15:
-            sparse.add(node_id)
-    return sparse
+        person_degree = degree[node_id]
+        if followers < 1000 or person_degree > 15:
+            continue
+        text = f"{node.get('name') or ''} {node.get('description') or ''}"
+        rows.append(
+            {
+                "id": node_id,
+                "followers": followers,
+                "solid": solid[node_id],
+                "person_degree": person_degree,
+                "scene": bool(_text_tags(text)),
+                "name": node.get("name"),
+                "description": str(node.get("description") or "")[:80],
+                "aliases": node.get("aliases") or [],
+            }
+        )
+    rows.sort(key=lambda row: (-int(row["followers"]), int(row["solid"]), str(row["id"])))
+    return rows
+
+
+def _sparse_high_follower_ids() -> set[str]:
+    """Use the live graph so already-densified hubs are not over-tagged."""
+    live = {str(row["id"]) for row in _live_sparse_rows()}
+    if live:
+        return live
+    if TARGETS_FILE.exists():
+        rows = _load_json_list(TARGETS_FILE)
+        return {str(row.get("id", "")).strip() for row in rows if str(row.get("id", "")).strip()}
+    return set()
+
+
+def write_sparse_targets() -> int:
+    rows = _live_sparse_rows()
+    _write_json(TARGETS_FILE, rows)
+    return len(rows)
 
 
 def materialize_known_follows(
@@ -689,6 +736,55 @@ def materialize_scene_tag_collaborations(
     return added
 
 
+def materialize_identity_name_links(
+    snapshots_by_id: dict[str, dict[str, object]],
+    seed_ids: set[str],
+) -> int:
+    """Wire bios like 'ナンパ次郎の動画垢' to the named seeded person."""
+    if not NODES_FILE.exists():
+        return 0
+    name_to_ids: dict[str, set[str]] = defaultdict(set)
+    for node in _load_json_list(NODES_FILE):
+        if node.get("type") != "person":
+            continue
+        node_id = str(node.get("id", "")).strip()
+        if not node_id or node_id not in seed_ids:
+            continue
+        name = str(node.get("name") or "").strip()
+        if len(name) >= 4 and not name.startswith("@"):
+            name_to_ids[name].add(node_id)
+    unique_names = {
+        name: next(iter(ids))
+        for name, ids in name_to_ids.items()
+        if len(ids) == 1
+    }
+    added = 0
+    for account_id, snapshot in snapshots_by_id.items():
+        if account_id not in seed_ids:
+            continue
+        text = "\n".join(
+            str(snapshot.get(key, "") or "")
+            for key in ("profile_text", "summary", "pinned_post_text")
+        )
+        if not any(cue in text for cue in IDENTITY_CUES):
+            continue
+        source_url = str(snapshot.get("profile_url") or f"https://x.com/{account_id}")
+        for name, target_id in unique_names.items():
+            if target_id == account_id or name not in text:
+                continue
+            if _ensure_observation(
+                snapshot,
+                target=target_id,
+                edge_type="profile_mention",
+                description=f"Public bio identifies this account in relation to {name}.",
+                source_urls=[source_url],
+                confidence=0.8,
+                review_notes=IDENTITY_NOTE,
+            ):
+                added += 1
+    return added
+
+
 def materialize_sub_main_links(
     snapshots_by_id: dict[str, dict[str, object]],
     handle_map: dict[str, str],
@@ -764,7 +860,13 @@ def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Densify sparse high-follower isolation")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--write-targets-only", action="store_true")
     args = parser.parse_args()
+
+    if args.write_targets_only:
+        count = write_sparse_targets()
+        print(f"[OK] wrote {count} live sparse high-follower targets -> {TARGETS_FILE}")
+        return
 
     seed_ids = _seed_ids()
     handle_map = _handle_to_account_id()
@@ -782,6 +884,7 @@ def main() -> None:
     node_mention_added = materialize_node_description_mentions(
         snapshots_by_id, handle_map, seed_ids
     )
+    identity_added = materialize_identity_name_links(snapshots_by_id, seed_ids)
     sub_added = materialize_sub_main_links(snapshots_by_id, handle_map, seed_ids)
     context_added = materialize_bio_context_edges(snapshots_by_id, sparse_ids)
     cohood_added = materialize_shared_follow_neighborhood(
@@ -813,7 +916,8 @@ def main() -> None:
         f"sparse_targets={len(sparse_ids)} "
         f"known_follow+={known_added} candidate_follow+={follow_added} "
         f"bio_mention+={mention_added} node_mention+={node_mention_added} "
-        f"sub_main+={sub_added} context+={context_added} cohood+={cohood_added} "
+        f"identity+={identity_added} sub_main+={sub_added} "
+        f"context+={context_added} cohood+={cohood_added} "
         f"tag_collab+={tag_added} dry_run={args.dry_run}"
     )
     print("[NEXT] python build_site.py --skip-collector")
