@@ -2023,6 +2023,12 @@ def render_html(
         radial-gradient(circle at 30% 20%, rgba(47, 111, 235, 0.05), transparent 45%),
         var(--panel);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      touch-action: none;
+      overscroll-behavior: contain;
+      cursor: grab;
+    }
+    #network:active {
+      cursor: grabbing;
     }
     input[type="search"],
     .control-select {
@@ -2972,6 +2978,8 @@ def render_html(
     let currentSearchTerm = "";
     let selectedNodeId = null;
     let activeClusterIds = new Set();
+    let allowAutoFit = true;
+    let clusterLabelDrawItems = [];
     let lastTableFilterKey = "";
     const tablePageSizes = {
       reviewNodes: 60,
@@ -3148,11 +3156,53 @@ def render_html(
         },
         interaction: {
           hover: true,
+          dragNodes: false,
+          dragView: true,
+          zoomView: true,
+          hideEdgesOnDrag: true,
+          hideEdgesOnZoom: true,
           navigationButtons: false,
-          keyboard: true
+          keyboard: { enabled: false },
+          tooltipDelay: 180,
+          zoomSpeed: 0.7
         }
       }
     );
+    network.on("zoom", () => {
+      allowAutoFit = false;
+    });
+    network.on("dragEnd", (params) => {
+      if (!params.nodes.length) {
+        allowAutoFit = false;
+      }
+    });
+    network.on("beforeDrawing", (ctx) => {
+      if (!clusterLabelDrawItems.length) {
+        return;
+      }
+      ctx.save();
+      ctx.font = "600 13px Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      clusterLabelDrawItems.forEach((item) => {
+        const paddingX = 8;
+        const boxH = 22;
+        const boxW = ctx.measureText(item.label).width + paddingX * 2;
+        const left = item.x - boxW / 2;
+        const top = item.y - boxH / 2;
+        ctx.fillStyle = prefersDarkGraph ? "rgba(20, 28, 38, 0.82)" : "rgba(255, 255, 255, 0.9)";
+        if (typeof ctx.roundRect === "function") {
+          ctx.beginPath();
+          ctx.roundRect(left, top, boxW, boxH, 8);
+          ctx.fill();
+        } else {
+          ctx.fillRect(left, top, boxW, boxH);
+        }
+        ctx.fillStyle = graphLabelColor;
+        ctx.fillText(item.label, item.x, item.y);
+      });
+      ctx.restore();
+    });
 
     function selectedValues(selector, attributeName) {
       return new Set(
@@ -4855,6 +4905,7 @@ def render_html(
           id: node.id,
           x: layoutPositions.get(node.id)?.x,
           y: layoutPositions.get(node.id)?.y,
+          fixed: { x: true, y: true },
           label: getNodeLabel(node, visibleNodes, term),
           group: node.type,
           value: getNodeVisualValue(node, visibleNodes),
@@ -4878,36 +4929,7 @@ def render_html(
             .join("\\n")
         }))
       );
-      if (clusterLabels.length) {
-        nodesDataSet.add(
-          clusterLabels.map((item) => ({
-            id: item.id,
-            x: item.x,
-            y: item.y,
-            label: item.label,
-            group: "cluster-label",
-            shape: "box",
-            value: 1,
-            physics: false,
-            chosen: false,
-            borderWidth: 0,
-            color: {
-              background: prefersDarkGraph ? "rgba(20, 28, 38, 0.72)" : "rgba(255, 255, 255, 0.82)",
-              border: "transparent",
-              highlight: {
-                background: prefersDarkGraph ? "rgba(20, 28, 38, 0.72)" : "rgba(255, 255, 255, 0.82)",
-                border: "transparent"
-              }
-            },
-            font: {
-              face: "Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif",
-              size: 16,
-              color: graphLabelColor,
-              strokeWidth: 0
-            }
-          }))
-        );
-      }
+      clusterLabelDrawItems = clusterLabels;
 
       edgesDataSet.add(
         visibleEdges.map((edge, index) => ({
@@ -4926,9 +4948,9 @@ def render_html(
       );
 
       updateNetworkEmphasis(selectedNodeId);
-      // Avoid auto-fit when focusing a node so the ego neighborhood stays readable.
-      if (!selectedNodeId && !term) {
-        fitVisibleGraph();
+      // Avoid auto-fit when focusing a node, searching, or after the user pans/zooms.
+      if (allowAutoFit && !selectedNodeId && !term) {
+        fitVisibleGraph(true);
       }
 
       document.getElementById("visible-nodes").textContent = visibleNodes.length;
@@ -4947,7 +4969,10 @@ def render_html(
       }
     }
 
-    function fitVisibleGraph() {
+    function fitVisibleGraph(force = false) {
+      if (!force && !allowAutoFit) {
+        return;
+      }
       window.setTimeout(() => {
         if (currentVisibleNodes.length) {
           network.fit({ animation: { duration: 250, easingFunction: "easeInOutQuad" } });
@@ -4993,6 +5018,7 @@ def render_html(
         keywordClusterInput.value = "";
       }
       selectedNodeId = null;
+      allowAutoFit = true;
       updateClusterModeHelp();
       updateKeywordClusterControl();
       // 全体に戻すときも solid-first（自動補助線オフ）を維持する。
@@ -5009,7 +5035,10 @@ def render_html(
       focusNode(button.getAttribute("data-node-id"));
     });
     document.getElementById("reset-view").addEventListener("click", resetView);
-    document.getElementById("fit-graph").addEventListener("click", fitVisibleGraph);
+    document.getElementById("fit-graph").addEventListener("click", () => {
+      allowAutoFit = true;
+      fitVisibleGraph(true);
+    });
     document.querySelectorAll("[data-bridge-preset]").forEach((button) => {
       button.addEventListener("click", () => {
         setBridgePreset(button.getAttribute("data-bridge-preset"));
@@ -5138,10 +5167,6 @@ def render_html(
     network.on("selectNode", (params) => {
       if (params.nodes.length) {
         const selectedId = params.nodes[0];
-        if (String(selectedId).startsWith("cluster-label:")) {
-          network.unselectAll();
-          return;
-        }
         if (network.isCluster(selectedId)) {
           network.openCluster(selectedId);
           renderDetailPanel(null);
