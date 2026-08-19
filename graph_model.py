@@ -1302,8 +1302,8 @@ def _backfill_neighbor_clusters(
 
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
-    # 公開地図はキーワード群を初期表示にして、派閥・一門を先に読めるようにする。
-    payload = {"default_mode": "keyword_group", "modes": {}}
+    # 公開地図は人数を減らさず、つながりの近さで島に分けて配置する。
+    payload = {"default_mode": "connectivity", "modes": {}}
 
     for mode_key, definition in CLUSTER_MODE_DEFINITIONS.items():
         if mode_key == "keyword_group":
@@ -2367,7 +2367,7 @@ def render_html(
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="community">界隈キーワード</button>
           <button type="button" class="action-button bridge-preset-button" data-bridge-preset="all">全補助</button>
         </div>
-        <p class="muted">初期表示は確定寄り（自動補助線オフ）。関係線につながるアカウントだけを描画し、外周の孤立ノイズを抑えます。</p>
+        <p class="muted">初期表示は確定寄り（自動補助線オフ）。つながりの近い人を島に分けて配置し、人数は減らしません。</p>
         <div class="filter-group relevance-control">
           <label class="chip">
             <input type="checkbox" id="relevance-filter-toggle" checked>
@@ -2385,12 +2385,12 @@ def render_html(
           <option value="keyword_group">キーワード</option>
           <option value="region_group">地域</option>
         </select>
-        <div id="cluster-mode-help" class="muted">通常表示です。人やコミュニティをまとめずに相関を見ます。</div>
+        <div id="cluster-mode-help" class="muted">つながりの近い人を島に分けて配置します。人数は減らしません。</div>
       </div>
       <div id="keyword-cluster-picker" hidden>
         <label for="keyword-cluster-select"><strong>キーワード群を選ぶ</strong></label>
         <select id="keyword-cluster-select" class="control-select"></select>
-        <div class="muted">キーワード群を 1 つ選ぶと、その塊だけに絞って見られます。</div>
+        <div class="muted">空欄なら全島を同時に表示します。1つ選ぶとその塊だけになります。</div>
       </div>
       <details class="foldout">
         <summary>
@@ -2437,7 +2437,7 @@ def render_html(
           <h2>アカウント相関ビュー</h2>
           <div id="view-summary" class="view-summary"></div>
         </div>
-        <p class="muted">初期表示は関連人物を優先します。名前と線は抑え、検索やクリックで近い関係を詳しく見られます。</p>
+        <p class="muted">初期表示は関連人物を、つながりの近さで島分けします。検索やクリックで近い関係を詳しく見られます。</p>
         <div id="network"></div>
       </section>
 
@@ -4386,15 +4386,15 @@ def render_html(
       const column = (index - anchors.length) % 7;
       const row = Math.floor((index - anchors.length) / 7);
       return {
-        x: ((column - 3) * 170 + (row % 2 ? 55 : 0)) * spacing,
-        y: (375 + row * 120 + ((column % 2) * 35)) * spacing
+        x: ((column - 3) * 230 + (row % 2 ? 70 : 0)) * spacing,
+        y: (430 + row * 165 + ((column % 2) * 40)) * spacing
       };
     }
 
     function computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster) {
       const positions = new Map();
       const modePayload = rawClusters.modes?.[clusterMode] || rawClusters.modes?.connectivity;
-      const clusterSpacing = shouldCluster ? (clusterMode === "region_group" ? 1.45 : 1.25) : 1;
+      const clusterSpacing = shouldCluster ? (clusterMode === "region_group" ? 1.9 : 1.7) : 1;
       const buckets = new Map();
 
       visibleNodes.forEach((node) => {
@@ -4452,7 +4452,27 @@ def render_html(
         });
       });
 
-      return positions;
+      const labels = [];
+      if (shouldCluster) {
+        orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
+          if (!bucketId || String(bucketId).startsWith("unassigned:")) {
+            return;
+          }
+          const info = clusterInfoFor(bucketId, modePayload);
+          const text = String(info.label || "").trim();
+          if (!text) {
+            return;
+          }
+          const anchor = buildAnchor(bucketIndex, clusterSpacing);
+          labels.push({
+            id: `cluster-label:${bucketId}`,
+            x: anchor.x,
+            y: anchor.y - Math.min(180, 56 + members.length * 1.6),
+            label: text
+          });
+        });
+      }
+      return { positions, labels };
     }
 
     function getNodeVisualValue(node, visibleNodes) {
@@ -4569,7 +4589,7 @@ def render_html(
       const clusterMode = getClusterMode();
       const selectedKeywordClusterId = getSelectedKeywordClusterId();
       const keywordAssignments = rawClusters.modes?.keyword_group?.assignments || {};
-      const shouldCluster = false;
+      const shouldCluster = clusterMode !== "off";
       const tableFilterKey = JSON.stringify({
         nodeTypes: [...allowedNodeTypes].sort(),
         edgeTypes: [...allowedEdgeTypes].sort(),
@@ -4759,7 +4779,9 @@ def render_html(
       resetClusters();
       nodesDataSet.clear();
       edgesDataSet.clear();
-      const layoutPositions = computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster);
+      const layout = computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster);
+      const layoutPositions = layout.positions || layout;
+      const clusterLabels = layout.labels || [];
 
       nodesDataSet.add(
         visibleNodes.map((node) => ({
@@ -4789,6 +4811,36 @@ def render_html(
             .join("\\n")
         }))
       );
+      if (clusterLabels.length) {
+        nodesDataSet.add(
+          clusterLabels.map((item) => ({
+            id: item.id,
+            x: item.x,
+            y: item.y,
+            label: item.label,
+            group: "cluster-label",
+            shape: "box",
+            value: 1,
+            physics: false,
+            chosen: false,
+            borderWidth: 0,
+            color: {
+              background: prefersDarkGraph ? "rgba(20, 28, 38, 0.72)" : "rgba(255, 255, 255, 0.82)",
+              border: "transparent",
+              highlight: {
+                background: prefersDarkGraph ? "rgba(20, 28, 38, 0.72)" : "rgba(255, 255, 255, 0.82)",
+                border: "transparent"
+              }
+            },
+            font: {
+              face: "Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif",
+              size: 16,
+              color: graphLabelColor,
+              strokeWidth: 0
+            }
+          }))
+        );
+      }
 
       edgesDataSet.add(
         visibleEdges.map((edge, index) => ({
@@ -4806,9 +4858,6 @@ def render_html(
         }))
       );
 
-      if (shouldCluster) {
-        applyRelationClusters(visibleNodes, clusterMode);
-      }
       updateNetworkEmphasis(selectedNodeId);
       // Avoid auto-fit when focusing a node so the ego neighborhood stays readable.
       if (!selectedNodeId && !term) {
@@ -4871,7 +4920,7 @@ def render_html(
         relevanceFilterToggle.checked = true;
       }
       if (clusterModeInput) {
-        clusterModeInput.value = rawClusters.modes?.connectivity ? "connectivity" : "off";
+        clusterModeInput.value = rawClusters.default_mode || (rawClusters.modes?.connectivity ? "connectivity" : "off");
       }
       if (keywordClusterInput) {
         keywordClusterInput.value = "";
@@ -5022,6 +5071,10 @@ def render_html(
     network.on("selectNode", (params) => {
       if (params.nodes.length) {
         const selectedId = params.nodes[0];
+        if (String(selectedId).startsWith("cluster-label:")) {
+          network.unselectAll();
+          return;
+        }
         if (network.isCluster(selectedId)) {
           network.openCluster(selectedId);
           renderDetailPanel(null);
