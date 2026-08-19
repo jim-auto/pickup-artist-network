@@ -1300,6 +1300,72 @@ def _backfill_neighbor_clusters(
         info["label"] = re.sub(r"\(\d+\)$", f"({assigned_after[cluster_id]})", label)
 
 
+def _refresh_cluster_sizes(mode_payload: dict[str, Any]) -> Counter[str]:
+    assigned = Counter(mode_payload["assignments"].values())
+    for cluster_id in list(mode_payload["clusters"]):
+        size = int(assigned.get(cluster_id, 0))
+        if size <= 0:
+            del mode_payload["clusters"][cluster_id]
+            continue
+        info = mode_payload["clusters"][cluster_id]
+        info["size"] = size
+        label = str(info.get("label", ""))
+        info["label"] = re.sub(r"\(\d+\)$", f"({size})", label)
+    return assigned
+
+
+def _absorb_small_clusters(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    min_size: int = 10,
+) -> None:
+    """Fold tiny labeled islands into a neighboring large cluster.
+
+    Skip when the whole graph is small, so fixture maps keep their 3-4 person groups.
+    """
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assigned = _refresh_cluster_sizes(mode_payload)
+    if not assigned:
+        return
+    if all(size < min_size for size in assigned.values()):
+        return
+    small_ids = {cluster_id for cluster_id, size in assigned.items() if 0 < size < min_size}
+    if not small_ids:
+        return
+
+    neighbor_scores: dict[str, Counter[str]] = defaultdict(Counter)
+    for edge in graph.edges:
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type not in ACCOUNT_NODE_TYPES or target.type not in ACCOUNT_NODE_TYPES:
+            continue
+        for node_id, neighbor_id in ((edge.source, edge.target), (edge.target, edge.source)):
+            node_cluster = mode_payload["assignments"].get(node_id)
+            neighbor_cluster = mode_payload["assignments"].get(neighbor_id)
+            if node_cluster not in small_ids or not neighbor_cluster:
+                continue
+            if neighbor_cluster in small_ids:
+                continue
+            if assigned[neighbor_cluster] < min_size:
+                continue
+            scale = 0.25 if _is_weak_assistive_edge(edge) else 1.0
+            neighbor_scores[node_id][neighbor_cluster] += max(edge.confidence, 0.2) * scale
+
+    largest_cluster_id, _largest_size = max(assigned.items(), key=lambda item: (item[1], item[0]))
+    for node_id, cluster_id in list(mode_payload["assignments"].items()):
+        if cluster_id not in small_ids:
+            continue
+        scores = neighbor_scores.get(node_id)
+        if scores:
+            next_cluster_id = max(scores.items(), key=lambda item: (item[1], assigned[item[0]], item[0]))[0]
+            mode_payload["assignments"][node_id] = next_cluster_id
+            continue
+        mode_payload["assignments"][node_id] = largest_cluster_id
+    _refresh_cluster_sizes(mode_payload)
+
+
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
     # 公開地図は人数を減らさず、つながりの近さで島に分けて配置する。
@@ -1344,6 +1410,7 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
         _apply_affinity_keyword_clusters(graph, mode_payload)
         _backfill_semantic_clusters(graph, mode_payload, mode_key, int(definition["min_size"]))
         _backfill_neighbor_clusters(graph, mode_payload)
+        _absorb_small_clusters(graph, mode_payload, min_size=10)
         payload["modes"][mode_key] = mode_payload
 
     return payload

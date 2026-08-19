@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 from graph_model import (
     GraphData,
+    _absorb_small_clusters,
     _build_account_projection,
     add_edge,
     add_node,
@@ -500,6 +501,63 @@ class GraphModelTests(unittest.TestCase):
         self.assertEqual(
             {connectivity["assignments"][node_id] for node_id in ("wing", "mixed", "longterm", "emoji")},
             {"keyword_group:atsust"},
+        )
+
+    def test_absorb_small_clusters_merges_tiny_island_into_large_neighbor(self) -> None:
+        graph = GraphData()
+        for index in range(12):
+            add_node(
+                graph,
+                {
+                    "id": f"big-{index}",
+                    "type": "person",
+                    "name": f"Big {index}",
+                    "aliases": [],
+                    "description": "core",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        for index in range(3):
+            add_node(
+                graph,
+                {
+                    "id": f"tiny-{index}",
+                    "type": "person",
+                    "name": f"Tiny {index}",
+                    "aliases": [],
+                    "description": "wing長期",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "tiny-0",
+                "target": "big-0",
+                "type": "follow",
+                "description": "follows",
+                "source_urls": ["https://example.com"],
+                "confidence": 0.7,
+            },
+        )
+        payload = {
+            "assignments": {
+                **{f"big-{index}": "connectivity:1" for index in range(12)},
+                **{f"tiny-{index}": "keyword_group:wing_longterm" for index in range(3)},
+            },
+            "clusters": {
+                "connectivity:1": {"label": "大きい島 (12)", "size": 12},
+                "keyword_group:wing_longterm": {"label": "wing長期 (3)", "size": 3},
+            },
+        }
+        _absorb_small_clusters(graph, payload, min_size=10)
+        self.assertNotIn("keyword_group:wing_longterm", payload["clusters"])
+        self.assertEqual(payload["clusters"]["connectivity:1"]["size"], 15)
+        self.assertEqual(
+            {payload["assignments"][f"tiny-{index}"] for index in range(3)},
+            {"connectivity:1"},
         )
 
     def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
