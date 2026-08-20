@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pickup Artist Network</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://unpkg.com/vis-network@9.1.9/styles/vis-network.min.css">
+
   <style>
     :root {
       color-scheme: light dark;
@@ -358,6 +358,7 @@
     #network {
       position: relative;
       height: 650px;
+      overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 12px;
       background:
@@ -756,7 +757,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-20 03:48 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-20 04:10 UTC。</p>
       </div>
     </div>
   </header>
@@ -1080,7 +1081,7 @@
     </details>
   </main>
 
-  <script src="https://unpkg.com/vis-network@9.1.9/dist/vis-network.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.31.0/cytoscape.min.js"></script>
   <script>
     function siteAssetUrl(filename) {
       const origin = window.location.origin;
@@ -1453,103 +1454,254 @@
       clusterModeInput.value = preferredCluster;
     }
 
-    const nodesDataSet = new vis.DataSet([]);
-    const edgesDataSet = new vis.DataSet([]);
     const prefersDarkGraph = !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
     const graphLabelColor = prefersDarkGraph ? "#e6edf5" : "#17212b";
     const graphLabelStroke = prefersDarkGraph ? "rgba(10, 15, 22, 0.85)" : "rgba(255, 255, 255, 0.92)";
     const graphEdgeColor = prefersDarkGraph ? "rgba(125, 145, 172, 0.4)" : "rgba(148, 163, 184, 0.42)";
     const graphEdgeHighlight = prefersDarkGraph ? "#7aa8ff" : "#2f6feb";
-    const network = new vis.Network(
-      document.getElementById("network"),
-      { nodes: nodesDataSet, edges: edgesDataSet },
-      {
-        layout: {
-          improvedLayout: false,
-          randomSeed: 13
-        },
-        physics: {
-          enabled: false,
-          stabilization: {
-            enabled: false,
-            iterations: 0,
-            updateInterval: 25,
-            fit: true
-          },
-          barnesHut: {
-            gravitationalConstant: -10000,
-            springLength: 130,
-            springConstant: 0.03,
-            damping: 0.18
-          }
-        },
-        nodes: {
-          shape: "dot",
-          borderWidth: 1,
-          scaling: { min: 2, max: 32 },
-          font: {
-            face: "Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif",
-            size: 13,
+    const networkEl = document.getElementById("network");
+    const cy = cytoscape({
+      container: networkEl,
+      elements: [],
+      layout: { name: "preset", fit: false, animate: false },
+      minZoom: 0.05,
+      maxZoom: 8,
+      wheelSensitivity: 0.5,
+      autoungrabify: true,
+      boxSelectionEnabled: false,
+      selectionType: "single",
+      pixelRatio: "auto",
+      style: [
+        {
+          selector: "node",
+          style: {
+            width: "data(size)",
+            height: "data(size)",
+            "background-color": "data(color)",
+            "border-width": "data(borderWidth)",
+            "border-color": "data(borderColor)",
+            label: "data(label)",
             color: graphLabelColor,
-            strokeWidth: 3,
-            strokeColor: graphLabelStroke
+            "font-size": 12,
+            "font-weight": 600,
+            "font-family": "Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif",
+            "text-outline-width": 3,
+            "text-outline-color": graphLabelStroke,
+            "text-valign": "bottom",
+            "text-margin-y": 4,
+            "overlay-opacity": 0,
+            "min-zoomed-font-size": 8
           }
         },
-        edges: {
-          arrows: "to",
-          color: { color: graphEdgeColor, highlight: graphEdgeHighlight },
-          font: { align: "top", size: 11, color: graphLabelColor, strokeWidth: 3, strokeColor: graphLabelStroke },
-          smooth: false
+        {
+          selector: "node[image]",
+          style: {
+            "background-image": "data(image)",
+            "background-fit": "cover",
+            "background-clip": "node"
+          }
         },
-        interaction: {
-          hover: true,
-          dragNodes: false,
-          dragView: true,
-          zoomView: true,
-          hideEdgesOnDrag: true,
-          hideEdgesOnZoom: true,
-          navigationButtons: false,
-          keyboard: { enabled: false },
-          tooltipDelay: 180,
-          zoomSpeed: 1.4
+        {
+          selector: "node.cluster-label",
+          style: {
+            shape: "round-rectangle",
+            width: "data(labelWidth)",
+            height: 22,
+            padding: "8px",
+            "background-color": prefersDarkGraph ? "#141c26" : "#ffffff",
+            "background-opacity": 0.9,
+            label: "data(label)",
+            "text-valign": "center",
+            "text-halign": "center",
+            "text-margin-y": 0,
+            "font-size": 13,
+            "border-width": 0,
+            "text-outline-width": 0,
+            color: graphLabelColor
+          }
+        },
+        {
+          selector: "edge",
+          style: {
+            "curve-style": "haystack",
+            "haystack-radius": 0,
+            width: "data(width)",
+            "line-color": "data(color)",
+            "line-style": "data(lineStyle)",
+            "target-arrow-color": "data(color)",
+            "target-arrow-shape": "data(arrow)",
+            "arrow-scale": 0.65,
+            label: "data(label)",
+            "font-size": 10,
+            color: graphLabelColor,
+            "text-outline-width": 2,
+            "text-outline-color": graphLabelStroke,
+            "overlay-opacity": 0
+          }
+        },
+        {
+          selector: "edge[arrow = 'triangle']",
+          style: {
+            "curve-style": "bezier",
+            "target-arrow-shape": "triangle"
+          }
+        },
+        {
+          selector: "node:selected",
+          style: {
+            "border-width": 3,
+            "border-color": "#111827"
+          }
+        },
+        {
+          selector: "edge.emphasized",
+          style: {
+            width: 2.2,
+            "line-color": "#1d4ed8",
+            "target-arrow-color": "#1d4ed8"
+          }
         }
-      }
-    );
-    window.graphNetwork = network;
-    network.on("zoom", () => {
-      allowAutoFit = false;
+      ]
     });
-    network.on("dragEnd", (params) => {
-      if (!params.nodes.length) {
+
+    function graphColor(value) {
+      if (value && typeof value === "object") {
+        return value.color || graphEdgeColor;
+      }
+      return value || graphEdgeColor;
+    }
+
+    function graphViewCenter() {
+      const pan = cy.pan();
+      const zoom = cy.zoom();
+      return {
+        x: (cy.width() / 2 - pan.x) / zoom,
+        y: (cy.height() / 2 - pan.y) / zoom
+      };
+    }
+
+    function graphContentNodes() {
+      return cy.nodes().filter((node) => node.data("kind") !== "cluster-label");
+    }
+
+    const network = {
+      getScale() {
+        return cy.zoom();
+      },
+      getViewPosition() {
+        return graphViewCenter();
+      },
+      moveTo({ position, scale, animation } = {}) {
+        const zoom = scale == null ? cy.zoom() : scale;
+        const pos = position || graphViewCenter();
+        const pan = {
+          x: cy.width() / 2 - zoom * pos.x,
+          y: cy.height() / 2 - zoom * pos.y
+        };
+        if (animation && animation.duration) {
+          cy.animate({ zoom, pan, duration: animation.duration, easing: "ease-in-out-cubic" });
+          return;
+        }
+        syncingCamera = true;
+        cy.viewport({ zoom, pan });
+        syncingCamera = false;
+      },
+      fit() {
+        const nodes = graphContentNodes();
+        if (nodes.nonempty()) {
+          syncingCamera = true;
+          cy.fit(nodes, 36);
+          syncingCamera = false;
+        }
+      },
+      selectNodes(ids) {
+        cy.elements().unselect();
+        (ids || []).forEach((id) => {
+          cy.getElementById(id).select();
+        });
+      },
+      getSelectedNodes() {
+        return graphContentNodes().filter(":selected").map((node) => node.id());
+      },
+      getNodeAt(pointer) {
+        const hit = graphContentNodes().filter((node) => {
+          const box = node.renderedBoundingBox({ includeLabels: false, includeOverlays: false });
+          return pointer.x >= box.x1 && pointer.x <= box.x2 && pointer.y >= box.y1 && pointer.y <= box.y2;
+        });
+        return hit.length ? hit[0].id() : undefined;
+      },
+      canvasToDOM(pos) {
+        const pan = cy.pan();
+        const zoom = cy.zoom();
+        return { x: pos.x * zoom + pan.x, y: pos.y * zoom + pan.y };
+      },
+      getPositions(ids) {
+        const out = {};
+        (ids || []).forEach((id) => {
+          const node = cy.getElementById(id);
+          if (node.nonempty()) {
+            out[id] = { ...node.position() };
+          }
+        });
+        return out;
+      },
+      focus(nodeId, options = {}) {
+        const node = cy.getElementById(nodeId);
+        if (node.empty()) {
+          return;
+        }
+        const scale = options.scale == null ? Math.max(cy.zoom(), 1.05) : options.scale;
+        this.moveTo({
+          position: node.position(),
+          scale,
+          animation: options.animation
+        });
+        this.selectNodes([nodeId]);
+      },
+      isCluster() {
+        return false;
+      },
+      openCluster() {},
+      get body() {
+        return { nodeIndices: graphContentNodes().map((node) => node.id()) };
+      },
+      interactionHandler: { options: { zoomView: true, dragView: true } }
+    };
+    window.graphNetwork = network;
+    let syncingCamera = false;
+    cy.on("zoom pan", () => {
+      if (!syncingCamera) {
         allowAutoFit = false;
       }
     });
-    network.on("beforeDrawing", (ctx) => {
-      if (!clusterLabelDrawItems.length) {
+    cy.on("tap", "node", (event) => {
+      if (event.target.hasClass("cluster-label")) {
         return;
       }
-      ctx.save();
-      ctx.font = "600 13px Hiragino Sans, Noto Sans JP, Segoe UI, sans-serif";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      clusterLabelDrawItems.forEach((item) => {
-        const paddingX = 8;
-        const boxH = 22;
-        const boxW = ctx.measureText(item.label).width + paddingX * 2;
-        const left = item.x - boxW / 2;
-        const top = item.y - boxH / 2;
-        ctx.fillStyle = prefersDarkGraph ? "rgba(20, 28, 38, 0.82)" : "rgba(255, 255, 255, 0.9)";
-        if (typeof ctx.roundRect === "function") {
-          ctx.beginPath();
-          ctx.roundRect(left, top, boxW, boxH, 8);
-          ctx.fill();
-        } else {
-          ctx.fillRect(left, top, boxW, boxH);
-        }
-        ctx.fillStyle = graphLabelColor;
-        ctx.fillText(item.label, item.x, item.y);
-      });
-      ctx.restore();
+      const selectedId = event.target.id();
+      selectedNodeId = selectedId;
+      allowAutoFit = false;
+      network.selectNodes([selectedId]);
+      updateNetworkEmphasis(selectedId);
+      renderDetailPanel(selectedId);
+    });
+    cy.on("tap", (event) => {
+      if (event.target !== cy) {
+        return;
+      }
+      selectedNodeId = null;
+      network.selectNodes([]);
+      updateNetworkEmphasis(null);
+      renderDetailPanel(null);
+    });
+    cy.on("mouseover", "node, edge", (event) => {
+      networkEl.title = event.target.data("title") || "";
+    });
+    cy.on("mouseout", "node, edge", () => {
+      networkEl.title = "";
+    });
+    window.addEventListener("resize", () => {
+      cy.resize();
     });
 
     function selectedValues(selector, attributeName) {
@@ -2487,16 +2639,9 @@
       selectedNodeId = nodeId;
       // Expand ego neighborhood into the canvas before focusing.
       applyFilters();
-      const clusterMode = getClusterMode();
-      const clusterAssignment = rawClusters.modes?.[clusterMode]?.assignments?.[nodeId];
-      const clusterId = clusterAssignment ? getClusterNodeId(clusterAssignment) : null;
-      if (clusterId && network.isCluster(clusterId)) {
-        network.openCluster(clusterId);
-      }
       if (currentVisibleNodes.some((node) => node.id === nodeId)) {
-        network.selectNodes([nodeId]);
         network.focus(nodeId, {
-          scale: 1.05,
+          scale: Math.max(network.getScale(), 1.05),
           animation: {
             duration: 300,
             easingFunction: "easeInOutQuad"
@@ -2751,75 +2896,7 @@
     }
 
     function resetClusters() {
-      Array.from(activeClusterIds).forEach((clusterId) => {
-        if (network.isCluster(clusterId)) {
-          network.openCluster(clusterId);
-        }
-      });
       activeClusterIds = new Set();
-    }
-
-    function applyRelationClusters(visibleNodes, clusterMode) {
-      const modePayload = rawClusters.modes?.[clusterMode];
-      if (!modePayload || !modePayload.assignments) {
-        return;
-      }
-      const bucketMap = new Map();
-      visibleNodes.forEach((node) => {
-        const clusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
-        if (!clusterId) {
-          return;
-        }
-        if (!bucketMap.has(clusterId)) {
-          bucketMap.set(clusterId, []);
-        }
-        bucketMap.get(clusterId).push(node);
-      });
-      const clusterIdsInOrder = Array.from(bucketMap.entries())
-        .filter(([, members]) => members.length >= 3)
-        .sort(([, left], [, right]) => right.length - left.length)
-        .map(([clusterId]) => clusterId);
-      clusterIdsInOrder.forEach((clusterId, idx) => {
-        const members = bucketMap.get(clusterId);
-        if (members.length < 3) {
-          return;
-        }
-        const memberIds = new Set(members.map((node) => node.id));
-        const personCount = members.filter((node) => node.type === "person").length;
-        const dominantType = personCount >= (members.length - personCount) ? "person" : "community";
-        const clusterNodeId = getClusterNodeId(clusterId);
-        const clusterInfo = clusterInfoFor(clusterId, modePayload);
-        const definition = clusterModeDefinitions[clusterMode] || clusterModeDefinitions.off;
-        const clusterColor = clusterColors[idx % clusterColors.length];
-        const topMembers = members
-          .slice(0, 4)
-          .map((node) => node.name)
-          .join(", ");
-        const titleText = [
-          clusterInfo.title || `${clusterInfo.label || definition.label} (${members.length})`,
-          topMembers + (members.length > 4 ? ` ほか ${members.length - 4} 件` : "")
-        ].join("\n");
-        network.cluster({
-          joinCondition(nodeOptions) {
-            return memberIds.has(nodeOptions.id);
-          },
-          clusterNodeProperties: {
-            id: clusterNodeId,
-            label: members.length >= 6 ? `${clusterInfo.label || definition.label}\n${members.length}件` : `${members.length}`,
-            group: dominantType,
-            value: 18 + members.length,
-            shape: "hexagon",
-            color: {
-              background: clusterColor,
-              border: "#ffffff",
-              highlight: { background: clusterColor, border: "#111827" }
-            },
-            title: titleText,
-            font: { size: 15, bold: true }
-          }
-        });
-        activeClusterIds.add(clusterNodeId);
-      });
     }
 
     function hashText(value) {
@@ -3033,27 +3110,24 @@
         });
       }
 
-      edgesDataSet.update(
-        currentVisibleEdges.map((edge, index) => {
-          const related = selectedId && (edge.source === selectedId || edge.target === selectedId);
-          return {
-            id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
-            color: related
-              ? { color: "#1d4ed8", highlight: "#1d4ed8" }
-              : (isAssistiveEdge(edge)
-                ? assistiveEdgeColor(edge, currentVisibleEdges)
-                : baseEdgeColor),
-            width: related ? 2.2 : (isWeakAssistiveEdge(edge) ? 0.25 : (currentVisibleEdges.length > 1200 ? 0.35 : 1))
-          };
-        })
-      );
-
-      nodesDataSet.update(
-        currentVisibleNodes.map((node) => ({
-          id: node.id,
-          label: selectedId && neighborIds.has(node.id) ? node.name : getNodeLabel(node, currentVisibleNodes, currentSearchTerm)
-        }))
-      );
+      cy.edges().removeClass("emphasized");
+      graphContentNodes().forEach((ele) => {
+        const nodeId = ele.id();
+        ele.data(
+          "label",
+          selectedId && neighborIds.has(nodeId)
+            ? (rawNodeById.get(nodeId)?.name || ele.data("label"))
+            : getNodeLabel(rawNodeById.get(nodeId) || { id: nodeId, name: ele.data("label") }, currentVisibleNodes, currentSearchTerm)
+        );
+      });
+      if (!selectedId) {
+        return;
+      }
+      currentVisibleEdges.forEach((edge, index) => {
+        if (edge.source === selectedId || edge.target === selectedId) {
+          cy.getElementById(`${edge.source}-${edge.target}-${edge.type}-${index}`).addClass("emphasized");
+        }
+      });
     }
 
     function applyFilters() {
@@ -3254,58 +3328,102 @@
       currentSearchTerm = term;
 
       resetClusters();
-      nodesDataSet.clear();
-      edgesDataSet.clear();
+      const savedCamera = {
+        zoom: cy.zoom(),
+        pan: { ...cy.pan() }
+      };
       const layout = computeLayoutPositions(visibleNodes, visibleEdges, clusterMode, shouldCluster);
       const layoutPositions = layout.positions || layout;
       const clusterLabels = layout.labels || [];
-
-      nodesDataSet.add(
-        visibleNodes.map((node) => ({
-          id: node.id,
-          x: layoutPositions.get(node.id)?.x,
-          y: layoutPositions.get(node.id)?.y,
-          fixed: { x: true, y: true },
-          label: getNodeLabel(node, visibleNodes, term),
-          group: node.type,
-          value: getNodeVisualValue(node, visibleNodes),
-          shape: shouldShowNodeIcon(node, visibleNodes) ? "circularImage" : "dot",
-          image: shouldShowNodeIcon(node, visibleNodes) ? node.icon_url : undefined,
-          brokenImage: "icon.svg",
-          borderWidth: (node.follower_count || 0) > 0 ? 2 : 1,
-          color: {
-            background: nodeColors[node.type] || "#64748b",
-            border: (node.follower_count || 0) > 0 ? "#ffffff" : "#d8e2f0",
-            highlight: { background: nodeColors[node.type] || "#64748b", border: "#111827" }
-          },
-          title: [
-            node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`),
-            node.follower_count ? `X followers: ${formatNumber(node.follower_count)}` : "",
-            node.follower_count ? `フォロワー順位: #${followerRankById.get(node.id) || "-"}` : "",
-            node.follower_count ? "アイコンサイズ: Xフォロワー数ベース" : "",
-            node.description || ""
-          ]
-            .filter((value) => value)
-            .join("\n")
-        }))
-      );
       clusterLabelDrawItems = clusterLabels;
-
-      edgesDataSet.add(
-        visibleEdges.map((edge, index) => ({
-          id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
-          from: edge.source,
-          to: edge.target,
-          arrows: visibleEdges.length > 1200 ? "" : "to",
-          label: visibleEdges.length <= 260 ? formatEdgeType(edge.type) : undefined,
-          color: isAssistiveEdge(edge)
-            ? assistiveEdgeColor(edge, visibleEdges)
-            : getEdgeColor(visibleEdges),
-          dashes: isAssistiveEdge(edge) && visibleEdges.length <= 1200 ? (isWeakAssistiveEdge(edge) ? [2, 8] : [3, 5]) : false,
-          width: isWeakAssistiveEdge(edge) ? 0.25 : (visibleEdges.length > 1200 ? 0.35 : 1),
-          title: `${formatEdgeType(edge.type)}: ${edge.description || ""}${isWeakAssistiveEdge(edge) ? "\n弱補助線: 広い特徴語だけの薄い接続" : ""}${isStrongAssistiveEdge(edge) ? "\n強補助線: 複数特徴語または明示的な共有文脈" : ""}`
-        }))
+      const nodeIdSet = new Set(visibleNodes.map((node) => node.id));
+      const drawableEdges = visibleEdges.filter(
+        (edge) => nodeIdSet.has(edge.source) && nodeIdSet.has(edge.target)
       );
+      const showArrows = drawableEdges.length <= 1200;
+      const elements = [
+        ...visibleNodes.map((node) => {
+          const value = getNodeVisualValue(node, visibleNodes);
+          const hasIcon = shouldShowNodeIcon(node, visibleNodes);
+          return {
+            group: "nodes",
+            data: {
+              id: node.id,
+              label: getNodeLabel(node, visibleNodes, term),
+              kind: "account",
+              size: Math.max(8, value * 1.35),
+              color: nodeColors[node.type] || "#64748b",
+              borderWidth: (node.follower_count || 0) > 0 ? 2 : 1,
+              borderColor: (node.follower_count || 0) > 0 ? "#ffffff" : "#d8e2f0",
+              image: hasIcon ? node.icon_url : undefined,
+              title: [
+                node.name + (node.type === "person" ? "" : ` (${formatNodeType(node.type)})`),
+                node.follower_count ? `X followers: ${formatNumber(node.follower_count)}` : "",
+                node.follower_count ? `フォロワー順位: #${followerRankById.get(node.id) || "-"}` : "",
+                node.description || ""
+              ].filter((value) => value).join("\n")
+            },
+            position: {
+              x: layoutPositions.get(node.id)?.x || 0,
+              y: layoutPositions.get(node.id)?.y || 0
+            },
+            grabbable: false,
+            pannable: true
+          };
+        }),
+        ...clusterLabels.map((item) => ({
+          group: "nodes",
+          data: {
+            id: item.id,
+            label: item.label,
+            kind: "cluster-label",
+            labelWidth: Math.max(56, String(item.label || "").length * 8.2),
+            size: 22,
+            color: prefersDarkGraph ? "#141c26" : "#ffffff",
+            borderWidth: 0,
+            borderColor: "transparent",
+            title: item.label
+          },
+          classes: "cluster-label",
+          position: { x: item.x, y: item.y },
+          selectable: false,
+          grabbable: false,
+          pannable: true
+        })),
+        ...drawableEdges.map((edge, index) => ({
+          group: "edges",
+          data: {
+            id: `${edge.source}-${edge.target}-${edge.type}-${index}`,
+            source: edge.source,
+            target: edge.target,
+            label: drawableEdges.length <= 260 ? formatEdgeType(edge.type) : "",
+            color: graphColor(
+              isAssistiveEdge(edge)
+                ? assistiveEdgeColor(edge, drawableEdges)
+                : getEdgeColor(drawableEdges)
+            ),
+            width: isWeakAssistiveEdge(edge) ? 0.4 : (drawableEdges.length > 1200 ? 0.45 : 1),
+            lineStyle: isAssistiveEdge(edge) && drawableEdges.length <= 1200
+              ? (isWeakAssistiveEdge(edge) ? "dotted" : "dashed")
+              : "solid",
+            arrow: showArrows ? "triangle" : "none",
+            title: `${formatEdgeType(edge.type)}: ${edge.description || ""}${isWeakAssistiveEdge(edge) ? "\n弱補助線: 広い特徴語だけの薄い接続" : ""}${isStrongAssistiveEdge(edge) ? "\n強補助線: 複数特徴語または明示的な共有文脈" : ""}`
+          }
+        }))
+      ];
+      cy.batch(() => {
+        cy.elements().remove();
+        try {
+          cy.add(elements);
+        } catch (error) {
+          console.error(error);
+        }
+      });
+      if (!(allowAutoFit && !selectedNodeId && !term) && Number.isFinite(savedCamera.zoom)) {
+        syncingCamera = true;
+        cy.viewport(savedCamera);
+        syncingCamera = false;
+      }
 
       updateNetworkEmphasis(selectedNodeId);
       // Avoid auto-fit when focusing a node, searching, or after the user pans/zooms.
@@ -3335,7 +3453,7 @@
       }
       window.setTimeout(() => {
         if (currentVisibleNodes.length) {
-          network.fit({ animation: { duration: 250, easingFunction: "easeInOutQuad" } });
+          network.fit();
         }
       }, 50);
     }
@@ -3541,27 +3659,6 @@
       }
       focusNode(button.getAttribute("data-node-id"));
     });
-    network.on("selectNode", (params) => {
-      if (params.nodes.length) {
-        const selectedId = params.nodes[0];
-        if (network.isCluster(selectedId)) {
-          network.openCluster(selectedId);
-          selectedNodeId = null;
-          renderDetailPanel(null);
-        } else {
-          selectedNodeId = selectedId;
-          allowAutoFit = false;
-          updateNetworkEmphasis(selectedId);
-          renderDetailPanel(selectedId);
-        }
-      }
-    });
-    network.on("deselectNode", () => {
-      selectedNodeId = null;
-      updateNetworkEmphasis(null);
-      renderDetailPanel(null);
-    });
-
     updateClusterModeHelp();
     updateKeywordClusterControl();
     // solid-first: 自動補助線オフ + 関係線につながるノードのみ表示。

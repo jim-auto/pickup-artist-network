@@ -117,13 +117,14 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
             self._check_graph_interactions(f"{origin}docs/")
 
     def _wait_for_graph(self, page) -> None:
-        page.locator("#network canvas").wait_for(state="visible", timeout=90_000)
+        page.locator("#total-nodes").wait_for(state="attached", timeout=60_000)
         page.wait_for_function(
             """() => {
               const el = document.getElementById('visible-nodes');
               if (!el) return false;
               const n = parseInt(el.textContent || '0', 10);
-              return Number.isFinite(n) && n > 10 && window.graphNetwork && window.graphNetwork.getScale() > 0;
+              return Number.isFinite(n) && n > 10 && window.graphNetwork && window.graphNetwork.getScale() > 0
+                && document.querySelector('#network canvas');
             }""",
             timeout=90_000,
         )
@@ -172,7 +173,7 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
                 )
                 after_button = self._graph_scale(page)
 
-                page.locator("#network canvas").hover()
+                page.locator("#network").hover()
                 wheel_before = self._graph_scale(page)
                 page.mouse.wheel(0, -800)
                 page.wait_for_timeout(200)
@@ -180,10 +181,10 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
                 if wheel_after_mouse <= wheel_before + 0.01:
                     dispatched = page.evaluate(
                         """() => {
-                          const canvas = document.querySelector('#network canvas');
+                          const host = document.getElementById('network');
                           const before = window.graphNetwork.getScale();
-                          const rect = canvas.getBoundingClientRect();
-                          canvas.dispatchEvent(new WheelEvent('wheel', {
+                          const rect = host.getBoundingClientRect();
+                          host.dispatchEvent(new WheelEvent('wheel', {
                             bubbles: true,
                             cancelable: true,
                             clientX: rect.left + rect.width / 2,
@@ -202,7 +203,7 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
                 else:
                     self.assertGreater(wheel_after_mouse, wheel_before)
 
-                box = page.locator("#network canvas").bounding_box()
+                box = page.locator("#network").bounding_box()
                 self.assertIsNotNone(box)
                 pan_before = page.evaluate("() => window.graphNetwork.getViewPosition()")
                 start_x = box["x"] + 36
@@ -225,13 +226,13 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
                 self.assertGreater(moved, 1, msg=f"drag did not pan: {pan_before} -> {pan_after} hit={hit}")
 
                 page.wait_for_timeout(300)
-                canvas_box = page.locator("#network canvas").bounding_box()
+                canvas_box = page.locator("#network").bounding_box()
                 self.assertIsNotNone(canvas_box)
                 target = page.evaluate(
                     """() => {
-                      const canvas = document.querySelector('#network canvas');
-                      const w = canvas.clientWidth;
-                      const h = canvas.clientHeight;
+                      const host = document.getElementById('network');
+                      const w = host.clientWidth;
+                      const h = host.clientHeight;
                       for (let y = 48; y < h - 48; y += 20) {
                         for (let x = 48; x < w - 48; x += 20) {
                           const id = window.graphNetwork.getNodeAt({ x, y });
