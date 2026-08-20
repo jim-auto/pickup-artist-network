@@ -751,7 +751,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-19 17:01 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-20 03:25 UTC。</p>
       </div>
     </div>
   </header>
@@ -2856,15 +2856,22 @@
 
       visibleNodes.forEach((node) => {
         const assignedClusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
-        const bucketId = assignedClusterId || `unassigned:${hashText(node.id) % 12}`;
+        const bucketId = assignedClusterId || (shouldCluster ? `${clusterMode}:other` : `unassigned:${hashText(node.id) % 12}`);
         if (!buckets.has(bucketId)) {
           buckets.set(bucketId, []);
         }
         buckets.get(bucketId).push(node);
       });
 
+      const isOtherBucket = (bucketId) =>
+        String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:");
       const orderedBuckets = Array.from(buckets.entries())
         .sort((left, right) => {
+          const leftOther = isOtherBucket(left[0]) ? 1 : 0;
+          const rightOther = isOtherBucket(right[0]) ? 1 : 0;
+          if (leftOther !== rightOther) {
+            return leftOther - rightOther;
+          }
           if (right[1].length !== left[1].length) {
             return right[1].length - left[1].length;
           }
@@ -2912,11 +2919,14 @@
       const labels = [];
       if (shouldCluster) {
         orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
-          if (!bucketId || String(bucketId).startsWith("unassigned:")) {
+          if (!bucketId) {
             return;
           }
           const info = clusterInfoFor(bucketId, modePayload);
-          const text = String(info.label || "").trim();
+          let text = String(info.label || "").trim();
+          if (!text && (String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:"))) {
+            text = `その他 (${members.length})`;
+          }
           if (!text) {
             return;
           }

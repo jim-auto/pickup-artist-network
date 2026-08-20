@@ -1366,6 +1366,123 @@ def _absorb_small_clusters(
     _refresh_cluster_sizes(mode_payload)
 
 
+def _fold_semantic_clusters(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    min_size: int = 10,
+) -> None:
+    """Fold 補助 semantic islands into neighboring large named clusters.
+
+    Skip when the graph has no large non-semantic cluster, so tiny fixture
+    maps keep labels like アプリ/オンライン 補助 (3). Members without a large
+    neighbor are unassigned and later land in その他.
+    """
+    assigned = _refresh_cluster_sizes(mode_payload)
+    semantic_ids = {cluster_id for cluster_id in assigned if ":semantic:" in cluster_id}
+    large_ids = {
+        cluster_id
+        for cluster_id, size in assigned.items()
+        if size >= min_size and ":semantic:" not in cluster_id
+    }
+    if not semantic_ids or not large_ids:
+        return
+
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    neighbor_scores: dict[str, Counter[str]] = defaultdict(Counter)
+    for edge in graph.edges:
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type not in ACCOUNT_NODE_TYPES or target.type not in ACCOUNT_NODE_TYPES:
+            continue
+        for node_id, neighbor_id in ((edge.source, edge.target), (edge.target, edge.source)):
+            node_cluster = mode_payload["assignments"].get(node_id)
+            neighbor_cluster = mode_payload["assignments"].get(neighbor_id)
+            if node_cluster not in semantic_ids or neighbor_cluster not in large_ids:
+                continue
+            scale = 0.25 if _is_weak_assistive_edge(edge) else 1.0
+            neighbor_scores[node_id][neighbor_cluster] += max(edge.confidence, 0.2) * scale
+
+    for node_id, cluster_id in list(mode_payload["assignments"].items()):
+        if cluster_id not in semantic_ids:
+            continue
+        scores = neighbor_scores.get(node_id)
+        if scores:
+            mode_payload["assignments"][node_id] = max(
+                scores.items(),
+                key=lambda item: (item[1], assigned[item[0]], item[0]),
+            )[0]
+            continue
+        del mode_payload["assignments"][node_id]
+    _refresh_cluster_sizes(mode_payload)
+
+
+def _assign_unassigned_people(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    mode_key: str,
+    min_neighbor_score: float = 0.2,
+) -> None:
+    """Attach leftover people to a neighboring cluster, else one その他 island."""
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    assigned = _refresh_cluster_sizes(mode_payload)
+    unassigned_ids = {
+        node.id
+        for node in graph.nodes
+        if node.type in CLUSTER_MEMBER_NODE_TYPES and not mode_payload["assignments"].get(node.id)
+    }
+    if not unassigned_ids:
+        return
+
+    if assigned:
+        neighbor_scores: dict[str, Counter[str]] = defaultdict(Counter)
+        for edge in graph.edges:
+            source = nodes_by_id.get(edge.source)
+            target = nodes_by_id.get(edge.target)
+            if source is None or target is None:
+                continue
+            if source.type not in ACCOUNT_NODE_TYPES or target.type not in ACCOUNT_NODE_TYPES:
+                continue
+            for node_id, neighbor_id in ((edge.source, edge.target), (edge.target, edge.source)):
+                if node_id not in unassigned_ids:
+                    continue
+                neighbor_cluster = mode_payload["assignments"].get(neighbor_id)
+                if not neighbor_cluster or neighbor_cluster.endswith(":other"):
+                    continue
+                scale = 0.25 if _is_weak_assistive_edge(edge) else 1.0
+                neighbor_scores[node_id][neighbor_cluster] += max(edge.confidence, 0.2) * scale
+        for node_id, cluster_scores in neighbor_scores.items():
+            cluster_id, score = max(
+                cluster_scores.items(),
+                key=lambda item: (item[1], assigned[item[0]], item[0]),
+            )
+            if score < min_neighbor_score:
+                continue
+            mode_payload["assignments"][node_id] = cluster_id
+            unassigned_ids.discard(node_id)
+
+    leftover_ids = sorted(
+        unassigned_ids,
+        key=lambda node_id: nodes_by_id[node_id].name,
+    )
+    if not leftover_ids:
+        _refresh_cluster_sizes(mode_payload)
+        return
+
+    other_id = f"{mode_key}:other"
+    preview = [nodes_by_id[node_id].name for node_id in leftover_ids[:4]]
+    preview_suffix = f" ほか {len(leftover_ids) - len(preview)} 件" if len(leftover_ids) > len(preview) else ""
+    mode_payload["clusters"][other_id] = {
+        "label": f"その他 ({len(leftover_ids)})",
+        "title": f"所属クラスタが見つからない人: {', '.join(preview)}{preview_suffix}",
+        "size": len(leftover_ids),
+    }
+    for node_id in leftover_ids:
+        mode_payload["assignments"][node_id] = other_id
+    _refresh_cluster_sizes(mode_payload)
+
+
 def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
     nodes_by_id = {node.id: node for node in graph.nodes}
     # 公開地図は人数を減らさず、つながりの近さで島に分けて配置する。
@@ -1411,6 +1528,8 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
         _backfill_semantic_clusters(graph, mode_payload, mode_key, int(definition["min_size"]))
         _backfill_neighbor_clusters(graph, mode_payload)
         _absorb_small_clusters(graph, mode_payload, min_size=10)
+        _fold_semantic_clusters(graph, mode_payload, min_size=10)
+        _assign_unassigned_people(graph, mode_payload, mode_key)
         payload["modes"][mode_key] = mode_payload
 
     return payload
@@ -4516,15 +4635,22 @@ def render_html(
 
       visibleNodes.forEach((node) => {
         const assignedClusterId = clusterBucketIdForNode(node, clusterMode, modePayload);
-        const bucketId = assignedClusterId || `unassigned:${hashText(node.id) % 12}`;
+        const bucketId = assignedClusterId || (shouldCluster ? `${clusterMode}:other` : `unassigned:${hashText(node.id) % 12}`);
         if (!buckets.has(bucketId)) {
           buckets.set(bucketId, []);
         }
         buckets.get(bucketId).push(node);
       });
 
+      const isOtherBucket = (bucketId) =>
+        String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:");
       const orderedBuckets = Array.from(buckets.entries())
         .sort((left, right) => {
+          const leftOther = isOtherBucket(left[0]) ? 1 : 0;
+          const rightOther = isOtherBucket(right[0]) ? 1 : 0;
+          if (leftOther !== rightOther) {
+            return leftOther - rightOther;
+          }
           if (right[1].length !== left[1].length) {
             return right[1].length - left[1].length;
           }
@@ -4572,11 +4698,14 @@ def render_html(
       const labels = [];
       if (shouldCluster) {
         orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
-          if (!bucketId || String(bucketId).startsWith("unassigned:")) {
+          if (!bucketId) {
             return;
           }
           const info = clusterInfoFor(bucketId, modePayload);
-          const text = String(info.label || "").trim();
+          let text = String(info.label || "").trim();
+          if (!text && (String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:"))) {
+            text = `その他 (${members.length})`;
+          }
           if (!text) {
             return;
           }

@@ -10,7 +10,9 @@ from unittest.mock import patch
 from graph_model import (
     GraphData,
     _absorb_small_clusters,
+    _assign_unassigned_people,
     _build_account_projection,
+    _fold_semantic_clusters,
     add_edge,
     add_node,
     export_html,
@@ -290,6 +292,8 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn("空欄なら全島を同時に表示します", html)
         self.assertIn('const shouldCluster = clusterMode !== "off"', html)
         self.assertNotIn("const shouldCluster = false", html)
+        self.assertIn("shouldCluster ? `${clusterMode}:other`", html)
+        self.assertIn("isOtherBucket", html)
         self.assertIn("dragNodes: false", html)
         self.assertIn('network.on("beforeDrawing"', html)
         self.assertIn("allowAutoFit", html)
@@ -562,6 +566,139 @@ class GraphModelTests(unittest.TestCase):
             {payload["assignments"][f"tiny-{index}"] for index in range(3)},
             {"connectivity:1"},
         )
+
+    def test_fold_semantic_clusters_merges_connected_members_into_large_neighbor(self) -> None:
+        graph = GraphData()
+        for index in range(12):
+            add_node(
+                graph,
+                {
+                    "id": f"big-{index}",
+                    "type": "person",
+                    "name": f"Big {index}",
+                    "aliases": [],
+                    "description": "core",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        for index in range(3):
+            add_node(
+                graph,
+                {
+                    "id": f"app-{index}",
+                    "type": "person",
+                    "name": f"App {index}",
+                    "aliases": [],
+                    "description": "マッチングアプリ攻略",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "app-0",
+                "target": "big-0",
+                "type": "follow",
+                "description": "follows",
+                "source_urls": ["https://example.com"],
+                "confidence": 0.7,
+            },
+        )
+        payload = {
+            "assignments": {
+                **{f"big-{index}": "connectivity:1" for index in range(12)},
+                **{f"app-{index}": "connectivity:semantic:app_online" for index in range(3)},
+            },
+            "clusters": {
+                "connectivity:1": {"label": "大きい島 (12)", "size": 12},
+                "connectivity:semantic:app_online": {"label": "アプリ/オンライン 補助 (3)", "size": 3},
+            },
+        }
+        _fold_semantic_clusters(graph, payload, min_size=10)
+        self.assertNotIn("connectivity:semantic:app_online", payload["clusters"])
+        self.assertEqual(payload["assignments"]["app-0"], "connectivity:1")
+        self.assertNotIn("app-1", payload["assignments"])
+        self.assertNotIn("app-2", payload["assignments"])
+
+    def test_fold_semantic_clusters_keeps_tiny_graphs(self) -> None:
+        graph = GraphData()
+        for index in range(3):
+            add_node(
+                graph,
+                {
+                    "id": f"app-{index}",
+                    "type": "person",
+                    "name": f"App {index}",
+                    "aliases": [],
+                    "description": "マッチングアプリ攻略",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        payload = {
+            "assignments": {f"app-{index}": "connectivity:semantic:app_online" for index in range(3)},
+            "clusters": {
+                "connectivity:semantic:app_online": {"label": "アプリ/オンライン 補助 (3)", "size": 3},
+            },
+        }
+        _fold_semantic_clusters(graph, payload, min_size=10)
+        self.assertEqual(
+            payload["clusters"]["connectivity:semantic:app_online"]["label"],
+            "アプリ/オンライン 補助 (3)",
+        )
+
+    def test_assign_unassigned_people_gathers_leftovers_into_other(self) -> None:
+        graph = GraphData()
+        for index in range(12):
+            add_node(
+                graph,
+                {
+                    "id": f"big-{index}",
+                    "type": "person",
+                    "name": f"Big {index}",
+                    "aliases": [],
+                    "description": "core",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        for index in range(2):
+            add_node(
+                graph,
+                {
+                    "id": f"lone-{index}",
+                    "type": "person",
+                    "name": f"Lone {index}",
+                    "aliases": [],
+                    "description": "",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "lone-0",
+                "target": "big-0",
+                "type": "follow",
+                "description": "follows",
+                "source_urls": ["https://example.com"],
+                "confidence": 0.7,
+            },
+        )
+        payload = {
+            "assignments": {f"big-{index}": "connectivity:1" for index in range(12)},
+            "clusters": {
+                "connectivity:1": {"label": "大きい島 (12)", "size": 12},
+            },
+        }
+        _assign_unassigned_people(graph, payload, "connectivity")
+        self.assertEqual(payload["assignments"]["lone-0"], "connectivity:1")
+        self.assertEqual(payload["assignments"]["lone-1"], "connectivity:other")
+        self.assertEqual(payload["clusters"]["connectivity:other"]["label"], "その他 (1)")
+        self.assertEqual(payload["clusters"]["connectivity:1"]["size"], 13)
 
     def test_export_html_includes_region_cluster_with_keyword_summary(self) -> None:
         graph = GraphData()
