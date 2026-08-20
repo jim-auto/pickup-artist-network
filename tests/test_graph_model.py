@@ -13,6 +13,7 @@ from graph_model import (
     _assign_unassigned_people,
     _build_account_projection,
     _fold_semantic_clusters,
+    _summarize_cluster,
     add_edge,
     add_node,
     export_html,
@@ -302,6 +303,7 @@ class GraphModelTests(unittest.TestCase):
         self.assertNotIn("const shouldCluster = false", html)
         self.assertIn("shouldCluster ? `${clusterMode}:other`", html)
         self.assertIn("isOtherBucket", html)
+        self.assertIn("isNamedFactionBucket", html)
         self.assertIn("allowAutoFit", html)
         self.assertIn('id="nodes-table-more"', html)
         self.assertIn('id="edges-table-more"', html)
@@ -486,7 +488,6 @@ class GraphModelTests(unittest.TestCase):
         for node_id, name, description in [
             ("wing", "wing師範", "アツストサロン代表"),
             ("mixed", "ジム", "ピカ講習 味噌 元アツスト"),
-            # Keep アツスト as the shared affinity anchor (not wing長期 alone).
             ("longterm", "おちゃめ", "アツストサロン 長期"),
             ("emoji", "絵文字勢", "🐶🦁 合流歓迎"),
         ]:
@@ -510,9 +511,127 @@ class GraphModelTests(unittest.TestCase):
 
         connectivity = payload["clusters"]["modes"]["connectivity"]
         self.assertEqual(
-            {connectivity["assignments"][node_id] for node_id in ("wing", "mixed", "longterm", "emoji")},
+            {connectivity["assignments"][node_id] for node_id in ("wing", "longterm")},
+            {"keyword_group:wing_longterm"},
+        )
+        self.assertEqual(
+            {connectivity["assignments"][node_id] for node_id in ("mixed", "emoji")},
             {"keyword_group:atsust"},
         )
+
+    def test_export_html_expands_wing_longterm_with_salon_and_followers(self) -> None:
+        graph = GraphData()
+        for node_id, name, description in [
+            ("wing-nampa", "wing師範｜アツストサロン代表", "アツストサロン代表"),
+            ("kazu-pua", "おちゃめ", "wing長期"),
+            ("student", "門下生", "ストリートナンパ"),
+            ("jim", "ジム", "元アツスト ピカ講習 味噌"),
+            ("emoji", "絵文字勢", "🐶🦁 合流歓迎"),
+        ]:
+            add_node(
+                graph,
+                {
+                    "id": node_id,
+                    "type": "person",
+                    "name": name,
+                    "aliases": [],
+                    "description": description,
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "student",
+                "target": "wing-nampa",
+                "type": "follow",
+                "description": "follows",
+                "source_urls": ["https://example.com"],
+                "confidence": 0.7,
+            },
+        )
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "index.html"
+            export_html(graph, output_path=output_path)
+            payload = json.loads((Path(tmp_dir) / "graph-data.json").read_text(encoding="utf-8"))
+
+        connectivity = payload["clusters"]["modes"]["connectivity"]
+        self.assertEqual(connectivity["assignments"]["wing-nampa"], "keyword_group:wing_longterm")
+        self.assertEqual(connectivity["assignments"]["kazu-pua"], "keyword_group:wing_longterm")
+        self.assertEqual(connectivity["assignments"]["student"], "keyword_group:wing_longterm")
+        self.assertEqual(connectivity["assignments"]["jim"], "keyword_group:atsust")
+        self.assertEqual(connectivity["assignments"]["emoji"], "keyword_group:atsust")
+        self.assertIn("wing長期 (3)", [info["label"] for info in connectivity["clusters"].values()])
+
+    def test_summarize_cluster_prefers_high_follower_anchor(self) -> None:
+        graph = GraphData()
+        add_node(
+            graph,
+            {
+                "id": "hub",
+                "type": "person",
+                "name": "大きいアカウント",
+                "aliases": [],
+                "description": "hub",
+                "follower_count": 8000,
+                "source_urls": ["https://example.com"],
+                "confidence": 0.8,
+            },
+        )
+        add_node(
+            graph,
+            {
+                "id": "busy",
+                "type": "person",
+                "name": "つながり多い少フォロワー",
+                "aliases": [],
+                "description": "spoke",
+                "follower_count": 200,
+                "source_urls": ["https://example.com"],
+                "confidence": 0.8,
+            },
+        )
+        for index in range(6):
+            add_node(
+                graph,
+                {
+                    "id": f"leaf-{index}",
+                    "type": "person",
+                    "name": f"Leaf {index}",
+                    "aliases": [],
+                    "description": "leaf",
+                    "follower_count": 10,
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.8,
+                },
+            )
+            add_edge(
+                graph,
+                {
+                    "source": "busy",
+                    "target": f"leaf-{index}",
+                    "type": "follow",
+                    "description": "follows",
+                    "source_urls": ["https://example.com"],
+                    "confidence": 0.7,
+                },
+            )
+        add_edge(
+            graph,
+            {
+                "source": "hub",
+                "target": "busy",
+                "type": "follow",
+                "description": "follows",
+                "source_urls": ["https://example.com"],
+                "confidence": 0.7,
+            },
+        )
+        account_graph, contexts = _build_account_projection(graph, "connectivity")
+        nodes_by_id = {node.id: node for node in graph.nodes}
+        label = _summarize_cluster(set(nodes_by_id), account_graph, nodes_by_id, contexts)
+        self.assertEqual(label, "大きいアカウント 周辺")
 
     def test_absorb_small_clusters_merges_tiny_island_into_large_neighbor(self) -> None:
         graph = GraphData()
@@ -556,15 +675,15 @@ class GraphModelTests(unittest.TestCase):
         payload = {
             "assignments": {
                 **{f"big-{index}": "connectivity:1" for index in range(12)},
-                **{f"tiny-{index}": "keyword_group:wing_longterm" for index in range(3)},
+                **{f"tiny-{index}": "connectivity:99" for index in range(3)},
             },
             "clusters": {
                 "connectivity:1": {"label": "大きい島 (12)", "size": 12},
-                "keyword_group:wing_longterm": {"label": "wing長期 (3)", "size": 3},
+                "connectivity:99": {"label": "小さい島 (3)", "size": 3},
             },
         }
         _absorb_small_clusters(graph, payload, min_size=10)
-        self.assertNotIn("keyword_group:wing_longterm", payload["clusters"])
+        self.assertNotIn("connectivity:99", payload["clusters"])
         self.assertEqual(payload["clusters"]["connectivity:1"]["size"], 15)
         self.assertEqual(
             {payload["assignments"][f"tiny-{index}"] for index in range(3)},

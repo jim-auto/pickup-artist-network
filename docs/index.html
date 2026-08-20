@@ -757,7 +757,7 @@
       <img class="header-icon" src="icon.svg" alt="Pickup Artist Network icon">
       <div class="header-copy">
         <h1>Pickup Artist Network</h1>
-        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-20 04:10 UTC。</p>
+        <p>`sokusuu-ranking` を参考にした手動優先の関係グラフ試作版です。生成時刻: 2026-08-20 04:40 UTC。</p>
       </div>
     </div>
   </header>
@@ -1774,8 +1774,10 @@
       "keyword_group:mbh",
       "keyword_group:atsust",
       "keyword_group:wing_longterm",
-      "keyword_group:wing",
-      "keyword_group:atsu_chill"
+      "keyword_group:atsu_chill",
+      "keyword_group:yutty",
+      "keyword_group:golazo",
+      "keyword_group:miso"
     ]);
 
     function clusterBucketIdForNode(node, clusterMode, modePayload) {
@@ -2952,6 +2954,7 @@
 
       const isOtherBucket = (bucketId) =>
         String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:");
+      const isNamedFactionBucket = (bucketId) => String(bucketId).startsWith("keyword_group:");
       const orderedBuckets = Array.from(buckets.entries())
         .sort((left, right) => {
           const leftOther = isOtherBucket(left[0]) ? 1 : 0;
@@ -2961,6 +2964,11 @@
           }
           if (right[1].length !== left[1].length) {
             return right[1].length - left[1].length;
+          }
+          const leftFaction = isNamedFactionBucket(left[0]) ? 0 : 1;
+          const rightFaction = isNamedFactionBucket(right[0]) ? 0 : 1;
+          if (leftFaction !== rightFaction) {
+            return leftFaction - rightFaction;
           }
           return left[0].localeCompare(right[0]);
         });
@@ -2974,6 +2982,11 @@
       orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
         const anchor = buildAnchor(bucketIndex, clusterSpacing);
         const sortedMembers = [...members].sort((left, right) => {
+          const rightFollowers = right.follower_count || 0;
+          const leftFollowers = left.follower_count || 0;
+          if (rightFollowers !== leftFollowers) {
+            return rightFollowers - leftFollowers;
+          }
           const rightDegree = connectedCounts.get(right.id) || 0;
           const leftDegree = connectedCounts.get(left.id) || 0;
           if (rightDegree !== leftDegree) {

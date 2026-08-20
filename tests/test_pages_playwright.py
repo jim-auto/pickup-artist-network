@@ -233,10 +233,13 @@ class PickupArtistPagesPlaywrightTests(unittest.TestCase):
                       const host = document.getElementById('network');
                       const w = host.clientWidth;
                       const h = host.clientHeight;
-                      for (let y = 48; y < h - 48; y += 20) {
-                        for (let x = 48; x < w - 48; x += 20) {
-                          const id = window.graphNetwork.getNodeAt({ x, y });
-                          if (id) return { id, x, y };
+                      const ids = window.graphNetwork.body.nodeIndices || [];
+                      for (const id of ids) {
+                        const pos = window.graphNetwork.getPositions([id])[id];
+                        if (!pos) continue;
+                        const dom = window.graphNetwork.canvasToDOM(pos);
+                        if (dom.x > 50 && dom.x < w - 50 && dom.y > 90 && dom.y < h - 50) {
+                          return { id, x: dom.x, y: dom.y };
                         }
                       }
                       return null;

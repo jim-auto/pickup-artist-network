@@ -108,7 +108,12 @@ KEYWORD_CLUSTER_RULES = (
         "patterns": ("セクシーコマンドー", "sc一門"),
         "priority": 97,
     },
-    {"id": "wing_longterm", "label": "wing長期", "patterns": ("wing長期",), "priority": 96},
+    {
+        "id": "wing_longterm",
+        "label": "wing長期",
+        "patterns": ("wing長期", "wing師範", "wing-nampa", "wing_nampa", "アツストサロン"),
+        "priority": 96,
+    },
     {"id": "iwashi_longterm", "label": "いわし長期", "patterns": ("いわし長期",), "priority": 95},
     {
         "id": "atsust",
@@ -189,7 +194,6 @@ AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset(
         "mbh",
         "atsust",
         "wing_longterm",
-        "wing",
         "atsu_chill",
         "tokyo_stonan_kai",
         "tokyo_stonan",
@@ -198,12 +202,14 @@ AFFINITY_KEYWORD_CLUSTER_RULE_IDS = frozenset(
         "ochimpo",
         "mentaiko",
         "elsta",
+        "golazo",
     }
 )
 AFFINITY_KEYWORD_CLUSTER_RULE_ORDER = (
     "mbh",
     "atsu_chill",
     "ochimpo",  # 侍長期/おちんぽ侍はアツスト絵文字より優先
+    "wing_longterm",
     "atsust",
     "tokyo_stonan_kai",
     "tokyo_stonan",
@@ -211,8 +217,7 @@ AFFINITY_KEYWORD_CLUSTER_RULE_ORDER = (
     "miso",
     "mentaiko",
     "elsta",
-    "wing_longterm",
-    "wing",
+    "golazo",
 )
 SEMANTIC_FALLBACK_CLUSTER_RULES = (
     {
@@ -937,7 +942,11 @@ def _summarize_cluster(
 
     anchor_id = max(
         cluster_members,
-        key=lambda node_id: (account_graph.degree(node_id, weight="weight"), nodes_by_id[node_id].name),
+        key=lambda node_id: (
+            nodes_by_id[node_id].follower_count,
+            account_graph.degree(node_id, weight="weight"),
+            nodes_by_id[node_id].name,
+        ),
     )
     return f"{nodes_by_id[anchor_id].name} 周辺"
 
@@ -1038,6 +1047,7 @@ def _build_keyword_cluster_mode_payload(
         for node_id in member_ids:
             mode_payload["assignments"][node_id] = cluster_id
 
+    _expand_keyword_cluster_from_neighbors(graph, mode_payload, "keyword_group:wing_longterm")
     return mode_payload
 
 
@@ -1174,6 +1184,75 @@ def _apply_affinity_keyword_clusters(
         }
         for node_id in member_ids:
             mode_payload["assignments"][node_id] = cluster_id
+
+
+def _expand_keyword_cluster_from_neighbors(
+    graph: GraphData,
+    mode_payload: dict[str, Any],
+    cluster_id: str,
+    min_ties: int = 2,
+) -> None:
+    """Grow a named faction with solid neighbors who are not already in another keyword island."""
+    nodes_by_id = {node.id: node for node in graph.nodes}
+    core_ids = {
+        node_id
+        for node_id, assigned in mode_payload["assignments"].items()
+        if assigned == cluster_id
+    }
+    if not core_ids:
+        return
+    protected_ids = {
+        node_id
+        for node_id, assigned in mode_payload["assignments"].items()
+        if assigned != cluster_id and str(assigned).startswith("keyword_group:")
+    }
+    tie_counts: Counter[str] = Counter()
+    follows_core: set[str] = set()
+    for edge in graph.edges:
+        if edge.type not in {"follow", "affiliation", "influence", "collaboration"}:
+            continue
+        if _is_weak_assistive_edge(edge):
+            continue
+        source = nodes_by_id.get(edge.source)
+        target = nodes_by_id.get(edge.target)
+        if source is None or target is None:
+            continue
+        if source.type not in ACCOUNT_NODE_TYPES or target.type not in ACCOUNT_NODE_TYPES:
+            continue
+        if edge.source in core_ids and edge.target not in core_ids:
+            tie_counts[edge.target] += 1
+        if edge.target in core_ids and edge.source not in core_ids:
+            tie_counts[edge.source] += 1
+            if edge.type == "follow":
+                follows_core.add(edge.source)
+    added = False
+    for node in graph.nodes:
+        if node.type not in CLUSTER_MEMBER_NODE_TYPES:
+            continue
+        if node.id in core_ids or node.id in protected_ids:
+            continue
+        ties = tie_counts[node.id]
+        if node.id in follows_core or ties >= 3:
+            mode_payload["assignments"][node.id] = cluster_id
+            added = True
+    if added or core_ids:
+        member_ids = sorted(
+            {node_id for node_id, assigned in mode_payload["assignments"].items() if assigned == cluster_id},
+            key=lambda node_id: nodes_by_id[node_id].name,
+        )
+        if not member_ids:
+            return
+        preview = [nodes_by_id[node_id].name for node_id in member_ids[:4]]
+        preview_suffix = f" ほか {len(member_ids) - len(preview)} 件" if len(member_ids) > len(preview) else ""
+        rules_by_id = {str(rule["id"]): rule for rule in KEYWORD_CLUSTER_RULES}
+        rule_id = cluster_id.split(":")[-1]
+        label_name = str((rules_by_id.get(rule_id) or {}).get("label") or rule_id)
+        mode_payload["clusters"][cluster_id] = {
+            "label": f"{label_name} ({len(member_ids)})",
+            "title": f"キーワード {label_name}: {', '.join(preview)}{preview_suffix}",
+            "size": len(member_ids),
+        }
+    _refresh_cluster_sizes(mode_payload)
 
 
 def _has_affinity_keyword_cluster(node: Node) -> bool:
@@ -1329,7 +1408,15 @@ def _absorb_small_clusters(
         return
     if all(size < min_size for size in assigned.values()):
         return
-    small_ids = {cluster_id for cluster_id, size in assigned.items() if 0 < size < min_size}
+    small_ids = {
+        cluster_id
+        for cluster_id, size in assigned.items()
+        if 0 < size < min_size
+        and not (
+            str(cluster_id).startswith("keyword_group:")
+            and str(cluster_id).split(":")[-1] in AFFINITY_KEYWORD_CLUSTER_RULE_IDS
+        )
+    }
     if not small_ids:
         return
 
@@ -1525,6 +1612,7 @@ def build_relation_cluster_payload(graph: GraphData) -> dict[str, Any]:
                 cluster_index += 1
 
         _apply_affinity_keyword_clusters(graph, mode_payload)
+        _expand_keyword_cluster_from_neighbors(graph, mode_payload, "keyword_group:wing_longterm")
         _backfill_semantic_clusters(graph, mode_payload, mode_key, int(definition["min_size"]))
         _backfill_neighbor_clusters(graph, mode_payload)
         _absorb_small_clusters(graph, mode_payload, min_size=10)
@@ -3553,8 +3641,10 @@ def render_html(
       "keyword_group:mbh",
       "keyword_group:atsust",
       "keyword_group:wing_longterm",
-      "keyword_group:wing",
-      "keyword_group:atsu_chill"
+      "keyword_group:atsu_chill",
+      "keyword_group:yutty",
+      "keyword_group:golazo",
+      "keyword_group:miso"
     ]);
 
     function clusterBucketIdForNode(node, clusterMode, modePayload) {
@@ -4731,6 +4821,7 @@ def render_html(
 
       const isOtherBucket = (bucketId) =>
         String(bucketId).endsWith(":other") || String(bucketId).startsWith("unassigned:");
+      const isNamedFactionBucket = (bucketId) => String(bucketId).startsWith("keyword_group:");
       const orderedBuckets = Array.from(buckets.entries())
         .sort((left, right) => {
           const leftOther = isOtherBucket(left[0]) ? 1 : 0;
@@ -4740,6 +4831,11 @@ def render_html(
           }
           if (right[1].length !== left[1].length) {
             return right[1].length - left[1].length;
+          }
+          const leftFaction = isNamedFactionBucket(left[0]) ? 0 : 1;
+          const rightFaction = isNamedFactionBucket(right[0]) ? 0 : 1;
+          if (leftFaction !== rightFaction) {
+            return leftFaction - rightFaction;
           }
           return left[0].localeCompare(right[0]);
         });
@@ -4753,6 +4849,11 @@ def render_html(
       orderedBuckets.forEach(([bucketId, members], bucketIndex) => {
         const anchor = buildAnchor(bucketIndex, clusterSpacing);
         const sortedMembers = [...members].sort((left, right) => {
+          const rightFollowers = right.follower_count || 0;
+          const leftFollowers = left.follower_count || 0;
+          if (rightFollowers !== leftFollowers) {
+            return rightFollowers - leftFollowers;
+          }
           const rightDegree = connectedCounts.get(right.id) || 0;
           const leftDegree = connectedCounts.get(left.id) || 0;
           if (rightDegree !== leftDegree) {
