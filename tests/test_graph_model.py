@@ -283,6 +283,10 @@ class GraphModelTests(unittest.TestCase):
         self.assertIn('.join("\\n")', html)
 
         self.assertIn('id="cluster-mode"', html)
+        self.assertIn('id="zoom-in"', html)
+        self.assertIn('id="zoom-out"', html)
+        self.assertIn("window.graphNetwork = network", html)
+        self.assertIn("zoomSpeed: 1.4", html)
         self.assertIn('id="keyword-cluster-picker"', html)
         self.assertIn('id="keyword-cluster-select"', html)
         self.assertIn("つながりの近さでまとめる", html)

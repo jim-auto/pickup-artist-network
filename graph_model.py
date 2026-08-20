@@ -2135,6 +2135,7 @@ def render_html(
       color: var(--accent);
     }
     #network {
+      position: relative;
       height: 650px;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -2144,7 +2145,11 @@ def render_html(
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
       touch-action: none;
       overscroll-behavior: contain;
+      scroll-margin-top: 16px;
       cursor: grab;
+    }
+    #network canvas {
+      display: block;
     }
     #network:active {
       cursor: grabbing;
@@ -2547,6 +2552,8 @@ def render_html(
         <div class="action-row">
           <button type="button" id="reset-view" class="action-button">全体に戻す</button>
           <button type="button" id="fit-graph" class="action-button">中央へ</button>
+          <button type="button" id="zoom-in" class="action-button">拡大</button>
+          <button type="button" id="zoom-out" class="action-button">縮小</button>
           <button type="button" id="quick-connectivity" class="action-button">近い関係</button>
           <button type="button" id="quick-keyword" class="action-button">キーワード</button>
         </div>
@@ -3283,10 +3290,11 @@ def render_html(
           navigationButtons: false,
           keyboard: { enabled: false },
           tooltipDelay: 180,
-          zoomSpeed: 0.7
+          zoomSpeed: 1.4
         }
       }
     );
+    window.graphNetwork = network;
     network.on("zoom", () => {
       allowAutoFit = false;
     });
@@ -4186,6 +4194,7 @@ def render_html(
       const node = rawNodeById.get(nodeId) || currentVisibleNodes.find((candidate) => candidate.id === nodeId);
       if (!node) {
         selectedNodeId = null;
+        panel.classList.add("detail-empty");
         panel.innerHTML = `
           <div class="detail-empty">相関図かノード一覧から 1 件選ぶと、右側に説明とつながっているノードを表示します。</div>
           ${renderStarterPanel()}
@@ -4196,6 +4205,7 @@ def render_html(
       }
 
       selectedNodeId = nodeId;
+      panel.classList.remove("detail-empty");
       const { outgoing: outgoingEdges, incoming: incomingEdges } = selectedNodeRelationEdges(nodeId);
       const connectedCount = new Set([
         ...outgoingEdges.map((edge) => edge.target),
@@ -5109,6 +5119,17 @@ def render_html(
       }, 50);
     }
 
+    function zoomGraph(factor) {
+      const current = network.getScale() || 1;
+      const next = Math.min(10, Math.max(0.05, current * factor));
+      allowAutoFit = false;
+      network.moveTo({
+        position: network.getViewPosition(),
+        scale: next,
+        animation: { duration: 140, easingFunction: "easeInOutQuad" }
+      });
+    }
+
     function setBridgePreset(presetId) {
       const categorySets = {
         all: bridgeCategoryDefinitions.map((category) => category.id),
@@ -5167,6 +5188,12 @@ def render_html(
     document.getElementById("fit-graph").addEventListener("click", () => {
       allowAutoFit = true;
       fitVisibleGraph(true);
+    });
+    document.getElementById("zoom-in").addEventListener("click", () => {
+      zoomGraph(1.35);
+    });
+    document.getElementById("zoom-out").addEventListener("click", () => {
+      zoomGraph(1 / 1.35);
     });
     document.querySelectorAll("[data-bridge-preset]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -5298,14 +5325,18 @@ def render_html(
         const selectedId = params.nodes[0];
         if (network.isCluster(selectedId)) {
           network.openCluster(selectedId);
+          selectedNodeId = null;
           renderDetailPanel(null);
         } else {
+          selectedNodeId = selectedId;
+          allowAutoFit = false;
           updateNetworkEmphasis(selectedId);
           renderDetailPanel(selectedId);
         }
       }
     });
     network.on("deselectNode", () => {
+      selectedNodeId = null;
       updateNetworkEmphasis(null);
       renderDetailPanel(null);
     });
